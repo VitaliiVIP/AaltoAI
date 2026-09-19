@@ -50,6 +50,21 @@ export default function EmailPanel({
   const disabled = Boolean(status);
   const explanation = result.explanation;
 
+  // Accepted directly (never went through the decline draft) — no email was
+  // ever composed, so there's nothing to show but the confirmation.
+  if (passed && status === "sent" && !declining) {
+    return (
+      <section className="col col-email" aria-label="Candidate email">
+        <div className="col-header">
+          <h2>Candidate Email</h2>
+        </div>
+        <div className="email-body email-body-choice">
+          <p className="choice-hint accepted-hint">✓ {name} has been added to the candidate list.</p>
+        </div>
+      </section>
+    );
+  }
+
   // Candidates who cleared the bar start on a decision rather than a draft.
   if (passed && !declining && !status) {
     return (
