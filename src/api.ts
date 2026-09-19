@@ -1,9 +1,13 @@
 import type {
   AuditSummary,
+  Catalogue,
+  CvParse,
+  JobDraft,
+  JobSpec,
   JobSummary,
   PoolRow,
+  Preflight,
   Profile,
-  RestateRequest,
   ScreenRequest,
   ScreenResult,
   SendEmailRequest,
@@ -73,21 +77,18 @@ export function getCandidates(
   return req<PoolRow[]>(`/candidates?${q}`, { signal });
 }
 
-export function postScreen(body: ScreenRequest, signal?: AbortSignal): Promise<ScreenResult> {
-  return postJson<ScreenResult>("/screen", body, signal);
+/** The stored parse: CV text plus every attribute read out of it. No LLM call. */
+export function getCvParse(
+  candidateId: string,
+  job: string,
+  signal?: AbortSignal,
+): Promise<CvParse> {
+  const q = new URLSearchParams({ job });
+  return req<CvParse>(`/candidates/${encodeURIComponent(candidateId)}/cv?${q}`, { signal });
 }
 
-export function postRestate(
-  body: RestateRequest,
-  opts: { parentDecisionId: string; explain: boolean },
-  signal?: AbortSignal,
-): Promise<ScreenResult> {
-  // parent_decision_id and explain are query params on this endpoint, not body fields.
-  const q = new URLSearchParams({
-    parent_decision_id: opts.parentDecisionId,
-    explain: String(opts.explain),
-  });
-  return postJson<ScreenResult>(`/restate?${q}`, body, signal);
+export function postScreen(body: ScreenRequest, signal?: AbortSignal): Promise<ScreenResult> {
+  return postJson<ScreenResult>("/screen", body, signal);
 }
 
 export function postExtract(
@@ -102,6 +103,35 @@ export function postExtract(
     body: form,
     signal,
   });
+}
+
+// ---- authoring -----------------------------------------------------------
+
+/** Everything a job can be built out of, including what the manifest refuses. */
+export function getCatalogue(job?: string, signal?: AbortSignal): Promise<Catalogue> {
+  const q = job ? `?job=${encodeURIComponent(job)}` : "";
+  return req<Catalogue>(`/catalogue${q}`, { signal });
+}
+
+export function getJobSpec(jobId: string, signal?: AbortSignal): Promise<JobSpec> {
+  return req<JobSpec>(`/jobs/${encodeURIComponent(jobId)}/spec`, { signal });
+}
+
+/** What the budget would become, and what is wrong with it. Saves nothing. */
+export function postPreflight(spec: JobSpec, signal?: AbortSignal): Promise<Preflight> {
+  return postJson<Preflight>("/jobs/preflight", spec, signal);
+}
+
+export function postJobSave(spec: JobSpec, signal?: AbortSignal): Promise<JobSummary> {
+  return postJson<JobSummary>("/jobs", spec, signal);
+}
+
+/** The one authoring call that spends an LLM call. Returns a proposal, not a job. */
+export function postJobDraft(
+  body: { ad_text: string; threshold?: number; slots_n?: number },
+  signal?: AbortSignal,
+): Promise<JobDraft> {
+  return postJson<JobDraft>("/jobs/draft", body, signal);
 }
 
 export function getAudit(signal?: AbortSignal): Promise<AuditSummary> {

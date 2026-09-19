@@ -1,38 +1,29 @@
-# Employer-authored job template. Everything here is a visible, auditable value judgement.
-# Weights and costs are integers per solver step (see manifest step sizes; years features use 6-month steps).
+# Employer-authored job template.
+#
+# Scoring is a 100-point budget: `points` is what a criterion is worth at full
+# marks and the column adds up to 100, so a score reads as a percentage and the
+# threshold is a share of the job rather than a magic number. `cap` is how many
+# solver steps count as full marks. Causal constraints are not here -- they are
+# facts about the world and live in the manifest.
 job_id: backend_engineer
 title: Backend Software Engineer
 family: software_engineering
 manifest: software_engineering.json
-version: backend-engineer-v1
-
-# Hard, binary, job-related. Kept outside the weighted sum (never traded off).
-knockouts:
-  - skills.python.held == true
-  - experience.software_months >= 12
-
-# Additive, monotone, non-negative. cap is in steps (e.g. 8 steps of 6 months = 4 years).
-# absent_prior: steps credited when the CV says nothing (unverified, not zero); shown in the audit log.
+version: backend-engineer-v2
+knockouts: [skills.python.held == true, experience.software_months >= 12, education.highest_level >= bsc]
 score:
-  experience.backend_months:             {weight: 4, cap: 8}   # 4+ years backend -> max 32
-  skills.python.months:                  {weight: 2, cap: 8}   # Python in production -> max 16
-  skills.kubernetes.held:                {weight: 12}
-  derived.cloud_platform_held:           {weight: 10}
-  derived.ci_cd_held:                    {weight: 6}
-  project_counts_by_topic.microservices: {weight: 5, cap: 2}
-  skills.docker.held:                    {weight: 4}
-  derived.iac_held:                      {weight: 4}
-  derived.sql_held:                      {weight: 3, absent_prior: 0}
-  education.highest_level:               {weight: 2, cap: 3}   # up to bsc counts
-
+  experience.backend_months: {points: 32, cap: 8}
+  skills.python.months: {points: 16, cap: 8}
+  skills.kubernetes.held: {points: 11}
+  project_counts_by_topic.microservices: {points: 10, cap: 2}
+  derived.cloud_platform_held: {points: 9}
+  derived.ci_cd_held: {points: 5}
+  education.highest_level: {points: 6, cap: 3}
+  skills.docker.held: {points: 4}
+  derived.iac_held: {points: 4}
+  derived.sql_held: {points: 3}
 mode:
   A: {threshold: 80, margin_eps: 0, weight_shrink_rho: 0}
   B: {slots_N: 3, margin_eps: 0, weight_shrink_rho: 0}
-
-# Hand-authored causal / dependency constraints (in steps). Two forms are supported.
-dependencies:
-  - "x'[skills.kubernetes.held] <= x'[skills.docker.held]"
-  - "delta[project_counts_by_topic.microservices] <= 2 + 1*delta[experience.backend_months]"
-
 k_routes: 3
 sparsity_lambda: 1

@@ -63,7 +63,9 @@ def load_job(job_id_or_path: str | Path) -> JobTemplate:
     mp = Path(job.manifest)
     if not mp.is_absolute() and (p.parent / mp).exists() and p.parent != config.JOBS_DIR:
         job.manifest = str((p.parent / mp).resolve())
-    return job
+    # A point-authored job has no per-step weights until the manifest supplies the
+    # caps, so binding is part of loading rather than something callers can forget.
+    return job.bind(manifest_for_job(job))
 
 
 def manifest_for_job(job: JobTemplate, manifest_dir: Path | None = None) -> Manifest:
@@ -84,6 +86,17 @@ def load_profile(path: Path) -> Profile:
 def save_profile(profile: Profile, path: Path) -> None:
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     Path(path).write_text(profile.model_dump_json(indent=1))
+
+
+def load_cv_text(candidate_id: str) -> str:
+    """The exact text every evidence offset in this candidate's profile indexes.
+
+    Resolved through the cached-profile map rather than by joining the id onto a
+    path, so a candidate_id arriving from a URL cannot walk out of CV_TEXT_DIR.
+    """
+    if candidate_id not in list_cached_profiles():
+        raise KeyError(f"unknown candidate_id {candidate_id!r}")
+    return (config.CV_TEXT_DIR / f"{candidate_id}.txt").read_text()
 
 
 def list_cached_profiles(*, demo_only: bool = True) -> dict[str, Path]:

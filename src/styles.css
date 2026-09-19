@@ -805,6 +805,9 @@ h1, h2, h3, p { margin: 0; }
   transform: translateX(0);
 }
 
+/* The editor carries number fields and a table; the review column does not. */
+.settings-drawer.editing { width: 540px; }
+
 .settings-drawer.left {
   left: 0;
   right: auto;
@@ -1327,3 +1330,380 @@ h1, h2, h3, p { margin: 0; }
   line-height: 1.5;
 }
 
+/* ==========================================================================
+   Job authoring — the editable half of the settings drawer
+   ========================================================================== */
+
+.drawer-tabs {
+  display: flex;
+  gap: 0.15rem;
+  background: var(--mono-125);
+  border-radius: var(--radius-round);
+  padding: 0.15rem;
+  margin-left: auto;
+  margin-right: 0.6rem;
+}
+.drawer-tabs button {
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-round);
+  cursor: pointer;
+}
+.drawer-tabs button.active {
+  background: var(--card-bg);
+  color: var(--text);
+  box-shadow: var(--shadow-card);
+}
+
+/* ---- shared controls ---------------------------------------------------- */
+
+.primary-btn,
+.secondary-btn {
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+.primary-btn {
+  border: none;
+  background: var(--mono-900);
+  color: var(--mono-100);
+}
+.primary-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.secondary-btn {
+  border: var(--border-width) solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+}
+.secondary-btn:hover { border-color: var(--mono-300); }
+
+.mini-number,
+.points-input {
+  font: inherit;
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  padding: 0.15rem 0.3rem;
+  border: var(--border-width) solid var(--border);
+  border-radius: 0.3rem;
+  background: var(--card-bg);
+  color: var(--text);
+}
+.mini-number { width: 3.6rem; }
+.points-input { width: 3.4rem; text-align: right; font-weight: 600; }
+.points-input:focus-visible,
+.mini-number:focus-visible { outline: 2px solid var(--brand-700); outline-offset: 1px; }
+
+.drawer-section select {
+  font: inherit;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.25rem;
+  border: var(--border-width) solid var(--border);
+  border-radius: 0.3rem;
+  background: var(--card-bg);
+  color: var(--text);
+  max-width: 100%;
+}
+
+/* ---- hard-requirement checklist ---------------------------------------- */
+
+.checklist-items { list-style: none; margin: 0; padding: 0; }
+.checklist-items li {
+  border-bottom: 1px solid var(--border);
+  padding: 0.35rem 0;
+}
+.checklist-items li.checked { background: var(--brand-300); }
+
+.check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.76rem;
+}
+.check-row input[type="checkbox"] { margin-top: 0.15rem; accent-color: var(--mono-900); }
+.check-phrase { line-height: 1.35; }
+
+.check-detail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0 0.15rem 1.45rem;
+}
+
+/* ---- point budget ------------------------------------------------------- */
+
+.budget-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.meter-track {
+  height: 0.4rem;
+  border-radius: var(--radius-round);
+  background: var(--mono-150);
+  overflow: hidden;
+}
+.meter-fill {
+  height: 100%;
+  background: var(--brand-900);
+  transition: width 120ms ease-out;
+}
+.budget-meter.balanced .meter-fill { background: var(--green); }
+.meter-note { font-style: normal; color: var(--yellow); font-weight: 600; }
+.budget-meter.balanced .meter-note { color: var(--green); }
+
+.budget-table { table-layout: auto; }
+.budget-table th:not(:first-child),
+.budget-table td:not(:first-child) { width: auto; white-space: nowrap; }
+.budget-table td:first-child { width: 45%; white-space: normal; }
+.budget-table td:last-child { width: 1%; text-align: right; }
+.criterion-phrase { display: block; line-height: 1.35; }
+.cell-note.adjusted { color: var(--yellow); font-weight: 600; white-space: nowrap; }
+
+.quote-note {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-style: italic;
+  line-height: 1.4;
+  margin-top: 0.15rem;
+}
+
+.add-criterion { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.5rem; }
+
+.problem-list {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0.5rem 0.7rem;
+  background: var(--red-bg);
+  border-radius: var(--radius-small);
+  font-size: 0.74rem;
+}
+.problem-list li + li { margin-top: 0.3rem; }
+
+/* ---- draft from a job ad ------------------------------------------------ */
+
+.draft-panel textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  padding: 0.55rem 0.65rem;
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-small);
+  background: var(--card-bg);
+  color: var(--text);
+  resize: vertical;
+}
+.draft-actions { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem; }
+
+.draft-block {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-small);
+  background: var(--mono-125);
+}
+.draft-block h4 { margin: 0; font-size: 0.78rem; font-weight: 700; }
+.draft-block.refused { background: var(--red-bg); }
+.draft-block.refused h4 { color: var(--red); }
+.draft-block .rule-list { font-size: 0.74rem; }
+
+/* ---- where the bar sits ------------------------------------------------- */
+
+.bar-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.76rem;
+  margin-bottom: 0.75rem;
+}
+.bar-control input[type="range"] { width: 100%; accent-color: var(--mono-900); }
+
+.drawer-actions {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  background: linear-gradient(to bottom, transparent, var(--card-bg) 35%);
+}
+
+/* ---------------- The parse: CV text + attributes read from it ---------------- */
+
+.open-cv-btn.secondary {
+  margin-left: auto;
+  background: var(--card-bg);
+  color: var(--mono-700);
+  border: var(--border-width) solid var(--border);
+}
+.open-cv-btn.secondary:hover { background: var(--mono-125); }
+/* Two buttons in the header: only the first one takes the free space. */
+.open-cv-btn.secondary + .open-cv-btn { margin-left: 0; }
+
+.parse-modal {
+  max-width: 1180px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.parse-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border-bottom: var(--border-width) solid var(--border);
+  flex-shrink: 0;
+}
+.parse-header h2 { font-size: 1.05rem; font-weight: 700; }
+
+.parse-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.parse-error { margin: 1rem 1.25rem; }
+
+.parse-body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.parse-pane {
+  position: relative; /* offsetTop of a row/mark is measured against the pane */
+  min-height: 0;
+  overflow-y: auto;
+  padding: 1rem 1.25rem 1.5rem;
+}
+.parse-text-pane { border-right: var(--border-width) solid var(--border); }
+
+.parse-text {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--mono-800);
+}
+
+.parse-mark {
+  background: var(--brand-400);
+  color: inherit;
+  border-radius: 0.2rem;
+  padding: 0.05rem 0;
+  cursor: pointer;
+}
+.parse-mark:hover { background: var(--brand-500); }
+.parse-mark.active {
+  background: var(--brand-900);
+  color: #fff;
+  box-shadow: 0 0 0 2px var(--brand-900);
+}
+
+.parse-foot {
+  margin-top: 1rem;
+  font-size: 0.72rem;
+  color: var(--mono-400);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.parse-group { margin-bottom: 1rem; }
+.parse-list {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.parse-row {
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-small);
+  background: var(--card-bg);
+}
+.parse-row.active {
+  border-color: var(--brand-900);
+  background: var(--brand-300);
+}
+/* An attribute the CV never mentioned is a question, not a finding — it recedes
+   rather than reading as a red mark against the candidate. */
+.parse-row.absent { background: var(--mono-100); }
+
+.parse-row-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.5rem 0.65rem;
+  background: none;
+  border: none;
+  border-radius: var(--radius-small);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.parse-row-btn:disabled { cursor: default; }
+
+.parse-row-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.parse-label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.parse-star { color: var(--brand-900); margin-right: 0.3rem; }
+
+.parse-value {
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--mono-700);
+  flex-shrink: 0;
+}
+.parse-row.absent .parse-value { color: var(--mono-400); }
+
+.parse-detail { font-size: 0.76rem; color: var(--text-muted); }
+
+.parse-meta {
+  font-size: 0.7rem;
+  color: var(--mono-500);
+}
+.parse-meta code { font-size: 0.68rem; }
+
+.parse-quote {
+  font-size: 0.74rem;
+  color: var(--mono-700);
+  border-left: 2px solid var(--brand-500);
+  padding-left: 0.5rem;
+  margin-top: 0.25rem;
+}
+.parse-quote.unlocated {
+  border-left-color: var(--yellow);
+  color: var(--yellow);
+}
+
+@media (max-width: 900px) {
+  .parse-body { grid-template-columns: minmax(0, 1fr); }
+  .parse-text-pane { border-right: none; border-bottom: var(--border-width) solid var(--border); }
+}

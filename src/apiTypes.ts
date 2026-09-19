@@ -239,27 +239,22 @@ export interface ScreenRequest {
   explain: boolean;
 }
 
-export interface Confirmation {
-  path: string;
-  value: unknown;
-}
-
-export interface RestateRequest {
-  candidate_id: string;
-  job_id: string;
-  mode: Mode;
-  N: number | null;
-  confirmations: Confirmation[];
-}
+export type FeatureType = "bool" | "int" | "ordinal";
 
 /** One entry of `GET /jobs` — an inline dict in `api/app.py`, not a pydantic model. */
 export interface JobFeature {
   phrase: string;
+  /** What this criterion is worth at full marks — the employer's own unit. */
+  points: number;
+  /** Points per solver step. The engine's unit; derived from `points`. */
   weight: number;
   cap: number;
+  /** `cap` expressed in the feature's own unit, e.g. 48 months or "bsc". */
+  full_marks_at: unknown;
   absent_prior: number;
   unit: string;
   step_size: number;
+  type: FeatureType;
   actionability: Actionability;
   cost_per_step: number | null;
   max_delta: number;
@@ -267,21 +262,118 @@ export interface JobFeature {
   is_causal: boolean;
 }
 
+/** A causal constraint with the plain-English gloss the backend generated for it. */
+export interface Dependency {
+  rule: string;
+  gloss: string;
+}
+
 export interface JobSummary {
   job_id: string;
   title: string;
   version: string;
+  family: string;
+  manifest: string;
   knockouts: string[];
   score: Record<string, JobFeature>;
   mode: {
     A: { threshold: number; margin_eps: number; weight_shrink_rho: number };
     B: { slots_N: number; margin_eps: number; weight_shrink_rho: number };
   };
-  dependencies: string[];
+  dependencies: Dependency[];
   k_routes: number;
+  /** The whole point budget: 100, so a score reads as a percentage. */
+  budget_total: number;
   horizon_months: number;
   manifest_version: string;
   protected_never_use: string[];
+}
+
+// --------------------------------------------------------------------------
+// Authoring (`GET /catalogue`, `GET|POST /jobs...`)
+// --------------------------------------------------------------------------
+
+/** One feature a job can be built out of. */
+export interface CatalogueFeature {
+  path: string;
+  phrase: string;
+  type: FeatureType;
+  unit: string;
+  step_size: number;
+  domain_max: number;
+  ladder: string[] | null;
+  actionability: Actionability;
+  cost_per_step: number | null;
+  max_delta: number;
+  typical_time_months: number | null;
+  is_causal: boolean;
+  disclosure: string | null;
+  default_cap: number;
+  /** The rule a plain tick produces, before the recruiter edits the number. */
+  knockout_template: string | null;
+  can_knockout: boolean;
+}
+
+export interface RefusedFeature {
+  path: string;
+  phrase: string;
+  reason: string;
+}
+
+export interface Catalogue {
+  job_family: string;
+  manifest_version: string;
+  horizon_months: number;
+  features: CatalogueFeature[];
+  protected_never_use: RefusedFeature[];
+  dependencies: Dependency[];
+}
+
+export interface ScoreLine {
+  points: number;
+  cap: number | null;
+  absent_prior: number;
+}
+
+/** The editable surface of a job — deliberately smaller than the template. */
+export interface JobSpec {
+  job_id: string;
+  title: string;
+  family: string;
+  manifest: string;
+  version: string;
+  knockouts: string[];
+  score: Record<string, ScoreLine>;
+  threshold: number;
+  slots_n: number;
+  k_routes: number;
+  sparsity_lambda: number;
+}
+
+/** What `points` the employer asked for vs what the scorer can represent. */
+export interface Adjustment {
+  asked: number;
+  applied: number;
+}
+
+export interface Preflight {
+  ok: boolean;
+  problems: string[];
+  allocation: Record<string, number>;
+  adjusted: Record<string, Adjustment>;
+  threshold: number;
+  max_score: number;
+}
+
+export interface JobDraft {
+  spec: JobSpec;
+  /** path -> the phrase in the ad that justified the criterion. */
+  quotes: Record<string, string>;
+  /** Requirements in the ad that need an attribute the system refuses to use. */
+  refused: { path: string; quote: string; reason: string }[];
+  /** Legitimate requirements with no feature to carry them. */
+  unmapped: string[];
+  adjusted: Record<string, Adjustment>;
 }
 
 /** One entry of `GET /candidates`. Scored without any LLM call or audit write. */
@@ -295,6 +387,42 @@ export interface PoolRow {
   total_months: unknown;
   software_months: unknown;
   top_gaps: { phrase: string; missed: number; derivation: Derivation }[];
+}
+
+// --------------------------------------------------------------------------
+// The parse (`GET /candidates/{id}/cv`)
+// --------------------------------------------------------------------------
+
+/**
+ * One attribute the extractor read, with the words it was read from.
+ *
+ * `value` is `unknown` for the same reason it is `Any` on the wire: a boolean, a
+ * month count and a ladder level all arrive here. `evidence` offsets index
+ * `CvParse.text` directly — they are never re-derived on this side.
+ */
+export interface ParsedAttribute {
+  path: string;
+  label: string;
+  group: string;
+  value: unknown;
+  /** Secondary line: the fields that ride along with this one, already joined. */
+  detail: string | null;
+  /** Only ever "months" — the one value a number cannot be read without. */
+  unit: string | null;
+  derivation: Derivation;
+  confidence: Confidence;
+  /** True when the current job scores or knocks out on this attribute. */
+  scored: boolean;
+  evidence: Evidence[];
+}
+
+export interface CvParse {
+  candidate_id: string;
+  /** The exact text the extractor saw; every offset below indexes into it. */
+  text: string;
+  attributes: ParsedAttribute[];
+  unmatched_skills: string[];
+  provenance: Provenance;
 }
 
 export interface AuditSummary {

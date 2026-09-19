@@ -17,6 +17,7 @@ CV_TEXT := $(BACKEND)/data/cv_text
 
 .DEFAULT_GOAL := help
 .PHONY: help setup setup-backend setup-frontend dev backend frontend \
+        check-ports check-backend-port check-frontend-port \
         test typecheck build preview check extract add-cv eval pool audit clean
 
 help: ## Show this help
@@ -54,7 +55,44 @@ $(BACKEND)/.env:
 
 # ------------------------------------------------------------------ run ----
 
-dev: node_modules ## Run backend and frontend together (Ctrl-C stops both)
+# uvicorn and Vite both die with a raw traceback when their port is taken, and
+# under `make dev` that arrives interleaved with the other server's startup
+# noise. Look first and say what is actually going on. $(1) port, $(2) what it
+# is for.
+define check_port
+port=$(1); who="$(2)"; pid=""; busy=""; \
+if command -v lsof >/dev/null 2>&1; then \
+	pid=$$(lsof -ti tcp:$$port -sTCP:LISTEN 2>/dev/null | head -1); \
+	[ -n "$$pid" ] && busy=yes; \
+elif command -v ss >/dev/null 2>&1; then \
+	line=$$(ss -ltnpH "sport = :$$port" 2>/dev/null | head -1); \
+	[ -n "$$line" ] && busy=yes; \
+	pid=$$(printf '%s\n' "$$line" | grep -oE 'pid=[0-9]+' | head -1 | cut -d= -f2); \
+fi; \
+if [ -n "$$busy" ]; then \
+	kill_hint=""; \
+	[ -n "$$pid" ] && kill_hint=", or: kill $$pid"; \
+	echo; \
+	echo "Port $$port is already in use, so the $$who cannot start."; \
+	[ -n "$$pid" ] && echo "  pid $$pid is $$(ps -p $$pid -o args= 2>/dev/null | cut -c1-72)"; \
+	echo "  Usually this is a 'make dev' still running in another terminal."; \
+	echo; \
+	echo "  Stop it there with Ctrl-C$$kill_hint"; \
+	echo "  Or use free ports:  make dev BACKEND_PORT=8001 FRONTEND_PORT=5174"; \
+	echo; \
+	exit 1; \
+fi
+endef
+
+check-ports: check-backend-port check-frontend-port ## Check that the dev ports are free
+
+check-backend-port:
+	@$(call check_port,$(BACKEND_PORT),backend API)
+
+check-frontend-port:
+	@$(call check_port,$(FRONTEND_PORT),Vite dev server)
+
+dev: node_modules check-ports ## Run backend and frontend together (Ctrl-C stops both)
 	@echo "backend  http://127.0.0.1:$(BACKEND_PORT)/   (API + throwaway demo page)"
 	@echo "frontend http://127.0.0.1:$(FRONTEND_PORT)/  <- the app"
 	@echo
@@ -63,10 +101,10 @@ dev: node_modules ## Run backend and frontend together (Ctrl-C stops both)
 	$(MAKE) --no-print-directory frontend & \
 	wait
 
-backend: ## Run only the API server (:8000)
+backend: check-backend-port ## Run only the API server (:8000)
 	cd $(BACKEND) && $(UV) run uvicorn recourse_screen.api.app:app --reload --port $(BACKEND_PORT)
 
-frontend: node_modules ## Run only the Vite dev server (:5173)
+frontend: node_modules check-frontend-port ## Run only the Vite dev server (:5173)
 	$(NPM) run dev -- --port $(FRONTEND_PORT) --strictPort
 
 # ----------------------------------------------------------------- check ----

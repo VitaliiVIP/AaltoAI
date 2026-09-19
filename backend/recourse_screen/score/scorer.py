@@ -66,7 +66,7 @@ def evaluate_knockouts(
             KnockoutResult(
                 rule=ko.rule,
                 path=ko.path,
-                passed=ko.holds(fval.raw_value),
+                passed=ko.holds(fval.raw_value, spec),
                 current_value=fval.raw_value,
                 actionability=spec.actionability,
             )
