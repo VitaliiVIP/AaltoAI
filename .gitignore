@@ -5,3 +5,24 @@ dist-ssr
 *.local
 .DS_Store
 *.tsbuildinfo
+
+# --- Personal data: real CVs must never enter the repo ------------------
+# Both CV directories are default-deny. Only the synthetic demo pool
+# (cv1..cv10, generated candidates with @example.com addresses) is
+# re-included; anything else dropped in for a demo stays untracked.
+# To add a new *synthetic* candidate, extend the negations below rather
+# than reaching for `git add -f`.
+backend/data/cv_text/*
+!backend/data/cv_text/cv[1-9]_*.txt
+!backend/data/cv_text/cv10_*.txt
+
+frontend/public/assets/cvs/*
+!frontend/public/assets/cvs/cv[1-9]_*
+!frontend/public/assets/cvs/cv10_*
+
+# Parse caches keyed by CV hash. `profiles_raw/` embeds the full CV text and
+# `profiles/` carries employers and dates, so new entries stay out of git;
+# the synthetic ones already committed are unaffected (git ignores .gitignore
+# for tracked paths).
+backend/data/profiles/
+backend/data/profiles_raw/
