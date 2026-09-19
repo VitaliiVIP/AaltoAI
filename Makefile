@@ -11,12 +11,14 @@ FRONTEND_PORT ?= 5173
 UV  ?= uv
 NPM ?= npm
 
-BACKEND := backend
-CVS     := public/assets/cvs
-CV_TEXT := $(BACKEND)/data/cv_text
+BACKEND  := backend
+FRONTEND := frontend
+CVS      := $(FRONTEND)/public/assets/cvs
+CV_TEXT  := $(BACKEND)/data/cv_text
 
 .DEFAULT_GOAL := help
 .PHONY: help setup setup-backend setup-frontend dev backend frontend \
+        check-ports check-backend-port check-frontend-port \
         test typecheck build preview check extract add-cv eval pool audit clean
 
 help: ## Show this help
@@ -36,15 +38,15 @@ setup: setup-backend setup-frontend ## Install backend and frontend dependencies
 setup-backend: $(BACKEND)/.env
 	$(UV) sync --project $(BACKEND)
 
-setup-frontend: node_modules
+setup-frontend: $(FRONTEND)/node_modules
 
-node_modules: package-lock.json
+$(FRONTEND)/node_modules: $(FRONTEND)/package-lock.json
 	@command -v $(NPM) >/dev/null 2>&1 || { \
 		echo "npm not found on PATH. With nvm, run 'nvm use' first; otherwise install"; \
 		echo "Node.js (which bundles npm) from https://nodejs.org or your package manager."; \
 		exit 127; }
-	$(NPM) install --no-audit --no-fund
-	@touch node_modules
+	cd $(FRONTEND) && $(NPM) install --no-audit --no-fund
+	@touch $(FRONTEND)/node_modules
 
 $(BACKEND)/.env:
 	@cp $(BACKEND)/.env.example $@
@@ -54,7 +56,44 @@ $(BACKEND)/.env:
 
 # ------------------------------------------------------------------ run ----
 
-dev: node_modules ## Run backend and frontend together (Ctrl-C stops both)
+# uvicorn and Vite both die with a raw traceback when their port is taken, and
+# under `make dev` that arrives interleaved with the other server's startup
+# noise. Look first and say what is actually going on. $(1) port, $(2) what it
+# is for.
+define check_port
+port=$(1); who="$(2)"; pid=""; busy=""; \
+if command -v lsof >/dev/null 2>&1; then \
+	pid=$$(lsof -ti tcp:$$port -sTCP:LISTEN 2>/dev/null | head -1); \
+	[ -n "$$pid" ] && busy=yes; \
+elif command -v ss >/dev/null 2>&1; then \
+	line=$$(ss -ltnpH "sport = :$$port" 2>/dev/null | head -1); \
+	[ -n "$$line" ] && busy=yes; \
+	pid=$$(printf '%s\n' "$$line" | grep -oE 'pid=[0-9]+' | head -1 | cut -d= -f2); \
+fi; \
+if [ -n "$$busy" ]; then \
+	kill_hint=""; \
+	[ -n "$$pid" ] && kill_hint=", or: kill $$pid"; \
+	echo; \
+	echo "Port $$port is already in use, so the $$who cannot start."; \
+	[ -n "$$pid" ] && echo "  pid $$pid is $$(ps -p $$pid -o args= 2>/dev/null | cut -c1-72)"; \
+	echo "  Usually this is a 'make dev' still running in another terminal."; \
+	echo; \
+	echo "  Stop it there with Ctrl-C$$kill_hint"; \
+	echo "  Or use free ports:  make dev BACKEND_PORT=8001 FRONTEND_PORT=5174"; \
+	echo; \
+	exit 1; \
+fi
+endef
+
+check-ports: check-backend-port check-frontend-port ## Check that the dev ports are free
+
+check-backend-port:
+	@$(call check_port,$(BACKEND_PORT),backend API)
+
+check-frontend-port:
+	@$(call check_port,$(FRONTEND_PORT),Vite dev server)
+
+dev: $(FRONTEND)/node_modules check-ports ## Run backend and frontend together (Ctrl-C stops both)
 	@echo "backend  http://127.0.0.1:$(BACKEND_PORT)/   (API + throwaway demo page)"
 	@echo "frontend http://127.0.0.1:$(FRONTEND_PORT)/  <- the app"
 	@echo
@@ -63,25 +102,25 @@ dev: node_modules ## Run backend and frontend together (Ctrl-C stops both)
 	$(MAKE) --no-print-directory frontend & \
 	wait
 
-backend: ## Run only the API server (:8000)
+backend: check-backend-port ## Run only the API server (:8000)
 	cd $(BACKEND) && $(UV) run uvicorn recourse_screen.api.app:app --reload --port $(BACKEND_PORT)
 
-frontend: node_modules ## Run only the Vite dev server (:5173)
-	$(NPM) run dev -- --port $(FRONTEND_PORT) --strictPort
+frontend: $(FRONTEND)/node_modules check-frontend-port ## Run only the Vite dev server (:5173)
+	cd $(FRONTEND) && $(NPM) run dev -- --port $(FRONTEND_PORT) --strictPort
 
 # ----------------------------------------------------------------- check ----
 
 test: ## Run the backend test suite (deterministic, no LLM calls)
 	cd $(BACKEND) && $(UV) run pytest -q
 
-typecheck: node_modules ## Type-check the frontend
-	$(NPM) exec -- tsc -b
+typecheck: $(FRONTEND)/node_modules ## Type-check the frontend
+	cd $(FRONTEND) && $(NPM) exec -- tsc -b
 
-build: node_modules ## Production build of the frontend into dist/
-	$(NPM) run build
+build: $(FRONTEND)/node_modules ## Production build of the frontend into frontend/dist/
+	cd $(FRONTEND) && $(NPM) run build
 
 preview: build ## Serve the production build
-	$(NPM) run preview
+	cd $(FRONTEND) && $(NPM) run preview
 
 check: test typecheck build ## Everything CI would run
 
@@ -127,6 +166,6 @@ print(f'chain {\"verified\" if ok else \"BROKEN\"} - {n} records' + ('' if ok el
 # ----------------------------------------------------------------- clean ----
 
 clean: ## Remove build output and caches (keeps deps, CVs and the profile cache)
-	rm -rf dist node_modules/.tmp *.tsbuildinfo
+	rm -rf $(FRONTEND)/dist $(FRONTEND)/node_modules/.tmp $(FRONTEND)/*.tsbuildinfo
 	rm -rf $(BACKEND)/.pytest_cache
 	find $(BACKEND) -name __pycache__ -type d -prune -exec rm -rf {} +

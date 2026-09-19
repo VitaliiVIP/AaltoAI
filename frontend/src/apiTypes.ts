@@ -389,6 +389,42 @@ export interface PoolRow {
   top_gaps: { phrase: string; missed: number; derivation: Derivation }[];
 }
 
+// --------------------------------------------------------------------------
+// The parse (`GET /candidates/{id}/cv`)
+// --------------------------------------------------------------------------
+
+/**
+ * One attribute the extractor read, with the words it was read from.
+ *
+ * `value` is `unknown` for the same reason it is `Any` on the wire: a boolean, a
+ * month count and a ladder level all arrive here. `evidence` offsets index
+ * `CvParse.text` directly — they are never re-derived on this side.
+ */
+export interface ParsedAttribute {
+  path: string;
+  label: string;
+  group: string;
+  value: unknown;
+  /** Secondary line: the fields that ride along with this one, already joined. */
+  detail: string | null;
+  /** Only ever "months" — the one value a number cannot be read without. */
+  unit: string | null;
+  derivation: Derivation;
+  confidence: Confidence;
+  /** True when the current job scores or knocks out on this attribute. */
+  scored: boolean;
+  evidence: Evidence[];
+}
+
+export interface CvParse {
+  candidate_id: string;
+  /** The exact text the extractor saw; every offset below indexes into it. */
+  text: string;
+  attributes: ParsedAttribute[];
+  unmatched_skills: string[];
+  provenance: Provenance;
+}
+
 export interface AuditSummary {
   chain_ok: boolean;
   count: number;

@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from .. import config, pipeline
 from ..audit.log import get_record, read_records, verify_chain
 from ..authoring import catalogue_for, store
-from ..loaders import list_jobs, load_job, manifest_for_job
+from ..loaders import list_jobs, load_cv_text, load_job, manifest_for_job
 from ..schemas import BUDGET_TOTAL, RestateRequest, ScreenRequest, ScreenResult
 
 STATIC = Path(__file__).parent / "static"
@@ -130,6 +130,33 @@ def candidates(job: str = "backend_engineer", mode: str = "B", N: int | None = N
             ],
         })
     return rows
+
+
+@app.get("/candidates/{candidate_id}/cv")
+def candidate_cv(candidate_id: str, job: str = "backend_engineer") -> dict:
+    """The CV text and every attribute read out of it, tied together by offsets.
+
+    No LLM call: this is the stored parse replayed, not a second reading. The
+    text is the same string the extractor saw, so `evidence.start`/`end` index
+    straight into it and the UI never has to search for a quote.
+    """
+    from .attributes import attributes_for
+
+    try:
+        text = load_cv_text(candidate_id)
+        profile = pipeline.candidate_profile(candidate_id)
+    except (KeyError, FileNotFoundError) as e:
+        raise HTTPException(404, f"no stored CV text for {candidate_id!r}") from e
+    jt = load_job(job)
+    return {
+        "candidate_id": candidate_id,
+        "text": text,
+        "attributes": attributes_for(profile, manifest_for_job(jt), jt),
+        # Skills the CV named that the taxonomy has no concept for. Shown rather
+        # than dropped: "we read this and could not use it" is part of the parse.
+        "unmatched_skills": profile.unmatched_skills,
+        "provenance": profile.provenance.model_dump(mode="json"),
+    }
 
 
 @app.get("/jobs/{job_id}/spec")

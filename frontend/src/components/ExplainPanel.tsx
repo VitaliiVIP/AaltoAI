@@ -17,6 +17,7 @@ import {
 } from "../present";
 import type { RouteView } from "../present";
 import type { Phase } from "../useScreening";
+import ParsedCvModal from "./ParsedCvModal";
 import ScoreChip from "./ScoreChip";
 
 interface ExplainPanelProps {
@@ -61,6 +62,7 @@ export default function ExplainPanel({
   error,
 }: ExplainPanelProps) {
   const [cvOpen, setCvOpen] = useState(false);
+  const [parseOpen, setParseOpen] = useState(false);
   const [activeRoute, setActiveRoute] = useState(0);
 
   const candidateId = result?.candidate_id ?? row?.candidate_id ?? null;
@@ -69,6 +71,7 @@ export default function ExplainPanel({
   // changes underneath them.
   useEffect(() => {
     setCvOpen(false);
+    setParseOpen(false);
     setActiveRoute(0);
   }, [candidateId]);
 
@@ -120,6 +123,9 @@ export default function ExplainPanel({
     <section className="col col-explain" aria-label="Match explanation">
       <div className="col-header">
         <h2>Why this match?</h2>
+        <button className="open-cv-btn secondary" onClick={() => setParseOpen(true)}>
+          What we read
+        </button>
         <button className="open-cv-btn" onClick={() => setCvOpen(true)}>
           Open CV
         </button>
@@ -330,6 +336,13 @@ export default function ExplainPanel({
           </div>
         </div>
       )}
+
+      <ParsedCvModal
+        open={parseOpen}
+        candidateId={candidateId}
+        jobId={job?.job_id ?? "backend_engineer"}
+        onClose={() => setParseOpen(false)}
+      />
     </section>
   );
 }
