@@ -541,6 +541,7 @@
    "evidence": []
   }
  },
+ "contact_email": "priya.sharma@example.com",
  "derived": {
   "cloud_platform_held": {
    "value": false,

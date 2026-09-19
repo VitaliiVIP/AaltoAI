@@ -628,6 +628,7 @@
    "evidence": []
   }
  },
+ "contact_email": "marcus.chen@example.com",
  "derived": {
   "cloud_platform_held": {
    "value": true,

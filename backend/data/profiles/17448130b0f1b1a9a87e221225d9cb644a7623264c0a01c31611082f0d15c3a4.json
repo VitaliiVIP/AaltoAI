@@ -576,6 +576,7 @@
    "evidence": []
   }
  },
+ "contact_email": "aisha.rahman@example.com",
  "derived": {
   "cloud_platform_held": {
    "value": true,

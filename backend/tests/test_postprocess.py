@@ -14,6 +14,7 @@ from recourse_screen.extract.postprocess import (
     ProtectedFieldError,
     QuoteIndex,
     build_profile,
+    find_email,
     infer_seniority,
     normalise_roles,
     scrub,
@@ -458,3 +459,45 @@ def test_non_software_role_grants_held_but_no_professional_months(output_model, 
     assert profile.skills["python"].proficiency.value == 1
     assert profile.experience.software_months.value == 0
     assert profile.experience.total_months.value == 36
+
+
+# --------------------------------------------------------------------------- #
+# contact email (UI only, never scored)
+# --------------------------------------------------------------------------- #
+
+CV_WITH_EMAIL = """Backend Software Engineer
+elina.korhonen@example.com | +358 40 123 4567 | Helsinki, Finland
+
+""" + CV
+
+
+def test_email_is_read_from_the_header():
+    assert find_email(CV_WITH_EMAIL) == "elina.korhonen@example.com"
+
+
+def test_email_is_none_when_the_cv_has_none():
+    assert find_email(CV) is None
+
+
+@pytest.mark.parametrize("text, expected", [
+    ("Contact: a.b+tag@sub.example.co.uk.", "a.b+tag@sub.example.co.uk"),  # no trailing stop
+    ("mailto:nora@example.com", "nora@example.com"),
+    ("(2022-2026) worked at Example", None),                               # a date is not an email
+    ("write to me at example.com", None),                                  # no local part
+    ("first@example.com then second@elsewhere.com", "first@example.com"),  # header wins
+])
+def test_email_shapes(text, expected):
+    assert find_email(text) == expected
+
+
+def test_profile_carries_the_email_but_no_feature_path_can_reach_it(
+        output_model, manifest, taxonomy):
+    """The address rides along for the UI. `resolve` is the only way the scorer and the
+    solver read a profile, and there is no path that lands on it."""
+    raw = extraction(output_model, roles=[role_dict()])
+    profile = build_profile(raw, CV_WITH_EMAIL, as_of=AS_OF, manifest=manifest,
+                            taxonomy=taxonomy, provenance=make_provenance())
+    assert profile.contact_email == "elina.korhonen@example.com"
+    with pytest.raises(KeyError):
+        profile.resolve("contact_email")
+    assert "contact_email" not in manifest.features

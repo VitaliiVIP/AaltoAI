@@ -479,6 +479,7 @@
    "evidence": []
   }
  },
+ "contact_email": "nora.salminen@example.com",
  "derived": {
   "cloud_platform_held": {
    "value": false,

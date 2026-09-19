@@ -832,6 +832,7 @@
    "evidence": []
   }
  },
+ "contact_email": "elina.korhonen@example.com",
  "derived": {
   "cloud_platform_held": {
    "value": true,

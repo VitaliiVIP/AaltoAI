@@ -653,6 +653,7 @@
    "evidence": []
   }
  },
+ "contact_email": "emma.laakso@example.com",
  "derived": {
   "cloud_platform_held": {
    "value": true,

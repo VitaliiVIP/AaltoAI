@@ -588,6 +588,7 @@
    "evidence": []
   }
  },
+ "contact_email": "johan.virtanen@example.com",
  "derived": {
   "cloud_platform_held": {
    "value": null,

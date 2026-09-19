@@ -166,6 +166,8 @@ def candidate_cv(candidate_id: str, job: str = "backend_engineer") -> dict:
         "candidate_id": candidate_id,
         "text": text,
         "attributes": attributes_for(profile, manifest_for_job(jt), jt),
+        # Read off the CV for addressing a reply, never scored (see Profile.contact_email).
+        "contact_email": profile.contact_email,
         # Skills the CV named that the taxonomy has no concept for. Shown rather
         # than dropped: "we read this and could not use it" is part of the parse.
         "unmatched_skills": profile.unmatched_skills,

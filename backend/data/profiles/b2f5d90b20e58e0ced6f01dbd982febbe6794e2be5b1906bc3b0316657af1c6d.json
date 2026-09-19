@@ -297,6 +297,7 @@
    "evidence": []
   }
  },
+ "contact_email": "tomas.hidalgo@example.com",
  "derived": {
   "cloud_platform_held": {
    "value": null,

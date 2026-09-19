@@ -14,6 +14,10 @@ Everything the model is not allowed to compute happens here, in this order:
 8. the protected-attribute scrub
 9. `derived.*` recomputation from the manifest rules
 
+The candidate's contact address is also lifted out of the CV text here (`find_email`),
+because the model is not allowed to emit contact details. It is carried for the UI only
+and no manifest path can reach it, so nothing downstream can score it.
+
 The small pieces (`normalise_roles`, `skill_months`, `verify_evidence`, `scrub`) are pure
 functions so they can be unit-tested without touching the API.
 """
@@ -51,6 +55,7 @@ __all__ = [
     "ProtectedFieldError",
     "QuoteIndex",
     "build_profile",
+    "find_email",
     "infer_seniority",
     "normalise_roles",
     "pii_warnings",
@@ -77,6 +82,13 @@ _LEAD_WORDS = ("lead", "principal", "head of", "staff engineer", "architect")
 _JUNIOR_WORDS = ("junior", "jr.", "intern", "trainee", "graduate", "apprentice")
 
 _EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.]+")
+# Tighter than `_EMAIL_RE`, which is a PII tripwire and may over-match on purpose. This
+# one has to yield an address the UI can put in a To: field, so the TLD must be letters
+# and the match cannot end on the full stop that follows an address in running text.
+_EMAIL_EXTRACT_RE = re.compile(
+    r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}"
+)
+_MAX_EMAIL_LEN = 254  # RFC 5321; a longer "match" is mangled PDF text, not an address
 # A year range like "(2022-2026)" trips a naive phone pattern, so a candidate match
 # must also carry at least 9 digits - shorter than any real international number.
 _PHONE_RE = re.compile(r"\+?\d[\d\s().-]{7,}\d")
@@ -450,6 +462,27 @@ def _looks_like_phone(text: str) -> bool:
                for m in _PHONE_RE.finditer(text))
 
 
+def find_email(cv_text: str) -> str | None:
+    """The candidate's contact address, read straight out of the CV text.
+
+    Deterministic on purpose. The extraction prompt forbids the model from emitting any
+    contact detail (Rule 5), and keeping it that way means the prompt, the prompt cache
+    and every cached raw extraction stay untouched by this: the address is recovered
+    from the CV text that the raw cache already stores, so existing profiles pick it up
+    on a free re-run of post-processing.
+
+    The first address in the document wins. A CV puts the candidate's own address in the
+    header; anything further down is more likely an employer's or a referee's. The value
+    is for display and for addressing a reply - it is never scored (see
+    `Profile.contact_email`), and it is untrusted text like the rest of the CV.
+    """
+    for match in _EMAIL_EXTRACT_RE.finditer(cv_text):
+        email = match.group()
+        if len(email) <= _MAX_EMAIL_LEN:
+            return email
+    return None
+
+
 def pii_warnings(profile: Profile) -> list[str]:
     """Quotes that look like they dragged contact details in. Advisory, not fatal:
     the quote is provenance for a real value, so we flag it for review rather than
@@ -641,6 +674,7 @@ def build_profile(
         ],
         languages=[Language(lang=lg.lang, cefr=_opt(lg.cefr)) for lg in raw.languages],
         eligibility=eligibility,
+        contact_email=find_email(cv_text),
         unmatched_skills=leftover,
     )
 

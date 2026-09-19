@@ -161,6 +161,11 @@ class Profile(BaseModel):
     certifications: list[Certification] = Field(default_factory=list)
     languages: list[Language] = Field(default_factory=list)
     eligibility: Eligibility = Field(default_factory=Eligibility)
+    # Contact address lifted verbatim from the CV text by `postprocess.find_email`, so
+    # the UI can address a reply to the candidate. It is deliberately not an Envelope
+    # and deliberately not reachable through `resolve`: no manifest path can name it,
+    # so no feature, knockout or score term can ever read it. None when the CV has none.
+    contact_email: str | None = None
     # Computed by postprocess from the manifest's `derived` rules, e.g. cloud_platform_held.
     derived: dict[str, Envelope] = Field(default_factory=dict)
     unmatched_skills: list[str] = Field(default_factory=list)

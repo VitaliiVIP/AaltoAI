@@ -456,6 +456,7 @@
    "evidence": []
   }
  },
+ "contact_email": "daniel.kwan@example.com",
  "derived": {
   "cloud_platform_held": {
    "value": true,

@@ -470,6 +470,7 @@
    "evidence": []
   }
  },
+ "contact_email": "lucas.alves@example.com",
  "derived": {
   "cloud_platform_held": {
    "value": false,

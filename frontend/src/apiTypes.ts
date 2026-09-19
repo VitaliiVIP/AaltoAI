@@ -109,6 +109,8 @@ export interface Profile {
   projects: Project[];
   project_counts_by_topic: Record<string, number>;
   education: Education;
+  /** Read off the CV for addressing a reply; never part of the score. */
+  contact_email: string | null;
   derived: Record<string, Envelope>;
   unmatched_skills: string[];
   never_extract: string[];
@@ -421,6 +423,8 @@ export interface CvParse {
   /** The exact text the extractor saw; every offset below indexes into it. */
   text: string;
   attributes: ParsedAttribute[];
+  /** Read off the CV for addressing a reply; never part of the score. */
+  contact_email: string | null;
   unmatched_skills: string[];
   provenance: Provenance;
 }
