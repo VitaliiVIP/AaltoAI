@@ -8,26 +8,34 @@ interface AcceptedDrawerProps {
   pool: PoolRow[];
   emailStatus: Record<string, EmailStatus>;
   onClose: () => void;
-  onUnaccept: (id: string) => void;
+  onRemove: (id: string) => void;
 }
 
 /**
- * Everyone who cleared the bar and was actually accepted (Accept button in
- * the Email panel), not just everyone who passed screening. Declining here
- * doesn't reject them — it clears their status and drops them back into the
- * normal applicant pool, where they hit the Accept/Decline choice again.
+ * Everyone currently in play: candidates who cleared the bar and were
+ * actually accepted (Accept), and candidates who didn't clear it but were
+ * kept for further review instead of rejected (Keep further) — both are one
+ * click away from the Email panel's draft, neither is a final decision yet.
+ * Declining here doesn't reject them — it clears their status and drops
+ * them back into the normal applicant pool.
  */
 export default function AcceptedDrawer({
   open,
   pool,
   emailStatus,
   onClose,
-  onUnaccept,
+  onRemove,
 }: AcceptedDrawerProps) {
   const [viewing, setViewing] = useState<string | null>(null);
 
-  const accepted = useMemo(
-    () => pool.filter((row) => row.decision === "advance" && emailStatus[row.candidate_id] === "sent"),
+  const shown = useMemo(
+    () =>
+      pool
+        .map((row) => ({ row, status: emailStatus[row.candidate_id] }))
+        .filter(
+          ({ row, status }) =>
+            (status === "sent" && row.decision === "advance") || status === "declined",
+        ),
     [pool, emailStatus],
   );
 
@@ -49,25 +57,26 @@ export default function AcceptedDrawer({
       <div className={"overlay" + (open ? " visible" : "")} onClick={onClose} />
       <aside
         className={"settings-drawer left" + (open ? " open" : "")}
-        aria-label="Accepted applicants"
+        aria-label="Candidates in play"
         aria-hidden={!open}
       >
         <div className="drawer-header">
-          <h2>Accepted applicants</h2>
+          <h2>Candidates in play</h2>
           <button className="icon-btn" aria-label="Close" onClick={onClose}>
             ✕
           </button>
         </div>
 
         <div className="drawer-body">
-          {accepted.length === 0 && (
-            <p className="empty-note">No one has been accepted yet.</p>
+          {shown.length === 0 && (
+            <p className="empty-note">No one accepted or kept for further review yet.</p>
           )}
 
           <div className="accepted-grid">
-            {accepted.map((row) => {
+            {shown.map(({ row, status }) => {
               const name = deriveName(row.candidate_id);
               const { thumbUrl } = assetsFor(row.candidate_id);
+              const accepted = status === "sent";
               return (
                 <div className="accepted-card" key={row.candidate_id}>
                   <button
@@ -79,9 +88,12 @@ export default function AcceptedDrawer({
                   </button>
                   <div className="accepted-name">{name}</div>
                   <div className="accepted-score">{row.score} pts</div>
+                  <span className={"status-tag" + (accepted ? " sent" : "")}>
+                    {accepted ? "Accepted" : "Kept further"}
+                  </span>
                   <button
                     className="btn btn-secondary"
-                    onClick={() => onUnaccept(row.candidate_id)}
+                    onClick={() => onRemove(row.candidate_id)}
                   >
                     Decline
                   </button>

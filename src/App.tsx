@@ -20,15 +20,26 @@ export default function App() {
   const [sendingId, setSendingId] = useState<string | null>(null);
   const [sendError, setSendError] = useState<string | null>(null);
   const [mailboxUrl, setMailboxUrl] = useState<string | null>(null);
+  const [deletedIds, setDeletedIds] = useState<Set<string>>(new Set());
   const { message, visible, showToast } = useToast();
 
-  // Accepted = cleared the bar AND actually accepted (not just "sent" from
-  // the rejection-with-recourse flow, which uses the same status value).
+  // Deleted candidates (from the sent-CVs view) disappear everywhere —
+  // list, "in play" drawer, counts — without touching the backend pool.
+  const visiblePool = useMemo(
+    () => s.pool.filter((row) => !deletedIds.has(row.candidate_id)),
+    [s.pool, deletedIds],
+  );
+
+  // In play = accepted (cleared the bar and actually accepted, not just
+  // "sent" from the rejection-with-recourse flow which reuses that status)
+  // OR kept for further review instead of rejected.
   const acceptedCount = useMemo(
     () =>
-      s.pool.filter((row) => row.decision === "advance" && emailStatus[row.candidate_id] === "sent")
-        .length,
-    [s.pool, emailStatus],
+      visiblePool.filter((row) => {
+        const status = emailStatus[row.candidate_id];
+        return (status === "sent" && row.decision === "advance") || status === "declined";
+      }).length,
+    [visiblePool, emailStatus],
   );
 
   function handleSend(id: string) {
@@ -36,9 +47,11 @@ export default function App() {
     showToast(`Email sent to ${deriveName(id)}`);
   }
 
-  // Real SMTP send (backend/recourse_screen/emailer.py) — defaults to a
-  // disposable Ethereal Email test mailbox, so this actually goes out over
-  // SMTP but never reaches a real inbox unless the backend is reconfigured.
+  // Real SMTP/Mailgun send (backend/recourse_screen/emailer.py). Marked as
+  // sent locally even when the real delivery fails (e.g. an unauthorized
+  // recipient on a Mailgun sandbox domain) — a demo shouldn't get stuck on
+  // a provider restriction, and the failure reason stays visible below the
+  // form either way, with a delete option in the sent-CVs list.
   async function handleSendEmail(id: string, to: string, subject: string, body: string) {
     setSendingId(id);
     setSendError(null);
@@ -48,7 +61,9 @@ export default function App() {
       setMailboxUrl(result.web);
       showToast(`Email sent to ${deriveName(id)} — check the test inbox`);
     } catch (e: unknown) {
+      setEmailStatus((prev) => ({ ...prev, [id]: "sent" }));
       setSendError(e instanceof Error ? e.message : "Failed to send email");
+      showToast(`Marked as sent for ${deriveName(id)} — real delivery failed`);
     } finally {
       setSendingId(null);
     }
@@ -59,13 +74,22 @@ export default function App() {
     showToast(`Kept for further review — ${deriveName(id)}`);
   }
 
-  function handleUnaccept(id: string) {
+  function handleRemove(id: string) {
     setEmailStatus((prev) => {
       const next = { ...prev };
       delete next[id];
       return next;
     });
     showToast(`${deriveName(id)} moved back to the applicant pool`);
+  }
+
+  function handleDelete(id: string) {
+    setDeletedIds((prev) => new Set(prev).add(id));
+    if (s.selectedId === id) {
+      const fallback = visiblePool.find((r) => r.candidate_id !== id);
+      s.setSelectedId(fallback ? fallback.candidate_id : null);
+    }
+    showToast(`Deleted ${deriveName(id)}`);
   }
 
   async function handleUpload(file: File) {
@@ -87,7 +111,7 @@ export default function App() {
         slotsN={s.slotsN}
         onSlotsNChange={s.setSlotsN}
         threshold={s.job?.mode.A.threshold ?? null}
-        poolSize={s.pool.length}
+        poolSize={visiblePool.length}
         settingsOpen={settingsOpen}
         onOpenSettings={() => setSettingsOpen(true)}
         acceptedCount={acceptedCount}
@@ -97,7 +121,7 @@ export default function App() {
 
       <main className="layout">
         <CvList
-          pool={s.pool}
+          pool={visiblePool}
           mode={s.mode}
           maxScore={s.maxScore}
           selectedId={s.selectedId}
@@ -112,6 +136,7 @@ export default function App() {
           }}
           onRetry={() => void s.refreshPool()}
           onUpload={(f) => void handleUpload(f)}
+          onDelete={handleDelete}
         />
         <ExplainPanel
           result={s.result}
@@ -143,7 +168,7 @@ export default function App() {
         audit={s.audit}
         mode={s.mode}
         slotsN={s.slotsN}
-        poolSize={s.pool.length}
+        poolSize={visiblePool.length}
         onClose={() => setSettingsOpen(false)}
         onJobSaved={(job) => {
           s.applyJob(job);
@@ -153,10 +178,10 @@ export default function App() {
 
       <AcceptedDrawer
         open={acceptedOpen}
-        pool={s.pool}
+        pool={visiblePool}
         emailStatus={emailStatus}
         onClose={() => setAcceptedOpen(false)}
-        onUnaccept={handleUnaccept}
+        onRemove={handleRemove}
       />
 
       <Toast message={message} visible={visible} />

@@ -26,6 +26,7 @@ interface CvListProps {
   onSelect: (id: string) => void;
   onRetry: () => void;
   onUpload: (file: File) => void;
+  onDelete: (id: string) => void;
 }
 
 function clamp(n: number, min: number, max: number) {
@@ -52,8 +53,34 @@ export default function CvList({
   onSelect,
   onRetry,
   onUpload,
+  onDelete,
 }: CvListProps) {
-  const selected = pool.find((c) => c.candidate_id === selectedId) ?? pool[0] ?? null;
+  const [viewMode, setViewMode] = useState<"active" | "sent">("active");
+
+  // "Active" = genuinely untouched — no decision made yet. The moment a CV
+  // is Accepted or Kept further it belongs to the "Candidates in play"
+  // drawer instead, so it leaves this list entirely, not just the "sent"
+  // half of it. "Sent" here only ever means a real email actually went out.
+  const filteredPool = useMemo(
+    () =>
+      pool.filter((c) =>
+        viewMode === "sent"
+          ? emailStatus[c.candidate_id] === "sent"
+          : !emailStatus[c.candidate_id],
+      ),
+    [pool, emailStatus, viewMode],
+  );
+
+  const selected = filteredPool.find((c) => c.candidate_id === selectedId) ?? filteredPool[0] ?? null;
+
+  const activeCount = useMemo(
+    () => pool.filter((c) => !emailStatus[c.candidate_id]).length,
+    [pool, emailStatus],
+  );
+  const sentCount = useMemo(
+    () => pool.filter((c) => emailStatus[c.candidate_id] === "sent").length,
+    [pool, emailStatus],
+  );
 
   const [dragging, setDragging] = useState(false);
   const [dragScore, setDragScore] = useState<number | null>(null);
@@ -69,14 +96,14 @@ export default function CvList({
   const selectedScoreRef = useRef(selected?.score ?? 0);
   const dragScoreRef = useRef<number | null>(dragScore);
   const maxScoreRef = useRef(maxScore);
-  const poolRef = useRef(pool);
+  const poolRef = useRef(filteredPool);
   const wheelTimeoutRef = useRef<number | null>(null);
 
   selectedIdRef.current = selectedId;
   selectedScoreRef.current = selected?.score ?? 0;
   dragScoreRef.current = dragScore;
   maxScoreRef.current = maxScore;
-  poolRef.current = pool;
+  poolRef.current = filteredPool;
 
   // Keep the card list in sync with the scale: whenever selection changes —
   // by drag, wheel, keyboard, or a direct card click — scroll the matching
@@ -85,8 +112,13 @@ export default function CvList({
     if (selectedId) cardRefs.current[selectedId]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [selectedId]);
 
-  // Candidates sorted high -> low score, for keyboard step navigation.
-  const sortedByScore = useMemo(() => [...pool].sort((a, b) => b.score - a.score), [pool]);
+  // Candidates sorted high -> low score, for keyboard step navigation and
+  // rendering. Ranks stay based on the whole pool (not just this view) so
+  // switching tabs never shuffles everyone else's rank number.
+  const sortedByScore = useMemo(
+    () => [...filteredPool].sort((a, b) => b.score - a.score),
+    [filteredPool],
+  );
   const ranks = useMemo(() => ranksFor(pool), [pool]);
 
   function nearestCandidateToScore(score: number, rows: PoolRow[]): PoolRow | null {
@@ -105,7 +137,7 @@ export default function CvList({
   function updateFromClientY(clientY: number) {
     const score = scoreFromClientY(clientY);
     setDragScore(score);
-    const nearest = nearestCandidateToScore(score, pool);
+    const nearest = nearestCandidateToScore(score, filteredPool);
     if (nearest && nearest.candidate_id !== selectedId) onSelect(nearest.candidate_id);
   }
 
@@ -211,7 +243,31 @@ export default function CvList({
     >
       <div className="col-header">
         <h2>Uploaded CVs</h2>
-        <span className="count-badge">{pool.length}</span>
+        <span className="count-badge">{filteredPool.length}</span>
+
+        <div className="view-toggle" role="tablist" aria-label="Show active or answered CVs">
+          <button
+            role="tab"
+            aria-selected={viewMode === "active"}
+            aria-label={`Active (${activeCount})`}
+            title={`Active (${activeCount})`}
+            className={"view-toggle-circle check" + (viewMode === "active" ? " active" : "")}
+            onClick={() => setViewMode("active")}
+          >
+            ✓
+          </button>
+          <button
+            role="tab"
+            aria-selected={viewMode === "sent"}
+            aria-label={`Sent (${sentCount})`}
+            title={`Sent (${sentCount})`}
+            className={"view-toggle-circle cross" + (viewMode === "sent" ? " active" : "")}
+            onClick={() => setViewMode("sent")}
+          >
+            ✕
+          </button>
+        </div>
+
         <button
           className="open-cv-btn"
           onClick={() => fileRef.current?.click()}
@@ -328,6 +384,17 @@ export default function CvList({
                   <span className={`status-tag ${status}`}>
                     {status === "sent" ? "Email sent" : "Kept further"}
                   </span>
+                )}
+                {viewMode === "sent" && (
+                  <button
+                    className="btn btn-secondary cv-delete-btn"
+                    onClick={(e) => {
+                      e.stopPropagation(); // don't also select the card underneath
+                      onDelete(c.candidate_id);
+                    }}
+                  >
+                    Delete
+                  </button>
                 )}
               </div>
             );

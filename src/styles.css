@@ -206,6 +206,46 @@ h1, h2, h3, p { margin: 0; }
   border-radius: var(--radius-round);
 }
 
+.view-toggle {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.view-toggle-circle {
+  width: 1.6rem;
+  height: 1.6rem;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: var(--border-width) solid var(--border);
+  background: var(--mono-125);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.view-toggle-circle.check { color: var(--green); }
+.view-toggle-circle.cross { color: var(--red); }
+.view-toggle-circle:hover {
+  border-color: currentColor;
+}
+.view-toggle-circle.active {
+  background: #fff;
+  border-color: currentColor;
+  box-shadow: 0 0 0 2px color-mix(in srgb, currentColor 30%, transparent);
+}
+
+.cv-delete-btn {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--red);
+}
+
 /* ---------------- Section 1: CV list + scale ---------------- */
 
 .cv-body {

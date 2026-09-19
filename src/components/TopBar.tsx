@@ -36,8 +36,8 @@ export default function TopBar({
     <header className="topbar">
       <button
         className={"list-btn" + (acceptedOpen ? " active" : "")}
-        aria-label="Accepted applicants"
-        title="Accepted applicants"
+        aria-label="Candidates in play"
+        title="Candidates in play"
         onClick={onOpenAccepted}
       >
         <ListIcon />
