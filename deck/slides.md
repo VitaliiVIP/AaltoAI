@@ -1,662 +1,761 @@
 ---
-# try also 'default' to start simple
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
+background: https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2400
+title: HR AI Advisor — algorithmic recourse for CV screening
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  ## HR AI Advisor
+  AaltoAI Hackathon 2026 — Gleb Tretiakov, Vitalii Virronen, Ilya Zalesskii
 
-  Learn more at [Sli.dev](https://sli.dev)
-# apply UnoCSS classes to the current slide
+  An open-source CV pre-screener that tells rejected candidates exactly what
+  would have to change, and keeps the human in the loop.
 class: text-center
-# https://sli.dev/features/drawing
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable Comark Syntax: https://comark.dev/syntax/markdown
-comark: true
-# duration of the presentation
-duration: 35min
+mdc: true
+duration: 10min
 ---
 
-# Welcome to Slidev
+# HR AI Advisor
 
-Presentation slides for developers
+Automated CV screening that **explains itself — to both sides**
 
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
+<div class="pt-8 text-sm opacity-70">
+Gleb Tretiakov · Vitalii Virronen · Ilya Zalesskii<br>
+AaltoAI Hackathon 2026 — AI sovereignty, security & EU data law
 </div>
 
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
-    <carbon:logo-github />
-  </a>
+<div class="abs-br m-6 text-sm opacity-60">
+recourse.ilia.fi · open source
 </div>
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+DRAFT DECK — built from deck/tmp.pdf. Numbers verified against the running backend
+on 2026-09-19. Slides marked TODO need the team's input.
+
+30 s: who we are, one sentence on what it does. Don't explain the architecture yet.
 -->
 
 ---
-transition: fade-out
+layout: statement
 ---
 
-# What is Slidev?
+# 250 applications. One afternoon.
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
-
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+<div class="text-xl opacity-80 mt-6">
+Generative AI made applying free.<br>
+It did not make <span class="text-teal-300">reading</span> free.
+</div>
 
 <!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
+Motivation, section 2 of the doc. The asymmetry is the whole story:
+cost of sending a CV went to ~zero, cost of reading one did not.
+Consequence: employers buy filters, candidates get silence.
 -->
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+---
+
+# Two people are stuck
+
+<div class="grid grid-cols-2 gap-8 pt-6">
+
+<div>
+
+### The HR manager
+
+- Hundreds of CVs per opening
+- No time to read them all properly
+- Buys a black-box filter → now **legally exposed**
+- Cannot answer "why was I rejected?"
+
+</div>
+
+<div>
+
+### The applicant
+
+- Sends 100 applications
+- Gets silence, or "we moved forward with other candidates"
+- Learns **nothing** — cannot improve, cannot contest
+- Reapplies next year with the same CV
+
+</div>
+
+</div>
+
+<div class="pt-10 text-center text-xl">
+Every screening product on the market solves the first problem<br>
+<span class="opacity-60">and treats the second as someone else's.</span>
+</div>
 
 <!--
-Here is another comment.
+This slide sets up the differentiator. Don't rush it — the judges need to feel
+that the second column is a real, unserved problem.
 -->
 
 ---
-transition: slide-up
-level: 2
+layout: statement
 ---
 
-# Navigation
+# Our bet
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+### Tell the rejected candidate<br>**exactly what would have changed the answer.**
 
-## Keyboard Shortcuts
+<div class="pt-8 text-lg opacity-70">
+"One more shipped microservice project would have been enough."
+</div>
 
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
+<div class="pt-6 text-sm opacity-50">
+The technique is called <b>algorithmic recourse</b> — well studied in papers,<br>
+almost absent from shipped hiring products.
+</div>
 
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
+<!--
+Wachter, Mittelstadt & Russell (2017) — counterfactual explanations. The literature
+is 8 years old; vendors ship "developmental tips" (HireVue) but nobody ships
+actual threshold recourse. That gap is our project.
+-->
+
+---
+
+# What we built
+
+<div class="grid grid-cols-2 gap-8 pt-4">
+
+<div>
+
+**For HR** — a screening console
+- Upload CVs, get a ranked shortlist
+- Author the job as a **100-point budget**
+- See which parts of the CV drove the score
+- Approve or override every decision
+
+</div>
+
+<div>
+
+**For the candidate** — an answer
+- Up to **3 independent routes** back to a pass
+- Each with a cost and a realistic timeline
+- Drafted as an email the manager sends
+- Never sent automatically
+
+</div>
+
+</div>
+
+<div class="pt-8">
+
+Open source · self-hostable · runs the whole demo with **no LLM key** if you want it to
+
+</div>
+
+<!--
+Emphasise: the LLM is optional at demo time. Deterministic templates cover the whole
+flow; the model only polishes prose. That matters for sovereignty and for judges
+who ask "what if the API is down / the data can't leave the EU".
+-->
 
 ---
 layout: two-cols
-layoutClass: gap-16
+layoutClass: gap-8
 ---
 
-# Table of contents
+# The pipeline
 
-You can use the `Toc` component to generate a table of contents for your slides:
+<v-clicks>
 
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
+**1 · Parse** — LLM reads the CV, emits a structured profile. Cached by content hash.
 
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
+**2 · Score** — deterministic. Knockouts, then a 100-point budget.
+
+**3 · Recourse** — CP-SAT solver finds the cheapest changes that flip the outcome.
+
+**4 · Explain** — code-owned templates; LLM may rephrase, never invent.
+
+**5 · Log** — hash-chained, append-only audit record per decision.
+
+</v-clicks>
 
 ::right::
 
-<Toc text-sm minDepth="1" maxDepth="2" />
+<div class="pt-16 text-sm font-mono leading-relaxed opacity-80">
 
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover!
-
-```ts [filename-example.ts] {all|4|6|6-7|9|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
 ```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="342" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
-
----
-level: 2
----
-
-# Shiki Magic Move
-
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
+CV (pdf/text)
+     │  LLM #1
+     ▼
+  Profile  ─────► Score ──► pass ──► shortlist
+  (JSON)            │
+                    │ fail
+                    ▼
+              CP-SAT solver
+                    │
+                    ▼
+              3 routes back
+                    │  LLM #2 (optional)
+                    ▼
+              Candidate email
+                    │
+                    ▼
+              Manager approves
 ```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>`, `<BlueSky/>`, and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
 
 </div>
-<div>
 
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
+<div class="absolute bottom-6 right-8 text-xs opacity-60">
+The LLM appears <b>twice</b>. Everything between is deterministic and replayable.
 </div>
 
 <!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
+The key architectural claim, and the one judges will probe: we did NOT ask a model
+"should we hire this person". Scoring and recourse are arithmetic and integer
+programming. The model only reads unstructured text and writes prose.
 -->
 
 ---
-class: px-20
----
 
-# Themes
+# The job is a point budget
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+<div class="text-sm opacity-80 -mt-2">
+HR authors it. The system enforces it. The column sums to <b>100</b>, so a score reads as a
+percentage and the pass mark is a share of the job — not a magic number.
+</div>
 
-<div grid="~ cols-2 gap-2" m="t-2">
+<div class="grid grid-cols-2 gap-8 pt-4 text-xs">
+
+<div>
+
+#### Hard requirements — knockouts
+Fail one → rejected. No score traded off against it.
 
 ```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you press <kbd>space</kbd> or <kbd>right</kbd>, or click outside the slide on the right.
-
-```html
-<div v-click>This shows up when you trigger a click animation.</div>
+skills.python.held == true
+experience.software_months >= 12
+education.highest_level >= bsc
 ```
 
 </div>
 
-<p v-click>
-You can also add modifiers to change the animation:
-</p>
+<div>
 
-<div class="grid gap-3 mt-4 text-sm" style="grid-template-columns: repeat(3, 1fr) 1.5fr 1fr">
-  <div v-after.up class="p-3 rounded border border-primary/20 bg-primary/10">
-    <div class="font-mono text-xs opacity-60 mb-1">v-click.up</div>
-    <div>Slide from bottom</div>
-  </div>
-  <div v-click.fade-in class="p-3 rounded border border-primary/30 bg-primary/15">
-    <div class="font-mono text-xs opacity-60 mb-1">v-click.fade-in</div>
-    <div>Fade in</div>
-  </div>
-  <div v-click.fade class="p-3 rounded border border-primary/40 bg-primary/20">
-    <div class="font-mono text-xs opacity-60 mb-1">v-click.fade</div>
-    <div>Dim (0.5 opacity)</div>
-  </div>
-  <div v-click.fade.right.scale class="p-3 rounded border border-primary/50 bg-primary/25">
-    <div class="font-mono text-xs opacity-60 mb-1">v-click.fade.right.scale</div>
-    <div>Composed</div>
-  </div>
-  <div v-click.none class="p-3 rounded border border-primary/60 bg-primary/30">
-    <div class="font-mono text-xs opacity-60 mb-1">v-click.none</div>
-    <div>No transition</div>
-  </div>
-</div>
+#### Soft requirements — 100 points
 
-<v-click>
-
-The <span v-mark.red="7"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="8">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div v-click mt-12>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
+| Criterion | Pts |
+|---|---|
+| Backend experience | 32 |
+| Python | 16 |
+| Kubernetes | 11 |
+| Microservices projects | 10 |
+| Cloud platform | 9 |
+| Education level | 6 |
+| CI/CD · Docker · IaC · SQL | 5·4·4·3 |
 
 </div>
 
+</div>
+
+<!--
+Real config from backend/recourse_screen/jobs/backend_engineer.yaml.
+If asked why the numbers are 32/16/11/10/9/6/5/4/4/3: points must divide the
+solver's step count exactly, so the editor snaps them server-side.
+-->
+
 ---
 
-# Motions
+# 4.1 · Score math
 
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
+<div class="pt-2">
 
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn more](https://sli.dev/guide/animations.html#motion)
+Each criterion has a **cap** — how many solver steps count as full marks — so one step is worth
+`points // cap`, always an integer.
 
 </div>
 
----
-
-# $\LaTeX$
-
-$\LaTeX$ is supported out-of-box. Powered by [$\KaTeX$](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
+```python
+score = Σ  min(steps(feature), cap) × (points // cap)
 ```
 
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
+<div class="grid grid-cols-2 gap-8 pt-6">
 
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
+<div>
 
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
+**Mode A — fixed threshold**
+Pass at **≥ 80 / 100**.
+Absolute, stable, explainable.
 
 </div>
 
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
+<div>
 
----
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
----
+**Mode B — top N of pool**
+Pass if you are in the **top 3**.
+The bar is the 3rd-best score — it *moves*.
 
-# Draggable Elements
+</div>
 
-Double-click on the draggable elements to edit their positions.
+</div>
 
-<br>
+<div class="pt-6 text-sm opacity-70">
+Both modes ship. We show both on purpose — see slide "the uncomfortable finding".
+</div>
 
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
-###### Draggable Arrow
-
-```md
-<v-drag-arrow two-way />
-```
-
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
-
----
-src: ./pages/imported-slides.md
-hide: false
----
+<!--
+Mode B bar is computed as the N-th best score among the other candidates (+1,
+ties resolved pessimistically). No bootstrap, no capacity modelling — deliberately
+simple, and we say so.
+-->
 
 ---
 
-# Monaco Editor
+# Recourse is an optimisation problem
 
-Slidev provides built-in Monaco Editor support.
+Not a prompt.
 
-Add `{monaco}` to the code block to turn it into an editor:
+<div class="pt-4 text-sm">
 
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
+Given the candidate's profile, find the **cheapest set of changes** that crosses the bar:
 
-const arr = ref(emptyArray(10))
+</div>
+
+<div class="grid grid-cols-3 gap-4 pt-6 text-sm">
+
+<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
+
+**Actionability**
+Every feature is tagged `actionable`, `conditionally actionable` or `immutable`.
+Immutable features are never in a route.
+
+</div>
+
+<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
+
+**Cost & time**
+Each step has a cost and a typical duration, from the job-family manifest — not invented per candidate.
+
+</div>
+
+<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
+
+**Causal constraints**
+
+<div class="font-mono text-xs py-2 leading-relaxed">
+k8s ≤ docker<br>
+Δmicro ≤ 2 + Δbackend_mo
+</div>
+
+You cannot be advised to fake a dependency.
+
+</div>
+
+</div>
+
+<div class="pt-6 text-sm opacity-70">
+CP-SAT returns up to <b>3 diverse routes</b>, each sufficient on its own, sparsity-penalised so
+short routes win.
+</div>
+
+<!--
+The two dependency rules are real, from the manifest. The first stops us saying
+"learn Kubernetes" to someone with no Docker. The second stops "ship 5 microservices
+next month" advice to someone with no backend time to ship them in.
+-->
+
+---
+
+# Honesty rules, in code
+
+<div class="text-base opacity-90 -mt-2">
+The system must never claim the candidate lacks something it merely <b>didn't see</b>.
+</div>
+
+<div class="grid grid-cols-3 gap-5 pt-8 text-sm">
+
+<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
+
+`stated` / `computed`
+
+**→ instruction**
+
+<div class="pt-2 italic opacity-80">"Add about 6 more months of professional software engineering experience."</div>
+
+</div>
+
+<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
+
+`denied`
+
+**→ instruction that concedes**
+
+<div class="pt-2 italic opacity-80">"Your CV said you do not have hands-on Kubernetes experience, so gaining it is one way to close this gap."</div>
+
+</div>
+
+<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
+
+`absent`
+
+**→ question**
+
+<div class="pt-2 italic opacity-80">"Your CV did not mention infrastructure-as-code — if you have it, add it and ask us to re-run the screen."</div>
+
+</div>
+
+</div>
+
+<div class="pt-6 text-sm opacity-60">
+Verbatim output from the running system.
+</div>
+
+<!--
+This is the slide that separates us from "we asked GPT to write rejection feedback".
+The distinction absent vs denied is enforced by template selection, not by a prompt.
+-->
+
+---
+
+# Keeping the model on a leash
+
+<div class="grid grid-cols-2 gap-8 pt-4">
+
+<div>
+
+### What the LLM writes
+- One sentence per change
+- That is all
+
+### What code writes
+- The framing and intro
+- Ordering of routes
+- Immutable-blocker disclosures
+- The closing text
+
+</div>
+
+<div>
+
+### What checks it
+A **code-only checker** runs on every generated sentence:
+- whitelist of facts it may mention
+- no new numbers, no new features
+- fails → fall back to the template
+
+<div class="pt-4 text-sm opacity-70">
+No LLM judges another LLM. No "as an AI language model" apology path.
+</div>
+
+</div>
+
+</div>
+
+<div class="pt-8 text-center text-sm opacity-70">
+Every screening in this demo ran with <code>explain=false</code> — the deterministic path.
+</div>
+
+<!--
+Practical consequence: the demo cannot be broken by a rate limit, a bad key, or a
+model refusing. Judges love a demo that survives the venue wifi.
+-->
+
+---
+layout: statement
+---
+
+# The uncomfortable finding
+
+<div class="text-left max-w-3xl mx-auto pt-4">
+
+Same candidate. Same CV. Same job.
+
+</div>
+
+<div class="grid grid-cols-2 gap-8 pt-6 text-left max-w-3xl mx-auto">
+
+<div class="p-4 rounded bg-green-500 bg-opacity-10">
+
+**Threshold mode** — bar 80, scored 75
+
+One step:
+- *one more microservices project*
+
+<div class="pt-2 text-sm opacity-70">cost 6</div>
+
+</div>
+
+<div class="p-4 rounded bg-red-500 bg-opacity-10">
+
+**Ranking mode** — bar 91, scored 75, ranked 5/10
+
+Two steps, and the bar moves if others improve:
+- *one more microservices project*
+- *plus hands-on Kubernetes — ~4 months*
+
+<div class="pt-2 text-sm opacity-70">cost 15</div>
+
+</div>
+
+</div>
+
+<div class="pt-6 text-sm opacity-80 max-w-3xl mx-auto text-left">
+Recourse is honest under a threshold. Under ranking it is a <b>moving target</b> — and we show that
+rather than hide it.
+</div>
+
+<!--
+This is the research contribution and the intellectually honest moment of the pitch.
+Real numbers, candidate cv4. Mode B is the default in the UI precisely so the weakness
+is visible, not buried.
+-->
+
+---
+
+# 3 · Law compliance
+
+<div class="text-sm pt-2">
+
+Hiring AI is **high-risk under Annex III** of the EU AI Act. We designed to the strict reading.
+
+</div>
+
+<div class="grid grid-cols-2 gap-6 pt-4 text-sm">
+
+<div>
+
+**EU AI Act (2024/1689)**
+Art. 86 — right to an explanation of an individual decision.
+→ every decision carries its contributions, its routes and its config version.
+<span class="opacity-60">High-risk duties deferred to 2 Dec 2027 (Digital Omnibus 2026/1744).</span>
+
+**GDPR Art. 22**
+No solely-automated decision with significant effect.
+→ **the manager decides.** The system shortlists and drafts; a human sends.
+
+</div>
+
+<div>
+
+**GDPR Art. 13–15** — "meaningful information about the logic involved."
+→ the logic *is* the published point budget.
+
+**Data minimisation**
+→ protected attributes are never extracted into the profile; the model scores a
+feature vector, not a person.
+
+**NIS2 / sovereignty**
+→ self-hostable, two containers, no third-party ATS.
+
+</div>
+
+</div>
+
+<div class="pt-4 text-xs opacity-60">
+TODO (team): decide how hard we claim compliance vs "designed toward". Framing it as
+<b>developmental feedback</b>, not "the legal reason for rejection", is the safer posture.
+</div>
+
+<!--
+Dates checked against research/algorithmic_recourse_and_counterfactual_explanations_in_hiring.md,
+accurate as of Sept 2026. Do NOT say "we are compliant" on stage — say "we built to
+the obligations that land in Dec 2027".
+-->
+
+---
+
+# Every decision is replayable
+
+<div class="pt-4">
+
+An append-only, **hash-chained** log. Each record links to the previous one:
+
+</div>
+
+```
+record_n.hash = sha256( record_{n-1}.hash + decision_id + timestamp + payload )
 ```
 
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
+<div class="grid grid-cols-3 gap-6 pt-8 text-sm">
 
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
+<div>
 
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
+**What's stored**
+profile hash, job version, scorer version, solver version, model id, the routes shown
+
+</div>
+
+<div>
+
+**What it proves**
+edit or delete one line and every hash after it breaks — `make audit` finds the first bad index
+
+</div>
+
+<div>
+
+**Why it matters**
+"show us how this candidate was screened, 14 months ago" has an answer
+
+</div>
+
+</div>
+
+<!--
+Also: re-screens after a candidate updates their CV link back to the parent decision,
+so the chain shows the whole conversation, not just the last verdict.
+-->
+
+---
+
+# 5 · The console
+
+<div class="pt-2 text-sm opacity-80">
+Three panels, left to right — the same order as the decision.
+</div>
+
+<div class="grid grid-cols-3 gap-4 pt-6 text-sm">
+
+<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
+
+**Uploaded CVs**
+Ranked, best first. Score chip per candidate. Click to open the original PDF or the parsed profile.
+
+</div>
+
+<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
+
+**Why this match?**
+Hard requirements ticked off, matched requirements, gaps identified with point values. Switch to candidate view.
+
+</div>
+
+<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
+
+**Candidate email**
+Pre-drafted from the routes. Edit, *Polish with Claude*, then **Send** or **Keep further** — the manager's call.
+
+</div>
+
+</div>
+
+<div class="pt-8 p-4 rounded border border-dashed border-gray-500 text-center text-sm opacity-60">
+TODO: drop a fresh screenshot in <code>deck/public/console.png</code> and uncomment the image below.<br>
+The screenshot in tmp.pdf is stale (old 103-point scale) and shows a real CV — don't ship it.
+</div>
+
+<!--
+<img src="/console.png" class="rounded shadow mt-4" />
+-->
+
+<!--
+If the live demo works on stage, skip this slide entirely and just drive the UI.
+Keep it as the fallback.
+-->
+
+---
+layout: statement
+---
+
+# Demo
+
+<div class="text-left max-w-xl mx-auto pt-6 text-base">
+
+1. Open the pool — 10 candidates, ranked
+2. Open **Aisha** — 75/100, rejected
+3. Read the three routes
+4. Flip **A → B** — watch the advice get more expensive
+5. Open the email draft, polish it, *don't* send
+6. Open the job editor — move Kubernetes from 11 pts to 0, re-screen
+
+</div>
+
+<div class="pt-8 text-sm opacity-60">
+recourse.ilia.fi
+</div>
+
+<!--
+Step 6 is the strongest moment: it makes visible that the employer's config,
+not the model, is what rejected her. Rehearse the timing — the re-screen is instant
+because explain=false.
+-->
+
+---
+
+# What's real, what's demo
+
+<div class="grid grid-cols-2 gap-8 pt-4 text-sm">
+
+<div>
+
+### Real
+- LLM CV parsing with a content-hash cache
+- Deterministic scorer, 100-point budget
+- CP-SAT recourse with causal constraints
+- Template + checker explanation layer
+- Hash-chained audit log
+- HR job editor with server-side budget snapping
+- 17 test modules, synthetic eval harness
+
+</div>
+
+<div>
+
+### Demo-scale, and we'll say so
+- 10 candidates in the pool, one job family
+- Ranking mode is deliberately simplified — the bar is just the N-th best score
+- Costs and durations are hand-authored in the manifest, not learned
+- No bias audit across groups yet
+- No ATS integration
+
+</div>
+
+</div>
+
+<!--
+Judges reward the right-hand column. Say it before they ask.
+-->
+
+---
+
+# Next
+
+<div class="grid grid-cols-2 gap-8 pt-6">
+
+<div>
+
+**Near term**
+- Recourse-cost fairness audit across groups
+- More job families than backend engineering
+- Candidate-side re-screen loop ("I added this — recheck me")
+
+</div>
+
+<div>
+
+**The open question**
+- Does telling people how to pass teach them to **improve** — or to **game**?
+- Causal features and dependency constraints are our first answer.
+- It needs real data to settle.
+
+</div>
+
+</div>
+
+<!--
+Ending on an honest open question beats ending on a roadmap. Invite the challenge.
+-->
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
+# HR AI Advisor
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+Screening that can explain itself — to the manager **and** to the candidate
 
-<PoweredBySlidev mt-10 />
+<div class="pt-8 text-sm opacity-70">
+Gleb Tretiakov · Vitalii Virronen · Ilya Zalesskii
+</div>
+
+<div class="pt-4 text-sm opacity-60">
+recourse.ilia.fi · open source · AaltoAI Hackathon 2026
+</div>
