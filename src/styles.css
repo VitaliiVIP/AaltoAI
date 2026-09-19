@@ -1157,18 +1157,6 @@ h1, h2, h3, p { margin: 0; }
   to { background-position: 140% 0; }
 }
 
-.cv-modal iframe {
-  width: 100%;
-  height: 80vh;
-  border: 0;
-  display: block;
-}
-.modal-note {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.72rem;
-  color: var(--text-muted);
-}
-
 /* ---------------- Email panel extras ---------------- */
 
 .synthetic-note { color: var(--text-muted); font-size: 0.7rem; }

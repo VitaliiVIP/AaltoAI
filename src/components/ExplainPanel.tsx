@@ -101,7 +101,7 @@ export default function ExplainPanel({
   }
 
   const name = deriveName(candidateId);
-  const { pdfUrl } = assetsFor(candidateId);
+  const { thumbUrl } = assetsFor(candidateId);
   const busy = phase === "loading" || phase === "explaining";
 
   // The previous result stays on screen while a new one loads, so scrubbing the
@@ -344,14 +344,7 @@ export default function ExplainPanel({
             >
               ✕
             </button>
-            <iframe src={pdfUrl} title={`${name} CV`} />
-            <p className="modal-note">
-              If no preview appears (uploaded CVs have no stored PDF),{" "}
-              <a href={pdfUrl} target="_blank" rel="noreferrer">
-                open it directly
-              </a>
-              .
-            </p>
+            <img src={thumbUrl} alt={`${name} full CV`} />
           </div>
         </div>
       )}
