@@ -29,8 +29,8 @@ jobs:
 
       - uses: docker/setup-buildx-action@v3
 
-      # GHCR repository names must be lowercase, but an account name can carry
-      # capitals (VitaliiVIP), which fails the push with "must be lowercase".
+      # GHCR repository names must be lowercase, but a GitHub account name can
+      # carry capitals, which fails the push with "must be lowercase".
       - id: ns
         run: echo "owner=$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_OUTPUT"
 

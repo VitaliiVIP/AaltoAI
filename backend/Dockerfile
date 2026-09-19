@@ -2,6 +2,10 @@
 # the 260 MB local .venv (and the dev audit log) out of the context entirely.
 FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim
 
+# Links the GHCR package to the repo, so the package page shows its source and
+# inherits the repo's access control.
+LABEL org.opencontainers.image.source=https://github.com/VitaliiVIP/AaltoAI
+
 ENV UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
     UV_PROJECT_ENVIRONMENT=/app/.venv \
