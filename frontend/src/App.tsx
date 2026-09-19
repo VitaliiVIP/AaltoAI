@@ -52,16 +52,33 @@ export default function App() {
   // recipient on a Mailgun sandbox domain) — a demo shouldn't get stuck on
   // a provider restriction, and the failure reason stays visible below the
   // form either way, with a delete option in the sent-CVs list.
-  async function handleSendEmail(id: string, to: string, subject: string, body: string) {
+  //
+  // `declined` distinguishes an Accept send from a Decline-and-send-rejection
+  // send — both are real emails ("sent"-like everywhere that only cares
+  // whether an email went out), but only the former is an acceptance. Without
+  // this, a rejection sent to a candidate who cleared the bar would land back
+  // in the accepted list because their backend decision is still "advance".
+  async function handleSendEmail(
+    id: string,
+    to: string,
+    subject: string,
+    body: string,
+    declined: boolean,
+  ) {
     setSendingId(id);
     setSendError(null);
+    const status: EmailStatus = declined ? "rejected" : "sent";
     try {
       const result = await postSendEmail({ to, subject, body });
-      setEmailStatus((prev) => ({ ...prev, [id]: "sent" }));
+      setEmailStatus((prev) => ({ ...prev, [id]: status }));
       setMailboxUrl(result.web);
-      showToast(`Email sent to ${deriveName(id)} — check the test inbox`);
+      showToast(
+        declined
+          ? `Rejection sent to ${deriveName(id)} — check the test inbox`
+          : `Email sent to ${deriveName(id)} — check the test inbox`,
+      );
     } catch (e: unknown) {
-      setEmailStatus((prev) => ({ ...prev, [id]: "sent" }));
+      setEmailStatus((prev) => ({ ...prev, [id]: status }));
       setSendError(e instanceof Error ? e.message : "Failed to send email");
       showToast(`Marked as sent for ${deriveName(id)} — real delivery failed`);
     } finally {
@@ -156,7 +173,9 @@ export default function App() {
           mailboxUrl={mailboxUrl}
           onPolish={() => void s.polishExplanation()}
           onSend={handleSend}
-          onSendEmail={(id, to, subject, body) => void handleSendEmail(id, to, subject, body)}
+          onSendEmail={(id, to, subject, body, declined) =>
+            void handleSendEmail(id, to, subject, body, declined)
+          }
           onDecline={handleDecline}
         />
       </main>

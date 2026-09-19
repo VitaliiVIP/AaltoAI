@@ -11,6 +11,11 @@ FRONTEND_PORT ?= 5173
 UV  ?= uv
 NPM ?= npm
 
+# `dev` needs `wait -n` (bash-only — plain `wait` blocks for *all* background
+# jobs, so if one dies immediately the recipe hangs on the other forever
+# instead of cleaning up). /bin/sh here is dash, which doesn't have it.
+SHELL := bash
+
 BACKEND  := backend
 FRONTEND := frontend
 CVS      := $(FRONTEND)/public/assets/cvs
@@ -97,10 +102,10 @@ dev: $(FRONTEND)/node_modules check-ports ## Run backend and frontend together (
 	@echo "backend  http://127.0.0.1:$(BACKEND_PORT)/   (API + throwaway demo page)"
 	@echo "frontend http://127.0.0.1:$(FRONTEND_PORT)/  <- the app"
 	@echo
-	@trap 'kill 0' INT TERM EXIT; \
+	@trap 'kill 0 2>/dev/null; sleep 0.3; kill -9 0 2>/dev/null' INT TERM EXIT; \
 	$(MAKE) --no-print-directory backend & \
 	$(MAKE) --no-print-directory frontend & \
-	wait
+	wait -n
 
 backend: check-backend-port ## Run only the API server (:8000)
 	cd $(BACKEND) && $(UV) run uvicorn recourse_screen.api.app:app --reload --port $(BACKEND_PORT)

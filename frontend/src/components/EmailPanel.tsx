@@ -14,7 +14,7 @@ interface EmailPanelProps {
   mailboxUrl: string | null;
   onPolish: () => void;
   onSend: (id: string) => void;
-  onSendEmail: (id: string, to: string, subject: string, body: string) => void;
+  onSendEmail: (id: string, to: string, subject: string, body: string, declined: boolean) => void;
   onDecline: (id: string) => void;
 }
 
@@ -118,7 +118,7 @@ export default function EmailPanel({
     // Read the live textarea value, not the original draft — an edit the
     // recruiter made here is what actually goes out over SMTP.
     const body = textareaRef.current?.value ?? draft.body;
-    onSendEmail(candidateId, to, draft.subject, body);
+    onSendEmail(candidateId, to, draft.subject, body, passed && declining);
   }
 
   return (
@@ -180,6 +180,19 @@ export default function EmailPanel({
         {status === "sent" && (
           <p className="email-sent-note">
             ✓ Email sent to {name}
+            {mailboxUrl && (
+              <>
+                {" — "}
+                <a href={mailboxUrl} target="_blank" rel="noreferrer" className="link-btn">
+                  open test inbox
+                </a>
+              </>
+            )}
+          </p>
+        )}
+        {status === "rejected" && (
+          <p className="email-declined-note">
+            ✓ Rejection sent to {name}
             {mailboxUrl && (
               <>
                 {" — "}

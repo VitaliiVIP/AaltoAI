@@ -1,6 +1,11 @@
 export type ScoreTier = "green" | "yellow" | "red";
 
-export type EmailStatus = "sent" | "declined";
+// "sent" = accepted and a confirmation/recourse email went out.
+// "declined" = kept for further review, no email sent.
+// "rejected" = declined and the rejection email actually went out — a real
+// email like "sent", but never an acceptance, regardless of the backend's
+// pass/fail decision.
+export type EmailStatus = "sent" | "declined" | "rejected";
 
 export interface EmailDraft {
   subject: string;

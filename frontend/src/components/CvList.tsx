@@ -60,14 +60,14 @@ export default function CvList({
   // "Active" = genuinely untouched — no decision made yet. The moment a CV
   // is Accepted or Kept further it belongs to the "Candidates in play"
   // drawer instead, so it leaves this list entirely, not just the "sent"
-  // half of it. "Sent" here only ever means a real email actually went out.
+  // half of it. "Sent" here only ever means a real email actually went out —
+  // that includes an actual rejection ("rejected"), not just an acceptance.
   const filteredPool = useMemo(
     () =>
-      pool.filter((c) =>
-        viewMode === "sent"
-          ? emailStatus[c.candidate_id] === "sent"
-          : !emailStatus[c.candidate_id],
-      ),
+      pool.filter((c) => {
+        const status = emailStatus[c.candidate_id];
+        return viewMode === "sent" ? status === "sent" || status === "rejected" : !status;
+      }),
     [pool, emailStatus, viewMode],
   );
 
@@ -78,7 +78,11 @@ export default function CvList({
     [pool, emailStatus],
   );
   const sentCount = useMemo(
-    () => pool.filter((c) => emailStatus[c.candidate_id] === "sent").length,
+    () =>
+      pool.filter((c) => {
+        const status = emailStatus[c.candidate_id];
+        return status === "sent" || status === "rejected";
+      }).length,
     [pool, emailStatus],
   );
 
@@ -382,7 +386,11 @@ export default function CvList({
                 )}
                 {status && (
                   <span className={`status-tag ${status}`}>
-                    {status === "sent" ? "Email sent" : "Kept further"}
+                    {status === "sent"
+                      ? "Email sent"
+                      : status === "rejected"
+                        ? "Rejection sent"
+                        : "Kept further"}
                   </span>
                 )}
                 {viewMode === "sent" && (

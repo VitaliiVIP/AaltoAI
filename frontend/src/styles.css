@@ -445,6 +445,7 @@ h1, h2, h3, p { margin: 0; }
 }
 .status-tag.sent { background: var(--green-bg); color: var(--green); }
 .status-tag.declined { background: var(--mono-200); color: var(--mono-700); }
+.status-tag.rejected { background: var(--red-bg); color: var(--red); }
 
 /* ---------------- Section 2: Explanation ---------------- */
 
