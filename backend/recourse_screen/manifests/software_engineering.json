@@ -1,6 +1,6 @@
 {
  "job_family": "software_engineering",
- "version": "swe-manifest-v1",
+ "version": "swe-manifest-v2",
  "horizon_months": 18,
  "features": {
   "experience.backend_months": {
@@ -382,5 +382,9 @@
   "nodejs": [
    "javascript"
   ]
- }
+ },
+ "dependencies": [
+  "x'[skills.kubernetes.held] <= x'[skills.docker.held]",
+  "delta[project_counts_by_topic.microservices] <= 2 + 1*delta[experience.backend_months]"
+ ]
 }

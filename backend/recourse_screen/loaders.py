@@ -63,7 +63,9 @@ def load_job(job_id_or_path: str | Path) -> JobTemplate:
     mp = Path(job.manifest)
     if not mp.is_absolute() and (p.parent / mp).exists() and p.parent != config.JOBS_DIR:
         job.manifest = str((p.parent / mp).resolve())
-    return job
+    # A point-authored job has no per-step weights until the manifest supplies the
+    # caps, so binding is part of loading rather than something callers can forget.
+    return job.bind(manifest_for_job(job))
 
 
 def manifest_for_job(job: JobTemplate, manifest_dir: Path | None = None) -> Manifest:

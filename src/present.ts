@@ -63,9 +63,16 @@ export function shortId(id: string): string {
 // Job configuration
 // --------------------------------------------------------------------------
 
-/** The scale is 103, not 100 — derivable before anything has been screened. */
+/**
+ * The top of the scale, derivable before anything has been screened.
+ *
+ * Since the job is authored as a point budget this is the budget itself, so a
+ * score reads as a percentage. It is still summed rather than assumed: a
+ * weight-authored job (the toy fixture, or an older file) is still valid and
+ * will not total 100.
+ */
 export function maxScoreOf(job: JobSummary): number {
-  return Object.values(job.score).reduce((sum, f) => sum + f.weight * f.cap, 0);
+  return Object.values(job.score).reduce((sum, f) => sum + f.points, 0);
 }
 
 /**

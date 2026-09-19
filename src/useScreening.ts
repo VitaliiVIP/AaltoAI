@@ -32,7 +32,9 @@ function schedule(fn: () => void): void {
 
 export function useScreening() {
   const [job, setJob] = useState<JobSummary | null>(null);
-  const [mode, setMode] = useState<Mode>("A");
+  // Mode B is the default: "we interview five" is how hiring actually works, and
+  // it is the harder case for recourse, so it should not be the one you opt into.
+  const [mode, setMode] = useState<Mode>("B");
   const [slotsN, setSlotsN] = useState<number | null>(null);
   const [pool, setPool] = useState<PoolRow[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -41,6 +43,9 @@ export function useScreening() {
   const [results, setResults] = useState<Record<string, ScreenResult>>({});
   /** Pre-restatement results, so the before/after is reversible. */
   const [originals, setOriginals] = useState<Record<string, ScreenResult>>({});
+
+  /** Bumped when the job config is re-saved; forces a rescore of the whole pool. */
+  const [configVersion, setConfigVersion] = useState(0);
 
   const [poolPhase, setPoolPhase] = useState<Phase>("loading");
   const [poolError, setPoolError] = useState<string | null>(null);
@@ -106,7 +111,9 @@ export function useScreening() {
       setPoolPhase("error");
       setPoolError(messageOf(e));
     }
-  }, [jobId, mode, effectiveN]);
+    // configVersion is in the dependency list on purpose: saving a job keeps its
+    // id, so nothing else here would change and the stale pool would survive.
+  }, [jobId, mode, effectiveN, configVersion]);
 
   useEffect(() => {
     void refreshPool();
@@ -279,6 +286,18 @@ export function useScreening() {
     });
   }, [selectedId, cacheKey, originals]);
 
+  /** Adopt a re-saved job: the whole pool has to be rescored against it. */
+  const applyJob = useCallback((next: JobSummary) => {
+    setJob(next);
+    setResults({});
+    setOriginals({});
+    setConfigVersion((v) => v + 1);
+    for (const ac of controllers.current.values()) ac.abort();
+    controllers.current.clear();
+    inflight.current.clear();
+    setSlotsN((n) => (n == null ? next.mode.B.slots_N : n));
+  }, []);
+
   const uploadCv = useCallback(
     async (file: File) => {
       setUploading(true);
@@ -321,6 +340,7 @@ export function useScreening() {
     screenError,
     uploading,
     refreshPool,
+    applyJob,
     polishExplanation,
     applyRestatement,
     revertRestatement,

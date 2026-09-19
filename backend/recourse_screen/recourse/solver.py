@@ -37,6 +37,7 @@ from ..schemas import (
     Manifest,
     NoFeasiblePath,
     Route,
+    effective_dependencies,
 )
 from ..score.features import steps_to_raw
 from ..score.scorer import cap_for, evaluate_knockouts, score_vector
@@ -175,7 +176,7 @@ def _add_structural_constraints(
             m.Add(f.xp <= hi)
         elif not (lo <= f.x <= hi):
             return False
-    for dep in job.parsed_dependencies:
+    for dep in effective_dependencies(job, manifest):
         if dep.kind == "level_le":
             fa, fb = feats.get(dep.a), feats.get(dep.b)
             if fa is None or fb is None:

@@ -10,8 +10,9 @@ from fastapi.staticfiles import StaticFiles
 
 from .. import config, pipeline
 from ..audit.log import get_record, read_records, verify_chain
+from ..authoring import catalogue_for, store
 from ..loaders import list_jobs, load_job, manifest_for_job
-from ..schemas import RestateRequest, ScreenRequest, ScreenResult
+from ..schemas import BUDGET_TOTAL, RestateRequest, ScreenRequest, ScreenResult
 
 STATIC = Path(__file__).parent / "static"
 
@@ -25,35 +26,57 @@ def index() -> FileResponse:
     return FileResponse(STATIC / "index.html")
 
 
+def _job_summary(jid: str) -> dict:
+    job = load_job(jid)
+    man = manifest_for_job(job)
+    feats = {}
+    for path, term in job.score.items():
+        spec = man.features[path]
+        cap = job.cap_of(path, man)
+        feats[path] = {
+            "phrase": spec.candidate_phrase,
+            # `points` is what the criterion is worth at full marks and what the
+            # employer actually chose; `weight` is the per-step figure the engine
+            # runs on. Both ship so the UI never has to re-derive either.
+            "points": job.points_of(path, man),
+            "weight": term.weight, "cap": cap,
+            "full_marks_at": _full_marks_at(spec, cap),
+            "absent_prior": term.absent_prior, "unit": spec.step.unit, "step_size": spec.step.size,
+            "actionability": spec.actionability, "cost_per_step": spec.cost_per_step,
+            "max_delta": spec.max_delta, "typical_time_months": spec.typical_time_months,
+            "is_causal": spec.is_causal, "type": spec.type,
+        }
+    return {
+        "job_id": job.job_id, "title": job.title, "version": job.version,
+        "family": job.family, "manifest": Path(job.manifest).name,
+        "knockouts": job.knockouts, "score": feats, "mode": job.mode.model_dump(),
+        # Causal constraints live in the manifest now. They ship with a generated
+        # gloss so the UI never carries a hand-written sentence per rule.
+        "dependencies": [
+            {"rule": d.rule, "gloss": d.gloss(man)}
+            for d in (man.parsed_dependencies + job.parsed_dependencies)
+        ],
+        "k_routes": job.k_routes,
+        "budget_total": BUDGET_TOTAL,
+        "horizon_months": man.horizon_months, "manifest_version": man.version,
+        "protected_never_use": sorted(man.protected_paths()),
+    }
+
+
+def _full_marks_at(spec, cap: int):
+    """The cap expressed in the feature's own unit, for display."""
+    from ..score.features import steps_to_raw
+
+    return steps_to_raw(spec, cap)
+
+
 @app.get("/jobs")
 def jobs() -> list[dict]:
-    out = []
-    for jid in list_jobs():
-        job = load_job(jid)
-        man = manifest_for_job(job)
-        feats = {}
-        for path, term in job.score.items():
-            spec = man.features[path]
-            feats[path] = {
-                "phrase": spec.candidate_phrase, "weight": term.weight,
-                "cap": term.cap if term.cap is not None else spec.domain_max,
-                "absent_prior": term.absent_prior, "unit": spec.step.unit, "step_size": spec.step.size,
-                "actionability": spec.actionability, "cost_per_step": spec.cost_per_step,
-                "max_delta": spec.max_delta, "typical_time_months": spec.typical_time_months,
-                "is_causal": spec.is_causal,
-            }
-        out.append({
-            "job_id": job.job_id, "title": job.title, "version": job.version,
-            "knockouts": job.knockouts, "score": feats, "mode": job.mode.model_dump(),
-            "dependencies": job.dependencies, "k_routes": job.k_routes,
-            "horizon_months": man.horizon_months, "manifest_version": man.version,
-            "protected_never_use": sorted(man.protected_paths()),
-        })
-    return out
+    return [_job_summary(jid) for jid in list_jobs()]
 
 
 @app.get("/candidates")
-def candidates(job: str = "backend_engineer", mode: str = "A", N: int | None = None) -> list[dict]:
+def candidates(job: str = "backend_engineer", mode: str = "B", N: int | None = None) -> list[dict]:
     """Score and rank the whole pool. No LLM calls, no audit writes.
 
     Carries enough per-candidate detail (experience, the two largest shortfalls)
@@ -107,6 +130,68 @@ def candidates(job: str = "backend_engineer", mode: str = "A", N: int | None = N
             ],
         })
     return rows
+
+
+@app.get("/jobs/{job_id}/spec")
+def job_spec(job_id: str) -> dict:
+    """The editable form of a job: points, knockouts, threshold. Nothing else."""
+    try:
+        return store.current_spec(job_id).model_dump()
+    except FileNotFoundError as e:
+        raise HTTPException(404, f"no such job: {job_id}") from e
+
+
+@app.get("/catalogue")
+def catalogue(job: str | None = None, manifest: str = "software_engineering.json") -> dict:
+    """What a job can be built out of: every usable feature, and what is refused.
+
+    This is the source for the hard-requirement checklist and the point budget
+    editor, so the UI never has to know a manifest path or a rule syntax.
+    """
+    from ..loaders import load_manifest
+
+    if job is not None:
+        jt = load_job(job)
+        return catalogue_for(manifest_for_job(jt), jt)
+    return catalogue_for(load_manifest(manifest))
+
+
+@app.post("/jobs/preflight")
+def jobs_preflight(spec: store.JobSpec) -> dict:
+    """Check a draft without saving it: what the budget becomes, and what is wrong."""
+    return store.preflight(spec)
+
+
+@app.post("/jobs")
+def jobs_save(spec: store.JobSpec) -> dict:
+    """Validate and write a job template. Returns the saved job as /jobs renders it."""
+    try:
+        store.save(spec)
+    except (KeyError, ValueError) as e:
+        raise HTTPException(400, str(e)) from e
+    return _job_summary(spec.job_id)
+
+
+@app.post("/jobs/draft")
+def jobs_draft(body: dict) -> dict:
+    """Draft a job configuration from a pasted job ad. One LLM call, nothing saved.
+
+    The response carries the refusals and unmapped requirements alongside the
+    spec: a draft that silently dropped half the ad would look like agreement.
+    """
+    from ..authoring.draft import DraftError, draft_from_ad
+
+    ad = str(body.get("ad_text") or "")
+    try:
+        return draft_from_ad(
+            ad,
+            manifest_name=str(body.get("manifest") or "software_engineering.json"),
+            job_id=body.get("job_id") or None,
+            threshold=int(body.get("threshold") or 80),
+            slots_n=int(body.get("slots_n") or 3),
+        )
+    except DraftError as e:
+        raise HTTPException(502, str(e)) from e
 
 
 @app.post("/screen")

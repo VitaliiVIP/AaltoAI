@@ -1,7 +1,11 @@
 import type {
   AuditSummary,
+  Catalogue,
+  JobDraft,
+  JobSpec,
   JobSummary,
   PoolRow,
+  Preflight,
   Profile,
   RestateRequest,
   ScreenRequest,
@@ -100,6 +104,35 @@ export function postExtract(
     body: form,
     signal,
   });
+}
+
+// ---- authoring -----------------------------------------------------------
+
+/** Everything a job can be built out of, including what the manifest refuses. */
+export function getCatalogue(job?: string, signal?: AbortSignal): Promise<Catalogue> {
+  const q = job ? `?job=${encodeURIComponent(job)}` : "";
+  return req<Catalogue>(`/catalogue${q}`, { signal });
+}
+
+export function getJobSpec(jobId: string, signal?: AbortSignal): Promise<JobSpec> {
+  return req<JobSpec>(`/jobs/${encodeURIComponent(jobId)}/spec`, { signal });
+}
+
+/** What the budget would become, and what is wrong with it. Saves nothing. */
+export function postPreflight(spec: JobSpec, signal?: AbortSignal): Promise<Preflight> {
+  return postJson<Preflight>("/jobs/preflight", spec, signal);
+}
+
+export function postJobSave(spec: JobSpec, signal?: AbortSignal): Promise<JobSummary> {
+  return postJson<JobSummary>("/jobs", spec, signal);
+}
+
+/** The one authoring call that spends an LLM call. Returns a proposal, not a job. */
+export function postJobDraft(
+  body: { ad_text: string; threshold?: number; slots_n?: number },
+  signal?: AbortSignal,
+): Promise<JobDraft> {
+  return postJson<JobDraft>("/jobs/draft", body, signal);
 }
 
 export function getAudit(signal?: AbortSignal): Promise<AuditSummary> {

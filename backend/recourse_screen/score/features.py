@@ -23,6 +23,7 @@ from ..schemas import (
     JobTemplate,
     Manifest,
     Profile,
+    effective_dependencies,
 )
 
 
@@ -60,16 +61,20 @@ def steps_to_raw(spec: FeatureSpec, steps: int) -> Any:
     return steps * (spec.step.size or 1)
 
 
-def job_feature_paths(job: JobTemplate) -> list[str]:
-    """Every manifest path the job template refers to, in a stable order:
-    scored features first, then knockout-only, then dependency-only."""
+def job_feature_paths(job: JobTemplate, manifest: Manifest) -> list[str]:
+    """Every manifest path this screen touches, in a stable order: scored features
+    first, then knockout-only, then dependency-only.
+
+    Dependencies are constraints the manifest declares for the whole job family,
+    so a job pulls in the paths they mention even when it does not score them.
+    """
     paths: list[str] = list(job.score.keys())
     for ko in job.parsed_knockouts:
         if ko.path not in paths:
             paths.append(ko.path)
-    for dep in job.parsed_dependencies:
+    for dep in effective_dependencies(job, manifest):
         for p in (dep.a, dep.b):
-            if p and p not in paths:
+            if p and p in manifest.features and p not in paths:
                 paths.append(p)
     return paths
 
@@ -82,7 +87,7 @@ def build_feature_vector(profile: Profile, job: JobTemplate, manifest: Manifest)
         KeyError: the job references a path the manifest does not declare.
     """
     fv: FeatureVector = {}
-    for path in job_feature_paths(job):
+    for path in job_feature_paths(job, manifest):
         spec = manifest.features.get(path)
         if spec is None:
             raise KeyError(f"job {job.job_id!r} references unknown manifest feature: {path}")

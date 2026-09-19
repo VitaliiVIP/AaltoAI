@@ -44,7 +44,7 @@ def screen_profile(
     *,
     candidate_id: str,
     job_id: str = "backend_engineer",
-    mode: str = "A",
+    mode: str = "B",
     N: int | None = None,
     explain: bool = True,
     pool: list[tuple[str, Profile]] | None = None,

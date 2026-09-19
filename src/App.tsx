@@ -101,7 +101,12 @@ export default function App() {
         audit={s.audit}
         mode={s.mode}
         slotsN={s.slotsN}
+        poolSize={s.pool.length}
         onClose={() => setSettingsOpen(false)}
+        onJobSaved={(job) => {
+          s.applyJob(job);
+          showToast(`Saved — re-screening against ${job.title}`);
+        }}
       />
 
       <RestateDrawer

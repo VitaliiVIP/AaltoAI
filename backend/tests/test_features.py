@@ -3,7 +3,7 @@ from pathlib import Path
 
 import pytest
 
-from recourse_screen.loaders import load_job, load_manifest, load_profile
+from recourse_screen.loaders import load_job, load_manifest, load_profile, manifest_for_job
 from recourse_screen.schemas import Envelope, JobTemplate, ScoreTerm
 from recourse_screen.score.features import (
     ProtectedFeatureError,
@@ -65,7 +65,8 @@ def test_bool_and_ordinal_roundtrip():
 
 def test_job_feature_paths_include_knockout_and_dependency_only_features():
     job = load_job("backend_engineer")
-    paths = job_feature_paths(job)
+    manifest = manifest_for_job(job)
+    paths = job_feature_paths(job, manifest)
     assert "skills.python.held" in paths  # knockout only
     assert "experience.software_months" in paths  # knockout only
     assert paths[: len(job.score)] == list(job.score)
