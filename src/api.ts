@@ -7,7 +7,6 @@ import type {
   PoolRow,
   Preflight,
   Profile,
-  RestateRequest,
   ScreenRequest,
   ScreenResult,
 } from "./apiTypes";
@@ -77,19 +76,6 @@ export function getCandidates(
 
 export function postScreen(body: ScreenRequest, signal?: AbortSignal): Promise<ScreenResult> {
   return postJson<ScreenResult>("/screen", body, signal);
-}
-
-export function postRestate(
-  body: RestateRequest,
-  opts: { parentDecisionId: string; explain: boolean },
-  signal?: AbortSignal,
-): Promise<ScreenResult> {
-  // parent_decision_id and explain are query params on this endpoint, not body fields.
-  const q = new URLSearchParams({
-    parent_decision_id: opts.parentDecisionId,
-    explain: String(opts.explain),
-  });
-  return postJson<ScreenResult>(`/restate?${q}`, body, signal);
 }
 
 export function postExtract(

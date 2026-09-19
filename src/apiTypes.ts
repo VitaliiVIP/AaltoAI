@@ -239,19 +239,6 @@ export interface ScreenRequest {
   explain: boolean;
 }
 
-export interface Confirmation {
-  path: string;
-  value: unknown;
-}
-
-export interface RestateRequest {
-  candidate_id: string;
-  job_id: string;
-  mode: Mode;
-  N: number | null;
-  confirmations: Confirmation[];
-}
-
 export type FeatureType = "bool" | "int" | "ordinal";
 
 /** One entry of `GET /jobs` — an inline dict in `api/app.py`, not a pydantic model. */

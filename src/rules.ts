@@ -37,14 +37,6 @@ export function ruleFor(knockouts: string[], path: string): string | null {
  * The requirement in recruiter English, e.g. "at least 12 months" or "required".
  * Used as the checkbox label so the rule string never has to be the interface.
  */
-export function describeRule(feature: CatalogueFeature, rule: string): string {
-  const parsed = parseRule(rule);
-  if (!parsed) return rule;
-  if (feature.type === "bool") return parsed.value === "true" ? "required" : "must not have";
-  if (feature.type === "ordinal") return `${parsed.op === "==" ? "exactly" : "at least"} ${parsed.value}`;
-  return `at least ${parsed.value} ${feature.unit}`;
-}
-
 /** A sensible starting value for a newly ticked requirement. */
 export function defaultValue(feature: CatalogueFeature): string {
   if (feature.type === "bool") return "true";

@@ -6,7 +6,6 @@ import {
   getJobs,
   isAbortError,
   postExtract,
-  postRestate,
   postScreen,
 } from "./api";
 import type { AuditSummary, JobSummary, Mode, PoolRow, ScreenResult } from "./apiTypes";
@@ -41,8 +40,6 @@ export function useScreening() {
   const [audit, setAudit] = useState<AuditSummary | null>(null);
 
   const [results, setResults] = useState<Record<string, ScreenResult>>({});
-  /** Pre-restatement results, so the before/after is reversible. */
-  const [originals, setOriginals] = useState<Record<string, ScreenResult>>({});
 
   /** Bumped when the job config is re-saved; forces a rescore of the whole pool. */
   const [configVersion, setConfigVersion] = useState(0);
@@ -238,59 +235,10 @@ export function useScreening() {
     }
   }, [selectedId, screenOnce]);
 
-  const applyRestatement = useCallback(
-    async (paths: string[]) => {
-      if (!selectedId || paths.length === 0) return;
-      const key = cacheKey(selectedId);
-      const current = resultsRef.current[key];
-      if (!current) return;
-      setScreenPhase("loading");
-      setScreenError(null);
-      userBusy.current = true;
-      try {
-        const next = await postRestate(
-          {
-            candidate_id: selectedId,
-            job_id: jobId,
-            mode,
-            N: effectiveN,
-            confirmations: paths.map((p) => ({ path: p, value: true })),
-          },
-          { parentDecisionId: current.decision_id, explain: false },
-        );
-        setOriginals((prev) => (prev[key] ? prev : { ...prev, [key]: current }));
-        setResults((prev) => ({ ...prev, [key]: next }));
-        setScreenPhase("idle");
-      } catch (e: unknown) {
-        if (!isAbortError(e)) {
-          setScreenPhase("error");
-          setScreenError(messageOf(e));
-        }
-      } finally {
-        userBusy.current = false;
-      }
-    },
-    [selectedId, cacheKey, jobId, mode, effectiveN],
-  );
-
-  const revertRestatement = useCallback(() => {
-    if (!selectedId) return;
-    const key = cacheKey(selectedId);
-    const original = originals[key];
-    if (!original) return;
-    setResults((prev) => ({ ...prev, [key]: original }));
-    setOriginals((prev) => {
-      const next = { ...prev };
-      delete next[key];
-      return next;
-    });
-  }, [selectedId, cacheKey, originals]);
-
   /** Adopt a re-saved job: the whole pool has to be rescored against it. */
   const applyJob = useCallback((next: JobSummary) => {
     setJob(next);
     setResults({});
-    setOriginals({});
     setConfigVersion((v) => v + 1);
     for (const ac of controllers.current.values()) ac.abort();
     controllers.current.clear();
@@ -317,7 +265,6 @@ export function useScreening() {
 
   const key = selectedId ? cacheKey(selectedId) : "";
   const result = key ? (results[key] ?? null) : null;
-  const restatedFrom = key ? (originals[key] ?? null) : null;
   const selectedRow = pool.find((r) => r.candidate_id === selectedId) ?? null;
 
   return {
@@ -332,7 +279,6 @@ export function useScreening() {
     setSelectedId,
     selectedRow,
     result,
-    restatedFrom,
     audit,
     poolPhase,
     poolError,
@@ -342,8 +288,6 @@ export function useScreening() {
     refreshPool,
     applyJob,
     polishExplanation,
-    applyRestatement,
-    revertRestatement,
     uploadCv,
   };
 }

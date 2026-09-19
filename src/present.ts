@@ -3,7 +3,6 @@
  * whole translation is reviewable in one place.
  */
 import type {
-  Decision,
   Delta,
   Envelope,
   Explanation,
@@ -315,10 +314,6 @@ const NFP_REASONS: Record<string, string> = {
 
 export function nfpReason(code: string): string {
   return NFP_REASONS[code] ?? code.replace(/_/g, " ");
-}
-
-export function decisionLabel(d: Decision): string {
-  return d.passed ? "Advances" : "Not advanced";
 }
 
 export { deriveName };
