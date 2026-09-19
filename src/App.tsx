@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import TopBar from "./components/TopBar";
 import CvList from "./components/CvList";
 import ExplainPanel from "./components/ExplainPanel";
 import EmailPanel from "./components/EmailPanel";
 import SettingsDrawer from "./components/SettingsDrawer";
-import RestateDrawer from "./components/RestateDrawer";
+import AcceptedDrawer from "./components/AcceptedDrawer";
 import Toast from "./components/Toast";
 import { deriveName } from "./candidateMeta";
 import type { EmailStatus } from "./types";
@@ -15,8 +15,17 @@ export default function App() {
   const s = useScreening();
   const [emailStatus, setEmailStatus] = useState<Record<string, EmailStatus>>({});
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [candidateViewOpen, setCandidateViewOpen] = useState(false);
+  const [acceptedOpen, setAcceptedOpen] = useState(false);
   const { message, visible, showToast } = useToast();
+
+  // Accepted = cleared the bar AND actually accepted (not just "sent" from
+  // the rejection-with-recourse flow, which uses the same status value).
+  const acceptedCount = useMemo(
+    () =>
+      s.pool.filter((row) => row.decision === "advance" && emailStatus[row.candidate_id] === "sent")
+        .length,
+    [s.pool, emailStatus],
+  );
 
   function handleSend(id: string) {
     setEmailStatus((prev) => ({ ...prev, [id]: "sent" }));
@@ -28,6 +37,15 @@ export default function App() {
     showToast(`Kept for further review — ${deriveName(id)}`);
   }
 
+  function handleUnaccept(id: string) {
+    setEmailStatus((prev) => {
+      const next = { ...prev };
+      delete next[id];
+      return next;
+    });
+    showToast(`${deriveName(id)} moved back to the applicant pool`);
+  }
+
   async function handleUpload(file: File) {
     showToast("Reading the CV — this calls the extraction model…");
     try {
@@ -36,11 +54,6 @@ export default function App() {
     } catch (e: unknown) {
       showToast(e instanceof Error ? e.message : "Upload failed");
     }
-  }
-
-  async function handleRestate(paths: string[]) {
-    await s.applyRestatement(paths);
-    showToast("Re-screened with the confirmed details");
   }
 
   return (
@@ -55,6 +68,9 @@ export default function App() {
         poolSize={s.pool.length}
         settingsOpen={settingsOpen}
         onOpenSettings={() => setSettingsOpen(true)}
+        acceptedCount={acceptedCount}
+        acceptedOpen={acceptedOpen}
+        onOpenAccepted={() => setAcceptedOpen(true)}
       />
 
       <main className="layout">
@@ -79,9 +95,6 @@ export default function App() {
           maxScore={s.maxScore}
           phase={s.screenPhase}
           error={s.screenError}
-          restatedFrom={s.restatedFrom}
-          onRevertRestatement={s.revertRestatement}
-          onOpenCandidateView={() => setCandidateViewOpen(true)}
         />
         <EmailPanel
           result={s.result}
@@ -109,14 +122,12 @@ export default function App() {
         }}
       />
 
-      <RestateDrawer
-        open={candidateViewOpen}
-        result={s.result}
-        restatedFrom={s.restatedFrom}
-        busy={s.screenPhase === "loading"}
-        onClose={() => setCandidateViewOpen(false)}
-        onConfirm={(paths) => void handleRestate(paths)}
-        onRevert={s.revertRestatement}
+      <AcceptedDrawer
+        open={acceptedOpen}
+        pool={s.pool}
+        emailStatus={emailStatus}
+        onClose={() => setAcceptedOpen(false)}
+        onUnaccept={handleUnaccept}
       />
 
       <Toast message={message} visible={visible} />

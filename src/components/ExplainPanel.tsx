@@ -26,9 +26,6 @@ interface ExplainPanelProps {
   maxScore: number;
   phase: Phase;
   error: string | null;
-  restatedFrom: ScreenResult | null;
-  onRevertRestatement: () => void;
-  onOpenCandidateView: () => void;
 }
 
 function RouteBody({ route }: { route: RouteView }) {
@@ -62,9 +59,6 @@ export default function ExplainPanel({
   maxScore,
   phase,
   error,
-  restatedFrom,
-  onRevertRestatement,
-  onOpenCandidateView,
 }: ExplainPanelProps) {
   const [cvOpen, setCvOpen] = useState(false);
   const [activeRoute, setActiveRoute] = useState(0);
@@ -126,9 +120,6 @@ export default function ExplainPanel({
     <section className="col col-explain" aria-label="Match explanation">
       <div className="col-header">
         <h2>Why this match?</h2>
-        <button className="open-cv-btn" onClick={onOpenCandidateView} disabled={!result}>
-          Candidate view
-        </button>
         <button className="open-cv-btn" onClick={() => setCvOpen(true)}>
           Open CV
         </button>
@@ -154,15 +145,6 @@ export default function ExplainPanel({
           )}
           {result && <span className="cv-sub">{yearsOf(result)} yrs experience</span>}
         </div>
-
-        {restatedFrom && (
-          <div className="restated-chip">
-            Restated from decision {shortId(restatedFrom.decision_id)}
-            <button className="link-btn" onClick={onRevertRestatement}>
-              ← back to original screen
-            </button>
-          </div>
-        )}
 
         {d && d.mode === "B" && d.rank != null && (
           <p className="rank-strip">

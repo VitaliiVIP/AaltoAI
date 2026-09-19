@@ -1,4 +1,5 @@
 import GearIcon from "./GearIcon";
+import ListIcon from "./ListIcon";
 import ModeControl from "./ModeControl";
 import type { Mode } from "../apiTypes";
 
@@ -12,6 +13,9 @@ interface TopBarProps {
   poolSize: number;
   settingsOpen: boolean;
   onOpenSettings: () => void;
+  acceptedCount: number;
+  acceptedOpen: boolean;
+  onOpenAccepted: () => void;
 }
 
 export default function TopBar({
@@ -24,9 +28,22 @@ export default function TopBar({
   poolSize,
   settingsOpen,
   onOpenSettings,
+  acceptedCount,
+  acceptedOpen,
+  onOpenAccepted,
 }: TopBarProps) {
   return (
     <header className="topbar">
+      <button
+        className={"list-btn" + (acceptedOpen ? " active" : "")}
+        aria-label="Accepted applicants"
+        title="Accepted applicants"
+        onClick={onOpenAccepted}
+      >
+        <ListIcon />
+        {acceptedCount > 0 && <span className="list-btn-badge">{acceptedCount}</span>}
+      </button>
+
       <div className="brand">
         <span className="brand-dot" />
         <span className="brand-name">Recourse</span>
