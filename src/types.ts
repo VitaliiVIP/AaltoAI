@@ -1,43 +1,21 @@
 export type ScoreTier = "green" | "yellow" | "red";
 
-export type EmailKind = "accept" | "reject";
-
 export type EmailStatus = "sent" | "declined";
 
-export interface RecourseItem {
-  change: string;
-  impact: string;
-}
-
 export interface EmailDraft {
-  kind: EmailKind;
   subject: string;
   body: string;
 }
 
-export interface Candidate {
-  id: string;
-  name: string;
-  file: string;
-  thumbnail: string;
-  score: number;
-  years: number;
-  matched: string[];
-  missing: string[];
-  /** The 2 main reasons this candidate is weak for the role. Only set when score < 80. */
-  weakReasons?: [string, string];
-  summary: string;
-  recourse: RecourseItem[];
-  email: EmailDraft;
-}
-
-export interface JobInfo {
-  title: string;
-  requirements: string[];
-}
-
-export function scoreTier(score: number): ScoreTier {
-  if (score >= 80) return "green";
-  if (score >= 50) return "yellow";
-  return "red";
+/**
+ * The colours mean decision outcomes, not score bands — a fixed 80/50 split
+ * would be wrong the moment mode B moves the bar.
+ *
+ * red = fails a knockout, so no weighted score could rescue it
+ * green = advances
+ * yellow = clears the hard requirements but misses the bar
+ */
+export function tierOf(r: { knockouts_passed: boolean; passed: boolean }): ScoreTier {
+  if (!r.knockouts_passed) return "red";
+  return r.passed ? "green" : "yellow";
 }

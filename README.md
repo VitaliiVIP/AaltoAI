@@ -3,6 +3,18 @@
 ## Idea
 
 An automated pre-screening system for hiring that explains to applicants what would need to change in their CV to get accepted. E.g., one more year of experience in some skill, or one more project on some topic, or knowledge of some framework. Technology is called "algorithmic recourse", can be coupled with the screening system itself, there are fancy technical solutions but not much actually made into a product.
+## Running it
+
+```bash
+make setup     # backend deps (uv) + frontend deps (npm) + backend/.env
+make dev       # backend :8000, frontend :5173 — open http://127.0.0.1:5173
+```
+
+`make help` lists the rest (`test`, `check`, `pool`, `audit`, `add-cv`, `extract`, `eval`).
+
+An `ANTHROPIC_API_KEY` in `backend/.env` is optional: only "Polish with Claude" and CV upload
+call the model, and everything else runs on the deterministic templates.
+
 ## Documents
 
 - `research/design_report.md` — proposed design, decision register, stack and build plan (start here)

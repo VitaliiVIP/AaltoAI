@@ -1,13 +1,31 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { PointerEvent as ReactPointerEvent, KeyboardEvent as ReactKeyboardEvent } from "react";
-import type { Candidate, EmailStatus } from "../types";
+import type {
+  ChangeEvent,
+  DragEvent as ReactDragEvent,
+  PointerEvent as ReactPointerEvent,
+  KeyboardEvent as ReactKeyboardEvent,
+} from "react";
+import type { Mode, PoolRow } from "../apiTypes";
+import type { EmailStatus } from "../types";
+import { tierOf } from "../types";
+import { assetsFor, deriveName, initialsOf } from "../candidateMeta";
+import { ranksFor, yearsOfRow } from "../present";
+import type { Phase } from "../useScreening";
 import ScoreChip from "./ScoreChip";
 
 interface CvListProps {
-  candidates: Candidate[];
-  selectedId: string;
+  pool: PoolRow[];
+  mode: Mode;
+  maxScore: number;
+  selectedId: string | null;
   emailStatus: Record<string, EmailStatus>;
+  aggregateLine: string | null;
+  phase: Phase;
+  error: string | null;
+  uploading: boolean;
   onSelect: (id: string) => void;
+  onRetry: () => void;
+  onUpload: (file: File) => void;
 }
 
 function clamp(n: number, min: number, max: number) {
@@ -21,63 +39,74 @@ function clamp(n: number, min: number, max: number) {
 const WHEEL_SENSITIVITY = 0.12;
 const WHEEL_SETTLE_MS = 220;
 
-export default function CvList({ candidates, selectedId, emailStatus, onSelect }: CvListProps) {
-  const selected = candidates.find((c) => c.id === selectedId) ?? candidates[0];
+export default function CvList({
+  pool,
+  mode,
+  maxScore,
+  selectedId,
+  emailStatus,
+  aggregateLine,
+  phase,
+  error,
+  uploading,
+  onSelect,
+  onRetry,
+  onUpload,
+}: CvListProps) {
+  const selected = pool.find((c) => c.candidate_id === selectedId) ?? pool[0] ?? null;
 
   const [dragging, setDragging] = useState(false);
   const [dragScore, setDragScore] = useState<number | null>(null);
+  const [dropActive, setDropActive] = useState(false);
+  const [brokenThumbs, setBrokenThumbs] = useState<Record<string, boolean>>({});
   const trackRef = useRef<HTMLDivElement>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   // Refs mirror the latest state so the native (non-passive) wheel listener,
   // which is only attached once, never reads stale values from a closure.
   const selectedIdRef = useRef(selectedId);
-  const selectedScoreRef = useRef(selected.score);
+  const selectedScoreRef = useRef(selected?.score ?? 0);
   const dragScoreRef = useRef<number | null>(dragScore);
+  const maxScoreRef = useRef(maxScore);
+  const poolRef = useRef(pool);
   const wheelTimeoutRef = useRef<number | null>(null);
 
-  useEffect(() => {
-    selectedIdRef.current = selectedId;
-  }, [selectedId]);
-
-  useEffect(() => {
-    selectedScoreRef.current = selected.score;
-  }, [selected.score]);
-
-  useEffect(() => {
-    dragScoreRef.current = dragScore;
-  }, [dragScore]);
+  selectedIdRef.current = selectedId;
+  selectedScoreRef.current = selected?.score ?? 0;
+  dragScoreRef.current = dragScore;
+  maxScoreRef.current = maxScore;
+  poolRef.current = pool;
 
   // Keep the card list in sync with the scale: whenever selection changes —
   // by drag, wheel, keyboard, or a direct card click — scroll the matching
   // card into view instead of leaving the list wherever it was.
   useEffect(() => {
-    cardRefs.current[selectedId]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    if (selectedId) cardRefs.current[selectedId]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [selectedId]);
 
   // Candidates sorted high -> low score, for keyboard step navigation.
-  const sortedByScore = useMemo(
-    () => [...candidates].sort((a, b) => b.score - a.score),
-    [candidates]
-  );
+  const sortedByScore = useMemo(() => [...pool].sort((a, b) => b.score - a.score), [pool]);
+  const ranks = useMemo(() => ranksFor(pool), [pool]);
 
-  function nearestCandidateToScore(score: number): Candidate {
-    return candidates.reduce((best, c) =>
-      Math.abs(c.score - score) < Math.abs(best.score - score) ? c : best
+  function nearestCandidateToScore(score: number, rows: PoolRow[]): PoolRow | null {
+    if (rows.length === 0) return null;
+    return rows.reduce((best, c) =>
+      Math.abs(c.score - score) < Math.abs(best.score - score) ? c : best,
     );
   }
 
   function scoreFromClientY(clientY: number): number {
     const rect = trackRef.current!.getBoundingClientRect();
     const percent = clamp((clientY - rect.top) / rect.height, 0, 1);
-    return Math.round(100 - percent * 100); // top = 100 (green), bottom = 0 (red)
+    return Math.round(maxScore * (1 - percent)); // top = max (green), bottom = 0 (red)
   }
 
   function updateFromClientY(clientY: number) {
     const score = scoreFromClientY(clientY);
     setDragScore(score);
-    const nearest = nearestCandidateToScore(score);
-    if (nearest.id !== selectedId) onSelect(nearest.id);
+    const nearest = nearestCandidateToScore(score, pool);
+    if (nearest && nearest.candidate_id !== selectedId) onSelect(nearest.candidate_id);
   }
 
   function handlePointerDown(e: ReactPointerEvent<HTMLDivElement>) {
@@ -100,22 +129,20 @@ export default function CvList({ candidates, selectedId, emailStatus, onSelect }
   }
 
   function handleKeyDown(e: ReactKeyboardEvent<HTMLDivElement>) {
-    const index = sortedByScore.findIndex((c) => c.id === selectedId);
+    const index = sortedByScore.findIndex((c) => c.candidate_id === selectedId);
+    if (index < 0) return;
     if (e.key === "ArrowUp" || e.key === "ArrowRight") {
       e.preventDefault();
-      const next = sortedByScore[clamp(index - 1, 0, sortedByScore.length - 1)];
-      onSelect(next.id);
+      onSelect(sortedByScore[clamp(index - 1, 0, sortedByScore.length - 1)].candidate_id);
     } else if (e.key === "ArrowDown" || e.key === "ArrowLeft") {
       e.preventDefault();
-      const next = sortedByScore[clamp(index + 1, 0, sortedByScore.length - 1)];
-      onSelect(next.id);
+      onSelect(sortedByScore[clamp(index + 1, 0, sortedByScore.length - 1)].candidate_id);
     }
   }
 
   // Scrolling/wheeling over the bar nudges the marker and jumps selection to
-  // whichever candidate's score is nearest — e.g. scroll to ~46 and it
-  // snaps to the 44/100 candidate. Attached as a real DOM listener (not
-  // React's onWheel) with { passive: false } so preventDefault actually
+  // whichever candidate's score is nearest. Attached as a real DOM listener
+  // (not React's onWheel) with { passive: false } so preventDefault actually
   // stops the page from scrolling underneath the bar.
   useEffect(() => {
     const el = trackRef.current;
@@ -129,14 +156,15 @@ export default function CvList({ candidates, selectedId, emailStatus, onSelect }
       const rawDelta = e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
       const delta = clamp(rawDelta, -120, 120);
 
+      const max = maxScoreRef.current;
       const base = dragScoreRef.current ?? selectedScoreRef.current;
-      const next = Math.round(clamp(base - delta * WHEEL_SENSITIVITY, 0, 100));
+      const next = Math.round(clamp(base - delta * WHEEL_SENSITIVITY, 0, max));
 
       setDragScore(next);
       setDragging(true);
 
-      const nearest = nearestCandidateToScore(next);
-      if (nearest.id !== selectedIdRef.current) onSelect(nearest.id);
+      const nearest = nearestCandidateToScore(next, poolRef.current);
+      if (nearest && nearest.candidate_id !== selectedIdRef.current) onSelect(nearest.candidate_id);
 
       if (wheelTimeoutRef.current) window.clearTimeout(wheelTimeoutRef.current);
       wheelTimeoutRef.current = window.setTimeout(() => {
@@ -150,18 +178,67 @@ export default function CvList({ candidates, selectedId, emailStatus, onSelect }
       el.removeEventListener("wheel", handleWheelNative);
       if (wheelTimeoutRef.current) window.clearTimeout(wheelTimeoutRef.current);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [candidates, onSelect]);
+  }, [onSelect]);
 
-  const displayScore = dragScore ?? selected.score;
-  const markerTop = 100 - displayScore; // green(top)=100 score, red(bottom)=0 score
+  function takeFile(file: File | null | undefined) {
+    if (file) onUpload(file);
+  }
+
+  function handleDrop(e: ReactDragEvent<HTMLElement>) {
+    e.preventDefault();
+    setDropActive(false);
+    takeFile(e.dataTransfer.files?.[0]);
+  }
+
+  function handleFileInput(e: ChangeEvent<HTMLInputElement>) {
+    takeFile(e.target.files?.[0]);
+    e.target.value = "";
+  }
+
+  const displayScore = dragScore ?? selected?.score ?? 0;
+  const markerTop = maxScore > 0 ? 100 * (1 - displayScore / maxScore) : 100;
 
   return (
-    <section className="col col-cvs" aria-label="Uploaded CVs">
+    <section
+      className={"col col-cvs" + (dropActive ? " drop-active" : "")}
+      aria-label="Uploaded CVs"
+      onDragOver={(e) => {
+        e.preventDefault();
+        setDropActive(true);
+      }}
+      onDragLeave={() => setDropActive(false)}
+      onDrop={handleDrop}
+    >
       <div className="col-header">
         <h2>Uploaded CVs</h2>
-        <span className="count-badge">{candidates.length}</span>
+        <span className="count-badge">{pool.length}</span>
+        <button
+          className="open-cv-btn"
+          onClick={() => fileRef.current?.click()}
+          disabled={uploading}
+          title="Runs LLM extraction (~10–20 s) and adds the CV to the pool permanently, which shifts every mode-B rank."
+        >
+          {uploading ? "Reading CV…" : "Add CV"}
+        </button>
+        <input
+          ref={fileRef}
+          type="file"
+          accept="application/pdf,.pdf,.txt"
+          hidden
+          onChange={handleFileInput}
+        />
       </div>
+
+      {mode === "B" && aggregateLine && <p className="aggregate-line">{aggregateLine}</p>}
+
+      {phase === "error" && (
+        <div className="panel-error">
+          <p>{error}</p>
+          <button className="btn btn-secondary" onClick={onRetry}>
+            Retry
+          </button>
+        </div>
+      )}
 
       <div className="cv-body">
         <div
@@ -171,9 +248,13 @@ export default function CvList({ candidates, selectedId, emailStatus, onSelect }
           tabIndex={0}
           aria-label="Filter candidates by match score"
           aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={selected.score}
-          aria-valuetext={`${selected.name}, ${selected.score} out of 100`}
+          aria-valuemax={maxScore}
+          aria-valuenow={selected?.score ?? 0}
+          aria-valuetext={
+            selected
+              ? `${deriveName(selected.candidate_id)}, ${selected.score} out of ${maxScore}`
+              : "no candidates"
+          }
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={endDrag}
@@ -188,30 +269,59 @@ export default function CvList({ candidates, selectedId, emailStatus, onSelect }
 
         <div className="cv-list">
           {sortedByScore.map((c) => {
-            const status = emailStatus[c.id];
+            const status = emailStatus[c.candidate_id];
+            const name = deriveName(c.candidate_id);
+            const { thumbUrl } = assetsFor(c.candidate_id);
+            const rank = ranks.get(c.candidate_id) ?? null;
+            const tier = tierOf({
+              knockouts_passed: c.knockouts_passed,
+              passed: c.decision === "advance",
+            });
             return (
               <div
-                key={c.id}
+                key={c.candidate_id}
                 ref={(el) => {
-                  cardRefs.current[c.id] = el;
+                  cardRefs.current[c.candidate_id] = el;
                 }}
-                className={"cv-card" + (c.id === selectedId ? " active" : "")}
-                onClick={() => onSelect(c.id)}
+                className={"cv-card" + (c.candidate_id === selectedId ? " active" : "")}
+                onClick={() => onSelect(c.candidate_id)}
               >
                 <div className="cv-preview">
-                  <img src={c.thumbnail} alt={`${c.name} CV`} />
+                  {brokenThumbs[c.candidate_id] ? (
+                    <div className="thumb-fallback" aria-hidden="true">
+                      {initialsOf(c.candidate_id)}
+                    </div>
+                  ) : (
+                    <img
+                      src={thumbUrl}
+                      alt={`${name} CV`}
+                      onError={() =>
+                        setBrokenThumbs((prev) => ({ ...prev, [c.candidate_id]: true }))
+                      }
+                    />
+                  )}
                 </div>
                 <div className="cv-card-footer">
                   <div>
-                    <div className="cv-name">{c.name}</div>
-                    <div className="cv-sub">{c.years} yrs experience</div>
+                    <div className="cv-name">
+                      {mode === "B" && rank != null && <span className="rank-badge">#{rank}</span>}
+                      {name}
+                    </div>
+                    <div className="cv-sub">{yearsOfRow(c)} yrs experience</div>
                   </div>
-                  <ScoreChip score={c.score} />
+                  <ScoreChip score={c.score} max={maxScore} tier={tier} />
                 </div>
-                {c.score < 80 && c.weakReasons && (
+                {!c.knockouts_passed && (
+                  <span className="status-tag ko">Fails a hard requirement</span>
+                )}
+                {c.decision !== "advance" && c.top_gaps.length > 0 && (
                   <ul className="weak-reasons">
-                    <li>{c.weakReasons[0]}</li>
-                    <li>{c.weakReasons[1]}</li>
+                    {c.top_gaps.map((g) => (
+                      <li key={g.phrase}>
+                        {g.phrase} <span className="gap-points">−{g.missed}</span>
+                        {g.derivation === "absent" && <span className="unstated-flag"> · not stated</span>}
+                      </li>
+                    ))}
                   </ul>
                 )}
                 {status && (

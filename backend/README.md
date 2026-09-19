@@ -29,16 +29,20 @@ Add a CV: drop a PDF into `../public/assets/cvs/` and run
 `pdftotext -layout file.pdf data/cv_text/file.txt`, then re-run the extraction script (only new files
 call the API; profiles are cached by content hash).
 
-## API (proposed contract, to be reconciled with the frontend)
+## API (consumed by the React frontend in `../src`)
 
 | Endpoint | Purpose |
 |---|---|
 | `GET /jobs` | Job templates with knockouts, weights, caps, costs, mode settings (the audit artefact) |
-| `GET /candidates?job=&mode=A|B&N=` | Pool with score, knockouts, rank, decision |
+| `GET /candidates?job=&mode=A|B&N=` | Pool with score, knockouts, rank, decision, experience months and the two largest shortfalls. No LLM calls, no audit writes. |
 | `POST /screen {candidate_id | cv_text, job_id, mode, N, explain}` | Full `ScreenResult`: profile with evidence, contributions, decision, routes, blockers, hints, explanation |
 | `POST /extract` (multipart `file` or form `cv_text`) | Run LLM #1 only; caches the profile |
 | `POST /restate {candidate_id, job_id, mode, N, confirmations:[{path,value}]}` | Candidate confirms missed fields; everything re-runs, new audit record linked to the parent |
 | `GET /audit`, `GET /audit/{decision_id}` | Hash-chained records, chain verification |
+
+The frontend (`npm run dev`, :5173) proxies `/api` here and defaults to `explain: false`, which
+still returns a complete templated `Explanation` — the LLM verbaliser is only invoked from its
+"Polish with Claude" button, so the whole UI works without an API key.
 
 Schemas: `recourse_screen/schemas.py`. Employer configuration: `recourse_screen/jobs/*.yaml` and
 `recourse_screen/manifests/*.json` (actionability, costs, horizons, causal dependencies).

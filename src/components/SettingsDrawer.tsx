@@ -1,224 +1,210 @@
-import { STRICTNESS_LABELS, type ScoringSettings } from "../useScoringSettings";
+import type { AuditSummary, JobSummary, Mode, ScreenResult } from "../apiTypes";
+import { fmtValue, maxScoreOf } from "../present";
 
 interface SettingsDrawerProps {
   open: boolean;
-  settings: ScoringSettings;
-  onChange: <K extends keyof ScoringSettings>(key: K, value: ScoringSettings[K]) => void;
+  job: JobSummary | null;
+  result: ScreenResult | null;
+  audit: AuditSummary | null;
+  mode: Mode;
+  slotsN: number;
   onClose: () => void;
-  onSave: () => void;
 }
 
-export default function SettingsDrawer({ open, settings, onChange, onClose, onSave }: SettingsDrawerProps) {
+/** Plain-English gloss for the two hand-authored causal constraints. */
+const DEPENDENCY_GLOSS: Record<string, string> = {
+  "x'[skills.kubernetes.held] <= x'[skills.docker.held]":
+    "Kubernetes cannot be credited without Docker.",
+  "delta[project_counts_by_topic.microservices] <= 2 + 1*delta[experience.backend_months]":
+    "Microservice projects can only grow alongside backend experience.",
+};
+
+/**
+ * Read-only. Everything here is employer policy the system is willing to be
+ * held to — the weights, the costs, and the attributes it refuses to look at.
+ * The live mode/N controls deliberately live in the top bar instead, so there
+ * is only ever one source of truth for them.
+ */
+export default function SettingsDrawer({
+  open,
+  job,
+  result,
+  audit,
+  mode,
+  slotsN,
+  onClose,
+}: SettingsDrawerProps) {
+  const total = job ? maxScoreOf(job) : 0;
+  const knockoutResults = result?.decision.knockouts ?? [];
+
   return (
     <>
       <div className={"overlay" + (open ? " visible" : "")} onClick={onClose} />
 
-      <aside className={"settings-drawer" + (open ? " open" : "")} aria-label="Scoring settings">
+      <aside
+        className={"settings-drawer" + (open ? " open" : "")}
+        aria-label="Job configuration"
+        aria-hidden={!open}
+      >
         <div className="drawer-header">
-          <h2>Scoring settings</h2>
-          <button className="icon-btn" aria-label="Close settings" onClick={onClose}>
+          <h2>Job configuration</h2>
+          <button className="icon-btn" aria-label="Close" onClick={onClose}>
             ✕
           </button>
         </div>
 
         <div className="drawer-body">
-          <div className="setting-group">
-            <label className="setting-label" htmlFor="modelSelect">
-              Scoring model
-            </label>
-            <select
-              id="modelSelect"
-              className="setting-select"
-              value={settings.model}
-              onChange={(e) => onChange("model", e.target.value)}
-            >
-              <option>GPT-4o</option>
-              <option>Claude Sonnet 4.5</option>
-              <option>Llama 3 70B</option>
-              <option>Internal fine-tuned model</option>
-            </select>
-          </div>
+          {!job && <p className="empty-note">Loading configuration…</p>}
 
-          <div className="setting-group">
-            <div className="setting-label-row">
-              <label className="setting-label" htmlFor="temperature">
-                Temperature
-              </label>
-              <span className="setting-value">{settings.temperature.toFixed(2)}</span>
-            </div>
-            <input
-              id="temperature"
-              type="range"
-              min={0}
-              max={1}
-              step={0.05}
-              value={settings.temperature}
-              className="slider"
-              onChange={(e) => onChange("temperature", parseFloat(e.target.value))}
-            />
-          </div>
+          {job && (
+            <>
+              <p className="block-note">
+                {job.title} · {job.job_id} · {job.version} · manifest {job.manifest_version} ·{" "}
+                {job.horizon_months}-month horizon · {job.k_routes} routes
+                {result && (
+                  <>
+                    {" "}
+                    · screened {result.as_of} · {result.versions.model}
+                  </>
+                )}
+              </p>
 
-          <div className="setting-group">
-            <div className="setting-label-row">
-              <label className="setting-label" htmlFor="strictness">
-                Scoring strictness
-              </label>
-              <span className="setting-value">{STRICTNESS_LABELS[settings.strictness]}</span>
-            </div>
-            <input
-              id="strictness"
-              type="range"
-              min={0}
-              max={2}
-              step={1}
-              value={settings.strictness}
-              className="slider"
-              onChange={(e) => onChange("strictness", parseInt(e.target.value, 10))}
-            />
-            <div className="slider-ticks">
-              <span>Lenient</span>
-              <span>Balanced</span>
-              <span>Strict</span>
-            </div>
-          </div>
+              <section className="drawer-section">
+                <h3>Hard requirements (knockouts)</h3>
+                <p className="block-note">
+                  Binary and job-related. Evaluated before any weighted score and never traded
+                  off against it.
+                </p>
+                <ul className="rule-list">
+                  {job.knockouts.map((rule) => {
+                    const hit = knockoutResults.find((k) => k.rule === rule);
+                    return (
+                      <li key={rule}>
+                        <code>{rule}</code>
+                        {hit && (
+                          <span className={hit.passed ? "ok" : "bad"}>
+                            {" "}
+                            {hit.passed ? "✓" : "✗"} currently {fmtValue(hit.current_value)} ·{" "}
+                            {hit.actionability.replace(/_/g, " ")}
+                          </span>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </section>
 
-          <div className="setting-divider">Score weighting</div>
+              <section className="drawer-section">
+                <h3>Weighted features</h3>
+                <table className="config-table">
+                  <thead>
+                    <tr>
+                      <th>Feature</th>
+                      <th>w × cap</th>
+                      <th>max</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {Object.entries(job.score).map(([path, f]) => (
+                      <tr key={path}>
+                        <td>
+                          {f.phrase}
+                          <br />
+                          <code>{path}</code>
+                          <br />
+                          <span className="cell-note">
+                            {f.unit}, step {f.step_size} · {f.actionability.replace(/_/g, " ")}
+                            {f.cost_per_step != null && <> · cost/step {f.cost_per_step}</>}
+                            {f.max_delta > 0 && <> · max Δ {f.max_delta}</>}
+                            {f.absent_prior > 0 && <> · absent prior {f.absent_prior}</>}
+                            {f.typical_time_months != null && <> · typ. {f.typical_time_months} mo</>}
+                            {f.is_causal && <> · causal</>}
+                          </span>
+                        </td>
+                        <td className="num">
+                          {f.weight} × {f.cap}
+                        </td>
+                        <td className="num">{f.weight * f.cap}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td>Maximum attainable score</td>
+                      <td colSpan={2} className="num">
+                        <strong>{total}</strong>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </section>
 
-          <WeightSlider
-            id="wSkills"
-            label="Skills match"
-            value={settings.weightSkills}
-            onChange={(v) => onChange("weightSkills", v)}
-          />
-          <WeightSlider
-            id="wExperience"
-            label="Experience"
-            value={settings.weightExperience}
-            onChange={(v) => onChange("weightExperience", v)}
-          />
-          <WeightSlider
-            id="wProjects"
-            label="Projects"
-            value={settings.weightProjects}
-            onChange={(v) => onChange("weightProjects", v)}
-          />
-          <WeightSlider
-            id="wEducation"
-            label="Education"
-            value={settings.weightEducation}
-            onChange={(v) => onChange("weightEducation", v)}
-          />
+              <section className="drawer-section">
+                <h3>Mode</h3>
+                <ul className="rule-list">
+                  <li>
+                    A — fixed threshold {job.mode.A.threshold} (ε {job.mode.A.margin_eps}, ρ{" "}
+                    {job.mode.A.weight_shrink_rho})
+                  </li>
+                  <li>B — top {job.mode.B.slots_N} of the pool</li>
+                </ul>
+                <p className="block-note">
+                  Currently running mode {mode}
+                  {mode === "B" ? `, N = ${slotsN}` : ""}. Switch it in the top bar.
+                </p>
+              </section>
 
-          <div className="setting-divider">Governance</div>
+              <section className="drawer-section">
+                <h3>Causal constraints</h3>
+                <ul className="rule-list">
+                  {job.dependencies.map((dep) => (
+                    <li key={dep}>
+                      <code>{dep}</code>
+                      {DEPENDENCY_GLOSS[dep] && <div className="cell-note">{DEPENDENCY_GLOSS[dep]}</div>}
+                    </li>
+                  ))}
+                </ul>
+              </section>
 
-          <div className="setting-group toggle-row">
-            <div>
-              <label className="setting-label" htmlFor="toggleRecourse">
-                Algorithmic recourse suggestions
-              </label>
-              <p className="setting-hint">Show applicants what would change the outcome</p>
-            </div>
-            <label className="switch">
-              <input
-                id="toggleRecourse"
-                type="checkbox"
-                checked={settings.recourseEnabled}
-                onChange={(e) => onChange("recourseEnabled", e.target.checked)}
-              />
-              <span className="switch-track" />
-            </label>
-          </div>
+              <section className="drawer-section">
+                <h3>Never used</h3>
+                <p className="block-note">
+                  Not representable in the profile, and not readable by the scorer or the solver.
+                </p>
+                <p className="protected-list">{job.protected_never_use.join(", ")}</p>
+                {result && (
+                  <>
+                    <p className="protected-list">{result.profile.never_extract.join(", ")}</p>
+                    <ul className="rule-list">
+                      {Object.entries(result.assertions).map(([k, v]) => (
+                        <li key={k}>
+                          <span className={v ? "ok" : "bad"}>{v ? "✓" : "✗"}</span>{" "}
+                          {k.replace(/_/g, " ")}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+              </section>
 
-          <div className="setting-group toggle-row">
-            <div>
-              <label className="setting-label" htmlFor="toggleAnon">
-                Anonymise PII before scoring
-              </label>
-              <p className="setting-hint">Strip name, photo, age before the model sees the CV</p>
-            </div>
-            <label className="switch">
-              <input
-                id="toggleAnon"
-                type="checkbox"
-                checked={settings.anonymisePII}
-                onChange={(e) => onChange("anonymisePII", e.target.checked)}
-              />
-              <span className="switch-track" />
-            </label>
-          </div>
-
-          <div className="setting-group toggle-row">
-            <div>
-              <label className="setting-label" htmlFor="toggleHuman">
-                Require human approval
-              </label>
-              <p className="setting-hint">No rejection is final without a recruiter's click</p>
-            </div>
-            <label className="switch">
-              <input id="toggleHuman" type="checkbox" checked disabled />
-              <span className="switch-track" />
-            </label>
-          </div>
-
-          <div className="setting-group">
-            <div className="setting-label-row">
-              <label className="setting-label" htmlFor="wRecourseCount">
-                Diverse recourse paths to show
-              </label>
-              <span className="setting-value">{settings.recoursePathCount}</span>
-            </div>
-            <input
-              id="wRecourseCount"
-              type="range"
-              min={1}
-              max={5}
-              step={1}
-              value={settings.recoursePathCount}
-              className="slider"
-              onChange={(e) => onChange("recoursePathCount", parseInt(e.target.value, 10))}
-            />
-          </div>
-        </div>
-
-        <div className="drawer-footer">
-          <button className="btn btn-secondary" onClick={onClose}>
-            Cancel
-          </button>
-          <button className="btn btn-primary" onClick={onSave}>
-            Save settings
-          </button>
+              <section className="drawer-section">
+                <h3>Audit chain</h3>
+                {audit ? (
+                  <p className="block-note">
+                    <span className={audit.chain_ok ? "ok" : "bad"}>
+                      {audit.chain_ok ? "✓ chain verified" : "✗ chain broken"}
+                    </span>{" "}
+                    · {audit.count} records
+                    {audit.first_bad_index != null && <> · first bad index {audit.first_bad_index}</>}
+                  </p>
+                ) : (
+                  <p className="empty-note">Audit log unavailable.</p>
+                )}
+              </section>
+            </>
+          )}
         </div>
       </aside>
     </>
-  );
-}
-
-interface WeightSliderProps {
-  id: string;
-  label: string;
-  value: number;
-  onChange: (value: number) => void;
-}
-
-function WeightSlider({ id, label, value, onChange }: WeightSliderProps) {
-  return (
-    <div className="setting-group">
-      <div className="setting-label-row">
-        <label className="setting-label" htmlFor={id}>
-          {label}
-        </label>
-        <span className="setting-value">{value}%</span>
-      </div>
-      <input
-        id={id}
-        type="range"
-        min={0}
-        max={100}
-        step={5}
-        value={value}
-        className="slider"
-        onChange={(e) => onChange(parseInt(e.target.value, 10))}
-      />
-    </div>
   );
 }

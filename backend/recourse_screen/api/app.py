@@ -54,23 +54,58 @@ def jobs() -> list[dict]:
 
 @app.get("/candidates")
 def candidates(job: str = "backend_engineer", mode: str = "A", N: int | None = None) -> list[dict]:
-    from ..recourse.ranking_mode import score_pool
+    """Score and rank the whole pool. No LLM calls, no audit writes.
+
+    Carries enough per-candidate detail (experience, the two largest shortfalls)
+    for a list UI to render honestly before anything has been screened.
+    """
+    from ..score.features import build_feature_vector
+    from ..score.scorer import evaluate_knockouts, score_vector
 
     jt = load_job(job)
     man = manifest_for_job(jt)
     pool = pipeline.load_pool()
-    scored = score_pool(pool, jt, man)  # (cid, score, knockouts_passed)
+
+    scored = []
+    for cid, prof in pool:
+        fv = build_feature_vector(prof, jt, man)
+        score, contributions = score_vector(fv, jt, man)
+        ko = all(k.passed for k in evaluate_knockouts(fv, jt, man))
+        scored.append((cid, prof, score, contributions, ko))
+
     n = N or jt.mode.B.slots_N
-    ranked = sorted(scored, key=lambda t: (not t[2], -t[1]))
+    ranked = sorted(scored, key=lambda t: (not t[4], -t[2]))
+    # Ties are pessimistic -- an equal score counts as ahead -- to match
+    # recourse.ranking_mode._rank_of, so a card and its detail panel agree.
+    qualified = [(s, ko) for _, _, s, _, ko in scored]
+
     rows = []
-    for i, (cid, score, ko) in enumerate(ranked, start=1):
-        if mode == "B":
-            passed = ko and i <= n
-        else:
-            passed = ko and score >= jt.mode.A.threshold
-        prof = dict(pool)[cid]
-        rows.append({"candidate_id": cid, "file": prof.provenance.source_file, "score": score,
-                     "knockouts_passed": ko, "rank": i if ko else None, "decision": "advance" if passed else "not_advanced"})
+    for cid, prof, score, contributions, ko in ranked:
+        rank = None
+        if ko:
+            rank = 1 + sum(1 for other_score, other_ko in qualified
+                           if other_ko and other_score >= score) - 1
+        passed = ko and (rank is not None and rank <= n) if mode == "B" else ko and score >= jt.mode.A.threshold
+        gaps = sorted(
+            (c for c in contributions if c.contribution < c.max_contribution),
+            key=lambda c: c.max_contribution - c.contribution,
+            reverse=True,
+        )
+        rows.append({
+            "candidate_id": cid,
+            "file": prof.provenance.source_file,
+            "score": score,
+            "knockouts_passed": ko,
+            "rank": rank,
+            "decision": "advance" if passed else "not_advanced",
+            "total_months": prof.experience.total_months.value,
+            "software_months": prof.experience.software_months.value,
+            "top_gaps": [
+                {"phrase": c.phrase, "missed": c.max_contribution - c.contribution,
+                 "derivation": c.derivation}
+                for c in gaps[:2]
+            ],
+        })
     return rows
 
 
