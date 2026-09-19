@@ -1,0 +1,19 @@
+{
+ "idx": 3,
+ "source_file": "synth_003.txt",
+ "archetype": "senior_backend",
+ "style": "reverse-chronological with tight bullet points under each role, classic and plain",
+ "seniority": "senior",
+ "omitted_skills": [],
+ "overlap": true,
+ "year_only_dates": false,
+ "under_report": false,
+ "block_only_skills": [
+  "redis",
+  "elasticsearch",
+  "helm"
+ ],
+ "n_roles": 3,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

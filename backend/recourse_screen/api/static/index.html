@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Recourse pre-screener — backend demo</title>
+<style>
+  :root { --bg:#f6f7f9; --card:#fff; --ink:#1b1f24; --muted:#5f6b7a; --line:#e3e6ea; --ok:#1f8a4c; --bad:#b3261e; --warn:#9a6700; --acc:#2456c9; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.45 system-ui, sans-serif; color:var(--ink); background:var(--bg); }
+  header { padding:10px 18px; background:#fff; border-bottom:1px solid var(--line); display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+  header h1 { font-size:16px; margin:0 12px 0 0; }
+  header label { color:var(--muted); font-size:13px; }
+  header input, header select, header button { font:inherit; padding:4px 8px; }
+  main { display:grid; grid-template-columns: 300px 1fr 380px; gap:14px; padding:14px 18px; align-items:start; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px 14px; margin-bottom:12px; }
+  h2 { font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin:0 0 8px; }
+  h3 { font-size:14px; margin:12px 0 6px; }
+  .cand { display:flex; justify-content:space-between; padding:6px 8px; border-radius:6px; cursor:pointer; }
+  .cand:hover { background:#eef2f8; } .cand.sel { background:#e2e9f7; }
+  .pill { display:inline-block; padding:1px 8px; border-radius:999px; font-size:12px; border:1px solid var(--line); }
+  .pill.ok { color:var(--ok); border-color:var(--ok); } .pill.bad { color:var(--bad); border-color:var(--bad); }
+  .bar { height:8px; background:#e9edf2; border-radius:4px; overflow:hidden; } .bar > i { display:block; height:100%; background:var(--acc); }
+  .contrib { display:grid; grid-template-columns: 1fr 90px 60px; gap:8px; align-items:center; padding:3px 0; font-size:13px; }
+  .contrib .muted { color:var(--muted); font-size:12px; }
+  .route { border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin:8px 0; }
+  .route .meta { color:var(--muted); font-size:12px; }
+  .delta { padding:4px 0 4px 10px; border-left:3px solid var(--acc); margin:6px 0; }
+  .delta.absent { border-left-color:var(--warn); background:#fff8e6; } .delta.denied { border-left-color:var(--bad); }
+  .delta small { color:var(--muted); }
+  pre.expl { white-space:pre-wrap; font:13px/1.5 system-ui, sans-serif; background:#fbfbfc; border:1px solid var(--line); padding:10px; border-radius:6px; }
+  .warnbox { background:#fff4f2; border:1px solid #f0c8c3; padding:8px 10px; border-radius:6px; }
+  .hint { display:flex; gap:8px; align-items:flex-start; padding:4px 0; }
+  .ev { color:var(--muted); font-size:12px; } .q { background:#fff3c4; }
+  details summary { cursor:pointer; color:var(--acc); }
+  table { border-collapse:collapse; font-size:12px; width:100%; } td, th { border-bottom:1px solid var(--line); padding:3px 4px; text-align:left; }
+  textarea { width:100%; height:110px; font:12px monospace; }
+  button.primary { background:var(--acc); color:#fff; border:0; border-radius:6px; padding:6px 10px; cursor:pointer; }
+  .status { color:var(--muted); font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Recourse pre-screener <span class="status">backend demo (throwaway)</span></h1>
+  <label>Job <select id="job"></select></label>
+  <label>Mode
+    <select id="mode"><option value="A">A · fixed threshold</option><option value="B">B · top-N of pool</option></select>
+  </label>
+  <label>N <input id="N" type="number" min="1" value="3" style="width:56px"></label>
+  <label><input id="explain" type="checkbox" checked> LLM explanation</label>
+  <button id="reload">Rescore pool</button>
+  <span id="status" class="status"></span>
+</header>
+<main>
+  <section>
+    <div class="card"><h2>Candidates (pool)</h2><div id="cands"></div></div>
+    <div class="card"><h2>Screen new CV text</h2>
+      <textarea id="cvtext" placeholder="Paste CV text; runs LLM extraction (cached by content hash)"></textarea>
+      <button class="primary" id="screentext">Extract + screen</button>
+    </div>
+    <div class="card"><h2>Job configuration (audit artefact)</h2><div id="jobcfg" class="ev"></div></div>
+  </section>
+  <section id="result"><div class="card">Pick a candidate.</div></section>
+  <section>
+    <div class="card"><h2>Extracted profile</h2><div id="profile" class="ev">—</div></div>
+    <div class="card"><h2>Audit</h2><div id="audit" class="ev">—</div></div>
+  </section>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const state = { cands: [], sel: null, result: null, jobs: [] };
+const api = async (path, opts) => { const r = await fetch(path, opts); if (!r.ok) throw new Error(await r.text()); return r.json(); };
+const post = (path, body) => api(path, { method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify(body) });
+const esc = s => String(s ?? '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const fmtVal = (v, unit) => unit === 'months' ? `${v} months` : unit === 'boolean' ? (v ? 'yes' : 'no') : `${v} ${unit}`;
+
+async function loadJobs() {
+  state.jobs = await api('/jobs');
+  $('#job').innerHTML = state.jobs.map(j => `<option value="${j.job_id}">${esc(j.title)}</option>`).join('');
+  renderJobCfg();
+}
+function renderJobCfg() {
+  const j = state.jobs.find(x => x.job_id === $('#job').value); if (!j) return;
+  const rows = Object.entries(j.score).map(([p, f]) => `<tr><td>${esc(f.phrase)}<br><span class="ev">${p}</span></td><td>${f.weight}×${f.cap}</td><td>${f.cost_per_step ?? '—'}</td><td>${f.max_delta}</td><td>${esc(f.actionability.replace('_',' '))}</td></tr>`).join('');
+  $('#jobcfg').innerHTML = `<div>Knockouts: <b>${j.knockouts.map(esc).join(' ∧ ')}</b></div>
+    <div>Mode A threshold ${j.mode.A.threshold} (ε ${j.mode.A.margin_eps}, ρ ${j.mode.A.weight_shrink_rho}); Mode B slots ${j.mode.B.slots_N}; horizon ${j.horizon_months} mo; ${j.k_routes} routes</div>
+    <div>Dependencies: ${j.dependencies.map(esc).join('; ') || '—'}</div>
+    <div>Protected, never used: ${j.protected_never_use.map(esc).join(', ')}</div>
+    <table><tr><th>feature</th><th>w×cap</th><th>cost/step</th><th>max Δ</th><th>class</th></tr>${rows}</table>`;
+}
+async function loadCands() {
+  $('#status').textContent = 'scoring pool…';
+  state.cands = await api(`/candidates?job=${$('#job').value}&mode=${$('#mode').value}&N=${$('#N').value}`);
+  $('#cands').innerHTML = state.cands.map(c => `<div class="cand ${c.candidate_id===state.sel?'sel':''}" data-id="${c.candidate_id}">
+     <span>${c.rank ? c.rank + '. ' : ''}${esc(c.candidate_id)}</span><span><b>${c.score}</b> <span class="pill ${c.decision==='advance'?'ok':'bad'}">${c.decision==='advance'?'advance':'no'}</span></span></div>`).join('');
+  document.querySelectorAll('.cand').forEach(el => el.onclick = () => select(el.dataset.id));
+  $('#status').textContent = '';
+}
+async function select(id) {
+  state.sel = id; loadCands();
+  $('#result').innerHTML = '<div class="card">Screening… (solver is instant; LLM explanation takes a few seconds)</div>';
+  try {
+    state.result = await post('/screen', { candidate_id: id, job_id: $('#job').value, mode: $('#mode').value, N: +$('#N').value, explain: $('#explain').checked });
+    renderResult(state.result);
+  } catch (e) { $('#result').innerHTML = `<div class="card warnbox">${esc(e.message)}</div>`; }
+}
+function renderResult(r) {
+  const d = r.decision;
+  const ctr = r.feature_contributions.map(c => `<div class="contrib"><span>${esc(c.phrase)} <span class="muted">(${c.raw_value===null?'absent':esc(fmtVal(c.raw_value,'')) } · ${c.derivation}${c.prior_applied?' · prior':''})</span></span>
+     <div class="bar"><i style="width:${c.max_contribution? Math.round(100*c.contribution/c.max_contribution):0}%"></i></div><span>${c.contribution}/${c.max_contribution}</span></div>`).join('');
+  const kos = d.knockouts.map(k => `<span class="pill ${k.passed?'ok':'bad'}">${esc(k.rule)} → ${k.passed?'pass':'FAIL'}</span>`).join(' ');
+  const routes = r.routes.map(rt => `<div class="route"><b>${rt.route_id}</b> <span class="meta">effort ${rt.cost} · ≈${rt.total_time_months} months · new score ${rt.new_score}${rt.rank?` · rank ${rt.rank}`:''} · flip test ${rt.flip_test_passed?'✓':'✗'}</span>
+      ${rt.deltas.map(x => `<div class="delta ${x.derivation_of_current}">${x.derivation_of_current==='absent'?'❓ ':''}${esc(x.candidate_phrase)}: <b>${esc(fmtVal(x.from_value,x.unit))}</b> → <b>${esc(fmtVal(x.to_value,x.unit))}</b>
+        <br><small>${x.derivation_of_current==='absent'?'not on the CV — question, not instruction':'currently '+x.derivation_of_current} · ${esc(x.actionability.replace('_',' '))} · typ. ${x.typical_time_months??'?'} mo/step · cost ${x.cost}</small></div>`).join('')}</div>`).join('');
+  const blockers = r.immutable_blockers.map(b => `<div class="warnbox"><b>Binding constraint (not a CV edit):</b> ${esc(b.rule)} — ${esc(b.disclosure)}</div>`).join('');
+  const nfp = r.no_feasible_path ? `<div class="warnbox"><b>No feasible path within the horizon.</b> ${esc(r.no_feasible_path.reason)}; gap remaining ${r.no_feasible_path.gap_remaining}.${r.no_feasible_path.partial_progress?` Nearest partial progress reaches ${r.no_feasible_path.partial_progress.new_score}.`:''} Human review route applies.</div>` : '';
+  const hints = r.restatement_hints.map((h,i) => `<label class="hint"><input type="checkbox" data-path="${h.field}"> <span>${esc(h.phrase)} <span class="ev">(${h.because_of==='not mentioned'?'not mentioned on the CV':'likely, since you listed '+esc(h.because_of)})</span></span></label>`).join('');
+  const ex = r.explanation ? `<pre class="expl">${esc(r.explanation.text)}</pre><div class="ev">checks ${r.explanation.checks_passed?'passed':'FAILED'}${r.explanation.fallback_used?' · template fallback used':' · LLM sentences'} ${r.explanation.check_failures.length?'· '+r.explanation.check_failures.join(', '):''}</div>` : '<div class="ev">Candidate advanced; no explanation needed.</div>';
+  $('#result').innerHTML = `
+    <div class="card"><h2>Decision · mode ${r.mode}</h2>
+      <div style="font-size:20px"><span class="pill ${d.passed?'ok':'bad'}">${d.passed?'ADVANCE':'NOT ADVANCED'}</span> score <b>${d.score}</b> / max ${d.max_score} · ${r.mode==='A'?'threshold':'bar to beat'} <b>${d.threshold}</b>${d.rank?` · rank ${d.rank} of ${d.pool_size} (top ${d.slots_n} advance)`:''}</div>
+      ${r.aggregate_line?`<div class="ev">${esc(r.aggregate_line)}</div>`:''}
+      <div style="margin-top:6px">${kos}</div>
+      <h3>Score contributions</h3>${ctr}
+      <div class="ev">assertions: ${Object.entries(r.assertions).map(([k,v])=>`${k}=${v?'✓':'✗'}`).join(' · ')}</div>
+    </div>
+    ${blockers||nfp||routes ? `<div class="card"><h2>Recourse — what would have flipped this scorer</h2>${blockers}${nfp}${routes}</div>` : ''}
+    <div class="card"><h2>Candidate-facing explanation</h2>${ex}</div>
+    <div class="card"><h2>Restatement — did the screen miss something?</h2>${hints||'<span class="ev">no hints</span>'}
+      <div style="margin-top:8px"><button class="primary" id="restate">Confirm ticked items & re-run</button></div></div>`;
+  $('#restate')?.addEventListener('click', doRestate);
+  renderProfile(r.profile);
+  $('#audit').innerHTML = `decision <code>${r.decision_id}</code> · <a href="/audit/${r.decision_id}" target="_blank">record</a> · <a href="/audit" target="_blank">chain</a>`;
+}
+async function doRestate() {
+  const paths = [...document.querySelectorAll('#result input[type=checkbox]:checked')].map(x => x.dataset.path);
+  if (!paths.length) return;
+  $('#status').textContent = 'restating…';
+  try {
+    const parent = state.result?.decision_id;
+    state.result = await post(`/restate?parent_decision_id=${parent}&explain=${$('#explain').checked}`, { candidate_id: state.sel, job_id: $('#job').value, mode: $('#mode').value, N: +$('#N').value, confirmations: paths.map(p => ({ path: p, value: true })) });
+    renderResult(state.result);
+  } catch (e) { alert(e.message); }
+  $('#status').textContent = '';
+}
+function renderProfile(p) {
+  const ev = e => e.evidence?.length ? ` <span class="q">“${esc(e.evidence[0].quote)}”</span>${e.evidence[0].verified===false?' ⚠ unverified':''}` : '';
+  const roles = p.experience.roles.map(r => `<li>${esc(r.title_raw)} @ ${esc(r.employer||'?')} ${r.start||'?'}→${r.end||'?'} (${r.months} mo, ${r.date_precision}) ${r.is_backend_role?'· backend':''}<br>skills: ${r.skills_mentioned.join(', ')}${ev(r)}</li>`).join('');
+  const skills = Object.entries(p.skills).map(([k,s]) => `<tr><td>${k}</td><td>${s.held.value===null?'—':s.held.value} <span class="ev">${s.held.derivation}</span></td><td>${s.months.value??'—'}</td><td>${s.proficiency.value??'—'}</td></tr>`).join('');
+  $('#profile').innerHTML = `<div>as of ${p.as_of} · ${esc(p.provenance.extractor_model)} · ${esc(p.provenance.prompt_version)} · cv ${p.provenance.cv_sha256.slice(0,10)}</div>
+    <div>experience: total ${p.experience.total_months.value} mo · software ${p.experience.software_months.value} mo · backend ${p.experience.backend_months.value} mo · ${p.experience.seniority.value}</div>
+    <div>education: ${p.education.highest_level.value} (${p.education.highest_level.derivation})${ev(p.education.highest_level)}</div>
+    <div>derived: ${Object.entries(p.derived).map(([k,v])=>`${k}=${v.value===null?'absent':v.value}`).join(' · ')}</div>
+    <details><summary>roles (${p.experience.roles.length})</summary><ul>${roles}</ul></details>
+    <details><summary>skills (${Object.keys(p.skills).length})</summary><table><tr><th>id</th><th>held</th><th>months</th><th>prof</th></tr>${skills}</table></details>
+    <details><summary>projects (${p.projects.length}) · counts ${JSON.stringify(p.project_counts_by_topic)}</summary><ul>${p.projects.map(x=>`<li>${esc(x.title)} [${x.topics.join(', ')}]${ev(x)}</li>`).join('')}</ul></details>
+    <div>unmatched skills: ${p.unmatched_skills.map(esc).join(', ')||'—'}</div>`;
+}
+$('#screentext').onclick = async () => {
+  const t = $('#cvtext').value.trim(); if (!t) return;
+  $('#result').innerHTML = '<div class="card">Extracting with Claude… (10–30 s)</div>';
+  try { state.result = await post('/screen', { cv_text: t, job_id: $('#job').value, mode: $('#mode').value, N: +$('#N').value, explain: $('#explain').checked }); state.sel = state.result.candidate_id; renderResult(state.result); }
+  catch (e) { $('#result').innerHTML = `<div class="card warnbox">${esc(e.message)}</div>`; }
+};
+$('#reload').onclick = loadCands;
+['#job','#mode','#N'].forEach(s => $(s).addEventListener('change', () => { renderJobCfg(); loadCands(); if (state.sel) select(state.sel); }));
+loadJobs().then(loadCands);
+</script>
+</body>
+</html>

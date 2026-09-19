@@ -1,0 +1,261 @@
+{
+ "cv_sha256": "10836ccf8eb4e92a19c03a8b8a68b04a6978fbeb6f3c167442848d6688920068",
+ "source_file": "synth_020.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:24:11+00:00",
+ "cv_text": "Artem Voloshin\nVantaa, Finland\nartem.voloshin@mailbox.fi | +358 44 218 7734\n\nBackend-focused software engineer working with Python, REST APIs and distributed services on AWS and Linux. Requires a work permit / visa sponsorship to work in Finland.\n\nEXPERIENCE\n\nSoftware Engineer (Backend), Nokka Oy — Nov 2024 – Present\nBuilds and maintains REST APIs in Python that serve as the primary interface between internal services and customer-facing clients. Works on a microservices architecture, contributing to system design discussions around service boundaries, data ownership and message flow through Apache Kafka, with Redis used for caching and short-lived state. Owns PostgreSQL schemas and query work behind the API layer, packages services with Docker, and keeps delivery moving through CI/CD pipelines onto AWS infrastructure running on Linux. Day-to-day collaboration runs through Git, including review of colleagues' changes.\n\nServer-side Developer, Koski Engineering — Mar 2024 – Nov 2024\nConcentrated on automation and cloud delivery, rebuilding project pipelines in GitHub Actions so that tests, container builds and deployments to AWS ran without manual steps. Wrote backend services in Python with some TypeScript on adjacent tooling, exposed them through REST APIs, and shaped the SQL and PostgreSQL layer underneath. Contributed to system design reviews, containerised workloads with Docker, and handled Linux-side configuration for the deployed environments. Version control and branching conventions were managed in Git alongside the CI/CD work.\n\nSoftware Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024\nStarted on smaller maintenance tasks in Python and grew into implementing endpoints with FastAPI and, on one Node-based service, Express.js. Learned disciplined Git usage early — small commits, clear history, code review as a habit — which became the backbone of the team's workflow contribution. Wrote SQL against PostgreSQL, helped document and test REST APIs, and used Docker together with the existing CI/CD setup to keep local and build environments consistent.\n\nPROJECTS\n\nBooking service for a local gym — A backend-only project providing reservation and scheduling endpoints with FastAPI, backed by a PostgreSQL database designed around class capacity and cancellation rules. Not deployed publicly.\n\nFlaky-test triage tooling — A deployed tool written in TypeScript that collects repeated test-run results, groups unstable failures and surfaces the worst offenders. Runs on Linux hosts in AWS.\n\nSKILLS\n\nPython, TypeScript, SQL, PostgreSQL, Redis, REST APIs, FastAPI, Django, Express.js, Apache Kafka, Microservices architecture, System design, Docker, AWS, Linux, CI/CD, GitHub Actions, Git\n\nEDUCATION\n\nM.Sc., Communications\n\nCERTIFICATIONS\n\nCertified Kubernetes Administrator (CKA)\n\nLANGUAGES\n\nEnglish — C2; Russian — native\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start_raw": "Nov 2024",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "python",
+     "microservices",
+     "system_design",
+     "kafka",
+     "redis",
+     "postgresql",
+     "docker",
+     "ci_cd",
+     "aws",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "python",
+     "microservices",
+     "system_design",
+     "kafka",
+     "redis",
+     "postgresql",
+     "docker",
+     "ci_cd",
+     "aws",
+     "linux",
+     "git"
+    ],
+    "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present"
+   },
+   {
+    "title_raw": "Server-side Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Koski Engineering",
+    "start_raw": "Mar 2024",
+    "end_raw": "Nov 2024",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "github_actions",
+     "aws",
+     "python",
+     "typescript",
+     "rest_api",
+     "sql",
+     "postgresql",
+     "system_design",
+     "docker",
+     "linux",
+     "git",
+     "ci_cd"
+    ],
+    "primary_skills": [
+     "github_actions",
+     "aws",
+     "python",
+     "typescript",
+     "rest_api",
+     "sql",
+     "postgresql"
+    ],
+    "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024"
+   },
+   {
+    "title_raw": "Software Developer Intern",
+    "title_canonical": "backend_engineer",
+    "employer": "Arctic Cloud Oy",
+    "start_raw": "May 2022",
+    "end_raw": "Mar 2024",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "fastapi",
+     "express",
+     "git",
+     "sql",
+     "postgresql",
+     "rest_api",
+     "testing",
+     "docker",
+     "ci_cd"
+    ],
+    "primary_skills": [
+     "python",
+     "fastapi",
+     "express",
+     "git"
+    ],
+    "quote": "Software Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, TypeScript, SQL, PostgreSQL, Redis, REST APIs, FastAPI, Django, Express.js, Apache Kafka, Microservices architecture, System design, Docker, AWS, Linux, CI/CD, GitHub Actions, Git"
+   },
+   {
+    "skill": "typescript",
+    "quote": "Python, TypeScript, SQL"
+   },
+   {
+    "skill": "sql",
+    "quote": "TypeScript, SQL, PostgreSQL"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "SQL, PostgreSQL, Redis"
+   },
+   {
+    "skill": "redis",
+    "quote": "PostgreSQL, Redis, REST APIs"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Redis, REST APIs, FastAPI"
+   },
+   {
+    "skill": "fastapi",
+    "quote": "REST APIs, FastAPI, Django"
+   },
+   {
+    "skill": "django",
+    "quote": "FastAPI, Django, Express.js"
+   },
+   {
+    "skill": "express",
+    "quote": "Django, Express.js, Apache Kafka"
+   },
+   {
+    "skill": "kafka",
+    "quote": "Express.js, Apache Kafka, Microservices architecture"
+   },
+   {
+    "skill": "microservices",
+    "quote": "Apache Kafka, Microservices architecture, System design"
+   },
+   {
+    "skill": "system_design",
+    "quote": "Microservices architecture, System design, Docker"
+   },
+   {
+    "skill": "docker",
+    "quote": "System design, Docker, AWS"
+   },
+   {
+    "skill": "aws",
+    "quote": "Docker, AWS, Linux"
+   },
+   {
+    "skill": "linux",
+    "quote": "AWS, Linux, CI/CD"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "Linux, CI/CD, GitHub Actions"
+   },
+   {
+    "skill": "github_actions",
+    "quote": "CI/CD, GitHub Actions, Git"
+   },
+   {
+    "skill": "git",
+    "quote": "GitHub Actions, Git"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Booking service for a local gym",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "fastapi",
+     "postgresql"
+    ],
+    "deployed": "no",
+    "quote": "Booking service for a local gym — A backend-only project providing reservation and scheduling endpoints with FastAPI, backed by a PostgreSQL database designed around class capacity and cancellation rules. Not deployed publicly."
+   },
+   {
+    "title": "Flaky-test triage tooling",
+    "topics": [
+     "testing",
+     "devops"
+    ],
+    "skills": [
+     "typescript",
+     "linux",
+     "aws"
+    ],
+    "deployed": "yes",
+    "quote": "Flaky-test triage tooling — A deployed tool written in TypeScript that collects repeated test-run results, groups unstable failures and surfaces the worst offenders. Runs on Linux hosts in AWS."
+   }
+  ],
+  "education": {
+   "highest_level": "msc",
+   "field": "communications",
+   "in_progress": "unclear",
+   "quote": "M.Sc., Communications"
+  },
+  "certifications": [
+   {
+    "cert_id": "certified_kubernetes_administrator",
+    "issuer": "",
+    "issued_raw": "",
+    "quote": "Certified Kubernetes Administrator (CKA)"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "en",
+    "cefr": "C2"
+   },
+   {
+    "lang": "ru",
+    "cefr": ""
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "yes",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Requires a work permit / visa sponsorship to work in Finland."
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

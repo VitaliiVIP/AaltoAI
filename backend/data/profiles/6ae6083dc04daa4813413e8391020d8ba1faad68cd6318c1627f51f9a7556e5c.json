@@ -1,0 +1,1197 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "6ae6083dc04daa4813413e8391020d8ba1faad68cd6318c1627f51f9a7556e5c",
+  "source_file": "synth_021.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:24:26+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Senior Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Koski Engineering",
+    "start": "2023-07",
+    "end": "2026-07",
+    "date_precision": "year",
+    "months": 36,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "postgresql",
+     "kubernetes",
+     "aws",
+     "docker",
+     "prometheus",
+     "mqtt",
+     "ci_cd",
+     "git",
+     "linux",
+     "testing"
+    ],
+    "primary_skills": [
+     "python",
+     "postgresql",
+     "kubernetes",
+     "aws"
+    ],
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Koski Engineering",
+    "start": "2019-07",
+    "end": "2023-07",
+    "date_precision": "year",
+    "months": 48,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "linux",
+     "kubernetes",
+     "python",
+     "postgresql",
+     "aws",
+     "docker",
+     "ci_cd",
+     "git",
+     "grafana"
+    ],
+    "primary_skills": [
+     "linux",
+     "kubernetes",
+     "python",
+     "postgresql",
+     "aws"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+      "start": 2243,
+      "end": 2290,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Lumi Labs",
+    "start": "2016-07",
+    "end": "2019-07",
+    "date_precision": "year",
+    "months": 36,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "docker",
+     "aws",
+     "python",
+     "postgresql",
+     "sql",
+     "kubernetes",
+     "linux",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "docker",
+     "aws"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Developer\nLumi Labs — 2016-2019",
+      "start": 3068,
+      "end": 3107,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Backend Developer Trainee",
+    "title_canonical": "backend_engineer",
+    "employer": "Aurora Analytics Oy",
+    "start": "2014-07",
+    "end": "2016-07",
+    "date_precision": "year",
+    "months": 24,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "kubernetes",
+     "helm",
+     "python",
+     "distributed_systems",
+     "sql",
+     "postgresql",
+     "git",
+     "docker",
+     "ci_cd",
+     "linux"
+    ],
+    "primary_skills": [
+     "kubernetes",
+     "helm",
+     "python",
+     "distributed_systems"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Developer Trainee\nAurora Analytics Oy — 2014-2016",
+      "start": 3891,
+      "end": 3948,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 144,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 144,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 144,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 4,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "aws": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+      "start": 2243,
+      "end": 2290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git",
+      "start": 991,
+      "end": 1062,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 120,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+      "start": 2243,
+      "end": 2290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git",
+      "start": 991,
+      "end": 1062,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 144,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "distributed_systems": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer Trainee\nAurora Analytics Oy — 2014-2016",
+      "start": 3891,
+      "end": 3948,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Architecture: Distributed systems",
+      "start": 1118,
+      "end": 1151,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2016,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+      "start": 2243,
+      "end": 2290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git",
+      "start": 991,
+      "end": 1062,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 144,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+      "start": 2243,
+      "end": 2290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git",
+      "start": 991,
+      "end": 1062,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 144,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "grafana": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+      "start": 2243,
+      "end": 2290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Observability and messaging: Prometheus, Grafana, MQTT",
+      "start": 1063,
+      "end": 1117,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 48,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "helm": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer Trainee\nAurora Analytics Oy — 2014-2016",
+      "start": 3891,
+      "end": 3948,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git",
+      "start": 991,
+      "end": 1062,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2016,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "kubernetes": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+      "start": 2243,
+      "end": 2290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git",
+      "start": 991,
+      "end": 1062,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 144,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+      "start": 2243,
+      "end": 2290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git",
+      "start": 991,
+      "end": 1062,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 144,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "mqtt": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Observability and messaging: Prometheus, Grafana, MQTT",
+      "start": 1063,
+      "end": 1117,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 36,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+      "start": 2243,
+      "end": 2290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Languages and data: Python, SQL, PostgreSQL",
+      "start": 947,
+      "end": 990,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 144,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "prometheus": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Observability and messaging: Prometheus, Grafana, MQTT",
+      "start": 1063,
+      "end": 1117,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 36,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+      "start": 2243,
+      "end": 2290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Languages and data: Python, SQL, PostgreSQL",
+      "start": 947,
+      "end": 990,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 144,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer\nLumi Labs — 2016-2019",
+      "start": 3068,
+      "end": 3107,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer Trainee\nAurora Analytics Oy — 2014-2016",
+      "start": 3891,
+      "end": 3948,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Languages and data: Python, SQL, PostgreSQL",
+      "start": 947,
+      "end": 990,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 60,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2019,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+      "start": 1178,
+      "end": 1232,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 36,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Blue/green deployment playground",
+   "topics": [
+    "devops"
+   ],
+   "skills": [
+    "postgresql",
+    "grafana"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "A self-directed DevOps sandbox for rehearsing blue/green release cut-overs, including how a PostgreSQL-backed service behaves across a switch and what Grafana panels make the cut-over legible while it is happening. Not publicly deployed; used as a personal reference environment.",
+     "start": 4588,
+     "end": 4867,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "devops": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "phd",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Ph.D., Business Administration",
+     "start": 4880,
+     "end": 4910,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "business administration",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Ph.D., Business Administration",
+     "start": 4880,
+     "end": 4910,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "hi",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "B2",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "fi",
+   "cefr": "A1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Espoo, Finland",
+     "start": 12,
+     "end": 26,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+     "start": 1178,
+     "end": 1232,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+     "start": 2243,
+     "end": 2290,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git",
+     "start": 991,
+     "end": 1062,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+     "start": 1178,
+     "end": 1232,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+     "start": 2243,
+     "end": 2290,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git",
+     "start": 991,
+     "end": 1062,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Developer\nLumi Labs — 2016-2019",
+     "start": 3068,
+     "end": 3107,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Backend Developer Trainee\nAurora Analytics Oy — 2014-2016",
+     "start": 3891,
+     "end": 3948,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Languages and data: Python, SQL, PostgreSQL",
+     "start": 947,
+     "end": 990,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

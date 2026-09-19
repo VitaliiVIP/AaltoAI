@@ -1,0 +1,200 @@
+{
+ "cv_sha256": "4f48e6ca20e86c92af4f79ef9d205a5d2d504b1f3b6ffc016911e5573bd3c31a",
+ "source_file": "synth_018.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:23:40+00:00",
+ "cv_text": "Eero Valtanen\nEspoo, Finland | eero.valtanen@mailbox.fi | +358 44 218 6607\n\nBackend engineer. Python, APIs, containers. Requires work permit / visa sponsorship in Finland. Open to relocation.\n\nEXPERIENCE\n\nBackend Software Engineer — Kaiku Digital\nFeb 2026 – Present\n- Python services on Linux, containerised with Docker\n- PostgreSQL schemas, SQL queries, data access layers\n- REST APIs for internal and client use\n- HTML / CSS work on server-rendered views and template markup\n- Git-based workflow, review, branching\n\nSoftware Developer Intern — Polaris Payments\nSep 2025 – Feb 2026\n- REST API endpoints: design, implementation, testing\n- Git branching and code review as daily practice\n- Python plus PostgreSQL and MongoDB storage\n- SQL reporting queries\n- Docker images for local dev parity\n\nJunior Backend Developer — Nordcom Oy\nDec 2024 – Sep 2025\n- Django app features, models, views\n- REST API maintenance and extension\n- SQL fixes, query tuning\n- Git history hygiene, rebases, merge conflict cleanup\n- Docker for service runs\n\nPROJECTS\n\nRecipe API with authentication — deployed. Backend focus. SQL storage, Linux host.\nDjango tutorial series — follow-along build. MongoDB, Docker.\n\nSKILLS\n\nPython | Django | REST APIs | SQL | PostgreSQL | MongoDB\nDocker | Linux | Git | HTML / CSS | Object-oriented programming\n\nEDUCATION\n\nB.Sc. Information Technology\n\nLANGUAGES\n\nFinnish — native. English — C1.\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Backend Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Kaiku Digital",
+    "start_raw": "Feb 2026",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "linux",
+     "docker",
+     "postgresql",
+     "sql",
+     "rest_api",
+     "html_css",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "linux",
+     "docker",
+     "postgresql",
+     "sql"
+    ],
+    "quote": "Backend Software Engineer — Kaiku Digital"
+   },
+   {
+    "title_raw": "Software Developer Intern",
+    "title_canonical": "backend_engineer",
+    "employer": "Polaris Payments",
+    "start_raw": "Sep 2025",
+    "end_raw": "Feb 2026",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "testing",
+     "git",
+     "python",
+     "postgresql",
+     "mongodb",
+     "sql",
+     "docker"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "testing",
+     "git"
+    ],
+    "quote": "Software Developer Intern — Polaris Payments"
+   },
+   {
+    "title_raw": "Junior Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start_raw": "Dec 2024",
+    "end_raw": "Sep 2025",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "django",
+     "rest_api",
+     "sql",
+     "git",
+     "docker"
+    ],
+    "primary_skills": [
+     "django",
+     "rest_api"
+    ],
+    "quote": "Junior Backend Developer — Nordcom Oy"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB"
+   },
+   {
+    "skill": "django",
+    "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB"
+   },
+   {
+    "skill": "mongodb",
+    "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB"
+   },
+   {
+    "skill": "docker",
+    "quote": "Docker | Linux | Git | HTML / CSS | Object-oriented programming"
+   },
+   {
+    "skill": "linux",
+    "quote": "Docker | Linux | Git | HTML / CSS | Object-oriented programming"
+   },
+   {
+    "skill": "git",
+    "quote": "Docker | Linux | Git | HTML / CSS | Object-oriented programming"
+   },
+   {
+    "skill": "html_css",
+    "quote": "Docker | Linux | Git | HTML / CSS | Object-oriented programming"
+   },
+   {
+    "skill": "oop",
+    "quote": "Docker | Linux | Git | HTML / CSS | Object-oriented programming"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Recipe API with authentication",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "sql",
+     "linux",
+     "rest_api"
+    ],
+    "deployed": "yes",
+    "quote": "Recipe API with authentication — deployed. Backend focus. SQL storage, Linux host."
+   },
+   {
+    "title": "Django tutorial series",
+    "topics": [
+     "tutorial"
+    ],
+    "skills": [
+     "django",
+     "mongodb",
+     "docker"
+    ],
+    "deployed": "unclear",
+    "quote": "Django tutorial series — follow-along build. MongoDB, Docker."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "information technology",
+   "in_progress": "unclear",
+   "quote": "B.Sc. Information Technology"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "yes",
+   "location_country": "FI",
+   "relocation_willing": "yes",
+   "quote": "Requires work permit / visa sponsorship in Finland. Open to relocation."
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

@@ -1,0 +1,47 @@
+Eetu Larvanto
+Vantaa, Finland
+eetu.larvanto@examplemail.fi | +358 40 555 0198
+
+PROFILE
+Backend developer working with Python, REST APIs and relational databases, with containerised services and Linux-based deployment forming the core of day-to-day work.
+
+EXPERIENCE
+
+Backend Developer — Kaiku Digital
+Jun 2025 – Present
+- Build and maintain backend services in Python, with REST APIs consumed by internal and customer-facing clients.
+- Package and run services in Docker, standardising local development and deployment images across the team.
+- Design and query PostgreSQL schemas, writing SQL for reporting and data migration tasks.
+- Administer service instances on Linux hosts, handling logs, permissions and scheduled jobs.
+- Produce lightweight HTML / CSS pages for internal tooling and API documentation views.
+- Work in Git with branch-based review and merge practices.
+
+Junior Software Engineer — Arctic Cloud Oy
+Jan 2025 – Jun 2025
+- Modelled and tuned PostgreSQL databases, including indexing and query rewrites for heavier endpoints.
+- Implemented REST APIs in Python using FastAPI, covering request validation and error handling.
+- Stored semi-structured data in MongoDB where relational modelling was not a good fit.
+- Containerised applications with Docker and deployed them to AWS environments.
+- Wrote SQL for data checks and ad-hoc analysis requested by product colleagues.
+- Collaborated through Git pull requests and code review.
+
+PROJECTS
+
+Discord bot for a study group
+- Integrated external REST APIs to deliver scheduling and reminder commands.
+- Ran the bot from a Docker container; source managed in Git.
+
+Volunteer website for a sports club
+- Built the backend and data layer, storing club and fixture data via SQL.
+- Exposed REST API endpoints for the site and packaged the stack with Docker.
+
+SKILLS
+Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS
+
+EDUCATION
+B.Sc., Electrical Engineering
+
+LANGUAGES
+Finnish — native
+English — B2
+Swedish — B1

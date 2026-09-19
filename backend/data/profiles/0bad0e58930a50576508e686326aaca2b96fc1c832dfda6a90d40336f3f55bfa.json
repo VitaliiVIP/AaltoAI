@@ -1,0 +1,1476 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "0bad0e58930a50576508e686326aaca2b96fc1c832dfda6a90d40336f3f55bfa",
+  "source_file": "synth_009.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:21:43+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Principal Backend Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Helsinki Data Works",
+    "start": "2023-08",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 37,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "postgresql",
+     "sql",
+     "system_design",
+     "microservices",
+     "rest_api",
+     "kubernetes",
+     "helm",
+     "docker",
+     "ci_cd",
+     "aws",
+     "terraform",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "postgresql",
+     "sql"
+    ],
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start": "2017-04",
+    "end": "2023-05",
+    "date_precision": "month",
+    "months": 73,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "linux",
+     "postgresql",
+     "redis",
+     "rest_api",
+     "python",
+     "go",
+     "microservices",
+     "event_driven",
+     "docker",
+     "kubernetes",
+     "aws",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "linux",
+     "postgresql",
+     "redis"
+    ],
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "API Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Vantaa Systems",
+    "start": "2016-06",
+    "end": "2017-04",
+    "date_precision": "month",
+    "months": 10,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "aws",
+     "docker",
+     "kubernetes",
+     "rest_api",
+     "python",
+     "postgresql",
+     "sql",
+     "event_driven",
+     "linux",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "aws",
+     "docker",
+     "kubernetes"
+    ],
+    "evidence": [
+     {
+      "quote": "API Developer, Vantaa Systems",
+      "start": 1632,
+      "end": 1661,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Helsinki Data Works",
+    "start": "2013-11",
+    "end": "2016-06",
+    "date_precision": "month",
+    "months": 31,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "git",
+     "python",
+     "rest_api",
+     "postgresql",
+     "sql",
+     "scala",
+     "kafka",
+     "docker",
+     "kubernetes",
+     "helm",
+     "linux",
+     "ci_cd"
+    ],
+    "primary_skills": [
+     "git",
+     "python",
+     "rest_api",
+     "postgresql",
+     "sql"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior Software Engineer, Helsinki Data Works",
+      "start": 2180,
+      "end": 2225,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 151,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 151,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 151,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "lead",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 4,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "aws": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS; CI/CD; Docker",
+      "start": 2983,
+      "end": 3001,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 120,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS; CI/CD; Docker",
+      "start": 2983,
+      "end": 3001,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 151,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS; CI/CD; Docker",
+      "start": 2983,
+      "end": 3001,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 151,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "event_driven": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "API Developer, Vantaa Systems",
+      "start": 1632,
+      "end": 1661,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Event-driven architecture; Git; Go",
+      "start": 3003,
+      "end": 3037,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 83,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Event-driven architecture; Git; Go",
+      "start": 3003,
+      "end": 3037,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 151,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "go": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Event-driven architecture; Git; Go",
+      "start": 3003,
+      "end": 3037,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 73,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "helm": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Software Engineer, Helsinki Data Works",
+      "start": 2180,
+      "end": 2225,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Helm; Apache Kafka; Kubernetes (k8s); Linux",
+      "start": 3039,
+      "end": 3082,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 68,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "kafka": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Software Engineer, Helsinki Data Works",
+      "start": 2180,
+      "end": 2225,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Helm; Apache Kafka; Kubernetes (k8s); Linux",
+      "start": 3039,
+      "end": 3082,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 31,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2016,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "kubernetes": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Kubernetes (k8s); Linux",
+      "start": 3059,
+      "end": 3082,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 151,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Kubernetes (k8s); Linux",
+      "start": 3059,
+      "end": 3082,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 151,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "microservices": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Microservices architecture; PostgreSQL; Python; Redis",
+      "start": 3084,
+      "end": 3137,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 110,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Microservices architecture; PostgreSQL; Python; Redis",
+      "start": 3084,
+      "end": 3137,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 151,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "PostgreSQL; Python; Redis",
+      "start": 3112,
+      "end": 3137,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 151,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "redis": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python; Redis; REST APIs; Scala; SQL",
+      "start": 3124,
+      "end": 3160,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 73,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy",
+      "start": 950,
+      "end": 987,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "REST APIs; Scala; SQL; System design; Terraform",
+      "start": 3139,
+      "end": 3186,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 151,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "scala": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Software Engineer, Helsinki Data Works",
+      "start": 2180,
+      "end": 2225,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "REST APIs; Scala; SQL; System design; Terraform",
+      "start": 3139,
+      "end": 3186,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 31,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2016,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "API Developer, Vantaa Systems",
+      "start": 1632,
+      "end": 1661,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Scala; SQL; System design; Terraform",
+      "start": 3150,
+      "end": 3186,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 78,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "system_design": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "SQL; System design; Terraform",
+      "start": 3157,
+      "end": 3186,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 37,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "terraform": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer, Helsinki Data Works",
+      "start": 207,
+      "end": 254,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "System design; Terraform",
+      "start": 3162,
+      "end": 3186,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 37,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Cost dashboard for a cloud account",
+   "topics": [
+    "infrastructure",
+    "backend",
+    "data"
+   ],
+   "skills": [
+    "git"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Cost dashboard for a cloud account — infrastructure and backend work, version-controlled with Git; deployed and in use.",
+     "start": 2698,
+     "end": 2817,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Booking service for a local gym",
+   "topics": [
+    "backend",
+    "infrastructure"
+   ],
+   "skills": [
+    "go",
+    "postgresql",
+    "terraform"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Booking service for a local gym — backend implementation in Go with a PostgreSQL store and Terraform-defined infrastructure; not deployed.",
+     "start": 2820,
+     "end": 2958,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "backend": 2,
+  "data": 1,
+  "infrastructure": 2
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc. in Business Administration",
+     "start": 124,
+     "end": 156,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "business administration",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc. in Business Administration",
+     "start": 124,
+     "end": 156,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "ru",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C2",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Open to relocation",
+     "start": 80,
+     "end": 98,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Open to relocation",
+     "start": 80,
+     "end": 98,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Principal Backend Engineer, Helsinki Data Works",
+     "start": 207,
+     "end": 254,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Software Engineer (Backend), Nokka Oy",
+     "start": 950,
+     "end": 987,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "AWS; CI/CD; Docker",
+     "start": 2983,
+     "end": 3001,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Principal Backend Engineer, Helsinki Data Works",
+     "start": 207,
+     "end": 254,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Software Engineer (Backend), Nokka Oy",
+     "start": 950,
+     "end": 987,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "AWS; CI/CD; Docker",
+     "start": 2983,
+     "end": 3001,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Principal Backend Engineer, Helsinki Data Works",
+     "start": 207,
+     "end": 254,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "System design; Terraform",
+     "start": 3162,
+     "end": 3186,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Principal Backend Engineer, Helsinki Data Works",
+     "start": 207,
+     "end": 254,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "API Developer, Vantaa Systems",
+     "start": 1632,
+     "end": 1661,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Scala; SQL; System design; Terraform",
+     "start": 3150,
+     "end": 3186,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

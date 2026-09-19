@@ -1,0 +1,21 @@
+{
+ "idx": 12,
+ "source_file": "synth_012.txt",
+ "archetype": "devops",
+ "style": "non-native English: simple sentences, occasional article and preposition slips, no typos in proper nouns or dates",
+ "seniority": "senior",
+ "omitted_skills": [
+  "argo_cd",
+  "bash",
+  "docker"
+ ],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": true,
+ "block_only_skills": [],
+ "n_roles": 2,
+ "leaked_skills": [
+  "kubernetes"
+ ],
+ "duration_phrases": []
+}

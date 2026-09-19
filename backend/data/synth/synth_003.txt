@@ -1,0 +1,51 @@
+Mateo Iglesias Varela
+Espoo, Finland | Open to relocation
+mateo.iglesias.dev@fastmail.example | +358 40 555 0192
+
+PROFILE
+Backend engineer working on Python services, relational data design with PostgreSQL, and containerised infrastructure on Linux and AWS. Comfortable across distributed systems, REST APIs and CI/CD pipelines.
+
+EXPERIENCE
+
+Freelance Developer (contract)
+Independent contractor
+Mar 2022 – Mar 2023
+- Built and maintained Python services for client projects, from data models through to delivery.
+- Designed PostgreSQL schemas and wrote queries supporting reporting and application features.
+- Managed all work in Git, with review-friendly history and documented branching for handover.
+
+Principal Backend Engineer
+Saimaa Interactive
+Jan 2020 – Apr 2026
+- Owned PostgreSQL data architecture: schema evolution, indexing, query tuning and SQL migration paths for high-traffic services.
+- Led backend development in Python across a microservices architecture, defining REST API contracts between teams.
+- Packaged services with Docker and ran them on Kubernetes across AWS environments on Linux hosts.
+- Described infrastructure in Terraform and kept environments reproducible.
+- Maintained CI/CD pipelines covering build, test and release.
+- Addressed distributed systems concerns such as retries, consistency and service-to-service failure handling.
+
+Lead Backend Developer
+Nordcom Oy
+May 2012 – Oct 2019
+- Introduced event-driven architecture for asynchronous processing between services, replacing tightly coupled synchronous calls.
+- Led a backend team writing Python services backed by PostgreSQL and exposed through REST APIs.
+- Containerised applications with Docker and deployed to Kubernetes on AWS, running on Linux.
+- Set up CI/CD workflows and Git practices used across the team.
+- Worked on distributed systems behaviour under load, including message flow and recovery.
+
+PROJECTS
+
+Home-lab cluster with monitoring
+- Self-hosted Kubernetes cluster with monitoring, provisioned through Terraform.
+- PostgreSQL deployed as a stateful workload for experimentation with backups and storage.
+
+EDUCATION
+M.Sc., Information Technology
+
+SKILLS
+AWS, CI/CD, Distributed systems, Docker, Elasticsearch, Event-driven architecture, Git, Helm, Kubernetes (k8s), Linux, Microservices architecture, PostgreSQL, Python, Redis, REST APIs, SQL, Terraform
+
+LANGUAGES
+Spanish — native
+English — C1
+Finnish — A2

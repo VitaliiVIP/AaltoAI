@@ -1,0 +1,585 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "0bed3dbe13799fb77c6725f3d6eab76f689003e0987d026c0f6acacf456812e9",
+  "source_file": "synth_004.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:20:36+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Test Automation Engineer",
+    "title_canonical": "qa_engineer",
+    "employer": "Ruska Systems",
+    "start": "2024-07",
+    "end": "2026-07",
+    "date_precision": "year",
+    "months": 24,
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "evidence": [
+     {
+      "quote": "Test Automation Engineer, Ruska Systems, 2024-2026",
+      "start": 2281,
+      "end": 2331,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 24,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 24,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "junior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 1,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Integrated automated suites into CI/CD pipelines",
+      "start": 1765,
+      "end": 1813,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Managed work in Git with feature branches",
+      "start": 1953,
+      "end": 1994,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "javascript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "JavaScript\n- Wrote and maintained browser test code in JavaScript",
+      "start": 341,
+      "end": 406,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "pytest": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "using pytest fixtures, parametrisation and markers",
+      "start": 1345,
+      "end": 1395,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Implemented test suites in Python",
+      "start": 1310,
+      "end": 1343,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "REST APIs",
+      "start": 1525,
+      "end": 1534,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "selenium": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Automated end-to-end user journeys with Selenium",
+      "start": 1085,
+      "end": 1133,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software testing",
+      "start": 723,
+      "end": 739,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  }
+ },
+ "projects": [
+  {
+   "title": "Discord bot for a study group",
+   "topics": [
+    "other",
+    "testing"
+   ],
+   "skills": [
+    "pytest",
+    "testing"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Discord bot for a study group\n- Personal build supporting a study group; not publicly deployed.",
+     "start": 2045,
+     "end": 2140,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "other": 1,
+  "testing": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc. Communications",
+     "start": 2343,
+     "end": 2363,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "communications",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc. Communications",
+     "start": 2343,
+     "end": 2363,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [
+  {
+   "cert_id": "aws_solutions_architect_associate",
+   "issuer": "AWS",
+   "issued": null,
+   "evidence": [
+    {
+     "quote": "AWS Certified Solutions Architect - Associate",
+     "start": 2380,
+     "end": 2425,
+     "section": "certifications",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "lang": "es",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "fi",
+   "cefr": "A2",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "SE",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Stockholm, Sweden",
+     "start": 19,
+     "end": 36,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Integrated automated suites into CI/CD pipelines",
+     "start": 1765,
+     "end": 1813,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [
+  "Discord bot"
+ ],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

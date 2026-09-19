@@ -1,0 +1,19 @@
+Nora Salminen
+Backend Software Engineer
+nora.salminen@example.com | +358 40 888 1122 | Oulu, Finland
+
+Experience
+QA Engineer, TestLabs Oy (2021-2026) - 4 years
+- Wrote Python test automation scripts, not production services
+- No experience deploying or owning backend systems
+
+Education
+B.Sc. Information Technology, Oulu UAS (2021)
+
+Skills
+Python (testing/automation), Selenium, basic SQL
+
+Projects
+- Built automated regression test suite (pytest)
+- No cloud, Kubernetes, or backend-service projects
+

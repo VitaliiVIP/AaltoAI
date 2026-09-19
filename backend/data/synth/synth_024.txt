@@ -1,0 +1,33 @@
+Tuomas Elovaara
+Vantaa, Finland | tuomas.elovaara@examplemail.fi | +358 40 555 0192
+Open to relocation
+
+PROFILE
+
+Frontend engineer working with JavaScript, TypeScript, React and Next.js, comfortable moving between markup and styling detail, component architecture and the data layer. Used to collaborative, iterative delivery in Agile / Scrum teams.
+
+EXPERIENCE
+
+Frontend Engineer, Kaiku Digital — Jul 2023 – Present
+Works inside an Agile / Scrum team, taking part in refinement, sprint planning, daily stand-ups and reviews, and shaping tickets so that design intent survives into implementation. Much of the day-to-day work is hands-on HTML / CSS: building responsive, accessible layouts and keeping styling consistent across a growing React and Next.js codebase. Writes application logic in JavaScript and TypeScript, consumes and shapes GraphQL queries for the interface, and contributes Node.js work where the frontend needs supporting endpoints and tooling. Collaborates through Git, reviewing branches and keeping the history readable for the rest of the team.
+
+Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023
+Built and maintained interface features in React and Next.js, typing components and shared utilities with TypeScript and writing the underlying markup and styles by hand in HTML / CSS. Took responsibility for end-to-end coverage with Playwright, adding browser tests for critical user journeys and keeping the suite stable enough to be trusted before releases. Worked closely with the GraphQL layer, defining and refining queries and fragments with backend colleagues so screens fetched exactly the data they needed. Everyday JavaScript work and Git-based code review rounded out the role.
+
+PROJECTS
+
+Bootcamp capstone: to-do app — a tutorial-led project built with plain HTML / CSS and JavaScript, used to practise DOM handling and layout fundamentals.
+
+Spreadsheet automation for a small shop — a deployed Node.js and JavaScript utility that replaced manual spreadsheet edits with a scripted routine for a local business.
+
+EDUCATION
+
+Vocational qualification (ammattitutkinto) in Information Technology — Industrial Engineering and Management
+
+SKILLS
+
+Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript
+
+LANGUAGES
+
+Finnish (native), English (C1)

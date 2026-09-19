@@ -1,0 +1,47 @@
+Mikael Ruusunen
+Turku, Finland | mikael.ruusunen@posteo.fi | +358 40 218 7734 | Open to relocation
+
+ACADEMIC QUALIFICATIONS
+B.Sc. in Business Administration
+
+PROFESSIONAL EXPERIENCE IN SOFTWARE ENGINEERING
+
+Principal Backend Engineer, Helsinki Data Works
+Aug 2023 – Present
+- Leads backend development in Python, establishing shared conventions for service code and library structure across teams.
+- Owns the PostgreSQL data layer: schema modelling, query tuning and migration practice, with SQL review as a standing responsibility.
+- Conducts system design work for microservices architecture, defining service boundaries and REST API contracts.
+- Maintains deployment on Kubernetes using Helm charts, with container images built through Docker and delivered by CI/CD pipelines.
+- Provisions AWS infrastructure through Terraform and administers Linux runtime environments; Git-based review is applied to both application and infrastructure change.
+
+Software Engineer (Backend), Nokka Oy
+Apr 2017 – May 2023
+- Operated and tuned Linux hosts supporting production services, including process supervision, log analysis and performance investigation.
+- Designed and maintained PostgreSQL schemas and indexing strategies for transactional workloads, supported by Redis for caching.
+- Implemented REST APIs in Python and Go within a microservices architecture, applying event-driven architecture for asynchronous workflows.
+- Packaged services with Docker, deployed them to Kubernetes on AWS, and extended CI/CD automation for test and release stages.
+- Collaborated through Git, contributing to branching policy and review discipline.
+
+API Developer, Vantaa Systems
+Jun 2016 – Apr 2017
+- Built and operated services on AWS, taking responsibility for account-level resource configuration.
+- Standardised local and deployment environments with Docker, reducing divergence between development and Kubernetes-hosted runtimes.
+- Developed REST APIs in Python backed by PostgreSQL, writing SQL for reporting and integration queries.
+- Applied event-driven architecture patterns to decouple integrations; maintained Linux servers and CI/CD jobs, with Git as the version control foundation.
+
+Junior Software Engineer, Helsinki Data Works
+Nov 2013 – Jun 2016
+- Adopted disciplined Git workflow early, contributing to repository conventions, review participation and release tagging.
+- Wrote Python services and REST API endpoints against PostgreSQL, alongside SQL analysis tasks.
+- Contributed Scala components consuming Apache Kafka topics.
+- Assisted with Docker image creation and Kubernetes deployment via Helm on Linux infrastructure, supported by CI/CD pipelines.
+
+INDEPENDENT AND PERSONAL PROJECT WORK
+- Cost dashboard for a cloud account — infrastructure and backend work, version-controlled with Git; deployed and in use.
+- Booking service for a local gym — backend implementation in Go with a PostgreSQL store and Terraform-defined infrastructure; not deployed.
+
+TECHNICAL COMPETENCIES
+AWS; CI/CD; Docker; Event-driven architecture; Git; Go; Helm; Apache Kafka; Kubernetes (k8s); Linux; Microservices architecture; PostgreSQL; Python; Redis; REST APIs; Scala; SQL; System design; Terraform
+
+LANGUAGES
+Russian — native; English — C2

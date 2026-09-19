@@ -1,0 +1,21 @@
+Emma Laakso
+Backend Software Engineer
+emma.laakso@example.com | +358 44 555 6677 | Tampere, Finland
+
+Experience
+Backend Engineer, Pilvi Solutions (2019-2026) - 7 years
+- Owned Python/Kubernetes services for logistics platform
+- Introduced GCP-based CI/CD and infrastructure-as-code
+Software Developer, DataForge (2017-2019)
+
+Education
+M.Sc. Computer Science, Tampere University (2017)
+
+Skills
+Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka
+
+Projects
+- Migrated legacy system to microservices on Kubernetes
+- Built real-time event pipeline with Kafka, handling 2M events/day
+- Mentored 4 junior engineers on cloud-native practices
+

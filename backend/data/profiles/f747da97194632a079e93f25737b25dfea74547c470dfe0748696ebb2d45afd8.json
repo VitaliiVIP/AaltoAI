@@ -1,0 +1,925 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "f747da97194632a079e93f25737b25dfea74547c470dfe0748696ebb2d45afd8",
+  "source_file": "cv1_elina_korhonen.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:19:13+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Senior Backend Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2020-07",
+    "end": "2026-07",
+    "date_precision": "year",
+    "months": 72,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "go",
+     "microservices",
+     "kubernetes",
+     "event_driven",
+     "aws"
+    ],
+    "primary_skills": [
+     "python",
+     "go",
+     "microservices",
+     "kubernetes",
+     "event_driven",
+     "aws"
+    ],
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
+      "start": 119,
+      "end": 166,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Vantaa Systems",
+    "start": "2018-07",
+    "end": "2020-07",
+    "date_precision": "year",
+    "months": 24,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "ci_cd",
+     "gitlab_ci",
+     "docker"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "ci_cd",
+     "gitlab_ci",
+     "docker"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Developer, Vantaa Systems (2018-2020)",
+      "start": 300,
+      "end": 345,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 96,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 96,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 96,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 2,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "aws": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
+      "start": 119,
+      "end": 166,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+      "start": 475,
+      "end": 540,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer, Vantaa Systems (2018-2020)",
+      "start": 300,
+      "end": 345,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+      "start": 475,
+      "end": 540,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2020,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer, Vantaa Systems (2018-2020)",
+      "start": 300,
+      "end": 345,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+      "start": 475,
+      "end": 540,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2020,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "event_driven": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
+      "start": 119,
+      "end": 166,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "- Open-source Kubernetes operator for auto-scaling (450 GitHub stars)",
+      "start": 551,
+      "end": 620,
+      "section": "projects",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "gitlab_ci": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer, Vantaa Systems (2018-2020)",
+      "start": 300,
+      "end": 345,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2020,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "go": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
+      "start": 119,
+      "end": 166,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+      "start": 475,
+      "end": 540,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "kubernetes": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
+      "start": 119,
+      "end": 166,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+      "start": 475,
+      "end": 540,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "microservices": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
+      "start": 119,
+      "end": 166,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+      "start": 475,
+      "end": 540,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
+      "start": 119,
+      "end": 166,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+      "start": 475,
+      "end": 540,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer, Vantaa Systems (2018-2020)",
+      "start": 300,
+      "end": 345,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2020,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "terraform": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+      "start": 475,
+      "end": 540,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  }
+ },
+ "projects": [
+  {
+   "title": "Open-source Kubernetes operator for auto-scaling",
+   "topics": [
+    "infrastructure",
+    "devops"
+   ],
+   "skills": [
+    "kubernetes",
+    "git"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "- Open-source Kubernetes operator for auto-scaling (450 GitHub stars)",
+     "start": 551,
+     "end": 620,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Cloud-cost optimisation project",
+   "topics": [
+    "infrastructure"
+   ],
+   "skills": [
+    "aws"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "- Led cloud-cost optimisation project, cut AWS spend by 30%",
+     "start": 621,
+     "end": 680,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Internal CI/CD platform",
+   "topics": [
+    "devops"
+   ],
+   "skills": [
+    "ci_cd"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "- Built internal CI/CD platform used by 12 teams",
+     "start": 681,
+     "end": 729,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "devops": 2,
+  "infrastructure": 2
+ },
+ "education": {
+  "highest_level": {
+   "value": "msc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "M.Sc. Computer Science, Aalto University",
+     "start": 419,
+     "end": 459,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "computer science",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "M.Sc. Computer Science, Aalto University",
+     "start": 419,
+     "end": 459,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": false,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "M.Sc. Computer Science, Aalto University",
+     "start": 419,
+     "end": 459,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "certifications": [],
+ "languages": [],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Helsinki, Finland",
+     "start": 89,
+     "end": 106,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
+     "start": 119,
+     "end": 166,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+     "start": 475,
+     "end": 540,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Developer, Vantaa Systems (2018-2020)",
+     "start": 300,
+     "end": 345,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+     "start": 475,
+     "end": 540,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+     "start": 475,
+     "end": 540,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
+     "start": 475,
+     "end": 540,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

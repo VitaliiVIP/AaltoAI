@@ -1,1 +1,7 @@
 .env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/audit.jsonl
+data/synth/cv_text_tmp/

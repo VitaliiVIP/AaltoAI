@@ -1,0 +1,976 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "f2e5a214715e1df24e49de3dfa9277ea588bafcabb6a0fa0e7f9be2e67994200",
+  "source_file": "synth_000.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:19:52+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Backend Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start": "2022-06",
+    "end": "2026-05",
+    "date_precision": "month",
+    "months": 47,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "sql",
+     "postgresql",
+     "django",
+     "rest_api",
+     "docker",
+     "ci_cd",
+     "pytest",
+     "git",
+     "excel"
+    ],
+    "primary_skills": [
+     "sql",
+     "postgresql",
+     "django"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 167,
+      "end": 203,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Freelance Developer (contract)",
+    "title_canonical": "other_software",
+    "employer": "Freelance",
+    "start": "2020-03",
+    "end": "2021-02",
+    "date_precision": "month",
+    "months": 11,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "python",
+     "sql",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "sql"
+    ],
+    "evidence": [
+     {
+      "quote": "Freelance Developer (contract) — Freelance",
+      "start": 782,
+      "end": 824,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Shop Assistant",
+    "title_canonical": "non_software",
+    "employer": "Vihrea Puutarha Oy",
+    "start": "2019-05",
+    "end": "2022-02",
+    "date_precision": "month",
+    "months": 33,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "agile"
+    ],
+    "primary_skills": [
+     "excel",
+     "agile"
+    ],
+    "evidence": [
+     {
+      "quote": "Shop Assistant — Vihrea Puutarha Oy",
+      "start": 1090,
+      "end": 1125,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Warehouse Associate",
+    "title_canonical": "non_software",
+    "employer": "Kanta Kirjasto",
+    "start": "2018-01",
+    "end": "2019-05",
+    "date_precision": "month",
+    "months": 16,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "agile",
+     "sql"
+    ],
+    "primary_skills": [
+     "excel",
+     "agile"
+    ],
+    "evidence": [
+     {
+      "quote": "Warehouse Associate — Kanta Kirjasto",
+      "start": 1361,
+      "end": 1397,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 96,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 58,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 47,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "mid",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 4,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "agile": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Shop Assistant — Vihrea Puutarha Oy",
+      "start": 1090,
+      "end": 1125,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Warehouse Associate — Kanta Kirjasto",
+      "start": 1361,
+      "end": 1397,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 167,
+      "end": 203,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 47,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "django": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 167,
+      "end": 203,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 47,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 167,
+      "end": 203,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 47,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "excel": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 167,
+      "end": 203,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Shop Assistant — Vihrea Puutarha Oy",
+      "start": 1090,
+      "end": 1125,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 47,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "flask": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 167,
+      "end": 203,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Freelance Developer (contract) — Freelance",
+      "start": 782,
+      "end": 824,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 58,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 167,
+      "end": 203,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 47,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "pytest": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 167,
+      "end": 203,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 47,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Freelance Developer (contract) — Freelance",
+      "start": 782,
+      "end": 824,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 11,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2021,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 167,
+      "end": 203,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 47,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 167,
+      "end": 203,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Freelance Developer (contract) — Freelance",
+      "start": 782,
+      "end": 824,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+      "start": 1824,
+      "end": 1931,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 58,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Bootcamp capstone: to-do app",
+   "topics": [
+    "tutorial"
+   ],
+   "skills": [
+    "python"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Bootcamp capstone: to-do app — tutorial-based project built in Python; deployed and publicly reachable.",
+     "start": 1944,
+     "end": 2047,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Course project: blog engine",
+   "topics": [
+    "tutorial"
+   ],
+   "skills": [
+    "postgresql",
+    "rest_api",
+    "excel"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Course project: blog engine — tutorial-based project with a PostgreSQL backing store and REST APIs; content and post statistics tracked in Excel / spreadsheets. Deployed.",
+     "start": 2049,
+     "end": 2219,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "tutorial": 2
+ },
+ "education": {
+  "highest_level": {
+   "value": "msc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "M.Sc., Information Technology",
+     "start": 1741,
+     "end": 1770,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "information technology",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "M.Sc., Information Technology",
+     "start": 1741,
+     "end": 1770,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [
+  {
+   "cert_id": "certified_scrummaster",
+   "issuer": "",
+   "issued": null,
+   "evidence": [
+    {
+     "quote": "Certified ScrumMaster (CSM)",
+     "start": 1787,
+     "end": 1814,
+     "section": "certifications",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "lang": "fi",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "EE",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Tartu, Estonia",
+     "start": 14,
+     "end": 28,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Software Engineer — Nokka Oy",
+     "start": 167,
+     "end": 203,
+     "section": "experience",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Software Engineer — Nokka Oy",
+     "start": 167,
+     "end": 203,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Freelance Developer (contract) — Freelance",
+     "start": 782,
+     "end": 824,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum",
+     "start": 1824,
+     "end": 1931,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

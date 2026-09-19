@@ -1,0 +1,899 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "1e7692b8061d890ca826e640486adcd9e545072348a96369f1b305c3dbd90b6f",
+  "source_file": "synth_023.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:25:00+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Frontend Engineer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Polaris Payments",
+    "start": "2024-07",
+    "end": "2026-07",
+    "date_precision": "year",
+    "months": 24,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "react",
+     "typescript",
+     "playwright",
+     "testing",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "react",
+     "typescript",
+     "playwright",
+     "testing"
+    ],
+    "evidence": [
+     {
+      "quote": "Frontend Engineer — Polaris Payments",
+      "start": 254,
+      "end": 290,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Frontend Engineer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Koski Engineering",
+    "start": "2020-07",
+    "end": "2024-07",
+    "date_precision": "year",
+    "months": 48,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "typescript",
+     "react",
+     "vue",
+     "javascript",
+     "git"
+    ],
+    "primary_skills": [
+     "typescript",
+     "react"
+    ],
+    "evidence": [
+     {
+      "quote": "Frontend Engineer — Koski Engineering",
+      "start": 745,
+      "end": 782,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior UI Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Vireo Solutions",
+    "start": "2018-07",
+    "end": "2020-07",
+    "date_precision": "year",
+    "months": 24,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "react",
+     "javascript",
+     "git",
+     "typescript",
+     "agile"
+    ],
+    "primary_skills": [
+     "react",
+     "javascript",
+     "git"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior UI Developer — Vireo Solutions",
+      "start": 1141,
+      "end": 1178,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 96,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 96,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 3,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "agile": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior UI Developer — Vireo Solutions",
+      "start": 1141,
+      "end": 1178,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Git · Agile / Scrum",
+      "start": 1886,
+      "end": 1905,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2020,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "angular": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Vue.js · Angular",
+      "start": 1835,
+      "end": 1851,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer — Polaris Payments",
+      "start": 254,
+      "end": 290,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "django": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Django tutorial series — followed a backend tutorial series for self-study. Not deployed.",
+      "start": 1698,
+      "end": 1787,
+      "section": "projects",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer — Polaris Payments",
+      "start": 254,
+      "end": 290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Frontend Engineer — Koski Engineering",
+      "start": 745,
+      "end": 782,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Git · Agile / Scrum",
+      "start": 1886,
+      "end": 1905,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 96,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "javascript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer — Koski Engineering",
+      "start": 745,
+      "end": 782,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior UI Developer — Vireo Solutions",
+      "start": 1141,
+      "end": 1178,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript · TypeScript · React",
+      "start": 1801,
+      "end": 1832,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "playwright": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer — Polaris Payments",
+      "start": 254,
+      "end": 290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Playwright · Software testing",
+      "start": 1854,
+      "end": 1883,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "react": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer — Polaris Payments",
+      "start": 254,
+      "end": 290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Frontend Engineer — Koski Engineering",
+      "start": 745,
+      "end": 782,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript · TypeScript · React",
+      "start": 1801,
+      "end": 1832,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 96,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer — Polaris Payments",
+      "start": 254,
+      "end": 290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Playwright · Software testing",
+      "start": 1854,
+      "end": 1883,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "typescript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer — Polaris Payments",
+      "start": 254,
+      "end": 290,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Frontend Engineer — Koski Engineering",
+      "start": 745,
+      "end": 782,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript · TypeScript · React",
+      "start": 1801,
+      "end": 1832,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 96,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "vue": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer — Koski Engineering",
+      "start": 745,
+      "end": 782,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Vue.js · Angular",
+      "start": 1835,
+      "end": 1851,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 48,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Recipe browser single-page app",
+   "topics": [
+    "frontend"
+   ],
+   "skills": [
+    "typescript"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Recipe browser single-page app — frontend project built in TypeScript. Not deployed.",
+     "start": 1529,
+     "end": 1613,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Bootcamp capstone: to-do app",
+   "topics": [
+    "tutorial"
+   ],
+   "skills": [
+    "javascript"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Bootcamp capstone: to-do app — tutorial-based JavaScript project. Not deployed.",
+     "start": 1616,
+     "end": 1695,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Django tutorial series",
+   "topics": [
+    "tutorial"
+   ],
+   "skills": [
+    "django"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Django tutorial series — followed a backend tutorial series for self-study. Not deployed.",
+     "start": 1698,
+     "end": 1787,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "frontend": 1,
+  "tutorial": 2
+ },
+ "education": {
+  "highest_level": {
+   "value": "vocational",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Vocational qualification (ammattitutkinto) in Information Technology — Computer Science",
+     "start": 1922,
+     "end": 2009,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "information technology / computer science",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Vocational qualification (ammattitutkinto) in Information Technology — Computer Science",
+     "start": 1922,
+     "end": 2009,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [
+  {
+   "cert_id": "istqb_certified_tester_foundation_level",
+   "issuer": "ISTQB",
+   "issued": null,
+   "evidence": [
+    {
+     "quote": "ISTQB Certified Tester, Foundation Level",
+     "start": 2031,
+     "end": 2071,
+     "section": "certifications",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "lang": "es",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "fi",
+   "cefr": "A2",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Tampere, Finland",
+     "start": 20,
+     "end": 36,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Frontend Engineer — Polaris Payments",
+     "start": 254,
+     "end": 290,
+     "section": "experience",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "idx": 21,
+ "source_file": "synth_021.txt",
+ "archetype": "senior_backend",
+ "style": "consultant two-pager: verbose, client-engagement framing, a profile summary paragraph on top",
+ "seniority": "senior",
+ "omitted_skills": [
+  "event_driven",
+  "go",
+  "microservices",
+  "rest_api",
+  "terraform"
+ ],
+ "overlap": false,
+ "year_only_dates": true,
+ "under_report": true,
+ "block_only_skills": [],
+ "n_roles": 4,
+ "leaked_skills": [
+  "system_design"
+ ],
+ "duration_phrases": []
+}

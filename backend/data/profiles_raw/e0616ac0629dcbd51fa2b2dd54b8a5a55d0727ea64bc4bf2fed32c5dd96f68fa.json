@@ -1,0 +1,143 @@
+{
+ "cv_sha256": "e0616ac0629dcbd51fa2b2dd54b8a5a55d0727ea64bc4bf2fed32c5dd96f68fa",
+ "source_file": "cv2_marcus_chen.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:19:23+00:00",
+ "cv_text": "Marcus Chen\nBackend Software Engineer\nmarcus.chen@example.com | +358 40 222 3344 | Espoo, Finland\n\nExperience\nSoftware Engineer, CloudNorth Ltd (2021-2026) - 5 years\n- Designed microservices in Python and Kubernetes for payments platform\n- On-call owner for production cloud infrastructure (Azure)\nJunior Developer, StartHub (2019-2021)\n- Built internal tools with Django and PostgreSQL\n\nEducation\nB.Sc. Software Engineering, University of Helsinki (2019)\n\nSkills\nPython, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis\n\nProjects\n- Rebuilt payments microservice, reduced latency by 40%\n- Implemented blue-green deployment pipeline on Kubernetes\n\f",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "CloudNorth Ltd",
+    "start_raw": "2021",
+    "end_raw": "2026",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "microservices",
+     "python",
+     "kubernetes",
+     "azure"
+    ],
+    "primary_skills": [
+     "microservices",
+     "python",
+     "kubernetes",
+     "azure"
+    ],
+    "quote": "Software Engineer, CloudNorth Ltd (2021-2026)"
+   },
+   {
+    "title_raw": "Junior Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "StartHub",
+    "start_raw": "2019",
+    "end_raw": "2021",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "django",
+     "postgresql"
+    ],
+    "primary_skills": [
+     "django",
+     "postgresql"
+    ],
+    "quote": "Junior Developer, StartHub (2019-2021)"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis"
+   },
+   {
+    "skill": "kubernetes",
+    "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis"
+   },
+   {
+    "skill": "azure",
+    "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis"
+   },
+   {
+    "skill": "docker",
+    "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis"
+   },
+   {
+    "skill": "redis",
+    "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Rebuilt payments microservice",
+    "topics": [
+     "backend",
+     "microservices"
+    ],
+    "skills": [
+     "microservices"
+    ],
+    "deployed": "unclear",
+    "quote": "- Rebuilt payments microservice, reduced latency by 40%"
+   },
+   {
+    "title": "Blue-green deployment pipeline",
+    "topics": [
+     "devops"
+    ],
+    "skills": [
+     "kubernetes",
+     "ci_cd"
+    ],
+    "deployed": "unclear",
+    "quote": "- Implemented blue-green deployment pipeline on Kubernetes"
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "software engineering",
+   "in_progress": "no",
+   "quote": "B.Sc. Software Engineering, University of Helsinki"
+  },
+  "certifications": [],
+  "languages": [],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Espoo, Finland"
+  },
+  "unmatched_skills": [
+   "blue-green deployment"
+  ],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

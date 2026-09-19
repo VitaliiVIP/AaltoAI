@@ -1,0 +1,231 @@
+{
+ "cv_sha256": "3b2c99f727cef8ecad6d06d810aa7a68af7e0df6e69e690c96f224293861fa84",
+ "source_file": "synth_007.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:21:17+00:00",
+ "cv_text": "Eero Valtanen\n\nTartu, Estonia\neero.valtanen@posteo.ee | +372 5512 8834\n\n---\nSTATEMENT OF PROFESSIONAL ORIENTATION\n\nBackend software developer concerned primarily with the design, construction and operation of server-side systems in Python. Practical interests include containerised deployment, distributed service architecture and the disciplined use of version control in collaborative engineering environments.\nFORMAL EDUCATION AND ACADEMIC QUALIFICATIONS\n\nUpper secondary school diploma (lukio), Communications\nPROFESSIONAL CERTIFICATION\n\nCertified Kubernetes Administrator (CKA)\nRECORD OF PROFESSIONAL EMPLOYMENT\n\nBackend Developer\nSisu Software Oy\nOct 2025 – Aug 2026\n- Developed and maintained Python backend services deployed to AWS and operated on Linux hosts.\n- Contributed to system design discussions and to the decomposition of functionality along a microservices architecture.\n- Packaged services with Docker and coordinated changes through Git.\n- Authored and reviewed SQL queries and schema modifications supporting service data access.\n\nBackend Developer\nAurora Analytics Oy\nJul 2024 – Jun 2025\n- Implemented application features in Django, covering models, views and the administrative interface.\n- Maintained a rigorous Git workflow, including branch conventions, code review and release tagging.\n- Configured GitHub Actions pipelines for automated build and test execution.\n- Employed Redis for caching and queued work; ran containerised Python services on Linux under Docker and AWS.\n- Wrote SQL for reporting and data correction tasks.\n\nIndependent Software Consultant\nFreelance\nOct 2023 – Aug 2024\n- Delivered Python software to client specification, from initial scoping through to handover.\n- Managed all source history in Git, supplying clients with documented repositories.\n\nAPI Developer\nNokka Oy\nJul 2023 – Jul 2024\n- Containerised API services with Docker, standardising local development and deployment images.\n- Built HTTP interfaces in Python, backed by SQL data stores.\n- Deployed and monitored services on AWS; tracked changes in Git.\n\nSoftware Developer Intern\nKoski Engineering\nJun 2022 – Jul 2023\n- Prepared Docker images and compose definitions used by the development team.\n- Assisted with Python and Node.js components and with SQL query preparation.\n- Worked within the team's Git repositories under supervision.\nSUMMARY OF TECHNICAL COMPETENCIES\n\nLanguages and frameworks: Python, Django, Node.js, SQL\nInfrastructure and tooling: AWS, Docker, Linux, Git, GitHub Actions, Redis\nDesign: Microservices architecture, system design\nLANGUAGES\n\nFinnish — native\nEnglish — C2\nGerman — B1\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Sisu Software Oy",
+    "start_raw": "Oct 2025",
+    "end_raw": "Aug 2026",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "aws",
+     "linux",
+     "system_design",
+     "microservices",
+     "docker",
+     "git",
+     "sql"
+    ],
+    "primary_skills": [
+     "python",
+     "aws",
+     "linux",
+     "system_design",
+     "microservices"
+    ],
+    "quote": "Backend Developer\nSisu Software Oy\nOct 2025 – Aug 2026"
+   },
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Aurora Analytics Oy",
+    "start_raw": "Jul 2024",
+    "end_raw": "Jun 2025",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "django",
+     "git",
+     "github_actions",
+     "ci_cd",
+     "redis",
+     "python",
+     "linux",
+     "docker",
+     "aws",
+     "sql"
+    ],
+    "primary_skills": [
+     "django",
+     "git"
+    ],
+    "quote": "Backend Developer\nAurora Analytics Oy\nJul 2024 – Jun 2025"
+   },
+   {
+    "title_raw": "Independent Software Consultant",
+    "title_canonical": "other_software",
+    "employer": "Freelance",
+    "start_raw": "Oct 2023",
+    "end_raw": "Aug 2024",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "python",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "git"
+    ],
+    "quote": "Independent Software Consultant\nFreelance\nOct 2023 – Aug 2024"
+   },
+   {
+    "title_raw": "API Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start_raw": "Jul 2023",
+    "end_raw": "Jul 2024",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "docker",
+     "rest_api",
+     "python",
+     "sql",
+     "aws",
+     "git"
+    ],
+    "primary_skills": [
+     "docker",
+     "rest_api",
+     "python",
+     "sql"
+    ],
+    "quote": "API Developer\nNokka Oy\nJul 2023 – Jul 2024"
+   },
+   {
+    "title_raw": "Software Developer Intern",
+    "title_canonical": "other_software",
+    "employer": "Koski Engineering",
+    "start_raw": "Jun 2022",
+    "end_raw": "Jul 2023",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "docker",
+     "python",
+     "nodejs",
+     "sql",
+     "git"
+    ],
+    "primary_skills": [
+     "docker",
+     "python",
+     "nodejs",
+     "sql"
+    ],
+    "quote": "Software Developer Intern\nKoski Engineering\nJun 2022 – Jul 2023"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Languages and frameworks: Python, Django, Node.js, SQL"
+   },
+   {
+    "skill": "django",
+    "quote": "Languages and frameworks: Python, Django, Node.js, SQL"
+   },
+   {
+    "skill": "nodejs",
+    "quote": "Languages and frameworks: Python, Django, Node.js, SQL"
+   },
+   {
+    "skill": "sql",
+    "quote": "Languages and frameworks: Python, Django, Node.js, SQL"
+   },
+   {
+    "skill": "aws",
+    "quote": "Infrastructure and tooling: AWS, Docker, Linux, Git, GitHub Actions, Redis"
+   },
+   {
+    "skill": "docker",
+    "quote": "Infrastructure and tooling: AWS, Docker, Linux, Git, GitHub Actions, Redis"
+   },
+   {
+    "skill": "linux",
+    "quote": "Infrastructure and tooling: AWS, Docker, Linux, Git, GitHub Actions, Redis"
+   },
+   {
+    "skill": "git",
+    "quote": "Infrastructure and tooling: AWS, Docker, Linux, Git, GitHub Actions, Redis"
+   },
+   {
+    "skill": "github_actions",
+    "quote": "Infrastructure and tooling: AWS, Docker, Linux, Git, GitHub Actions, Redis"
+   },
+   {
+    "skill": "redis",
+    "quote": "Infrastructure and tooling: AWS, Docker, Linux, Git, GitHub Actions, Redis"
+   },
+   {
+    "skill": "microservices",
+    "quote": "Design: Microservices architecture, system design"
+   },
+   {
+    "skill": "system_design",
+    "quote": "Design: Microservices architecture, system design"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [],
+  "education": {
+   "highest_level": "secondary",
+   "field": "Communications",
+   "in_progress": "unclear",
+   "quote": "Upper secondary school diploma (lukio), Communications"
+  },
+  "certifications": [
+   {
+    "cert_id": "certified_kubernetes_administrator",
+    "issuer": "",
+    "issued_raw": "",
+    "quote": "Certified Kubernetes Administrator (CKA)"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C2"
+   },
+   {
+    "lang": "de",
+    "cefr": "B1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "EE",
+   "relocation_willing": "unclear",
+   "quote": "Tartu, Estonia"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

@@ -1,0 +1,711 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "synthetic",
+  "source_file": "synth_025.txt",
+  "extractor_model": "truth",
+  "prompt_version": "synth-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2024-09",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 24,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "git",
+     "sql",
+     "django",
+     "docker",
+     "postgresql",
+     "rest_api",
+     "linux",
+     "javascript",
+     "machine_learning"
+    ],
+    "primary_skills": [
+     "git",
+     "rest_api"
+    ],
+    "evidence": []
+   },
+   {
+    "title_raw": "API Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2019-06",
+    "end": "2024-07",
+    "date_precision": "month",
+    "months": 61,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "git",
+     "sql",
+     "django",
+     "docker",
+     "postgresql",
+     "flask"
+    ],
+    "primary_skills": [
+     "git",
+     "flask"
+    ],
+    "evidence": []
+   },
+   {
+    "title_raw": "Warehouse Associate",
+    "title_canonical": "non_software",
+    "employer": "Kanta Kirjasto",
+    "start": "2018-08",
+    "end": "2019-06",
+    "date_precision": "month",
+    "months": 10,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "agile",
+     "sql"
+    ],
+    "primary_skills": [
+     "excel",
+     "sql"
+    ],
+    "evidence": []
+   }
+  ],
+  "total_months": {
+   "value": 95,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 85,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 85,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "junior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 3,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "agile": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 10,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2019,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "django": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 85,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 85,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "excel": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 10,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2019,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "flask": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 61,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 85,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "html_css": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "javascript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "machine_learning": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 85,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 85,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 95,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Following a Django tutorial series",
+   "topics": [
+    "tutorial"
+   ],
+   "skills": [
+    "docker",
+    "javascript",
+    "django"
+   ],
+   "deployed": false,
+   "evidence": []
+  }
+ ],
+ "project_counts_by_topic": {
+  "tutorial": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": []
+  },
+  "field": {
+   "value": "Information Systems",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": []
+  },
+  "in_progress": {
+   "value": false,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "Finnish",
+   "cefr": "native",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "English",
+   "cefr": "B2",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "Swedish",
+   "cefr": "B1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": "EU",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": false,
+   "derivation": "inferred",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "EE",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": []
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

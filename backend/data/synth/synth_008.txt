@@ -1,0 +1,38 @@
+Mariela Ordóñez Vantaa
+
+Espoo, Finland
+mariela.ordonez.vantaa@posteo.net
++358 44 218 7736
+Academic Qualifications
+
+M.Sc. in Biology
+Professional Experience in Reverse Chronological Order
+
+Senior DevOps Engineer
+Polaris Payments — Aug 2024 – Present
+- Operates and extends observability across payment services with Prometheus, defining metrics, recording rules and alerting conditions for production workloads.
+- Designs and maintains AWS infrastructure, with provisioning expressed declaratively in Terraform.
+- Administers Kubernetes clusters and container images built with Docker on Linux hosts.
+- Maintains CI/CD pipelines and automates recurring operational tasks through Bash shell scripting and Python utilities, with all configuration tracked in Git.
+
+DevOps Engineer
+Tampere Tech Group — Apr 2023 – Aug 2024
+- Established Git branching and review conventions adopted across delivery teams, making repository history the single reference for infrastructure change.
+- Authored and refined Docker images and compose definitions, standardising local and pipeline build environments.
+- Deployed services to Kubernetes, described AWS resources in Terraform, and extended CI/CD workflows.
+- Wrote Python and Bash tooling for release automation and exposed service metrics to Prometheus on Linux servers.
+
+Cloud Support Engineer
+Aurora Analytics Oy — Jan 2022 – Apr 2023
+- Introduced and supported Argo CD for declarative, Git-driven delivery to Kubernetes namespaces.
+- Curated Git repositories holding manifests, resolving drift between declared and running state.
+- Investigated container and Linux platform incidents, reproducing issues with Docker and diagnosing through shell tooling.
+- Supported CI/CD pipeline configuration and build troubleshooting for internal teams.
+Technical Competencies
+
+Ansible; Argo CD; AWS; AWS CloudFormation; Bash / shell scripting; CI/CD; Docker; Git; Kubernetes; Linux; Nginx; Prometheus; Python; Terraform
+Languages
+
+Spanish — native
+English — C1
+Finnish — A2

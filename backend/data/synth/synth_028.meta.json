@@ -1,0 +1,19 @@
+{
+ "idx": 28,
+ "source_file": "synth_028.txt",
+ "archetype": "non_software",
+ "style": "functional CV grouped by skill area first, with a bare employment-history list at the end",
+ "seniority": "mid",
+ "omitted_skills": [
+  "excel"
+ ],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": true,
+ "block_only_skills": [
+  "html_css"
+ ],
+ "n_roles": 4,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

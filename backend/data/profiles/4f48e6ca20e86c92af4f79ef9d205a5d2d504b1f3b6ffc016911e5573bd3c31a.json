@@ -1,0 +1,968 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "4f48e6ca20e86c92af4f79ef9d205a5d2d504b1f3b6ffc016911e5573bd3c31a",
+  "source_file": "synth_018.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:23:40+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Backend Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Kaiku Digital",
+    "start": "2026-02",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 7,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "linux",
+     "docker",
+     "postgresql",
+     "sql",
+     "rest_api",
+     "html_css",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "linux",
+     "docker",
+     "postgresql",
+     "sql"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Kaiku Digital",
+      "start": 205,
+      "end": 246,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Software Developer Intern",
+    "title_canonical": "backend_engineer",
+    "employer": "Polaris Payments",
+    "start": "2025-09",
+    "end": "2026-02",
+    "date_precision": "month",
+    "months": 5,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "testing",
+     "git",
+     "python",
+     "postgresql",
+     "mongodb",
+     "sql",
+     "docker"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "testing",
+     "git"
+    ],
+    "evidence": [
+     {
+      "quote": "Software Developer Intern — Polaris Payments",
+      "start": 518,
+      "end": 562,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2024-12",
+    "end": "2025-09",
+    "date_precision": "month",
+    "months": 9,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "django",
+     "rest_api",
+     "sql",
+     "git",
+     "docker"
+    ],
+    "primary_skills": [
+     "django",
+     "rest_api"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior Backend Developer — Nordcom Oy",
+      "start": 794,
+      "end": 831,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 21,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 21,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 21,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "junior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 3,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "django": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Backend Developer — Nordcom Oy",
+      "start": 794,
+      "end": 831,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB",
+      "start": 1198,
+      "end": 1254,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 9,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2025,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Kaiku Digital",
+      "start": 205,
+      "end": 246,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Developer Intern — Polaris Payments",
+      "start": 518,
+      "end": 562,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker | Linux | Git | HTML / CSS | Object-oriented programming",
+      "start": 1255,
+      "end": 1318,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 21,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Kaiku Digital",
+      "start": 205,
+      "end": 246,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Developer Intern — Polaris Payments",
+      "start": 518,
+      "end": 562,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker | Linux | Git | HTML / CSS | Object-oriented programming",
+      "start": 1255,
+      "end": 1318,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 21,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "html_css": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Kaiku Digital",
+      "start": 205,
+      "end": 246,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker | Linux | Git | HTML / CSS | Object-oriented programming",
+      "start": 1255,
+      "end": 1318,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 7,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Kaiku Digital",
+      "start": 205,
+      "end": 246,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker | Linux | Git | HTML / CSS | Object-oriented programming",
+      "start": 1255,
+      "end": 1318,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 7,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "mongodb": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Developer Intern — Polaris Payments",
+      "start": 518,
+      "end": 562,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB",
+      "start": 1198,
+      "end": 1254,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 5,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "oop": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Docker | Linux | Git | HTML / CSS | Object-oriented programming",
+      "start": 1255,
+      "end": 1318,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Kaiku Digital",
+      "start": 205,
+      "end": 246,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Developer Intern — Polaris Payments",
+      "start": 518,
+      "end": 562,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB",
+      "start": 1198,
+      "end": 1254,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 12,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Kaiku Digital",
+      "start": 205,
+      "end": 246,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Developer Intern — Polaris Payments",
+      "start": 518,
+      "end": 562,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB",
+      "start": 1198,
+      "end": 1254,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 12,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Kaiku Digital",
+      "start": 205,
+      "end": 246,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Developer Intern — Polaris Payments",
+      "start": 518,
+      "end": 562,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB",
+      "start": 1198,
+      "end": 1254,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 21,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Kaiku Digital",
+      "start": 205,
+      "end": 246,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Developer Intern — Polaris Payments",
+      "start": 518,
+      "end": 562,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB",
+      "start": 1198,
+      "end": 1254,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 21,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Developer Intern — Polaris Payments",
+      "start": 518,
+      "end": 562,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 5,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Recipe API with authentication",
+   "topics": [
+    "backend"
+   ],
+   "skills": [
+    "sql",
+    "linux",
+    "rest_api"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Recipe API with authentication — deployed. Backend focus. SQL storage, Linux host.",
+     "start": 1044,
+     "end": 1126,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Django tutorial series",
+   "topics": [
+    "tutorial"
+   ],
+   "skills": [
+    "django",
+    "mongodb",
+    "docker"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "Django tutorial series — follow-along build. MongoDB, Docker.",
+     "start": 1127,
+     "end": 1188,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "backend": 1,
+  "tutorial": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc. Information Technology",
+     "start": 1331,
+     "end": 1359,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "information technology",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc. Information Technology",
+     "start": 1331,
+     "end": 1359,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "fi",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Requires work permit / visa sponsorship in Finland. Open to relocation.",
+     "start": 120,
+     "end": 191,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Requires work permit / visa sponsorship in Finland. Open to relocation.",
+     "start": 120,
+     "end": 191,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Requires work permit / visa sponsorship in Finland. Open to relocation.",
+     "start": 120,
+     "end": 191,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Software Engineer — Kaiku Digital",
+     "start": 205,
+     "end": 246,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Software Developer Intern — Polaris Payments",
+     "start": 518,
+     "end": 562,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python | Django | REST APIs | SQL | PostgreSQL | MongoDB",
+     "start": 1198,
+     "end": 1254,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

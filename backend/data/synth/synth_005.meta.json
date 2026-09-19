@@ -1,0 +1,18 @@
+{
+ "idx": 5,
+ "source_file": "synth_005.txt",
+ "archetype": "mid_backend",
+ "style": "consultant two-pager: verbose, client-engagement framing, a profile summary paragraph on top",
+ "seniority": "mid",
+ "omitted_skills": [],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": false,
+ "block_only_skills": [
+  "system_design",
+  "fastapi"
+ ],
+ "n_roles": 3,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

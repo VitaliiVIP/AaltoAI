@@ -1,0 +1,215 @@
+{
+ "cv_sha256": "5008e4dbbf692143a0aab26937ff40d3fe93255b520e67658b9475b75c8a31a3",
+ "source_file": "synth_006.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:21:02+00:00",
+ "cv_text": "Veeti Ahlgren\nBackend engineer — Oulu, Finland\nveeti.ahlgren@mailbox.fi | +358 44 218 6630\n\nSKILLS\nPython | Django | FastAPI | Flask | REST APIs | SQL | PostgreSQL | MySQL | MongoDB\nDocker | Linux | Git | Node.js | JavaScript\n\nEXPERIENCE\n\nBackend Software Engineer — Nokka Oy\nApr 2026 – Present\n- REST API design and delivery for internal and partner services\n- Django services, Python, PostgreSQL and MySQL schemas\n- SQL query tuning, data migrations\n- Docker images, Linux deployment targets\n- Git-based review flow\n\nJunior Software Engineer — Kaiku Digital\nNov 2025 – Apr 2026\n- FastAPI services, async endpoints, typed request models\n- REST API contracts, versioning, docs\n- PostgreSQL models, SQL reporting queries\n- Python tooling, Docker local stacks, Git\n\nSoftware Developer Intern — Arctic Cloud Oy\nJun 2025 – Nov 2025\n- JavaScript work across frontend calls and Node.js utilities\n- Flask endpoints in Python, REST API integrations\n- MongoDB collections, SQL side queries\n- Docker containers, Git workflow\n\nPROJECTS\nJob-board REST API — backend only, not deployed. REST endpoints over MySQL.\n\nEDUCATION\nB.Sc. Information Technology\n\nCERTIFICATIONS\nCertified Kubernetes Application Developer (CKAD)\n\nLANGUAGES\nFinnish native | English C2 | German B1\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Backend Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start_raw": "Apr 2026",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "django",
+     "python",
+     "postgresql",
+     "mysql",
+     "sql",
+     "docker",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "django",
+     "python",
+     "postgresql",
+     "mysql"
+    ],
+    "quote": "Backend Software Engineer — Nokka Oy"
+   },
+   {
+    "title_raw": "Junior Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Kaiku Digital",
+    "start_raw": "Nov 2025",
+    "end_raw": "Apr 2026",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "fastapi",
+     "rest_api",
+     "postgresql",
+     "sql",
+     "python",
+     "docker",
+     "git"
+    ],
+    "primary_skills": [
+     "fastapi",
+     "rest_api"
+    ],
+    "quote": "Junior Software Engineer — Kaiku Digital"
+   },
+   {
+    "title_raw": "Software Developer Intern",
+    "title_canonical": "fullstack_engineer",
+    "employer": "Arctic Cloud Oy",
+    "start_raw": "Jun 2025",
+    "end_raw": "Nov 2025",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "javascript",
+     "nodejs",
+     "flask",
+     "python",
+     "rest_api",
+     "mongodb",
+     "sql",
+     "docker",
+     "git"
+    ],
+    "primary_skills": [
+     "javascript",
+     "nodejs",
+     "flask",
+     "python",
+     "rest_api"
+    ],
+    "quote": "Software Developer Intern — Arctic Cloud Oy"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python | Django | FastAPI"
+   },
+   {
+    "skill": "django",
+    "quote": "Python | Django | FastAPI"
+   },
+   {
+    "skill": "fastapi",
+    "quote": "Python | Django | FastAPI"
+   },
+   {
+    "skill": "flask",
+    "quote": "Flask | REST APIs"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Flask | REST APIs | SQL"
+   },
+   {
+    "skill": "sql",
+    "quote": "REST APIs | SQL | PostgreSQL"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "SQL | PostgreSQL | MySQL"
+   },
+   {
+    "skill": "mysql",
+    "quote": "PostgreSQL | MySQL | MongoDB"
+   },
+   {
+    "skill": "mongodb",
+    "quote": "MySQL | MongoDB"
+   },
+   {
+    "skill": "docker",
+    "quote": "Docker | Linux | Git"
+   },
+   {
+    "skill": "linux",
+    "quote": "Docker | Linux | Git"
+   },
+   {
+    "skill": "git",
+    "quote": "Docker | Linux | Git"
+   },
+   {
+    "skill": "nodejs",
+    "quote": "Git | Node.js | JavaScript"
+   },
+   {
+    "skill": "javascript",
+    "quote": "Node.js | JavaScript"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Job-board REST API",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "rest_api",
+     "mysql"
+    ],
+    "deployed": "no",
+    "quote": "Job-board REST API — backend only, not deployed. REST endpoints over MySQL."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "information technology",
+   "in_progress": "unclear",
+   "quote": "B.Sc. Information Technology"
+  },
+  "certifications": [
+   {
+    "cert_id": "certified_kubernetes_application_developer",
+    "issuer": "",
+    "issued_raw": "",
+    "quote": "Certified Kubernetes Application Developer (CKAD)"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C2"
+   },
+   {
+    "lang": "de",
+    "cefr": "B1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Oulu, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

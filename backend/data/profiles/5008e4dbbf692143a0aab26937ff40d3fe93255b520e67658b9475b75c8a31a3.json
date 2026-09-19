@@ -1,0 +1,1066 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "5008e4dbbf692143a0aab26937ff40d3fe93255b520e67658b9475b75c8a31a3",
+  "source_file": "synth_006.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:21:02+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Backend Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start": "2026-04",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 5,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "django",
+     "python",
+     "postgresql",
+     "mysql",
+     "sql",
+     "docker",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "django",
+     "python",
+     "postgresql",
+     "mysql"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 239,
+      "end": 275,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Kaiku Digital",
+    "start": "2025-11",
+    "end": "2026-04",
+    "date_precision": "month",
+    "months": 5,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "fastapi",
+     "rest_api",
+     "postgresql",
+     "sql",
+     "python",
+     "docker",
+     "git"
+    ],
+    "primary_skills": [
+     "fastapi",
+     "rest_api"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior Software Engineer — Kaiku Digital",
+      "start": 519,
+      "end": 559,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Software Developer Intern",
+    "title_canonical": "fullstack_engineer",
+    "employer": "Arctic Cloud Oy",
+    "start": "2025-06",
+    "end": "2025-11",
+    "date_precision": "month",
+    "months": 5,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "javascript",
+     "nodejs",
+     "flask",
+     "python",
+     "rest_api",
+     "mongodb",
+     "sql",
+     "docker",
+     "git"
+    ],
+    "primary_skills": [
+     "javascript",
+     "nodejs",
+     "flask",
+     "python",
+     "rest_api"
+    ],
+    "evidence": [
+     {
+      "quote": "Software Developer Intern — Arctic Cloud Oy",
+      "start": 764,
+      "end": 807,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 15,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 15,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 10,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "junior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 3,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "django": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 239,
+      "end": 275,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python | Django | FastAPI",
+      "start": 99,
+      "end": 124,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 5,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 239,
+      "end": 275,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Software Engineer — Kaiku Digital",
+      "start": 519,
+      "end": 559,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker | Linux | Git",
+      "start": 182,
+      "end": 202,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 15,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "fastapi": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Software Engineer — Kaiku Digital",
+      "start": 519,
+      "end": 559,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python | Django | FastAPI",
+      "start": 99,
+      "end": 124,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 5,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "flask": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Developer Intern — Arctic Cloud Oy",
+      "start": 764,
+      "end": 807,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Flask | REST APIs",
+      "start": 127,
+      "end": 144,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 5,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2025,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 239,
+      "end": 275,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Software Engineer — Kaiku Digital",
+      "start": 519,
+      "end": 559,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker | Linux | Git",
+      "start": 182,
+      "end": 202,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 15,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "javascript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Developer Intern — Arctic Cloud Oy",
+      "start": 764,
+      "end": 807,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Node.js | JavaScript",
+      "start": 205,
+      "end": 225,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 5,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2025,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 239,
+      "end": 275,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker | Linux | Git",
+      "start": 182,
+      "end": 202,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 5,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "mongodb": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Developer Intern — Arctic Cloud Oy",
+      "start": 764,
+      "end": 807,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "MySQL | MongoDB",
+      "start": 166,
+      "end": 181,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 5,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2025,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "mysql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 239,
+      "end": 275,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "PostgreSQL | MySQL | MongoDB",
+      "start": 153,
+      "end": 181,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 5,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "nodejs": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Developer Intern — Arctic Cloud Oy",
+      "start": 764,
+      "end": 807,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Git | Node.js | JavaScript",
+      "start": 199,
+      "end": 225,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 5,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2025,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 239,
+      "end": 275,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Software Engineer — Kaiku Digital",
+      "start": 519,
+      "end": 559,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "SQL | PostgreSQL | MySQL",
+      "start": 147,
+      "end": 171,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 10,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 239,
+      "end": 275,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Software Engineer — Kaiku Digital",
+      "start": 519,
+      "end": 559,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python | Django | FastAPI",
+      "start": 99,
+      "end": 124,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 15,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 239,
+      "end": 275,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Software Engineer — Kaiku Digital",
+      "start": 519,
+      "end": 559,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Flask | REST APIs | SQL",
+      "start": 127,
+      "end": 150,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 15,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Nokka Oy",
+      "start": 239,
+      "end": 275,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Software Engineer — Kaiku Digital",
+      "start": 519,
+      "end": 559,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "REST APIs | SQL | PostgreSQL",
+      "start": 135,
+      "end": 163,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 15,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Job-board REST API",
+   "topics": [
+    "backend"
+   ],
+   "skills": [
+    "rest_api",
+    "mysql"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Job-board REST API — backend only, not deployed. REST endpoints over MySQL.",
+     "start": 1025,
+     "end": 1100,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "backend": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc. Information Technology",
+     "start": 1112,
+     "end": 1140,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "information technology",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc. Information Technology",
+     "start": 1112,
+     "end": 1140,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [
+  {
+   "cert_id": "certified_kubernetes_application_developer",
+   "issuer": "",
+   "issued": null,
+   "evidence": [
+    {
+     "quote": "Certified Kubernetes Application Developer (CKAD)",
+     "start": 1157,
+     "end": 1206,
+     "section": "certifications",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "lang": "fi",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C2",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "de",
+   "cefr": "B1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Oulu, Finland",
+     "start": 33,
+     "end": 46,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Software Engineer — Nokka Oy",
+     "start": 239,
+     "end": 275,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Junior Software Engineer — Kaiku Digital",
+     "start": 519,
+     "end": 559,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "REST APIs | SQL | PostgreSQL",
+     "start": 135,
+     "end": 163,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

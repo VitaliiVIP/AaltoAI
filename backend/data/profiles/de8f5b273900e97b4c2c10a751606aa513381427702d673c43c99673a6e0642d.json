@@ -1,0 +1,912 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "de8f5b273900e97b4c2c10a751606aa513381427702d673c43c99673a6e0642d",
+  "source_file": "synth_002.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:20:15+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Site Reliability Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Nokka Oy",
+    "start": "2015-10",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 131,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "terraform",
+     "aws",
+     "jenkins",
+     "ci_cd",
+     "docker",
+     "linux",
+     "prometheus",
+     "bash",
+     "testing"
+    ],
+    "primary_skills": [
+     "terraform",
+     "aws",
+     "jenkins",
+     "ci_cd",
+     "testing"
+    ],
+    "evidence": [
+     {
+      "quote": "Site Reliability Engineer, Nokka Oy",
+      "start": 613,
+      "end": 648,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "IT Operations Trainee",
+    "title_canonical": "devops_engineer",
+    "employer": "Vireo Solutions",
+    "start": "2014-04",
+    "end": "2015-10",
+    "date_precision": "month",
+    "months": 18,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "linux",
+     "aws",
+     "terraform",
+     "docker",
+     "gitlab_ci",
+     "bash"
+    ],
+    "primary_skills": [
+     "linux",
+     "aws",
+     "terraform"
+    ],
+    "evidence": [
+     {
+      "quote": "IT Operations Trainee, Vireo Solutions",
+      "start": 1335,
+      "end": 1373,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 149,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 149,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 2,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "aws": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Site Reliability Engineer, Nokka Oy",
+      "start": 613,
+      "end": 648,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "IT Operations Trainee, Vireo Solutions",
+      "start": 1335,
+      "end": 1373,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS; AWS CloudFormation",
+      "start": 2359,
+      "end": 2382,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 149,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 2,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "bash": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Site Reliability Engineer, Nokka Oy",
+      "start": 613,
+      "end": 648,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "IT Operations Trainee, Vireo Solutions",
+      "start": 1335,
+      "end": 1373,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Bash / shell scripting",
+      "start": 2410,
+      "end": 2432,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 149,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Site Reliability Engineer, Nokka Oy",
+      "start": 613,
+      "end": 648,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 131,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "cloudformation": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "AWS CloudFormation",
+      "start": 2364,
+      "end": 2382,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Site Reliability Engineer, Nokka Oy",
+      "start": 613,
+      "end": 648,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "IT Operations Trainee, Vireo Solutions",
+      "start": 1335,
+      "end": 1373,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker",
+      "start": 1024,
+      "end": 1030,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 149,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "gitlab_ci": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "IT Operations Trainee, Vireo Solutions",
+      "start": 1335,
+      "end": 1373,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "GitLab CI",
+      "start": 1739,
+      "end": 1748,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 18,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2015,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "jenkins": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Site Reliability Engineer, Nokka Oy",
+      "start": 613,
+      "end": 648,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Jenkins",
+      "start": 870,
+      "end": 877,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 131,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Site Reliability Engineer, Nokka Oy",
+      "start": 613,
+      "end": 648,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "IT Operations Trainee, Vireo Solutions",
+      "start": 1335,
+      "end": 1373,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Linux",
+      "start": 283,
+      "end": 288,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 149,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "prometheus": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Site Reliability Engineer, Nokka Oy",
+      "start": 613,
+      "end": 648,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Prometheus",
+      "start": 1134,
+      "end": 1144,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 131,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "terraform": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Site Reliability Engineer, Nokka Oy",
+      "start": 613,
+      "end": 648,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "IT Operations Trainee, Vireo Solutions",
+      "start": 1335,
+      "end": 1373,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Terraform",
+      "start": 349,
+      "end": 358,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 149,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 2,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Site Reliability Engineer, Nokka Oy",
+      "start": 613,
+      "end": 648,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 131,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Cost dashboard for a cloud account",
+   "topics": [
+    "infrastructure",
+    "data"
+   ],
+   "skills": [
+    "terraform"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Cost dashboard for a cloud account — infrastructure-oriented work; resources defined and deployed through Terraform.",
+     "start": 1922,
+     "end": 2038,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Home-lab cluster with monitoring",
+   "topics": [
+    "devops",
+    "infrastructure"
+   ],
+   "skills": [
+    "linux",
+    "aws"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Home-lab cluster with monitoring — devops-oriented work; Linux hosts operated alongside AWS resources, deployed and kept in service.",
+     "start": 2040,
+     "end": 2172,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Spreadsheet automation for a small shop",
+   "topics": [
+    "backend",
+    "devops"
+   ],
+   "skills": [
+    "terraform",
+    "aws",
+    "jenkins"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Spreadsheet automation for a small shop — backend and general automation; Terraform-provisioned AWS resources driven by Jenkins jobs, deployed for regular use.",
+     "start": 2174,
+     "end": 2333,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "backend": 1,
+  "data": 1,
+  "devops": 2,
+  "infrastructure": 2
+ },
+ "education": {
+  "highest_level": {
+   "value": "vocational",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Vocational qualification (ammattitutkinto) in Information Technology",
+     "start": 470,
+     "end": 538,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "information technology",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Vocational qualification (ammattitutkinto) in Information Technology",
+     "start": 470,
+     "end": 538,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "ru",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C2",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Helsinki, Finland",
+     "start": 18,
+     "end": 35,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Site Reliability Engineer, Nokka Oy",
+     "start": 613,
+     "end": 648,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "IT Operations Trainee, Vireo Solutions",
+     "start": 1335,
+     "end": 1373,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "AWS; AWS CloudFormation",
+     "start": 2359,
+     "end": 2382,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Site Reliability Engineer, Nokka Oy",
+     "start": 613,
+     "end": 648,
+     "section": "experience",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Site Reliability Engineer, Nokka Oy",
+     "start": 613,
+     "end": 648,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "IT Operations Trainee, Vireo Solutions",
+     "start": 1335,
+     "end": 1373,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Terraform",
+     "start": 349,
+     "end": 358,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

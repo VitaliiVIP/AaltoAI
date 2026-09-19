@@ -1,0 +1,63 @@
+Eero Valtanen
+
+Tartu, Estonia
+eero.valtanen@posteo.ee | +372 5512 8834
+
+---
+STATEMENT OF PROFESSIONAL ORIENTATION
+
+Backend software developer concerned primarily with the design, construction and operation of server-side systems in Python. Practical interests include containerised deployment, distributed service architecture and the disciplined use of version control in collaborative engineering environments.
+FORMAL EDUCATION AND ACADEMIC QUALIFICATIONS
+
+Upper secondary school diploma (lukio), Communications
+PROFESSIONAL CERTIFICATION
+
+Certified Kubernetes Administrator (CKA)
+RECORD OF PROFESSIONAL EMPLOYMENT
+
+Backend Developer
+Sisu Software Oy
+Oct 2025 – Aug 2026
+- Developed and maintained Python backend services deployed to AWS and operated on Linux hosts.
+- Contributed to system design discussions and to the decomposition of functionality along a microservices architecture.
+- Packaged services with Docker and coordinated changes through Git.
+- Authored and reviewed SQL queries and schema modifications supporting service data access.
+
+Backend Developer
+Aurora Analytics Oy
+Jul 2024 – Jun 2025
+- Implemented application features in Django, covering models, views and the administrative interface.
+- Maintained a rigorous Git workflow, including branch conventions, code review and release tagging.
+- Configured GitHub Actions pipelines for automated build and test execution.
+- Employed Redis for caching and queued work; ran containerised Python services on Linux under Docker and AWS.
+- Wrote SQL for reporting and data correction tasks.
+
+Independent Software Consultant
+Freelance
+Oct 2023 – Aug 2024
+- Delivered Python software to client specification, from initial scoping through to handover.
+- Managed all source history in Git, supplying clients with documented repositories.
+
+API Developer
+Nokka Oy
+Jul 2023 – Jul 2024
+- Containerised API services with Docker, standardising local development and deployment images.
+- Built HTTP interfaces in Python, backed by SQL data stores.
+- Deployed and monitored services on AWS; tracked changes in Git.
+
+Software Developer Intern
+Koski Engineering
+Jun 2022 – Jul 2023
+- Prepared Docker images and compose definitions used by the development team.
+- Assisted with Python and Node.js components and with SQL query preparation.
+- Worked within the team's Git repositories under supervision.
+SUMMARY OF TECHNICAL COMPETENCIES
+
+Languages and frameworks: Python, Django, Node.js, SQL
+Infrastructure and tooling: AWS, Docker, Linux, Git, GitHub Actions, Redis
+Design: Microservices architecture, system design
+LANGUAGES
+
+Finnish — native
+English — C2
+German — B1

@@ -1,0 +1,54 @@
+Mateo Iriarte Lund
+Stockholm, Sweden
+mateo.iriarte.lund@mailbox-se.net | +46 70 448 21 07
+
+PROFILE
+Test automation engineer with a background in Communications, working across browser-driven and API-level testing. Comfortable writing test code in both JavaScript and Python and wiring suites into automated delivery pipelines.
+
+SKILL AREAS
+
+JavaScript
+- Wrote and maintained browser test code in JavaScript, keeping selectors and page interactions stable as front-end markup changed.
+- Debugged failing scripts in the browser console and adjusted asynchronous waits and event handling to remove flaky behaviour.
+- Reviewed JavaScript test contributions from colleagues and agreed shared conventions for structuring specs.
+
+Software testing
+- Designed test cases from requirements and exploratory sessions, covering happy paths, boundary conditions and error handling.
+- Triaged defects, reproduced reported issues and wrote reports that developers could act on without follow-up questions.
+- Built regression suites around the areas of the product that changed most often.
+
+Selenium
+- Automated end-to-end user journeys with Selenium, driving forms, navigation and multi-step workflows.
+- Structured locators and shared helpers so that a single UI change did not break many tests at once.
+
+Python and pytest
+- Implemented test suites in Python, using pytest fixtures, parametrisation and markers to keep runs fast and selective.
+- Produced readable assertion helpers and shared conftest setup for reuse across test modules.
+
+REST APIs
+- Exercised REST endpoints directly to validate status codes, payload structure and error responses independently of the UI.
+- Used API-level setup and teardown to put the system into known states before UI runs.
+
+CI/CD and Git
+- Integrated automated suites into CI/CD pipelines so tests ran on every push and pull request.
+- Investigated pipeline failures, separating genuine regressions from environment problems.
+- Managed work in Git with feature branches, code review and a tidy commit history.
+
+PROJECTS
+Discord bot for a study group
+- Personal build supporting a study group; not publicly deployed.
+- Covered command handling and message parsing with pytest, applying the same software testing discipline used at work.
+
+EMPLOYMENT HISTORY
+Test Automation Engineer, Ruska Systems, 2024-2026
+
+EDUCATION
+B.Sc. Communications
+
+CERTIFICATIONS
+AWS Certified Solutions Architect - Associate
+
+LANGUAGES
+Spanish - native
+English - C1
+Finnish - A2

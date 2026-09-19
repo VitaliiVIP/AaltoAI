@@ -1,0 +1,15 @@
+{
+ "idx": 14,
+ "source_file": "synth_014.txt",
+ "archetype": "senior_backend",
+ "style": "prose paragraphs with no bullet points at all; each role is a short narrative paragraph",
+ "seniority": "senior",
+ "omitted_skills": [],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": false,
+ "block_only_skills": [],
+ "n_roles": 5,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

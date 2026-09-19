@@ -1,0 +1,847 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "27fe6f6d16c1aee32bb2b5a8266adffd27bd2a41294a2956c93190e40e13830e",
+  "source_file": "synth_012.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:22:13+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Senior DevOps Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Tampere Tech Group",
+    "start": "2023-01",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 44,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "git",
+     "ci_cd",
+     "terraform",
+     "aws",
+     "cloudformation",
+     "linux",
+     "prometheus"
+    ],
+    "primary_skills": [
+     "git",
+     "ci_cd"
+    ],
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+      "start": 325,
+      "end": 387,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior DevOps Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Vantaa Systems",
+    "start": "2022-05",
+    "end": "2023-01",
+    "date_precision": "month",
+    "months": 8,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "nginx",
+     "git",
+     "ci_cd",
+     "aws",
+     "terraform",
+     "linux",
+     "grafana"
+    ],
+    "primary_skills": [
+     "nginx",
+     "git",
+     "ci_cd"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+      "start": 977,
+      "end": 1036,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 52,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 52,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 2,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "aws": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+      "start": 325,
+      "end": 387,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+      "start": 977,
+      "end": 1036,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS, AWS CloudFormation, Terraform, CI/CD, Git, Linux, Nginx, Prometheus, Grafana",
+      "start": 1921,
+      "end": 2002,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+      "start": 325,
+      "end": 387,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+      "start": 977,
+      "end": 1036,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "CI/CD",
+      "start": 570,
+      "end": 575,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "cloudformation": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+      "start": 325,
+      "end": 387,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS CloudFormation",
+      "start": 755,
+      "end": 773,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 44,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+      "start": 325,
+      "end": 387,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+      "start": 977,
+      "end": 1036,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Git",
+      "start": 200,
+      "end": 203,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "grafana": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+      "start": 977,
+      "end": 1036,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Grafana",
+      "start": 1458,
+      "end": 1465,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 8,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+      "start": 325,
+      "end": 387,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+      "start": 977,
+      "end": 1036,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Linux",
+      "start": 119,
+      "end": 124,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "nginx": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+      "start": 977,
+      "end": 1036,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Nginx",
+      "start": 1050,
+      "end": 1055,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 8,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "prometheus": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+      "start": 325,
+      "end": 387,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Prometheus",
+      "start": 903,
+      "end": 913,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 44,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "terraform": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+      "start": 325,
+      "end": 387,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+      "start": 977,
+      "end": 1036,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Terraform",
+      "start": 693,
+      "end": 702,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Self-hosted CI runner setup",
+   "topics": [
+    "devops",
+    "infrastructure"
+   ],
+   "skills": [
+    "nginx",
+    "prometheus",
+    "ci_cd"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Self-hosted CI runner setup\n- Own runner environment for builds, with Nginx in front of the runner web interface and Prometheus scraping runner health metrics. Not deployed to production.",
+     "start": 1537,
+     "end": 1724,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Terraform modules for a three-tier app",
+   "topics": [
+    "infrastructure"
+   ],
+   "skills": [
+    "terraform"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Terraform modules for a three-tier app\n- Reusable modules that describe web, application and database layers of an app. Written for study of module structure and variables; not deployed.",
+     "start": 1726,
+     "end": 1912,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "devops": 1,
+  "infrastructure": 2
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc. in Communications",
+     "start": 2071,
+     "end": 2094,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "communications",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc. in Communications",
+     "start": 2071,
+     "end": 2094,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [
+  {
+   "cert_id": "certified_kubernetes_administrator",
+   "issuer": "",
+   "issued": null,
+   "evidence": [
+    {
+     "quote": "Certified Kubernetes Administrator (CKA)",
+     "start": 2019,
+     "end": 2059,
+     "section": "certifications",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "lang": "es",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "fi",
+   "cefr": "A2",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "EE",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Tartu, Estonia",
+     "start": 19,
+     "end": 33,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+     "start": 325,
+     "end": 387,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+     "start": 977,
+     "end": 1036,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "AWS, AWS CloudFormation, Terraform, CI/CD, Git, Linux, Nginx, Prometheus, Grafana",
+     "start": 1921,
+     "end": 2002,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+     "start": 325,
+     "end": 387,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+     "start": 977,
+     "end": 1036,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "CI/CD",
+     "start": 570,
+     "end": 575,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+     "start": 325,
+     "end": 387,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+     "start": 977,
+     "end": 1036,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Terraform",
+     "start": 693,
+     "end": 702,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [
+  "systemd",
+  "TLS termination"
+ ],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

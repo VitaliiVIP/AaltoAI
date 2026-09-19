@@ -1,0 +1,904 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "01320b0fd9174e261000bbb11f68173d1bb16955277bf9a0458d4811f9568b5b",
+  "source_file": "synth_016.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:23:15+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Backend Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Koski Engineering",
+    "start": "2020-06",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 75,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "django",
+     "python",
+     "postgresql",
+     "rest_api",
+     "sql",
+     "docker",
+     "html_css",
+     "git",
+     "excel"
+    ],
+    "primary_skills": [
+     "django",
+     "python",
+     "postgresql",
+     "rest_api",
+     "sql"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Koski Engineering",
+      "start": 257,
+      "end": 302,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Independent Software Consultant",
+    "title_canonical": "backend_engineer",
+    "employer": "Freelance",
+    "start": "2019-06",
+    "end": "2020-06",
+    "date_precision": "month",
+    "months": 12,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "sql",
+     "git"
+    ],
+    "primary_skills": [
+     "python"
+    ],
+    "evidence": [
+     {
+      "quote": "Independent Software Consultant — Freelance",
+      "start": 957,
+      "end": 1000,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Customer Support Agent",
+    "title_canonical": "non_software",
+    "employer": "Turku Catering Oy",
+    "start": "2019-03",
+    "end": "2020-06",
+    "date_precision": "month",
+    "months": 15,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "sql",
+     "agile"
+    ],
+    "primary_skills": [
+     "excel"
+    ],
+    "evidence": [
+     {
+      "quote": "Customer Support Agent — Turku Catering Oy",
+      "start": 1384,
+      "end": 1426,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Warehouse Associate",
+    "title_canonical": "non_software",
+    "employer": "Pohjola Hotels",
+    "start": "2017-12",
+    "end": "2019-03",
+    "date_precision": "month",
+    "months": 15,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "agile",
+     "excel"
+    ],
+    "primary_skills": [
+     "agile"
+    ],
+    "evidence": [
+     {
+      "quote": "Warehouse Associate — Pohjola Hotels",
+      "start": 1817,
+      "end": 1853,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 105,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 87,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 87,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 4,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "agile": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Customer Support Agent — Turku Catering Oy",
+      "start": 1384,
+      "end": 1426,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Warehouse Associate — Pohjola Hotels",
+      "start": 1817,
+      "end": 1853,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+      "start": 2453,
+      "end": 2557,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "django": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Koski Engineering",
+      "start": 257,
+      "end": 302,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+      "start": 2453,
+      "end": 2557,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 75,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Koski Engineering",
+      "start": 257,
+      "end": 302,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+      "start": 2453,
+      "end": 2557,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 75,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "excel": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Koski Engineering",
+      "start": 257,
+      "end": 302,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Customer Support Agent — Turku Catering Oy",
+      "start": 1384,
+      "end": 1426,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+      "start": 2453,
+      "end": 2557,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 75,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Koski Engineering",
+      "start": 257,
+      "end": 302,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Independent Software Consultant — Freelance",
+      "start": 957,
+      "end": 1000,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+      "start": 2453,
+      "end": 2557,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 87,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "html_css": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Koski Engineering",
+      "start": 257,
+      "end": 302,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+      "start": 2453,
+      "end": 2557,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 75,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Koski Engineering",
+      "start": 257,
+      "end": 302,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+      "start": 2453,
+      "end": 2557,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 75,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Koski Engineering",
+      "start": 257,
+      "end": 302,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Independent Software Consultant — Freelance",
+      "start": 957,
+      "end": 1000,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+      "start": 2453,
+      "end": 2557,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 87,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Koski Engineering",
+      "start": 257,
+      "end": 302,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+      "start": 2453,
+      "end": 2557,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 75,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "security": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Recipe API with authentication\n- Personal backend project exposing recipe data through REST APIs with an authentication layer for protected endpoints.\n- Not deployed publicly; developed and run locally.",
+      "start": 2169,
+      "end": 2371,
+      "section": "projects",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Software Engineer — Koski Engineering",
+      "start": 257,
+      "end": 302,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Independent Software Consultant — Freelance",
+      "start": 957,
+      "end": 1000,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+      "start": 2453,
+      "end": 2557,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 87,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Recipe API with authentication",
+   "topics": [
+    "backend"
+   ],
+   "skills": [
+    "rest_api",
+    "security"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Recipe API with authentication\n- Personal backend project exposing recipe data through REST APIs with an authentication layer for protected endpoints.\n- Not deployed publicly; developed and run locally.",
+     "start": 2169,
+     "end": 2371,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "backend": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "secondary",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Upper secondary school diploma (lukio), Software Engineering",
+     "start": 2383,
+     "end": 2443,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "software engineering",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Upper secondary school diploma (lukio), Software Engineering",
+     "start": 2383,
+     "end": 2443,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "hi",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "B2",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "fi",
+   "cefr": "A1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "SE",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Gothenburg, Sweden",
+     "start": 15,
+     "end": 33,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Software Engineer — Koski Engineering",
+     "start": 257,
+     "end": 302,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Independent Software Consultant — Freelance",
+     "start": 957,
+     "end": 1000,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL",
+     "start": 2453,
+     "end": 2557,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

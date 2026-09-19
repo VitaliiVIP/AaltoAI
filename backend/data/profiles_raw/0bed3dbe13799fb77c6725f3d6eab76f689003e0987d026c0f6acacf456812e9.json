@@ -1,0 +1,129 @@
+{
+ "cv_sha256": "0bed3dbe13799fb77c6725f3d6eab76f689003e0987d026c0f6acacf456812e9",
+ "source_file": "synth_004.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:20:36+00:00",
+ "cv_text": "Mateo Iriarte Lund\nStockholm, Sweden\nmateo.iriarte.lund@mailbox-se.net | +46 70 448 21 07\n\nPROFILE\nTest automation engineer with a background in Communications, working across browser-driven and API-level testing. Comfortable writing test code in both JavaScript and Python and wiring suites into automated delivery pipelines.\n\nSKILL AREAS\n\nJavaScript\n- Wrote and maintained browser test code in JavaScript, keeping selectors and page interactions stable as front-end markup changed.\n- Debugged failing scripts in the browser console and adjusted asynchronous waits and event handling to remove flaky behaviour.\n- Reviewed JavaScript test contributions from colleagues and agreed shared conventions for structuring specs.\n\nSoftware testing\n- Designed test cases from requirements and exploratory sessions, covering happy paths, boundary conditions and error handling.\n- Triaged defects, reproduced reported issues and wrote reports that developers could act on without follow-up questions.\n- Built regression suites around the areas of the product that changed most often.\n\nSelenium\n- Automated end-to-end user journeys with Selenium, driving forms, navigation and multi-step workflows.\n- Structured locators and shared helpers so that a single UI change did not break many tests at once.\n\nPython and pytest\n- Implemented test suites in Python, using pytest fixtures, parametrisation and markers to keep runs fast and selective.\n- Produced readable assertion helpers and shared conftest setup for reuse across test modules.\n\nREST APIs\n- Exercised REST endpoints directly to validate status codes, payload structure and error responses independently of the UI.\n- Used API-level setup and teardown to put the system into known states before UI runs.\n\nCI/CD and Git\n- Integrated automated suites into CI/CD pipelines so tests ran on every push and pull request.\n- Investigated pipeline failures, separating genuine regressions from environment problems.\n- Managed work in Git with feature branches, code review and a tidy commit history.\n\nPROJECTS\nDiscord bot for a study group\n- Personal build supporting a study group; not publicly deployed.\n- Covered command handling and message parsing with pytest, applying the same software testing discipline used at work.\n\nEMPLOYMENT HISTORY\nTest Automation Engineer, Ruska Systems, 2024-2026\n\nEDUCATION\nB.Sc. Communications\n\nCERTIFICATIONS\nAWS Certified Solutions Architect - Associate\n\nLANGUAGES\nSpanish - native\nEnglish - C1\nFinnish - A2\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Test Automation Engineer",
+    "title_canonical": "qa_engineer",
+    "employer": "Ruska Systems",
+    "start_raw": "2024",
+    "end_raw": "2026",
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "quote": "Test Automation Engineer, Ruska Systems, 2024-2026"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "javascript",
+    "quote": "JavaScript\n- Wrote and maintained browser test code in JavaScript"
+   },
+   {
+    "skill": "testing",
+    "quote": "Software testing"
+   },
+   {
+    "skill": "selenium",
+    "quote": "Automated end-to-end user journeys with Selenium"
+   },
+   {
+    "skill": "python",
+    "quote": "Implemented test suites in Python"
+   },
+   {
+    "skill": "pytest",
+    "quote": "using pytest fixtures, parametrisation and markers"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "REST APIs"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "Integrated automated suites into CI/CD pipelines"
+   },
+   {
+    "skill": "git",
+    "quote": "Managed work in Git with feature branches"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Discord bot for a study group",
+    "topics": [
+     "other",
+     "testing"
+    ],
+    "skills": [
+     "pytest",
+     "testing"
+    ],
+    "deployed": "no",
+    "quote": "Discord bot for a study group\n- Personal build supporting a study group; not publicly deployed."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "communications",
+   "in_progress": "unclear",
+   "quote": "B.Sc. Communications"
+  },
+  "certifications": [
+   {
+    "cert_id": "aws_solutions_architect_associate",
+    "issuer": "AWS",
+    "issued_raw": "",
+    "quote": "AWS Certified Solutions Architect - Associate"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "es",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   },
+   {
+    "lang": "fi",
+    "cefr": "A2"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "SE",
+   "relocation_willing": "unclear",
+   "quote": "Stockholm, Sweden"
+  },
+  "unmatched_skills": [
+   "Discord bot"
+  ],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

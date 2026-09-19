@@ -1,0 +1,15 @@
+{
+ "idx": 6,
+ "source_file": "synth_006.txt",
+ "archetype": "junior_backend",
+ "style": "terse startup one-pager: minimal punctuation, fragments, no filler, fits on one screen",
+ "seniority": "junior",
+ "omitted_skills": [],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": false,
+ "block_only_skills": [],
+ "n_roles": 3,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

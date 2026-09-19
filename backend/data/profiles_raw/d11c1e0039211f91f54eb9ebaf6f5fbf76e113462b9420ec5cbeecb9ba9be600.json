@@ -1,0 +1,207 @@
+{
+ "cv_sha256": "d11c1e0039211f91f54eb9ebaf6f5fbf76e113462b9420ec5cbeecb9ba9be600",
+ "source_file": "synth_017.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:23:28+00:00",
+ "cv_text": "Mikhail Rautio\nOulu, Finland\nmikhail.rautio@mailbox.fi | +358 44 218 7745\n\nNote: Requires a work permit / visa sponsorship to work in Finland.\n\nSUMMARY\nDevOps and platform engineer working with containerised workloads, infrastructure as code and automated delivery pipelines across cloud and on-premise environments.\n\nEXPERIENCE\n\nSenior DevOps Engineer — Arctic Cloud Oy\n2022 – Present\n- Own the CI/CD platform end to end: pipeline design, build stages, automated testing gates and release promotion.\n- Reduce manual release steps by moving deployment logic into pipeline definitions and reusable templates.\n- Package and run services with Docker; maintain base images and build caching.\n- Describe infrastructure in Terraform and keep state and module structure tidy.\n- Instrument services with Prometheus metrics, alerts and dashboards.\n- Write Bash / shell scripting for build helpers, maintenance jobs and host bootstrap.\n- Contribute to internal tooling written in Rust.\n\nPlatform Engineer — Helsinki Data Works\n2016-2022\n- Introduced and maintained Argo CD for GitOps-style delivery to clustered environments, including app definitions, sync policies and rollback practice.\n- Built a large body of Bash / shell scripting for environment setup, log handling, backups and operator tasks.\n- Ran CI/CD pipelines serving several delivery teams.\n- Provisioned infrastructure with Terraform and handled configuration management with Ansible.\n- Maintained Docker images and container build standards.\n\nPlatform Engineer — Polaris Payments\n2015-2016\n- Configured and tuned Nginx as reverse proxy and TLS termination point for payment-facing services.\n- Supported deployment of Java services through CI/CD pipelines.\n- Containerised applications with Docker and wrote Bash / shell scripting for routine operations.\n- Provisioned environments with Terraform; used Argo CD for application delivery.\n\nIT Operations Trainee — Vantaa Systems\n2014-2015\n- Set up and maintained Nginx virtual hosts, redirects and static content serving.\n- Worked with Microsoft Azure resources for test and staging environments.\n- Assisted with CI/CD job configuration and build troubleshooting.\n- Used Docker for local service setups and Bash / shell scripting for small automation tasks.\n\nPROJECTS\nVolunteer website for a sports club\n- Set up and configured Nginx to serve the site. Not deployed publicly.\n\nSKILLS\nAnsible, Argo CD, Microsoft Azure, Bash / shell scripting, CI/CD, Docker, Java, Jenkins, Nginx, Prometheus, Rust, Terraform\n\nEDUCATION\nM.Sc., Biology\n\nLANGUAGES\nEnglish — C2\nRussian — native\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Senior DevOps Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Arctic Cloud Oy",
+    "start_raw": "2022",
+    "end_raw": "present",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "ci_cd",
+     "testing",
+     "docker",
+     "terraform",
+     "prometheus",
+     "bash",
+     "rust"
+    ],
+    "primary_skills": [
+     "ci_cd",
+     "testing"
+    ],
+    "quote": "Senior DevOps Engineer — Arctic Cloud Oy"
+   },
+   {
+    "title_raw": "Platform Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Helsinki Data Works",
+    "start_raw": "2016",
+    "end_raw": "2022",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "argo_cd",
+     "bash",
+     "ci_cd",
+     "terraform",
+     "ansible",
+     "docker"
+    ],
+    "primary_skills": [
+     "argo_cd",
+     "bash"
+    ],
+    "quote": "Platform Engineer — Helsinki Data Works"
+   },
+   {
+    "title_raw": "Platform Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Polaris Payments",
+    "start_raw": "2015",
+    "end_raw": "2016",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "nginx",
+     "java",
+     "ci_cd",
+     "docker",
+     "bash",
+     "terraform",
+     "argo_cd"
+    ],
+    "primary_skills": [
+     "nginx",
+     "java",
+     "ci_cd"
+    ],
+    "quote": "Platform Engineer — Polaris Payments"
+   },
+   {
+    "title_raw": "IT Operations Trainee",
+    "title_canonical": "devops_engineer",
+    "employer": "Vantaa Systems",
+    "start_raw": "2014",
+    "end_raw": "2015",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "nginx",
+     "azure",
+     "ci_cd",
+     "docker",
+     "bash"
+    ],
+    "primary_skills": [
+     "nginx",
+     "azure"
+    ],
+    "quote": "IT Operations Trainee — Vantaa Systems"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "ansible",
+    "quote": "Ansible, Argo CD, Microsoft Azure"
+   },
+   {
+    "skill": "argo_cd",
+    "quote": "Ansible, Argo CD, Microsoft Azure"
+   },
+   {
+    "skill": "azure",
+    "quote": "Microsoft Azure, Bash / shell scripting"
+   },
+   {
+    "skill": "bash",
+    "quote": "Bash / shell scripting, CI/CD, Docker"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "CI/CD, Docker, Java"
+   },
+   {
+    "skill": "docker",
+    "quote": "Docker, Java, Jenkins"
+   },
+   {
+    "skill": "java",
+    "quote": "Java, Jenkins, Nginx"
+   },
+   {
+    "skill": "jenkins",
+    "quote": "Jenkins, Nginx, Prometheus"
+   },
+   {
+    "skill": "nginx",
+    "quote": "Nginx, Prometheus, Rust"
+   },
+   {
+    "skill": "prometheus",
+    "quote": "Prometheus, Rust, Terraform"
+   },
+   {
+    "skill": "rust",
+    "quote": "Rust, Terraform"
+   },
+   {
+    "skill": "terraform",
+    "quote": "Rust, Terraform"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Volunteer website for a sports club",
+    "topics": [
+     "infrastructure"
+    ],
+    "skills": [
+     "nginx"
+    ],
+    "deployed": "no",
+    "quote": "Volunteer website for a sports club\n- Set up and configured Nginx to serve the site. Not deployed publicly."
+   }
+  ],
+  "education": {
+   "highest_level": "msc",
+   "field": "biology",
+   "in_progress": "unclear",
+   "quote": "M.Sc., Biology"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "en",
+    "cefr": "C2"
+   },
+   {
+    "lang": "ru",
+    "cefr": ""
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "yes",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Note: Requires a work permit / visa sponsorship to work in Finland."
+  },
+  "unmatched_skills": [
+   "GitOps"
+  ],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

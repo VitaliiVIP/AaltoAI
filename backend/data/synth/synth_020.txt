@@ -1,0 +1,38 @@
+Artem Voloshin
+Vantaa, Finland
+artem.voloshin@mailbox.fi | +358 44 218 7734
+
+Backend-focused software engineer working with Python, REST APIs and distributed services on AWS and Linux. Requires a work permit / visa sponsorship to work in Finland.
+
+EXPERIENCE
+
+Software Engineer (Backend), Nokka Oy — Nov 2024 – Present
+Builds and maintains REST APIs in Python that serve as the primary interface between internal services and customer-facing clients. Works on a microservices architecture, contributing to system design discussions around service boundaries, data ownership and message flow through Apache Kafka, with Redis used for caching and short-lived state. Owns PostgreSQL schemas and query work behind the API layer, packages services with Docker, and keeps delivery moving through CI/CD pipelines onto AWS infrastructure running on Linux. Day-to-day collaboration runs through Git, including review of colleagues' changes.
+
+Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024
+Concentrated on automation and cloud delivery, rebuilding project pipelines in GitHub Actions so that tests, container builds and deployments to AWS ran without manual steps. Wrote backend services in Python with some TypeScript on adjacent tooling, exposed them through REST APIs, and shaped the SQL and PostgreSQL layer underneath. Contributed to system design reviews, containerised workloads with Docker, and handled Linux-side configuration for the deployed environments. Version control and branching conventions were managed in Git alongside the CI/CD work.
+
+Software Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024
+Started on smaller maintenance tasks in Python and grew into implementing endpoints with FastAPI and, on one Node-based service, Express.js. Learned disciplined Git usage early — small commits, clear history, code review as a habit — which became the backbone of the team's workflow contribution. Wrote SQL against PostgreSQL, helped document and test REST APIs, and used Docker together with the existing CI/CD setup to keep local and build environments consistent.
+
+PROJECTS
+
+Booking service for a local gym — A backend-only project providing reservation and scheduling endpoints with FastAPI, backed by a PostgreSQL database designed around class capacity and cancellation rules. Not deployed publicly.
+
+Flaky-test triage tooling — A deployed tool written in TypeScript that collects repeated test-run results, groups unstable failures and surfaces the worst offenders. Runs on Linux hosts in AWS.
+
+SKILLS
+
+Python, TypeScript, SQL, PostgreSQL, Redis, REST APIs, FastAPI, Django, Express.js, Apache Kafka, Microservices architecture, System design, Docker, AWS, Linux, CI/CD, GitHub Actions, Git
+
+EDUCATION
+
+M.Sc., Communications
+
+CERTIFICATIONS
+
+Certified Kubernetes Administrator (CKA)
+
+LANGUAGES
+
+English — C2; Russian — native

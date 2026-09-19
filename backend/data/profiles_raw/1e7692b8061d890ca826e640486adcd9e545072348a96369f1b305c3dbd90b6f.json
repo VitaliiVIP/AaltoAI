@@ -1,0 +1,204 @@
+{
+ "cv_sha256": "1e7692b8061d890ca826e640486adcd9e545072348a96369f1b305c3dbd90b6f",
+ "source_file": "synth_023.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:25:00+00:00",
+ "cv_text": "Mateo Arriaga Vela\n\nTampere, Finland\nmateo.arriaga.vela@mailbox.fi | +358 44 912 6037\n\n---\nPROFILE\n\nFrontend engineer working with JavaScript, TypeScript and React, with hands-on focus on automated browser testing and quality practices.\n\n---\nEXPERIENCE\n\nFrontend Engineer — Polaris Payments\n2024-2026\n\n- Built and maintained customer-facing payment interfaces in React and TypeScript.\n- Designed and maintained end-to-end test suites in Playwright, covering critical checkout and account flows.\n- Integrated Playwright runs into the delivery pipeline so regressions surfaced before release.\n- Applied software testing practices across unit and integration layers alongside feature work.\n- Managed branching, reviews and release tagging in Git.\n\nFrontend Engineer — Koski Engineering\n2020-2024\n\n- Migrated and extended application code to TypeScript, introducing shared types and stricter compiler settings.\n- Developed React component libraries reused across several internal products.\n- Maintained and extended existing Vue.js modules during a phased consolidation.\n- Handled day-to-day JavaScript feature delivery and code review in Git.\n\nJunior UI Developer — Vireo Solutions\n2018-2020\n\n- Implemented UI features in React and plain JavaScript from design handoffs.\n- Took ownership of Git workflow hygiene: clean commits, rebases, and resolving merge conflicts for the team.\n- Picked up TypeScript on production tickets.\n- Worked in an Agile / Scrum team with regular planning, refinement and retrospectives.\n\n---\nPROJECTS\n\n- Recipe browser single-page app — frontend project built in TypeScript. Not deployed.\n- Bootcamp capstone: to-do app — tutorial-based JavaScript project. Not deployed.\n- Django tutorial series — followed a backend tutorial series for self-study. Not deployed.\n\n---\nSKILLS\n\nJavaScript · TypeScript · React · Vue.js · Angular · Playwright · Software testing · Git · Agile / Scrum\n\n---\nEDUCATION\n\nVocational qualification (ammattitutkinto) in Information Technology — Computer Science\n\n---\nCERTIFICATIONS\n\nISTQB Certified Tester, Foundation Level\n\n---\nLANGUAGES\n\nSpanish — native · English — C1 · Finnish — A2\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Frontend Engineer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Polaris Payments",
+    "start_raw": "2024",
+    "end_raw": "2026",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "react",
+     "typescript",
+     "playwright",
+     "testing",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "react",
+     "typescript",
+     "playwright",
+     "testing"
+    ],
+    "quote": "Frontend Engineer — Polaris Payments"
+   },
+   {
+    "title_raw": "Frontend Engineer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Koski Engineering",
+    "start_raw": "2020",
+    "end_raw": "2024",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "typescript",
+     "react",
+     "vue",
+     "javascript",
+     "git"
+    ],
+    "primary_skills": [
+     "typescript",
+     "react"
+    ],
+    "quote": "Frontend Engineer — Koski Engineering"
+   },
+   {
+    "title_raw": "Junior UI Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Vireo Solutions",
+    "start_raw": "2018",
+    "end_raw": "2020",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "react",
+     "javascript",
+     "git",
+     "typescript",
+     "agile"
+    ],
+    "primary_skills": [
+     "react",
+     "javascript",
+     "git"
+    ],
+    "quote": "Junior UI Developer — Vireo Solutions"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "javascript",
+    "quote": "JavaScript · TypeScript · React"
+   },
+   {
+    "skill": "typescript",
+    "quote": "JavaScript · TypeScript · React"
+   },
+   {
+    "skill": "react",
+    "quote": "JavaScript · TypeScript · React"
+   },
+   {
+    "skill": "vue",
+    "quote": "Vue.js · Angular"
+   },
+   {
+    "skill": "angular",
+    "quote": "Vue.js · Angular"
+   },
+   {
+    "skill": "playwright",
+    "quote": "Playwright · Software testing"
+   },
+   {
+    "skill": "testing",
+    "quote": "Playwright · Software testing"
+   },
+   {
+    "skill": "git",
+    "quote": "Git · Agile / Scrum"
+   },
+   {
+    "skill": "agile",
+    "quote": "Git · Agile / Scrum"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Recipe browser single-page app",
+    "topics": [
+     "frontend"
+    ],
+    "skills": [
+     "typescript"
+    ],
+    "deployed": "no",
+    "quote": "Recipe browser single-page app — frontend project built in TypeScript. Not deployed."
+   },
+   {
+    "title": "Bootcamp capstone: to-do app",
+    "topics": [
+     "tutorial"
+    ],
+    "skills": [
+     "javascript"
+    ],
+    "deployed": "no",
+    "quote": "Bootcamp capstone: to-do app — tutorial-based JavaScript project. Not deployed."
+   },
+   {
+    "title": "Django tutorial series",
+    "topics": [
+     "tutorial"
+    ],
+    "skills": [
+     "django"
+    ],
+    "deployed": "no",
+    "quote": "Django tutorial series — followed a backend tutorial series for self-study. Not deployed."
+   }
+  ],
+  "education": {
+   "highest_level": "vocational",
+   "field": "information technology / computer science",
+   "in_progress": "unclear",
+   "quote": "Vocational qualification (ammattitutkinto) in Information Technology — Computer Science"
+  },
+  "certifications": [
+   {
+    "cert_id": "istqb_certified_tester_foundation_level",
+    "issuer": "ISTQB",
+    "issued_raw": "",
+    "quote": "ISTQB Certified Tester, Foundation Level"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "es",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   },
+   {
+    "lang": "fi",
+    "cefr": "A2"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Tampere, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

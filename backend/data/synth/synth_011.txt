@@ -1,0 +1,49 @@
+Eetu Valkama
+Turku, Finland
+eetu.valkama@example.fi | +358 40 555 2189
+
+Backend developer working with Python services, relational data models and containerised deployments.
+
+Työkokemus
+
+Software Engineer (Backend)
+Nokka Oy, Apr 2026 – Present
+- Design and tune SQL queries and schemas in PostgreSQL, including indexing and query plan analysis for reporting-heavy endpoints.
+- Build and maintain HTTP services in Python with FastAPI.
+- Package services with Docker and run them on Linux hosts.
+- Work in Git-based review workflows, handling branching and merges for shared repositories.
+
+Junior Backend Developer
+Ruska Systems, Sep 2025 – Apr 2026
+- Implemented backend features in Python against PostgreSQL databases.
+- Wrote SQL for data migrations and everyday application queries.
+- Containerised local development environments using Docker.
+- Took part in Agile / Scrum ceremonies: sprint planning, daily standups and retrospectives.
+- Used Git for version control and pull request reviews.
+
+Projektit
+
+Personal finance tracker backend
+- A backend-only side project built with FastAPI, covering the API layer for tracking personal income and spending. Not deployed publicly.
+
+Koulutus
+
+Vocational qualification (ammattitutkinto) in Information Technology
+Subject: Business Administration
+
+Taidot
+
+Python
+SQL
+PostgreSQL
+FastAPI
+Docker
+Linux
+Git
+Agile / Scrum
+
+Kielet
+
+Finnish – native
+English – B2
+Swedish – B1

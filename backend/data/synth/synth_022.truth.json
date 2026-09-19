@@ -1,0 +1,611 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "synthetic",
+  "source_file": "synth_022.txt",
+  "extractor_model": "truth",
+  "prompt_version": "synth-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Independent Software Consultant",
+    "title_canonical": "frontend_engineer",
+    "employer": "Freelance",
+    "start": "2025-02",
+    "end": "2025-10",
+    "date_precision": "month",
+    "months": 8,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "javascript",
+     "html_css",
+     "react"
+    ],
+    "primary_skills": [
+     "javascript"
+    ],
+    "evidence": []
+   },
+   {
+    "title_raw": "Web Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Sisu Software Oy",
+    "start": "2024-05",
+    "end": "2026-04",
+    "date_precision": "month",
+    "months": 23,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "javascript",
+     "html_css",
+     "react",
+     "git",
+     "typescript",
+     "nextjs",
+     "nodejs",
+     "playwright"
+    ],
+    "primary_skills": [
+     "html_css"
+    ],
+    "evidence": []
+   },
+   {
+    "title_raw": "Web Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2023-10",
+    "end": "2024-04",
+    "date_precision": "month",
+    "months": 6,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "javascript",
+     "html_css",
+     "react",
+     "git",
+     "typescript",
+     "nextjs",
+     "nodejs"
+    ],
+    "primary_skills": [
+     "typescript"
+    ],
+    "evidence": []
+   },
+   {
+    "title_raw": "Junior Frontend Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2020-09",
+    "end": "2023-08",
+    "date_precision": "month",
+    "months": 35,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "javascript",
+     "html_css",
+     "react",
+     "git",
+     "typescript",
+     "graphql",
+     "rest_api"
+    ],
+    "primary_skills": [
+     "git",
+     "rest_api"
+    ],
+    "evidence": []
+   }
+  ],
+  "total_months": {
+   "value": 64,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 64,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "mid",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 4,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 64,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "graphql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 35,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "html_css": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 64,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "javascript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 64,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "nextjs": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 29,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "nodejs": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 29,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "playwright": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 23,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "react": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 64,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 2,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 35,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "typescript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 64,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Portfolio site with a component library",
+   "topics": [
+    "frontend"
+   ],
+   "skills": [
+    "nodejs",
+    "react",
+    "html_css"
+   ],
+   "deployed": false,
+   "evidence": []
+  },
+  {
+   "title": "Volunteer website for a sports club",
+   "topics": [
+    "other"
+   ],
+   "skills": [
+    "react"
+   ],
+   "deployed": false,
+   "evidence": []
+  }
+ ],
+ "project_counts_by_topic": {
+  "frontend": 1,
+  "other": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": []
+  },
+  "field": {
+   "value": "Business Administration",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": []
+  },
+  "in_progress": {
+   "value": false,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [
+  {
+   "cert_id": "scrum_master",
+   "issuer": "Scrum Alliance",
+   "issued": "2023-09",
+   "evidence": []
+  }
+ ],
+ "languages": [
+  {
+   "lang": "Finnish",
+   "cefr": "native",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "English",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": "EU",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": false,
+   "derivation": "inferred",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": []
+  },
+  "relocation_willing": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

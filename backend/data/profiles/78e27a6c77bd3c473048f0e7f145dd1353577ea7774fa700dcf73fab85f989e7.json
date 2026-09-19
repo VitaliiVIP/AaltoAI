@@ -1,0 +1,941 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "78e27a6c77bd3c473048f0e7f145dd1353577ea7774fa700dcf73fab85f989e7",
+  "source_file": "synth_022.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:24:48+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Independent Software Consultant",
+    "title_canonical": "frontend_engineer",
+    "employer": "Freelance",
+    "start": "2025-02",
+    "end": "2025-10",
+    "date_precision": "month",
+    "months": 8,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "javascript",
+     "react",
+     "html_css"
+    ],
+    "primary_skills": [
+     "javascript"
+    ],
+    "evidence": [
+     {
+      "quote": "Independent Software Consultant",
+      "start": 1065,
+      "end": 1096,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Web Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Sisu Software Oy",
+    "start": "2024-05",
+    "end": "2026-04",
+    "date_precision": "month",
+    "months": 23,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "html_css",
+     "react",
+     "nextjs",
+     "typescript",
+     "nodejs",
+     "playwright",
+     "testing",
+     "git"
+    ],
+    "primary_skills": [
+     "html_css"
+    ],
+    "evidence": [
+     {
+      "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026",
+      "start": 1894,
+      "end": 1944,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Web Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2023-10",
+    "end": "2024-04",
+    "date_precision": "month",
+    "months": 6,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "typescript",
+     "react",
+     "nextjs",
+     "nodejs",
+     "html_css",
+     "javascript",
+     "git"
+    ],
+    "primary_skills": [
+     "typescript",
+     "react",
+     "nextjs"
+    ],
+    "evidence": [
+     {
+      "quote": "Web Developer\nNordcom Oy\nOct 2023 – Apr 2024",
+      "start": 2966,
+      "end": 3010,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior Frontend Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2020-09",
+    "end": "2023-08",
+    "date_precision": "month",
+    "months": 35,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "git",
+     "rest_api",
+     "graphql",
+     "react",
+     "html_css",
+     "javascript",
+     "typescript"
+    ],
+    "primary_skills": [
+     "git",
+     "rest_api",
+     "graphql"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior Frontend Developer",
+      "start": 3633,
+      "end": 3658,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 64,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 64,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "mid",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 4,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026",
+      "start": 1894,
+      "end": 1944,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Web Developer\nNordcom Oy\nOct 2023 – Apr 2024",
+      "start": 2966,
+      "end": 3010,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright",
+      "start": 942,
+      "end": 1038,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 64,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "graphql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Frontend Developer",
+      "start": 3633,
+      "end": 3658,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright",
+      "start": 942,
+      "end": 1038,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 35,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "html_css": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Independent Software Consultant",
+      "start": 1065,
+      "end": 1096,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026",
+      "start": 1894,
+      "end": 1944,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright",
+      "start": 942,
+      "end": 1038,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 64,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "javascript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Independent Software Consultant",
+      "start": 1065,
+      "end": 1096,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Web Developer\nNordcom Oy\nOct 2023 – Apr 2024",
+      "start": 2966,
+      "end": 3010,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright",
+      "start": 942,
+      "end": 1038,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 49,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2025,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "nextjs": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026",
+      "start": 1894,
+      "end": 1944,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Web Developer\nNordcom Oy\nOct 2023 – Apr 2024",
+      "start": 2966,
+      "end": 3010,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright",
+      "start": 942,
+      "end": 1038,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 29,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "nodejs": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026",
+      "start": 1894,
+      "end": 1944,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Web Developer\nNordcom Oy\nOct 2023 – Apr 2024",
+      "start": 2966,
+      "end": 3010,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright",
+      "start": 942,
+      "end": 1038,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 29,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "playwright": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026",
+      "start": 1894,
+      "end": 1944,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright",
+      "start": 942,
+      "end": 1038,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 23,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "react": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Independent Software Consultant",
+      "start": 1065,
+      "end": 1096,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026",
+      "start": 1894,
+      "end": 1944,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright",
+      "start": 942,
+      "end": 1038,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 64,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 2,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Frontend Developer",
+      "start": 3633,
+      "end": 3658,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright",
+      "start": 942,
+      "end": 1038,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 35,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026",
+      "start": 1894,
+      "end": 1944,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 23,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "typescript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026",
+      "start": 1894,
+      "end": 1944,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Web Developer\nNordcom Oy\nOct 2023 – Apr 2024",
+      "start": 2966,
+      "end": 3010,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright",
+      "start": 942,
+      "end": 1038,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 64,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Portfolio site with a component library",
+   "topics": [
+    "frontend"
+   ],
+   "skills": [
+    "react",
+    "html_css",
+    "nodejs"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Personal frontend project pairing a public-facing site with a reusable component set. Built with React and hand-written HTML / CSS, with Node.js handling the local tooling and build pipeline. Not deployed publicly.",
+     "start": 4504,
+     "end": 4718,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Volunteer website for a sports club",
+   "topics": [
+    "frontend"
+   ],
+   "skills": [
+    "react"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Voluntary work building a website for a local sports club in React, gathering requirements from committee members who had no technical background and shaping the interface around them. Not deployed publicly.",
+     "start": 4756,
+     "end": 4963,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "frontend": 2
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc., Business Administration",
+     "start": 4976,
+     "end": 5006,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "business administration",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc., Business Administration",
+     "start": 4976,
+     "end": 5006,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [
+  {
+   "cert_id": "certified_scrummaster",
+   "issuer": "",
+   "issued": null,
+   "evidence": [
+    {
+     "quote": "Certified ScrumMaster (CSM)",
+     "start": 5024,
+     "end": 5051,
+     "section": "certifications",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "lang": "fi",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Espoo, Finland | Open to relocation",
+     "start": 19,
+     "end": 54,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Espoo, Finland | Open to relocation",
+     "start": 19,
+     "end": 54,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

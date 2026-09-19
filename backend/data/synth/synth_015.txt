@@ -1,0 +1,88 @@
+Aleksi Virtanen
+
+Espoo, Finland | Open to relocation
+aleksi.virtanen@kontumail.fi | +358 40 555 2187
+
+---
+PROFILE
+
+Backend engineer and technical lead who works in a consulting mode with product, platform and infrastructure stakeholders. My engagements typically centre on Python services exposed through REST APIs, packaged with Docker and operated on Kubernetes in AWS. I am comfortable moving between the design table — where microservices architecture boundaries, Apache Kafka event flows and SQL data models are argued out — and the delivery floor, where Terraform, container images and Grafana dashboards decide whether a release is calm or painful. Engagements have run the range from greenfield service build-out to hardening and handover of systems already carrying production traffic. I work in Finnish and English with equal ease and hold an AZ-900 certification alongside a B.Sc. in Industrial Engineering and Management, a combination that makes me a useful translator between engineering delivery and commercial expectations.
+
+---
+PROFESSIONAL EXPERIENCE
+Backend Tech Lead — Polaris Payments
+Aug 2021 – Present
+
+Technical lead for backend delivery in a payments environment, acting as the primary engineering counterpart for internal product owners and for integration partners on the client side.
+
+- Own the Docker containerisation standard across backend services: base image strategy, layer hygiene, build reproducibility and the image promotion path from developer laptop to production. Docker is the common contract between the service teams and the platform, and I maintain it as such.
+- Design and evolve Python microservices, setting service boundaries, ownership and contract expectations across the estate rather than letting them emerge accidentally.
+- Define and review REST API contracts consumed by partner-facing and internal clients, chairing the design discussions where versioning and backwards compatibility are settled.
+- Operate the container platform on Kubernetes in AWS, covering workload scheduling, resource sizing, rollout behaviour and failure recovery.
+- Codify infrastructure in Terraform so that environments are described, reviewed and reproducible instead of hand-assembled in a console.
+- Build asynchronous flows on Apache Kafka for settlement and notification paths where synchronous request/response coupling was a liability.
+- Model and tune the relational layer in SQL: schema design, query profiling and index strategy for transaction-heavy tables.
+- Run design reviews, onboarding and pairing for the backend group, and prepare the technical material used in stakeholder and partner sessions.
+Backend Software Engineer — Ruska Systems
+May 2016 – Aug 2021
+
+Delivery engineer across several client-facing backend engagements, with a consistent focus on the API surface and the data underneath it.
+
+- Designed, implemented and documented REST APIs that served as the integration point for client systems, working directly with client developers through specification, sandbox testing and go-live. The API layer was the deliverable clients judged the engagement on, and I treated it accordingly.
+- Took deep ownership of the SQL layer: normalised and denormalised schema decisions, migration planning against live data, query rewriting and index work to bring slow endpoints back into acceptable territory.
+- Wrote the bulk of service logic in Python, with attention to testability and to making handover to client teams straightforward.
+- Packaged services with Docker and deployed them onto Kubernetes clusters running in AWS.
+- Instrumented services and built Grafana dashboards so that both internal on-call and client stakeholders could see service health without asking an engineer.
+- Participated in incident response and in the post-incident write-ups shared with affected clients.
+Freelance Backend Developer — Self-employed (toiminimi)
+Apr 2015 – Nov 2015
+
+Independent backend work delivered directly to small business clients under my own trade name.
+
+- Built backend components in Python to client specification, scoping the work, agreeing deliverables and handling the engagement end to end without an account manager in between.
+- Handled requirements gathering, estimation, invoicing and handover documentation personally, which shaped how I still frame scope with clients today.
+Graduate Software Engineer — Ruska Systems
+Aug 2014 – May 2016
+
+Entry into professional backend delivery, contributing to services that supported client-facing products.
+
+- Implemented and extended REST API endpoints under review from senior engineers, learning the discipline of stable, well-documented interfaces early.
+- Wrote service code in Python and the accompanying SQL queries and schema changes.
+- Worked with Elasticsearch to support search and retrieval features over document-shaped data.
+- Learned the deployment toolchain in practice: building Docker images, deploying to Kubernetes and working with AWS services in development and staging environments.
+
+---
+SELECTED PERSONAL PROJECTS
+
+Job-board REST API — Backend project building out a job listing and application API, used as a sandbox for resource modelling, pagination and error-response conventions in REST APIs. Not deployed publicly.
+
+Self-hosted CI runner setup — DevOps exercise standing up a self-managed build runner environment, including the SQL-backed store for job and run history. Not deployed publicly.
+
+Cost dashboard for a cloud account — Infrastructure project collecting AWS account cost and usage data, streaming records through Apache Kafka and indexing them into Elasticsearch for exploration and breakdown by service. Not deployed publicly.
+
+---
+TECHNICAL SKILLS
+
+Languages & data: Python, SQL
+APIs & architecture: REST APIs, Microservices architecture
+Containers & orchestration: Docker, Kubernetes
+Cloud & infrastructure as code: AWS, Terraform
+Messaging & search: Apache Kafka, Elasticsearch
+Observability: Grafana
+
+---
+EDUCATION
+
+B.Sc., Industrial Engineering and Management
+
+---
+CERTIFICATIONS
+
+Microsoft Certified: Azure Fundamentals (AZ-900)
+
+---
+LANGUAGES
+
+Finnish — native
+English — C2
+German — B1

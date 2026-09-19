@@ -1,0 +1,745 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "41a9deffbafc735710db180883023aa7537c74e3bd56adcb614e3b787fad1729",
+  "source_file": "cv3_emma_laakso.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:19:34+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Backend Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Pilvi Solutions",
+    "start": "2019-07",
+    "end": "2026-07",
+    "date_precision": "year",
+    "months": 84,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "kubernetes",
+     "gcp",
+     "ci_cd",
+     "terraform"
+    ],
+    "primary_skills": [
+     "python",
+     "kubernetes",
+     "gcp",
+     "ci_cd",
+     "terraform"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
+      "start": 112,
+      "end": 157,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Software Developer",
+    "title_canonical": "other_software",
+    "employer": "DataForge",
+    "start": "2017-07",
+    "end": "2019-07",
+    "date_precision": "year",
+    "months": 24,
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "evidence": [
+     {
+      "quote": "Software Developer, DataForge (2017-2019)",
+      "start": 282,
+      "end": 323,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 108,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 108,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 84,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 2,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
+      "start": 112,
+      "end": 157,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
+      "start": 393,
+      "end": 449,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 84,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
+      "start": 393,
+      "end": 449,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "event_driven": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "- Built real-time event pipeline with Kafka, handling 2M events/day",
+      "start": 516,
+      "end": 583,
+      "section": "projects",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "gcp": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
+      "start": 112,
+      "end": 157,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
+      "start": 393,
+      "end": 449,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 84,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "kafka": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
+      "start": 393,
+      "end": 449,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "kubernetes": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
+      "start": 112,
+      "end": 157,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
+      "start": 393,
+      "end": 449,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 84,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "microservices": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "- Migrated legacy system to microservices on Kubernetes",
+      "start": 460,
+      "end": 515,
+      "section": "projects",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
+      "start": 112,
+      "end": 157,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
+      "start": 393,
+      "end": 449,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 84,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "terraform": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
+      "start": 112,
+      "end": 157,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
+      "start": 393,
+      "end": 449,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 84,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Migrated legacy system to microservices",
+   "topics": [
+    "backend",
+    "microservices",
+    "infrastructure"
+   ],
+   "skills": [
+    "microservices",
+    "kubernetes"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "- Migrated legacy system to microservices on Kubernetes",
+     "start": 460,
+     "end": 515,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Real-time event pipeline",
+   "topics": [
+    "data",
+    "backend"
+   ],
+   "skills": [
+    "kafka",
+    "event_driven"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "- Built real-time event pipeline with Kafka, handling 2M events/day",
+     "start": 516,
+     "end": 583,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Mentored junior engineers on cloud-native practices",
+   "topics": [
+    "other"
+   ],
+   "skills": [],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "- Mentored 4 junior engineers on cloud-native practices",
+     "start": 584,
+     "end": 639,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "backend": 2,
+  "data": 1,
+  "infrastructure": 1,
+  "microservices": 1,
+  "other": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "msc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "M.Sc. Computer Science, Tampere University",
+     "start": 335,
+     "end": 377,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "computer science",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "M.Sc. Computer Science, Tampere University",
+     "start": 335,
+     "end": 377,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": false,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "M.Sc. Computer Science, Tampere University",
+     "start": 335,
+     "end": 377,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "certifications": [],
+ "languages": [],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Tampere, Finland",
+     "start": 83,
+     "end": 99,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
+     "start": 112,
+     "end": 157,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
+     "start": 393,
+     "end": 449,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
+     "start": 112,
+     "end": 157,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
+     "start": 393,
+     "end": 449,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
+     "start": 112,
+     "end": 157,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
+     "start": 393,
+     "end": 449,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

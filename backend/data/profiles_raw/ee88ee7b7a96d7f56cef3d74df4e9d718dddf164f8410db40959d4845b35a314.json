@@ -1,0 +1,176 @@
+{
+ "cv_sha256": "ee88ee7b7a96d7f56cef3d74df4e9d718dddf164f8410db40959d4845b35a314",
+ "source_file": "synth_029.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:26:24+00:00",
+ "cv_text": "Mariela Ortega Sandoval\nOulu, Finland\nmariela.ortegas@mailbox-fi.net | +358 45 118 2246\n\nPROFILE\nQA Analyst working across manual and automated software testing, with day-to-day version control in Git and test automation in Python and JavaScript.\n\nEXPERIENCE\n\nQA Analyst, Vireo Solutions\nAug 2018 – Mar 2026\n- Owned branching, review and merge workflow in Git for the test automation repositories, keeping test code aligned with application releases.\n- Used Git tagging and history to trace regressions back to the change that introduced them.\n- Designed and executed functional and regression software testing across web applications.\n- Built browser automation with Selenium and later Playwright, replacing repetitive manual checks.\n- Wrote and maintained pytest suites in Python, including fixtures and parameterised cases.\n- Tested REST APIs for contract, error handling and authentication behaviour.\n- Integrated test runs into CI/CD pipelines so failures surfaced on every push.\n- Wrote helper scripts and assertions in JavaScript for front-end test scenarios.\n\nPROJECTS\n\nFlaky-test triage tooling\n- Tooling to detect and classify unstable tests, built around pytest reruns and reporting.\n- Compared Playwright run outcomes to separate timing issues from genuine defects.\n\nEnd-to-end test suite for a demo shop (deployed)\n- End-to-end checkout and catalogue coverage written in JavaScript.\n- Repository managed in Git with reviewable commits and a documented setup.\n\nEDUCATION\nB.Sc. in Biology\n\nCERTIFICATIONS\nMicrosoft Certified: Azure Fundamentals (AZ-900)\n\nSKILLS\nCI/CD, Git, JavaScript, Playwright, pytest, Python, REST APIs, Selenium, Software testing\n\nLANGUAGES\nSpanish — native\nEnglish — C1\nFinnish — A2\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "QA Analyst",
+    "title_canonical": "qa_engineer",
+    "employer": "Vireo Solutions",
+    "start_raw": "Aug 2018",
+    "end_raw": "Mar 2026",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "git",
+     "testing",
+     "selenium",
+     "playwright",
+     "pytest",
+     "python",
+     "rest_api",
+     "ci_cd",
+     "javascript"
+    ],
+    "primary_skills": [
+     "git",
+     "testing"
+    ],
+    "quote": "QA Analyst, Vireo Solutions"
+   },
+   {
+    "title_raw": "QA Analyst",
+    "title_canonical": "qa_engineer",
+    "employer": "",
+    "start_raw": "",
+    "end_raw": "",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "testing",
+     "git",
+     "python",
+     "javascript"
+    ],
+    "primary_skills": [
+     "testing",
+     "git",
+     "python",
+     "javascript"
+    ],
+    "quote": "QA Analyst working across manual and automated software testing"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "ci_cd",
+    "quote": "CI/CD, Git, JavaScript, Playwright, pytest, Python, REST APIs, Selenium, Software testing"
+   },
+   {
+    "skill": "git",
+    "quote": "CI/CD, Git, JavaScript"
+   },
+   {
+    "skill": "javascript",
+    "quote": "Git, JavaScript, Playwright"
+   },
+   {
+    "skill": "playwright",
+    "quote": "JavaScript, Playwright, pytest"
+   },
+   {
+    "skill": "pytest",
+    "quote": "Playwright, pytest, Python"
+   },
+   {
+    "skill": "python",
+    "quote": "pytest, Python, REST APIs"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Python, REST APIs, Selenium"
+   },
+   {
+    "skill": "selenium",
+    "quote": "REST APIs, Selenium, Software testing"
+   },
+   {
+    "skill": "testing",
+    "quote": "Selenium, Software testing"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Flaky-test triage tooling",
+    "topics": [
+     "testing"
+    ],
+    "skills": [
+     "pytest",
+     "playwright"
+    ],
+    "deployed": "unclear",
+    "quote": "Flaky-test triage tooling\n- Tooling to detect and classify unstable tests, built around pytest reruns and reporting."
+   },
+   {
+    "title": "End-to-end test suite for a demo shop",
+    "topics": [
+     "testing"
+    ],
+    "skills": [
+     "javascript",
+     "git"
+    ],
+    "deployed": "yes",
+    "quote": "End-to-end test suite for a demo shop (deployed)"
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "biology",
+   "in_progress": "unclear",
+   "quote": "B.Sc. in Biology"
+  },
+  "certifications": [
+   {
+    "cert_id": "microsoft_certified_azure_fundamentals_az_900",
+    "issuer": "Microsoft",
+    "issued_raw": "",
+    "quote": "Microsoft Certified: Azure Fundamentals (AZ-900)"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "es",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   },
+   {
+    "lang": "fi",
+    "cefr": "A2"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Oulu, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

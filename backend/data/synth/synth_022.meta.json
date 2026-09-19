@@ -1,0 +1,15 @@
+{
+ "idx": 22,
+ "source_file": "synth_022.txt",
+ "archetype": "frontend",
+ "style": "consultant two-pager: verbose, client-engagement framing, a profile summary paragraph on top",
+ "seniority": "mid",
+ "omitted_skills": [],
+ "overlap": true,
+ "year_only_dates": false,
+ "under_report": false,
+ "block_only_skills": [],
+ "n_roles": 4,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

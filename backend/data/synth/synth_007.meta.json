@@ -1,0 +1,22 @@
+{
+ "idx": 7,
+ "source_file": "synth_007.txt",
+ "archetype": "mid_backend",
+ "style": "academic style: formal register, long section headings, education before experience",
+ "seniority": "mid",
+ "omitted_skills": [
+  "postgresql",
+  "prometheus",
+  "rest_api",
+  "typescript"
+ ],
+ "overlap": true,
+ "year_only_dates": false,
+ "under_report": true,
+ "block_only_skills": [],
+ "n_roles": 5,
+ "leaked_skills": [
+  "ci_cd"
+ ],
+ "duration_phrases": []
+}

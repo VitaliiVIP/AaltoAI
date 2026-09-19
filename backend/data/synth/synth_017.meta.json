@@ -1,0 +1,23 @@
+{
+ "idx": 17,
+ "source_file": "synth_017.txt",
+ "archetype": "devops",
+ "style": "reverse-chronological with tight bullet points under each role, classic and plain",
+ "seniority": "senior",
+ "omitted_skills": [
+  "aws",
+  "git",
+  "grafana",
+  "kubernetes",
+  "linux"
+ ],
+ "overlap": false,
+ "year_only_dates": true,
+ "under_report": true,
+ "block_only_skills": [
+  "jenkins"
+ ],
+ "n_roles": 4,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

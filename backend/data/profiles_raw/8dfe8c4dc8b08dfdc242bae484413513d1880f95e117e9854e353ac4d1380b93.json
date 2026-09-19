@@ -1,0 +1,175 @@
+{
+ "cv_sha256": "8dfe8c4dc8b08dfdc242bae484413513d1880f95e117e9854e353ac4d1380b93",
+ "source_file": "synth_026.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:25:45+00:00",
+ "cv_text": "Aleksi Ruohonen\n\nVantaa, Finland\naleksi.ruohonen@examplemail.fi | +358 40 555 2187\n\nBackend-focused developer building REST APIs with Python on Linux.\nTyökokemus\n\nAPI Developer — Vantaa Systems\nMar 2026 – Present\n- Design and maintain REST APIs used by internal and partner-facing services.\n- Work daily on Linux servers: deployments, log inspection, shell tooling and service configuration.\n- Write Python services backed by PostgreSQL, with SQL queries tuned for reporting endpoints.\n- Package and run services in Docker containers.\n- Contribute lightweight HTML / CSS views for API documentation and admin pages.\n- Collaborate through Git with branch-based review.\n\nSoftware Developer Intern — Vireo Solutions\nJun 2025 – Nov 2025\n- Introduced MongoDB collections for storing semi-structured event data and wrote the access layer around them.\n- Built REST endpoints in Python with FastAPI.\n- Worked with PostgreSQL and SQL for relational parts of the system.\n- Used Docker for local development environments matching the deployed stack.\n- Handled version control and code review in Git.\nProjektit\n\nVolunteer website for a sports club\n- Built and deployed a public site for a local sports club on a Linux host.\n- Stored member and schedule data in PostgreSQL.\nKoulutus\n\nUpper secondary school diploma (lukio), Electrical Engineering\nTaidot\n\nPython, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Flask, Node.js, Docker, Linux, Git, HTML / CSS, Object-oriented programming\nKielet\n\nFinnish — native\nEnglish — C1\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "API Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Vantaa Systems",
+    "start_raw": "Mar 2026",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "linux",
+     "bash",
+     "python",
+     "postgresql",
+     "sql",
+     "docker",
+     "html_css",
+     "git"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "linux",
+     "bash"
+    ],
+    "quote": "API Developer — Vantaa Systems"
+   },
+   {
+    "title_raw": "Software Developer Intern",
+    "title_canonical": "backend_engineer",
+    "employer": "Vireo Solutions",
+    "start_raw": "Jun 2025",
+    "end_raw": "Nov 2025",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "mongodb",
+     "rest_api",
+     "python",
+     "fastapi",
+     "postgresql",
+     "sql",
+     "docker",
+     "git"
+    ],
+    "primary_skills": [
+     "mongodb",
+     "rest_api",
+     "python",
+     "fastapi"
+    ],
+    "quote": "Software Developer Intern — Vireo Solutions"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Flask, Node.js, Docker, Linux, Git, HTML / CSS, Object-oriented programming"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python, SQL, PostgreSQL"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "SQL, PostgreSQL, MongoDB"
+   },
+   {
+    "skill": "mongodb",
+    "quote": "PostgreSQL, MongoDB, REST APIs"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "MongoDB, REST APIs, FastAPI"
+   },
+   {
+    "skill": "fastapi",
+    "quote": "REST APIs, FastAPI, Flask"
+   },
+   {
+    "skill": "flask",
+    "quote": "FastAPI, Flask, Node.js"
+   },
+   {
+    "skill": "nodejs",
+    "quote": "Flask, Node.js, Docker"
+   },
+   {
+    "skill": "docker",
+    "quote": "Node.js, Docker, Linux"
+   },
+   {
+    "skill": "linux",
+    "quote": "Docker, Linux, Git"
+   },
+   {
+    "skill": "git",
+    "quote": "Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "html_css",
+    "quote": "Git, HTML / CSS, Object-oriented programming"
+   },
+   {
+    "skill": "oop",
+    "quote": "HTML / CSS, Object-oriented programming"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Volunteer website for a sports club",
+    "topics": [
+     "frontend",
+     "infrastructure"
+    ],
+    "skills": [
+     "linux",
+     "postgresql"
+    ],
+    "deployed": "yes",
+    "quote": "Volunteer website for a sports club\n- Built and deployed a public site for a local sports club on a Linux host.\n- Stored member and schedule data in PostgreSQL."
+   }
+  ],
+  "education": {
+   "highest_level": "secondary",
+   "field": "electrical engineering",
+   "in_progress": "unclear",
+   "quote": "Upper secondary school diploma (lukio), Electrical Engineering"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Vantaa, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

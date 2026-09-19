@@ -1,0 +1,41 @@
+Marek Ilvonen
+Helsinki, Finland
+marek.ilvonen@examplemail.fi | +358 40 555 0172
+
+PROFILE
+Communications graduate working across customer-facing and laboratory roles, with a consistent focus on iterative, team-based delivery using Agile and Scrum practices.
+
+SKILL AREAS
+
+Agile / Scrum
+- Worked within Scrum teams, taking part in sprint planning, daily stand-ups, reviews and retrospectives.
+- Maintained and refined backlog items, breaking larger requests into small, deliverable increments.
+- Used sprint boards to make work visible and to flag blockers early to the team.
+- Adapted Agile ceremonies to smaller, non-software teams, including laboratory workflow planning.
+- Supported retrospective follow-up actions and helped the team track whether agreed changes stuck.
+
+HTML / CSS
+- Built and edited simple page layouts and styling, structuring content with semantic markup and stylesheets.
+
+Customer Success
+- Handled customer queries and account follow-up, feeding recurring issues back into sprint planning as prioritised work items.
+
+Laboratory Work
+- Carried out routine sample handling and technical procedures, coordinating scheduling and task allocation through Scrum-style boards.
+
+PROJECTS
+Spreadsheet automation for a small shop
+- Automated repetitive spreadsheet tasks for a small retail business, planned and delivered in short iterations with regular feedback from the owner. Not deployed publicly.
+
+EMPLOYMENT HISTORY
+Customer Success Specialist, Baltic Health Services — May 2025 – Jul 2026
+Laboratory Technician, Suomi Retail Group — Dec 2021 – May 2025
+Customer Success Specialist, Metsa Logistics Oy — Jan 2020 – Dec 2021
+Laboratory Technician, Vihrea Puutarha Oy — Aug 2015 – Dec 2019
+
+EDUCATION
+B.Sc. Communications
+
+LANGUAGES
+English — C2
+Russian — native

@@ -1,0 +1,1473 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "a24275cd70512f47d8d6b9a798042fe18a356e276cc611b4e03a0bfa36216b04",
+  "source_file": "synth_014.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:22:45+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Senior Backend Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2024-02",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 31,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "python",
+     "postgresql",
+     "docker",
+     "kubernetes",
+     "aws",
+     "terraform",
+     "ci_cd",
+     "prometheus",
+     "linux",
+     "git",
+     "microservices"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "python",
+     "postgresql",
+     "docker",
+     "kubernetes",
+     "aws",
+     "terraform",
+     "ci_cd",
+     "prometheus",
+     "linux",
+     "git",
+     "microservices"
+    ],
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Senior Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Ruska Systems",
+    "start": "2021-12",
+    "end": "2024-02",
+    "date_precision": "month",
+    "months": 26,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "microservices",
+     "testing",
+     "git",
+     "rest_api",
+     "postgresql",
+     "redis",
+     "docker",
+     "kubernetes",
+     "aws",
+     "linux",
+     "ci_cd"
+    ],
+    "primary_skills": [
+     "python",
+     "microservices",
+     "testing",
+     "git",
+     "rest_api",
+     "postgresql",
+     "redis",
+     "docker",
+     "kubernetes",
+     "aws",
+     "linux",
+     "ci_cd"
+    ],
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Kaiku Digital",
+    "start": "2020-07",
+    "end": "2021-08",
+    "date_precision": "month",
+    "months": 13,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "event_driven",
+     "python",
+     "postgresql",
+     "sql",
+     "rest_api",
+     "docker",
+     "kubernetes",
+     "aws",
+     "ci_cd",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "event_driven",
+     "python",
+     "postgresql",
+     "sql",
+     "rest_api",
+     "docker",
+     "kubernetes",
+     "aws",
+     "ci_cd",
+     "linux",
+     "git"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Developer, Kaiku Digital (Jul 2020 – Aug 2021)",
+      "start": 1539,
+      "end": 1593,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Backend Developer Trainee",
+    "title_canonical": "backend_engineer",
+    "employer": "Vireo Solutions",
+    "start": "2018-06",
+    "end": "2020-04",
+    "date_precision": "month",
+    "months": 22,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "aws",
+     "docker",
+     "kubernetes",
+     "sql",
+     "postgresql",
+     "python",
+     "rest_api",
+     "grpc",
+     "grafana",
+     "git",
+     "ci_cd",
+     "linux"
+    ],
+    "primary_skills": [
+     "aws",
+     "docker",
+     "kubernetes",
+     "sql",
+     "postgresql",
+     "python",
+     "rest_api",
+     "grpc",
+     "grafana",
+     "git",
+     "ci_cd",
+     "linux"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Developer Trainee, Vireo Solutions (Jun 2018 – Apr 2020)",
+      "start": 2050,
+      "end": 2114,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Ruska Systems",
+    "start": "2014-11",
+    "end": "2018-06",
+    "date_precision": "month",
+    "months": 43,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "kubernetes",
+     "python",
+     "linux",
+     "docker",
+     "rest_api",
+     "postgresql",
+     "event_driven",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "kubernetes",
+     "python",
+     "linux",
+     "docker",
+     "rest_api",
+     "postgresql",
+     "event_driven",
+     "ci_cd",
+     "git"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior Backend Developer, Ruska Systems (Nov 2014 – Jun 2018)",
+      "start": 2567,
+      "end": 2628,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 135,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 135,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 135,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 5,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "aws": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS, CI/CD, Docker",
+      "start": 3408,
+      "end": 3426,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 92,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS, CI/CD, Docker",
+      "start": 3408,
+      "end": 3426,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 135,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS, CI/CD, Docker",
+      "start": 3408,
+      "end": 3426,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 135,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "event_driven": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer, Kaiku Digital (Jul 2020 – Aug 2021)",
+      "start": 1539,
+      "end": 1593,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Backend Developer, Ruska Systems (Nov 2014 – Jun 2018)",
+      "start": 2567,
+      "end": 2628,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Event-driven architecture, Git",
+      "start": 3428,
+      "end": 3458,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 56,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2021,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Event-driven architecture, Git",
+      "start": 3428,
+      "end": 3458,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 135,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "grafana": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer Trainee, Vireo Solutions (Jun 2018 – Apr 2020)",
+      "start": 2050,
+      "end": 2114,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Grafana, gRPC",
+      "start": 3460,
+      "end": 3473,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 22,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2020,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "grpc": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer Trainee, Vireo Solutions (Jun 2018 – Apr 2020)",
+      "start": 2050,
+      "end": 2114,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Grafana, gRPC",
+      "start": 3460,
+      "end": 3473,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 22,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2020,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "kubernetes": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Kubernetes, Linux",
+      "start": 3475,
+      "end": 3492,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 135,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Kubernetes, Linux",
+      "start": 3475,
+      "end": 3492,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 135,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "microservices": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Microservices architecture, PostgreSQL",
+      "start": 3494,
+      "end": 3532,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 57,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Microservices architecture, PostgreSQL",
+      "start": 3494,
+      "end": 3532,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 135,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "prometheus": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Prometheus, Python",
+      "start": 3534,
+      "end": 3552,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 31,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Prometheus, Python",
+      "start": 3534,
+      "end": 3552,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 135,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "redis": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Redis, REST APIs",
+      "start": 3554,
+      "end": 3570,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 26,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Redis, REST APIs",
+      "start": 3554,
+      "end": 3570,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 135,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer, Kaiku Digital (Jul 2020 – Aug 2021)",
+      "start": 1539,
+      "end": 1593,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer Trainee, Vireo Solutions (Jun 2018 – Apr 2020)",
+      "start": 2050,
+      "end": 2114,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "SQL, Terraform",
+      "start": 3572,
+      "end": 3586,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 35,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2021,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "terraform": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+      "start": 420,
+      "end": 476,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "SQL, Terraform",
+      "start": 3572,
+      "end": 3586,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 31,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+      "start": 1049,
+      "end": 1110,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 26,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Multi-service e-commerce sandbox",
+   "topics": [
+    "microservices",
+    "backend"
+   ],
+   "skills": [
+    "microservices",
+    "rest_api"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Multi-service e-commerce sandbox — a deployed playground split into independent services, used to explore microservices boundaries and to keep the REST APIs between them clean and well documented.",
+     "start": 3019,
+     "end": 3215,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Personal finance tracker backend",
+   "topics": [
+    "backend"
+   ],
+   "skills": [
+    "redis"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Personal finance tracker backend — a deployed backend service for categorising and summarising transactions, using Redis to cache derived aggregates and keep repeated lookups cheap.",
+     "start": 3217,
+     "end": 3398,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "backend": 2,
+  "microservices": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "msc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "M.Sc., Mathematics",
+     "start": 3599,
+     "end": 3617,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "mathematics",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "M.Sc., Mathematics",
+     "start": 3599,
+     "end": 3617,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "fi",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Helsinki, Finland",
+     "start": 16,
+     "end": 33,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+     "start": 420,
+     "end": 476,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+     "start": 1049,
+     "end": 1110,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "AWS, CI/CD, Docker",
+     "start": 3408,
+     "end": 3426,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+     "start": 420,
+     "end": 476,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+     "start": 1049,
+     "end": 1110,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "AWS, CI/CD, Docker",
+     "start": 3408,
+     "end": 3426,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+     "start": 420,
+     "end": 476,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "SQL, Terraform",
+     "start": 3572,
+     "end": 3586,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Developer, Kaiku Digital (Jul 2020 – Aug 2021)",
+     "start": 1539,
+     "end": 1593,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Backend Developer Trainee, Vireo Solutions (Jun 2018 – Apr 2020)",
+     "start": 2050,
+     "end": 2114,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "SQL, Terraform",
+     "start": 3572,
+     "end": 3586,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

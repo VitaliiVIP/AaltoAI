@@ -1,0 +1,154 @@
+{
+ "cv_sha256": "612f01d412b4027ab47ff6a99519b97b52d89fe97c1bc912f8e8f586a3c68d3d",
+ "source_file": "synth_011.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:22:02+00:00",
+ "cv_text": "Eetu Valkama\nTurku, Finland\neetu.valkama@example.fi | +358 40 555 2189\n\nBackend developer working with Python services, relational data models and containerised deployments.\n\nTyökokemus\n\nSoftware Engineer (Backend)\nNokka Oy, Apr 2026 – Present\n- Design and tune SQL queries and schemas in PostgreSQL, including indexing and query plan analysis for reporting-heavy endpoints.\n- Build and maintain HTTP services in Python with FastAPI.\n- Package services with Docker and run them on Linux hosts.\n- Work in Git-based review workflows, handling branching and merges for shared repositories.\n\nJunior Backend Developer\nRuska Systems, Sep 2025 – Apr 2026\n- Implemented backend features in Python against PostgreSQL databases.\n- Wrote SQL for data migrations and everyday application queries.\n- Containerised local development environments using Docker.\n- Took part in Agile / Scrum ceremonies: sprint planning, daily standups and retrospectives.\n- Used Git for version control and pull request reviews.\n\nProjektit\n\nPersonal finance tracker backend\n- A backend-only side project built with FastAPI, covering the API layer for tracking personal income and spending. Not deployed publicly.\n\nKoulutus\n\nVocational qualification (ammattitutkinto) in Information Technology\nSubject: Business Administration\n\nTaidot\n\nPython\nSQL\nPostgreSQL\nFastAPI\nDocker\nLinux\nGit\nAgile / Scrum\n\nKielet\n\nFinnish – native\nEnglish – B2\nSwedish – B1\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start_raw": "Apr 2026",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "sql",
+     "postgresql",
+     "python",
+     "fastapi",
+     "docker",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "sql",
+     "postgresql",
+     "python",
+     "fastapi"
+    ],
+    "quote": "Software Engineer (Backend)\nNokka Oy, Apr 2026 – Present"
+   },
+   {
+    "title_raw": "Junior Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Ruska Systems",
+    "start_raw": "Sep 2025",
+    "end_raw": "Apr 2026",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "postgresql",
+     "sql",
+     "docker",
+     "agile",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "postgresql",
+     "sql"
+    ],
+    "quote": "Junior Backend Developer\nRuska Systems, Sep 2025 – Apr 2026"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python"
+   },
+   {
+    "skill": "sql",
+    "quote": "SQL"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "PostgreSQL"
+   },
+   {
+    "skill": "fastapi",
+    "quote": "FastAPI"
+   },
+   {
+    "skill": "docker",
+    "quote": "Docker"
+   },
+   {
+    "skill": "linux",
+    "quote": "Linux"
+   },
+   {
+    "skill": "git",
+    "quote": "Git"
+   },
+   {
+    "skill": "agile",
+    "quote": "Agile / Scrum"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Personal finance tracker backend",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "fastapi",
+     "rest_api"
+    ],
+    "deployed": "no",
+    "quote": "A backend-only side project built with FastAPI, covering the API layer for tracking personal income and spending. Not deployed publicly."
+   }
+  ],
+  "education": {
+   "highest_level": "vocational",
+   "field": "Information Technology",
+   "in_progress": "unclear",
+   "quote": "Vocational qualification (ammattitutkinto) in Information Technology"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "B2"
+   },
+   {
+    "lang": "sv",
+    "cefr": "B1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Turku, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

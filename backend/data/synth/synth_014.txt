@@ -1,0 +1,42 @@
+Aleksi Harjunen
+Helsinki, Finland
+aleksi.harjunen@mailbox.fi | +358 40 555 8127
+
+Profile
+
+Backend engineer based in Helsinki, working mainly with Python, PostgreSQL and REST APIs on containerised services running on Linux, Docker and Kubernetes in AWS. Comfortable across microservices and event-driven designs, with day-to-day involvement in CI/CD pipelines, infrastructure as code and service monitoring.
+
+Experience
+
+Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)
+Designs and maintains the REST APIs that form the contract between Nordcom's internal services and its external integration partners, covering versioning, pagination, error semantics and contract documentation. Writes the underlying services in Python against PostgreSQL, packages them with Docker and runs them on Kubernetes in AWS. Describes environments in Terraform, keeps build and release automation healthy through the CI/CD pipelines, instruments services with Prometheus, and works on Linux hosts with Git as the shared backbone of a microservices architecture.
+
+Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)
+Worked primarily in Python, taking responsibility for the shape of the codebase across a set of microservices: shared libraries, testing conventions and review practice through Git. Built REST APIs backed by PostgreSQL and Redis caching, containerised them with Docker and deployed to Kubernetes clusters on AWS, tuning Linux runtime behaviour and extending CI/CD automation so that releases were routine rather than eventful.
+
+Backend Developer, Kaiku Digital (Jul 2020 – Aug 2021)
+Focused on event-driven architecture, moving synchronous workflows onto asynchronous message flows so that services could absorb load spikes independently. Implemented consumers and producers in Python, modelled and queried data in PostgreSQL with hand-written SQL, and exposed REST APIs where request-response still made sense. Shipped everything through Docker images to Kubernetes on AWS, maintained CI/CD pipelines and worked daily on Linux with Git.
+
+Backend Developer Trainee, Vireo Solutions (Jun 2018 – Apr 2020)
+Grew into the AWS side of the platform, learning how services, networking and storage fit together and how to deploy Dockerised workloads onto Kubernetes. Spent considerable time on SQL, writing and optimising queries against PostgreSQL and tracing slow statements back to their callers. Contributed Python services exposing REST APIs and gRPC interfaces, built dashboards in Grafana to make behaviour visible, and worked with Git and CI/CD on Linux.
+
+Junior Backend Developer, Ruska Systems (Nov 2014 – Jun 2018)
+Took an early interest in Kubernetes, helping move Python services from hand-managed Linux servers into containerised Docker workloads with declarative manifests, health checks and rolling updates. Implemented REST APIs over PostgreSQL, contributed to event-driven components for background processing, and helped set up the CI/CD pipelines and Git workflows the team relied on.
+
+Projects
+
+Multi-service e-commerce sandbox — a deployed playground split into independent services, used to explore microservices boundaries and to keep the REST APIs between them clean and well documented.
+
+Personal finance tracker backend — a deployed backend service for categorising and summarising transactions, using Redis to cache derived aggregates and keep repeated lookups cheap.
+
+Skills
+
+AWS, CI/CD, Docker, Event-driven architecture, Git, Grafana, gRPC, Kubernetes, Linux, Microservices architecture, PostgreSQL, Prometheus, Python, Redis, REST APIs, SQL, Terraform
+
+Education
+
+M.Sc., Mathematics
+
+Languages
+
+Finnish (native), English (C1)

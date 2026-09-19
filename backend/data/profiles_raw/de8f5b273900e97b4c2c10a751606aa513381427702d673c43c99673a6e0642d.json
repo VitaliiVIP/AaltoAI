@@ -1,0 +1,184 @@
+{
+ "cv_sha256": "de8f5b273900e97b4c2c10a751606aa513381427702d673c43c99673a6e0642d",
+ "source_file": "synth_002.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:20:15+00:00",
+ "cv_text": "Mikael Lehtovaara\nHelsinki, Finland\nmikael.lehtovaara@posteo.fi | +358 40 218 6647\n\nPROFESSIONAL PROFILE AND AREAS OF PRACTICE\n\nSite reliability practitioner concerned with the declarative provisioning of cloud infrastructure, automated delivery pipelines and the instrumentation of Linux systems. Particular interest in codifying environments with Terraform and in the orchestration of build and deployment workflows.\n\nEDUCATIONAL BACKGROUND AND FORMAL QUALIFICATIONS\n\nVocational qualification (ammattitutkinto) in Information Technology\nPrior study in Biology\n\nPROFESSIONAL APPOINTMENTS AND EMPLOYMENT HISTORY\n\nSite Reliability Engineer, Nokka Oy\nOct 2015 – Present\n- Authored and maintained Terraform configurations describing AWS accounts, networks and compute resources, treating infrastructure definitions as reviewed source artefacts.\n- Designed and administered Jenkins pipelines covering build, test and release stages, and reduced manual intervention in routine deployments.\n- Operated containerised services with Docker on Linux hosts, including image construction and runtime troubleshooting.\n- Instrumented services with Prometheus, defining metrics collection and alerting rules for production workloads.\n- Composed Bash and shell scripting utilities for host provisioning, log handling and recurring operational tasks.\n\nIT Operations Trainee, Vireo Solutions\nApr 2014 – Oct 2015\n- Administered Linux servers, attending to package management, user accounts, filesystem layout and diagnostic work on running systems.\n- Assisted in the migration of workloads to AWS, with environments described in Terraform.\n- Prepared Docker images for internal tooling and supported their use by colleagues.\n- Contributed job definitions to GitLab CI, enabling automated verification of changes prior to release.\n- Wrote Bash and shell scripting routines for backup verification and reporting.\n\nSELECTED TECHNICAL PROJECTS\n\nCost dashboard for a cloud account — infrastructure-oriented work; resources defined and deployed through Terraform.\n\nHome-lab cluster with monitoring — devops-oriented work; Linux hosts operated alongside AWS resources, deployed and kept in service.\n\nSpreadsheet automation for a small shop — backend and general automation; Terraform-provisioned AWS resources driven by Jenkins jobs, deployed for regular use.\n\nTECHNICAL COMPETENCIES\n\nAWS; AWS CloudFormation; Terraform; Docker; Linux; Bash / shell scripting; Jenkins; GitLab CI; Prometheus\n\nLANGUAGES\n\nRussian — native\nEnglish — C2\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Site Reliability Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Nokka Oy",
+    "start_raw": "Oct 2015",
+    "end_raw": "present",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "terraform",
+     "aws",
+     "jenkins",
+     "ci_cd",
+     "docker",
+     "linux",
+     "prometheus",
+     "bash",
+     "testing"
+    ],
+    "primary_skills": [
+     "terraform",
+     "aws",
+     "jenkins",
+     "ci_cd",
+     "testing"
+    ],
+    "quote": "Site Reliability Engineer, Nokka Oy"
+   },
+   {
+    "title_raw": "IT Operations Trainee",
+    "title_canonical": "devops_engineer",
+    "employer": "Vireo Solutions",
+    "start_raw": "Apr 2014",
+    "end_raw": "Oct 2015",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "linux",
+     "aws",
+     "terraform",
+     "docker",
+     "gitlab_ci",
+     "bash"
+    ],
+    "primary_skills": [
+     "linux",
+     "aws",
+     "terraform"
+    ],
+    "quote": "IT Operations Trainee, Vireo Solutions"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "aws",
+    "quote": "AWS; AWS CloudFormation"
+   },
+   {
+    "skill": "cloudformation",
+    "quote": "AWS CloudFormation"
+   },
+   {
+    "skill": "terraform",
+    "quote": "Terraform"
+   },
+   {
+    "skill": "docker",
+    "quote": "Docker"
+   },
+   {
+    "skill": "linux",
+    "quote": "Linux"
+   },
+   {
+    "skill": "bash",
+    "quote": "Bash / shell scripting"
+   },
+   {
+    "skill": "jenkins",
+    "quote": "Jenkins"
+   },
+   {
+    "skill": "gitlab_ci",
+    "quote": "GitLab CI"
+   },
+   {
+    "skill": "prometheus",
+    "quote": "Prometheus"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Cost dashboard for a cloud account",
+    "topics": [
+     "infrastructure",
+     "data"
+    ],
+    "skills": [
+     "terraform"
+    ],
+    "deployed": "yes",
+    "quote": "Cost dashboard for a cloud account — infrastructure-oriented work; resources defined and deployed through Terraform."
+   },
+   {
+    "title": "Home-lab cluster with monitoring",
+    "topics": [
+     "devops",
+     "infrastructure"
+    ],
+    "skills": [
+     "linux",
+     "aws"
+    ],
+    "deployed": "yes",
+    "quote": "Home-lab cluster with monitoring — devops-oriented work; Linux hosts operated alongside AWS resources, deployed and kept in service."
+   },
+   {
+    "title": "Spreadsheet automation for a small shop",
+    "topics": [
+     "backend",
+     "devops"
+    ],
+    "skills": [
+     "terraform",
+     "aws",
+     "jenkins"
+    ],
+    "deployed": "yes",
+    "quote": "Spreadsheet automation for a small shop — backend and general automation; Terraform-provisioned AWS resources driven by Jenkins jobs, deployed for regular use."
+   }
+  ],
+  "education": {
+   "highest_level": "vocational",
+   "field": "information technology",
+   "in_progress": "unclear",
+   "quote": "Vocational qualification (ammattitutkinto) in Information Technology"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "ru",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C2"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Helsinki, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

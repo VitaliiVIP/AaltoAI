@@ -1,0 +1,17 @@
+{
+ "idx": 19,
+ "source_file": "synth_019.txt",
+ "archetype": "junior_backend",
+ "style": "reverse-chronological with tight bullet points under each role, classic and plain",
+ "seniority": "junior",
+ "omitted_skills": [],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": false,
+ "block_only_skills": [
+  "nodejs"
+ ],
+ "n_roles": 2,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

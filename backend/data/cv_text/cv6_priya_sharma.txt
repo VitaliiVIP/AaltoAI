@@ -1,0 +1,19 @@
+Priya Sharma
+Backend Software Engineer
+priya.sharma@example.com | +358 41 333 4455 | Helsinki, Finland
+
+Experience
+Software Developer, AppWorks Oy (2022-2026) - 3 years
+- Python and Flask APIs, deployed manually on VMs
+- No production cloud/orchestration experience
+
+Education
+B.Sc. Computer Science, Haaga-Helia UAS (2022)
+
+Skills
+Python, Flask, MySQL, Git, basic Docker
+
+Projects
+- Built a small internal booking API (Flask + MySQL)
+- Personal project: weather-data dashboard
+

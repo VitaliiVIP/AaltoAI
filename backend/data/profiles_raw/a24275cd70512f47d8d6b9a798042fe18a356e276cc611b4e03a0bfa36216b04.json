@@ -1,0 +1,329 @@
+{
+ "cv_sha256": "a24275cd70512f47d8d6b9a798042fe18a356e276cc611b4e03a0bfa36216b04",
+ "source_file": "synth_014.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:22:45+00:00",
+ "cv_text": "Aleksi Harjunen\nHelsinki, Finland\naleksi.harjunen@mailbox.fi | +358 40 555 8127\n\nProfile\n\nBackend engineer based in Helsinki, working mainly with Python, PostgreSQL and REST APIs on containerised services running on Linux, Docker and Kubernetes in AWS. Comfortable across microservices and event-driven designs, with day-to-day involvement in CI/CD pipelines, infrastructure as code and service monitoring.\n\nExperience\n\nSenior Backend Engineer, Nordcom Oy (Feb 2024 – Present)\nDesigns and maintains the REST APIs that form the contract between Nordcom's internal services and its external integration partners, covering versioning, pagination, error semantics and contract documentation. Writes the underlying services in Python against PostgreSQL, packages them with Docker and runs them on Kubernetes in AWS. Describes environments in Terraform, keeps build and release automation healthy through the CI/CD pipelines, instruments services with Prometheus, and works on Linux hosts with Git as the shared backbone of a microservices architecture.\n\nSenior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)\nWorked primarily in Python, taking responsibility for the shape of the codebase across a set of microservices: shared libraries, testing conventions and review practice through Git. Built REST APIs backed by PostgreSQL and Redis caching, containerised them with Docker and deployed to Kubernetes clusters on AWS, tuning Linux runtime behaviour and extending CI/CD automation so that releases were routine rather than eventful.\n\nBackend Developer, Kaiku Digital (Jul 2020 – Aug 2021)\nFocused on event-driven architecture, moving synchronous workflows onto asynchronous message flows so that services could absorb load spikes independently. Implemented consumers and producers in Python, modelled and queried data in PostgreSQL with hand-written SQL, and exposed REST APIs where request-response still made sense. Shipped everything through Docker images to Kubernetes on AWS, maintained CI/CD pipelines and worked daily on Linux with Git.\n\nBackend Developer Trainee, Vireo Solutions (Jun 2018 – Apr 2020)\nGrew into the AWS side of the platform, learning how services, networking and storage fit together and how to deploy Dockerised workloads onto Kubernetes. Spent considerable time on SQL, writing and optimising queries against PostgreSQL and tracing slow statements back to their callers. Contributed Python services exposing REST APIs and gRPC interfaces, built dashboards in Grafana to make behaviour visible, and worked with Git and CI/CD on Linux.\n\nJunior Backend Developer, Ruska Systems (Nov 2014 – Jun 2018)\nTook an early interest in Kubernetes, helping move Python services from hand-managed Linux servers into containerised Docker workloads with declarative manifests, health checks and rolling updates. Implemented REST APIs over PostgreSQL, contributed to event-driven components for background processing, and helped set up the CI/CD pipelines and Git workflows the team relied on.\n\nProjects\n\nMulti-service e-commerce sandbox — a deployed playground split into independent services, used to explore microservices boundaries and to keep the REST APIs between them clean and well documented.\n\nPersonal finance tracker backend — a deployed backend service for categorising and summarising transactions, using Redis to cache derived aggregates and keep repeated lookups cheap.\n\nSkills\n\nAWS, CI/CD, Docker, Event-driven architecture, Git, Grafana, gRPC, Kubernetes, Linux, Microservices architecture, PostgreSQL, Prometheus, Python, Redis, REST APIs, SQL, Terraform\n\nEducation\n\nM.Sc., Mathematics\n\nLanguages\n\nFinnish (native), English (C1)\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Senior Backend Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start_raw": "Feb 2024",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "python",
+     "postgresql",
+     "docker",
+     "kubernetes",
+     "aws",
+     "terraform",
+     "ci_cd",
+     "prometheus",
+     "linux",
+     "git",
+     "microservices"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "python",
+     "postgresql",
+     "docker",
+     "kubernetes",
+     "aws",
+     "terraform",
+     "ci_cd",
+     "prometheus",
+     "linux",
+     "git",
+     "microservices"
+    ],
+    "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)"
+   },
+   {
+    "title_raw": "Senior Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Ruska Systems",
+    "start_raw": "Dec 2021",
+    "end_raw": "Feb 2024",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "microservices",
+     "testing",
+     "git",
+     "rest_api",
+     "postgresql",
+     "redis",
+     "docker",
+     "kubernetes",
+     "aws",
+     "linux",
+     "ci_cd"
+    ],
+    "primary_skills": [
+     "python",
+     "microservices",
+     "testing",
+     "git",
+     "rest_api",
+     "postgresql",
+     "redis",
+     "docker",
+     "kubernetes",
+     "aws",
+     "linux",
+     "ci_cd"
+    ],
+    "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)"
+   },
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Kaiku Digital",
+    "start_raw": "Jul 2020",
+    "end_raw": "Aug 2021",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "event_driven",
+     "python",
+     "postgresql",
+     "sql",
+     "rest_api",
+     "docker",
+     "kubernetes",
+     "aws",
+     "ci_cd",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "event_driven",
+     "python",
+     "postgresql",
+     "sql",
+     "rest_api",
+     "docker",
+     "kubernetes",
+     "aws",
+     "ci_cd",
+     "linux",
+     "git"
+    ],
+    "quote": "Backend Developer, Kaiku Digital (Jul 2020 – Aug 2021)"
+   },
+   {
+    "title_raw": "Backend Developer Trainee",
+    "title_canonical": "backend_engineer",
+    "employer": "Vireo Solutions",
+    "start_raw": "Jun 2018",
+    "end_raw": "Apr 2020",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "aws",
+     "docker",
+     "kubernetes",
+     "sql",
+     "postgresql",
+     "python",
+     "rest_api",
+     "grpc",
+     "grafana",
+     "git",
+     "ci_cd",
+     "linux"
+    ],
+    "primary_skills": [
+     "aws",
+     "docker",
+     "kubernetes",
+     "sql",
+     "postgresql",
+     "python",
+     "rest_api",
+     "grpc",
+     "grafana",
+     "git",
+     "ci_cd",
+     "linux"
+    ],
+    "quote": "Backend Developer Trainee, Vireo Solutions (Jun 2018 – Apr 2020)"
+   },
+   {
+    "title_raw": "Junior Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Ruska Systems",
+    "start_raw": "Nov 2014",
+    "end_raw": "Jun 2018",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "kubernetes",
+     "python",
+     "linux",
+     "docker",
+     "rest_api",
+     "postgresql",
+     "event_driven",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "kubernetes",
+     "python",
+     "linux",
+     "docker",
+     "rest_api",
+     "postgresql",
+     "event_driven",
+     "ci_cd",
+     "git"
+    ],
+    "quote": "Junior Backend Developer, Ruska Systems (Nov 2014 – Jun 2018)"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "aws",
+    "quote": "AWS, CI/CD, Docker"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "AWS, CI/CD, Docker"
+   },
+   {
+    "skill": "docker",
+    "quote": "AWS, CI/CD, Docker"
+   },
+   {
+    "skill": "event_driven",
+    "quote": "Event-driven architecture, Git"
+   },
+   {
+    "skill": "git",
+    "quote": "Event-driven architecture, Git"
+   },
+   {
+    "skill": "grafana",
+    "quote": "Grafana, gRPC"
+   },
+   {
+    "skill": "grpc",
+    "quote": "Grafana, gRPC"
+   },
+   {
+    "skill": "kubernetes",
+    "quote": "Kubernetes, Linux"
+   },
+   {
+    "skill": "linux",
+    "quote": "Kubernetes, Linux"
+   },
+   {
+    "skill": "microservices",
+    "quote": "Microservices architecture, PostgreSQL"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Microservices architecture, PostgreSQL"
+   },
+   {
+    "skill": "prometheus",
+    "quote": "Prometheus, Python"
+   },
+   {
+    "skill": "python",
+    "quote": "Prometheus, Python"
+   },
+   {
+    "skill": "redis",
+    "quote": "Redis, REST APIs"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Redis, REST APIs"
+   },
+   {
+    "skill": "sql",
+    "quote": "SQL, Terraform"
+   },
+   {
+    "skill": "terraform",
+    "quote": "SQL, Terraform"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Multi-service e-commerce sandbox",
+    "topics": [
+     "microservices",
+     "backend"
+    ],
+    "skills": [
+     "microservices",
+     "rest_api"
+    ],
+    "deployed": "yes",
+    "quote": "Multi-service e-commerce sandbox — a deployed playground split into independent services, used to explore microservices boundaries and to keep the REST APIs between them clean and well documented."
+   },
+   {
+    "title": "Personal finance tracker backend",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "redis"
+    ],
+    "deployed": "yes",
+    "quote": "Personal finance tracker backend — a deployed backend service for categorising and summarising transactions, using Redis to cache derived aggregates and keep repeated lookups cheap."
+   }
+  ],
+  "education": {
+   "highest_level": "msc",
+   "field": "mathematics",
+   "in_progress": "unclear",
+   "quote": "M.Sc., Mathematics"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Helsinki, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

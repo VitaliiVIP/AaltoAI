@@ -1,0 +1,22 @@
+Elina Korhonen
+Backend Software Engineer
+elina.korhonen@example.com | +358 40 123 4567 | Helsinki, Finland
+
+Experience
+Senior Backend Engineer, Nordcom Oy (2020-2026) - 6 years
+- Built and operated Python/Go microservices on Kubernetes
+- Led migration of monolith to event-driven architecture on AWS
+Backend Developer, Vantaa Systems (2018-2020)
+- Developed REST APIs, CI/CD pipelines with GitLab and Docker
+
+Education
+M.Sc. Computer Science, Aalto University (2018)
+
+Skills
+Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform
+
+Projects
+- Open-source Kubernetes operator for auto-scaling (450 GitHub stars)
+- Led cloud-cost optimisation project, cut AWS spend by 30%
+- Built internal CI/CD platform used by 12 teams
+

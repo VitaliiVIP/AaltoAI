@@ -1,0 +1,97 @@
+Eero Valtanen
+
+Tartu, Estonia
+eero.valtanen@mailbox-ee.net | +372 5512 8830
+
+---
+SUMMARY
+
+Backend engineer working with Python, Go and Java on containerised services in AWS. Comfortable designing REST APIs and gRPC interfaces, running workloads on Kubernetes, and keeping CI/CD pipelines and Terraform-managed infrastructure in good order.
+
+---
+SKILLS
+
+- Languages: Python, Go, Java
+- Services & interfaces: REST APIs, gRPC, Apache Kafka, Redis
+- Platform: Kubernetes, Helm, Linux, AWS, Terraform
+- Delivery: CI/CD, Git
+
+---
+EXPERIENCE
+
+Backend Tech Lead — Ruska Systems
+Mar 2025 – Aug 2026
+
+- Led backend design and delivery for Python, Go and Java services.
+- Defined and documented REST API contracts shared across client and partner integrations, including versioning and deprecation practice.
+- Owned CI/CD pipelines end to end: build, test, container image promotion and automated deployment to Kubernetes.
+- Managed AWS infrastructure as code with Terraform, keeping environments reproducible.
+- Introduced gRPC for latency-sensitive internal service calls.
+- Ran Git branching and review standards; maintained Linux-based runtime tooling.
+
+Backend Tech Lead — Sisu Software Oy
+Oct 2021 – Mar 2025
+
+- Drove adoption of gRPC for service-to-service communication, defining protobuf schemas and rollout patterns alongside existing REST APIs.
+- Guided a backend team building Python and Go services deployed to Kubernetes on AWS.
+- Used Redis for caching and short-lived state to cut repeated downstream calls.
+- Maintained CI/CD pipelines and release automation; reviewed changes in Git.
+- Handled Linux-level debugging, resource tuning and on-call escalations.
+
+Software Engineer (Backend) — Nokka Oy
+Nov 2020 – Sep 2021
+
+- Built and extended REST APIs in Python and Go, focusing on clear resource modelling and predictable error handling.
+- Packaged services with Helm for repeatable Kubernetes deployments.
+- Extended CI/CD workflows to cover integration tests before promotion.
+- Operated services on AWS and troubleshot issues on Linux hosts.
+
+Junior Backend Developer — Koski Engineering
+Jul 2019 – Nov 2020
+
+- Worked hands-on with Kubernetes: manifests, probes, resource limits and rolling updates for backend workloads.
+- Implemented REST API endpoints and gRPC handlers in Python.
+- Contributed to CI/CD pipeline steps and deployment scripts.
+- Supported AWS-hosted Linux environments and everyday Git workflow.
+
+Freelance Backend Developer — Independent contractor
+Feb 2018 – Dec 2018
+
+- Delivered Python backend work for small clients, from initial scoping to handover.
+- Kept all client work under Git with readable history and documented setup steps.
+
+Backend Developer Trainee — Sisu Software Oy
+May 2017 – May 2019
+
+- Worked with Apache Kafka producers and consumers for event-driven data flows.
+- Assisted in building REST API endpoints in Python.
+- Packaged and deployed applications to Kubernetes using Helm charts.
+- Ran tasks on Linux, contributed to CI/CD job configuration and used Git daily.
+
+---
+PROJECTS
+
+Terraform modules for a three-tier app
+Reusable Terraform modules provisioning AWS infrastructure for a three-tier application layout.
+
+Job-board REST API
+Backend service exposing a REST API for job listings and applications.
+
+Recipe API with authentication
+Python backend providing recipe resources behind authenticated access.
+
+---
+EDUCATION
+
+B.Sc., Communications
+
+---
+CERTIFICATIONS
+
+Certified Kubernetes Application Developer (CKAD)
+
+---
+LANGUAGES
+
+Finnish — native
+English — C1

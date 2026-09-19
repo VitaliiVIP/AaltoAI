@@ -1,0 +1,56 @@
+Mikael Ahonen
+Tartu, Estonia
+mikael.ahonen@kolmemail.ee | +372 5512 8834
+
+Backend software engineer working with Python, Django and relational databases.
+
+Työkokemus
+
+Backend Software Engineer — Nokka Oy
+Jun 2022 – May 2026
+- Wrote and tuned SQL queries against PostgreSQL, reworking joins and indexes for reporting and batch jobs.
+- Modelled schemas and migrations for Django services, keeping query logic readable and reviewable.
+- Built and maintained REST APIs consumed by internal and partner clients.
+- Packaged services with Docker for consistent local and CI environments.
+- Covered business rules with pytest suites; managed work in Git with review-based branching.
+- Produced ad hoc data extracts and reconciliation sheets in Excel / spreadsheets for finance colleagues.
+
+Freelance Developer (contract) — Freelance
+Mar 2020 – Feb 2021
+- Delivered small Python tools and automation scripts for client data tasks, from first spec to handover.
+- Wrote SQL to pull and clean data from client databases.
+- Kept each engagement in Git, with tagged releases and written handover notes.
+
+Shop Assistant — Vihrea Puutarha Oy
+May 2019 – Feb 2022
+- Maintained stock, ordering and seasonal pricing sheets in Excel / spreadsheets.
+- Took part in Agile / Scrum style team routines: short daily stand-ups, backlog of shop tasks, retrospectives after peak weekends.
+
+Warehouse Associate — Kanta Kirjasto
+Jan 2018 – May 2019
+- Ran the goods-in and inventory tracking sheets in Excel / spreadsheets, flagging discrepancies for the team lead.
+- Helped organise work using Agile / Scrum practices, including planning sessions and a visible task board.
+- Used SQL to look up item records in the catalogue database when stock data disagreed.
+
+Koulutus
+
+M.Sc., Information Technology
+
+Sertifikaatit
+
+Certified ScrumMaster (CSM)
+
+Taidot
+
+Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum
+
+Projektit
+
+Bootcamp capstone: to-do app — tutorial-based project built in Python; deployed and publicly reachable.
+
+Course project: blog engine — tutorial-based project with a PostgreSQL backing store and REST APIs; content and post statistics tracked in Excel / spreadsheets. Deployed.
+
+Kielet
+
+Finnish — native
+English — C1

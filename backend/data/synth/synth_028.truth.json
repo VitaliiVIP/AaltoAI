@@ -1,0 +1,345 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "synthetic",
+  "source_file": "synth_028.txt",
+  "extractor_model": "truth",
+  "prompt_version": "synth-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Customer Success Specialist",
+    "title_canonical": "non_software",
+    "employer": "Baltic Health Services",
+    "start": "2025-05",
+    "end": "2026-07",
+    "date_precision": "month",
+    "months": 14,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "agile"
+    ],
+    "primary_skills": [
+     "excel",
+     "agile"
+    ],
+    "evidence": []
+   },
+   {
+    "title_raw": "Laboratory Technician",
+    "title_canonical": "non_software",
+    "employer": "Suomi Retail Group",
+    "start": "2021-12",
+    "end": "2025-05",
+    "date_precision": "month",
+    "months": 41,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "agile"
+    ],
+    "primary_skills": [
+     "agile"
+    ],
+    "evidence": []
+   },
+   {
+    "title_raw": "Customer Success Specialist",
+    "title_canonical": "non_software",
+    "employer": "Metsa Logistics Oy",
+    "start": "2020-01",
+    "end": "2021-12",
+    "date_precision": "month",
+    "months": 23,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "agile"
+    ],
+    "primary_skills": [
+     "agile",
+     "excel"
+    ],
+    "evidence": []
+   },
+   {
+    "title_raw": "Laboratory Technician",
+    "title_canonical": "non_software",
+    "employer": "Vihrea Puutarha Oy",
+    "start": "2015-08",
+    "end": "2019-12",
+    "date_precision": "month",
+    "months": 52,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "agile"
+    ],
+    "primary_skills": [
+     "agile",
+     "excel"
+    ],
+    "evidence": []
+   }
+  ],
+  "total_months": {
+   "value": 130,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "mid",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 4,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "agile": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 130,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "excel": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": 130,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "html_css": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": []
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  }
+ },
+ "projects": [
+  {
+   "title": "Spreadsheet automation for a small shop",
+   "topics": [
+    "other"
+   ],
+   "skills": [
+    "agile",
+    "excel"
+   ],
+   "deployed": false,
+   "evidence": []
+  }
+ ],
+ "project_counts_by_topic": {
+  "other": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": []
+  },
+  "field": {
+   "value": "Communications",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": []
+  },
+  "in_progress": {
+   "value": false,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "English",
+   "cefr": "C2",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "Russian",
+   "cefr": "native",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": "EU",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": false,
+   "derivation": "inferred",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": []
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

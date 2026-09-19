@@ -1,0 +1,188 @@
+{
+ "cv_sha256": "08527174e8f1410a1acfffa9555f447a26c5573870cc196b67f87d02120224c1",
+ "source_file": "synth_024.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:25:14+00:00",
+ "cv_text": "Tuomas Elovaara\nVantaa, Finland | tuomas.elovaara@examplemail.fi | +358 40 555 0192\nOpen to relocation\n\nPROFILE\n\nFrontend engineer working with JavaScript, TypeScript, React and Next.js, comfortable moving between markup and styling detail, component architecture and the data layer. Used to collaborative, iterative delivery in Agile / Scrum teams.\n\nEXPERIENCE\n\nFrontend Engineer, Kaiku Digital — Jul 2023 – Present\nWorks inside an Agile / Scrum team, taking part in refinement, sprint planning, daily stand-ups and reviews, and shaping tickets so that design intent survives into implementation. Much of the day-to-day work is hands-on HTML / CSS: building responsive, accessible layouts and keeping styling consistent across a growing React and Next.js codebase. Writes application logic in JavaScript and TypeScript, consumes and shapes GraphQL queries for the interface, and contributes Node.js work where the frontend needs supporting endpoints and tooling. Collaborates through Git, reviewing branches and keeping the history readable for the rest of the team.\n\nJunior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023\nBuilt and maintained interface features in React and Next.js, typing components and shared utilities with TypeScript and writing the underlying markup and styles by hand in HTML / CSS. Took responsibility for end-to-end coverage with Playwright, adding browser tests for critical user journeys and keeping the suite stable enough to be trusted before releases. Worked closely with the GraphQL layer, defining and refining queries and fragments with backend colleagues so screens fetched exactly the data they needed. Everyday JavaScript work and Git-based code review rounded out the role.\n\nPROJECTS\n\nBootcamp capstone: to-do app — a tutorial-led project built with plain HTML / CSS and JavaScript, used to practise DOM handling and layout fundamentals.\n\nSpreadsheet automation for a small shop — a deployed Node.js and JavaScript utility that replaced manual spreadsheet edits with a scripted routine for a local business.\n\nEDUCATION\n\nVocational qualification (ammattitutkinto) in Information Technology — Industrial Engineering and Management\n\nSKILLS\n\nAgile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript\n\nLANGUAGES\n\nFinnish (native), English (C1)\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Frontend Engineer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Kaiku Digital",
+    "start_raw": "Jul 2023",
+    "end_raw": "present",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "agile",
+     "html_css",
+     "react",
+     "nextjs",
+     "javascript",
+     "typescript",
+     "graphql",
+     "nodejs",
+     "git"
+    ],
+    "primary_skills": [
+     "agile",
+     "html_css",
+     "react",
+     "nextjs",
+     "javascript",
+     "typescript",
+     "graphql",
+     "nodejs",
+     "git"
+    ],
+    "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present"
+   },
+   {
+    "title_raw": "Junior Frontend Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Koski Engineering",
+    "start_raw": "Oct 2020",
+    "end_raw": "Jul 2023",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "react",
+     "nextjs",
+     "typescript",
+     "html_css",
+     "playwright",
+     "testing",
+     "graphql",
+     "javascript",
+     "git"
+    ],
+    "primary_skills": [
+     "react",
+     "nextjs",
+     "typescript",
+     "html_css",
+     "playwright",
+     "testing",
+     "graphql",
+     "javascript",
+     "git"
+    ],
+    "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "agile",
+    "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript"
+   },
+   {
+    "skill": "git",
+    "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript"
+   },
+   {
+    "skill": "graphql",
+    "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript"
+   },
+   {
+    "skill": "html_css",
+    "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript"
+   },
+   {
+    "skill": "javascript",
+    "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript"
+   },
+   {
+    "skill": "nextjs",
+    "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript"
+   },
+   {
+    "skill": "nodejs",
+    "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript"
+   },
+   {
+    "skill": "playwright",
+    "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript"
+   },
+   {
+    "skill": "react",
+    "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript"
+   },
+   {
+    "skill": "typescript",
+    "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Bootcamp capstone: to-do app",
+    "topics": [
+     "tutorial"
+    ],
+    "skills": [
+     "html_css",
+     "javascript"
+    ],
+    "deployed": "unclear",
+    "quote": "Bootcamp capstone: to-do app — a tutorial-led project built with plain HTML / CSS and JavaScript, used to practise DOM handling and layout fundamentals."
+   },
+   {
+    "title": "Spreadsheet automation for a small shop",
+    "topics": [
+     "other"
+    ],
+    "skills": [
+     "nodejs",
+     "javascript"
+    ],
+    "deployed": "yes",
+    "quote": "Spreadsheet automation for a small shop — a deployed Node.js and JavaScript utility that replaced manual spreadsheet edits with a scripted routine for a local business."
+   }
+  ],
+  "education": {
+   "highest_level": "vocational",
+   "field": "information technology",
+   "in_progress": "unclear",
+   "quote": "Vocational qualification (ammattitutkinto) in Information Technology — Industrial Engineering and Management"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "yes",
+   "quote": "Open to relocation"
+  },
+  "unmatched_skills": [
+   "DOM handling"
+  ],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

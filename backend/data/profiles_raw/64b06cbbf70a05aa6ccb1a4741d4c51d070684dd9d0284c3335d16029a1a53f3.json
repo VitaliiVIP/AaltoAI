@@ -1,0 +1,191 @@
+{
+ "cv_sha256": "64b06cbbf70a05aa6ccb1a4741d4c51d070684dd9d0284c3335d16029a1a53f3",
+ "source_file": "synth_019.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:23:55+00:00",
+ "cv_text": "Eetu Larvanto\nVantaa, Finland\neetu.larvanto@examplemail.fi | +358 40 555 0198\n\nPROFILE\nBackend developer working with Python, REST APIs and relational databases, with containerised services and Linux-based deployment forming the core of day-to-day work.\n\nEXPERIENCE\n\nBackend Developer — Kaiku Digital\nJun 2025 – Present\n- Build and maintain backend services in Python, with REST APIs consumed by internal and customer-facing clients.\n- Package and run services in Docker, standardising local development and deployment images across the team.\n- Design and query PostgreSQL schemas, writing SQL for reporting and data migration tasks.\n- Administer service instances on Linux hosts, handling logs, permissions and scheduled jobs.\n- Produce lightweight HTML / CSS pages for internal tooling and API documentation views.\n- Work in Git with branch-based review and merge practices.\n\nJunior Software Engineer — Arctic Cloud Oy\nJan 2025 – Jun 2025\n- Modelled and tuned PostgreSQL databases, including indexing and query rewrites for heavier endpoints.\n- Implemented REST APIs in Python using FastAPI, covering request validation and error handling.\n- Stored semi-structured data in MongoDB where relational modelling was not a good fit.\n- Containerised applications with Docker and deployed them to AWS environments.\n- Wrote SQL for data checks and ad-hoc analysis requested by product colleagues.\n- Collaborated through Git pull requests and code review.\n\nPROJECTS\n\nDiscord bot for a study group\n- Integrated external REST APIs to deliver scheduling and reminder commands.\n- Ran the bot from a Docker container; source managed in Git.\n\nVolunteer website for a sports club\n- Built the backend and data layer, storing club and fixture data via SQL.\n- Exposed REST API endpoints for the site and packaged the stack with Docker.\n\nSKILLS\nPython, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS\n\nEDUCATION\nB.Sc., Electrical Engineering\n\nLANGUAGES\nFinnish — native\nEnglish — B2\nSwedish — B1\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Kaiku Digital",
+    "start_raw": "Jun 2025",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "rest_api",
+     "docker",
+     "postgresql",
+     "sql",
+     "linux",
+     "html_css",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "rest_api",
+     "docker"
+    ],
+    "quote": "Backend Developer — Kaiku Digital"
+   },
+   {
+    "title_raw": "Junior Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Arctic Cloud Oy",
+    "start_raw": "Jan 2025",
+    "end_raw": "Jun 2025",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "postgresql",
+     "rest_api",
+     "python",
+     "fastapi",
+     "mongodb",
+     "docker",
+     "aws",
+     "sql",
+     "git"
+    ],
+    "primary_skills": [
+     "postgresql",
+     "rest_api",
+     "python",
+     "fastapi"
+    ],
+    "quote": "Junior Software Engineer — Arctic Cloud Oy"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "mongodb",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "fastapi",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "nodejs",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "docker",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "aws",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "linux",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "git",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   },
+   {
+    "skill": "html_css",
+    "quote": "Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Node.js, Docker, AWS, Linux, Git, HTML / CSS"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Discord bot for a study group",
+    "topics": [
+     "backend",
+     "other"
+    ],
+    "skills": [
+     "rest_api",
+     "docker",
+     "git"
+    ],
+    "deployed": "unclear",
+    "quote": "Discord bot for a study group\n- Integrated external REST APIs to deliver scheduling and reminder commands.\n- Ran the bot from a Docker container; source managed in Git."
+   },
+   {
+    "title": "Volunteer website for a sports club",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "sql",
+     "rest_api",
+     "docker"
+    ],
+    "deployed": "unclear",
+    "quote": "Volunteer website for a sports club\n- Built the backend and data layer, storing club and fixture data via SQL.\n- Exposed REST API endpoints for the site and packaged the stack with Docker."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "electrical engineering",
+   "in_progress": "unclear",
+   "quote": "B.Sc., Electrical Engineering"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "B2"
+   },
+   {
+    "lang": "sv",
+    "cefr": "B1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Vantaa, Finland"
+  },
+  "unmatched_skills": [
+   "Discord bot"
+  ],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

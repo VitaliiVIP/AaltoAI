@@ -1,0 +1,47 @@
+Mikael Lehtovaara
+Helsinki, Finland
+mikael.lehtovaara@posteo.fi | +358 40 218 6647
+
+PROFESSIONAL PROFILE AND AREAS OF PRACTICE
+
+Site reliability practitioner concerned with the declarative provisioning of cloud infrastructure, automated delivery pipelines and the instrumentation of Linux systems. Particular interest in codifying environments with Terraform and in the orchestration of build and deployment workflows.
+
+EDUCATIONAL BACKGROUND AND FORMAL QUALIFICATIONS
+
+Vocational qualification (ammattitutkinto) in Information Technology
+Prior study in Biology
+
+PROFESSIONAL APPOINTMENTS AND EMPLOYMENT HISTORY
+
+Site Reliability Engineer, Nokka Oy
+Oct 2015 – Present
+- Authored and maintained Terraform configurations describing AWS accounts, networks and compute resources, treating infrastructure definitions as reviewed source artefacts.
+- Designed and administered Jenkins pipelines covering build, test and release stages, and reduced manual intervention in routine deployments.
+- Operated containerised services with Docker on Linux hosts, including image construction and runtime troubleshooting.
+- Instrumented services with Prometheus, defining metrics collection and alerting rules for production workloads.
+- Composed Bash and shell scripting utilities for host provisioning, log handling and recurring operational tasks.
+
+IT Operations Trainee, Vireo Solutions
+Apr 2014 – Oct 2015
+- Administered Linux servers, attending to package management, user accounts, filesystem layout and diagnostic work on running systems.
+- Assisted in the migration of workloads to AWS, with environments described in Terraform.
+- Prepared Docker images for internal tooling and supported their use by colleagues.
+- Contributed job definitions to GitLab CI, enabling automated verification of changes prior to release.
+- Wrote Bash and shell scripting routines for backup verification and reporting.
+
+SELECTED TECHNICAL PROJECTS
+
+Cost dashboard for a cloud account — infrastructure-oriented work; resources defined and deployed through Terraform.
+
+Home-lab cluster with monitoring — devops-oriented work; Linux hosts operated alongside AWS resources, deployed and kept in service.
+
+Spreadsheet automation for a small shop — backend and general automation; Terraform-provisioned AWS resources driven by Jenkins jobs, deployed for regular use.
+
+TECHNICAL COMPETENCIES
+
+AWS; AWS CloudFormation; Terraform; Docker; Linux; Bash / shell scripting; Jenkins; GitLab CI; Prometheus
+
+LANGUAGES
+
+Russian — native
+English — C2

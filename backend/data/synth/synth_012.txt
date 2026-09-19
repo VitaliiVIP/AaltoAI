@@ -1,0 +1,46 @@
+Mateo Iriarte Sanz
+Tartu, Estonia
+mateo.iriarte@mailbox-ee.net | +372 5512 8830
+
+PROFILE
+DevOps engineer with focus on Linux systems, automation of infrastructure and delivery pipelines. I like clean Git workflows and infrastructure described as code. Comfortable to work in English-speaking, distributed teams.
+
+EXPERIENCE
+
+Senior DevOps Engineer
+Tampere Tech Group | Jan 2023 – Present
+- Own the Git branching and review model for platform repositories; define merge rules, tags and release branches, so teams have one predictable way to ship.
+- Connect Git events to CI/CD pipelines, so build, test and deploy steps start automatically from a commit or a pull request.
+- Write and maintain Terraform code for AWS environments, and keep older stacks in AWS CloudFormation until migration is finished.
+- Administer Linux servers: packages, users, systemd services and hardening of base images.
+- Build Prometheus metrics and alert rules for services and for pipeline agents.
+
+Junior DevOps Engineer
+Vantaa Systems | May 2022 – Jan 2023
+- Configured Nginx as reverse proxy and TLS termination in front of internal applications; tuned upstreams, timeouts and caching headers.
+- Kept Nginx configuration in Git and rolled it out through CI/CD jobs, so changes were reviewed before they reach a server.
+- Provisioned AWS resources with Terraform and fixed drift between code and real state.
+- Maintained Linux hosts and helped with on-call routines.
+- Prepared Grafana dashboards for traffic and error rates of proxied services.
+
+PROJECTS
+
+Self-hosted CI runner setup
+- Own runner environment for builds, with Nginx in front of the runner web interface and Prometheus scraping runner health metrics. Not deployed to production.
+
+Terraform modules for a three-tier app
+- Reusable modules that describe web, application and database layers of an app. Written for study of module structure and variables; not deployed.
+
+SKILLS
+AWS, AWS CloudFormation, Terraform, CI/CD, Git, Linux, Nginx, Prometheus, Grafana
+
+CERTIFICATIONS
+Certified Kubernetes Administrator (CKA)
+
+EDUCATION
+B.Sc. in Communications
+
+LANGUAGES
+Spanish – native
+English – C1
+Finnish – A2

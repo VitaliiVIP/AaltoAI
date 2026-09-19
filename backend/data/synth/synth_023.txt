@@ -1,0 +1,64 @@
+Mateo Arriaga Vela
+
+Tampere, Finland
+mateo.arriaga.vela@mailbox.fi | +358 44 912 6037
+
+---
+PROFILE
+
+Frontend engineer working with JavaScript, TypeScript and React, with hands-on focus on automated browser testing and quality practices.
+
+---
+EXPERIENCE
+
+Frontend Engineer — Polaris Payments
+2024-2026
+
+- Built and maintained customer-facing payment interfaces in React and TypeScript.
+- Designed and maintained end-to-end test suites in Playwright, covering critical checkout and account flows.
+- Integrated Playwright runs into the delivery pipeline so regressions surfaced before release.
+- Applied software testing practices across unit and integration layers alongside feature work.
+- Managed branching, reviews and release tagging in Git.
+
+Frontend Engineer — Koski Engineering
+2020-2024
+
+- Migrated and extended application code to TypeScript, introducing shared types and stricter compiler settings.
+- Developed React component libraries reused across several internal products.
+- Maintained and extended existing Vue.js modules during a phased consolidation.
+- Handled day-to-day JavaScript feature delivery and code review in Git.
+
+Junior UI Developer — Vireo Solutions
+2018-2020
+
+- Implemented UI features in React and plain JavaScript from design handoffs.
+- Took ownership of Git workflow hygiene: clean commits, rebases, and resolving merge conflicts for the team.
+- Picked up TypeScript on production tickets.
+- Worked in an Agile / Scrum team with regular planning, refinement and retrospectives.
+
+---
+PROJECTS
+
+- Recipe browser single-page app — frontend project built in TypeScript. Not deployed.
+- Bootcamp capstone: to-do app — tutorial-based JavaScript project. Not deployed.
+- Django tutorial series — followed a backend tutorial series for self-study. Not deployed.
+
+---
+SKILLS
+
+JavaScript · TypeScript · React · Vue.js · Angular · Playwright · Software testing · Git · Agile / Scrum
+
+---
+EDUCATION
+
+Vocational qualification (ammattitutkinto) in Information Technology — Computer Science
+
+---
+CERTIFICATIONS
+
+ISTQB Certified Tester, Foundation Level
+
+---
+LANGUAGES
+
+Spanish — native · English — C1 · Finnish — A2

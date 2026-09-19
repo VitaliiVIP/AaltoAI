@@ -1,0 +1,154 @@
+{
+ "cv_sha256": "62eaff4678896669e605dc99cf90d593dc2fdedcc168b9e9dfc3ee9b4cc7c872",
+ "source_file": "synth_001.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:20:04+00:00",
+ "cv_text": "Aino Karvinen\nEspoo, Finland | open to relocation\naino.karvinen@examplemail.fi | +358 40 555 0192\n\nPROFILE\nQA professional working across test design, automation and delivery pipelines, with a background in software testing for web and API-based systems.\n\nSKILL AREAS\n\nSoftware Testing\n- Designed and executed functional, regression and exploratory test suites for web applications and backend services.\n- Built up testing practice from trainee level onward, writing test cases, reproducing defects and reporting issues with clear steps and evidence.\n- Validated REST APIs by hand and through automated checks, covering status handling, payload structure and error paths.\n\nTest Automation\n- Wrote and maintained automated test suites in pytest, structuring fixtures and parameterised cases for reusable coverage.\n- Developed browser and script-level checks in JavaScript against front-end behaviour.\n- Familiar with Playwright for end-to-end browser automation.\n\nCI/CD and Tooling\n- Integrated automated test runs into CI/CD pipelines so that failures surfaced on every change.\n- Configured and maintained Jenkins jobs for scheduled and triggered test execution.\n- Used Docker to produce consistent, disposable test environments.\n- Relied on Git for branching, code review and traceability of test assets; acted as a point of reference for Git workflow questions within the team.\n\nData and Queries\n- Used SQL to verify data states before and after test runs, prepare test data and investigate defects at the database level.\n\nEDUCATION\nB.Sc. Biology\n\nCERTIFICATIONS\nCertified ScrumMaster (CSM)\n\nLANGUAGES\nFinnish — native\nEnglish — B2\nSwedish — B1\n\nEMPLOYMENT HISTORY\nQA Engineer, Ruska Systems — Feb 2025 – Present\nQA Analyst, Vireo Solutions — Feb 2024 – Feb 2025\nQA Engineer, Tampere Tech Group — Sep 2021 – Feb 2024\nQA Trainee, Nordcom Oy — Feb 2020 – Sep 2021\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "QA Engineer",
+    "title_canonical": "qa_engineer",
+    "employer": "Ruska Systems",
+    "start_raw": "Feb 2025",
+    "end_raw": "present",
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "quote": "QA Engineer, Ruska Systems — Feb 2025 – Present"
+   },
+   {
+    "title_raw": "QA Analyst",
+    "title_canonical": "qa_engineer",
+    "employer": "Vireo Solutions",
+    "start_raw": "Feb 2024",
+    "end_raw": "Feb 2025",
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "quote": "QA Analyst, Vireo Solutions — Feb 2024 – Feb 2025"
+   },
+   {
+    "title_raw": "QA Engineer",
+    "title_canonical": "qa_engineer",
+    "employer": "Tampere Tech Group",
+    "start_raw": "Sep 2021",
+    "end_raw": "Feb 2024",
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "quote": "QA Engineer, Tampere Tech Group — Sep 2021 – Feb 2024"
+   },
+   {
+    "title_raw": "QA Trainee",
+    "title_canonical": "qa_engineer",
+    "employer": "Nordcom Oy",
+    "start_raw": "Feb 2020",
+    "end_raw": "Sep 2021",
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "quote": "QA Trainee, Nordcom Oy — Feb 2020 – Sep 2021"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "testing",
+    "quote": "Designed and executed functional, regression and exploratory test suites for web applications and backend services."
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Validated REST APIs by hand and through automated checks"
+   },
+   {
+    "skill": "pytest",
+    "quote": "Wrote and maintained automated test suites in pytest"
+   },
+   {
+    "skill": "javascript",
+    "quote": "Developed browser and script-level checks in JavaScript against front-end behaviour."
+   },
+   {
+    "skill": "playwright",
+    "quote": "Familiar with Playwright for end-to-end browser automation."
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "Integrated automated test runs into CI/CD pipelines"
+   },
+   {
+    "skill": "jenkins",
+    "quote": "Configured and maintained Jenkins jobs for scheduled and triggered test execution."
+   },
+   {
+    "skill": "docker",
+    "quote": "Used Docker to produce consistent, disposable test environments."
+   },
+   {
+    "skill": "git",
+    "quote": "Relied on Git for branching, code review and traceability of test assets"
+   },
+   {
+    "skill": "sql",
+    "quote": "Used SQL to verify data states before and after test runs"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [],
+  "education": {
+   "highest_level": "bsc",
+   "field": "biology",
+   "in_progress": "unclear",
+   "quote": "B.Sc. Biology"
+  },
+  "certifications": [
+   {
+    "cert_id": "certified_scrummaster",
+    "issuer": "",
+    "issued_raw": "",
+    "quote": "Certified ScrumMaster (CSM)"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "B2"
+   },
+   {
+    "lang": "sv",
+    "cefr": "B1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "yes",
+   "quote": "Espoo, Finland | open to relocation"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

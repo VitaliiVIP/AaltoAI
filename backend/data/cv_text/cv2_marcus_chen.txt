@@ -1,0 +1,21 @@
+Marcus Chen
+Backend Software Engineer
+marcus.chen@example.com | +358 40 222 3344 | Espoo, Finland
+
+Experience
+Software Engineer, CloudNorth Ltd (2021-2026) - 5 years
+- Designed microservices in Python and Kubernetes for payments platform
+- On-call owner for production cloud infrastructure (Azure)
+Junior Developer, StartHub (2019-2021)
+- Built internal tools with Django and PostgreSQL
+
+Education
+B.Sc. Software Engineering, University of Helsinki (2019)
+
+Skills
+Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis
+
+Projects
+- Rebuilt payments microservice, reduced latency by 40%
+- Implemented blue-green deployment pipeline on Kubernetes
+

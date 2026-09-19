@@ -1,0 +1,43 @@
+Veeti Ahlgren
+Backend engineer — Oulu, Finland
+veeti.ahlgren@mailbox.fi | +358 44 218 6630
+
+SKILLS
+Python | Django | FastAPI | Flask | REST APIs | SQL | PostgreSQL | MySQL | MongoDB
+Docker | Linux | Git | Node.js | JavaScript
+
+EXPERIENCE
+
+Backend Software Engineer — Nokka Oy
+Apr 2026 – Present
+- REST API design and delivery for internal and partner services
+- Django services, Python, PostgreSQL and MySQL schemas
+- SQL query tuning, data migrations
+- Docker images, Linux deployment targets
+- Git-based review flow
+
+Junior Software Engineer — Kaiku Digital
+Nov 2025 – Apr 2026
+- FastAPI services, async endpoints, typed request models
+- REST API contracts, versioning, docs
+- PostgreSQL models, SQL reporting queries
+- Python tooling, Docker local stacks, Git
+
+Software Developer Intern — Arctic Cloud Oy
+Jun 2025 – Nov 2025
+- JavaScript work across frontend calls and Node.js utilities
+- Flask endpoints in Python, REST API integrations
+- MongoDB collections, SQL side queries
+- Docker containers, Git workflow
+
+PROJECTS
+Job-board REST API — backend only, not deployed. REST endpoints over MySQL.
+
+EDUCATION
+B.Sc. Information Technology
+
+CERTIFICATIONS
+Certified Kubernetes Application Developer (CKAD)
+
+LANGUAGES
+Finnish native | English C2 | German B1

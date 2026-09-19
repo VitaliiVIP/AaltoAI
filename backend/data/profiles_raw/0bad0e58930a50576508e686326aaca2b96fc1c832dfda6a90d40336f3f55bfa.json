@@ -1,0 +1,279 @@
+{
+ "cv_sha256": "0bad0e58930a50576508e686326aaca2b96fc1c832dfda6a90d40336f3f55bfa",
+ "source_file": "synth_009.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:21:43+00:00",
+ "cv_text": "Mikael Ruusunen\nTurku, Finland | mikael.ruusunen@posteo.fi | +358 40 218 7734 | Open to relocation\n\nACADEMIC QUALIFICATIONS\nB.Sc. in Business Administration\n\nPROFESSIONAL EXPERIENCE IN SOFTWARE ENGINEERING\n\nPrincipal Backend Engineer, Helsinki Data Works\nAug 2023 – Present\n- Leads backend development in Python, establishing shared conventions for service code and library structure across teams.\n- Owns the PostgreSQL data layer: schema modelling, query tuning and migration practice, with SQL review as a standing responsibility.\n- Conducts system design work for microservices architecture, defining service boundaries and REST API contracts.\n- Maintains deployment on Kubernetes using Helm charts, with container images built through Docker and delivered by CI/CD pipelines.\n- Provisions AWS infrastructure through Terraform and administers Linux runtime environments; Git-based review is applied to both application and infrastructure change.\n\nSoftware Engineer (Backend), Nokka Oy\nApr 2017 – May 2023\n- Operated and tuned Linux hosts supporting production services, including process supervision, log analysis and performance investigation.\n- Designed and maintained PostgreSQL schemas and indexing strategies for transactional workloads, supported by Redis for caching.\n- Implemented REST APIs in Python and Go within a microservices architecture, applying event-driven architecture for asynchronous workflows.\n- Packaged services with Docker, deployed them to Kubernetes on AWS, and extended CI/CD automation for test and release stages.\n- Collaborated through Git, contributing to branching policy and review discipline.\n\nAPI Developer, Vantaa Systems\nJun 2016 – Apr 2017\n- Built and operated services on AWS, taking responsibility for account-level resource configuration.\n- Standardised local and deployment environments with Docker, reducing divergence between development and Kubernetes-hosted runtimes.\n- Developed REST APIs in Python backed by PostgreSQL, writing SQL for reporting and integration queries.\n- Applied event-driven architecture patterns to decouple integrations; maintained Linux servers and CI/CD jobs, with Git as the version control foundation.\n\nJunior Software Engineer, Helsinki Data Works\nNov 2013 – Jun 2016\n- Adopted disciplined Git workflow early, contributing to repository conventions, review participation and release tagging.\n- Wrote Python services and REST API endpoints against PostgreSQL, alongside SQL analysis tasks.\n- Contributed Scala components consuming Apache Kafka topics.\n- Assisted with Docker image creation and Kubernetes deployment via Helm on Linux infrastructure, supported by CI/CD pipelines.\n\nINDEPENDENT AND PERSONAL PROJECT WORK\n- Cost dashboard for a cloud account — infrastructure and backend work, version-controlled with Git; deployed and in use.\n- Booking service for a local gym — backend implementation in Go with a PostgreSQL store and Terraform-defined infrastructure; not deployed.\n\nTECHNICAL COMPETENCIES\nAWS; CI/CD; Docker; Event-driven architecture; Git; Go; Helm; Apache Kafka; Kubernetes (k8s); Linux; Microservices architecture; PostgreSQL; Python; Redis; REST APIs; Scala; SQL; System design; Terraform\n\nLANGUAGES\nRussian — native; English — C2\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Principal Backend Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Helsinki Data Works",
+    "start_raw": "Aug 2023",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "postgresql",
+     "sql",
+     "system_design",
+     "microservices",
+     "rest_api",
+     "kubernetes",
+     "helm",
+     "docker",
+     "ci_cd",
+     "aws",
+     "terraform",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "postgresql",
+     "sql"
+    ],
+    "quote": "Principal Backend Engineer, Helsinki Data Works"
+   },
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start_raw": "Apr 2017",
+    "end_raw": "May 2023",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "linux",
+     "postgresql",
+     "redis",
+     "rest_api",
+     "python",
+     "go",
+     "microservices",
+     "event_driven",
+     "docker",
+     "kubernetes",
+     "aws",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "linux",
+     "postgresql",
+     "redis"
+    ],
+    "quote": "Software Engineer (Backend), Nokka Oy"
+   },
+   {
+    "title_raw": "API Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Vantaa Systems",
+    "start_raw": "Jun 2016",
+    "end_raw": "Apr 2017",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "aws",
+     "docker",
+     "kubernetes",
+     "rest_api",
+     "python",
+     "postgresql",
+     "sql",
+     "event_driven",
+     "linux",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "aws",
+     "docker",
+     "kubernetes"
+    ],
+    "quote": "API Developer, Vantaa Systems"
+   },
+   {
+    "title_raw": "Junior Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Helsinki Data Works",
+    "start_raw": "Nov 2013",
+    "end_raw": "Jun 2016",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "git",
+     "python",
+     "rest_api",
+     "postgresql",
+     "sql",
+     "scala",
+     "kafka",
+     "docker",
+     "kubernetes",
+     "helm",
+     "linux",
+     "ci_cd"
+    ],
+    "primary_skills": [
+     "git",
+     "python",
+     "rest_api",
+     "postgresql",
+     "sql"
+    ],
+    "quote": "Junior Software Engineer, Helsinki Data Works"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "aws",
+    "quote": "AWS; CI/CD; Docker"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "AWS; CI/CD; Docker"
+   },
+   {
+    "skill": "docker",
+    "quote": "AWS; CI/CD; Docker"
+   },
+   {
+    "skill": "event_driven",
+    "quote": "Event-driven architecture; Git; Go"
+   },
+   {
+    "skill": "git",
+    "quote": "Event-driven architecture; Git; Go"
+   },
+   {
+    "skill": "go",
+    "quote": "Event-driven architecture; Git; Go"
+   },
+   {
+    "skill": "helm",
+    "quote": "Helm; Apache Kafka; Kubernetes (k8s); Linux"
+   },
+   {
+    "skill": "kafka",
+    "quote": "Helm; Apache Kafka; Kubernetes (k8s); Linux"
+   },
+   {
+    "skill": "kubernetes",
+    "quote": "Kubernetes (k8s); Linux"
+   },
+   {
+    "skill": "linux",
+    "quote": "Kubernetes (k8s); Linux"
+   },
+   {
+    "skill": "microservices",
+    "quote": "Microservices architecture; PostgreSQL; Python; Redis"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Microservices architecture; PostgreSQL; Python; Redis"
+   },
+   {
+    "skill": "python",
+    "quote": "PostgreSQL; Python; Redis"
+   },
+   {
+    "skill": "redis",
+    "quote": "Python; Redis; REST APIs; Scala; SQL"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "REST APIs; Scala; SQL; System design; Terraform"
+   },
+   {
+    "skill": "scala",
+    "quote": "REST APIs; Scala; SQL; System design; Terraform"
+   },
+   {
+    "skill": "sql",
+    "quote": "Scala; SQL; System design; Terraform"
+   },
+   {
+    "skill": "system_design",
+    "quote": "SQL; System design; Terraform"
+   },
+   {
+    "skill": "terraform",
+    "quote": "System design; Terraform"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Cost dashboard for a cloud account",
+    "topics": [
+     "infrastructure",
+     "backend",
+     "data"
+    ],
+    "skills": [
+     "git"
+    ],
+    "deployed": "yes",
+    "quote": "Cost dashboard for a cloud account — infrastructure and backend work, version-controlled with Git; deployed and in use."
+   },
+   {
+    "title": "Booking service for a local gym",
+    "topics": [
+     "backend",
+     "infrastructure"
+    ],
+    "skills": [
+     "go",
+     "postgresql",
+     "terraform"
+    ],
+    "deployed": "no",
+    "quote": "Booking service for a local gym — backend implementation in Go with a PostgreSQL store and Terraform-defined infrastructure; not deployed."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "business administration",
+   "in_progress": "unclear",
+   "quote": "B.Sc. in Business Administration"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "ru",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C2"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "yes",
+   "quote": "Open to relocation"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

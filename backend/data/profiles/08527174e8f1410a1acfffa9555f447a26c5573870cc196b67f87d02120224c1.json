@@ -1,0 +1,886 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "08527174e8f1410a1acfffa9555f447a26c5573870cc196b67f87d02120224c1",
+  "source_file": "synth_024.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:25:14+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Frontend Engineer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Kaiku Digital",
+    "start": "2023-07",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 38,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "agile",
+     "html_css",
+     "react",
+     "nextjs",
+     "javascript",
+     "typescript",
+     "graphql",
+     "nodejs",
+     "git"
+    ],
+    "primary_skills": [
+     "agile",
+     "html_css",
+     "react",
+     "nextjs",
+     "javascript",
+     "typescript",
+     "graphql",
+     "nodejs",
+     "git"
+    ],
+    "evidence": [
+     {
+      "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+      "start": 363,
+      "end": 416,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior Frontend Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "Koski Engineering",
+    "start": "2020-10",
+    "end": "2023-07",
+    "date_precision": "month",
+    "months": 33,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "react",
+     "nextjs",
+     "typescript",
+     "html_css",
+     "playwright",
+     "testing",
+     "graphql",
+     "javascript",
+     "git"
+    ],
+    "primary_skills": [
+     "react",
+     "nextjs",
+     "typescript",
+     "html_css",
+     "playwright",
+     "testing",
+     "graphql",
+     "javascript",
+     "git"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+      "start": 1069,
+      "end": 1135,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 71,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 71,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "mid",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 2,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "agile": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+      "start": 363,
+      "end": 416,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript",
+      "start": 2190,
+      "end": 2290,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 38,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+      "start": 363,
+      "end": 416,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+      "start": 1069,
+      "end": 1135,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript",
+      "start": 2190,
+      "end": 2290,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 71,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "graphql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+      "start": 363,
+      "end": 416,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+      "start": 1069,
+      "end": 1135,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript",
+      "start": 2190,
+      "end": 2290,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 71,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "html_css": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+      "start": 363,
+      "end": 416,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+      "start": 1069,
+      "end": 1135,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript",
+      "start": 2190,
+      "end": 2290,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 71,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "javascript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+      "start": 363,
+      "end": 416,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+      "start": 1069,
+      "end": 1135,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript",
+      "start": 2190,
+      "end": 2290,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 71,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 2,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "nextjs": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+      "start": 363,
+      "end": 416,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+      "start": 1069,
+      "end": 1135,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript",
+      "start": 2190,
+      "end": 2290,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 71,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "nodejs": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+      "start": 363,
+      "end": 416,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript",
+      "start": 2190,
+      "end": 2290,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 38,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "playwright": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+      "start": 1069,
+      "end": 1135,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript",
+      "start": 2190,
+      "end": 2290,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 33,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "react": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+      "start": 363,
+      "end": 416,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+      "start": 1069,
+      "end": 1135,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript",
+      "start": 2190,
+      "end": 2290,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 71,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+      "start": 1069,
+      "end": 1135,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 33,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "typescript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+      "start": 363,
+      "end": 416,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+      "start": 1069,
+      "end": 1135,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Agile / Scrum, Git, GraphQL, HTML / CSS, JavaScript, Next.js, Node.js, Playwright, React, TypeScript",
+      "start": 2190,
+      "end": 2290,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 71,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Bootcamp capstone: to-do app",
+   "topics": [
+    "tutorial"
+   ],
+   "skills": [
+    "html_css",
+    "javascript"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "Bootcamp capstone: to-do app — a tutorial-led project built with plain HTML / CSS and JavaScript, used to practise DOM handling and layout fundamentals.",
+     "start": 1737,
+     "end": 1889,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Spreadsheet automation for a small shop",
+   "topics": [
+    "other"
+   ],
+   "skills": [
+    "nodejs",
+    "javascript"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Spreadsheet automation for a small shop — a deployed Node.js and JavaScript utility that replaced manual spreadsheet edits with a scripted routine for a local business.",
+     "start": 1891,
+     "end": 2059,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "other": 1,
+  "tutorial": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "vocational",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Vocational qualification (ammattitutkinto) in Information Technology — Industrial Engineering and Management",
+     "start": 2072,
+     "end": 2180,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "information technology",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Vocational qualification (ammattitutkinto) in Information Technology — Industrial Engineering and Management",
+     "start": 2072,
+     "end": 2180,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "fi",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Open to relocation",
+     "start": 84,
+     "end": 102,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Open to relocation",
+     "start": 84,
+     "end": 102,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [
+  "DOM handling"
+ ],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

@@ -1,0 +1,742 @@
+{
+ "version": "swe-core-0.1",
+ "job_family": "software_engineering",
+ "note": "Hand-curated demo taxonomy. Never delete an id; deprecate with a redirect.",
+ "concepts": [
+  {
+   "id": "python",
+   "label": "Python",
+   "category": "language",
+   "aliases": [
+    "python3",
+    "py"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "java",
+   "label": "Java",
+   "category": "language",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "go",
+   "label": "Go",
+   "category": "language",
+   "aliases": [
+    "golang"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "javascript",
+   "label": "JavaScript",
+   "category": "language",
+   "aliases": [
+    "js",
+    "es6"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "typescript",
+   "label": "TypeScript",
+   "category": "language",
+   "aliases": [
+    "ts"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "csharp",
+   "label": "C#",
+   "category": "language",
+   "aliases": [
+    "c sharp",
+    ".net c#"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "cpp",
+   "label": "C++",
+   "category": "language",
+   "aliases": [
+    "c plus plus"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "c",
+   "label": "C",
+   "category": "language",
+   "aliases": [
+    "embedded c",
+    "c (embedded)"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "rust",
+   "label": "Rust",
+   "category": "language",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "kotlin",
+   "label": "Kotlin",
+   "category": "language",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "swift",
+   "label": "Swift",
+   "category": "language",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "php",
+   "label": "PHP",
+   "category": "language",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "ruby",
+   "label": "Ruby",
+   "category": "language",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "scala",
+   "label": "Scala",
+   "category": "language",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "bash",
+   "label": "Bash / shell scripting",
+   "category": "language",
+   "aliases": [
+    "shell",
+    "linux cli"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "sql",
+   "label": "SQL",
+   "category": "language",
+   "aliases": [
+    "sql fundamentals",
+    "basic sql"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "django",
+   "label": "Django",
+   "category": "framework",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "flask",
+   "label": "Flask",
+   "category": "framework",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "fastapi",
+   "label": "FastAPI",
+   "category": "framework",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "spring",
+   "label": "Spring / Spring Boot",
+   "category": "framework",
+   "aliases": [
+    "spring boot",
+    "java/spring"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "nodejs",
+   "label": "Node.js",
+   "category": "framework",
+   "aliases": [
+    "node",
+    "node.js"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "express",
+   "label": "Express.js",
+   "category": "framework",
+   "aliases": [
+    "express"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "react",
+   "label": "React",
+   "category": "framework",
+   "aliases": [
+    "react.js",
+    "reactjs"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "angular",
+   "label": "Angular",
+   "category": "framework",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "vue",
+   "label": "Vue.js",
+   "category": "framework",
+   "aliases": [
+    "vue"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "nextjs",
+   "label": "Next.js",
+   "category": "framework",
+   "aliases": [
+    "next.js"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "dotnet",
+   "label": ".NET",
+   "category": "framework",
+   "aliases": [
+    "asp.net",
+    "dotnet core"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "rails",
+   "label": "Ruby on Rails",
+   "category": "framework",
+   "aliases": [
+    "rails"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "postgresql",
+   "label": "PostgreSQL",
+   "category": "database",
+   "aliases": [
+    "postgres",
+    "psql",
+    "supabase (postgresql)"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "mysql",
+   "label": "MySQL",
+   "category": "database",
+   "aliases": [
+    "mariadb"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "mongodb",
+   "label": "MongoDB",
+   "category": "database",
+   "aliases": [
+    "mongo"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "redis",
+   "label": "Redis",
+   "category": "database",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "sqlite",
+   "label": "SQLite",
+   "category": "database",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "dynamodb",
+   "label": "DynamoDB",
+   "category": "database",
+   "aliases": [
+    "amazon dynamodb"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "elasticsearch",
+   "label": "Elasticsearch",
+   "category": "database",
+   "aliases": [
+    "opensearch"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "kafka",
+   "label": "Apache Kafka",
+   "category": "messaging",
+   "aliases": [
+    "kafka"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "rabbitmq",
+   "label": "RabbitMQ",
+   "category": "messaging",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "mqtt",
+   "label": "MQTT",
+   "category": "messaging",
+   "aliases": [
+    "mosquitto",
+    "eclipse mosquitto"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "supabase",
+   "label": "Supabase",
+   "category": "database",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "firebase",
+   "label": "Firebase",
+   "category": "database",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "aws",
+   "label": "AWS",
+   "category": "cloud",
+   "aliases": [
+    "amazon web services",
+    "aws ecs",
+    "aws lambda",
+    "basic aws",
+    "s3",
+    "lambda",
+    "ecs"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "azure",
+   "label": "Microsoft Azure",
+   "category": "cloud",
+   "aliases": [
+    "azure"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "gcp",
+   "label": "Google Cloud Platform",
+   "category": "cloud",
+   "aliases": [
+    "google cloud",
+    "gcp"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "aws_ecs",
+   "label": "AWS ECS",
+   "category": "cloud",
+   "aliases": [
+    "ecs",
+    "amazon ecs"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "aws_lambda",
+   "label": "AWS Lambda",
+   "category": "cloud",
+   "aliases": [
+    "lambda",
+    "serverless"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "docker",
+   "label": "Docker",
+   "category": "devops",
+   "aliases": [
+    "containers",
+    "containerisation",
+    "basic docker"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "docker_swarm",
+   "label": "Docker Swarm",
+   "category": "devops",
+   "aliases": [
+    "swarm"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "kubernetes",
+   "label": "Kubernetes",
+   "category": "devops",
+   "aliases": [
+    "k8s",
+    "kube",
+    "eks",
+    "gke",
+    "aks"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "helm",
+   "label": "Helm",
+   "category": "devops",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "terraform",
+   "label": "Terraform",
+   "category": "devops",
+   "aliases": [
+    "infrastructure-as-code",
+    "infrastructure as code",
+    "iac"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "pulumi",
+   "label": "Pulumi",
+   "category": "devops",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "ansible",
+   "label": "Ansible",
+   "category": "devops",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "cloudformation",
+   "label": "AWS CloudFormation",
+   "category": "devops",
+   "aliases": [
+    "cloudformation"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "ci_cd",
+   "label": "CI/CD",
+   "category": "devops",
+   "aliases": [
+    "ci/cd",
+    "continuous integration",
+    "continuous delivery",
+    "ci cd",
+    "deployment pipeline",
+    "pipelines"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "github_actions",
+   "label": "GitHub Actions",
+   "category": "devops",
+   "aliases": [
+    "gh actions"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "gitlab_ci",
+   "label": "GitLab CI",
+   "category": "devops",
+   "aliases": [
+    "gitlab",
+    "gitlab ci/cd"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "jenkins",
+   "label": "Jenkins",
+   "category": "devops",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "argo_cd",
+   "label": "Argo CD",
+   "category": "devops",
+   "aliases": [
+    "argocd"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "prometheus",
+   "label": "Prometheus",
+   "category": "devops",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "grafana",
+   "label": "Grafana",
+   "category": "devops",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "linux",
+   "label": "Linux",
+   "category": "devops",
+   "aliases": [
+    "ubuntu",
+    "linux (ubuntu)"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "git",
+   "label": "Git",
+   "category": "tooling",
+   "aliases": [
+    "github",
+    "version control"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "nginx",
+   "label": "Nginx",
+   "category": "devops",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "microservices",
+   "label": "Microservices architecture",
+   "category": "concept",
+   "aliases": [
+    "microservice",
+    "micro-services"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "rest_api",
+   "label": "REST APIs",
+   "category": "concept",
+   "aliases": [
+    "rest",
+    "restful",
+    "api design",
+    "apis"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "graphql",
+   "label": "GraphQL",
+   "category": "concept",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "grpc",
+   "label": "gRPC",
+   "category": "concept",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "event_driven",
+   "label": "Event-driven architecture",
+   "category": "concept",
+   "aliases": [
+    "event-driven",
+    "event streaming"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "distributed_systems",
+   "label": "Distributed systems",
+   "category": "concept",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "system_design",
+   "label": "System design",
+   "category": "concept",
+   "aliases": [
+    "architecture"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "testing",
+   "label": "Software testing",
+   "category": "concept",
+   "aliases": [
+    "test automation",
+    "qa",
+    "unit testing",
+    "regression testing"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "pytest",
+   "label": "pytest",
+   "category": "tooling",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "selenium",
+   "label": "Selenium",
+   "category": "tooling",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "playwright",
+   "label": "Playwright",
+   "category": "tooling",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "security",
+   "label": "Application security",
+   "category": "concept",
+   "aliases": [
+    "appsec",
+    "burp suite",
+    "penetration testing"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "machine_learning",
+   "label": "Machine learning",
+   "category": "concept",
+   "aliases": [
+    "ml",
+    "deep learning"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "data_engineering",
+   "label": "Data engineering",
+   "category": "concept",
+   "aliases": [
+    "etl",
+    "data pipelines"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "embedded",
+   "label": "Embedded systems",
+   "category": "concept",
+   "aliases": [
+    "stm32",
+    "microcontrollers",
+    "firmware",
+    "rtos"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "html_css",
+   "label": "HTML / CSS",
+   "category": "language",
+   "aliases": [
+    "html",
+    "css"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "excel",
+   "label": "Excel / spreadsheets",
+   "category": "tooling",
+   "aliases": [
+    "excel"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "agile",
+   "label": "Agile / Scrum",
+   "category": "concept",
+   "aliases": [
+    "scrum",
+    "kanban"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "oop",
+   "label": "Object-oriented programming",
+   "category": "concept",
+   "aliases": [
+    "oop"
+   ],
+   "esco_uri": null
+  }
+ ]
+}

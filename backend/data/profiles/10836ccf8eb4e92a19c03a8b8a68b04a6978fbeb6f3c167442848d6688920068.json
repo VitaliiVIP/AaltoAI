@@ -1,0 +1,1410 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "10836ccf8eb4e92a19c03a8b8a68b04a6978fbeb6f3c167442848d6688920068",
+  "source_file": "synth_020.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:24:11+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start": "2024-11",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 22,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "python",
+     "microservices",
+     "system_design",
+     "kafka",
+     "redis",
+     "postgresql",
+     "docker",
+     "ci_cd",
+     "aws",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "python",
+     "microservices",
+     "system_design",
+     "kafka",
+     "redis",
+     "postgresql",
+     "docker",
+     "ci_cd",
+     "aws",
+     "linux",
+     "git"
+    ],
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Server-side Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Koski Engineering",
+    "start": "2024-03",
+    "end": "2024-11",
+    "date_precision": "month",
+    "months": 8,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "github_actions",
+     "aws",
+     "python",
+     "typescript",
+     "rest_api",
+     "sql",
+     "postgresql",
+     "system_design",
+     "docker",
+     "linux",
+     "git",
+     "ci_cd"
+    ],
+    "primary_skills": [
+     "github_actions",
+     "aws",
+     "python",
+     "typescript",
+     "rest_api",
+     "sql",
+     "postgresql"
+    ],
+    "evidence": [
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Software Developer Intern",
+    "title_canonical": "backend_engineer",
+    "employer": "Arctic Cloud Oy",
+    "start": "2022-05",
+    "end": "2024-03",
+    "date_precision": "month",
+    "months": 22,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "fastapi",
+     "express",
+     "git",
+     "sql",
+     "postgresql",
+     "rest_api",
+     "testing",
+     "docker",
+     "ci_cd"
+    ],
+    "primary_skills": [
+     "python",
+     "fastapi",
+     "express",
+     "git"
+    ],
+    "evidence": [
+     {
+      "quote": "Software Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024",
+      "start": 1562,
+      "end": 1626,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 52,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 52,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 52,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "mid",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 3,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "aws": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker, AWS, Linux",
+      "start": 2678,
+      "end": 2696,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 30,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Linux, CI/CD, GitHub Actions",
+      "start": 2691,
+      "end": 2719,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "django": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "FastAPI, Django, Express.js",
+      "start": 2592,
+      "end": 2619,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "System design, Docker, AWS",
+      "start": 2663,
+      "end": 2689,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "express": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024",
+      "start": 1562,
+      "end": 1626,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Django, Express.js, Apache Kafka",
+      "start": 2601,
+      "end": 2633,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 22,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "fastapi": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024",
+      "start": 1562,
+      "end": 1626,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "REST APIs, FastAPI, Django",
+      "start": 2581,
+      "end": 2607,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 22,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "GitHub Actions, Git",
+      "start": 2705,
+      "end": 2724,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "github_actions": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "CI/CD, GitHub Actions, Git",
+      "start": 2698,
+      "end": 2724,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 8,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "kafka": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Express.js, Apache Kafka, Microservices architecture",
+      "start": 2609,
+      "end": 2661,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 22,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS, Linux, CI/CD",
+      "start": 2686,
+      "end": 2703,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 30,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "microservices": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Apache Kafka, Microservices architecture, System design",
+      "start": 2621,
+      "end": 2676,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 22,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "SQL, PostgreSQL, Redis",
+      "start": 2557,
+      "end": 2579,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, TypeScript, SQL, PostgreSQL, Redis, REST APIs, FastAPI, Django, Express.js, Apache Kafka, Microservices architecture, System design, Docker, AWS, Linux, CI/CD, GitHub Actions, Git",
+      "start": 2537,
+      "end": 2724,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "redis": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "PostgreSQL, Redis, REST APIs",
+      "start": 2562,
+      "end": 2590,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 22,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Redis, REST APIs, FastAPI",
+      "start": 2574,
+      "end": 2599,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 52,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Software Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024",
+      "start": 1562,
+      "end": 1626,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "TypeScript, SQL, PostgreSQL",
+      "start": 2545,
+      "end": 2572,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 30,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "system_design": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+      "start": 260,
+      "end": 318,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Microservices architecture, System design, Docker",
+      "start": 2635,
+      "end": 2684,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 30,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024",
+      "start": 1562,
+      "end": 1626,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 22,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "typescript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+      "start": 933,
+      "end": 995,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, TypeScript, SQL",
+      "start": 2537,
+      "end": 2560,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 8,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Booking service for a local gym",
+   "topics": [
+    "backend"
+   ],
+   "skills": [
+    "fastapi",
+    "postgresql"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Booking service for a local gym — A backend-only project providing reservation and scheduling endpoints with FastAPI, backed by a PostgreSQL database designed around class capacity and cancellation rules. Not deployed publicly.",
+     "start": 2105,
+     "end": 2332,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Flaky-test triage tooling",
+   "topics": [
+    "testing",
+    "devops"
+   ],
+   "skills": [
+    "typescript",
+    "linux",
+    "aws"
+   ],
+   "deployed": true,
+   "evidence": [
+    {
+     "quote": "Flaky-test triage tooling — A deployed tool written in TypeScript that collects repeated test-run results, groups unstable failures and surfaces the worst offenders. Runs on Linux hosts in AWS.",
+     "start": 2334,
+     "end": 2527,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "backend": 1,
+  "devops": 1,
+  "testing": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "msc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "M.Sc., Communications",
+     "start": 2737,
+     "end": 2758,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "communications",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "M.Sc., Communications",
+     "start": 2737,
+     "end": 2758,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [
+  {
+   "cert_id": "certified_kubernetes_administrator",
+   "issuer": "",
+   "issued": null,
+   "evidence": [
+    {
+     "quote": "Certified Kubernetes Administrator (CKA)",
+     "start": 2776,
+     "end": 2816,
+     "section": "certifications",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "lang": "en",
+   "cefr": "C2",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "ru",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Requires a work permit / visa sponsorship to work in Finland.",
+     "start": 185,
+     "end": 246,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Requires a work permit / visa sponsorship to work in Finland.",
+     "start": 185,
+     "end": 246,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+     "start": 260,
+     "end": 318,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+     "start": 933,
+     "end": 995,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Docker, AWS, Linux",
+     "start": 2678,
+     "end": 2696,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+     "start": 260,
+     "end": 318,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+     "start": 933,
+     "end": 995,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Linux, CI/CD, GitHub Actions",
+     "start": 2691,
+     "end": 2719,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+     "start": 933,
+     "end": 995,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Software Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024",
+     "start": 1562,
+     "end": 1626,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "TypeScript, SQL, PostgreSQL",
+     "start": 2545,
+     "end": 2572,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

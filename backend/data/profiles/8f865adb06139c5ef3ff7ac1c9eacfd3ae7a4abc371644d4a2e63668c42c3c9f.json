@@ -1,0 +1,1281 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "8f865adb06139c5ef3ff7ac1c9eacfd3ae7a4abc371644d4a2e63668c42c3c9f",
+  "source_file": "synth_003.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:20:28+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Freelance Developer (contract)",
+    "title_canonical": "backend_engineer",
+    "employer": "Independent contractor",
+    "start": "2022-03",
+    "end": "2023-03",
+    "date_precision": "month",
+    "months": 12,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "postgresql",
+     "sql",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "postgresql",
+     "sql"
+    ],
+    "evidence": [
+     {
+      "quote": "Freelance Developer (contract)",
+      "start": 342,
+      "end": 372,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Principal Backend Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Saimaa Interactive",
+    "start": "2020-01",
+    "end": "2026-04",
+    "date_precision": "month",
+    "months": 75,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "postgresql",
+     "sql",
+     "python",
+     "microservices",
+     "rest_api",
+     "docker",
+     "kubernetes",
+     "aws",
+     "linux",
+     "terraform",
+     "ci_cd",
+     "distributed_systems"
+    ],
+    "primary_skills": [
+     "postgresql",
+     "sql",
+     "python",
+     "microservices",
+     "rest_api"
+    ],
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Lead Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2012-05",
+    "end": "2019-10",
+    "date_precision": "month",
+    "months": 89,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "event_driven",
+     "python",
+     "postgresql",
+     "rest_api",
+     "docker",
+     "kubernetes",
+     "aws",
+     "linux",
+     "ci_cd",
+     "git",
+     "distributed_systems"
+    ],
+    "primary_skills": [
+     "event_driven",
+     "python",
+     "postgresql",
+     "rest_api"
+    ],
+    "evidence": [
+     {
+      "quote": "Lead Backend Developer",
+      "start": 1367,
+      "end": 1389,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 164,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 164,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 164,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "lead",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 3,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "aws": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Lead Backend Developer",
+      "start": 1367,
+      "end": 1389,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS, CI/CD, Distributed systems",
+      "start": 2163,
+      "end": 2194,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 164,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Lead Backend Developer",
+      "start": 1367,
+      "end": 1389,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS, CI/CD, Distributed systems",
+      "start": 2163,
+      "end": 2194,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 164,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "distributed_systems": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Lead Backend Developer",
+      "start": 1367,
+      "end": 1389,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "AWS, CI/CD, Distributed systems",
+      "start": 2163,
+      "end": 2194,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 164,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Lead Backend Developer",
+      "start": 1367,
+      "end": 1389,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker, Elasticsearch",
+      "start": 2196,
+      "end": 2217,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 164,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "elasticsearch": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Docker, Elasticsearch",
+      "start": 2196,
+      "end": 2217,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "event_driven": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Lead Backend Developer",
+      "start": 1367,
+      "end": 1389,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Event-driven architecture, Git, Helm",
+      "start": 2219,
+      "end": 2255,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 89,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2019,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Freelance Developer (contract)",
+      "start": 342,
+      "end": 372,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Lead Backend Developer",
+      "start": 1367,
+      "end": 1389,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Event-driven architecture, Git, Helm",
+      "start": 2219,
+      "end": 2255,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 101,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2023,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "helm": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Event-driven architecture, Git, Helm",
+      "start": 2219,
+      "end": 2255,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "kubernetes": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Lead Backend Developer",
+      "start": 1367,
+      "end": 1389,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Kubernetes (k8s), Linux",
+      "start": 2257,
+      "end": 2280,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 164,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Lead Backend Developer",
+      "start": 1367,
+      "end": 1389,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Kubernetes (k8s), Linux",
+      "start": 2257,
+      "end": 2280,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 164,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "microservices": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Microservices architecture, PostgreSQL, Python",
+      "start": 2282,
+      "end": 2328,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 75,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Freelance Developer (contract)",
+      "start": 342,
+      "end": 372,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Microservices architecture, PostgreSQL, Python",
+      "start": 2282,
+      "end": 2328,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 164,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Freelance Developer (contract)",
+      "start": 342,
+      "end": 372,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Microservices architecture, PostgreSQL, Python",
+      "start": 2282,
+      "end": 2328,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 164,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "redis": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Redis, REST APIs, SQL, Terraform",
+      "start": 2330,
+      "end": 2362,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Lead Backend Developer",
+      "start": 1367,
+      "end": 1389,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Redis, REST APIs, SQL, Terraform",
+      "start": 2330,
+      "end": 2362,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 164,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Freelance Developer (contract)",
+      "start": 342,
+      "end": 372,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Redis, REST APIs, SQL, Terraform",
+      "start": 2330,
+      "end": 2362,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 75,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "terraform": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Principal Backend Engineer",
+      "start": 705,
+      "end": 731,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Redis, REST APIs, SQL, Terraform",
+      "start": 2330,
+      "end": 2362,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 75,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Home-lab cluster with monitoring",
+   "topics": [
+    "infrastructure",
+    "devops"
+   ],
+   "skills": [
+    "kubernetes",
+    "terraform",
+    "postgresql"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "Home-lab cluster with monitoring\n- Self-hosted Kubernetes cluster with monitoring, provisioned through Terraform.",
+     "start": 1909,
+     "end": 2022,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "devops": 1,
+  "infrastructure": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "msc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "M.Sc., Information Technology",
+     "start": 2125,
+     "end": 2154,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "information technology",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "M.Sc., Information Technology",
+     "start": 2125,
+     "end": 2154,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "es",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "fi",
+   "cefr": "A2",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Espoo, Finland | Open to relocation",
+     "start": 22,
+     "end": 57,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Espoo, Finland | Open to relocation",
+     "start": 22,
+     "end": 57,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Principal Backend Engineer",
+     "start": 705,
+     "end": 731,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Lead Backend Developer",
+     "start": 1367,
+     "end": 1389,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "AWS, CI/CD, Distributed systems",
+     "start": 2163,
+     "end": 2194,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Principal Backend Engineer",
+     "start": 705,
+     "end": 731,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Lead Backend Developer",
+     "start": 1367,
+     "end": 1389,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "AWS, CI/CD, Distributed systems",
+     "start": 2163,
+     "end": 2194,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Principal Backend Engineer",
+     "start": 705,
+     "end": 731,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Redis, REST APIs, SQL, Terraform",
+     "start": 2330,
+     "end": 2362,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Freelance Developer (contract)",
+     "start": 342,
+     "end": 372,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Principal Backend Engineer",
+     "start": 705,
+     "end": 731,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Redis, REST APIs, SQL, Terraform",
+     "start": 2330,
+     "end": 2362,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

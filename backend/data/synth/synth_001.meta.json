@@ -1,0 +1,22 @@
+{
+ "idx": 1,
+ "source_file": "synth_001.txt",
+ "archetype": "qa",
+ "style": "functional CV grouped by skill area first, with a bare employment-history list at the end",
+ "seniority": "mid",
+ "omitted_skills": [
+  "html_css",
+  "python",
+  "react",
+  "selenium"
+ ],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": true,
+ "block_only_skills": [
+  "playwright"
+ ],
+ "n_roles": 4,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

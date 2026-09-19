@@ -1,0 +1,254 @@
+{
+ "cv_sha256": "51602faa6c8aa74a3363e7cf9e4163ba8f70e6f612e30c22ba02085b95f95c86",
+ "source_file": "synth_013.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:22:28+00:00",
+ "cv_text": "Mateo Rivas Caballero\nBackend Developer\nTampere, Finland | Open to relocation\nmateo.rivascaballero@posteo.fi | +358 44 218 6640\n\nProfiili\nBackend developer working mainly with Python services, relational data and containerised deployments. Comfortable across the path from REST API design to CI/CD pipelines and Linux hosting.\n\nTyökokemus\n\nServer-side Developer — Nokka Oy\nJan 2025 – May 2026\n- Built and maintained HTTP services in Flask, shaping blueprints, request validation and error handling conventions used across the codebase.\n- Extended Flask applications with Redis for caching and short-lived queue state.\n- Designed REST APIs consumed by internal and partner clients, backed by PostgreSQL and hand-tuned SQL.\n- Worked within a microservices architecture, packaging components with Docker and running them on AWS and Linux hosts.\n- Maintained CI/CD pipelines and kept branching and review practice tidy in Git.\n\nSoftware Engineer (Backend) — Lumi Labs\nSep 2023 – Jan 2025\n- Owned AWS-hosted backend infrastructure, from provisioning to deployment and monitoring of Python services.\n- Wrote and reviewed demanding SQL against PostgreSQL, refactoring queries and schema for read-heavy endpoints.\n- Configured Nginx as reverse proxy and TLS terminator in front of containerised applications.\n- Containerised services with Docker and automated build, test and release stages in CI/CD.\n- Documented REST API contracts and versioning for consuming teams; day-to-day work on Linux with Git.\n\nBackend Developer — Kaiku Digital\nApr 2022 – Sep 2023\n- Developed Python backend modules as the core of the delivery work, focusing on readable, tested code.\n- Implemented REST APIs over PostgreSQL, writing SQL for reporting and migration tasks.\n- Set up GitHub Actions workflows covering linting, tests and Docker image publishing.\n- Deployed containers to AWS and supported release troubleshooting; version control with Git.\n\nJunior Backend Developer — Vantaa Systems\nJul 2021 – Apr 2022\n- Wrote SQL queries and PostgreSQL schema changes for customer-facing features, with guidance from senior colleagues.\n- Grew into Python as the primary language for service and scripting work.\n- Contributed to REST API endpoints in Node.js and TypeScript, plus maintenance on a legacy .NET component.\n- Touched frontend glue code in JavaScript; learned Docker and CI/CD basics and everyday Git workflow.\n\nProjektit\n\nFlaky-test triage tooling\n- Personal tooling for collecting and grouping unstable test results to make repeat offenders visible.\n- Uses Redis to store run history and flakiness counters. Not deployed publicly.\n\nKoulutus\n\nVocational qualification (ammattitutkinto) in Information Technology — in progress\nSubject area: Industrial Engineering and Management\n\nTaidot\n\nAWS, CI/CD, Docker, .NET, Flask, Git, GitHub Actions, JavaScript, Linux, Microservices architecture, Nginx, Node.js, PostgreSQL, Python, Redis, REST APIs, SQL, TypeScript\n\nKielet\n\nSpanish — native\nEnglish — C1\nFinnish — A2\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Server-side Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start_raw": "Jan 2025",
+    "end_raw": "May 2026",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "flask",
+     "redis",
+     "rest_api",
+     "postgresql",
+     "sql",
+     "microservices",
+     "docker",
+     "aws",
+     "linux",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "flask",
+     "redis"
+    ],
+    "quote": "Server-side Developer — Nokka Oy"
+   },
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Lumi Labs",
+    "start_raw": "Sep 2023",
+    "end_raw": "Jan 2025",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "aws",
+     "python",
+     "sql",
+     "postgresql",
+     "nginx",
+     "docker",
+     "ci_cd",
+     "rest_api",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "aws",
+     "python",
+     "sql",
+     "postgresql"
+    ],
+    "quote": "Software Engineer (Backend) — Lumi Labs"
+   },
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Kaiku Digital",
+    "start_raw": "Apr 2022",
+    "end_raw": "Sep 2023",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "rest_api",
+     "postgresql",
+     "sql",
+     "github_actions",
+     "testing",
+     "docker",
+     "aws",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "rest_api",
+     "postgresql",
+     "sql"
+    ],
+    "quote": "Backend Developer — Kaiku Digital"
+   },
+   {
+    "title_raw": "Junior Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Vantaa Systems",
+    "start_raw": "Jul 2021",
+    "end_raw": "Apr 2022",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "sql",
+     "postgresql",
+     "python",
+     "rest_api",
+     "nodejs",
+     "typescript",
+     "dotnet",
+     "javascript",
+     "docker",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "sql",
+     "postgresql",
+     "python"
+    ],
+    "quote": "Junior Backend Developer — Vantaa Systems"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "aws",
+    "quote": "AWS, CI/CD, Docker, .NET, Flask, Git, GitHub Actions, JavaScript, Linux, Microservices architecture, Nginx, Node.js, PostgreSQL, Python, Redis, REST APIs, SQL, TypeScript"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "AWS, CI/CD, Docker"
+   },
+   {
+    "skill": "docker",
+    "quote": "CI/CD, Docker, .NET"
+   },
+   {
+    "skill": "dotnet",
+    "quote": "Docker, .NET, Flask"
+   },
+   {
+    "skill": "flask",
+    "quote": ".NET, Flask, Git"
+   },
+   {
+    "skill": "git",
+    "quote": "Flask, Git, GitHub Actions"
+   },
+   {
+    "skill": "github_actions",
+    "quote": "Git, GitHub Actions, JavaScript"
+   },
+   {
+    "skill": "javascript",
+    "quote": "GitHub Actions, JavaScript, Linux"
+   },
+   {
+    "skill": "linux",
+    "quote": "JavaScript, Linux, Microservices architecture"
+   },
+   {
+    "skill": "microservices",
+    "quote": "Linux, Microservices architecture, Nginx"
+   },
+   {
+    "skill": "nginx",
+    "quote": "Microservices architecture, Nginx, Node.js"
+   },
+   {
+    "skill": "nodejs",
+    "quote": "Nginx, Node.js, PostgreSQL"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Node.js, PostgreSQL, Python"
+   },
+   {
+    "skill": "python",
+    "quote": "PostgreSQL, Python, Redis"
+   },
+   {
+    "skill": "redis",
+    "quote": "Python, Redis, REST APIs"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Redis, REST APIs, SQL"
+   },
+   {
+    "skill": "sql",
+    "quote": "REST APIs, SQL, TypeScript"
+   },
+   {
+    "skill": "typescript",
+    "quote": "SQL, TypeScript"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Flaky-test triage tooling",
+    "topics": [
+     "testing"
+    ],
+    "skills": [
+     "redis",
+     "testing"
+    ],
+    "deployed": "no",
+    "quote": "Flaky-test triage tooling\n- Personal tooling for collecting and grouping unstable test results to make repeat offenders visible.\n- Uses Redis to store run history and flakiness counters. Not deployed publicly."
+   }
+  ],
+  "education": {
+   "highest_level": "vocational",
+   "field": "Information Technology",
+   "in_progress": "yes",
+   "quote": "Vocational qualification (ammattitutkinto) in Information Technology — in progress"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "es",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   },
+   {
+    "lang": "fi",
+    "cefr": "A2"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "yes",
+   "quote": "Tampere, Finland | Open to relocation"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

@@ -1,0 +1,39 @@
+Aleksi Ruohonen
+
+Vantaa, Finland
+aleksi.ruohonen@examplemail.fi | +358 40 555 2187
+
+Backend-focused developer building REST APIs with Python on Linux.
+Työkokemus
+
+API Developer — Vantaa Systems
+Mar 2026 – Present
+- Design and maintain REST APIs used by internal and partner-facing services.
+- Work daily on Linux servers: deployments, log inspection, shell tooling and service configuration.
+- Write Python services backed by PostgreSQL, with SQL queries tuned for reporting endpoints.
+- Package and run services in Docker containers.
+- Contribute lightweight HTML / CSS views for API documentation and admin pages.
+- Collaborate through Git with branch-based review.
+
+Software Developer Intern — Vireo Solutions
+Jun 2025 – Nov 2025
+- Introduced MongoDB collections for storing semi-structured event data and wrote the access layer around them.
+- Built REST endpoints in Python with FastAPI.
+- Worked with PostgreSQL and SQL for relational parts of the system.
+- Used Docker for local development environments matching the deployed stack.
+- Handled version control and code review in Git.
+Projektit
+
+Volunteer website for a sports club
+- Built and deployed a public site for a local sports club on a Linux host.
+- Stored member and schedule data in PostgreSQL.
+Koulutus
+
+Upper secondary school diploma (lukio), Electrical Engineering
+Taidot
+
+Python, SQL, PostgreSQL, MongoDB, REST APIs, FastAPI, Flask, Node.js, Docker, Linux, Git, HTML / CSS, Object-oriented programming
+Kielet
+
+Finnish — native
+English — C1

@@ -1,0 +1,29 @@
+[project]
+name = "recourse-screen"
+version = "0.1.0"
+description = "Hiring pre-screener with algorithmic recourse (AaltoAI demo backend)"
+requires-python = ">=3.12"
+dependencies = [
+    "ortools>=9.12",
+    "anthropic>=1.0",
+    "pydantic>=2.7",
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pyyaml>=6.0",
+    "numpy>=2.0",
+    "python-dotenv>=1.0",
+    "python-multipart>=0.0.9",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "httpx>=0.27"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["recourse_screen"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,34 @@
+Eerik Valtonen
+Tartu, Estonia
+eerik.valtonen@mailbox-ee.net | +372 5512 8834
+
+Profile
+
+Backend-focused software engineer working mainly in Python, with everyday practice in Django, Flask, PostgreSQL and Docker on Linux. Comfortable designing and maintaining REST APIs and keeping a clean, reviewable Git history across a team.
+
+Experience
+
+Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present
+Builds and maintains backend services in Python and Django, with REST APIs as the main interface between internal services and client-facing applications. Handles versioning, branching strategy and code review in Git, and is often the person who sorts out awkward merges and release branches. Writes SQL against PostgreSQL for reporting and data access, packages services with Docker, and administers the Linux environments the applications run on. Contributes some JavaScript on the front-facing side and supports a machine learning component that consumes data produced by the backend.
+
+API Developer, Nordcom Oy — Jun 2019 – Jul 2024
+Developed HTTP services in Flask and Django, covering endpoint design, request validation, authentication flows and error handling. Flask carried most of the lighter, single-purpose services, which were containerised with Docker and deployed alongside the larger Django applications. Worked closely in Git, keeping feature branches small and reviewing colleagues' pull requests. Wrote and tuned SQL queries and schema migrations for PostgreSQL as data volumes grew.
+
+Warehouse Associate, Kanta Kirjasto — Aug 2018 – Jun 2019
+Handled stock movement and inventory records, gradually taking over the spreadsheet work that tracked incoming and outgoing items in Excel. Built lookups and summary sheets that replaced manual counting, and later used SQL to pull figures directly from the stock database for those reports. Took part in the team's Agile and Scrum ceremonies, including planning and retrospectives.
+
+Projects
+
+Django tutorial series — worked through a structured Django tutorial series as self-study, extending the sample application with JavaScript on the client side and running the whole thing locally in Docker. Not deployed.
+
+Education
+
+B.Sc., Information Systems
+
+Skills
+
+Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets
+
+Languages
+
+Finnish (native), English (B2), Swedish (B1)

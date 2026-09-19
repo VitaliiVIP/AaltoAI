@@ -1,0 +1,386 @@
+{
+ "job_family": "software_engineering",
+ "version": "swe-manifest-v1",
+ "horizon_months": 18,
+ "features": {
+  "experience.backend_months": {
+   "type": "int",
+   "step": {
+    "unit": "months",
+    "size": 6
+   },
+   "domain_max": 40,
+   "actionability": "conditionally_actionable",
+   "direction": "increase_only",
+   "cost_per_step": 12,
+   "max_delta": 3,
+   "typical_time_months": 6,
+   "is_causal": true,
+   "candidate_phrase": "professional backend engineering experience"
+  },
+  "experience.software_months": {
+   "type": "int",
+   "step": {
+    "unit": "months",
+    "size": 6
+   },
+   "domain_max": 40,
+   "actionability": "conditionally_actionable",
+   "direction": "increase_only",
+   "cost_per_step": 12,
+   "max_delta": 3,
+   "typical_time_months": 6,
+   "is_causal": true,
+   "candidate_phrase": "professional software engineering experience"
+  },
+  "experience.total_months": {
+   "type": "int",
+   "step": {
+    "unit": "months",
+    "size": 6
+   },
+   "domain_max": 80,
+   "actionability": "immutable",
+   "direction": "none",
+   "cost_per_step": null,
+   "max_delta": 0,
+   "typical_time_months": null,
+   "is_causal": true,
+   "candidate_phrase": "total professional experience",
+   "disclosure": "Total professional experience is treated as fixed for this screen."
+  },
+  "skills.python.held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 8,
+   "max_delta": 1,
+   "typical_time_months": 3,
+   "is_causal": true,
+   "candidate_phrase": "working knowledge of Python"
+  },
+  "skills.python.months": {
+   "type": "int",
+   "step": {
+    "unit": "months",
+    "size": 6
+   },
+   "domain_max": 40,
+   "actionability": "conditionally_actionable",
+   "direction": "increase_only",
+   "cost_per_step": 10,
+   "max_delta": 3,
+   "typical_time_months": 6,
+   "is_causal": true,
+   "candidate_phrase": "professional Python experience"
+  },
+  "skills.kubernetes.held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 9,
+   "max_delta": 1,
+   "typical_time_months": 4,
+   "is_causal": true,
+   "candidate_phrase": "hands-on Kubernetes experience (deploying and operating a service)"
+  },
+  "skills.docker.held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 3,
+   "max_delta": 1,
+   "typical_time_months": 1,
+   "is_causal": true,
+   "candidate_phrase": "working knowledge of Docker"
+  },
+  "skills.terraform.held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 5,
+   "max_delta": 1,
+   "typical_time_months": 2,
+   "is_causal": true,
+   "candidate_phrase": "working knowledge of Terraform"
+  },
+  "derived.cloud_platform_held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 8,
+   "max_delta": 1,
+   "typical_time_months": 3,
+   "is_causal": true,
+   "candidate_phrase": "hands-on experience with a cloud platform (AWS, Azure or GCP)"
+  },
+  "derived.ci_cd_held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 4,
+   "max_delta": 1,
+   "typical_time_months": 1,
+   "is_causal": true,
+   "candidate_phrase": "ownership of a CI/CD pipeline"
+  },
+  "derived.iac_held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 5,
+   "max_delta": 1,
+   "typical_time_months": 2,
+   "is_causal": true,
+   "candidate_phrase": "infrastructure-as-code experience (Terraform, Pulumi, Ansible or similar)"
+  },
+  "derived.sql_held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 3,
+   "max_delta": 1,
+   "typical_time_months": 1,
+   "is_causal": true,
+   "candidate_phrase": "working knowledge of SQL databases"
+  },
+  "project_counts_by_topic.microservices": {
+   "type": "int",
+   "step": {
+    "unit": "projects",
+    "size": 1
+   },
+   "domain_max": 10,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 6,
+   "max_delta": 3,
+   "typical_time_months": 2,
+   "is_causal": true,
+   "candidate_phrase": "shipped microservices projects"
+  },
+  "project_counts_by_topic.backend": {
+   "type": "int",
+   "step": {
+    "unit": "projects",
+    "size": 1
+   },
+   "domain_max": 10,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 5,
+   "max_delta": 3,
+   "typical_time_months": 2,
+   "is_causal": true,
+   "candidate_phrase": "backend projects you can describe and link"
+  },
+  "education.highest_level": {
+   "type": "ordinal",
+   "step": {
+    "unit": "level",
+    "size": 1
+   },
+   "domain_max": 5,
+   "actionability": "conditionally_actionable",
+   "direction": "increase_only",
+   "cost_per_step": 40,
+   "max_delta": 1,
+   "typical_time_months": 24,
+   "is_causal": true,
+   "candidate_phrase": "completed degree level",
+   "ladder": [
+    "none",
+    "secondary",
+    "vocational",
+    "bsc",
+    "msc",
+    "phd"
+   ]
+  },
+  "eligibility.requires_sponsorship": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "immutable",
+   "direction": "none",
+   "cost_per_step": null,
+   "max_delta": 0,
+   "typical_time_months": null,
+   "is_causal": true,
+   "candidate_phrase": "work authorisation",
+   "disclosure": "This role requires the right to work without sponsorship; this is a legal eligibility requirement and not something a CV edit changes."
+  },
+  "education.graduation_year": {
+   "type": "int",
+   "step": {
+    "unit": "year",
+    "size": 1
+   },
+   "domain_max": 0,
+   "actionability": "protected_never_use",
+   "direction": "none",
+   "cost_per_step": null,
+   "max_delta": 0,
+   "typical_time_months": null,
+   "is_causal": false,
+   "candidate_phrase": "graduation year",
+   "reason": "age proxy (ADEA / Mobley v. Workday)"
+  },
+  "experience.max_gap_months": {
+   "type": "int",
+   "step": {
+    "unit": "months",
+    "size": 6
+   },
+   "domain_max": 0,
+   "actionability": "protected_never_use",
+   "direction": "none",
+   "cost_per_step": null,
+   "max_delta": 0,
+   "typical_time_months": null,
+   "is_causal": false,
+   "candidate_phrase": "employment gaps",
+   "reason": "caregiving and disability proxy"
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "any_of": [
+    "skills.aws.held",
+    "skills.azure.held",
+    "skills.gcp.held",
+    "skills.aws_ecs.held",
+    "skills.aws_lambda.held"
+   ],
+   "phrase": "hands-on experience with a cloud platform"
+  },
+  "ci_cd_held": {
+   "any_of": [
+    "skills.ci_cd.held",
+    "skills.github_actions.held",
+    "skills.gitlab_ci.held",
+    "skills.jenkins.held",
+    "skills.argo_cd.held"
+   ],
+   "phrase": "CI/CD pipeline ownership"
+  },
+  "iac_held": {
+   "any_of": [
+    "skills.terraform.held",
+    "skills.pulumi.held",
+    "skills.ansible.held",
+    "skills.cloudformation.held"
+   ],
+   "phrase": "infrastructure-as-code experience"
+  },
+  "sql_held": {
+   "any_of": [
+    "skills.sql.held",
+    "skills.postgresql.held",
+    "skills.mysql.held",
+    "skills.sqlite.held",
+    "skills.supabase.held"
+   ],
+   "phrase": "SQL database experience"
+  }
+ },
+ "cooccurrence": {
+  "kubernetes": [
+   "docker",
+   "ci_cd"
+  ],
+  "django": [
+   "sql",
+   "python"
+  ],
+  "flask": [
+   "python",
+   "sql"
+  ],
+  "fastapi": [
+   "python"
+  ],
+  "terraform": [
+   "aws"
+  ],
+  "postgresql": [
+   "sql"
+  ],
+  "mysql": [
+   "sql"
+  ],
+  "helm": [
+   "kubernetes",
+   "docker"
+  ],
+  "github_actions": [
+   "ci_cd",
+   "git"
+  ],
+  "gitlab_ci": [
+   "ci_cd",
+   "git"
+  ],
+  "jenkins": [
+   "ci_cd"
+  ],
+  "aws_ecs": [
+   "docker",
+   "aws"
+  ],
+  "microservices": [
+   "docker",
+   "rest_api"
+  ],
+  "react": [
+   "javascript",
+   "html_css"
+  ],
+  "nodejs": [
+   "javascript"
+  ]
+ }
+}

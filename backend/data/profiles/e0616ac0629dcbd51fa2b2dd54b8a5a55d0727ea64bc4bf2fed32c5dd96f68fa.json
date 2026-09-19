@@ -1,0 +1,715 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "e0616ac0629dcbd51fa2b2dd54b8a5a55d0727ea64bc4bf2fed32c5dd96f68fa",
+  "source_file": "cv2_marcus_chen.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:19:23+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "CloudNorth Ltd",
+    "start": "2021-07",
+    "end": "2026-07",
+    "date_precision": "year",
+    "months": 60,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "microservices",
+     "python",
+     "kubernetes",
+     "azure"
+    ],
+    "primary_skills": [
+     "microservices",
+     "python",
+     "kubernetes",
+     "azure"
+    ],
+    "evidence": [
+     {
+      "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
+      "start": 110,
+      "end": 155,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "StartHub",
+    "start": "2019-07",
+    "end": "2021-07",
+    "date_precision": "year",
+    "months": 24,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "django",
+     "postgresql"
+    ],
+    "primary_skills": [
+     "django",
+     "postgresql"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior Developer, StartHub (2019-2021)",
+      "start": 298,
+      "end": 336,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 84,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 84,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 84,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 2,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "azure": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
+      "start": 110,
+      "end": 155,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
+      "start": 464,
+      "end": 523,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 60,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
+      "start": 464,
+      "end": 523,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "django": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Developer, StartHub (2019-2021)",
+      "start": 298,
+      "end": 336,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2021,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
+      "start": 464,
+      "end": 523,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "kubernetes": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
+      "start": 110,
+      "end": 155,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
+      "start": 464,
+      "end": 523,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 60,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "microservices": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
+      "start": 110,
+      "end": 155,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 60,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Developer, StartHub (2019-2021)",
+      "start": 298,
+      "end": 336,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
+      "start": 464,
+      "end": 523,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2021,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
+      "start": 110,
+      "end": 155,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
+      "start": 464,
+      "end": 523,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 60,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "redis": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
+      "start": 464,
+      "end": 523,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  }
+ },
+ "projects": [
+  {
+   "title": "Rebuilt payments microservice",
+   "topics": [
+    "backend",
+    "microservices"
+   ],
+   "skills": [
+    "microservices"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "- Rebuilt payments microservice, reduced latency by 40%",
+     "start": 534,
+     "end": 589,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Blue-green deployment pipeline",
+   "topics": [
+    "devops"
+   ],
+   "skills": [
+    "kubernetes",
+    "ci_cd"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "- Implemented blue-green deployment pipeline on Kubernetes",
+     "start": 590,
+     "end": 648,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "backend": 1,
+  "devops": 1,
+  "microservices": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc. Software Engineering, University of Helsinki",
+     "start": 398,
+     "end": 448,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "software engineering",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc. Software Engineering, University of Helsinki",
+     "start": 398,
+     "end": 448,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": false,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc. Software Engineering, University of Helsinki",
+     "start": 398,
+     "end": 448,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "certifications": [],
+ "languages": [],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Espoo, Finland",
+     "start": 83,
+     "end": 97,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
+     "start": 110,
+     "end": 155,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
+     "start": 464,
+     "end": 523,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
+     "start": 464,
+     "end": 523,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Junior Developer, StartHub (2019-2021)",
+     "start": 298,
+     "end": 336,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
+     "start": 464,
+     "end": 523,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [
+  "blue-green deployment"
+ ],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

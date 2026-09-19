@@ -1,0 +1,235 @@
+{
+ "cv_sha256": "311662937a22ba119ea94ff1528e1542778db12886573ca855510654fcbe16db",
+ "source_file": "synth_015.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:23:00+00:00",
+ "cv_text": "Aleksi Virtanen\n\nEspoo, Finland | Open to relocation\naleksi.virtanen@kontumail.fi | +358 40 555 2187\n\n---\nPROFILE\n\nBackend engineer and technical lead who works in a consulting mode with product, platform and infrastructure stakeholders. My engagements typically centre on Python services exposed through REST APIs, packaged with Docker and operated on Kubernetes in AWS. I am comfortable moving between the design table — where microservices architecture boundaries, Apache Kafka event flows and SQL data models are argued out — and the delivery floor, where Terraform, container images and Grafana dashboards decide whether a release is calm or painful. Engagements have run the range from greenfield service build-out to hardening and handover of systems already carrying production traffic. I work in Finnish and English with equal ease and hold an AZ-900 certification alongside a B.Sc. in Industrial Engineering and Management, a combination that makes me a useful translator between engineering delivery and commercial expectations.\n\n---\nPROFESSIONAL EXPERIENCE\nBackend Tech Lead — Polaris Payments\nAug 2021 – Present\n\nTechnical lead for backend delivery in a payments environment, acting as the primary engineering counterpart for internal product owners and for integration partners on the client side.\n\n- Own the Docker containerisation standard across backend services: base image strategy, layer hygiene, build reproducibility and the image promotion path from developer laptop to production. Docker is the common contract between the service teams and the platform, and I maintain it as such.\n- Design and evolve Python microservices, setting service boundaries, ownership and contract expectations across the estate rather than letting them emerge accidentally.\n- Define and review REST API contracts consumed by partner-facing and internal clients, chairing the design discussions where versioning and backwards compatibility are settled.\n- Operate the container platform on Kubernetes in AWS, covering workload scheduling, resource sizing, rollout behaviour and failure recovery.\n- Codify infrastructure in Terraform so that environments are described, reviewed and reproducible instead of hand-assembled in a console.\n- Build asynchronous flows on Apache Kafka for settlement and notification paths where synchronous request/response coupling was a liability.\n- Model and tune the relational layer in SQL: schema design, query profiling and index strategy for transaction-heavy tables.\n- Run design reviews, onboarding and pairing for the backend group, and prepare the technical material used in stakeholder and partner sessions.\nBackend Software Engineer — Ruska Systems\nMay 2016 – Aug 2021\n\nDelivery engineer across several client-facing backend engagements, with a consistent focus on the API surface and the data underneath it.\n\n- Designed, implemented and documented REST APIs that served as the integration point for client systems, working directly with client developers through specification, sandbox testing and go-live. The API layer was the deliverable clients judged the engagement on, and I treated it accordingly.\n- Took deep ownership of the SQL layer: normalised and denormalised schema decisions, migration planning against live data, query rewriting and index work to bring slow endpoints back into acceptable territory.\n- Wrote the bulk of service logic in Python, with attention to testability and to making handover to client teams straightforward.\n- Packaged services with Docker and deployed them onto Kubernetes clusters running in AWS.\n- Instrumented services and built Grafana dashboards so that both internal on-call and client stakeholders could see service health without asking an engineer.\n- Participated in incident response and in the post-incident write-ups shared with affected clients.\nFreelance Backend Developer — Self-employed (toiminimi)\nApr 2015 – Nov 2015\n\nIndependent backend work delivered directly to small business clients under my own trade name.\n\n- Built backend components in Python to client specification, scoping the work, agreeing deliverables and handling the engagement end to end without an account manager in between.\n- Handled requirements gathering, estimation, invoicing and handover documentation personally, which shaped how I still frame scope with clients today.\nGraduate Software Engineer — Ruska Systems\nAug 2014 – May 2016\n\nEntry into professional backend delivery, contributing to services that supported client-facing products.\n\n- Implemented and extended REST API endpoints under review from senior engineers, learning the discipline of stable, well-documented interfaces early.\n- Wrote service code in Python and the accompanying SQL queries and schema changes.\n- Worked with Elasticsearch to support search and retrieval features over document-shaped data.\n- Learned the deployment toolchain in practice: building Docker images, deploying to Kubernetes and working with AWS services in development and staging environments.\n\n---\nSELECTED PERSONAL PROJECTS\n\nJob-board REST API — Backend project building out a job listing and application API, used as a sandbox for resource modelling, pagination and error-response conventions in REST APIs. Not deployed publicly.\n\nSelf-hosted CI runner setup — DevOps exercise standing up a self-managed build runner environment, including the SQL-backed store for job and run history. Not deployed publicly.\n\nCost dashboard for a cloud account — Infrastructure project collecting AWS account cost and usage data, streaming records through Apache Kafka and indexing them into Elasticsearch for exploration and breakdown by service. Not deployed publicly.\n\n---\nTECHNICAL SKILLS\n\nLanguages & data: Python, SQL\nAPIs & architecture: REST APIs, Microservices architecture\nContainers & orchestration: Docker, Kubernetes\nCloud & infrastructure as code: AWS, Terraform\nMessaging & search: Apache Kafka, Elasticsearch\nObservability: Grafana\n\n---\nEDUCATION\n\nB.Sc., Industrial Engineering and Management\n\n---\nCERTIFICATIONS\n\nMicrosoft Certified: Azure Fundamentals (AZ-900)\n\n---\nLANGUAGES\n\nFinnish — native\nEnglish — C2\nGerman — B1\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Backend Tech Lead",
+    "title_canonical": "backend_engineer",
+    "employer": "Polaris Payments",
+    "start_raw": "Aug 2021",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "docker",
+     "python",
+     "microservices",
+     "rest_api",
+     "kubernetes",
+     "aws",
+     "terraform",
+     "kafka",
+     "sql"
+    ],
+    "primary_skills": [
+     "docker",
+     "python",
+     "microservices"
+    ],
+    "quote": "Backend Tech Lead — Polaris Payments"
+   },
+   {
+    "title_raw": "Backend Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Ruska Systems",
+    "start_raw": "May 2016",
+    "end_raw": "Aug 2021",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "sql",
+     "python",
+     "docker",
+     "kubernetes",
+     "aws",
+     "grafana"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "sql"
+    ],
+    "quote": "Backend Software Engineer — Ruska Systems"
+   },
+   {
+    "title_raw": "Freelance Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Self-employed (toiminimi)",
+    "start_raw": "Apr 2015",
+    "end_raw": "Nov 2015",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python"
+    ],
+    "primary_skills": [
+     "python"
+    ],
+    "quote": "Freelance Backend Developer — Self-employed (toiminimi)"
+   },
+   {
+    "title_raw": "Graduate Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Ruska Systems",
+    "start_raw": "Aug 2014",
+    "end_raw": "May 2016",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "python",
+     "sql",
+     "elasticsearch",
+     "docker",
+     "kubernetes",
+     "aws"
+    ],
+    "primary_skills": [
+     "rest_api"
+    ],
+    "quote": "Graduate Software Engineer — Ruska Systems"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Languages & data: Python, SQL"
+   },
+   {
+    "skill": "sql",
+    "quote": "Languages & data: Python, SQL"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "APIs & architecture: REST APIs, Microservices architecture"
+   },
+   {
+    "skill": "microservices",
+    "quote": "APIs & architecture: REST APIs, Microservices architecture"
+   },
+   {
+    "skill": "docker",
+    "quote": "Containers & orchestration: Docker, Kubernetes"
+   },
+   {
+    "skill": "kubernetes",
+    "quote": "Containers & orchestration: Docker, Kubernetes"
+   },
+   {
+    "skill": "aws",
+    "quote": "Cloud & infrastructure as code: AWS, Terraform"
+   },
+   {
+    "skill": "terraform",
+    "quote": "Cloud & infrastructure as code: AWS, Terraform"
+   },
+   {
+    "skill": "kafka",
+    "quote": "Messaging & search: Apache Kafka, Elasticsearch"
+   },
+   {
+    "skill": "elasticsearch",
+    "quote": "Messaging & search: Apache Kafka, Elasticsearch"
+   },
+   {
+    "skill": "grafana",
+    "quote": "Observability: Grafana"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Job-board REST API",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "rest_api"
+    ],
+    "deployed": "no",
+    "quote": "Job-board REST API — Backend project building out a job listing and application API, used as a sandbox for resource modelling, pagination and error-response conventions in REST APIs. Not deployed publicly."
+   },
+   {
+    "title": "Self-hosted CI runner setup",
+    "topics": [
+     "devops"
+    ],
+    "skills": [
+     "ci_cd",
+     "sql"
+    ],
+    "deployed": "no",
+    "quote": "Self-hosted CI runner setup — DevOps exercise standing up a self-managed build runner environment, including the SQL-backed store for job and run history. Not deployed publicly."
+   },
+   {
+    "title": "Cost dashboard for a cloud account",
+    "topics": [
+     "infrastructure",
+     "data"
+    ],
+    "skills": [
+     "aws",
+     "kafka",
+     "elasticsearch"
+    ],
+    "deployed": "no",
+    "quote": "Cost dashboard for a cloud account — Infrastructure project collecting AWS account cost and usage data, streaming records through Apache Kafka and indexing them into Elasticsearch for exploration and breakdown by service. Not deployed publicly."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "Industrial Engineering and Management",
+   "in_progress": "unclear",
+   "quote": "B.Sc., Industrial Engineering and Management"
+  },
+  "certifications": [
+   {
+    "cert_id": "azure_fundamentals_az_900",
+    "issuer": "Microsoft",
+    "issued_raw": "",
+    "quote": "Microsoft Certified: Azure Fundamentals (AZ-900)"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C2"
+   },
+   {
+    "lang": "de",
+    "cefr": "B1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "yes",
+   "quote": "Espoo, Finland | Open to relocation"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

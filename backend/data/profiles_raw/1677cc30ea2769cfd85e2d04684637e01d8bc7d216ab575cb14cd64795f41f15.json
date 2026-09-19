@@ -1,0 +1,209 @@
+{
+ "cv_sha256": "1677cc30ea2769cfd85e2d04684637e01d8bc7d216ab575cb14cd64795f41f15",
+ "source_file": "synth_025.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:25:34+00:00",
+ "cv_text": "Eerik Valtonen\nTartu, Estonia\neerik.valtonen@mailbox-ee.net | +372 5512 8834\n\nProfile\n\nBackend-focused software engineer working mainly in Python, with everyday practice in Django, Flask, PostgreSQL and Docker on Linux. Comfortable designing and maintaining REST APIs and keeping a clean, reviewable Git history across a team.\n\nExperience\n\nSoftware Engineer (Backend), Nordcom Oy — Sep 2024 – Present\nBuilds and maintains backend services in Python and Django, with REST APIs as the main interface between internal services and client-facing applications. Handles versioning, branching strategy and code review in Git, and is often the person who sorts out awkward merges and release branches. Writes SQL against PostgreSQL for reporting and data access, packages services with Docker, and administers the Linux environments the applications run on. Contributes some JavaScript on the front-facing side and supports a machine learning component that consumes data produced by the backend.\n\nAPI Developer, Nordcom Oy — Jun 2019 – Jul 2024\nDeveloped HTTP services in Flask and Django, covering endpoint design, request validation, authentication flows and error handling. Flask carried most of the lighter, single-purpose services, which were containerised with Docker and deployed alongside the larger Django applications. Worked closely in Git, keeping feature branches small and reviewing colleagues' pull requests. Wrote and tuned SQL queries and schema migrations for PostgreSQL as data volumes grew.\n\nWarehouse Associate, Kanta Kirjasto — Aug 2018 – Jun 2019\nHandled stock movement and inventory records, gradually taking over the spreadsheet work that tracked incoming and outgoing items in Excel. Built lookups and summary sheets that replaced manual counting, and later used SQL to pull figures directly from the stock database for those reports. Took part in the team's Agile and Scrum ceremonies, including planning and retrospectives.\n\nProjects\n\nDjango tutorial series — worked through a structured Django tutorial series as self-study, extending the sample application with JavaScript on the client side and running the whole thing locally in Docker. Not deployed.\n\nEducation\n\nB.Sc., Information Systems\n\nSkills\n\nPython, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets\n\nLanguages\n\nFinnish (native), English (B2), Swedish (B1)\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start_raw": "Sep 2024",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "django",
+     "rest_api",
+     "git",
+     "sql",
+     "postgresql",
+     "docker",
+     "linux",
+     "javascript",
+     "machine_learning"
+    ],
+    "primary_skills": [
+     "python",
+     "django",
+     "rest_api",
+     "git",
+     "sql",
+     "postgresql",
+     "docker",
+     "linux",
+     "javascript",
+     "machine_learning"
+    ],
+    "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present"
+   },
+   {
+    "title_raw": "API Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start_raw": "Jun 2019",
+    "end_raw": "Jul 2024",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "flask",
+     "django",
+     "docker",
+     "git",
+     "sql",
+     "postgresql"
+    ],
+    "primary_skills": [
+     "flask",
+     "django",
+     "docker",
+     "git",
+     "sql",
+     "postgresql"
+    ],
+    "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024"
+   },
+   {
+    "title_raw": "Warehouse Associate",
+    "title_canonical": "non_software",
+    "employer": "Kanta Kirjasto",
+    "start_raw": "Aug 2018",
+    "end_raw": "Jun 2019",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "sql",
+     "agile"
+    ],
+    "primary_skills": [
+     "excel",
+     "sql"
+    ],
+    "quote": "Warehouse Associate, Kanta Kirjasto — Aug 2018 – Jun 2019"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "django",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "flask",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "git",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "docker",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "linux",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "javascript",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "html_css",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "machine_learning",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "agile",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   },
+   {
+    "skill": "excel",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Django tutorial series",
+    "topics": [
+     "tutorial"
+    ],
+    "skills": [
+     "django",
+     "javascript",
+     "docker"
+    ],
+    "deployed": "no",
+    "quote": "Django tutorial series — worked through a structured Django tutorial series as self-study, extending the sample application with JavaScript on the client side and running the whole thing locally in Docker. Not deployed."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "information systems",
+   "in_progress": "unclear",
+   "quote": "B.Sc., Information Systems"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "B2"
+   },
+   {
+    "lang": "sv",
+    "cefr": "B1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "EE",
+   "relocation_willing": "unclear",
+   "quote": "Tartu, Estonia"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

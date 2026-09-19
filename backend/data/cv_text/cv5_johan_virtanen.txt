@@ -1,0 +1,19 @@
+Johan Virtanen
+Backend Software Engineer
+johan.virtanen@example.com | +358 40 777 8899 | Turku, Finland
+
+Experience
+Software Engineer, Turku Web Oy (2021-2026) - 4 years
+- Built Java and Python services, some deployed on Docker Swarm
+- Limited exposure to Kubernetes (one internal proof-of-concept)
+
+Education
+B.Sc. Information Technology, Turku UAS (2021)
+
+Skills
+Java, Python, Docker, MySQL, Jenkins
+
+Projects
+- Built internal ticketing system in Java/Spring
+- Proof-of-concept Kubernetes deployment for one microservice
+

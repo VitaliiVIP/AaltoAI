@@ -1,0 +1,213 @@
+{
+ "cv_sha256": "f2e5a214715e1df24e49de3dfa9277ea588bafcabb6a0fa0e7f9be2e67994200",
+ "source_file": "synth_000.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:19:52+00:00",
+ "cv_text": "Mikael Ahonen\nTartu, Estonia\nmikael.ahonen@kolmemail.ee | +372 5512 8834\n\nBackend software engineer working with Python, Django and relational databases.\n\nTyökokemus\n\nBackend Software Engineer — Nokka Oy\nJun 2022 – May 2026\n- Wrote and tuned SQL queries against PostgreSQL, reworking joins and indexes for reporting and batch jobs.\n- Modelled schemas and migrations for Django services, keeping query logic readable and reviewable.\n- Built and maintained REST APIs consumed by internal and partner clients.\n- Packaged services with Docker for consistent local and CI environments.\n- Covered business rules with pytest suites; managed work in Git with review-based branching.\n- Produced ad hoc data extracts and reconciliation sheets in Excel / spreadsheets for finance colleagues.\n\nFreelance Developer (contract) — Freelance\nMar 2020 – Feb 2021\n- Delivered small Python tools and automation scripts for client data tasks, from first spec to handover.\n- Wrote SQL to pull and clean data from client databases.\n- Kept each engagement in Git, with tagged releases and written handover notes.\n\nShop Assistant — Vihrea Puutarha Oy\nMay 2019 – Feb 2022\n- Maintained stock, ordering and seasonal pricing sheets in Excel / spreadsheets.\n- Took part in Agile / Scrum style team routines: short daily stand-ups, backlog of shop tasks, retrospectives after peak weekends.\n\nWarehouse Associate — Kanta Kirjasto\nJan 2018 – May 2019\n- Ran the goods-in and inventory tracking sheets in Excel / spreadsheets, flagging discrepancies for the team lead.\n- Helped organise work using Agile / Scrum practices, including planning sessions and a visible task board.\n- Used SQL to look up item records in the catalogue database when stock data disagreed.\n\nKoulutus\n\nM.Sc., Information Technology\n\nSertifikaatit\n\nCertified ScrumMaster (CSM)\n\nTaidot\n\nPython, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum\n\nProjektit\n\nBootcamp capstone: to-do app — tutorial-based project built in Python; deployed and publicly reachable.\n\nCourse project: blog engine — tutorial-based project with a PostgreSQL backing store and REST APIs; content and post statistics tracked in Excel / spreadsheets. Deployed.\n\nKielet\n\nFinnish — native\nEnglish — C1\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Backend Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start_raw": "Jun 2022",
+    "end_raw": "May 2026",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "sql",
+     "postgresql",
+     "django",
+     "rest_api",
+     "docker",
+     "ci_cd",
+     "pytest",
+     "git",
+     "excel"
+    ],
+    "primary_skills": [
+     "sql",
+     "postgresql",
+     "django"
+    ],
+    "quote": "Backend Software Engineer — Nokka Oy"
+   },
+   {
+    "title_raw": "Freelance Developer (contract)",
+    "title_canonical": "other_software",
+    "employer": "Freelance",
+    "start_raw": "Mar 2020",
+    "end_raw": "Feb 2021",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "python",
+     "sql",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "sql"
+    ],
+    "quote": "Freelance Developer (contract) — Freelance"
+   },
+   {
+    "title_raw": "Shop Assistant",
+    "title_canonical": "non_software",
+    "employer": "Vihrea Puutarha Oy",
+    "start_raw": "May 2019",
+    "end_raw": "Feb 2022",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "agile"
+    ],
+    "primary_skills": [
+     "excel",
+     "agile"
+    ],
+    "quote": "Shop Assistant — Vihrea Puutarha Oy"
+   },
+   {
+    "title_raw": "Warehouse Associate",
+    "title_canonical": "non_software",
+    "employer": "Kanta Kirjasto",
+    "start_raw": "Jan 2018",
+    "end_raw": "May 2019",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "agile",
+     "sql"
+    ],
+    "primary_skills": [
+     "excel",
+     "agile"
+    ],
+    "quote": "Warehouse Associate — Kanta Kirjasto"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   },
+   {
+    "skill": "django",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   },
+   {
+    "skill": "flask",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   },
+   {
+    "skill": "docker",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   },
+   {
+    "skill": "git",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   },
+   {
+    "skill": "pytest",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   },
+   {
+    "skill": "excel",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   },
+   {
+    "skill": "agile",
+    "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Docker, Git, pytest, Excel / spreadsheets, Agile / Scrum"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Bootcamp capstone: to-do app",
+    "topics": [
+     "tutorial"
+    ],
+    "skills": [
+     "python"
+    ],
+    "deployed": "yes",
+    "quote": "Bootcamp capstone: to-do app — tutorial-based project built in Python; deployed and publicly reachable."
+   },
+   {
+    "title": "Course project: blog engine",
+    "topics": [
+     "tutorial"
+    ],
+    "skills": [
+     "postgresql",
+     "rest_api",
+     "excel"
+    ],
+    "deployed": "yes",
+    "quote": "Course project: blog engine — tutorial-based project with a PostgreSQL backing store and REST APIs; content and post statistics tracked in Excel / spreadsheets. Deployed."
+   }
+  ],
+  "education": {
+   "highest_level": "msc",
+   "field": "information technology",
+   "in_progress": "unclear",
+   "quote": "M.Sc., Information Technology"
+  },
+  "certifications": [
+   {
+    "cert_id": "certified_scrummaster",
+    "issuer": "",
+    "issued_raw": "",
+    "quote": "Certified ScrumMaster (CSM)"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "EE",
+   "relocation_willing": "unclear",
+   "quote": "Tartu, Estonia"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

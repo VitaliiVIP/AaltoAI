@@ -1,0 +1,44 @@
+Aino Karvinen
+Espoo, Finland | open to relocation
+aino.karvinen@examplemail.fi | +358 40 555 0192
+
+PROFILE
+QA professional working across test design, automation and delivery pipelines, with a background in software testing for web and API-based systems.
+
+SKILL AREAS
+
+Software Testing
+- Designed and executed functional, regression and exploratory test suites for web applications and backend services.
+- Built up testing practice from trainee level onward, writing test cases, reproducing defects and reporting issues with clear steps and evidence.
+- Validated REST APIs by hand and through automated checks, covering status handling, payload structure and error paths.
+
+Test Automation
+- Wrote and maintained automated test suites in pytest, structuring fixtures and parameterised cases for reusable coverage.
+- Developed browser and script-level checks in JavaScript against front-end behaviour.
+- Familiar with Playwright for end-to-end browser automation.
+
+CI/CD and Tooling
+- Integrated automated test runs into CI/CD pipelines so that failures surfaced on every change.
+- Configured and maintained Jenkins jobs for scheduled and triggered test execution.
+- Used Docker to produce consistent, disposable test environments.
+- Relied on Git for branching, code review and traceability of test assets; acted as a point of reference for Git workflow questions within the team.
+
+Data and Queries
+- Used SQL to verify data states before and after test runs, prepare test data and investigate defects at the database level.
+
+EDUCATION
+B.Sc. Biology
+
+CERTIFICATIONS
+Certified ScrumMaster (CSM)
+
+LANGUAGES
+Finnish — native
+English — B2
+Swedish — B1
+
+EMPLOYMENT HISTORY
+QA Engineer, Ruska Systems — Feb 2025 – Present
+QA Analyst, Vireo Solutions — Feb 2024 – Feb 2025
+QA Engineer, Tampere Tech Group — Sep 2021 – Feb 2024
+QA Trainee, Nordcom Oy — Feb 2020 – Sep 2021

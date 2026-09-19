@@ -1,0 +1,1049 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "d11c1e0039211f91f54eb9ebaf6f5fbf76e113462b9420ec5cbeecb9ba9be600",
+  "source_file": "synth_017.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:23:28+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Senior DevOps Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Arctic Cloud Oy",
+    "start": "2022-07",
+    "end": "2026-09",
+    "date_precision": "year",
+    "months": 50,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "ci_cd",
+     "testing",
+     "docker",
+     "terraform",
+     "prometheus",
+     "bash",
+     "rust"
+    ],
+    "primary_skills": [
+     "ci_cd",
+     "testing"
+    ],
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+      "start": 330,
+      "end": 370,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Platform Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Helsinki Data Works",
+    "start": "2016-07",
+    "end": "2022-07",
+    "date_precision": "year",
+    "months": 72,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "argo_cd",
+     "bash",
+     "ci_cd",
+     "terraform",
+     "ansible",
+     "docker"
+    ],
+    "primary_skills": [
+     "argo_cd",
+     "bash"
+    ],
+    "evidence": [
+     {
+      "quote": "Platform Engineer — Helsinki Data Works",
+      "start": 977,
+      "end": 1016,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Platform Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Polaris Payments",
+    "start": "2015-07",
+    "end": "2016-07",
+    "date_precision": "year",
+    "months": 12,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "nginx",
+     "java",
+     "ci_cd",
+     "docker",
+     "bash",
+     "terraform",
+     "argo_cd"
+    ],
+    "primary_skills": [
+     "nginx",
+     "java",
+     "ci_cd"
+    ],
+    "evidence": [
+     {
+      "quote": "Platform Engineer — Polaris Payments",
+      "start": 1500,
+      "end": 1536,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "IT Operations Trainee",
+    "title_canonical": "devops_engineer",
+    "employer": "Vantaa Systems",
+    "start": "2014-07",
+    "end": "2015-07",
+    "date_precision": "year",
+    "months": 12,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "nginx",
+     "azure",
+     "ci_cd",
+     "docker",
+     "bash"
+    ],
+    "primary_skills": [
+     "nginx",
+     "azure"
+    ],
+    "evidence": [
+     {
+      "quote": "IT Operations Trainee — Vantaa Systems",
+      "start": 1894,
+      "end": 1932,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 146,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 146,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 4,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "ansible": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Platform Engineer — Helsinki Data Works",
+      "start": 977,
+      "end": 1016,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Ansible, Argo CD, Microsoft Azure",
+      "start": 2388,
+      "end": 2421,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2022,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "argo_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Platform Engineer — Helsinki Data Works",
+      "start": 977,
+      "end": 1016,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform Engineer — Polaris Payments",
+      "start": 1500,
+      "end": 1536,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Ansible, Argo CD, Microsoft Azure",
+      "start": 2388,
+      "end": 2421,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 84,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2022,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "azure": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "IT Operations Trainee — Vantaa Systems",
+      "start": 1894,
+      "end": 1932,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Microsoft Azure, Bash / shell scripting",
+      "start": 2406,
+      "end": 2445,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 12,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2015,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "bash": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+      "start": 330,
+      "end": 370,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform Engineer — Helsinki Data Works",
+      "start": 977,
+      "end": 1016,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Bash / shell scripting, CI/CD, Docker",
+      "start": 2423,
+      "end": 2460,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 146,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+      "start": 330,
+      "end": 370,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform Engineer — Helsinki Data Works",
+      "start": 977,
+      "end": 1016,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "CI/CD, Docker, Java",
+      "start": 2447,
+      "end": 2466,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 146,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+      "start": 330,
+      "end": 370,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform Engineer — Helsinki Data Works",
+      "start": 977,
+      "end": 1016,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Docker, Java, Jenkins",
+      "start": 2454,
+      "end": 2475,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 146,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "java": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Platform Engineer — Polaris Payments",
+      "start": 1500,
+      "end": 1536,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Java, Jenkins, Nginx",
+      "start": 2462,
+      "end": 2482,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 12,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2016,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "jenkins": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Jenkins, Nginx, Prometheus",
+      "start": 2468,
+      "end": 2494,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "nginx": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Platform Engineer — Polaris Payments",
+      "start": 1500,
+      "end": 1536,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "IT Operations Trainee — Vantaa Systems",
+      "start": 1894,
+      "end": 1932,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Nginx, Prometheus, Rust",
+      "start": 2477,
+      "end": 2500,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2016,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "prometheus": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+      "start": 330,
+      "end": 370,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Prometheus, Rust, Terraform",
+      "start": 2484,
+      "end": 2511,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 50,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rust": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+      "start": 330,
+      "end": 370,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Rust, Terraform",
+      "start": 2496,
+      "end": 2511,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 50,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "terraform": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+      "start": 330,
+      "end": 370,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Platform Engineer — Helsinki Data Works",
+      "start": 977,
+      "end": 1016,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Rust, Terraform",
+      "start": 2496,
+      "end": 2511,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 134,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+      "start": 330,
+      "end": 370,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 50,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Volunteer website for a sports club",
+   "topics": [
+    "infrastructure"
+   ],
+   "skills": [
+    "nginx"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Volunteer website for a sports club\n- Set up and configured Nginx to serve the site. Not deployed publicly.",
+     "start": 2272,
+     "end": 2379,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "infrastructure": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "msc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "M.Sc., Biology",
+     "start": 2523,
+     "end": 2537,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "biology",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "M.Sc., Biology",
+     "start": 2523,
+     "end": 2537,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "en",
+   "cefr": "C2",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "ru",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Note: Requires a work permit / visa sponsorship to work in Finland.",
+     "start": 75,
+     "end": 142,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Note: Requires a work permit / visa sponsorship to work in Finland.",
+     "start": 75,
+     "end": 142,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "IT Operations Trainee — Vantaa Systems",
+     "start": 1894,
+     "end": 1932,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Microsoft Azure, Bash / shell scripting",
+     "start": 2406,
+     "end": 2445,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+     "start": 330,
+     "end": 370,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Platform Engineer — Helsinki Data Works",
+     "start": 977,
+     "end": 1016,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "CI/CD, Docker, Java",
+     "start": 2447,
+     "end": 2466,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+     "start": 330,
+     "end": 370,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Platform Engineer — Helsinki Data Works",
+     "start": 977,
+     "end": 1016,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Rust, Terraform",
+     "start": 2496,
+     "end": 2511,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [
+  "GitOps"
+ ],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

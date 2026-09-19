@@ -1,0 +1,77 @@
+Aleksi Rautavaara
+
+Espoo, Finland | Open to relocation
+aleksi.rautavaara@mailbox.fi | +358 40 555 0192
+
+PROFILE
+
+Web developer and independent consultant working across client-facing frontend engagements, from discovery and interface prototyping through to delivery and handover. Comfortable operating inside a client's existing codebase as well as setting one up from scratch, with day-to-day work centred on JavaScript, React and TypeScript, backed by Node.js services and REST or GraphQL data layers. Accustomed to translating stakeholder requirements into concrete component work, agreeing scope with non-technical sponsors, and keeping delivery transparent through disciplined Git practice. Certified ScrumMaster, with a Business Administration background that helps when the conversation turns from implementation detail to budget, priority and business outcome. Finnish native speaker, working professionally in English.
+
+CORE SKILLS
+
+JavaScript, TypeScript, React, Next.js, Node.js, HTML / CSS, GraphQL, REST APIs, Git, Playwright
+
+PROFESSIONAL EXPERIENCE
+
+Independent Software Consultant
+Freelance
+Feb 2025 – Oct 2025
+
+- Engaged directly with small business and agency clients, scoping frontend work, agreeing deliverables and reporting progress without an intermediary account layer.
+- Wrote the bulk of engagement work in JavaScript, covering interactive interface behaviour, form handling, client-side state and browser API integration.
+- Built and extended client interfaces in React, structuring component hierarchies so that non-specialist maintainers could continue the work after handover.
+- Produced responsive layouts and styling in HTML / CSS, adapting to whichever design assets or brand guidelines the client supplied.
+- Advised clients on trade-offs between quick tactical fixes and longer refactoring work, and documented the reasoning so decisions remained traceable.
+
+Web Developer
+Sisu Software Oy
+May 2024 – Apr 2026
+
+- Took responsibility for the HTML / CSS foundation of customer-facing products: semantic markup, responsive breakpoints, accessible form and navigation structures, and a consistent styling approach across pages.
+- Refined shared stylesheets and layout primitives so that recurring client requests could be satisfied by configuration rather than one-off overrides.
+- Developed application features in React and Next.js, with TypeScript used throughout for typed props, API contracts and shared utilities.
+- Implemented server-side logic and supporting endpoints in Node.js, connecting rendered pages to backend data.
+- Authored end-to-end test coverage with Playwright for critical user journeys, catching regressions in checkout and authentication flows before client demos.
+- Maintained a clean Git history through feature branches, reviewed pull requests and participated in release preparation.
+- Joined client workshops and refinement sessions, turning discussion notes into estimated, sequenced frontend tickets.
+
+Web Developer
+Nordcom Oy
+Oct 2023 – Apr 2024
+
+- Drove the TypeScript side of the codebase: introduced and tightened type definitions, replaced loosely typed helpers with explicit interfaces, and used typed API models to reduce ambiguity between frontend and backend teams.
+- Delivered React and Next.js features for client web properties, including routing, data fetching and server-rendered pages.
+- Wrote Node.js code supporting build tooling and application endpoints.
+- Contributed to markup and styling work in HTML / CSS alongside JavaScript feature development.
+- Collaborated through Git-based review, giving and receiving feedback on branches before merge.
+
+Junior Frontend Developer
+Nordcom Oy
+Sep 2020 – Aug 2023
+
+- Adopted the team's Git workflow early and became a reliable reviewer: small focused commits, descriptive messages, rebase and conflict resolution, and branch hygiene ahead of releases.
+- Integrated frontend views with REST APIs, handling request sequencing, loading and error states, pagination and response normalisation; also consumed GraphQL endpoints where the platform offered them.
+- Built and maintained React components for client sites, working from design handoffs into HTML / CSS implementations.
+- Moved progressively from plain JavaScript into TypeScript as the codebase adopted it, converting existing modules and adding types to shared code.
+- Supported bug triage on live client sites, reproducing reported issues and proposing fixes.
+
+SELECTED PROJECTS
+
+Portfolio site with a component library
+Personal frontend project pairing a public-facing site with a reusable component set. Built with React and hand-written HTML / CSS, with Node.js handling the local tooling and build pipeline. Not deployed publicly.
+
+Volunteer website for a sports club
+Voluntary work building a website for a local sports club in React, gathering requirements from committee members who had no technical background and shaping the interface around them. Not deployed publicly.
+
+EDUCATION
+
+B.Sc., Business Administration
+
+CERTIFICATIONS
+
+Certified ScrumMaster (CSM)
+
+LANGUAGES
+
+Finnish — native
+English — C1

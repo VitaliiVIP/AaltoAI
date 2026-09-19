@@ -1,0 +1,43 @@
+Mariela Ortega Sandoval
+Oulu, Finland
+mariela.ortegas@mailbox-fi.net | +358 45 118 2246
+
+PROFILE
+QA Analyst working across manual and automated software testing, with day-to-day version control in Git and test automation in Python and JavaScript.
+
+EXPERIENCE
+
+QA Analyst, Vireo Solutions
+Aug 2018 – Mar 2026
+- Owned branching, review and merge workflow in Git for the test automation repositories, keeping test code aligned with application releases.
+- Used Git tagging and history to trace regressions back to the change that introduced them.
+- Designed and executed functional and regression software testing across web applications.
+- Built browser automation with Selenium and later Playwright, replacing repetitive manual checks.
+- Wrote and maintained pytest suites in Python, including fixtures and parameterised cases.
+- Tested REST APIs for contract, error handling and authentication behaviour.
+- Integrated test runs into CI/CD pipelines so failures surfaced on every push.
+- Wrote helper scripts and assertions in JavaScript for front-end test scenarios.
+
+PROJECTS
+
+Flaky-test triage tooling
+- Tooling to detect and classify unstable tests, built around pytest reruns and reporting.
+- Compared Playwright run outcomes to separate timing issues from genuine defects.
+
+End-to-end test suite for a demo shop (deployed)
+- End-to-end checkout and catalogue coverage written in JavaScript.
+- Repository managed in Git with reviewable commits and a documented setup.
+
+EDUCATION
+B.Sc. in Biology
+
+CERTIFICATIONS
+Microsoft Certified: Azure Fundamentals (AZ-900)
+
+SKILLS
+CI/CD, Git, JavaScript, Playwright, pytest, Python, REST APIs, Selenium, Software testing
+
+LANGUAGES
+Spanish — native
+English — C1
+Finnish — A2

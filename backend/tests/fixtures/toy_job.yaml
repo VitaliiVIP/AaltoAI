@@ -1,0 +1,22 @@
+job_id: toy_backend
+title: Toy backend job (worked example)
+family: toy
+manifest: toy_manifest.json
+knockouts:
+  - skills.python.months >= 24
+score:
+  skills.python.months:            {weight: 6}
+  skills.django.months:            {weight: 4}
+  project_counts_by_topic.backend: {weight: 5}
+  certifications.aws_saa:          {weight: 7}
+  skills.docker.held:              {weight: 6}
+  skills.sql.proficiency:          {weight: 5}
+  education.highest_level:         {weight: 4}
+mode:
+  A: {threshold: 60, margin_eps: 0, weight_shrink_rho: 0}
+  B: {slots_N: 3}
+dependencies:
+  - "x'[skills.django.months] <= x'[skills.python.months]"
+  - "delta[project_counts_by_topic.backend] <= 2 + 2*delta[skills.python.months]"
+k_routes: 3
+sparsity_lambda: 1

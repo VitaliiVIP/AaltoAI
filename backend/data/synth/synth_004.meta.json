@@ -1,0 +1,15 @@
+{
+ "idx": 4,
+ "source_file": "synth_004.txt",
+ "archetype": "qa",
+ "style": "functional CV grouped by skill area first, with a bare employment-history list at the end",
+ "seniority": "mid",
+ "omitted_skills": [],
+ "overlap": false,
+ "year_only_dates": true,
+ "under_report": false,
+ "block_only_skills": [],
+ "n_roles": 1,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

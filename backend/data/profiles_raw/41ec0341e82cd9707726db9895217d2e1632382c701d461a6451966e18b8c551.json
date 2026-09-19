@@ -1,0 +1,136 @@
+{
+ "cv_sha256": "41ec0341e82cd9707726db9895217d2e1632382c701d461a6451966e18b8c551",
+ "source_file": "synth_010.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:21:53+00:00",
+ "cv_text": "Mariela Ortega Quintana\nOulu, Finland\nmariela.ortegaq@posteo.net | +358 45 218 7734\n\nACADEMIC QUALIFICATIONS\n\nB.Sc. in Mathematics\n\nPROFESSIONAL CERTIFICATION\n\nCertified Kubernetes Application Developer (CKAD)\n\nPROFESSIONAL EXPERIENCE IN REVERSE CHRONOLOGICAL ORDER\n\nAdministrative Coordinator\nMetsa Logistics Oy\nApr 2024 – Present\n- Composes and maintains SQL queries against operational databases in order to assemble the figures required for routine administrative reporting.\n- Refines existing SQL statements so that recurring extracts run reliably and return consistent results across reporting cycles.\n- Consolidates query output into structured spreadsheets, applying formulas and pivot summaries for departmental review.\n\nCustomer Success Specialist\nMetsa Logistics Oy\nJan 2023 – Mar 2024\n- Maintained detailed spreadsheet records of client accounts, service requests and follow-up actions.\n- Constructed lookup formulas, conditional formatting and summary tabs in Excel to render account status legible at a glance.\n- Prepared recurring spreadsheet overviews used in customer review discussions and internal handovers.\n\nWarehouse Associate\nVihrea Puutarha Oy\nNov 2019 – Dec 2022\n- Interrogated the inventory database with SQL to reconcile recorded stock against physical counts.\n- Developed straightforward SQL extracts supporting stock movement and replenishment checks.\n- Kept goods-in and goods-out spreadsheets current, organising the data for subsequent querying.\n\nINDEPENDENT PROJECT WORK\n\nSpreadsheet automation for a small shop\n- Designed a data workflow for a small retail business, using SQL to retrieve and aggregate records so that manual re-typing into spreadsheets was no longer necessary. Developed locally; not deployed.\n\nTECHNICAL COMPETENCIES\n\nExcel / spreadsheets\nSQL\n\nLANGUAGES\n\nSpanish — native\nEnglish — C1\nFinnish — A2\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Administrative Coordinator",
+    "title_canonical": "non_software",
+    "employer": "Metsa Logistics Oy",
+    "start_raw": "Apr 2024",
+    "end_raw": "present",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "sql",
+     "excel"
+    ],
+    "primary_skills": [
+     "sql"
+    ],
+    "quote": "Administrative Coordinator\nMetsa Logistics Oy\nApr 2024 – Present"
+   },
+   {
+    "title_raw": "Customer Success Specialist",
+    "title_canonical": "non_software",
+    "employer": "Metsa Logistics Oy",
+    "start_raw": "Jan 2023",
+    "end_raw": "Mar 2024",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel"
+    ],
+    "primary_skills": [
+     "excel"
+    ],
+    "quote": "Customer Success Specialist\nMetsa Logistics Oy\nJan 2023 – Mar 2024"
+   },
+   {
+    "title_raw": "Warehouse Associate",
+    "title_canonical": "non_software",
+    "employer": "Vihrea Puutarha Oy",
+    "start_raw": "Nov 2019",
+    "end_raw": "Dec 2022",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "sql"
+    ],
+    "primary_skills": [
+     "sql"
+    ],
+    "quote": "Warehouse Associate\nVihrea Puutarha Oy\nNov 2019 – Dec 2022"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "excel",
+    "quote": "Excel / spreadsheets"
+   },
+   {
+    "skill": "sql",
+    "quote": "SQL"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Spreadsheet automation for a small shop",
+    "topics": [
+     "data"
+    ],
+    "skills": [
+     "sql"
+    ],
+    "deployed": "no",
+    "quote": "Spreadsheet automation for a small shop\n- Designed a data workflow for a small retail business, using SQL to retrieve and aggregate records so that manual re-typing into spreadsheets was no longer necessary. Developed locally; not deployed."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "mathematics",
+   "in_progress": "unclear",
+   "quote": "B.Sc. in Mathematics"
+  },
+  "certifications": [
+   {
+    "cert_id": "certified_kubernetes_application_developer_ckad",
+    "issuer": "",
+    "issued_raw": "",
+    "quote": "Certified Kubernetes Application Developer (CKAD)"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "es",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   },
+   {
+    "lang": "fi",
+    "cefr": "A2"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Oulu, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

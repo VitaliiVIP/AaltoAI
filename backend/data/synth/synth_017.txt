@@ -1,0 +1,56 @@
+Mikhail Rautio
+Oulu, Finland
+mikhail.rautio@mailbox.fi | +358 44 218 7745
+
+Note: Requires a work permit / visa sponsorship to work in Finland.
+
+SUMMARY
+DevOps and platform engineer working with containerised workloads, infrastructure as code and automated delivery pipelines across cloud and on-premise environments.
+
+EXPERIENCE
+
+Senior DevOps Engineer — Arctic Cloud Oy
+2022 – Present
+- Own the CI/CD platform end to end: pipeline design, build stages, automated testing gates and release promotion.
+- Reduce manual release steps by moving deployment logic into pipeline definitions and reusable templates.
+- Package and run services with Docker; maintain base images and build caching.
+- Describe infrastructure in Terraform and keep state and module structure tidy.
+- Instrument services with Prometheus metrics, alerts and dashboards.
+- Write Bash / shell scripting for build helpers, maintenance jobs and host bootstrap.
+- Contribute to internal tooling written in Rust.
+
+Platform Engineer — Helsinki Data Works
+2016-2022
+- Introduced and maintained Argo CD for GitOps-style delivery to clustered environments, including app definitions, sync policies and rollback practice.
+- Built a large body of Bash / shell scripting for environment setup, log handling, backups and operator tasks.
+- Ran CI/CD pipelines serving several delivery teams.
+- Provisioned infrastructure with Terraform and handled configuration management with Ansible.
+- Maintained Docker images and container build standards.
+
+Platform Engineer — Polaris Payments
+2015-2016
+- Configured and tuned Nginx as reverse proxy and TLS termination point for payment-facing services.
+- Supported deployment of Java services through CI/CD pipelines.
+- Containerised applications with Docker and wrote Bash / shell scripting for routine operations.
+- Provisioned environments with Terraform; used Argo CD for application delivery.
+
+IT Operations Trainee — Vantaa Systems
+2014-2015
+- Set up and maintained Nginx virtual hosts, redirects and static content serving.
+- Worked with Microsoft Azure resources for test and staging environments.
+- Assisted with CI/CD job configuration and build troubleshooting.
+- Used Docker for local service setups and Bash / shell scripting for small automation tasks.
+
+PROJECTS
+Volunteer website for a sports club
+- Set up and configured Nginx to serve the site. Not deployed publicly.
+
+SKILLS
+Ansible, Argo CD, Microsoft Azure, Bash / shell scripting, CI/CD, Docker, Java, Jenkins, Nginx, Prometheus, Rust, Terraform
+
+EDUCATION
+M.Sc., Biology
+
+LANGUAGES
+English — C2
+Russian — native

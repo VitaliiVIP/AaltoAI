@@ -1,0 +1,17 @@
+{
+ "idx": 10,
+ "source_file": "synth_010.txt",
+ "archetype": "non_software",
+ "style": "academic style: formal register, long section headings, education before experience",
+ "seniority": "mid",
+ "omitted_skills": [
+  "agile"
+ ],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": true,
+ "block_only_skills": [],
+ "n_roles": 3,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

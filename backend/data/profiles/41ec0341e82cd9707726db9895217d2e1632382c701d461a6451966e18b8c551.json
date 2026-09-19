@@ -1,0 +1,431 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "41ec0341e82cd9707726db9895217d2e1632382c701d461a6451966e18b8c551",
+  "source_file": "synth_010.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:21:53+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Administrative Coordinator",
+    "title_canonical": "non_software",
+    "employer": "Metsa Logistics Oy",
+    "start": "2024-04",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 29,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "sql",
+     "excel"
+    ],
+    "primary_skills": [
+     "sql"
+    ],
+    "evidence": [
+     {
+      "quote": "Administrative Coordinator\nMetsa Logistics Oy\nApr 2024 – Present",
+      "start": 267,
+      "end": 331,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Customer Success Specialist",
+    "title_canonical": "non_software",
+    "employer": "Metsa Logistics Oy",
+    "start": "2023-01",
+    "end": "2024-03",
+    "date_precision": "month",
+    "months": 14,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel"
+    ],
+    "primary_skills": [
+     "excel"
+    ],
+    "evidence": [
+     {
+      "quote": "Customer Success Specialist\nMetsa Logistics Oy\nJan 2023 – Mar 2024",
+      "start": 730,
+      "end": 796,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Warehouse Associate",
+    "title_canonical": "non_software",
+    "employer": "Vihrea Puutarha Oy",
+    "start": "2019-11",
+    "end": "2022-12",
+    "date_precision": "month",
+    "months": 37,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "sql"
+    ],
+    "primary_skills": [
+     "sql"
+    ],
+    "evidence": [
+     {
+      "quote": "Warehouse Associate\nVihrea Puutarha Oy\nNov 2019 – Dec 2022",
+      "start": 1129,
+      "end": 1187,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 80,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 3,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "excel": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Administrative Coordinator\nMetsa Logistics Oy\nApr 2024 – Present",
+      "start": 267,
+      "end": 331,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Customer Success Specialist\nMetsa Logistics Oy\nJan 2023 – Mar 2024",
+      "start": 730,
+      "end": 796,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Excel / spreadsheets",
+      "start": 1771,
+      "end": 1791,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Administrative Coordinator\nMetsa Logistics Oy\nApr 2024 – Present",
+      "start": 267,
+      "end": 331,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Warehouse Associate\nVihrea Puutarha Oy\nNov 2019 – Dec 2022",
+      "start": 1129,
+      "end": 1187,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "SQL",
+      "start": 357,
+      "end": 360,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  }
+ },
+ "projects": [
+  {
+   "title": "Spreadsheet automation for a small shop",
+   "topics": [
+    "data"
+   ],
+   "skills": [
+    "sql"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Spreadsheet automation for a small shop\n- Designed a data workflow for a small retail business, using SQL to retrieve and aggregate records so that manual re-typing into spreadsheets was no longer necessary. Developed locally; not deployed.",
+     "start": 1505,
+     "end": 1745,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "data": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc. in Mathematics",
+     "start": 110,
+     "end": 130,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "mathematics",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc. in Mathematics",
+     "start": 110,
+     "end": 130,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [
+  {
+   "cert_id": "certified_kubernetes_application_developer_ckad",
+   "issuer": "",
+   "issued": null,
+   "evidence": [
+    {
+     "quote": "Certified Kubernetes Application Developer (CKAD)",
+     "start": 160,
+     "end": 209,
+     "section": "certifications",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "lang": "es",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "fi",
+   "cefr": "A2",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Oulu, Finland",
+     "start": 24,
+     "end": 37,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Administrative Coordinator\nMetsa Logistics Oy\nApr 2024 – Present",
+     "start": 267,
+     "end": 331,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Warehouse Associate\nVihrea Puutarha Oy\nNov 2019 – Dec 2022",
+     "start": 1129,
+     "end": 1187,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "SQL",
+     "start": 357,
+     "end": 360,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

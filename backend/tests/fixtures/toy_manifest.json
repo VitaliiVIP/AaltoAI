@@ -1,0 +1,120 @@
+{
+ "job_family": "toy",
+ "version": "toy-v1",
+ "horizon_months": 18,
+ "features": {
+  "skills.python.months": {
+   "type": "int",
+   "step": {
+    "unit": "months",
+    "size": 12
+   },
+   "domain_max": 15,
+   "actionability": "conditionally_actionable",
+   "direction": "increase_only",
+   "cost_per_step": 12,
+   "max_delta": 3,
+   "typical_time_months": null,
+   "is_causal": true,
+   "candidate_phrase": "years of Python"
+  },
+  "skills.django.months": {
+   "type": "int",
+   "step": {
+    "unit": "months",
+    "size": 12
+   },
+   "domain_max": 15,
+   "actionability": "conditionally_actionable",
+   "direction": "increase_only",
+   "cost_per_step": 12,
+   "max_delta": 3,
+   "typical_time_months": null,
+   "is_causal": true,
+   "candidate_phrase": "years of Django"
+  },
+  "project_counts_by_topic.backend": {
+   "type": "int",
+   "step": {
+    "unit": "projects",
+    "size": 1
+   },
+   "domain_max": 12,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 5,
+   "max_delta": 6,
+   "typical_time_months": null,
+   "is_causal": true,
+   "candidate_phrase": "backend projects"
+  },
+  "certifications.aws_saa": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 9,
+   "max_delta": 1,
+   "typical_time_months": null,
+   "is_causal": true,
+   "candidate_phrase": "AWS Solutions Architect certification"
+  },
+  "skills.docker.held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 4,
+   "max_delta": 1,
+   "typical_time_months": null,
+   "is_causal": true,
+   "candidate_phrase": "Docker"
+  },
+  "skills.sql.proficiency": {
+   "type": "int",
+   "step": {
+    "unit": "level",
+    "size": 1
+   },
+   "domain_max": 3,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 6,
+   "max_delta": 2,
+   "typical_time_months": null,
+   "is_causal": true,
+   "candidate_phrase": "SQL proficiency"
+  },
+  "education.highest_level": {
+   "type": "ordinal",
+   "step": {
+    "unit": "level",
+    "size": 1
+   },
+   "domain_max": 3,
+   "actionability": "conditionally_actionable",
+   "direction": "increase_only",
+   "cost_per_step": 40,
+   "max_delta": 1,
+   "typical_time_months": null,
+   "is_causal": true,
+   "candidate_phrase": "degree level",
+   "ladder": [
+    "secondary",
+    "bsc",
+    "msc",
+    "phd"
+   ]
+  }
+ },
+ "derived": {},
+ "cooccurrence": {}
+}

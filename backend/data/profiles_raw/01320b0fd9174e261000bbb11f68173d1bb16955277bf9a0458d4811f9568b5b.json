@@ -1,0 +1,193 @@
+{
+ "cv_sha256": "01320b0fd9174e261000bbb11f68173d1bb16955277bf9a0458d4811f9568b5b",
+ "source_file": "synth_016.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:23:15+00:00",
+ "cv_text": "Aarav Mehrotra\nGothenburg, Sweden\naarav.mehrotra@mailbox-se.example | +46 70 214 88 31\n\nBackend-focused software engineer working with Python, Django and PostgreSQL, with a practical interest in the HTML / CSS layer that sits on top of an API.\n\nTyökokemus\n\nBackend Software Engineer — Koski Engineering\nJun 2020 – Present\n- Build and maintain Django services in Python, backed by PostgreSQL and accessed through REST APIs.\n- Write and tune SQL queries for reporting and data corrections.\n- Package and run services in Docker for local development and deployment.\n- Produce HTML / CSS templates and server-rendered views, adjusting markup and stylesheets so internal tools stay readable on different screen sizes.\n- Maintain HTML / CSS styling of email templates and admin pages used by non-technical colleagues.\n- Work in Git with branch reviews and small, traceable commits.\n- Export figures to Excel / spreadsheets for finance and operations colleagues.\n\nIndependent Software Consultant — Freelance\nJun 2019 – Jun 2020\n- Delivered Python scripts and small backend components for client requirements, from first specification to handover.\n- Used Python for data clean-up, file processing and automation tasks that clients previously did by hand.\n- Wrote SQL queries against client databases to verify results.\n- Managed all client code in Git repositories, with documented history.\n\nCustomer Support Agent — Turku Catering Oy\nMar 2019 – Jun 2020\n- Tracked orders, complaints and refunds in Excel / spreadsheets, using formulas and pivot summaries to spot recurring issues.\n- Rebuilt the shift handover spreadsheet so figures were entered once and reused across sheets.\n- Pulled order data with basic SQL queries to answer customer questions faster.\n- Took part in Agile / Scrum ceremonies with the operations team.\n\nWarehouse Associate — Pohjola Hotels\nDec 2017 – Mar 2019\n- Worked in an Agile / Scrum style team setup: daily stand-ups, a visible board and short planning cycles for stock rotation.\n- Raised blockers early in stand-ups and helped adjust the board when priorities changed.\n- Kept inventory counts and delivery logs in Excel / spreadsheets.\n\nProjektit\n\nRecipe API with authentication\n- Personal backend project exposing recipe data through REST APIs with an authentication layer for protected endpoints.\n- Not deployed publicly; developed and run locally.\n\nKoulutus\n\nUpper secondary school diploma (lukio), Software Engineering\n\nTaidot\n\nAgile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL\n\nKielet\n\nHindi — native\nEnglish — B2\nFinnish — A1\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Backend Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Koski Engineering",
+    "start_raw": "Jun 2020",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "django",
+     "python",
+     "postgresql",
+     "rest_api",
+     "sql",
+     "docker",
+     "html_css",
+     "git",
+     "excel"
+    ],
+    "primary_skills": [
+     "django",
+     "python",
+     "postgresql",
+     "rest_api",
+     "sql"
+    ],
+    "quote": "Backend Software Engineer — Koski Engineering"
+   },
+   {
+    "title_raw": "Independent Software Consultant",
+    "title_canonical": "backend_engineer",
+    "employer": "Freelance",
+    "start_raw": "Jun 2019",
+    "end_raw": "Jun 2020",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "sql",
+     "git"
+    ],
+    "primary_skills": [
+     "python"
+    ],
+    "quote": "Independent Software Consultant — Freelance"
+   },
+   {
+    "title_raw": "Customer Support Agent",
+    "title_canonical": "non_software",
+    "employer": "Turku Catering Oy",
+    "start_raw": "Mar 2019",
+    "end_raw": "Jun 2020",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "sql",
+     "agile"
+    ],
+    "primary_skills": [
+     "excel"
+    ],
+    "quote": "Customer Support Agent — Turku Catering Oy"
+   },
+   {
+    "title_raw": "Warehouse Associate",
+    "title_canonical": "non_software",
+    "employer": "Pohjola Hotels",
+    "start_raw": "Dec 2017",
+    "end_raw": "Mar 2019",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "agile",
+     "excel"
+    ],
+    "primary_skills": [
+     "agile"
+    ],
+    "quote": "Warehouse Associate — Pohjola Hotels"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "agile",
+    "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL"
+   },
+   {
+    "skill": "django",
+    "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL"
+   },
+   {
+    "skill": "docker",
+    "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL"
+   },
+   {
+    "skill": "excel",
+    "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL"
+   },
+   {
+    "skill": "git",
+    "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL"
+   },
+   {
+    "skill": "html_css",
+    "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL"
+   },
+   {
+    "skill": "python",
+    "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL"
+   },
+   {
+    "skill": "sql",
+    "quote": "Agile / Scrum, Django, Docker, Excel / spreadsheets, Git, HTML / CSS, PostgreSQL, Python, REST APIs, SQL"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Recipe API with authentication",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "rest_api",
+     "security"
+    ],
+    "deployed": "no",
+    "quote": "Recipe API with authentication\n- Personal backend project exposing recipe data through REST APIs with an authentication layer for protected endpoints.\n- Not deployed publicly; developed and run locally."
+   }
+  ],
+  "education": {
+   "highest_level": "secondary",
+   "field": "software engineering",
+   "in_progress": "unclear",
+   "quote": "Upper secondary school diploma (lukio), Software Engineering"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "hi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "B2"
+   },
+   {
+    "lang": "fi",
+    "cefr": "A1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "SE",
+   "relocation_willing": "unclear",
+   "quote": "Gothenburg, Sweden"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

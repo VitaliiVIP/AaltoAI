@@ -1,0 +1,224 @@
+{
+ "cv_sha256": "8f865adb06139c5ef3ff7ac1c9eacfd3ae7a4abc371644d4a2e63668c42c3c9f",
+ "source_file": "synth_003.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:20:28+00:00",
+ "cv_text": "Mateo Iglesias Varela\nEspoo, Finland | Open to relocation\nmateo.iglesias.dev@fastmail.example | +358 40 555 0192\n\nPROFILE\nBackend engineer working on Python services, relational data design with PostgreSQL, and containerised infrastructure on Linux and AWS. Comfortable across distributed systems, REST APIs and CI/CD pipelines.\n\nEXPERIENCE\n\nFreelance Developer (contract)\nIndependent contractor\nMar 2022 – Mar 2023\n- Built and maintained Python services for client projects, from data models through to delivery.\n- Designed PostgreSQL schemas and wrote queries supporting reporting and application features.\n- Managed all work in Git, with review-friendly history and documented branching for handover.\n\nPrincipal Backend Engineer\nSaimaa Interactive\nJan 2020 – Apr 2026\n- Owned PostgreSQL data architecture: schema evolution, indexing, query tuning and SQL migration paths for high-traffic services.\n- Led backend development in Python across a microservices architecture, defining REST API contracts between teams.\n- Packaged services with Docker and ran them on Kubernetes across AWS environments on Linux hosts.\n- Described infrastructure in Terraform and kept environments reproducible.\n- Maintained CI/CD pipelines covering build, test and release.\n- Addressed distributed systems concerns such as retries, consistency and service-to-service failure handling.\n\nLead Backend Developer\nNordcom Oy\nMay 2012 – Oct 2019\n- Introduced event-driven architecture for asynchronous processing between services, replacing tightly coupled synchronous calls.\n- Led a backend team writing Python services backed by PostgreSQL and exposed through REST APIs.\n- Containerised applications with Docker and deployed to Kubernetes on AWS, running on Linux.\n- Set up CI/CD workflows and Git practices used across the team.\n- Worked on distributed systems behaviour under load, including message flow and recovery.\n\nPROJECTS\n\nHome-lab cluster with monitoring\n- Self-hosted Kubernetes cluster with monitoring, provisioned through Terraform.\n- PostgreSQL deployed as a stateful workload for experimentation with backups and storage.\n\nEDUCATION\nM.Sc., Information Technology\n\nSKILLS\nAWS, CI/CD, Distributed systems, Docker, Elasticsearch, Event-driven architecture, Git, Helm, Kubernetes (k8s), Linux, Microservices architecture, PostgreSQL, Python, Redis, REST APIs, SQL, Terraform\n\nLANGUAGES\nSpanish — native\nEnglish — C1\nFinnish — A2\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Freelance Developer (contract)",
+    "title_canonical": "backend_engineer",
+    "employer": "Independent contractor",
+    "start_raw": "Mar 2022",
+    "end_raw": "Mar 2023",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "postgresql",
+     "sql",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "postgresql",
+     "sql"
+    ],
+    "quote": "Freelance Developer (contract)"
+   },
+   {
+    "title_raw": "Principal Backend Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Saimaa Interactive",
+    "start_raw": "Jan 2020",
+    "end_raw": "Apr 2026",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "postgresql",
+     "sql",
+     "python",
+     "microservices",
+     "rest_api",
+     "docker",
+     "kubernetes",
+     "aws",
+     "linux",
+     "terraform",
+     "ci_cd",
+     "distributed_systems"
+    ],
+    "primary_skills": [
+     "postgresql",
+     "sql",
+     "python",
+     "microservices",
+     "rest_api"
+    ],
+    "quote": "Principal Backend Engineer"
+   },
+   {
+    "title_raw": "Lead Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start_raw": "May 2012",
+    "end_raw": "Oct 2019",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "event_driven",
+     "python",
+     "postgresql",
+     "rest_api",
+     "docker",
+     "kubernetes",
+     "aws",
+     "linux",
+     "ci_cd",
+     "git",
+     "distributed_systems"
+    ],
+    "primary_skills": [
+     "event_driven",
+     "python",
+     "postgresql",
+     "rest_api"
+    ],
+    "quote": "Lead Backend Developer"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "aws",
+    "quote": "AWS, CI/CD, Distributed systems"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "AWS, CI/CD, Distributed systems"
+   },
+   {
+    "skill": "distributed_systems",
+    "quote": "AWS, CI/CD, Distributed systems"
+   },
+   {
+    "skill": "docker",
+    "quote": "Docker, Elasticsearch"
+   },
+   {
+    "skill": "elasticsearch",
+    "quote": "Docker, Elasticsearch"
+   },
+   {
+    "skill": "event_driven",
+    "quote": "Event-driven architecture, Git, Helm"
+   },
+   {
+    "skill": "git",
+    "quote": "Event-driven architecture, Git, Helm"
+   },
+   {
+    "skill": "helm",
+    "quote": "Event-driven architecture, Git, Helm"
+   },
+   {
+    "skill": "kubernetes",
+    "quote": "Kubernetes (k8s), Linux"
+   },
+   {
+    "skill": "linux",
+    "quote": "Kubernetes (k8s), Linux"
+   },
+   {
+    "skill": "microservices",
+    "quote": "Microservices architecture, PostgreSQL, Python"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Microservices architecture, PostgreSQL, Python"
+   },
+   {
+    "skill": "python",
+    "quote": "Microservices architecture, PostgreSQL, Python"
+   },
+   {
+    "skill": "redis",
+    "quote": "Redis, REST APIs, SQL, Terraform"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "Redis, REST APIs, SQL, Terraform"
+   },
+   {
+    "skill": "sql",
+    "quote": "Redis, REST APIs, SQL, Terraform"
+   },
+   {
+    "skill": "terraform",
+    "quote": "Redis, REST APIs, SQL, Terraform"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Home-lab cluster with monitoring",
+    "topics": [
+     "infrastructure",
+     "devops"
+    ],
+    "skills": [
+     "kubernetes",
+     "terraform",
+     "postgresql"
+    ],
+    "deployed": "unclear",
+    "quote": "Home-lab cluster with monitoring\n- Self-hosted Kubernetes cluster with monitoring, provisioned through Terraform."
+   }
+  ],
+  "education": {
+   "highest_level": "msc",
+   "field": "information technology",
+   "in_progress": "unclear",
+   "quote": "M.Sc., Information Technology"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "es",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   },
+   {
+    "lang": "fi",
+    "cefr": "A2"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "yes",
+   "quote": "Espoo, Finland | Open to relocation"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

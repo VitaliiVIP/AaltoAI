@@ -1,0 +1,226 @@
+{
+ "cv_sha256": "48a4ad29ab4334f503a5fe9ea0232f9100e43c36714dc30f0ced4d318cd5fc5a",
+ "source_file": "synth_005.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:20:51+00:00",
+ "cv_text": "Veikko Laaksonen\nBackend Software Engineer\nOulu, Finland | Open to relocation\nveikko.laaksonen@mailbox.fi | +358 40 555 0192\n\nPROFILE\n\nBackend-focused software engineer working primarily in Python on service-oriented systems, with a consulting mindset shaped by close collaboration with product owners and client stakeholders. My engagements have centred on designing and operating REST APIs, modelling and tuning relational data in PostgreSQL, and packaging services so that they behave identically on a developer laptop and in a cloud environment. I am comfortable owning a delivery end to end: clarifying the requirement with the client, shaping the data model and SQL behind it, writing the service, wiring it into CI/CD, and running it on Linux hosts in AWS. A mathematics background gives me a taste for precise specifications and for testing assumptions rather than inheriting them; ISTQB Foundation Level training reinforces that habit in day-to-day work. I work in Finnish and English with client teams and can follow Swedish-language discussion.\n\nCORE SKILLS\n\nLanguages and frameworks: Python, FastAPI, SQL\nData and caching: PostgreSQL, Redis\nAPIs and architecture: REST APIs, Microservices architecture, System design\nPlatform and delivery: Docker, CI/CD, GitHub Actions, AWS, Linux, Git\nQuality and ways of working: pytest, Agile / Scrum\n\nPROFESSIONAL EXPERIENCE\n\nSoftware Engineer (Backend) — Arctic Cloud Oy\nMar 2025 – Present\n\n- Act as a backend engineer on client-facing platform work, translating functional requirements into Python services exposed through documented REST APIs.\n- Own significant parts of the PostgreSQL layer: schema design, normalisation decisions, index strategy, migrations and review of slow SQL raised by application teams. Database work is the backbone of most of my assignments here, and I am usually the person the team consults before a schema change goes out.\n- Contribute to a microservices architecture, defining service boundaries and contracts so that teams can deploy independently without breaking downstream consumers.\n- Build and maintain Docker images and GitHub Actions pipelines that run test suites, build artefacts and promote them through environments as part of the CI/CD flow.\n- Operate services on Linux in AWS, investigating production behaviour, adjusting configuration and feeding operational findings back into design discussions.\n- Work in Git-based trunk and branch workflows with code review as the default, keeping change history readable for colleagues who join an engagement mid-stream.\n\nAPI Developer — Ruska Systems\nNov 2023 – Mar 2025\n\n- Delivered REST APIs in Python for client integrations, agreeing endpoint contracts directly with the consuming teams and iterating on them through review cycles.\n- Containerised services with Docker and standardised local development environments, which removed a recurring class of environment-specific defects and made onboarding of new engagers straightforward; container work was a central part of my remit.\n- Introduced and maintained Redis caching and queueing for frequently requested and expensive read paths, tuning key design, serialisation and expiry policy against observed traffic patterns.\n- Modelled and queried data in PostgreSQL, writing SQL for reporting and integration needs and reviewing query plans where response times mattered.\n- Maintained CI/CD pipelines covering automated tests, image builds and deployment to AWS, with services running on Linux.\n- Participated fully in Agile / Scrum ceremonies: refinement, estimation, sprint review and retrospective, and used those forums to keep client expectations aligned with delivery.\n- Used Git for branching, review and release tagging across parallel client workstreams.\n\nSoftware Developer Intern — Kaiku Digital\nMar 2023 – Nov 2023\n\n- Supported the backend team on Python services and REST API endpoints, taking well-scoped tickets through to review and merge.\n- Worked extensively with PostgreSQL, writing queries and seed data, and learning schema design conventions from the senior engineers on the engagement; this was where the relational foundation of my later work was laid.\n- Wrote automated tests with pytest, including fixtures for database-backed cases, and extended coverage around previously untested endpoints.\n- Packaged services with Docker for local runs and helped keep the CI/CD configuration green.\n- Used Redis in a caching capacity for a read-heavy internal endpoint.\n- Collaborated through Git, with pull requests reviewed by the wider team.\n\nPROJECTS\n\nPersonal finance tracker backend\nA self-directed backend exercise built and run on Linux. Not deployed publicly; used as a sandbox for practising service structure and data handling away from client constraints.\n\nEDUCATION\n\nM.Sc., Mathematics\n\nCERTIFICATIONS\n\nISTQB Certified Tester, Foundation Level\n\nLANGUAGES\n\nFinnish — native\nEnglish — B2\nSwedish — B1\n\nADDITIONAL\n\nBased in Oulu, Finland. Open to relocation for the right client engagement.\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Arctic Cloud Oy",
+    "start_raw": "Mar 2025",
+    "end_raw": "present",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "rest_api",
+     "postgresql",
+     "sql",
+     "microservices",
+     "docker",
+     "github_actions",
+     "ci_cd",
+     "linux",
+     "aws",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "rest_api",
+     "postgresql",
+     "sql"
+    ],
+    "quote": "Software Engineer (Backend) — Arctic Cloud Oy"
+   },
+   {
+    "title_raw": "API Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Ruska Systems",
+    "start_raw": "Nov 2023",
+    "end_raw": "Mar 2025",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "python",
+     "docker",
+     "redis",
+     "postgresql",
+     "sql",
+     "ci_cd",
+     "aws",
+     "linux",
+     "agile",
+     "git"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "python",
+     "docker"
+    ],
+    "quote": "API Developer — Ruska Systems"
+   },
+   {
+    "title_raw": "Software Developer Intern",
+    "title_canonical": "backend_engineer",
+    "employer": "Kaiku Digital",
+    "start_raw": "Mar 2023",
+    "end_raw": "Nov 2023",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "rest_api",
+     "postgresql",
+     "pytest",
+     "testing",
+     "docker",
+     "ci_cd",
+     "redis",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "rest_api",
+     "postgresql"
+    ],
+    "quote": "Software Developer Intern — Kaiku Digital"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Languages and frameworks: Python, FastAPI, SQL"
+   },
+   {
+    "skill": "fastapi",
+    "quote": "Languages and frameworks: Python, FastAPI, SQL"
+   },
+   {
+    "skill": "sql",
+    "quote": "Languages and frameworks: Python, FastAPI, SQL"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Data and caching: PostgreSQL, Redis"
+   },
+   {
+    "skill": "redis",
+    "quote": "Data and caching: PostgreSQL, Redis"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "APIs and architecture: REST APIs, Microservices architecture, System design"
+   },
+   {
+    "skill": "microservices",
+    "quote": "APIs and architecture: REST APIs, Microservices architecture, System design"
+   },
+   {
+    "skill": "system_design",
+    "quote": "APIs and architecture: REST APIs, Microservices architecture, System design"
+   },
+   {
+    "skill": "docker",
+    "quote": "Platform and delivery: Docker, CI/CD, GitHub Actions, AWS, Linux, Git"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "Platform and delivery: Docker, CI/CD, GitHub Actions, AWS, Linux, Git"
+   },
+   {
+    "skill": "github_actions",
+    "quote": "Platform and delivery: Docker, CI/CD, GitHub Actions, AWS, Linux, Git"
+   },
+   {
+    "skill": "aws",
+    "quote": "Platform and delivery: Docker, CI/CD, GitHub Actions, AWS, Linux, Git"
+   },
+   {
+    "skill": "linux",
+    "quote": "Platform and delivery: Docker, CI/CD, GitHub Actions, AWS, Linux, Git"
+   },
+   {
+    "skill": "git",
+    "quote": "Platform and delivery: Docker, CI/CD, GitHub Actions, AWS, Linux, Git"
+   },
+   {
+    "skill": "pytest",
+    "quote": "Quality and ways of working: pytest, Agile / Scrum"
+   },
+   {
+    "skill": "agile",
+    "quote": "Quality and ways of working: pytest, Agile / Scrum"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Personal finance tracker backend",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "linux"
+    ],
+    "deployed": "no",
+    "quote": "Personal finance tracker backend\nA self-directed backend exercise built and run on Linux. Not deployed publicly"
+   }
+  ],
+  "education": {
+   "highest_level": "msc",
+   "field": "mathematics",
+   "in_progress": "unclear",
+   "quote": "M.Sc., Mathematics"
+  },
+  "certifications": [
+   {
+    "cert_id": "istqb_certified_tester_foundation_level",
+    "issuer": "ISTQB",
+    "issued_raw": "",
+    "quote": "ISTQB Certified Tester, Foundation Level"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "B2"
+   },
+   {
+    "lang": "sv",
+    "cefr": "B1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "yes",
+   "quote": "Based in Oulu, Finland. Open to relocation for the right client engagement."
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

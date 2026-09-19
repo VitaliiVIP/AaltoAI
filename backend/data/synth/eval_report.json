@@ -1,0 +1,3936 @@
+{
+ "n": 30,
+ "seed": 0,
+ "as_of": "2026-09-19",
+ "model": "claude-opus-5",
+ "corpus": {
+  "n": 30,
+  "rendered": 30,
+  "archetypes": {
+   "senior_backend": 6,
+   "junior_backend": 5,
+   "devops": 4,
+   "mid_backend": 4,
+   "career_changer": 3,
+   "qa": 3,
+   "frontend": 3,
+   "non_software": 2
+  },
+  "under_report": 12,
+  "year_only_dates": 4,
+  "overlap": 7,
+  "omitted_skills_total": 42
+ },
+ "parser": {
+  "per_cv": [
+   {
+    "source_file": "synth_000.txt",
+    "archetype": "career_changer",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 11,
+     "n_extracted": 12,
+     "tp": 11,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.9166666666666666,
+     "recall": 1.0,
+     "f1": 0.9565217391304348,
+     "stated": {
+      "n": 11,
+      "hit": 11,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": [
+      "ci_cd"
+     ]
+    },
+    "skill_months": {
+     "n": 9,
+     "n_missing": 1,
+     "mae": 12.444444444444445,
+     "max_abs_err": 49
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 11,
+     "n": 3,
+     "mae": 3.6666666666666665
+    },
+    "education_level": {
+     "truth": "msc",
+     "extracted": "msc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "junior",
+     "extracted": "mid",
+     "exact": false
+    },
+    "evidence": {
+     "n": 40,
+     "verified": 40,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 12,
+     "n_hallucinated": 1,
+     "rate": 0.08333333333333333
+    },
+    "roles": {
+     "truth": 4,
+     "extracted": 4,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_001.txt",
+    "archetype": "qa",
+    "under_report": true,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 14,
+     "n_extracted": 10,
+     "tp": 10,
+     "fp": 0,
+     "fn": 4,
+     "precision": 1.0,
+     "recall": 0.7142857142857143,
+     "f1": 0.8333333333333333,
+     "stated": {
+      "n": 10,
+      "hit": 10,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 4,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [
+      "html_css",
+      "python",
+      "react",
+      "selenium"
+     ],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 0,
+     "n_missing": 9,
+     "mae": null,
+     "max_abs_err": null
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": "mid",
+     "exact": true
+    },
+    "evidence": {
+     "n": 21,
+     "verified": 21,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 10,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 4,
+     "extracted": 4,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_002.txt",
+    "archetype": "devops",
+    "under_report": true,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 12,
+     "n_extracted": 11,
+     "tp": 10,
+     "fp": 1,
+     "fn": 2,
+     "precision": 0.9090909090909091,
+     "recall": 0.8333333333333334,
+     "f1": 0.8695652173913043,
+     "stated": {
+      "n": 10,
+      "hit": 10,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 2,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [
+      "git",
+      "kubernetes"
+     ],
+     "hallucinated": [
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 9,
+     "n_missing": 0,
+     "mae": 2.0,
+     "max_abs_err": 18
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "vocational",
+     "extracted": "vocational",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "senior",
+     "extracted": "senior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 39,
+     "verified": 39,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 11,
+     "n_hallucinated": 1,
+     "rate": 0.09090909090909091
+    },
+    "roles": {
+     "truth": 2,
+     "extracted": 2,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_003.txt",
+    "archetype": "senior_backend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 17,
+     "n_extracted": 17,
+     "tp": 17,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "stated": {
+      "n": 17,
+      "hit": 17,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 14,
+     "n_missing": 0,
+     "mae": 4.5,
+     "max_abs_err": 63
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "msc",
+     "extracted": "msc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "senior",
+     "extracted": "lead",
+     "exact": false
+    },
+    "evidence": {
+     "n": 61,
+     "verified": 61,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 17,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 3,
+     "extracted": 3,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_004.txt",
+    "archetype": "qa",
+    "under_report": false,
+    "year_only_dates": true,
+    "skills": {
+     "n_truth": 8,
+     "n_extracted": 8,
+     "tp": 8,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "stated": {
+      "n": 8,
+      "hit": 8,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 0,
+     "n_missing": 8,
+     "mae": null,
+     "max_abs_err": null
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": "junior",
+     "exact": false
+    },
+    "evidence": {
+     "n": 15,
+     "verified": 15,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 8,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 1,
+     "extracted": 1,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_005.txt",
+    "archetype": "mid_backend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 16,
+     "n_extracted": 17,
+     "tp": 16,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.9411764705882353,
+     "recall": 1.0,
+     "f1": 0.9696969696969697,
+     "stated": {
+      "n": 16,
+      "hit": 16,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": [
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 14,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "msc",
+     "extracted": "msc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": "mid",
+     "exact": true
+    },
+    "evidence": {
+     "n": 59,
+     "verified": 59,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 17,
+     "n_hallucinated": 1,
+     "rate": 0.058823529411764705
+    },
+    "roles": {
+     "truth": 3,
+     "extracted": 3,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_006.txt",
+    "archetype": "junior_backend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 14,
+     "n_extracted": 14,
+     "tp": 14,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "stated": {
+      "n": 14,
+      "hit": 14,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 14,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 5,
+     "n": 3,
+     "mae": 1.6666666666666667
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "junior",
+     "extracted": "junior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 45,
+     "verified": 45,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 14,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 3,
+     "extracted": 3,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_007.txt",
+    "archetype": "mid_backend",
+    "under_report": true,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 17,
+     "n_extracted": 14,
+     "tp": 14,
+     "fp": 0,
+     "fn": 3,
+     "precision": 1.0,
+     "recall": 0.8235294117647058,
+     "f1": 0.9032258064516129,
+     "stated": {
+      "n": 13,
+      "hit": 13,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 4,
+      "hit": 1,
+      "recall": 0.25
+     },
+     "missed": [
+      "postgresql",
+      "prometheus",
+      "typescript"
+     ],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 14,
+     "n_missing": 0,
+     "mae": 4.928571428571429,
+     "max_abs_err": 35
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 13,
+     "n": 3,
+     "mae": 4.333333333333333
+    },
+    "education_level": {
+     "truth": "secondary",
+     "extracted": "secondary",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": "mid",
+     "exact": true
+    },
+    "evidence": {
+     "n": 48,
+     "verified": 48,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 14,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 5,
+     "extracted": 5,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_008.txt",
+    "archetype": "devops",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 14,
+     "n_extracted": 14,
+     "tp": 14,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "stated": {
+      "n": 14,
+      "hit": 14,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 11,
+     "n_missing": 0,
+     "mae": 1.3636363636363635,
+     "max_abs_err": 15
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "msc",
+     "extracted": "msc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "senior",
+     "extracted": "senior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 50,
+     "verified": 50,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 14,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 3,
+     "extracted": 3,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_009.txt",
+    "archetype": "senior_backend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 19,
+     "n_extracted": 19,
+     "tp": 19,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "stated": {
+      "n": 19,
+      "hit": 19,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 19,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "senior",
+     "extracted": "lead",
+     "exact": false
+    },
+    "evidence": {
+     "n": 72,
+     "verified": 72,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 19,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 4,
+     "extracted": 4,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_010.txt",
+    "archetype": "non_software",
+    "under_report": true,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 3,
+     "n_extracted": 2,
+     "tp": 2,
+     "fp": 0,
+     "fn": 1,
+     "precision": 1.0,
+     "recall": 0.6666666666666666,
+     "f1": 0.8,
+     "stated": {
+      "n": 2,
+      "hit": 2,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 1,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [
+      "agile"
+     ],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 0,
+     "n_missing": 2,
+     "mae": null,
+     "max_abs_err": null
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": null,
+     "exact": false
+    },
+    "evidence": {
+     "n": 17,
+     "verified": 17,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 2,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 3,
+     "extracted": 3,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_011.txt",
+    "archetype": "junior_backend",
+    "under_report": true,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 11,
+     "n_extracted": 9,
+     "tp": 9,
+     "fp": 0,
+     "fn": 2,
+     "precision": 1.0,
+     "recall": 0.8181818181818182,
+     "f1": 0.9,
+     "stated": {
+      "n": 8,
+      "hit": 8,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 3,
+      "hit": 1,
+      "recall": 0.3333333333333333
+     },
+     "missed": [
+      "angular",
+      "django"
+     ],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 8,
+     "n_missing": 1,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "vocational",
+     "extracted": "vocational",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "junior",
+     "extracted": "junior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 31,
+     "verified": 31,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 9,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 2,
+     "extracted": 2,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_012.txt",
+    "archetype": "devops",
+    "under_report": true,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 13,
+     "n_extracted": 9,
+     "tp": 9,
+     "fp": 0,
+     "fn": 4,
+     "precision": 1.0,
+     "recall": 0.6923076923076923,
+     "f1": 0.8181818181818181,
+     "stated": {
+      "n": 10,
+      "hit": 9,
+      "recall": 0.9
+     },
+     "omitted": {
+      "n": 3,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [
+      "argo_cd",
+      "bash",
+      "docker",
+      "kubernetes"
+     ],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 9,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "senior",
+     "extracted": "senior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 40,
+     "verified": 40,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 9,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 2,
+     "extracted": 2,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_013.txt",
+    "archetype": "mid_backend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 18,
+     "n_extracted": 19,
+     "tp": 18,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.9473684210526315,
+     "recall": 1.0,
+     "f1": 0.972972972972973,
+     "stated": {
+      "n": 18,
+      "hit": 18,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": [
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 18,
+     "n_missing": 0,
+     "mae": 1.8333333333333333,
+     "max_abs_err": 17
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "vocational",
+     "extracted": "vocational",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": "mid",
+     "exact": true
+    },
+    "evidence": {
+     "n": 65,
+     "verified": 65,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 19,
+     "n_hallucinated": 1,
+     "rate": 0.05263157894736842
+    },
+    "roles": {
+     "truth": 4,
+     "extracted": 4,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_014.txt",
+    "archetype": "senior_backend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 17,
+     "n_extracted": 18,
+     "tp": 17,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.9444444444444444,
+     "recall": 1.0,
+     "f1": 0.9714285714285714,
+     "stated": {
+      "n": 17,
+      "hit": 17,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": [
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 17,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "msc",
+     "extracted": "msc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "senior",
+     "extracted": "senior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 68,
+     "verified": 68,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 18,
+     "n_hallucinated": 1,
+     "rate": 0.05555555555555555
+    },
+    "roles": {
+     "truth": 5,
+     "extracted": 5,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_015.txt",
+    "archetype": "senior_backend",
+    "under_report": true,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 16,
+     "n_extracted": 12,
+     "tp": 12,
+     "fp": 0,
+     "fn": 4,
+     "precision": 1.0,
+     "recall": 0.75,
+     "f1": 0.8571428571428571,
+     "stated": {
+      "n": 11,
+      "hit": 11,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 5,
+      "hit": 1,
+      "recall": 0.2
+     },
+     "missed": [
+      "git",
+      "linux",
+      "postgresql",
+      "redis"
+     ],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 11,
+     "n_missing": 1,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "senior",
+     "extracted": "lead",
+     "exact": false
+    },
+    "evidence": {
+     "n": 50,
+     "verified": 50,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 12,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 4,
+     "extracted": 4,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_016.txt",
+    "archetype": "career_changer",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 10,
+     "n_extracted": 11,
+     "tp": 10,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.9090909090909091,
+     "recall": 1.0,
+     "f1": 0.9523809523809523,
+     "stated": {
+      "n": 10,
+      "hit": 10,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": [
+      "security"
+     ]
+    },
+    "skill_months": {
+     "n": 9,
+     "n_missing": 1,
+     "mae": 3.6666666666666665,
+     "max_abs_err": 30
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "secondary",
+     "extracted": "secondary",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "junior",
+     "extracted": "senior",
+     "exact": false
+    },
+    "evidence": {
+     "n": 37,
+     "verified": 37,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 11,
+     "n_hallucinated": 1,
+     "rate": 0.09090909090909091
+    },
+    "roles": {
+     "truth": 4,
+     "extracted": 4,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_017.txt",
+    "archetype": "devops",
+    "under_report": true,
+    "year_only_dates": true,
+    "skills": {
+     "n_truth": 17,
+     "n_extracted": 13,
+     "tp": 12,
+     "fp": 1,
+     "fn": 5,
+     "precision": 0.9230769230769231,
+     "recall": 0.7058823529411765,
+     "f1": 0.8000000000000002,
+     "stated": {
+      "n": 12,
+      "hit": 12,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 5,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [
+      "aws",
+      "git",
+      "grafana",
+      "kubernetes",
+      "linux"
+     ],
+     "hallucinated": [
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 11,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "msc",
+     "extracted": "msc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "senior",
+     "extracted": "senior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 47,
+     "verified": 47,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 13,
+     "n_hallucinated": 1,
+     "rate": 0.07692307692307693
+    },
+    "roles": {
+     "truth": 4,
+     "extracted": 4,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_018.txt",
+    "archetype": "junior_backend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 11,
+     "n_extracted": 12,
+     "tp": 11,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.9166666666666666,
+     "recall": 1.0,
+     "f1": 0.9565217391304348,
+     "stated": {
+      "n": 11,
+      "hit": 11,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": [
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 10,
+     "n_missing": 0,
+     "mae": 0.9,
+     "max_abs_err": 9
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "junior",
+     "extracted": "junior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 41,
+     "verified": 41,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 12,
+     "n_hallucinated": 1,
+     "rate": 0.08333333333333333
+    },
+    "roles": {
+     "truth": 3,
+     "extracted": 3,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_019.txt",
+    "archetype": "junior_backend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 12,
+     "n_extracted": 12,
+     "tp": 12,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "stated": {
+      "n": 12,
+      "hit": 12,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 11,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "junior",
+     "extracted": "junior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 41,
+     "verified": 41,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 12,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 2,
+     "extracted": 2,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_020.txt",
+    "archetype": "mid_backend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 18,
+     "n_extracted": 19,
+     "tp": 18,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.9473684210526315,
+     "recall": 1.0,
+     "f1": 0.972972972972973,
+     "stated": {
+      "n": 18,
+      "hit": 18,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": [
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 17,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "msc",
+     "extracted": "msc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": "mid",
+     "exact": true
+    },
+    "evidence": {
+     "n": 65,
+     "verified": 65,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 19,
+     "n_hallucinated": 1,
+     "rate": 0.05263157894736842
+    },
+    "roles": {
+     "truth": 3,
+     "extracted": 3,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_021.txt",
+    "archetype": "senior_backend",
+    "under_report": true,
+    "year_only_dates": true,
+    "skills": {
+     "n_truth": 20,
+     "n_extracted": 15,
+     "tp": 14,
+     "fp": 1,
+     "fn": 6,
+     "precision": 0.9333333333333333,
+     "recall": 0.7,
+     "f1": 0.8,
+     "stated": {
+      "n": 15,
+      "hit": 14,
+      "recall": 0.9333333333333333
+     },
+     "omitted": {
+      "n": 5,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [
+      "event_driven",
+      "go",
+      "microservices",
+      "rest_api",
+      "system_design",
+      "terraform"
+     ],
+     "hallucinated": [
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 14,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "phd",
+     "extracted": "phd",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "senior",
+     "extracted": "senior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 55,
+     "verified": 55,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 15,
+     "n_hallucinated": 1,
+     "rate": 0.06666666666666667
+    },
+    "roles": {
+     "truth": 4,
+     "extracted": 4,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_022.txt",
+    "archetype": "frontend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 10,
+     "n_extracted": 11,
+     "tp": 10,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.9090909090909091,
+     "recall": 1.0,
+     "f1": 0.9523809523809523,
+     "stated": {
+      "n": 10,
+      "hit": 10,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": [
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 10,
+     "n_missing": 0,
+     "mae": 1.5,
+     "max_abs_err": 15
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": "mid",
+     "exact": true
+    },
+    "evidence": {
+     "n": 39,
+     "verified": 39,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 11,
+     "n_hallucinated": 1,
+     "rate": 0.09090909090909091
+    },
+    "roles": {
+     "truth": 4,
+     "extracted": 4,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_023.txt",
+    "archetype": "frontend",
+    "under_report": true,
+    "year_only_dates": true,
+    "skills": {
+     "n_truth": 12,
+     "n_extracted": 11,
+     "tp": 9,
+     "fp": 2,
+     "fn": 3,
+     "precision": 0.8181818181818182,
+     "recall": 0.75,
+     "f1": 0.7826086956521738,
+     "stated": {
+      "n": 9,
+      "hit": 9,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 3,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [
+      "html_css",
+      "nextjs",
+      "nodejs"
+     ],
+     "hallucinated": [
+      "ci_cd",
+      "django"
+     ]
+    },
+    "skill_months": {
+     "n": 8,
+     "n_missing": 0,
+     "mae": 3.0,
+     "max_abs_err": 24
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "vocational",
+     "extracted": "vocational",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": "senior",
+     "exact": false
+    },
+    "evidence": {
+     "n": 34,
+     "verified": 34,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 11,
+     "n_hallucinated": 2,
+     "rate": 0.18181818181818182
+    },
+    "roles": {
+     "truth": 3,
+     "extracted": 3,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_024.txt",
+    "archetype": "frontend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 10,
+     "n_extracted": 11,
+     "tp": 10,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.9090909090909091,
+     "recall": 1.0,
+     "f1": 0.9523809523809523,
+     "stated": {
+      "n": 10,
+      "hit": 10,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": [
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 10,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "vocational",
+     "extracted": "vocational",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": "mid",
+     "exact": true
+    },
+    "evidence": {
+     "n": 36,
+     "verified": 36,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 11,
+     "n_hallucinated": 1,
+     "rate": 0.09090909090909091
+    },
+    "roles": {
+     "truth": 2,
+     "extracted": 2,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_025.txt",
+    "archetype": "career_changer",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 14,
+     "n_extracted": 14,
+     "tp": 14,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "stated": {
+      "n": 14,
+      "hit": 14,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 11,
+     "n_missing": 2,
+     "mae": 6.454545454545454,
+     "max_abs_err": 61
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "junior",
+     "extracted": "senior",
+     "exact": false
+    },
+    "evidence": {
+     "n": 42,
+     "verified": 42,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 14,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 3,
+     "extracted": 3,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_026.txt",
+    "archetype": "junior_backend",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 13,
+     "n_extracted": 14,
+     "tp": 13,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.9285714285714286,
+     "recall": 1.0,
+     "f1": 0.962962962962963,
+     "stated": {
+      "n": 13,
+      "hit": 13,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": [
+      "bash"
+     ]
+    },
+    "skill_months": {
+     "n": 10,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "secondary",
+     "extracted": "secondary",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "junior",
+     "extracted": "junior",
+     "exact": true
+    },
+    "evidence": {
+     "n": 39,
+     "verified": 39,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 14,
+     "n_hallucinated": 1,
+     "rate": 0.07142857142857142
+    },
+    "roles": {
+     "truth": 2,
+     "extracted": 2,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_027.txt",
+    "archetype": "senior_backend",
+    "under_report": true,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 20,
+     "n_extracted": 16,
+     "tp": 14,
+     "fp": 2,
+     "fn": 6,
+     "precision": 0.875,
+     "recall": 0.7,
+     "f1": 0.7777777777777777,
+     "stated": {
+      "n": 14,
+      "hit": 14,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 6,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [
+      "docker",
+      "elasticsearch",
+      "grafana",
+      "microservices",
+      "postgresql",
+      "sql"
+     ],
+     "hallucinated": [
+      "event_driven",
+      "testing"
+     ]
+    },
+    "skill_months": {
+     "n": 14,
+     "n_missing": 0,
+     "mae": 0.7142857142857143,
+     "max_abs_err": 10
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "senior",
+     "extracted": "lead",
+     "exact": false
+    },
+    "evidence": {
+     "n": 61,
+     "verified": 61,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 16,
+     "n_hallucinated": 2,
+     "rate": 0.125
+    },
+    "roles": {
+     "truth": 6,
+     "extracted": 6,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_028.txt",
+    "archetype": "non_software",
+    "under_report": true,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 3,
+     "n_extracted": 3,
+     "tp": 3,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "stated": {
+      "n": 2,
+      "hit": 2,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 1,
+      "hit": 1,
+      "recall": 1.0
+     },
+     "missed": [],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 0,
+     "n_missing": 2,
+     "mae": null,
+     "max_abs_err": null
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": null,
+     "exact": false
+    },
+    "evidence": {
+     "n": 11,
+     "verified": 11,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 3,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 4,
+     "extracted": 4,
+     "exact": true,
+     "abs_err": 0
+    }
+   },
+   {
+    "source_file": "synth_029.txt",
+    "archetype": "qa",
+    "under_report": false,
+    "year_only_dates": false,
+    "skills": {
+     "n_truth": 9,
+     "n_extracted": 9,
+     "tp": 9,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "stated": {
+      "n": 9,
+      "hit": 9,
+      "recall": 1.0
+     },
+     "omitted": {
+      "n": 0,
+      "hit": 0,
+      "recall": 0.0
+     },
+     "missed": [],
+     "hallucinated": []
+    },
+    "skill_months": {
+     "n": 9,
+     "n_missing": 0,
+     "mae": 0.0,
+     "max_abs_err": 0
+    },
+    "experience_months": {
+     "total_months": 0,
+     "software_months": 0,
+     "backend_months": 0,
+     "n": 3,
+     "mae": 0.0
+    },
+    "education_level": {
+     "truth": "bsc",
+     "extracted": "bsc",
+     "exact": true
+    },
+    "seniority": {
+     "truth": "mid",
+     "extracted": "senior",
+     "exact": false
+    },
+    "evidence": {
+     "n": 32,
+     "verified": 32,
+     "rate": 1.0
+    },
+    "hallucination": {
+     "n_extracted": 9,
+     "n_hallucinated": 0,
+     "rate": 0.0
+    },
+    "roles": {
+     "truth": 1,
+     "extracted": 2,
+     "exact": false,
+     "abs_err": 1
+    }
+   }
+  ],
+  "aggregate": {
+   "n": 30,
+   "skills": {
+    "micro_precision": 0.9547872340425532,
+    "micro_recall": 0.899749373433584,
+    "micro_f1": 0.9264516129032258,
+    "macro_precision": 0.9576072743332805,
+    "macro_recall": 0.905139566316037,
+    "macro_f1": 0.9254018763789684,
+    "recall_stated": 0.9943977591036415,
+    "n_stated": 357,
+    "recall_omitted": 0.09523809523809523,
+    "n_omitted": 42
+   },
+   "skill_months": {
+    "n": 311,
+    "mae": 1.517684887459807,
+    "n_missing": 27
+   },
+   "experience_months": {
+    "n": 90,
+    "mae": 0.32222222222222224,
+    "per_field": {
+     "total_months": {
+      "mae": 0.0,
+      "median_abs_err": 0.0,
+      "n": 30
+     },
+     "software_months": {
+      "mae": 0.0,
+      "median_abs_err": 0.0,
+      "n": 30
+     },
+     "backend_months": {
+      "mae": 0.9666666666666667,
+      "median_abs_err": 0.0,
+      "n": 30
+     }
+    }
+   },
+   "education_level_exact": 1.0,
+   "seniority_exact": 0.6,
+   "evidence_verification_rate": 1.0,
+   "evidence_n": 1301,
+   "hallucination_rate": 0.04521276595744681,
+   "role_count_exact": 0.9666666666666667,
+   "role_count_mae": 0.03333333333333333,
+   "subsets": {
+    "under_report": {
+     "n": 12,
+     "recall_stated": 0.9827586206896551,
+     "recall_omitted": 0.09523809523809523
+    },
+    "year_only_dates": {
+     "n": 4,
+     "experience_mae": 0.0
+    },
+    "month_dates": {
+     "n": 26,
+     "experience_mae": 0.37179487179487175
+    }
+   }
+  },
+  "failures": [],
+  "n_extracted": 30
+ },
+ "recourse": {
+  "extracted_A": {
+   "mode": "A",
+   "n_candidates": 30,
+   "n_passed": 6,
+   "n_rejected": 24,
+   "pass_rate": 0.2,
+   "n_routes": 36,
+   "validity": 1.0,
+   "validity_per_candidate": 1.0,
+   "actionability_rate": 0.5416666666666666,
+   "l0_mean": 4.083333333333333,
+   "l0_max": 8,
+   "cost_mean": 45.138888888888886,
+   "cost_median": 27.5,
+   "cheapest_route_cost_median": 28.0,
+   "diversity_mean_distinct_supports": 2.769230769230769,
+   "immutable_blocker_rate": 0.0,
+   "no_feasible_path_rate": 0.4583333333333333,
+   "per_candidate": [
+    {
+     "candidate_id": "synth_000",
+     "score": 49,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      3,
+      4,
+      4
+     ],
+     "cost": [
+      29,
+      28,
+      35
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_001",
+     "score": 19,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_002",
+     "score": 28,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_004",
+     "score": 12,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_005",
+     "score": 71,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      1,
+      2
+     ],
+     "cost": [
+      9,
+      12,
+      11
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_006",
+     "score": 21,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      7,
+      8
+     ],
+     "cost": [
+      104,
+      116
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_007",
+     "score": 59,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      2,
+      3,
+      3
+     ],
+     "cost": [
+      21,
+      20,
+      27
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_008",
+     "score": 54,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      4,
+      5
+     ],
+     "cost": [
+      61,
+      73
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_010",
+     "score": 9,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_011",
+     "score": 23,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      7,
+      8,
+      8
+     ],
+     "cost": [
+      94,
+      106,
+      124
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_012",
+     "score": 26,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_013",
+     "score": 73,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      1,
+      2
+     ],
+     "cost": [
+      9,
+      12,
+      11
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_016",
+     "score": 57,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      3,
+      3,
+      3
+     ],
+     "cost": [
+      19,
+      21,
+      22
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_017",
+     "score": 30,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_018",
+     "score": 29,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      7,
+      8
+     ],
+     "cost": [
+      72,
+      84
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_019",
+     "score": 41,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      5,
+      6,
+      6
+     ],
+     "cost": [
+      54,
+      62,
+      66
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_020",
+     "score": 77,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      1,
+      1
+     ],
+     "cost": [
+      5,
+      6,
+      9
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_022",
+     "score": 6,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_023",
+     "score": 10,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_024",
+     "score": 4,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_025",
+     "score": 53,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      3,
+      3,
+      3
+     ],
+     "cost": [
+      21,
+      23,
+      25
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_026",
+     "score": 15,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_028",
+     "score": 6,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_029",
+     "score": 28,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      6,
+      7,
+      7
+     ],
+     "cost": [
+      73,
+      76,
+      85
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    }
+   ],
+   "errors": [],
+   "n_errors": 0
+  },
+  "extracted_B": {
+   "mode": "B",
+   "n_candidates": 30,
+   "n_passed": 1,
+   "n_rejected": 29,
+   "pass_rate": 0.03333333333333333,
+   "n_routes": 32,
+   "validity": 1.0,
+   "validity_per_candidate": 1.0,
+   "actionability_rate": 0.41379310344827586,
+   "l0_mean": 3.375,
+   "l0_max": 7,
+   "cost_mean": 31.3125,
+   "cost_median": 23.5,
+   "cheapest_route_cost_median": 17.5,
+   "diversity_mean_distinct_supports": 2.6666666666666665,
+   "immutable_blocker_rate": 0.0,
+   "no_feasible_path_rate": 0.5862068965517241,
+   "per_candidate": [
+    {
+     "candidate_id": "synth_000",
+     "score": 49,
+     "threshold": 94,
+     "rank": 14,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      6,
+      7
+     ],
+     "cost": [
+      76,
+      88
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_001",
+     "score": 19,
+     "threshold": 94,
+     "rank": 24,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_002",
+     "score": 28,
+     "threshold": 94,
+     "rank": 22,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_003",
+     "score": 93,
+     "threshold": 94,
+     "rank": 4,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      2
+     ],
+     "cost": [
+      6,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_004",
+     "score": 12,
+     "threshold": 94,
+     "rank": 20,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_005",
+     "score": 71,
+     "threshold": 94,
+     "rank": 9,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      3,
+      3,
+      4
+     ],
+     "cost": [
+      26,
+      31,
+      30
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_006",
+     "score": 21,
+     "threshold": 94,
+     "rank": 19,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_007",
+     "score": 59,
+     "threshold": 94,
+     "rank": 10,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      5,
+      6,
+      5
+     ],
+     "cost": [
+      60,
+      72,
+      90
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_008",
+     "score": 54,
+     "threshold": 94,
+     "rank": 12,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_009",
+     "score": 93,
+     "threshold": 94,
+     "rank": 4,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      2
+     ],
+     "cost": [
+      6,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_010",
+     "score": 9,
+     "threshold": 94,
+     "rank": 27,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_011",
+     "score": 23,
+     "threshold": 94,
+     "rank": 18,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_012",
+     "score": 26,
+     "threshold": 94,
+     "rank": 23,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_013",
+     "score": 73,
+     "threshold": 94,
+     "rank": 8,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      2,
+      3,
+      3
+     ],
+     "cost": [
+      21,
+      20,
+      31
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_015",
+     "score": 93,
+     "threshold": 94,
+     "rank": 4,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      2
+     ],
+     "cost": [
+      6,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_016",
+     "score": 57,
+     "threshold": 94,
+     "rank": 11,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      4,
+      5,
+      5
+     ],
+     "cost": [
+      33,
+      32,
+      45
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_017",
+     "score": 30,
+     "threshold": 94,
+     "rank": 21,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_018",
+     "score": 29,
+     "threshold": 94,
+     "rank": 16,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_019",
+     "score": 41,
+     "threshold": 94,
+     "rank": 15,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_020",
+     "score": 77,
+     "threshold": 94,
+     "rank": 7,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      2,
+      3,
+      3
+     ],
+     "cost": [
+      15,
+      20,
+      27
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_021",
+     "score": 89,
+     "threshold": 94,
+     "rank": 5,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      2,
+      2
+     ],
+     "cost": [
+      6,
+      11,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_022",
+     "score": 6,
+     "threshold": 94,
+     "rank": 29,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_023",
+     "score": 10,
+     "threshold": 94,
+     "rank": 26,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_024",
+     "score": 4,
+     "threshold": 94,
+     "rank": 30,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_025",
+     "score": 53,
+     "threshold": 94,
+     "rank": 13,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      5,
+      6,
+      6
+     ],
+     "cost": [
+      38,
+      48,
+      50
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_026",
+     "score": 15,
+     "threshold": 94,
+     "rank": 25,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_027",
+     "score": 86,
+     "threshold": 94,
+     "rank": 6,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      2,
+      3,
+      3
+     ],
+     "cost": [
+      9,
+      12,
+      21
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_028",
+     "score": 6,
+     "threshold": 94,
+     "rank": 29,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_029",
+     "score": 28,
+     "threshold": 94,
+     "rank": 17,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    }
+   ],
+   "errors": [],
+   "n_errors": 0
+  },
+  "truth_A": {
+   "mode": "A",
+   "n_candidates": 30,
+   "n_passed": 6,
+   "n_rejected": 24,
+   "pass_rate": 0.2,
+   "n_routes": 41,
+   "validity": 1.0,
+   "validity_per_candidate": 1.0,
+   "actionability_rate": 0.625,
+   "l0_mean": 4.2439024390243905,
+   "l0_max": 9,
+   "cost_mean": 46.97560975609756,
+   "cost_median": 22.0,
+   "cheapest_route_cost_median": 54.0,
+   "diversity_mean_distinct_supports": 2.7333333333333334,
+   "immutable_blocker_rate": 0.0,
+   "no_feasible_path_rate": 0.375,
+   "per_candidate": [
+    {
+     "candidate_id": "synth_000",
+     "score": 61,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      2,
+      3,
+      3
+     ],
+     "cost": [
+      17,
+      17,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_001",
+     "score": 35,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      5,
+      6
+     ],
+     "cost": [
+      70,
+      82
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_002",
+     "score": 40,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_004",
+     "score": 20,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      8,
+      9
+     ],
+     "cost": [
+      106,
+      118
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_005",
+     "score": 71,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      1,
+      2
+     ],
+     "cost": [
+      9,
+      12,
+      11
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_006",
+     "score": 25,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      7,
+      8
+     ],
+     "cost": [
+      84,
+      96
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_007",
+     "score": 67,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      2,
+      2,
+      2
+     ],
+     "cost": [
+      14,
+      15,
+      17
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_008",
+     "score": 54,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      4,
+      5
+     ],
+     "cost": [
+      61,
+      73
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_010",
+     "score": 9,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_011",
+     "score": 23,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      7,
+      8,
+      8
+     ],
+     "cost": [
+      94,
+      106,
+      124
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_012",
+     "score": 42,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_013",
+     "score": 75,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      1,
+      2
+     ],
+     "cost": [
+      6,
+      9,
+      11
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_016",
+     "score": 57,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      3,
+      3,
+      3
+     ],
+     "cost": [
+      19,
+      21,
+      22
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_017",
+     "score": 42,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_018",
+     "score": 31,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      6,
+      7,
+      7
+     ],
+     "cost": [
+      62,
+      70,
+      74
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_019",
+     "score": 41,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      5,
+      6,
+      6
+     ],
+     "cost": [
+      54,
+      62,
+      66
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_020",
+     "score": 77,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      1,
+      1
+     ],
+     "cost": [
+      5,
+      6,
+      9
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_022",
+     "score": 6,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_023",
+     "score": 4,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_024",
+     "score": 4,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_025",
+     "score": 61,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      2,
+      3,
+      3
+     ],
+     "cost": [
+      17,
+      17,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_026",
+     "score": 15,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_028",
+     "score": 6,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_029",
+     "score": 28,
+     "threshold": 80,
+     "rank": null,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      6,
+      7,
+      7
+     ],
+     "cost": [
+      73,
+      76,
+      85
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    }
+   ],
+   "errors": [],
+   "n_errors": 0
+  },
+  "truth_B": {
+   "mode": "B",
+   "n_candidates": 30,
+   "n_passed": 1,
+   "n_rejected": 29,
+   "pass_rate": 0.03333333333333333,
+   "n_routes": 31,
+   "validity": 1.0,
+   "validity_per_candidate": 1.0,
+   "actionability_rate": 0.41379310344827586,
+   "l0_mean": 3.096774193548387,
+   "l0_max": 5,
+   "cost_mean": 24.677419354838708,
+   "cost_median": 27.0,
+   "cheapest_route_cost_median": 17.5,
+   "diversity_mean_distinct_supports": 2.5833333333333335,
+   "immutable_blocker_rate": 0.0,
+   "no_feasible_path_rate": 0.5862068965517241,
+   "per_candidate": [
+    {
+     "candidate_id": "synth_000",
+     "score": 61,
+     "threshold": 94,
+     "rank": 12,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      4,
+      5,
+      5
+     ],
+     "cost": [
+      27,
+      32,
+      39
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_001",
+     "score": 35,
+     "threshold": 94,
+     "rank": 16,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_002",
+     "score": 40,
+     "threshold": 94,
+     "rank": 24,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_003",
+     "score": 93,
+     "threshold": 94,
+     "rank": 6,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      2
+     ],
+     "cost": [
+      6,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_004",
+     "score": 20,
+     "threshold": 94,
+     "rank": 21,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_005",
+     "score": 71,
+     "threshold": 94,
+     "rank": 9,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      3,
+      3,
+      4
+     ],
+     "cost": [
+      26,
+      31,
+      30
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_006",
+     "score": 25,
+     "threshold": 94,
+     "rank": 19,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_007",
+     "score": 67,
+     "threshold": 94,
+     "rank": 10,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      4,
+      4,
+      5
+     ],
+     "cost": [
+      36,
+      38,
+      42
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_008",
+     "score": 54,
+     "threshold": 94,
+     "rank": 14,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_009",
+     "score": 93,
+     "threshold": 94,
+     "rank": 6,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      2
+     ],
+     "cost": [
+      6,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_010",
+     "score": 9,
+     "threshold": 94,
+     "rank": 26,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_011",
+     "score": 23,
+     "threshold": 94,
+     "rank": 20,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_012",
+     "score": 42,
+     "threshold": 94,
+     "rank": 23,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_013",
+     "score": 75,
+     "threshold": 94,
+     "rank": 8,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      2,
+      3,
+      3
+     ],
+     "cost": [
+      21,
+      20,
+      33
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_015",
+     "score": 93,
+     "threshold": 94,
+     "rank": 6,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      2
+     ],
+     "cost": [
+      6,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_016",
+     "score": 57,
+     "threshold": 94,
+     "rank": 13,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      4,
+      5,
+      5
+     ],
+     "cost": [
+      33,
+      32,
+      45
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_017",
+     "score": 42,
+     "threshold": 94,
+     "rank": 23,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_018",
+     "score": 31,
+     "threshold": 94,
+     "rank": 17,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_019",
+     "score": 41,
+     "threshold": 94,
+     "rank": 15,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_020",
+     "score": 77,
+     "threshold": 94,
+     "rank": 7,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      2,
+      3,
+      3
+     ],
+     "cost": [
+      15,
+      20,
+      27
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_021",
+     "score": 93,
+     "threshold": 94,
+     "rank": 6,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      2
+     ],
+     "cost": [
+      6,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_022",
+     "score": 6,
+     "threshold": 94,
+     "rank": 28,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_023",
+     "score": 4,
+     "threshold": 94,
+     "rank": 30,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_024",
+     "score": 4,
+     "threshold": 94,
+     "rank": 30,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_025",
+     "score": 61,
+     "threshold": 94,
+     "rank": 12,
+     "n_routes": 3,
+     "all_routes_valid": true,
+     "l0": [
+      4,
+      5,
+      5
+     ],
+     "cost": [
+      27,
+      32,
+      39
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_026",
+     "score": 15,
+     "threshold": 94,
+     "rank": 25,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_027",
+     "score": 93,
+     "threshold": 94,
+     "rank": 6,
+     "n_routes": 2,
+     "all_routes_valid": true,
+     "l0": [
+      1,
+      2
+     ],
+     "cost": [
+      6,
+      18
+     ],
+     "immutable_blockers": 0,
+     "no_feasible_path": false
+    },
+    {
+     "candidate_id": "synth_028",
+     "score": 6,
+     "threshold": 94,
+     "rank": 28,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    },
+    {
+     "candidate_id": "synth_029",
+     "score": 28,
+     "threshold": 94,
+     "rank": 18,
+     "n_routes": 0,
+     "all_routes_valid": false,
+     "l0": [],
+     "cost": [],
+     "immutable_blockers": 0,
+     "no_feasible_path": true
+    }
+   ],
+   "errors": [],
+   "n_errors": 0
+  }
+ }
+}

@@ -1,0 +1,50 @@
+Mariela Ortega Quintana
+Oulu, Finland
+mariela.ortegaq@posteo.net | +358 45 218 7734
+
+ACADEMIC QUALIFICATIONS
+
+B.Sc. in Mathematics
+
+PROFESSIONAL CERTIFICATION
+
+Certified Kubernetes Application Developer (CKAD)
+
+PROFESSIONAL EXPERIENCE IN REVERSE CHRONOLOGICAL ORDER
+
+Administrative Coordinator
+Metsa Logistics Oy
+Apr 2024 – Present
+- Composes and maintains SQL queries against operational databases in order to assemble the figures required for routine administrative reporting.
+- Refines existing SQL statements so that recurring extracts run reliably and return consistent results across reporting cycles.
+- Consolidates query output into structured spreadsheets, applying formulas and pivot summaries for departmental review.
+
+Customer Success Specialist
+Metsa Logistics Oy
+Jan 2023 – Mar 2024
+- Maintained detailed spreadsheet records of client accounts, service requests and follow-up actions.
+- Constructed lookup formulas, conditional formatting and summary tabs in Excel to render account status legible at a glance.
+- Prepared recurring spreadsheet overviews used in customer review discussions and internal handovers.
+
+Warehouse Associate
+Vihrea Puutarha Oy
+Nov 2019 – Dec 2022
+- Interrogated the inventory database with SQL to reconcile recorded stock against physical counts.
+- Developed straightforward SQL extracts supporting stock movement and replenishment checks.
+- Kept goods-in and goods-out spreadsheets current, organising the data for subsequent querying.
+
+INDEPENDENT PROJECT WORK
+
+Spreadsheet automation for a small shop
+- Designed a data workflow for a small retail business, using SQL to retrieve and aggregate records so that manual re-typing into spreadsheets was no longer necessary. Developed locally; not deployed.
+
+TECHNICAL COMPETENCIES
+
+Excel / spreadsheets
+SQL
+
+LANGUAGES
+
+Spanish — native
+English — C1
+Finnish — A2

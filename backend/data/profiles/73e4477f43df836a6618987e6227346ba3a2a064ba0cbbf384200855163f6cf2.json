@@ -1,0 +1,412 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "73e4477f43df836a6618987e6227346ba3a2a064ba0cbbf384200855163f6cf2",
+  "source_file": "synth_028.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:26:14+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Customer Success Specialist",
+    "title_canonical": "non_software",
+    "employer": "Baltic Health Services",
+    "start": "2025-05",
+    "end": "2026-07",
+    "date_precision": "month",
+    "months": 14,
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "evidence": [
+     {
+      "quote": "Customer Success Specialist, Baltic Health Services — May 2025 – Jul 2026",
+      "start": 1437,
+      "end": 1510,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Laboratory Technician",
+    "title_canonical": "non_software",
+    "employer": "Suomi Retail Group",
+    "start": "2021-12",
+    "end": "2025-05",
+    "date_precision": "month",
+    "months": 41,
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "evidence": [
+     {
+      "quote": "Laboratory Technician, Suomi Retail Group — Dec 2021 – May 2025",
+      "start": 1511,
+      "end": 1574,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Customer Success Specialist",
+    "title_canonical": "non_software",
+    "employer": "Metsa Logistics Oy",
+    "start": "2020-01",
+    "end": "2021-12",
+    "date_precision": "month",
+    "months": 23,
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "evidence": [
+     {
+      "quote": "Customer Success Specialist, Metsa Logistics Oy — Jan 2020 – Dec 2021",
+      "start": 1575,
+      "end": 1644,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Laboratory Technician",
+    "title_canonical": "non_software",
+    "employer": "Vihrea Puutarha Oy",
+    "start": "2015-08",
+    "end": "2019-12",
+    "date_precision": "month",
+    "months": 52,
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "evidence": [
+     {
+      "quote": "Laboratory Technician, Vihrea Puutarha Oy — Aug 2015 – Dec 2019",
+      "start": 1645,
+      "end": 1708,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 130,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "seniority": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 4,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "agile": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Agile / Scrum",
+      "start": 271,
+      "end": 284,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "excel": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Spreadsheet automation for a small shop\n- Automated repetitive spreadsheet tasks for a small retail business, planned and delivered in short iterations with regular feedback from the owner. Not deployed publicly.",
+      "start": 1204,
+      "end": 1416,
+      "section": "projects",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "html_css": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "HTML / CSS",
+      "start": 774,
+      "end": 784,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  }
+ },
+ "projects": [
+  {
+   "title": "Spreadsheet automation for a small shop",
+   "topics": [
+    "other"
+   ],
+   "skills": [
+    "excel"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Spreadsheet automation for a small shop\n- Automated repetitive spreadsheet tasks for a small retail business, planned and delivered in short iterations with regular feedback from the owner. Not deployed publicly.",
+     "start": 1204,
+     "end": 1416,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "other": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc. Communications",
+     "start": 1720,
+     "end": 1740,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "communications",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc. Communications",
+     "start": 1720,
+     "end": 1740,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "en",
+   "cefr": "C2",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "ru",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "FI",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Helsinki, Finland",
+     "start": 14,
+     "end": 31,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [
+  "Customer Success",
+  "Laboratory Work"
+ ],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

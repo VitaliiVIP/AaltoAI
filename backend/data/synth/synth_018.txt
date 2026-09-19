@@ -1,0 +1,48 @@
+Eero Valtanen
+Espoo, Finland | eero.valtanen@mailbox.fi | +358 44 218 6607
+
+Backend engineer. Python, APIs, containers. Requires work permit / visa sponsorship in Finland. Open to relocation.
+
+EXPERIENCE
+
+Backend Software Engineer — Kaiku Digital
+Feb 2026 – Present
+- Python services on Linux, containerised with Docker
+- PostgreSQL schemas, SQL queries, data access layers
+- REST APIs for internal and client use
+- HTML / CSS work on server-rendered views and template markup
+- Git-based workflow, review, branching
+
+Software Developer Intern — Polaris Payments
+Sep 2025 – Feb 2026
+- REST API endpoints: design, implementation, testing
+- Git branching and code review as daily practice
+- Python plus PostgreSQL and MongoDB storage
+- SQL reporting queries
+- Docker images for local dev parity
+
+Junior Backend Developer — Nordcom Oy
+Dec 2024 – Sep 2025
+- Django app features, models, views
+- REST API maintenance and extension
+- SQL fixes, query tuning
+- Git history hygiene, rebases, merge conflict cleanup
+- Docker for service runs
+
+PROJECTS
+
+Recipe API with authentication — deployed. Backend focus. SQL storage, Linux host.
+Django tutorial series — follow-along build. MongoDB, Docker.
+
+SKILLS
+
+Python | Django | REST APIs | SQL | PostgreSQL | MongoDB
+Docker | Linux | Git | HTML / CSS | Object-oriented programming
+
+EDUCATION
+
+B.Sc. Information Technology
+
+LANGUAGES
+
+Finnish — native. English — C1.

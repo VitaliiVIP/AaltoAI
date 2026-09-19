@@ -1,0 +1,22 @@
+{
+ "idx": 27,
+ "source_file": "synth_027.txt",
+ "archetype": "senior_backend",
+ "style": "reverse-chronological with tight bullet points under each role, classic and plain",
+ "seniority": "senior",
+ "omitted_skills": [
+  "docker",
+  "elasticsearch",
+  "grafana",
+  "microservices",
+  "postgresql",
+  "sql"
+ ],
+ "overlap": true,
+ "year_only_dates": false,
+ "under_report": true,
+ "block_only_skills": [],
+ "n_roles": 6,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

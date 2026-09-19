@@ -1,0 +1,21 @@
+{
+ "idx": 23,
+ "source_file": "synth_023.txt",
+ "archetype": "frontend",
+ "style": "reverse-chronological with tight bullet points under each role, classic and plain",
+ "seniority": "mid",
+ "omitted_skills": [
+  "html_css",
+  "nextjs",
+  "nodejs"
+ ],
+ "overlap": false,
+ "year_only_dates": true,
+ "under_report": true,
+ "block_only_skills": [
+  "angular"
+ ],
+ "n_roles": 3,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

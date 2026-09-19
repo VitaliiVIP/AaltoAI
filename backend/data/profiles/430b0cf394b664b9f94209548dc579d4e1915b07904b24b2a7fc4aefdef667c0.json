@@ -1,0 +1,1356 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "430b0cf394b664b9f94209548dc579d4e1915b07904b24b2a7fc4aefdef667c0",
+  "source_file": "synth_027.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:26:04+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Backend Tech Lead",
+    "title_canonical": "backend_engineer",
+    "employer": "Ruska Systems",
+    "start": "2025-03",
+    "end": "2026-08",
+    "date_precision": "month",
+    "months": 17,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "go",
+     "java",
+     "rest_api",
+     "ci_cd",
+     "kubernetes",
+     "aws",
+     "terraform",
+     "grpc",
+     "git",
+     "linux"
+    ],
+    "primary_skills": [
+     "python",
+     "go",
+     "java",
+     "rest_api"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Backend Tech Lead",
+    "title_canonical": "backend_engineer",
+    "employer": "Sisu Software Oy",
+    "start": "2021-10",
+    "end": "2025-03",
+    "date_precision": "month",
+    "months": 41,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "grpc",
+     "rest_api",
+     "python",
+     "go",
+     "kubernetes",
+     "aws",
+     "redis",
+     "ci_cd",
+     "git",
+     "linux"
+    ],
+    "primary_skills": [
+     "grpc",
+     "rest_api",
+     "python",
+     "go",
+     "kubernetes",
+     "aws"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start": "2020-11",
+    "end": "2021-09",
+    "date_precision": "month",
+    "months": 10,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "python",
+     "go",
+     "helm",
+     "kubernetes",
+     "ci_cd",
+     "testing",
+     "aws",
+     "linux"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "python",
+     "go",
+     "helm",
+     "kubernetes"
+    ],
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend) — Nokka Oy",
+      "start": 1667,
+      "end": 1705,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Koski Engineering",
+    "start": "2019-07",
+    "end": "2020-11",
+    "date_precision": "month",
+    "months": 16,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "kubernetes",
+     "rest_api",
+     "grpc",
+     "python",
+     "ci_cd",
+     "aws",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "kubernetes",
+     "rest_api",
+     "grpc",
+     "python"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior Backend Developer — Koski Engineering",
+      "start": 2053,
+      "end": 2097,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Freelance Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Independent contractor",
+    "start": "2018-02",
+    "end": "2018-12",
+    "date_precision": "month",
+    "months": 10,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "git"
+    ],
+    "evidence": [
+     {
+      "quote": "Freelance Backend Developer — Independent contractor",
+      "start": 2426,
+      "end": 2478,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Backend Developer Trainee",
+    "title_canonical": "backend_engineer",
+    "employer": "Sisu Software Oy",
+    "start": "2017-05",
+    "end": "2019-05",
+    "date_precision": "month",
+    "months": 24,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "kafka",
+     "event_driven",
+     "rest_api",
+     "python",
+     "kubernetes",
+     "helm",
+     "linux",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "kafka",
+     "event_driven",
+     "rest_api",
+     "python"
+    ],
+    "evidence": [
+     {
+      "quote": "Backend Developer Trainee — Sisu Software Oy",
+      "start": 2669,
+      "end": 2713,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 108,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 108,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 108,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "lead",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 6,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "aws": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform",
+      "start": 445,
+      "end": 496,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 84,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "ci_cd": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Delivery: CI/CD, Git",
+      "start": 497,
+      "end": 519,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 108,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "event_driven": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer Trainee — Sisu Software Oy",
+      "start": 2669,
+      "end": 2713,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2019,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Delivery: CI/CD, Git",
+      "start": 497,
+      "end": 519,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 98,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "go": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Languages: Python, Go, Java",
+      "start": 353,
+      "end": 382,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 68,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "grpc": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Services & interfaces: REST APIs, gRPC, Apache Kafka, Redis",
+      "start": 383,
+      "end": 444,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 74,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "helm": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend) — Nokka Oy",
+      "start": 1667,
+      "end": 1705,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Developer Trainee — Sisu Software Oy",
+      "start": 2669,
+      "end": 2713,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform",
+      "start": 445,
+      "end": 496,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 34,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2021,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "java": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Languages: Python, Go, Java",
+      "start": 353,
+      "end": 382,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 17,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "kafka": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Developer Trainee — Sisu Software Oy",
+      "start": 2669,
+      "end": 2713,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Services & interfaces: REST APIs, gRPC, Apache Kafka, Redis",
+      "start": 383,
+      "end": 444,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2019,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "kubernetes": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform",
+      "start": 445,
+      "end": 496,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 108,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform",
+      "start": 445,
+      "end": 496,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 108,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Languages: Python, Go, Java",
+      "start": 353,
+      "end": 382,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 108,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "redis": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Services & interfaces: REST APIs, gRPC, Apache Kafka, Redis",
+      "start": 383,
+      "end": 444,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 41,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2025,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Backend Tech Lead — Sisu Software Oy",
+      "start": 1148,
+      "end": 1184,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Services & interfaces: REST APIs, gRPC, Apache Kafka, Redis",
+      "start": 383,
+      "end": 444,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 108,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "terraform": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Backend Tech Lead — Ruska Systems",
+      "start": 537,
+      "end": 570,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform",
+      "start": 445,
+      "end": 496,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 17,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 2,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "testing": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend) — Nokka Oy",
+      "start": 1667,
+      "end": 1705,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 10,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2021,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Terraform modules for a three-tier app",
+   "topics": [
+    "infrastructure",
+    "devops"
+   ],
+   "skills": [
+    "terraform",
+    "aws"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "Terraform modules for a three-tier app\nReusable Terraform modules provisioning AWS infrastructure for a three-tier application layout.",
+     "start": 3034,
+     "end": 3168,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Job-board REST API",
+   "topics": [
+    "backend"
+   ],
+   "skills": [
+    "rest_api"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "Job-board REST API\nBackend service exposing a REST API for job listings and applications.",
+     "start": 3170,
+     "end": 3259,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Recipe API with authentication",
+   "topics": [
+    "backend"
+   ],
+   "skills": [
+    "python"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "Recipe API with authentication\nPython backend providing recipe resources behind authenticated access.",
+     "start": 3261,
+     "end": 3362,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "backend": 2,
+  "devops": 1,
+  "infrastructure": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc., Communications",
+     "start": 3379,
+     "end": 3400,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "communications",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc., Communications",
+     "start": 3379,
+     "end": 3400,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [
+  {
+   "cert_id": "certified_kubernetes_application_developer",
+   "issuer": "",
+   "issued": null,
+   "evidence": [
+    {
+     "quote": "Certified Kubernetes Application Developer (CKAD)",
+     "start": 3422,
+     "end": 3471,
+     "section": "certifications",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "languages": [
+  {
+   "lang": "fi",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "C1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "EE",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Tartu, Estonia",
+     "start": 15,
+     "end": 29,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Tech Lead — Ruska Systems",
+     "start": 537,
+     "end": 570,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Backend Tech Lead — Sisu Software Oy",
+     "start": 1148,
+     "end": 1184,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform",
+     "start": 445,
+     "end": 496,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "ci_cd_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Tech Lead — Ruska Systems",
+     "start": 537,
+     "end": 570,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Backend Tech Lead — Sisu Software Oy",
+     "start": 1148,
+     "end": 1184,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "- Delivery: CI/CD, Git",
+     "start": 497,
+     "end": 519,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "iac_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Backend Tech Lead — Ruska Systems",
+     "start": 537,
+     "end": 570,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform",
+     "start": 445,
+     "end": 496,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "unmatched_skills": [
+  "protobuf"
+ ],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

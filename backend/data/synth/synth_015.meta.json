@@ -1,0 +1,21 @@
+{
+ "idx": 15,
+ "source_file": "synth_015.txt",
+ "archetype": "senior_backend",
+ "style": "consultant two-pager: verbose, client-engagement framing, a profile summary paragraph on top",
+ "seniority": "senior",
+ "omitted_skills": [
+  "ci_cd",
+  "git",
+  "linux",
+  "postgresql",
+  "redis"
+ ],
+ "overlap": true,
+ "year_only_dates": false,
+ "under_report": true,
+ "block_only_skills": [],
+ "n_roles": 4,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

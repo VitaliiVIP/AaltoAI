@@ -1,0 +1,192 @@
+{
+ "cv_sha256": "e082e697279b54d77ba415a64ce00b3981fa5dc5ac4e2a9a56e9b792de68f58d",
+ "source_file": "synth_008.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:21:28+00:00",
+ "cv_text": "Mariela Ordóñez Vantaa\n\nEspoo, Finland\nmariela.ordonez.vantaa@posteo.net\n+358 44 218 7736\nAcademic Qualifications\n\nM.Sc. in Biology\nProfessional Experience in Reverse Chronological Order\n\nSenior DevOps Engineer\nPolaris Payments — Aug 2024 – Present\n- Operates and extends observability across payment services with Prometheus, defining metrics, recording rules and alerting conditions for production workloads.\n- Designs and maintains AWS infrastructure, with provisioning expressed declaratively in Terraform.\n- Administers Kubernetes clusters and container images built with Docker on Linux hosts.\n- Maintains CI/CD pipelines and automates recurring operational tasks through Bash shell scripting and Python utilities, with all configuration tracked in Git.\n\nDevOps Engineer\nTampere Tech Group — Apr 2023 – Aug 2024\n- Established Git branching and review conventions adopted across delivery teams, making repository history the single reference for infrastructure change.\n- Authored and refined Docker images and compose definitions, standardising local and pipeline build environments.\n- Deployed services to Kubernetes, described AWS resources in Terraform, and extended CI/CD workflows.\n- Wrote Python and Bash tooling for release automation and exposed service metrics to Prometheus on Linux servers.\n\nCloud Support Engineer\nAurora Analytics Oy — Jan 2022 – Apr 2023\n- Introduced and supported Argo CD for declarative, Git-driven delivery to Kubernetes namespaces.\n- Curated Git repositories holding manifests, resolving drift between declared and running state.\n- Investigated container and Linux platform incidents, reproducing issues with Docker and diagnosing through shell tooling.\n- Supported CI/CD pipeline configuration and build troubleshooting for internal teams.\nTechnical Competencies\n\nAnsible; Argo CD; AWS; AWS CloudFormation; Bash / shell scripting; CI/CD; Docker; Git; Kubernetes; Linux; Nginx; Prometheus; Python; Terraform\nLanguages\n\nSpanish — native\nEnglish — C1\nFinnish — A2\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Senior DevOps Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Polaris Payments",
+    "start_raw": "Aug 2024",
+    "end_raw": "present",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "prometheus",
+     "aws",
+     "terraform",
+     "kubernetes",
+     "docker",
+     "linux",
+     "ci_cd",
+     "bash",
+     "python",
+     "git"
+    ],
+    "primary_skills": [
+     "prometheus",
+     "aws",
+     "terraform"
+    ],
+    "quote": "Polaris Payments — Aug 2024 – Present"
+   },
+   {
+    "title_raw": "DevOps Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Tampere Tech Group",
+    "start_raw": "Apr 2023",
+    "end_raw": "Aug 2024",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "git",
+     "docker",
+     "kubernetes",
+     "aws",
+     "terraform",
+     "ci_cd",
+     "python",
+     "bash",
+     "prometheus",
+     "linux"
+    ],
+    "primary_skills": [
+     "git",
+     "docker"
+    ],
+    "quote": "Tampere Tech Group — Apr 2023 – Aug 2024"
+   },
+   {
+    "title_raw": "Cloud Support Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Aurora Analytics Oy",
+    "start_raw": "Jan 2022",
+    "end_raw": "Apr 2023",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "argo_cd",
+     "git",
+     "kubernetes",
+     "docker",
+     "linux",
+     "ci_cd"
+    ],
+    "primary_skills": [
+     "argo_cd",
+     "git",
+     "kubernetes"
+    ],
+    "quote": "Aurora Analytics Oy — Jan 2022 – Apr 2023"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "ansible",
+    "quote": "Ansible; Argo CD; AWS"
+   },
+   {
+    "skill": "argo_cd",
+    "quote": "Argo CD; AWS"
+   },
+   {
+    "skill": "aws",
+    "quote": "AWS; AWS CloudFormation"
+   },
+   {
+    "skill": "cloudformation",
+    "quote": "AWS CloudFormation"
+   },
+   {
+    "skill": "bash",
+    "quote": "Bash / shell scripting"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "CI/CD; Docker"
+   },
+   {
+    "skill": "docker",
+    "quote": "Docker; Git"
+   },
+   {
+    "skill": "git",
+    "quote": "Git; Kubernetes"
+   },
+   {
+    "skill": "kubernetes",
+    "quote": "Kubernetes; Linux"
+   },
+   {
+    "skill": "linux",
+    "quote": "Linux; Nginx"
+   },
+   {
+    "skill": "nginx",
+    "quote": "Nginx; Prometheus"
+   },
+   {
+    "skill": "prometheus",
+    "quote": "Prometheus; Python"
+   },
+   {
+    "skill": "python",
+    "quote": "Python; Terraform"
+   },
+   {
+    "skill": "terraform",
+    "quote": "Terraform"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [],
+  "education": {
+   "highest_level": "msc",
+   "field": "biology",
+   "in_progress": "unclear",
+   "quote": "M.Sc. in Biology"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "es",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   },
+   {
+    "lang": "fi",
+    "cefr": "A2"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Espoo, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

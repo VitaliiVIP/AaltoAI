@@ -1,0 +1,60 @@
+Mateo Rivas Caballero
+Backend Developer
+Tampere, Finland | Open to relocation
+mateo.rivascaballero@posteo.fi | +358 44 218 6640
+
+Profiili
+Backend developer working mainly with Python services, relational data and containerised deployments. Comfortable across the path from REST API design to CI/CD pipelines and Linux hosting.
+
+Työkokemus
+
+Server-side Developer — Nokka Oy
+Jan 2025 – May 2026
+- Built and maintained HTTP services in Flask, shaping blueprints, request validation and error handling conventions used across the codebase.
+- Extended Flask applications with Redis for caching and short-lived queue state.
+- Designed REST APIs consumed by internal and partner clients, backed by PostgreSQL and hand-tuned SQL.
+- Worked within a microservices architecture, packaging components with Docker and running them on AWS and Linux hosts.
+- Maintained CI/CD pipelines and kept branching and review practice tidy in Git.
+
+Software Engineer (Backend) — Lumi Labs
+Sep 2023 – Jan 2025
+- Owned AWS-hosted backend infrastructure, from provisioning to deployment and monitoring of Python services.
+- Wrote and reviewed demanding SQL against PostgreSQL, refactoring queries and schema for read-heavy endpoints.
+- Configured Nginx as reverse proxy and TLS terminator in front of containerised applications.
+- Containerised services with Docker and automated build, test and release stages in CI/CD.
+- Documented REST API contracts and versioning for consuming teams; day-to-day work on Linux with Git.
+
+Backend Developer — Kaiku Digital
+Apr 2022 – Sep 2023
+- Developed Python backend modules as the core of the delivery work, focusing on readable, tested code.
+- Implemented REST APIs over PostgreSQL, writing SQL for reporting and migration tasks.
+- Set up GitHub Actions workflows covering linting, tests and Docker image publishing.
+- Deployed containers to AWS and supported release troubleshooting; version control with Git.
+
+Junior Backend Developer — Vantaa Systems
+Jul 2021 – Apr 2022
+- Wrote SQL queries and PostgreSQL schema changes for customer-facing features, with guidance from senior colleagues.
+- Grew into Python as the primary language for service and scripting work.
+- Contributed to REST API endpoints in Node.js and TypeScript, plus maintenance on a legacy .NET component.
+- Touched frontend glue code in JavaScript; learned Docker and CI/CD basics and everyday Git workflow.
+
+Projektit
+
+Flaky-test triage tooling
+- Personal tooling for collecting and grouping unstable test results to make repeat offenders visible.
+- Uses Redis to store run history and flakiness counters. Not deployed publicly.
+
+Koulutus
+
+Vocational qualification (ammattitutkinto) in Information Technology — in progress
+Subject area: Industrial Engineering and Management
+
+Taidot
+
+AWS, CI/CD, Docker, .NET, Flask, Git, GitHub Actions, JavaScript, Linux, Microservices architecture, Nginx, Node.js, PostgreSQL, Python, Redis, REST APIs, SQL, TypeScript
+
+Kielet
+
+Spanish — native
+English — C1
+Finnish — A2

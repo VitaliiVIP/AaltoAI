@@ -1,0 +1,72 @@
+Veikko Laaksonen
+Backend Software Engineer
+Oulu, Finland | Open to relocation
+veikko.laaksonen@mailbox.fi | +358 40 555 0192
+
+PROFILE
+
+Backend-focused software engineer working primarily in Python on service-oriented systems, with a consulting mindset shaped by close collaboration with product owners and client stakeholders. My engagements have centred on designing and operating REST APIs, modelling and tuning relational data in PostgreSQL, and packaging services so that they behave identically on a developer laptop and in a cloud environment. I am comfortable owning a delivery end to end: clarifying the requirement with the client, shaping the data model and SQL behind it, writing the service, wiring it into CI/CD, and running it on Linux hosts in AWS. A mathematics background gives me a taste for precise specifications and for testing assumptions rather than inheriting them; ISTQB Foundation Level training reinforces that habit in day-to-day work. I work in Finnish and English with client teams and can follow Swedish-language discussion.
+
+CORE SKILLS
+
+Languages and frameworks: Python, FastAPI, SQL
+Data and caching: PostgreSQL, Redis
+APIs and architecture: REST APIs, Microservices architecture, System design
+Platform and delivery: Docker, CI/CD, GitHub Actions, AWS, Linux, Git
+Quality and ways of working: pytest, Agile / Scrum
+
+PROFESSIONAL EXPERIENCE
+
+Software Engineer (Backend) — Arctic Cloud Oy
+Mar 2025 – Present
+
+- Act as a backend engineer on client-facing platform work, translating functional requirements into Python services exposed through documented REST APIs.
+- Own significant parts of the PostgreSQL layer: schema design, normalisation decisions, index strategy, migrations and review of slow SQL raised by application teams. Database work is the backbone of most of my assignments here, and I am usually the person the team consults before a schema change goes out.
+- Contribute to a microservices architecture, defining service boundaries and contracts so that teams can deploy independently without breaking downstream consumers.
+- Build and maintain Docker images and GitHub Actions pipelines that run test suites, build artefacts and promote them through environments as part of the CI/CD flow.
+- Operate services on Linux in AWS, investigating production behaviour, adjusting configuration and feeding operational findings back into design discussions.
+- Work in Git-based trunk and branch workflows with code review as the default, keeping change history readable for colleagues who join an engagement mid-stream.
+
+API Developer — Ruska Systems
+Nov 2023 – Mar 2025
+
+- Delivered REST APIs in Python for client integrations, agreeing endpoint contracts directly with the consuming teams and iterating on them through review cycles.
+- Containerised services with Docker and standardised local development environments, which removed a recurring class of environment-specific defects and made onboarding of new engagers straightforward; container work was a central part of my remit.
+- Introduced and maintained Redis caching and queueing for frequently requested and expensive read paths, tuning key design, serialisation and expiry policy against observed traffic patterns.
+- Modelled and queried data in PostgreSQL, writing SQL for reporting and integration needs and reviewing query plans where response times mattered.
+- Maintained CI/CD pipelines covering automated tests, image builds and deployment to AWS, with services running on Linux.
+- Participated fully in Agile / Scrum ceremonies: refinement, estimation, sprint review and retrospective, and used those forums to keep client expectations aligned with delivery.
+- Used Git for branching, review and release tagging across parallel client workstreams.
+
+Software Developer Intern — Kaiku Digital
+Mar 2023 – Nov 2023
+
+- Supported the backend team on Python services and REST API endpoints, taking well-scoped tickets through to review and merge.
+- Worked extensively with PostgreSQL, writing queries and seed data, and learning schema design conventions from the senior engineers on the engagement; this was where the relational foundation of my later work was laid.
+- Wrote automated tests with pytest, including fixtures for database-backed cases, and extended coverage around previously untested endpoints.
+- Packaged services with Docker for local runs and helped keep the CI/CD configuration green.
+- Used Redis in a caching capacity for a read-heavy internal endpoint.
+- Collaborated through Git, with pull requests reviewed by the wider team.
+
+PROJECTS
+
+Personal finance tracker backend
+A self-directed backend exercise built and run on Linux. Not deployed publicly; used as a sandbox for practising service structure and data handling away from client constraints.
+
+EDUCATION
+
+M.Sc., Mathematics
+
+CERTIFICATIONS
+
+ISTQB Certified Tester, Foundation Level
+
+LANGUAGES
+
+Finnish — native
+English — B2
+Swedish — B1
+
+ADDITIONAL
+
+Based in Oulu, Finland. Open to relocation for the right client engagement.

@@ -1,0 +1,1038 @@
+{
+ "schema_version": "1.0",
+ "job_family": "software_engineering",
+ "as_of": "2026-09-19",
+ "provenance": {
+  "cv_sha256": "1677cc30ea2769cfd85e2d04684637e01d8bc7d216ab575cb14cd64795f41f15",
+  "source_file": "synth_025.txt",
+  "extractor_model": "claude-opus-5",
+  "prompt_version": "extract-v1",
+  "taxonomy_version": "swe-core-0.1",
+  "extracted_at": "2026-09-19T14:25:34+00:00"
+ },
+ "experience": {
+  "roles": [
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2024-09",
+    "end": "2026-09",
+    "date_precision": "month",
+    "months": 24,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "django",
+     "rest_api",
+     "git",
+     "sql",
+     "postgresql",
+     "docker",
+     "linux",
+     "javascript",
+     "machine_learning"
+    ],
+    "primary_skills": [
+     "python",
+     "django",
+     "rest_api",
+     "git",
+     "sql",
+     "postgresql",
+     "docker",
+     "linux",
+     "javascript",
+     "machine_learning"
+    ],
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "API Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Nordcom Oy",
+    "start": "2019-06",
+    "end": "2024-07",
+    "date_precision": "month",
+    "months": 61,
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "flask",
+     "django",
+     "docker",
+     "git",
+     "sql",
+     "postgresql"
+    ],
+    "primary_skills": [
+     "flask",
+     "django",
+     "docker",
+     "git",
+     "sql",
+     "postgresql"
+    ],
+    "evidence": [
+     {
+      "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024",
+      "start": 990,
+      "end": 1037,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Warehouse Associate",
+    "title_canonical": "non_software",
+    "employer": "Kanta Kirjasto",
+    "start": "2018-08",
+    "end": "2019-06",
+    "date_precision": "month",
+    "months": 10,
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "excel",
+     "sql",
+     "agile"
+    ],
+    "primary_skills": [
+     "excel",
+     "sql"
+    ],
+    "evidence": [
+     {
+      "quote": "Warehouse Associate, Kanta Kirjasto — Aug 2018 – Jun 2019",
+      "start": 1505,
+      "end": 1562,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   }
+  ],
+  "total_months": {
+   "value": 95,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "software_months": {
+   "value": 85,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "backend_months": {
+   "value": 85,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  },
+  "seniority": {
+   "value": "senior",
+   "derivation": "inferred",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "num_roles": {
+   "value": 3,
+   "derivation": "computed",
+   "confidence": "high",
+   "evidence": []
+  }
+ },
+ "skills": {
+  "agile": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Warehouse Associate, Kanta Kirjasto — Aug 2018 – Jun 2019",
+      "start": 1505,
+      "end": 1562,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "django": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024",
+      "start": 990,
+      "end": 1037,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 85,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "docker": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024",
+      "start": 990,
+      "end": 1037,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 85,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "excel": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Warehouse Associate, Kanta Kirjasto — Aug 2018 – Jun 2019",
+      "start": 1505,
+      "end": 1562,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "flask": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024",
+      "start": 990,
+      "end": 1037,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 61,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2024,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "git": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024",
+      "start": 990,
+      "end": 1037,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 85,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "html_css": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "javascript": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "linux": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "machine_learning": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "postgresql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024",
+      "start": 990,
+      "end": 1037,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 85,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "python": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "rest_api": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+      "start": 340,
+      "end": 400,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024",
+      "start": 990,
+      "end": 1037,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+      "start": 2224,
+      "end": 2372,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 85,
+    "derivation": "computed",
+    "confidence": "high",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  }
+ },
+ "projects": [
+  {
+   "title": "Django tutorial series",
+   "topics": [
+    "tutorial"
+   ],
+   "skills": [
+    "django",
+    "javascript",
+    "docker"
+   ],
+   "deployed": false,
+   "evidence": [
+    {
+     "quote": "Django tutorial series — worked through a structured Django tutorial series as self-study, extending the sample application with JavaScript on the client side and running the whole thing locally in Docker. Not deployed.",
+     "start": 1956,
+     "end": 2175,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  }
+ ],
+ "project_counts_by_topic": {
+  "tutorial": 1
+ },
+ "education": {
+  "highest_level": {
+   "value": "bsc",
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "B.Sc., Information Systems",
+     "start": 2188,
+     "end": 2214,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "field": {
+   "value": "information systems",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc., Information Systems",
+     "start": 2188,
+     "end": 2214,
+     "section": "education",
+     "verified": true
+    }
+   ]
+  },
+  "in_progress": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "certifications": [],
+ "languages": [
+  {
+   "lang": "fi",
+   "cefr": null,
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "en",
+   "cefr": "B2",
+   "derivation": "stated",
+   "confidence": "medium"
+  },
+  {
+   "lang": "sv",
+   "cefr": "B1",
+   "derivation": "stated",
+   "confidence": "medium"
+  }
+ ],
+ "eligibility": {
+  "work_authorization_region": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "requires_sponsorship": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "location_country": {
+   "value": "EE",
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "Tartu, Estonia",
+     "start": 15,
+     "end": 29,
+     "section": "eligibility",
+     "verified": true
+    }
+   ]
+  },
+  "relocation_willing": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  }
+ },
+ "derived": {
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "ci_cd_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "iac_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+     "start": 340,
+     "end": 400,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024",
+     "start": 990,
+     "end": 1037,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, Django, Flask, REST APIs, SQL, PostgreSQL, Git, Docker, Linux, JavaScript, HTML / CSS, Machine learning, Agile / Scrum, Excel / spreadsheets",
+     "start": 2224,
+     "end": 2372,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  }
+ },
+ "unmatched_skills": [],
+ "never_extract": [
+  "name",
+  "date_of_birth",
+  "age",
+  "gender",
+  "photo",
+  "nationality",
+  "marital_status",
+  "street_address",
+  "postal_code",
+  "health",
+  "religion",
+  "union_membership",
+  "criminal_record",
+  "graduation_year",
+  "employment_gaps"
+ ]
+}

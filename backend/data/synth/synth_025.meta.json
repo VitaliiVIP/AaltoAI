@@ -1,0 +1,17 @@
+{
+ "idx": 25,
+ "source_file": "synth_025.txt",
+ "archetype": "career_changer",
+ "style": "prose paragraphs with no bullet points at all; each role is a short narrative paragraph",
+ "seniority": "junior",
+ "omitted_skills": [],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": false,
+ "block_only_skills": [
+  "html_css"
+ ],
+ "n_roles": 3,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

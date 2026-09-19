@@ -1,0 +1,15 @@
+{
+ "idx": 29,
+ "source_file": "synth_029.txt",
+ "archetype": "qa",
+ "style": "reverse-chronological with tight bullet points under each role, classic and plain",
+ "seniority": "mid",
+ "omitted_skills": [],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": false,
+ "block_only_skills": [],
+ "n_roles": 1,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

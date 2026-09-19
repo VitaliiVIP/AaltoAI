@@ -1,0 +1,238 @@
+{
+ "cv_sha256": "6ae6083dc04daa4813413e8391020d8ba1faad68cd6318c1627f51f9a7556e5c",
+ "source_file": "synth_021.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:24:26+00:00",
+ "cv_text": "Aarav Menon\nEspoo, Finland\naarav.menon@mailbox-fi.net | +358 40 512 7788\n\nPROFILE\n\nBackend and platform engineer who works in a consulting register: understand the client's domain, map the constraints, then build the service that survives production. My work sits where Python application code meets the infrastructure it runs on — PostgreSQL data models, containerised services on Kubernetes, AWS-hosted environments, and CI/CD pipelines that make releases boring. Engagements have ranged from greenfield backend builds to stabilising existing systems with Prometheus and Grafana instrumentation, and to device-facing integration over MQTT. Comfortable operating close to the Linux layer when an issue refuses to explain itself at the application level, and equally comfortable sitting with stakeholders to agree what \"done\" means. Ph.D. in Business Administration, which shapes how I frame technical decisions in commercial terms.\n\nCORE SKILLS\n\nLanguages and data: Python, SQL, PostgreSQL\nPlatform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git\nObservability and messaging: Prometheus, Grafana, MQTT\nArchitecture: Distributed systems\n\nPROFESSIONAL EXPERIENCE\n\nSenior Software Engineer\nKoski Engineering — 2023-2026\n\n- Acted as the technical point of contact for client-facing backend workstreams, translating stakeholder requirements into Python service designs and PostgreSQL schemas that survived changing scope.\n- Owned delivery of containerised services on Kubernetes across AWS-hosted environments, including rollout strategy, resource shaping and failure-mode review with the operations group.\n- Introduced and maintained Prometheus instrumentation and alerting so that service degradation was visible to both engineering and the client side before it became an incident.\n- Built MQTT-based ingestion paths for device telemetry, handling connection churn, message ordering concerns and the downstream write path into PostgreSQL.\n- Maintained CI/CD pipelines covering build, test and image publication, with Git-based review conventions agreed across contributing teams.\n- Performed Linux-level diagnosis of performance and networking problems in Docker workloads, documenting findings for the wider engineering group.\n\nBackend Developer\nKoski Engineering — 2019-2023\n\n- Worked primarily at the Linux layer: tuning process and filesystem behaviour, scripting operational tasks, and resolving container runtime and networking issues that surfaced under production load on Kubernetes.\n- Developed Python backend services with PostgreSQL persistence, taking features from requirement conversations through to deployment in AWS environments.\n- Packaged and shipped applications as Docker images through CI/CD pipelines, reducing the manual steps between a merged Git branch and a running environment.\n- Built Grafana dashboards that gave delivery leads and client contacts a shared view of throughput, latency and error behaviour.\n- Reviewed peers' Git contributions and helped establish branching and release conventions that the team kept using.\n\nBackend Developer\nLumi Labs — 2016-2019\n\n- Led the move of several services into Docker, defining image layering, local development parity and the build conventions the team adopted for subsequent work.\n- Designed and operated AWS-hosted infrastructure for the platform, covering environment separation, managed data services and access boundaries; AWS was the centre of gravity for most of my engagement here.\n- Wrote Python services backed by PostgreSQL, with substantial hands-on SQL work on query tuning, indexing and reporting extracts.\n- Ran workloads on Kubernetes and handled the Linux-side troubleshooting that container scheduling and storage questions tended to produce.\n- Set up and extended CI/CD pipelines triggered from Git, so testing and image builds happened on every change rather than at release time.\n\nBackend Developer Trainee\nAurora Analytics Oy — 2014-2016\n\n- Focused on Kubernetes: learning cluster concepts hands-on, writing and maintaining Helm charts, and packaging internal Python services for repeatable deployment.\n- Contributed to distributed systems work, including service-to-service communication patterns and the failure handling required when components are not co-located.\n- Wrote Python code and SQL against PostgreSQL for internal data tooling, under review from senior engineers via Git.\n- Assisted with Docker image maintenance and the CI/CD configuration that built them, and spent considerable time on Linux command-line workflows.\n\nPROJECTS\n\nBlue/green deployment playground\nA self-directed DevOps sandbox for rehearsing blue/green release cut-overs, including how a PostgreSQL-backed service behaves across a switch and what Grafana panels make the cut-over legible while it is happening. Not publicly deployed; used as a personal reference environment.\n\nEDUCATION\n\nPh.D., Business Administration\n\nLANGUAGES\n\nHindi — native\nEnglish — B2\nFinnish — A1\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Senior Software Engineer",
+    "title_canonical": "backend_engineer",
+    "employer": "Koski Engineering",
+    "start_raw": "2023",
+    "end_raw": "2026",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "postgresql",
+     "kubernetes",
+     "aws",
+     "docker",
+     "prometheus",
+     "mqtt",
+     "ci_cd",
+     "git",
+     "linux",
+     "testing"
+    ],
+    "primary_skills": [
+     "python",
+     "postgresql",
+     "kubernetes",
+     "aws"
+    ],
+    "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026"
+   },
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Koski Engineering",
+    "start_raw": "2019",
+    "end_raw": "2023",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "linux",
+     "kubernetes",
+     "python",
+     "postgresql",
+     "aws",
+     "docker",
+     "ci_cd",
+     "git",
+     "grafana"
+    ],
+    "primary_skills": [
+     "linux",
+     "kubernetes",
+     "python",
+     "postgresql",
+     "aws"
+    ],
+    "quote": "Backend Developer\nKoski Engineering — 2019-2023"
+   },
+   {
+    "title_raw": "Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Lumi Labs",
+    "start_raw": "2016",
+    "end_raw": "2019",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "docker",
+     "aws",
+     "python",
+     "postgresql",
+     "sql",
+     "kubernetes",
+     "linux",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "docker",
+     "aws"
+    ],
+    "quote": "Backend Developer\nLumi Labs — 2016-2019"
+   },
+   {
+    "title_raw": "Backend Developer Trainee",
+    "title_canonical": "backend_engineer",
+    "employer": "Aurora Analytics Oy",
+    "start_raw": "2014",
+    "end_raw": "2016",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "kubernetes",
+     "helm",
+     "python",
+     "distributed_systems",
+     "sql",
+     "postgresql",
+     "git",
+     "docker",
+     "ci_cd",
+     "linux"
+    ],
+    "primary_skills": [
+     "kubernetes",
+     "helm",
+     "python",
+     "distributed_systems"
+    ],
+    "quote": "Backend Developer Trainee\nAurora Analytics Oy — 2014-2016"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Languages and data: Python, SQL, PostgreSQL"
+   },
+   {
+    "skill": "sql",
+    "quote": "Languages and data: Python, SQL, PostgreSQL"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Languages and data: Python, SQL, PostgreSQL"
+   },
+   {
+    "skill": "docker",
+    "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git"
+   },
+   {
+    "skill": "kubernetes",
+    "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git"
+   },
+   {
+    "skill": "helm",
+    "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git"
+   },
+   {
+    "skill": "aws",
+    "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git"
+   },
+   {
+    "skill": "linux",
+    "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git"
+   },
+   {
+    "skill": "git",
+    "quote": "Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git"
+   },
+   {
+    "skill": "prometheus",
+    "quote": "Observability and messaging: Prometheus, Grafana, MQTT"
+   },
+   {
+    "skill": "grafana",
+    "quote": "Observability and messaging: Prometheus, Grafana, MQTT"
+   },
+   {
+    "skill": "mqtt",
+    "quote": "Observability and messaging: Prometheus, Grafana, MQTT"
+   },
+   {
+    "skill": "distributed_systems",
+    "quote": "Architecture: Distributed systems"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Blue/green deployment playground",
+    "topics": [
+     "devops"
+    ],
+    "skills": [
+     "postgresql",
+     "grafana"
+    ],
+    "deployed": "no",
+    "quote": "A self-directed DevOps sandbox for rehearsing blue/green release cut-overs, including how a PostgreSQL-backed service behaves across a switch and what Grafana panels make the cut-over legible while it is happening. Not publicly deployed; used as a personal reference environment."
+   }
+  ],
+  "education": {
+   "highest_level": "phd",
+   "field": "business administration",
+   "in_progress": "unclear",
+   "quote": "Ph.D., Business Administration"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "hi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "B2"
+   },
+   {
+    "lang": "fi",
+    "cefr": "A1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Espoo, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

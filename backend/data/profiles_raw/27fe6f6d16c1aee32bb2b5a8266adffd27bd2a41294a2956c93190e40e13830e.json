@@ -1,0 +1,180 @@
+{
+ "cv_sha256": "27fe6f6d16c1aee32bb2b5a8266adffd27bd2a41294a2956c93190e40e13830e",
+ "source_file": "synth_012.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:22:13+00:00",
+ "cv_text": "Mateo Iriarte Sanz\nTartu, Estonia\nmateo.iriarte@mailbox-ee.net | +372 5512 8830\n\nPROFILE\nDevOps engineer with focus on Linux systems, automation of infrastructure and delivery pipelines. I like clean Git workflows and infrastructure described as code. Comfortable to work in English-speaking, distributed teams.\n\nEXPERIENCE\n\nSenior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present\n- Own the Git branching and review model for platform repositories; define merge rules, tags and release branches, so teams have one predictable way to ship.\n- Connect Git events to CI/CD pipelines, so build, test and deploy steps start automatically from a commit or a pull request.\n- Write and maintain Terraform code for AWS environments, and keep older stacks in AWS CloudFormation until migration is finished.\n- Administer Linux servers: packages, users, systemd services and hardening of base images.\n- Build Prometheus metrics and alert rules for services and for pipeline agents.\n\nJunior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023\n- Configured Nginx as reverse proxy and TLS termination in front of internal applications; tuned upstreams, timeouts and caching headers.\n- Kept Nginx configuration in Git and rolled it out through CI/CD jobs, so changes were reviewed before they reach a server.\n- Provisioned AWS resources with Terraform and fixed drift between code and real state.\n- Maintained Linux hosts and helped with on-call routines.\n- Prepared Grafana dashboards for traffic and error rates of proxied services.\n\nPROJECTS\n\nSelf-hosted CI runner setup\n- Own runner environment for builds, with Nginx in front of the runner web interface and Prometheus scraping runner health metrics. Not deployed to production.\n\nTerraform modules for a three-tier app\n- Reusable modules that describe web, application and database layers of an app. Written for study of module structure and variables; not deployed.\n\nSKILLS\nAWS, AWS CloudFormation, Terraform, CI/CD, Git, Linux, Nginx, Prometheus, Grafana\n\nCERTIFICATIONS\nCertified Kubernetes Administrator (CKA)\n\nEDUCATION\nB.Sc. in Communications\n\nLANGUAGES\nSpanish – native\nEnglish – C1\nFinnish – A2\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Senior DevOps Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Tampere Tech Group",
+    "start_raw": "Jan 2023",
+    "end_raw": "present",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "git",
+     "ci_cd",
+     "terraform",
+     "aws",
+     "cloudformation",
+     "linux",
+     "prometheus"
+    ],
+    "primary_skills": [
+     "git",
+     "ci_cd"
+    ],
+    "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present"
+   },
+   {
+    "title_raw": "Junior DevOps Engineer",
+    "title_canonical": "devops_engineer",
+    "employer": "Vantaa Systems",
+    "start_raw": "May 2022",
+    "end_raw": "Jan 2023",
+    "is_backend_role": false,
+    "skills_mentioned": [
+     "nginx",
+     "git",
+     "ci_cd",
+     "aws",
+     "terraform",
+     "linux",
+     "grafana"
+    ],
+    "primary_skills": [
+     "nginx",
+     "git",
+     "ci_cd"
+    ],
+    "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "aws",
+    "quote": "AWS, AWS CloudFormation, Terraform, CI/CD, Git, Linux, Nginx, Prometheus, Grafana"
+   },
+   {
+    "skill": "cloudformation",
+    "quote": "AWS CloudFormation"
+   },
+   {
+    "skill": "terraform",
+    "quote": "Terraform"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "CI/CD"
+   },
+   {
+    "skill": "git",
+    "quote": "Git"
+   },
+   {
+    "skill": "linux",
+    "quote": "Linux"
+   },
+   {
+    "skill": "nginx",
+    "quote": "Nginx"
+   },
+   {
+    "skill": "prometheus",
+    "quote": "Prometheus"
+   },
+   {
+    "skill": "grafana",
+    "quote": "Grafana"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Self-hosted CI runner setup",
+    "topics": [
+     "devops",
+     "infrastructure"
+    ],
+    "skills": [
+     "nginx",
+     "prometheus",
+     "ci_cd"
+    ],
+    "deployed": "no",
+    "quote": "Self-hosted CI runner setup\n- Own runner environment for builds, with Nginx in front of the runner web interface and Prometheus scraping runner health metrics. Not deployed to production."
+   },
+   {
+    "title": "Terraform modules for a three-tier app",
+    "topics": [
+     "infrastructure"
+    ],
+    "skills": [
+     "terraform"
+    ],
+    "deployed": "no",
+    "quote": "Terraform modules for a three-tier app\n- Reusable modules that describe web, application and database layers of an app. Written for study of module structure and variables; not deployed."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "communications",
+   "in_progress": "unclear",
+   "quote": "B.Sc. in Communications"
+  },
+  "certifications": [
+   {
+    "cert_id": "certified_kubernetes_administrator",
+    "issuer": "",
+    "issued_raw": "",
+    "quote": "Certified Kubernetes Administrator (CKA)"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "es",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   },
+   {
+    "lang": "fi",
+    "cefr": "A2"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "EE",
+   "relocation_willing": "unclear",
+   "quote": "Tartu, Estonia"
+  },
+  "unmatched_skills": [
+   "systemd",
+   "TLS termination"
+  ],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

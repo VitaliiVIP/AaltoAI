@@ -1,0 +1,312 @@
+{
+ "cv_sha256": "430b0cf394b664b9f94209548dc579d4e1915b07904b24b2a7fc4aefdef667c0",
+ "source_file": "synth_027.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:26:04+00:00",
+ "cv_text": "Eero Valtanen\n\nTartu, Estonia\neero.valtanen@mailbox-ee.net | +372 5512 8830\n\n---\nSUMMARY\n\nBackend engineer working with Python, Go and Java on containerised services in AWS. Comfortable designing REST APIs and gRPC interfaces, running workloads on Kubernetes, and keeping CI/CD pipelines and Terraform-managed infrastructure in good order.\n\n---\nSKILLS\n\n- Languages: Python, Go, Java\n- Services & interfaces: REST APIs, gRPC, Apache Kafka, Redis\n- Platform: Kubernetes, Helm, Linux, AWS, Terraform\n- Delivery: CI/CD, Git\n\n---\nEXPERIENCE\n\nBackend Tech Lead — Ruska Systems\nMar 2025 – Aug 2026\n\n- Led backend design and delivery for Python, Go and Java services.\n- Defined and documented REST API contracts shared across client and partner integrations, including versioning and deprecation practice.\n- Owned CI/CD pipelines end to end: build, test, container image promotion and automated deployment to Kubernetes.\n- Managed AWS infrastructure as code with Terraform, keeping environments reproducible.\n- Introduced gRPC for latency-sensitive internal service calls.\n- Ran Git branching and review standards; maintained Linux-based runtime tooling.\n\nBackend Tech Lead — Sisu Software Oy\nOct 2021 – Mar 2025\n\n- Drove adoption of gRPC for service-to-service communication, defining protobuf schemas and rollout patterns alongside existing REST APIs.\n- Guided a backend team building Python and Go services deployed to Kubernetes on AWS.\n- Used Redis for caching and short-lived state to cut repeated downstream calls.\n- Maintained CI/CD pipelines and release automation; reviewed changes in Git.\n- Handled Linux-level debugging, resource tuning and on-call escalations.\n\nSoftware Engineer (Backend) — Nokka Oy\nNov 2020 – Sep 2021\n\n- Built and extended REST APIs in Python and Go, focusing on clear resource modelling and predictable error handling.\n- Packaged services with Helm for repeatable Kubernetes deployments.\n- Extended CI/CD workflows to cover integration tests before promotion.\n- Operated services on AWS and troubleshot issues on Linux hosts.\n\nJunior Backend Developer — Koski Engineering\nJul 2019 – Nov 2020\n\n- Worked hands-on with Kubernetes: manifests, probes, resource limits and rolling updates for backend workloads.\n- Implemented REST API endpoints and gRPC handlers in Python.\n- Contributed to CI/CD pipeline steps and deployment scripts.\n- Supported AWS-hosted Linux environments and everyday Git workflow.\n\nFreelance Backend Developer — Independent contractor\nFeb 2018 – Dec 2018\n\n- Delivered Python backend work for small clients, from initial scoping to handover.\n- Kept all client work under Git with readable history and documented setup steps.\n\nBackend Developer Trainee — Sisu Software Oy\nMay 2017 – May 2019\n\n- Worked with Apache Kafka producers and consumers for event-driven data flows.\n- Assisted in building REST API endpoints in Python.\n- Packaged and deployed applications to Kubernetes using Helm charts.\n- Ran tasks on Linux, contributed to CI/CD job configuration and used Git daily.\n\n---\nPROJECTS\n\nTerraform modules for a three-tier app\nReusable Terraform modules provisioning AWS infrastructure for a three-tier application layout.\n\nJob-board REST API\nBackend service exposing a REST API for job listings and applications.\n\nRecipe API with authentication\nPython backend providing recipe resources behind authenticated access.\n\n---\nEDUCATION\n\nB.Sc., Communications\n\n---\nCERTIFICATIONS\n\nCertified Kubernetes Application Developer (CKAD)\n\n---\nLANGUAGES\n\nFinnish — native\nEnglish — C1\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Backend Tech Lead",
+    "title_canonical": "backend_engineer",
+    "employer": "Ruska Systems",
+    "start_raw": "Mar 2025",
+    "end_raw": "Aug 2026",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "go",
+     "java",
+     "rest_api",
+     "ci_cd",
+     "kubernetes",
+     "aws",
+     "terraform",
+     "grpc",
+     "git",
+     "linux"
+    ],
+    "primary_skills": [
+     "python",
+     "go",
+     "java",
+     "rest_api"
+    ],
+    "quote": "Backend Tech Lead — Ruska Systems"
+   },
+   {
+    "title_raw": "Backend Tech Lead",
+    "title_canonical": "backend_engineer",
+    "employer": "Sisu Software Oy",
+    "start_raw": "Oct 2021",
+    "end_raw": "Mar 2025",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "grpc",
+     "rest_api",
+     "python",
+     "go",
+     "kubernetes",
+     "aws",
+     "redis",
+     "ci_cd",
+     "git",
+     "linux"
+    ],
+    "primary_skills": [
+     "grpc",
+     "rest_api",
+     "python",
+     "go",
+     "kubernetes",
+     "aws"
+    ],
+    "quote": "Backend Tech Lead — Sisu Software Oy"
+   },
+   {
+    "title_raw": "Software Engineer (Backend)",
+    "title_canonical": "backend_engineer",
+    "employer": "Nokka Oy",
+    "start_raw": "Nov 2020",
+    "end_raw": "Sep 2021",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "rest_api",
+     "python",
+     "go",
+     "helm",
+     "kubernetes",
+     "ci_cd",
+     "testing",
+     "aws",
+     "linux"
+    ],
+    "primary_skills": [
+     "rest_api",
+     "python",
+     "go",
+     "helm",
+     "kubernetes"
+    ],
+    "quote": "Software Engineer (Backend) — Nokka Oy"
+   },
+   {
+    "title_raw": "Junior Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Koski Engineering",
+    "start_raw": "Jul 2019",
+    "end_raw": "Nov 2020",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "kubernetes",
+     "rest_api",
+     "grpc",
+     "python",
+     "ci_cd",
+     "aws",
+     "linux",
+     "git"
+    ],
+    "primary_skills": [
+     "kubernetes",
+     "rest_api",
+     "grpc",
+     "python"
+    ],
+    "quote": "Junior Backend Developer — Koski Engineering"
+   },
+   {
+    "title_raw": "Freelance Backend Developer",
+    "title_canonical": "backend_engineer",
+    "employer": "Independent contractor",
+    "start_raw": "Feb 2018",
+    "end_raw": "Dec 2018",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "python",
+     "git"
+    ],
+    "primary_skills": [
+     "python",
+     "git"
+    ],
+    "quote": "Freelance Backend Developer — Independent contractor"
+   },
+   {
+    "title_raw": "Backend Developer Trainee",
+    "title_canonical": "backend_engineer",
+    "employer": "Sisu Software Oy",
+    "start_raw": "May 2017",
+    "end_raw": "May 2019",
+    "is_backend_role": true,
+    "skills_mentioned": [
+     "kafka",
+     "event_driven",
+     "rest_api",
+     "python",
+     "kubernetes",
+     "helm",
+     "linux",
+     "ci_cd",
+     "git"
+    ],
+    "primary_skills": [
+     "kafka",
+     "event_driven",
+     "rest_api",
+     "python"
+    ],
+    "quote": "Backend Developer Trainee — Sisu Software Oy"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "- Languages: Python, Go, Java"
+   },
+   {
+    "skill": "go",
+    "quote": "- Languages: Python, Go, Java"
+   },
+   {
+    "skill": "java",
+    "quote": "- Languages: Python, Go, Java"
+   },
+   {
+    "skill": "rest_api",
+    "quote": "- Services & interfaces: REST APIs, gRPC, Apache Kafka, Redis"
+   },
+   {
+    "skill": "grpc",
+    "quote": "- Services & interfaces: REST APIs, gRPC, Apache Kafka, Redis"
+   },
+   {
+    "skill": "kafka",
+    "quote": "- Services & interfaces: REST APIs, gRPC, Apache Kafka, Redis"
+   },
+   {
+    "skill": "redis",
+    "quote": "- Services & interfaces: REST APIs, gRPC, Apache Kafka, Redis"
+   },
+   {
+    "skill": "kubernetes",
+    "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform"
+   },
+   {
+    "skill": "helm",
+    "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform"
+   },
+   {
+    "skill": "linux",
+    "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform"
+   },
+   {
+    "skill": "aws",
+    "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform"
+   },
+   {
+    "skill": "terraform",
+    "quote": "- Platform: Kubernetes, Helm, Linux, AWS, Terraform"
+   },
+   {
+    "skill": "ci_cd",
+    "quote": "- Delivery: CI/CD, Git"
+   },
+   {
+    "skill": "git",
+    "quote": "- Delivery: CI/CD, Git"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Terraform modules for a three-tier app",
+    "topics": [
+     "infrastructure",
+     "devops"
+    ],
+    "skills": [
+     "terraform",
+     "aws"
+    ],
+    "deployed": "unclear",
+    "quote": "Terraform modules for a three-tier app\nReusable Terraform modules provisioning AWS infrastructure for a three-tier application layout."
+   },
+   {
+    "title": "Job-board REST API",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "rest_api"
+    ],
+    "deployed": "unclear",
+    "quote": "Job-board REST API\nBackend service exposing a REST API for job listings and applications."
+   },
+   {
+    "title": "Recipe API with authentication",
+    "topics": [
+     "backend"
+    ],
+    "skills": [
+     "python"
+    ],
+    "deployed": "unclear",
+    "quote": "Recipe API with authentication\nPython backend providing recipe resources behind authenticated access."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "communications",
+   "in_progress": "unclear",
+   "quote": "B.Sc., Communications"
+  },
+  "certifications": [
+   {
+    "cert_id": "certified_kubernetes_application_developer",
+    "issuer": "",
+    "issued_raw": "",
+    "quote": "Certified Kubernetes Application Developer (CKAD)"
+   }
+  ],
+  "languages": [
+   {
+    "lang": "fi",
+    "cefr": ""
+   },
+   {
+    "lang": "en",
+    "cefr": "C1"
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "EE",
+   "relocation_willing": "unclear",
+   "quote": "Tartu, Estonia"
+  },
+  "unmatched_skills": [
+   "protobuf"
+  ],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

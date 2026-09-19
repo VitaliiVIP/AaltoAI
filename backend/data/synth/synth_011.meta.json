@@ -1,0 +1,19 @@
+{
+ "idx": 11,
+ "source_file": "synth_011.txt",
+ "archetype": "junior_backend",
+ "style": "Finnish-English mix: Finnish section headings (Ty\u00f6kokemus, Koulutus, Taidot, Projektit) with English body text",
+ "seniority": "junior",
+ "omitted_skills": [
+  "angular",
+  "django",
+  "rest_api"
+ ],
+ "overlap": false,
+ "year_only_dates": false,
+ "under_report": true,
+ "block_only_skills": [],
+ "n_roles": 2,
+ "leaked_skills": [],
+ "duration_phrases": []
+}

@@ -1,0 +1,67 @@
+Aarav Menon
+Espoo, Finland
+aarav.menon@mailbox-fi.net | +358 40 512 7788
+
+PROFILE
+
+Backend and platform engineer who works in a consulting register: understand the client's domain, map the constraints, then build the service that survives production. My work sits where Python application code meets the infrastructure it runs on — PostgreSQL data models, containerised services on Kubernetes, AWS-hosted environments, and CI/CD pipelines that make releases boring. Engagements have ranged from greenfield backend builds to stabilising existing systems with Prometheus and Grafana instrumentation, and to device-facing integration over MQTT. Comfortable operating close to the Linux layer when an issue refuses to explain itself at the application level, and equally comfortable sitting with stakeholders to agree what "done" means. Ph.D. in Business Administration, which shapes how I frame technical decisions in commercial terms.
+
+CORE SKILLS
+
+Languages and data: Python, SQL, PostgreSQL
+Platform and delivery: Docker, Kubernetes, Helm, AWS, CI/CD, Linux, Git
+Observability and messaging: Prometheus, Grafana, MQTT
+Architecture: Distributed systems
+
+PROFESSIONAL EXPERIENCE
+
+Senior Software Engineer
+Koski Engineering — 2023-2026
+
+- Acted as the technical point of contact for client-facing backend workstreams, translating stakeholder requirements into Python service designs and PostgreSQL schemas that survived changing scope.
+- Owned delivery of containerised services on Kubernetes across AWS-hosted environments, including rollout strategy, resource shaping and failure-mode review with the operations group.
+- Introduced and maintained Prometheus instrumentation and alerting so that service degradation was visible to both engineering and the client side before it became an incident.
+- Built MQTT-based ingestion paths for device telemetry, handling connection churn, message ordering concerns and the downstream write path into PostgreSQL.
+- Maintained CI/CD pipelines covering build, test and image publication, with Git-based review conventions agreed across contributing teams.
+- Performed Linux-level diagnosis of performance and networking problems in Docker workloads, documenting findings for the wider engineering group.
+
+Backend Developer
+Koski Engineering — 2019-2023
+
+- Worked primarily at the Linux layer: tuning process and filesystem behaviour, scripting operational tasks, and resolving container runtime and networking issues that surfaced under production load on Kubernetes.
+- Developed Python backend services with PostgreSQL persistence, taking features from requirement conversations through to deployment in AWS environments.
+- Packaged and shipped applications as Docker images through CI/CD pipelines, reducing the manual steps between a merged Git branch and a running environment.
+- Built Grafana dashboards that gave delivery leads and client contacts a shared view of throughput, latency and error behaviour.
+- Reviewed peers' Git contributions and helped establish branching and release conventions that the team kept using.
+
+Backend Developer
+Lumi Labs — 2016-2019
+
+- Led the move of several services into Docker, defining image layering, local development parity and the build conventions the team adopted for subsequent work.
+- Designed and operated AWS-hosted infrastructure for the platform, covering environment separation, managed data services and access boundaries; AWS was the centre of gravity for most of my engagement here.
+- Wrote Python services backed by PostgreSQL, with substantial hands-on SQL work on query tuning, indexing and reporting extracts.
+- Ran workloads on Kubernetes and handled the Linux-side troubleshooting that container scheduling and storage questions tended to produce.
+- Set up and extended CI/CD pipelines triggered from Git, so testing and image builds happened on every change rather than at release time.
+
+Backend Developer Trainee
+Aurora Analytics Oy — 2014-2016
+
+- Focused on Kubernetes: learning cluster concepts hands-on, writing and maintaining Helm charts, and packaging internal Python services for repeatable deployment.
+- Contributed to distributed systems work, including service-to-service communication patterns and the failure handling required when components are not co-located.
+- Wrote Python code and SQL against PostgreSQL for internal data tooling, under review from senior engineers via Git.
+- Assisted with Docker image maintenance and the CI/CD configuration that built them, and spent considerable time on Linux command-line workflows.
+
+PROJECTS
+
+Blue/green deployment playground
+A self-directed DevOps sandbox for rehearsing blue/green release cut-overs, including how a PostgreSQL-backed service behaves across a switch and what Grafana panels make the cut-over legible while it is happening. Not publicly deployed; used as a personal reference environment.
+
+EDUCATION
+
+Ph.D., Business Administration
+
+LANGUAGES
+
+Hindi — native
+English — B2
+Finnish — A1

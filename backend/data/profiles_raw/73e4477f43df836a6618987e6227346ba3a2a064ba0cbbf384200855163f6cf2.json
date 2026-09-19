@@ -1,0 +1,126 @@
+{
+ "cv_sha256": "73e4477f43df836a6618987e6227346ba3a2a064ba0cbbf384200855163f6cf2",
+ "source_file": "synth_028.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v1",
+ "taxonomy_version": "swe-core-0.1",
+ "extracted_at": "2026-09-19T14:26:14+00:00",
+ "cv_text": "Marek Ilvonen\nHelsinki, Finland\nmarek.ilvonen@examplemail.fi | +358 40 555 0172\n\nPROFILE\nCommunications graduate working across customer-facing and laboratory roles, with a consistent focus on iterative, team-based delivery using Agile and Scrum practices.\n\nSKILL AREAS\n\nAgile / Scrum\n- Worked within Scrum teams, taking part in sprint planning, daily stand-ups, reviews and retrospectives.\n- Maintained and refined backlog items, breaking larger requests into small, deliverable increments.\n- Used sprint boards to make work visible and to flag blockers early to the team.\n- Adapted Agile ceremonies to smaller, non-software teams, including laboratory workflow planning.\n- Supported retrospective follow-up actions and helped the team track whether agreed changes stuck.\n\nHTML / CSS\n- Built and edited simple page layouts and styling, structuring content with semantic markup and stylesheets.\n\nCustomer Success\n- Handled customer queries and account follow-up, feeding recurring issues back into sprint planning as prioritised work items.\n\nLaboratory Work\n- Carried out routine sample handling and technical procedures, coordinating scheduling and task allocation through Scrum-style boards.\n\nPROJECTS\nSpreadsheet automation for a small shop\n- Automated repetitive spreadsheet tasks for a small retail business, planned and delivered in short iterations with regular feedback from the owner. Not deployed publicly.\n\nEMPLOYMENT HISTORY\nCustomer Success Specialist, Baltic Health Services — May 2025 – Jul 2026\nLaboratory Technician, Suomi Retail Group — Dec 2021 – May 2025\nCustomer Success Specialist, Metsa Logistics Oy — Jan 2020 – Dec 2021\nLaboratory Technician, Vihrea Puutarha Oy — Aug 2015 – Dec 2019\n\nEDUCATION\nB.Sc. Communications\n\nLANGUAGES\nEnglish — C2\nRussian — native\n",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Customer Success Specialist",
+    "title_canonical": "non_software",
+    "employer": "Baltic Health Services",
+    "start_raw": "May 2025",
+    "end_raw": "Jul 2026",
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "quote": "Customer Success Specialist, Baltic Health Services — May 2025 – Jul 2026"
+   },
+   {
+    "title_raw": "Laboratory Technician",
+    "title_canonical": "non_software",
+    "employer": "Suomi Retail Group",
+    "start_raw": "Dec 2021",
+    "end_raw": "May 2025",
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "quote": "Laboratory Technician, Suomi Retail Group — Dec 2021 – May 2025"
+   },
+   {
+    "title_raw": "Customer Success Specialist",
+    "title_canonical": "non_software",
+    "employer": "Metsa Logistics Oy",
+    "start_raw": "Jan 2020",
+    "end_raw": "Dec 2021",
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "quote": "Customer Success Specialist, Metsa Logistics Oy — Jan 2020 – Dec 2021"
+   },
+   {
+    "title_raw": "Laboratory Technician",
+    "title_canonical": "non_software",
+    "employer": "Vihrea Puutarha Oy",
+    "start_raw": "Aug 2015",
+    "end_raw": "Dec 2019",
+    "is_backend_role": false,
+    "skills_mentioned": [],
+    "primary_skills": [],
+    "quote": "Laboratory Technician, Vihrea Puutarha Oy — Aug 2015 – Dec 2019"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "agile",
+    "quote": "Agile / Scrum"
+   },
+   {
+    "skill": "html_css",
+    "quote": "HTML / CSS"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Spreadsheet automation for a small shop",
+    "topics": [
+     "other"
+    ],
+    "skills": [
+     "excel"
+    ],
+    "deployed": "no",
+    "quote": "Spreadsheet automation for a small shop\n- Automated repetitive spreadsheet tasks for a small retail business, planned and delivered in short iterations with regular feedback from the owner. Not deployed publicly."
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "communications",
+   "in_progress": "unclear",
+   "quote": "B.Sc. Communications"
+  },
+  "certifications": [],
+  "languages": [
+   {
+    "lang": "en",
+    "cefr": "C2"
+   },
+   {
+    "lang": "ru",
+    "cefr": ""
+   }
+  ],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Helsinki, Finland"
+  },
+  "unmatched_skills": [
+   "Customer Success",
+   "Laboratory Work"
+  ],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}
