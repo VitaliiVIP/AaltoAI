@@ -302,3 +302,14 @@ export interface AuditSummary {
   count: number;
   first_bad_index: number | null;
 }
+
+export interface SendEmailRequest {
+  to: string;
+  subject: string;
+  body: string;
+}
+
+export interface SendEmailResult {
+  ok: boolean;
+  web: string;
+}

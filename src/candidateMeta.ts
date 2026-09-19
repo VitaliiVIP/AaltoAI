@@ -9,6 +9,12 @@
 
 const NAME_OVERRIDES: Record<string, string> = {
   cv10_tomas_hidalgo: "Tomás Hidalgo",
+  cv7_daniel_kwan: "Daniel Tuovio",
+};
+
+/** Real inboxes for demoing the send flow — everyone else stays synthetic. */
+const EMAIL_OVERRIDES: Record<string, string> = {
+  cv7_daniel_kwan: "notmicrosoft@email.com",
 };
 
 /** `cv4_aisha_rahman` -> `Aisha Rahman`. Works for any CV dropped in later. */
@@ -28,9 +34,16 @@ export function firstNameOf(candidateId: string): string {
   return deriveName(candidateId).split(" ")[0];
 }
 
-/** Synthetic — no contact details are ever extracted from a CV. */
+/** Synthetic by default — no contact details are ever extracted from a CV. */
 export function emailFor(candidateId: string): string {
-  return `${deriveName(candidateId).toLowerCase().replace(/\s+/g, ".")}@example.com`;
+  return (
+    EMAIL_OVERRIDES[candidateId] ??
+    `${deriveName(candidateId).toLowerCase().replace(/\s+/g, ".")}@example.com`
+  );
+}
+
+export function isSyntheticEmail(candidateId: string): boolean {
+  return !(candidateId in EMAIL_OVERRIDES);
 }
 
 export interface CandidateAssets {

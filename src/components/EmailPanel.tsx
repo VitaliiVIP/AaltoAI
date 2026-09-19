@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { ScreenResult } from "../apiTypes";
 import type { EmailStatus } from "../types";
-import { deriveName, emailFor } from "../candidateMeta";
+import { deriveName, emailFor, isSyntheticEmail } from "../candidateMeta";
 import { buildDraft, declineDraft } from "../present";
 
 interface EmailPanelProps {
@@ -9,8 +9,12 @@ interface EmailPanelProps {
   jobTitle: string;
   status?: EmailStatus;
   polishing: boolean;
+  sending: boolean;
+  sendError: string | null;
+  mailboxUrl: string | null;
   onPolish: () => void;
   onSend: (id: string) => void;
+  onSendEmail: (id: string, to: string, subject: string, body: string) => void;
   onDecline: (id: string) => void;
 }
 
@@ -19,11 +23,16 @@ export default function EmailPanel({
   jobTitle,
   status,
   polishing,
+  sending,
+  sendError,
+  mailboxUrl,
   onPolish,
   onSend,
+  onSendEmail,
   onDecline,
 }: EmailPanelProps) {
   const [declining, setDeclining] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const candidateId = result?.candidate_id ?? null;
 
@@ -47,7 +56,7 @@ export default function EmailPanel({
 
   const name = deriveName(candidateId);
   const passed = result.decision.passed;
-  const disabled = Boolean(status);
+  const disabled = Boolean(status) || sending;
   const explanation = result.explanation;
 
   // Accepted directly (never went through the decline draft) — no email was
@@ -102,6 +111,14 @@ export default function EmailPanel({
     }
   }
 
+  function handleSend() {
+    if (!candidateId) return;
+    // Read the live textarea value, not the original draft — an edit the
+    // recruiter made here is what actually goes out over SMTP.
+    const body = textareaRef.current?.value ?? draft.body;
+    onSendEmail(candidateId, emailFor(candidateId), draft.subject, body);
+  }
+
   return (
     <section className="col col-email" aria-label="Candidate email">
       <div className="col-header">
@@ -111,7 +128,9 @@ export default function EmailPanel({
       <div className="email-body">
         <div className="email-meta">
           To: {emailFor(candidateId)}
-          <span className="synthetic-note"> (synthetic — no contact data is extracted)</span>
+          {isSyntheticEmail(candidateId) && (
+            <span className="synthetic-note"> (synthetic — no contact data is extracted)</span>
+          )}
         </div>
         <div className="email-subject">{draft.subject}</div>
 
@@ -140,25 +159,35 @@ export default function EmailPanel({
             uncontrolled textarea instead of silently keeping the old draft. */}
         <textarea
           key={`${candidateId}|${result.decision_id}|${passed && declining ? "decline" : "main"}`}
+          ref={textareaRef}
           className="email-textarea"
           defaultValue={draft.body}
           disabled={disabled}
         />
 
         <div className="email-actions">
-          <button
-            className="btn btn-primary"
-            disabled={disabled}
-            onClick={() => onSend(candidateId)}
-          >
-            Send
+          <button className="btn btn-primary" disabled={disabled} onClick={handleSend}>
+            {sending ? "Sending…" : "Send"}
           </button>
           <button className="btn btn-secondary" disabled={disabled} onClick={handleSecondary}>
             {secondaryLabel}
           </button>
         </div>
 
-        {status === "sent" && <p className="email-sent-note">✓ Email sent to {name}</p>}
+        {sendError && <p className="email-declined-note send-error">✗ {sendError}</p>}
+        {status === "sent" && (
+          <p className="email-sent-note">
+            ✓ Email sent to {name}
+            {mailboxUrl && (
+              <>
+                {" — "}
+                <a href={mailboxUrl} target="_blank" rel="noreferrer" className="link-btn">
+                  open test inbox
+                </a>
+              </>
+            )}
+          </p>
+        )}
         {status === "declined" && (
           <p className="email-declined-note">Kept for further review — no email sent</p>
         )}

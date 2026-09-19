@@ -10,8 +10,9 @@ from fastapi.staticfiles import StaticFiles
 
 from .. import config, pipeline
 from ..audit.log import get_record, read_records, verify_chain
+from ..emailer import EmailError, send_email
 from ..loaders import list_jobs, load_job, manifest_for_job
-from ..schemas import RestateRequest, ScreenRequest, ScreenResult
+from ..schemas import RestateRequest, ScreenRequest, ScreenResult, SendEmailRequest, SendEmailResult
 
 STATIC = Path(__file__).parent / "static"
 
@@ -156,6 +157,18 @@ def restate(req: RestateRequest, parent_decision_id: str | None = None, explain:
         return pipeline.restate(req, explain=explain, parent_decision_id=parent_decision_id)
     except (KeyError, ValueError) as e:
         raise HTTPException(400, str(e)) from e
+
+
+@app.post("/send-email")
+def send_email_route(req: SendEmailRequest) -> SendEmailResult:
+    """Real SMTP send — see recourse_screen/emailer.py. Defaults to a disposable
+    Ethereal Email sandbox, so nothing here ever reaches a real inbox unless
+    SMTP_* in backend/.env is pointed at a real provider."""
+    try:
+        result = send_email(req.to, req.subject, req.body)
+    except EmailError as e:
+        raise HTTPException(502, str(e)) from e
+    return SendEmailResult(**result)
 
 
 @app.get("/audit")

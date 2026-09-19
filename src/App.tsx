@@ -6,6 +6,7 @@ import EmailPanel from "./components/EmailPanel";
 import SettingsDrawer from "./components/SettingsDrawer";
 import AcceptedDrawer from "./components/AcceptedDrawer";
 import Toast from "./components/Toast";
+import { postSendEmail } from "./api";
 import { deriveName } from "./candidateMeta";
 import type { EmailStatus } from "./types";
 import { useScreening } from "./useScreening";
@@ -16,6 +17,9 @@ export default function App() {
   const [emailStatus, setEmailStatus] = useState<Record<string, EmailStatus>>({});
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [acceptedOpen, setAcceptedOpen] = useState(false);
+  const [sendingId, setSendingId] = useState<string | null>(null);
+  const [sendError, setSendError] = useState<string | null>(null);
+  const [mailboxUrl, setMailboxUrl] = useState<string | null>(null);
   const { message, visible, showToast } = useToast();
 
   // Accepted = cleared the bar AND actually accepted (not just "sent" from
@@ -30,6 +34,24 @@ export default function App() {
   function handleSend(id: string) {
     setEmailStatus((prev) => ({ ...prev, [id]: "sent" }));
     showToast(`Email sent to ${deriveName(id)}`);
+  }
+
+  // Real SMTP send (backend/recourse_screen/emailer.py) — defaults to a
+  // disposable Ethereal Email test mailbox, so this actually goes out over
+  // SMTP but never reaches a real inbox unless the backend is reconfigured.
+  async function handleSendEmail(id: string, to: string, subject: string, body: string) {
+    setSendingId(id);
+    setSendError(null);
+    try {
+      const result = await postSendEmail({ to, subject, body });
+      setEmailStatus((prev) => ({ ...prev, [id]: "sent" }));
+      setMailboxUrl(result.web);
+      showToast(`Email sent to ${deriveName(id)} — check the test inbox`);
+    } catch (e: unknown) {
+      setSendError(e instanceof Error ? e.message : "Failed to send email");
+    } finally {
+      setSendingId(null);
+    }
   }
 
   function handleDecline(id: string) {
@@ -84,7 +106,10 @@ export default function App() {
           phase={s.poolPhase}
           error={s.poolError}
           uploading={s.uploading}
-          onSelect={s.setSelectedId}
+          onSelect={(id) => {
+            setSendError(null); // don't let a stale error bleed onto the next candidate
+            s.setSelectedId(id);
+          }}
           onRetry={() => void s.refreshPool()}
           onUpload={(f) => void handleUpload(f)}
         />
@@ -101,8 +126,12 @@ export default function App() {
           jobTitle={s.job?.title ?? ""}
           status={s.selectedId ? emailStatus[s.selectedId] : undefined}
           polishing={s.screenPhase === "explaining"}
+          sending={sendingId !== null && sendingId === s.selectedId}
+          sendError={sendError}
+          mailboxUrl={mailboxUrl}
           onPolish={() => void s.polishExplanation()}
           onSend={handleSend}
+          onSendEmail={(id, to, subject, body) => void handleSendEmail(id, to, subject, body)}
           onDecline={handleDecline}
         />
       </main>

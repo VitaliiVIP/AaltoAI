@@ -6,6 +6,8 @@ import type {
   RestateRequest,
   ScreenRequest,
   ScreenResult,
+  SendEmailRequest,
+  SendEmailResult,
 } from "./apiTypes";
 
 // Vite proxies /api -> http://127.0.0.1:8000 (see vite.config.ts), so the
@@ -104,6 +106,16 @@ export function postExtract(
 
 export function getAudit(signal?: AbortSignal): Promise<AuditSummary> {
   return req<AuditSummary>("/audit", { signal });
+}
+
+/** Real SMTP send — see backend/recourse_screen/emailer.py. Defaults to a
+ * disposable Ethereal Email sandbox, so nothing reaches a real inbox unless
+ * the backend's SMTP_* env vars are pointed at a real provider. */
+export function postSendEmail(
+  body: SendEmailRequest,
+  signal?: AbortSignal,
+): Promise<SendEmailResult> {
+  return postJson<SendEmailResult>("/send-email", body, signal);
 }
 
 export const auditUrl = (decisionId: string) =>

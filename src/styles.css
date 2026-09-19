@@ -764,6 +764,10 @@ h1, h2, h3, p { margin: 0; }
   font-weight: 600;
 }
 
+.send-error {
+  color: var(--red);
+}
+
 /* ---------------- Settings drawer ---------------- */
 
 .overlay {

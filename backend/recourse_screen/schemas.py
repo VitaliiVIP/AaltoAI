@@ -551,3 +551,14 @@ class AuditRecord(BaseModel):
     prev_hash: str
     hash: str = ""
     payload: dict[str, Any]
+
+
+class SendEmailRequest(BaseModel):
+    to: str
+    subject: str
+    body: str
+
+
+class SendEmailResult(BaseModel):
+    ok: bool
+    web: str
