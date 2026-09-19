@@ -29,7 +29,7 @@ Add a CV: drop a PDF into `../frontend/public/assets/cvs/` and run
 `pdftotext -layout file.pdf data/cv_text/file.txt`, then re-run the extraction script (only new files
 call the API; profiles are cached by content hash).
 
-## API (consumed by the React frontend in `../src`)
+## API (consumed by the React frontend in `../frontend/src`)
 
 | Endpoint | Purpose |
 |---|---|

@@ -19,7 +19,7 @@ call the model, and everything else runs on the deterministic templates.
 
 Two images, published to GHCR by `.github/workflows/publish.yml` on every push to `main`:
 
-- `recourse-web` — `Dockerfile` at the root: Vite build served by nginx
+- `recourse-web` — `frontend/Dockerfile`: Vite build served by nginx
 - `recourse-api` — `backend/Dockerfile`: uvicorn on :8000, `backend/data` on a volume
 
 They are wired up as `recourse.ilia.fi` in the separate `vps_deployment` repo

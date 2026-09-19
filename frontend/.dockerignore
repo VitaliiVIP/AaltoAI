@@ -1,0 +1,7 @@
+# Build context is frontend/ — the image runs its own `npm ci`, so the local
+# install and any previous build output only slow the context upload down.
+node_modules
+dist
+.vite
+*.local
+*.tsbuildinfo

@@ -18,8 +18,8 @@ jobs:
       matrix:
         include:
           - name: recourse-web
-            context: .
-            dockerfile: Dockerfile
+            context: frontend
+            dockerfile: frontend/Dockerfile
           - name: recourse-api
             context: backend
             dockerfile: backend/Dockerfile
