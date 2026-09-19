@@ -1,6 +1,7 @@
 import type {
   AuditSummary,
   Catalogue,
+  CvParse,
   JobDraft,
   JobSpec,
   JobSummary,
@@ -72,6 +73,16 @@ export function getCandidates(
   const q = new URLSearchParams({ job: p.job, mode: p.mode });
   if (p.N != null) q.set("N", String(p.N));
   return req<PoolRow[]>(`/candidates?${q}`, { signal });
+}
+
+/** The stored parse: CV text plus every attribute read out of it. No LLM call. */
+export function getCvParse(
+  candidateId: string,
+  job: string,
+  signal?: AbortSignal,
+): Promise<CvParse> {
+  const q = new URLSearchParams({ job });
+  return req<CvParse>(`/candidates/${encodeURIComponent(candidateId)}/cv?${q}`, { signal });
 }
 
 export function postScreen(body: ScreenRequest, signal?: AbortSignal): Promise<ScreenResult> {

@@ -88,6 +88,17 @@ def save_profile(profile: Profile, path: Path) -> None:
     Path(path).write_text(profile.model_dump_json(indent=1))
 
 
+def load_cv_text(candidate_id: str) -> str:
+    """The exact text every evidence offset in this candidate's profile indexes.
+
+    Resolved through the cached-profile map rather than by joining the id onto a
+    path, so a candidate_id arriving from a URL cannot walk out of CV_TEXT_DIR.
+    """
+    if candidate_id not in list_cached_profiles():
+        raise KeyError(f"unknown candidate_id {candidate_id!r}")
+    return (config.CV_TEXT_DIR / f"{candidate_id}.txt").read_text()
+
+
 def list_cached_profiles(*, demo_only: bool = True) -> dict[str, Path]:
     """candidate_id -> profile path. candidate_id is the source file stem.
     With demo_only, only profiles whose source text lives in CV_TEXT_DIR are

@@ -4,10 +4,12 @@
  */
 import type {
   Delta,
+  Derivation,
   Envelope,
   Explanation,
   FeatureContribution,
   JobSummary,
+  ParsedAttribute,
   PoolRow,
   Route,
   ScreenResult,
@@ -317,3 +319,81 @@ export function nfpReason(code: string): string {
 }
 
 export { deriveName };
+
+// --------------------------------------------------------------------------
+// The parse view (`GET /candidates/{id}/cv`)
+// --------------------------------------------------------------------------
+
+/** One run of CV text that is covered by exactly the same set of attributes. */
+export interface TextSegment {
+  text: string;
+  /** Indices into the attribute array the segments were built from. */
+  attrs: number[];
+  /** Start offset — unique per segment, so it doubles as the React key. */
+  start: number;
+}
+
+/**
+ * Cut the CV text at every evidence boundary.
+ *
+ * Quotes overlap constantly (a role header evidences the role, the seniority and
+ * half the skills), so a segment carries a *set* of attributes rather than one.
+ * Nothing is searched for: an offset the backend could not verify is simply not
+ * a boundary, which is why an unverified quote shows as text and never as a
+ * highlight in the wrong place.
+ */
+export function highlightSegments(text: string, attributes: ParsedAttribute[]): TextSegment[] {
+  const spans: { start: number; end: number; attr: number }[] = [];
+  attributes.forEach((attr, i) => {
+    for (const ev of attr.evidence) {
+      if (ev.start == null || ev.end == null) continue;
+      const start = Math.max(0, Math.min(ev.start, text.length));
+      const end = Math.max(0, Math.min(ev.end, text.length));
+      if (end > start) spans.push({ start, end, attr: i });
+    }
+  });
+  if (spans.length === 0) return [{ text, attrs: [], start: 0 }];
+
+  const cuts = [...new Set([0, text.length, ...spans.flatMap((s) => [s.start, s.end])])].sort(
+    (a, b) => a - b,
+  );
+  const out: TextSegment[] = [];
+  for (let i = 0; i < cuts.length - 1; i++) {
+    const [start, end] = [cuts[i], cuts[i + 1]];
+    const attrs = spans.filter((s) => s.start <= start && s.end >= end).map((s) => s.attr);
+    out.push({ text: text.slice(start, end), attrs: [...new Set(attrs)], start });
+  }
+  return out;
+}
+
+/** Attributes in backend order, split into their groups (also in backend order). */
+export function groupAttributes(
+  attributes: ParsedAttribute[],
+): { group: string; items: { attr: ParsedAttribute; index: number }[] }[] {
+  const out: { group: string; items: { attr: ParsedAttribute; index: number }[] }[] = [];
+  attributes.forEach((attr, index) => {
+    const last = out[out.length - 1];
+    if (last && last.group === attr.group) last.items.push({ attr, index });
+    else out.push({ group: attr.group, items: [{ attr, index }] });
+  });
+  return out;
+}
+
+/**
+ * How the screen came to hold this value, in one phrase.
+ *
+ * "absent" is the load-bearing one: a missing attribute is a question for the
+ * candidate, not a finding against them, and the wording has to keep saying so.
+ */
+const DERIVATION_NOTES: Record<Derivation, string> = {
+  stated: "read from the CV",
+  computed: "computed from the CV — no quote of its own",
+  inferred: "inferred, not stated outright",
+  absent: "the CV did not say",
+  denied: "the CV rules this out",
+  restated: "confirmed by the candidate",
+};
+
+export function derivationNote(derivation: Derivation): string {
+  return DERIVATION_NOTES[derivation] ?? derivation;
+}
