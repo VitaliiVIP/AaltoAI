@@ -20,6 +20,7 @@ export const CANDIDATES: Candidate[] = [
     id: "c1",
     name: "Elina Korhonen",
     file: "/assets/cvs/cv1_elina_korhonen.pdf",
+    thumbnail: "/assets/cvs/cv1_elina_korhonen.png",
     score: 92,
     years: 6,
     matched: ["Python", "Kubernetes", "AWS", "CI/CD", "6 yrs experience"],
@@ -38,6 +39,7 @@ export const CANDIDATES: Candidate[] = [
     id: "c2",
     name: "Marcus Chen",
     file: "/assets/cvs/cv2_marcus_chen.pdf",
+    thumbnail: "/assets/cvs/cv2_marcus_chen.png",
     score: 84,
     years: 5,
     matched: ["Python", "Kubernetes", "Azure", "CI/CD", "5 yrs experience"],
@@ -58,6 +60,7 @@ export const CANDIDATES: Candidate[] = [
     id: "c3",
     name: "Emma Laakso",
     file: "/assets/cvs/cv3_emma_laakso.pdf",
+    thumbnail: "/assets/cvs/cv3_emma_laakso.png",
     score: 88,
     years: 7,
     matched: ["Python", "Kubernetes", "GCP", "Terraform", "CI/CD", "Kafka", "7 yrs experience"],
@@ -76,10 +79,12 @@ export const CANDIDATES: Candidate[] = [
     id: "c4",
     name: "Aisha Rahman",
     file: "/assets/cvs/cv4_aisha_rahman.pdf",
+    thumbnail: "/assets/cvs/cv4_aisha_rahman.png",
     score: 76,
     years: 3.5,
     matched: ["Python", "AWS (ECS)", "CI/CD (GitHub Actions)"],
     missing: ["No hands-on Kubernetes", "0.5 years short of the 4-year minimum"],
+    weakReasons: ["No hands-on Kubernetes experience", "0.5 yrs short of the experience bar"],
     summary:
       "Close match. Strong Python and AWS background, but experience is on ECS rather than Kubernetes, and total experience is just under the target.",
     recourse: [
@@ -97,10 +102,12 @@ export const CANDIDATES: Candidate[] = [
     id: "c5",
     name: "Johan Virtanen",
     file: "/assets/cvs/cv5_johan_virtanen.pdf",
+    thumbnail: "/assets/cvs/cv5_johan_virtanen.png",
     score: 63,
     years: 4,
     matched: ["Python", "Docker", "4 yrs experience"],
     missing: ["Kubernetes only tried as a proof-of-concept", "No production cloud platform experience"],
+    weakReasons: ["Kubernetes only tried as a proof-of-concept", "No production cloud platform experience"],
     summary:
       "Partial match. Meets the experience bar, but Kubernetes and cloud-platform exposure are both below production level.",
     recourse: [
@@ -118,10 +125,12 @@ export const CANDIDATES: Candidate[] = [
     id: "c6",
     name: "Priya Sharma",
     file: "/assets/cvs/cv6_priya_sharma.pdf",
+    thumbnail: "/assets/cvs/cv6_priya_sharma.png",
     score: 55,
     years: 3,
     matched: ["Python", "Flask"],
     missing: ["No Kubernetes", "No cloud platform experience", "1 year short of the 4-year minimum"],
+    weakReasons: ["No Kubernetes experience", "No cloud platform experience"],
     summary:
       "Below target. Solid Python fundamentals, but no orchestration or cloud experience, and one year short on tenure.",
     recourse: [
@@ -140,10 +149,12 @@ export const CANDIDATES: Candidate[] = [
     id: "c7",
     name: "Daniel Kwan",
     file: "/assets/cvs/cv7_daniel_kwan.pdf",
+    thumbnail: "/assets/cvs/cv7_daniel_kwan.png",
     score: 50,
     years: 2.5,
     matched: ["Python", "Basic AWS (Lambda, S3)"],
     missing: ["No Kubernetes", "1.5 years short of the 4-year minimum", "No production-scale project"],
+    weakReasons: ["No Kubernetes experience", "1.5 yrs short of the experience bar"],
     summary:
       "Borderline. Early-career profile with some cloud exposure via serverless functions, but no orchestration experience or production-scale ownership.",
     recourse: [
@@ -162,10 +173,12 @@ export const CANDIDATES: Candidate[] = [
     id: "c8",
     name: "Lucas Alves",
     file: "/assets/cvs/cv8_lucas_alves.pdf",
+    thumbnail: "/assets/cvs/cv8_lucas_alves.png",
     score: 44,
     years: 3,
     matched: ["3 yrs professional experience"],
     missing: ["No Python backend experience", "No Kubernetes", "No cloud experience", "Background is frontend (React/TypeScript)"],
+    weakReasons: ["Frontend background, not backend", "No Python backend experience"],
     summary:
       "Weak match for this role. Strong frontend background, but the role is backend-focused and none of the core requirements are met yet.",
     recourse: [
@@ -184,10 +197,12 @@ export const CANDIDATES: Candidate[] = [
     id: "c9",
     name: "Nora Salminen",
     file: "/assets/cvs/cv9_nora_salminen.pdf",
+    thumbnail: "/assets/cvs/cv9_nora_salminen.png",
     score: 33,
     years: 4,
     matched: ["Python (test automation)", "4 yrs professional experience"],
     missing: ["No production backend ownership", "No Kubernetes", "No cloud experience"],
+    weakReasons: ["No production backend ownership", "No Kubernetes or cloud experience"],
     summary:
       "Weak match. Python experience is limited to test automation rather than production backend development.",
     recourse: [
@@ -206,10 +221,12 @@ export const CANDIDATES: Candidate[] = [
     id: "c10",
     name: "Tomás Hidalgo",
     file: "/assets/cvs/cv10_tomas_hidalgo.pdf",
+    thumbnail: "/assets/cvs/cv10_tomas_hidalgo.png",
     score: 21,
     years: 0,
     matched: ["Basic Python (self-taught)"],
     missing: ["No professional software engineering experience", "No Kubernetes", "No cloud experience", "No shipped projects"],
+    weakReasons: ["No professional engineering experience", "No shipped or production projects"],
     summary:
       "Not a match yet. No professional engineering experience on record — this profile is at the very start of a backend engineering path.",
     recourse: [
@@ -222,6 +239,32 @@ export const CANDIDATES: Candidate[] = [
       subject: "Update on your application — Backend Software Engineer",
       body:
         "Hi Tomás,\n\nThank you for applying for the Backend Software Engineer role. This role requires professional backend development experience that isn't yet reflected in your CV.\n\nWhat would help most: gaining 1-2 years of hands-on backend experience and shipping at least one real (non-tutorial) project. This role isn't the right fit today, but the path above would change that.\n\nWe'd welcome a re-application once this experience is in place.\n\nBest,\nHiring Team",
+    },
+  },
+  {
+    id: "c11",
+    name: "Demo Candidate",
+    file: "/assets/cvs/cv11_demo_candidate.pdf",
+    thumbnail: "/assets/cvs/cv11_demo_candidate.png",
+    score: 99,
+    years: 2,
+    matched: [
+      "Python",
+      "AWS",
+      "Docker",
+      "SQL",
+      "Full-stack development",
+      "AI integration (OpenAI API)",
+    ],
+    missing: [],
+    summary:
+      "Outstanding match. Full-stack and AI-integration experience across five roles in parallel with a Bachelor's in IT, including an international exchange, a Nokia digital-twin collaboration, and shipped self-projects.",
+    recourse: [],
+    email: {
+      kind: "accept",
+      subject: "You're moving forward — Backend Software Engineer",
+      body:
+        "Hi Vitalii,\n\nThanks for applying for the Backend Software Engineer role. Your breadth across full-stack development, cloud, and AI integration — on top of the Nokia digital-twin and Metropolia Motorsport work — is an outstanding match. We'd like to move you straight to a technical interview.\n\nBest,\nHiring Team",
     },
   },
 ];

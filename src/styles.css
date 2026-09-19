@@ -182,17 +182,39 @@ h1, h2, h3, p { margin: 0; }
 
 .cv-scale {
   position: relative;
-  width: 14px;
+  width: 28px;
   flex-shrink: 0;
-  border-radius: var(--radius-round);
   overflow: visible;
+  cursor: grab;
+  touch-action: none;
+  outline: none;
+  /* Cards get their own stacking context on hover (transform), which can
+     otherwise paint over the marker since the list comes later in the DOM. */
+  z-index: 5;
+}
+
+.cv-scale:hover .cv-scale-track {
+  filter: brightness(1.04);
+}
+
+.cv-scale:focus-visible .cv-scale-track {
+  box-shadow: 0 0 0 3px var(--brand-400);
+}
+
+.cv-scale.dragging {
+  cursor: grabbing;
 }
 
 .cv-scale-track {
   position: absolute;
-  inset: 0;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  transform: translateX(-50%);
   border-radius: var(--radius-round);
   background: linear-gradient(to bottom, var(--green) 0%, var(--yellow) 50%, var(--red) 100%);
+  transition: box-shadow 0.15s ease;
 }
 
 .cv-scale-marker {
@@ -206,9 +228,16 @@ h1, h2, h3, p { margin: 0; }
   background: var(--mono-900);
   border: 3px solid #fff;
   box-shadow: var(--shadow-elevated);
-  transition: top 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: top 0.35s cubic-bezier(0.22, 1, 0.36, 1), width 0.15s ease, height 0.15s ease;
   display: grid;
   place-items: center;
+  pointer-events: none;
+}
+
+.cv-scale.dragging .cv-scale-marker {
+  width: 22px;
+  height: 22px;
+  transition: width 0.15s ease, height 0.15s ease;
 }
 
 .marker-score {
@@ -266,10 +295,12 @@ h1, h2, h3, p { margin: 0; }
   pointer-events: none;
 }
 
-.cv-preview embed {
+.cv-preview img {
   width: 100%;
   height: 100%;
   display: block;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .cv-card-footer {
@@ -288,6 +319,29 @@ h1, h2, h3, p { margin: 0; }
   font-size: 0.75rem;
   color: var(--text-muted);
   margin-top: 0.1rem;
+}
+
+.weak-reasons {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.weak-reasons li {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding-left: 0.8rem;
+  position: relative;
+  line-height: 1.35;
+}
+
+.weak-reasons li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
 }
 
 .score-chip {
@@ -317,6 +371,62 @@ h1, h2, h3, p { margin: 0; }
 .status-tag.declined { background: var(--mono-200); color: var(--mono-700); }
 
 /* ---------------- Section 2: Explanation ---------------- */
+
+.open-cv-btn {
+  margin-left: auto;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+.open-cv-btn:hover {
+  background: #196f42;
+}
+
+/* No transitions/animations by design — the CV should snap open instantly. */
+.cv-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.cv-modal {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius-main);
+  box-shadow: var(--shadow-elevated);
+  width: 100%;
+  max-width: 640px;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.cv-modal img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cv-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow-card);
+}
 
 .explain-body {
   flex: 1;
@@ -428,6 +538,57 @@ h1, h2, h3, p { margin: 0; }
   flex-direction: column;
   padding: 1.25rem;
   gap: 1rem;
+}
+
+.email-body-choice {
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.choice-hint {
+  font-size: 0.92rem;
+  color: var(--mono-700);
+  text-align: center;
+  line-height: 1.55;
+}
+
+.accept-decline-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.btn-accept,
+.btn-decline {
+  flex: 1;
+  padding: 1.1rem;
+  border-radius: var(--radius-small);
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+.btn-accept:active,
+.btn-decline:active {
+  transform: scale(0.98);
+}
+
+.btn-accept {
+  background: var(--green);
+  color: #fff;
+}
+.btn-accept:hover {
+  background: #196f42;
+}
+
+.btn-decline {
+  background: var(--red);
+  color: #fff;
+}
+.btn-decline:hover {
+  background: #9f2f2b;
 }
 
 .email-meta {

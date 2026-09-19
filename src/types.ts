@@ -19,10 +19,13 @@ export interface Candidate {
   id: string;
   name: string;
   file: string;
+  thumbnail: string;
   score: number;
   years: number;
   matched: string[];
   missing: string[];
+  /** The 2 main reasons this candidate is weak for the role. Only set when score < 80. */
+  weakReasons?: [string, string];
   summary: string;
   recourse: RecourseItem[];
   email: EmailDraft;

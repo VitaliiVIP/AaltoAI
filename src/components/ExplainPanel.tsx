@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import type { Candidate } from "../types";
 import ScoreChip from "./ScoreChip";
 
@@ -6,10 +7,29 @@ interface ExplainPanelProps {
 }
 
 export default function ExplainPanel({ candidate }: ExplainPanelProps) {
+  const [cvOpen, setCvOpen] = useState(false);
+
+  // Close the CV modal whenever the selection changes underneath it.
+  useEffect(() => {
+    setCvOpen(false);
+  }, [candidate.id]);
+
+  useEffect(() => {
+    if (!cvOpen) return;
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") setCvOpen(false);
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [cvOpen]);
+
   return (
     <section className="col col-explain" aria-label="Match explanation">
       <div className="col-header">
         <h2>Why this match?</h2>
+        <button className="open-cv-btn" onClick={() => setCvOpen(true)}>
+          Open CV
+        </button>
       </div>
 
       <div className="explain-body">
@@ -72,6 +92,17 @@ export default function ExplainPanel({ candidate }: ExplainPanelProps) {
           individual decision-making).
         </p>
       </div>
+
+      {cvOpen && (
+        <div className="cv-modal-overlay" onClick={() => setCvOpen(false)}>
+          <div className="cv-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="icon-btn cv-modal-close" aria-label="Close CV" onClick={() => setCvOpen(false)}>
+              ✕
+            </button>
+            <img src={candidate.thumbnail} alt={`${candidate.name} full CV`} />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
