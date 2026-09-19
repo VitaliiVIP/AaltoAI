@@ -55,6 +55,8 @@ export default function EmailPanel({
   }
 
   const name = deriveName(candidateId);
+  const to = emailFor(candidateId, result.profile.contact_email);
+  const synthetic = isSyntheticEmail(candidateId, result.profile.contact_email);
   const passed = result.decision.passed;
   const disabled = Boolean(status) || sending;
   const explanation = result.explanation;
@@ -116,7 +118,7 @@ export default function EmailPanel({
     // Read the live textarea value, not the original draft — an edit the
     // recruiter made here is what actually goes out over SMTP.
     const body = textareaRef.current?.value ?? draft.body;
-    onSendEmail(candidateId, emailFor(candidateId), draft.subject, body);
+    onSendEmail(candidateId, to, draft.subject, body);
   }
 
   return (
@@ -127,9 +129,9 @@ export default function EmailPanel({
 
       <div className="email-body">
         <div className="email-meta">
-          To: {emailFor(candidateId)}
-          {isSyntheticEmail(candidateId) && (
-            <span className="synthetic-note"> (synthetic — no contact data is extracted)</span>
+          To: {to}
+          {synthetic && (
+            <span className="synthetic-note"> (synthetic — no address found in the CV)</span>
           )}
         </div>
         <div className="email-subject">{draft.subject}</div>

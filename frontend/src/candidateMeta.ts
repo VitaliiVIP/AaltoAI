@@ -34,16 +34,25 @@ export function firstNameOf(candidateId: string): string {
   return deriveName(candidateId).split(" ")[0];
 }
 
-/** Synthetic by default — no contact details are ever extracted from a CV. */
-export function emailFor(candidateId: string): string {
+/**
+ * Where to send the candidate's email. A demo override wins, then the address
+ * the backend read out of the CV text (`Profile.contact_email`, never scored),
+ * and only a CV with no address at all falls back to a synthetic one built
+ * from the filename.
+ */
+export function emailFor(candidateId: string, contactEmail: string | null | undefined): string {
   return (
     EMAIL_OVERRIDES[candidateId] ??
+    contactEmail ??
     `${deriveName(candidateId).toLowerCase().replace(/\s+/g, ".")}@example.com`
   );
 }
 
-export function isSyntheticEmail(candidateId: string): boolean {
-  return !(candidateId in EMAIL_OVERRIDES);
+export function isSyntheticEmail(
+  candidateId: string,
+  contactEmail: string | null | undefined,
+): boolean {
+  return !(candidateId in EMAIL_OVERRIDES) && !contactEmail;
 }
 
 export interface CandidateAssets {
