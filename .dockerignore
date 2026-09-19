@@ -1,0 +1,13 @@
+# Build context for the web image (Dockerfile at the repo root) — the frontend
+# only needs src/, public/ and the build config.
+.git
+.github
+.claude
+node_modules
+dist
+backend
+research
+Makefile
+README.md
+*.local
+*.tsbuildinfo

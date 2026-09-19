@@ -47,6 +47,10 @@ still returns a complete templated `Explanation` — the LLM verbaliser is only 
 Schemas: `recourse_screen/schemas.py`. Employer configuration: `recourse_screen/jobs/*.yaml` and
 `recourse_screen/manifests/*.json` (actionability, costs, horizons, causal dependencies).
 
+`recourse_screen/jobs/` holds the shipped defaults and is read-only; the job editor writes to
+`data/jobs/`, where a file of the same id shadows the default. Only `data/` is mounted as a volume
+in the container, so that split is what keeps authored jobs alive across deploys.
+
 ## Layout
 
 ```

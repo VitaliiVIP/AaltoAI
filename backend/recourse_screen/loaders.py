@@ -51,17 +51,31 @@ def load_manifest(name_or_path: str | Path) -> Manifest:
     return Manifest.model_validate(json.loads(p.read_text()))
 
 
+def _job_path(name: str) -> Path:
+    """An edited job in JOBS_DIR shadows the seed of the same id; otherwise the
+    shipped default answers. Returns the JOBS_DIR path when neither exists so the
+    caller still gets a FileNotFoundError naming the writable location."""
+    for d in (config.JOBS_DIR, config.JOB_SEED_DIR):
+        if (d / name).exists():
+            return d / name
+    return config.JOBS_DIR / name
+
+
 @lru_cache(maxsize=None)
 def load_job(job_id_or_path: str | Path) -> JobTemplate:
     p = Path(job_id_or_path)
     if p.suffix not in (".yaml", ".yml"):
-        p = config.JOBS_DIR / f"{job_id_or_path}.yaml"
+        p = _job_path(f"{job_id_or_path}.yaml")
     if not p.is_absolute() and not p.exists():
-        p = config.JOBS_DIR / p
+        p = _job_path(str(p))
     job = JobTemplate.model_validate(yaml.safe_load(p.read_text()))
     # Resolve a relative manifest name next to the job file first (fixtures), then MANIFEST_DIR.
     mp = Path(job.manifest)
-    if not mp.is_absolute() and (p.parent / mp).exists() and p.parent != config.JOBS_DIR:
+    if (
+        not mp.is_absolute()
+        and (p.parent / mp).exists()
+        and p.parent not in (config.JOBS_DIR, config.JOB_SEED_DIR)
+    ):
         job.manifest = str((p.parent / mp).resolve())
     # A point-authored job has no per-step weights until the manifest supplies the
     # caps, so binding is part of loading rather than something callers can forget.
@@ -76,7 +90,9 @@ def manifest_for_job(job: JobTemplate, manifest_dir: Path | None = None) -> Mani
 
 
 def list_jobs() -> list[str]:
-    return sorted(p.stem for p in config.JOBS_DIR.glob("*.yaml"))
+    seed = {p.stem for p in config.JOB_SEED_DIR.glob("*.yaml")}
+    edited = {p.stem for p in config.JOBS_DIR.glob("*.yaml")}
+    return sorted(seed | edited)
 
 
 def load_profile(path: Path) -> Profile:
