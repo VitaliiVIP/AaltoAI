@@ -6,6 +6,12 @@ FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim
 # inherits the repo's access control.
 LABEL org.opencontainers.image.source=https://github.com/VitaliiVIP/AaltoAI
 
+# pdftotext (poppler) is the CV parser -- see recourse_screen/extract/pdf.py.
+# Debian slim does not ship it, and without it every PDF upload fails.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends poppler-utils \
+    && rm -rf /var/lib/apt/lists/*
+
 ENV UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
     UV_PROJECT_ENVIRONMENT=/app/.venv \

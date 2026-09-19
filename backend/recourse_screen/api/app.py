@@ -12,7 +12,13 @@ from .. import config, pipeline
 from ..audit.log import get_record, read_records, verify_chain
 from ..authoring import catalogue_for, store
 from ..emailer import EmailError, send_email
-from ..loaders import list_jobs, load_cv_text, load_job, manifest_for_job
+from ..loaders import (
+    list_cached_profiles,
+    list_jobs,
+    load_cv_text,
+    load_job,
+    manifest_for_job,
+)
 from ..schemas import (
     BUDGET_TOTAL,
     RestateRequest,
@@ -246,7 +252,7 @@ def screen(req: ScreenRequest) -> ScreenResult:
 @app.post("/extract")
 async def extract(file: UploadFile | None = None, cv_text: str | None = None) -> dict:
     from ..extract.extractor import extract_profile
-    from ..extract.pdf import pdf_to_text
+    from ..extract.pdf import PdfExtractionError, pdf_to_text, sha256_text
 
     if file is not None:
         raw = await file.read()
@@ -255,10 +261,21 @@ async def extract(file: UploadFile | None = None, cv_text: str | None = None) ->
             tmp = config.DATA_DIR / "uploads" / name
             tmp.parent.mkdir(parents=True, exist_ok=True)
             tmp.write_bytes(raw)
-            text = pdf_to_text(tmp)
+            try:
+                text = pdf_to_text(tmp)
+            except PdfExtractionError as e:
+                # The upload's temp path means nothing to whoever sees the toast.
+                raise HTTPException(400, str(e).replace(str(tmp), name)) from e
         else:
             text = raw.decode("utf-8", errors="replace")
         source = Path(name).stem + ".txt"
+        # The profile cache is keyed by the sha of the CV *text*, and re-extracting
+        # rewrites that entry's source_file -- so uploading a CV already in the pool
+        # would rename the sitting candidate out from under the list. Refuse instead.
+        sha = sha256_text(text)
+        for cid, cached in list_cached_profiles().items():
+            if cached.stem == sha:
+                raise HTTPException(409, f"This CV is already in the pool as {cid}.")
         # keep the text so the candidate shows up in the pool list next time
         (config.CV_TEXT_DIR / source).write_text(text)
     elif cv_text:
