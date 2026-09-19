@@ -25,7 +25,7 @@ uv run uvicorn recourse_screen.api.app:app --reload   # http://localhost:8000/  
 uv run python scripts/run_eval.py --n 30          # synthetic corpus + parser/recourse metrics -> data/synth/eval_report.md
 ```
 
-Add a CV: drop a PDF into `../public/assets/cvs/` and run
+Add a CV: drop a PDF into `../frontend/public/assets/cvs/` and run
 `pdftotext -layout file.pdf data/cv_text/file.txt`, then re-run the extraction script (only new files
 call the API; profiles are cached by content hash).
 
