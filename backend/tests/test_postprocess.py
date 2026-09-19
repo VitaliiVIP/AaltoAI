@@ -485,6 +485,10 @@ def test_email_is_none_when_the_cv_has_none():
     ("(2022-2026) worked at Example", None),                               # a date is not an email
     ("write to me at example.com", None),                                  # no local part
     ("first@example.com then second@elsewhere.com", "first@example.com"),  # header wins
+    # An ASCII-only class would match from after the umlaut and yield "kinen@..." —
+    # a wrong address in the UI's To: field is worse than no address at all.
+    ("jyri.mäkinen@example.fi", "jyri.mäkinen@example.fi"),
+    ("jane@exämple.fi", "jane@exämple.fi"),
 ])
 def test_email_shapes(text, expected):
     assert find_email(text) == expected

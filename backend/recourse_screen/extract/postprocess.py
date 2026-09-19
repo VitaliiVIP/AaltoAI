@@ -83,11 +83,12 @@ _JUNIOR_WORDS = ("junior", "jr.", "intern", "trainee", "graduate", "apprentice")
 
 _EMAIL_RE = re.compile(r"[\w.+-]+@[\w-]+\.[\w.]+")
 # Tighter than `_EMAIL_RE`, which is a PII tripwire and may over-match on purpose. This
-# one has to yield an address the UI can put in a To: field, so the TLD must be letters
+# one has to yield an address the UI can put in a To: field, so the TLD is letters only
 # and the match cannot end on the full stop that follows an address in running text.
-_EMAIL_EXTRACT_RE = re.compile(
-    r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}"
-)
+# `\w` rather than `A-Za-z0-9`: an ASCII-only class does not fail on `jyri.mäkinen@x.fi`,
+# it starts the match after the umlaut and hands the UI `kinen@x.fi`, which is worse
+# than finding nothing. `[^\W\d_]` is "any unicode letter", so the TLD stays letters.
+_EMAIL_EXTRACT_RE = re.compile(r"[\w.%+-]+@[\w-]+(?:\.[\w-]+)*\.[^\W\d_]{2,}")
 _MAX_EMAIL_LEN = 254  # RFC 5321; a longer "match" is mangled PDF text, not an address
 # A year range like "(2022-2026)" trips a naive phone pattern, so a candidate match
 # must also carry at least 9 digits - shorter than any real international number.
