@@ -15,6 +15,19 @@ make dev       # backend :8000, frontend :5173 — open http://127.0.0.1:5173
 An `ANTHROPIC_API_KEY` in `backend/.env` is optional: only "Polish with Claude" and CV upload
 call the model, and everything else runs on the deterministic templates.
 
+## Deploying
+
+Two images, published to GHCR by `.github/workflows/publish.yml` on every push to `main`:
+
+- `recourse-web` — `frontend/Dockerfile`: Vite build served by nginx
+- `recourse-api` — `backend/Dockerfile`: uvicorn on :8000, `backend/data` on a volume
+
+They are wired up as `recourse.ilia.fi` in the separate `vps_deployment` repo
+(`services/recourse/`), where Caddy terminates TLS, gates the site behind basic auth and
+routes `/api/*` to the API with the prefix stripped — the same rewrite `vite.config.ts`
+does in development, so no build-time API base URL is involved. Nothing here changes for
+`make dev`, which never goes through Caddy and stays unauthenticated.
+
 ## Documents
 
 - `research/design_report.md` — proposed design, decision register, stack and build plan (start here)

@@ -25,11 +25,11 @@ uv run uvicorn recourse_screen.api.app:app --reload   # http://localhost:8000/  
 uv run python scripts/run_eval.py --n 30          # synthetic corpus + parser/recourse metrics -> data/synth/eval_report.md
 ```
 
-Add a CV: drop a PDF into `../public/assets/cvs/` and run
+Add a CV: drop a PDF into `../frontend/public/assets/cvs/` and run
 `pdftotext -layout file.pdf data/cv_text/file.txt`, then re-run the extraction script (only new files
 call the API; profiles are cached by content hash).
 
-## API (consumed by the React frontend in `../src`)
+## API (consumed by the React frontend in `../frontend/src`)
 
 | Endpoint | Purpose |
 |---|---|
@@ -46,6 +46,10 @@ still returns a complete templated `Explanation` — the LLM verbaliser is only 
 
 Schemas: `recourse_screen/schemas.py`. Employer configuration: `recourse_screen/jobs/*.yaml` and
 `recourse_screen/manifests/*.json` (actionability, costs, horizons, causal dependencies).
+
+`recourse_screen/jobs/` holds the shipped defaults and is read-only; the job editor writes to
+`data/jobs/`, where a file of the same id shadows the default. Only `data/` is mounted as a volume
+in the container, so that split is what keeps authored jobs alive across deploys.
 
 ## Layout
 

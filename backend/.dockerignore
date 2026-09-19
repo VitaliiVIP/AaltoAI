@@ -1,0 +1,17 @@
+# The local .venv alone is ~260 MB and must never enter the build context; the
+# image builds its own with `uv sync`.
+.venv/
+.git
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+tests/
+README.md
+
+# data/ is copied in as a seed for the volume, but not the parts that are purely
+# local state or only used by the offline eval harness.
+data/audit.jsonl
+data/uploads/
+data/synth/

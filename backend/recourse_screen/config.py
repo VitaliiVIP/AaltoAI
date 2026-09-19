@@ -16,7 +16,11 @@ AUDIT_LOG_PATH = DATA_DIR / "audit.jsonl"
 
 TAXONOMY_PATH = PACKAGE_DIR / "taxonomy" / "swe_core.json"
 MANIFEST_DIR = PACKAGE_DIR / "manifests"
-JOBS_DIR = PACKAGE_DIR / "jobs"
+# Jobs the HR editor writes go under DATA_DIR, which is the only tree mounted as a
+# volume in the container — anything written into the package would be lost on the
+# next image build. JOB_SEED_DIR ships the read-only defaults and is the fallback.
+JOB_SEED_DIR = PACKAGE_DIR / "jobs"
+JOBS_DIR = DATA_DIR / "jobs"
 
 load_dotenv(BACKEND_DIR / ".env")
 
