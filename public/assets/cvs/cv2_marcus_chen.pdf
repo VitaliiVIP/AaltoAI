@@ -1,0 +1,55 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /MediaBox [0 0 612 792] /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1271 >>
+stream
+BT /F2 20 Tf 50 740 Td (Marcus Chen) Tj ET
+BT /F1 12 Tf 50 714 Td (Backend Software Engineer) Tj ET
+BT /F1 9 Tf 50 694 Td (marcus.chen@example.com | +358 40 222 3344 | Espoo, Finland) Tj ET
+BT /F2 12 Tf 50 668 Td (Experience) Tj ET
+BT /F1 10 Tf 50 650 Td (Software Engineer, CloudNorth Ltd \(2021-2026\) - 5 years) Tj ET
+BT /F1 10 Tf 50 635 Td (- Designed microservices in Python and Kubernetes for payments platform) Tj ET
+BT /F1 10 Tf 50 620 Td (- On-call owner for production cloud infrastructure \(Azure\)) Tj ET
+BT /F1 10 Tf 50 605 Td (Junior Developer, StartHub \(2019-2021\)) Tj ET
+BT /F1 10 Tf 50 590 Td (- Built internal tools with Django and PostgreSQL) Tj ET
+BT /F1 4 Tf 50 575 Td () Tj ET
+BT /F2 12 Tf 50 565 Td (Education) Tj ET
+BT /F1 10 Tf 50 547 Td (B.Sc. Software Engineering, University of Helsinki \(2019\)) Tj ET
+BT /F1 4 Tf 50 532 Td () Tj ET
+BT /F2 12 Tf 50 522 Td (Skills) Tj ET
+BT /F1 10 Tf 50 504 Td (Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis) Tj ET
+BT /F1 4 Tf 50 489 Td () Tj ET
+BT /F2 12 Tf 50 479 Td (Projects) Tj ET
+BT /F1 10 Tf 50 461 Td (- Rebuilt payments microservice, reduced latency by 40%) Tj ET
+BT /F1 10 Tf 50 446 Td (- Implemented blue-green deployment pipeline on Kubernetes) Tj ET
+BT /F1 4 Tf 50 431 Td () Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000001574 00000 n 
+0000001644 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1719
+%%EOF

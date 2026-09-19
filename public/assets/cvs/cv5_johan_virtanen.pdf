@@ -1,0 +1,53 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /MediaBox [0 0 612 792] /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1081 >>
+stream
+BT /F2 20 Tf 50 740 Td (Johan Virtanen) Tj ET
+BT /F1 12 Tf 50 714 Td (Backend Software Engineer) Tj ET
+BT /F1 9 Tf 50 694 Td (johan.virtanen@example.com | +358 40 777 8899 | Turku, Finland) Tj ET
+BT /F2 12 Tf 50 668 Td (Experience) Tj ET
+BT /F1 10 Tf 50 650 Td (Software Engineer, Turku Web Oy \(2021-2026\) - 4 years) Tj ET
+BT /F1 10 Tf 50 635 Td (- Built Java and Python services, some deployed on Docker Swarm) Tj ET
+BT /F1 10 Tf 50 620 Td (- Limited exposure to Kubernetes \(one internal proof-of-concept\)) Tj ET
+BT /F1 4 Tf 50 605 Td () Tj ET
+BT /F2 12 Tf 50 595 Td (Education) Tj ET
+BT /F1 10 Tf 50 577 Td (B.Sc. Information Technology, Turku UAS \(2021\)) Tj ET
+BT /F1 4 Tf 50 562 Td () Tj ET
+BT /F2 12 Tf 50 552 Td (Skills) Tj ET
+BT /F1 10 Tf 50 534 Td (Java, Python, Docker, MySQL, Jenkins) Tj ET
+BT /F1 4 Tf 50 519 Td () Tj ET
+BT /F2 12 Tf 50 509 Td (Projects) Tj ET
+BT /F1 10 Tf 50 491 Td (- Built internal ticketing system in Java/Spring) Tj ET
+BT /F1 10 Tf 50 476 Td (- Proof-of-concept Kubernetes deployment for one microservice) Tj ET
+BT /F1 4 Tf 50 461 Td () Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000001384 00000 n 
+0000001454 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1529
+%%EOF

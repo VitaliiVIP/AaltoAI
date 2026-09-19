@@ -1,0 +1,56 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /MediaBox [0 0 612 792] /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1383 >>
+stream
+BT /F2 20 Tf 50 740 Td (Elina Korhonen) Tj ET
+BT /F1 12 Tf 50 714 Td (Backend Software Engineer) Tj ET
+BT /F1 9 Tf 50 694 Td (elina.korhonen@example.com | +358 40 123 4567 | Helsinki, Finland) Tj ET
+BT /F2 12 Tf 50 668 Td (Experience) Tj ET
+BT /F1 10 Tf 50 650 Td (Senior Backend Engineer, Nordcom Oy \(2020-2026\) - 6 years) Tj ET
+BT /F1 10 Tf 50 635 Td (- Built and operated Python/Go microservices on Kubernetes) Tj ET
+BT /F1 10 Tf 50 620 Td (- Led migration of monolith to event-driven architecture on AWS) Tj ET
+BT /F1 10 Tf 50 605 Td (Backend Developer, Vantaa Systems \(2018-2020\)) Tj ET
+BT /F1 10 Tf 50 590 Td (- Developed REST APIs, CI/CD pipelines with GitLab and Docker) Tj ET
+BT /F1 4 Tf 50 575 Td () Tj ET
+BT /F2 12 Tf 50 565 Td (Education) Tj ET
+BT /F1 10 Tf 50 547 Td (M.Sc. Computer Science, Aalto University \(2018\)) Tj ET
+BT /F1 4 Tf 50 532 Td () Tj ET
+BT /F2 12 Tf 50 522 Td (Skills) Tj ET
+BT /F1 10 Tf 50 504 Td (Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform) Tj ET
+BT /F1 4 Tf 50 489 Td () Tj ET
+BT /F2 12 Tf 50 479 Td (Projects) Tj ET
+BT /F1 10 Tf 50 461 Td (- Open-source Kubernetes operator for auto-scaling \(450 GitHub stars\)) Tj ET
+BT /F1 10 Tf 50 446 Td (- Led cloud-cost optimisation project, cut AWS spend by 30%) Tj ET
+BT /F1 10 Tf 50 431 Td (- Built internal CI/CD platform used by 12 teams) Tj ET
+BT /F1 4 Tf 50 416 Td () Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000001686 00000 n 
+0000001756 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1831
+%%EOF
