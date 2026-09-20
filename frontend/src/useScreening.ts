@@ -263,8 +263,7 @@ export function useScreening() {
   );
 
   // Permanent, server-side removal (unlike the CV-list "Delete", which only
-  // hides a sent CV locally). Throws ApiError(403) for the fixed demo pool —
-  // callers decide how to surface that.
+  // hides a sent CV locally). Applies to every candidate, demo pool included.
   const deleteCv = useCallback(
     async (candidateId: string) => {
       await deleteCandidate(candidateId);

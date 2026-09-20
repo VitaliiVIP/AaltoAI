@@ -6,7 +6,7 @@ import EmailPanel from "./components/EmailPanel";
 import SettingsDrawer from "./components/SettingsDrawer";
 import AcceptedDrawer from "./components/AcceptedDrawer";
 import Toast from "./components/Toast";
-import { ApiError, postSendEmail } from "./api";
+import { postSendEmail } from "./api";
 import { deriveName } from "./candidateMeta";
 import type { EmailStatus } from "./types";
 import { useScreening } from "./useScreening";
@@ -109,10 +109,8 @@ export default function App() {
     showToast(`Deleted ${deriveName(id)}`);
   }
 
-  // Real, server-side deletion — the CV's cached text/profile/upload are gone,
-  // not just hidden. The backend refuses (403) for the fixed demo pool
-  // (cv1..cv11); that's a permanent property of the candidate, not an error,
-  // so it surfaces as an alert rather than a toast.
+  // Real, server-side deletion — the CV's cached text/profile/upload are
+  // gone, not just hidden. Applies to every candidate, demo pool included.
   async function handleDeleteCv(id: string) {
     const name = deriveName(id);
     if (!window.confirm(`Permanently delete ${name}'s CV? This cannot be undone.`)) return;
@@ -125,11 +123,7 @@ export default function App() {
       });
       showToast(`Deleted ${name}'s CV`);
     } catch (e: unknown) {
-      if (e instanceof ApiError && e.status === 403) {
-        window.alert(e.message);
-      } else {
-        showToast(e instanceof Error ? e.message : "Failed to delete CV");
-      }
+      showToast(e instanceof Error ? e.message : "Failed to delete CV");
     }
   }
 
