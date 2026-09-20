@@ -188,7 +188,7 @@ export default function SettingsDrawer({
             <>
               <p className="block-note">
                 {job.title} · {job.job_id} · {job.version} · manifest {job.manifest_version} ·{" "}
-                {job.horizon_months}-month horizon · {job.k_routes} routes
+                {job.horizon_months}-month horizon · {job.k_routes}-route recourse
                 {result && (
                   <>
                     {" "}

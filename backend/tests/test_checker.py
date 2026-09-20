@@ -14,7 +14,7 @@ INPUT = make_input([ABSENT_BOOL, STATED_MONTHS])
 GOOD = [
     Sentence(delta_id="d1", sentence=(
         "Your CV did not mention hands-on Kubernetes experience — if you have it, add it "
-        "and ask us to re-run the screen; otherwise it takes most people about 4 months.")),
+        "to your CV; otherwise it takes most people about 4 months.")),
     Sentence(delta_id="d2", sentence=(
         "Add about 6 more months of professional backend engineering experience.")),
 ]
@@ -30,7 +30,7 @@ def test_missing_delta_is_caught():
 
 
 def test_duplicate_delta_is_caught():
-    dupe = GOOD + [Sentence(delta_id="d1", sentence="Add it and ask us to re-run the screen.")]
+    dupe = GOOD + [Sentence(delta_id="d1", sentence="Add it to your CV.")]
     assert "duplicate_delta:d1" in check(dupe, INPUT)
 
 
@@ -84,7 +84,7 @@ def test_protected_term_is_caught():
 def test_protected_scan_does_not_fire_on_ordinary_words():
     ok = [Sentence(delta_id="d1", sentence=(
         "Your CV did not mention Kubernetes — if you manage clusters in any language, "
-        "add it and ask us to re-run the screen.")),
+        "add it to your CV.")),
         Sentence(delta_id="d2", sentence=(
             "Add about 6 more months of backend experience; hold onto the dates you already gave."))]
     assert check(ok, INPUT) == []

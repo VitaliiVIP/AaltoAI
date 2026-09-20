@@ -1204,33 +1204,6 @@ h1, h2, h3, p { margin: 0; }
 .pill.ko-fail { background: var(--red-bg); color: var(--red); border-color: transparent; }
 .ko-row .pill { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.7rem; }
 
-.route-chips {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.6rem;
-}
-.route-chip {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.1rem;
-  border: var(--border-width) solid var(--border);
-  background: var(--card-bg);
-  border-radius: var(--radius-small);
-  padding: 0.4rem 0.6rem;
-  cursor: pointer;
-  font: inherit;
-  font-size: 0.72rem;
-  color: var(--text-muted);
-}
-.route-chip.active {
-  border-color: var(--brand-900);
-  background: var(--brand-300);
-  color: var(--text);
-}
-.route-chip strong { font-size: 0.78rem; color: var(--text); }
-
 .route-meta {
   font-size: 0.74rem;
   color: var(--text-muted);

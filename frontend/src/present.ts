@@ -205,7 +205,6 @@ export interface DeltaView {
 
 export interface RouteView {
   routeId: string;
-  label: string;
   gain: number;
   newScore: number;
   months: number;
@@ -223,7 +222,6 @@ function deltaPoints(d: Delta, job: JobSummary | null): number | null {
 
 function viewOfRoute(
   route: Route,
-  index: number,
   base: number,
   explanation: Explanation | null,
   job: JobSummary | null,
@@ -254,7 +252,6 @@ function viewOfRoute(
   }
   return {
     routeId: route.route_id,
-    label: `Route ${index + 1}`,
     gain,
     newScore: route.new_score,
     months: route.total_time_months,
@@ -265,15 +262,22 @@ function viewOfRoute(
   };
 }
 
-export function routeViews(r: ScreenResult, job: JobSummary | null): RouteView[] {
-  return r.routes.map((route, i) => viewOfRoute(route, i, r.decision.score, r.explanation, job));
+/**
+ * The one route the panel shows: the cheapest path back to a pass. The solver
+ * can be asked for more (`k_routes`), but a screen that offers a recruiter three
+ * alternative futures for one candidate is a menu, not an explanation.
+ */
+export function cheapestRouteView(r: ScreenResult, job: JobSummary | null): RouteView | null {
+  const route = r.routes[0];
+  if (!route) return null;
+  return viewOfRoute(route, r.decision.score, r.explanation, job);
 }
 
 /** The best-effort route shown when nothing flips the decision in the horizon. */
 export function partialProgressView(r: ScreenResult, job: JobSummary | null): RouteView | null {
   const partial = r.no_feasible_path?.partial_progress;
   if (!partial) return null;
-  return viewOfRoute(partial, 0, r.decision.score, r.explanation, job);
+  return viewOfRoute(partial, r.decision.score, r.explanation, job);
 }
 
 // --------------------------------------------------------------------------

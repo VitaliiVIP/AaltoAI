@@ -116,7 +116,8 @@ layout: statement
 ### Tell the rejected candidate<br>**exactly what would have changed the answer.**
 
 <div class="pt-8 text-lg opacity-70">
-"One more shipped machine-learning project would have been enough."
+"Your CV didn't mention A/B testing.<br>
+Adding it — typically about two months — would have been enough."
 </div>
 
 <div class="pt-6 text-sm opacity-50">
@@ -165,7 +166,7 @@ point values. Shows which parts of the CV drove the score. Approve or override e
 </div>
 
 <div v-click="4" class="console-note">
-<b>Candidate email</b> — up to <b>3 independent routes</b> back to a pass, each with a cost and a
+<b>Candidate email</b> — <b>the cheapest route</b> back to a pass, with a cost and a
 realistic timeline, pre-drafted from the solver's output. The manager edits and sends. Never sent automatically.
 </div>
 
@@ -363,7 +364,7 @@ You cannot be advised to fake a dependency.
 </div>
 
 <div class="pt-6 text-sm opacity-70">
-CP-SAT returns up to <b>3 diverse routes</b>, each sufficient on its own, sparsity-penalised so
+CP-SAT returns the <b>minimum-cost route</b>, sufficient on its own, sparsity-penalised so
 short routes win.
 </div>
 
@@ -578,7 +579,7 @@ The distinction absent vs denied is enforced by template selection, not by a pro
 
 ### What code writes
 - The framing and intro
-- Ordering of routes
+- Ordering of the changes
 - Immutable-blocker disclosures
 - The closing text
 

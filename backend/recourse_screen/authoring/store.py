@@ -52,7 +52,7 @@ class JobSpec(BaseModel):
     score: dict[str, ScoreLine]
     threshold: int = 80          # mode A, as a share of the budget
     slots_n: int = 3             # mode B
-    k_routes: int = 3
+    k_routes: int = 1
     sparsity_lambda: int = 1
 
 

@@ -448,7 +448,7 @@ class JobTemplate(BaseModel):
     # Deprecated: causal constraints belong to the manifest (see Manifest.dependencies).
     # Still accepted so older job files and fixtures keep loading.
     dependencies: list[str] = Field(default_factory=list)
-    k_routes: int = 3
+    k_routes: int = 1
     sparsity_lambda: int = 1
     solver_time_limit_s: float = 10.0
     bound: bool = False  # set by bind(); points-authored terms have no weight until then

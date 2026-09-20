@@ -5,7 +5,7 @@ Demo backend for the AaltoAI hiring pre-screener with algorithmic recourse. Desi
 that report's implementation (see git history) and in the module docstrings.
 
 Pipeline: CV text → Claude structured extraction (LLM #1) → deterministic post-processing → enveloped
-profile → knockouts ∧ additive scorer → CP-SAT minimum-cost recourse (k=3 diverse routes, flip-tested)
+profile → knockouts ∧ additive scorer → CP-SAT minimum-cost recourse (cheapest route, flip-tested)
 → Claude one-sentence-per-delta verbalisation (LLM #2) → code-only checker → hash-chained audit log.
 
 ## Setup

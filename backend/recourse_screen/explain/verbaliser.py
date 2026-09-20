@@ -37,7 +37,7 @@ with its delta_id. Never merge two deltas and never add a delta.
 - Use ONLY the facts in the JSON. Invent nothing: no comparisons to other applicants, no \
 reasons, no praise, no numbers that are not in the JSON.
 - If derivation_of_current is "absent", the CV did not mention it. Phrase it as a question \
-("if you have worked with X, add it and ask us to re-run the screen"), never as an accusation \
+("if you have worked with X, say so on your CV"), never as an accusation \
 that the person lacks it.
 - If derivation_of_current is "stated", "computed" or "inferred", phrase it as one concrete \
 step, using the magnitude in raw units (the difference between `from` and `to`).

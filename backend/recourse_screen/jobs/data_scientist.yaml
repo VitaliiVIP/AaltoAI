@@ -25,5 +25,5 @@ score:
 mode:
   A: {threshold: 80, margin_eps: 0, weight_shrink_rho: 0}
   B: {slots_N: 3, margin_eps: 0, weight_shrink_rho: 0}
-k_routes: 3
+k_routes: 1
 sparsity_lambda: 1

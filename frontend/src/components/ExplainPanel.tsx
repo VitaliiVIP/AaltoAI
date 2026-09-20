@@ -4,6 +4,7 @@ import { tierOf } from "../types";
 import { deriveName } from "../candidateMeta";
 import { auditUrl } from "../api";
 import {
+  cheapestRouteView,
   creditedWithoutEvidence,
   fmtValue,
   gapPills,
@@ -11,7 +12,6 @@ import {
   nfpReason,
   partialProgressView,
   recruiterSummary,
-  routeViews,
   shortId,
   yearsOf,
 } from "../present";
@@ -66,16 +66,13 @@ export default function ExplainPanel({
 }: ExplainPanelProps) {
   const [cvOpen, setCvOpen] = useState(false);
   const [parseOpen, setParseOpen] = useState(false);
-  const [activeRoute, setActiveRoute] = useState(0);
 
   const candidateId = result?.candidate_id ?? row?.candidate_id ?? null;
 
-  // Close the CV modal and reset the route selection whenever the selection
-  // changes underneath them.
+  // Close the CV modal whenever the selection changes underneath it.
   useEffect(() => {
     setCvOpen(false);
     setParseOpen(false);
-    setActiveRoute(0);
   }, [candidateId]);
 
   if (!candidateId) {
@@ -100,11 +97,10 @@ export default function ExplainPanel({
   const matched = result ? matchedPills(result, job) : [];
   const prior = result ? creditedWithoutEvidence(result) : [];
   const gaps = result ? gapPills(result, job) : [];
-  const routes = result ? routeViews(result, job) : [];
+  const route = result ? cheapestRouteView(result, job) : null;
   const partial = result ? partialProgressView(result, job) : null;
   const blockers = result?.immutable_blockers ?? [];
   const nfp = result?.no_feasible_path ?? null;
-  const shown = routes[Math.min(activeRoute, Math.max(routes.length - 1, 0))] ?? null;
 
   const tier = d
     ? tierOf({ knockouts_passed: d.knockouts_passed, passed: d.passed })
@@ -266,43 +262,24 @@ export default function ExplainPanel({
           </div>
         )}
 
-        {routes.length > 0 && (
+        {route && (
           <div className="explain-block">
             <h3>Algorithmic recourse — what would change the outcome</h3>
             <p className="block-note">
-              Any one of these routes flips the decision on its own. Each is solved for minimum
-              effort and re-tested against the scorer.
+              The cheapest set of changes that flips the decision, solved for minimum effort and
+              re-tested against the scorer.
             </p>
-            <div className="route-chips" role="tablist">
-              {routes.map((r, i) => (
-                <button
-                  key={r.routeId}
-                  role="tab"
-                  aria-selected={i === activeRoute}
-                  className={"route-chip" + (i === activeRoute ? " active" : "")}
-                  onClick={() => setActiveRoute(i)}
-                >
-                  <strong>{r.label}</strong>
-                  <span>
-                    +{r.gain} pts · ~{r.months} mo
-                  </span>
-                </button>
-              ))}
-            </div>
-            {shown && (
-              <>
-                <p className="route-meta">
-                  → {shown.newScore}/{maxScore} · effort {shown.cost} · ≈{shown.months} months
-                  {shown.rank != null && <> · would place ~rank {shown.rank}</>} ·{" "}
-                  {shown.flipTested ? "flip-tested ✓" : "flip test ✗"}
-                </p>
-                <RouteBody route={shown} />
-              </>
-            )}
+            <p className="route-meta">
+              +{route.gain} pts → {route.newScore}/{maxScore} · effort {route.cost} · ≈
+              {route.months} months
+              {route.rank != null && <> · would place ~rank {route.rank}</>} ·{" "}
+              {route.flipTested ? "flip-tested ✓" : "flip test ✗"}
+            </p>
+            <RouteBody route={route} />
           </div>
         )}
 
-        {d?.passed && routes.length === 0 && blockers.length === 0 && !nfp && (
+        {d?.passed && !route && blockers.length === 0 && !nfp && (
           <p className="empty-note">No recourse needed — this candidate already clears the bar.</p>
         )}
 

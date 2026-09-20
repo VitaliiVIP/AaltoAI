@@ -9,7 +9,6 @@ from recourse_screen.explain.templates import (
     fallback_sentence,
     frame,
     full_fallback,
-    route_label,
 )
 from recourse_screen.explain.whitelist import BlockerView, DeltaView, ExplanationInput
 
@@ -84,7 +83,6 @@ def test_absent_delta_is_a_question_not_an_accusation():
     s = fallback_sentence(ABSENT_BOOL)
     assert "did not mention" in s
     assert "if you have it, add it" in s
-    assert "re-run the screen" in s
     # Never an assertion that the person lacks the skill.
     assert "you do not have" not in s.lower()
     assert "you lack" not in s.lower()
@@ -135,17 +133,6 @@ def test_full_fallback_covers_every_delta_once():
     sentences = full_fallback(input)
     assert [s.delta_id for s in sentences] == [d.delta_id for d in ALL_DELTAS]
     assert check(sentences, input) == []
-
-
-# --------------------------------------------------------------------------- #
-# Route labels
-# --------------------------------------------------------------------------- #
-
-def test_route_labels_follow_the_dominant_unit():
-    assert route_label([ABSENT_BOOL, STATED_PROJECTS]) == "build"
-    assert route_label([LEVEL_DEGREE]) == "certify"
-    assert route_label([STATED_MONTHS]) == "wait"
-    assert route_label([LEVEL_INT]) == "deepen"
 
 
 # --------------------------------------------------------------------------- #

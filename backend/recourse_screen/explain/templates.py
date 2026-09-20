@@ -1,4 +1,4 @@
-"""Code-owned text: fallback sentences, route labels, framing and disclosures.
+"""Code-owned text: fallback sentences, framing and disclosures.
 
 The LLM never writes any of this. It writes one sentence per delta and nothing
 else; the intro, the ordering, the mode-B lines, the immutable-blocker text and
@@ -27,14 +27,6 @@ _LEVEL_WORDS: dict[str, str] = {
     "msc": "a master's degree",
     "phd": "a doctorate",
 }
-
-_ROUTE_LABELS: dict[str, str] = {
-    "build": "build",
-    "certify": "certify",
-    "deepen": "deepen",
-    "wait": "wait",
-}
-
 
 def _as_int(value: object) -> int | None:
     if isinstance(value, bool) or value is None:
@@ -95,8 +87,7 @@ def fallback_sentence(d: DeltaView) -> str:
 
 def _absent_sentence(d: DeltaView) -> str:
     """Question form: the CV did not mention it, so never assert the person lacks it."""
-    head = (f"Your CV did not mention {d.candidate_phrase} — if you have it, add it "
-            f"and ask us to re-run the screen")
+    head = f"Your CV did not mention {d.candidate_phrase} — if you have it, add it to your CV"
     tail = _time_clause(d, lead="building it typically takes about")
     if tail:
         return f"{head}; if not, {tail}."
@@ -148,37 +139,6 @@ def full_fallback(input: ExplanationInput) -> list[Sentence]:
 
 
 # --------------------------------------------------------------------------- #
-# Route labelling
-# --------------------------------------------------------------------------- #
-
-def _delta_category(d: DeltaView) -> str:
-    field = d.field
-    if field.startswith("certifications.") or field == "education.highest_level":
-        return "certify"
-    if d.unit == "months":
-        return "wait" if field.startswith("experience.") else "deepen"
-    if d.unit == "level":
-        return "deepen"
-    return "build"  # boolean, projects and anything unrecognised
-
-
-def route_label(deltas: list[DeltaView]) -> str:
-    """Label a route by its dominant delta unit; ties go to the first delta."""
-    if not deltas:
-        return "build"
-    counts: dict[str, int] = {}
-    order: list[str] = []
-    for d in deltas:
-        c = _delta_category(d)
-        if c not in counts:
-            counts[c] = 0
-            order.append(c)
-        counts[c] += 1
-    best = max(order, key=lambda c: (counts[c], -order.index(c)))
-    return _ROUTE_LABELS.get(best, "build")
-
-
-# --------------------------------------------------------------------------- #
 # Framing
 # --------------------------------------------------------------------------- #
 #
@@ -186,10 +146,9 @@ def route_label(deltas: list[DeltaView]) -> str:
 # the outcome, then what stood out. Everything a route/blocker/no-feasible-path
 # block used to spell out in its own section (route ranks, the full five-line
 # disclosure) now rides along as a clause instead of a block -- the in-app
-# "Why this match?" panel is where a recruiter gets the full route-by-route
-# breakdown; the email only ever needed the single cheapest path and the two
-# disclaimers that actually carry legal weight (guidance-not-a-promise, the
-# right to a human review).
+# "Why this match?" panel is where a recruiter gets the per-delta detail; the
+# email only ever needed the cheapest path and the two disclaimers that actually
+# carry legal weight (guidance-not-a-promise, the right to a human review).
 
 HUMAN_REVIEW_LINE = "reply to this message to request a human review"
 
