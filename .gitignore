@@ -15,10 +15,12 @@ dist-ssr
 backend/data/cv_text/*
 !backend/data/cv_text/cv[1-9]_*.txt
 !backend/data/cv_text/cv10_*.txt
+!backend/data/cv_text/cv11_*.txt
 
 frontend/public/assets/cvs/*
 !frontend/public/assets/cvs/cv[1-9]_*
 !frontend/public/assets/cvs/cv10_*
+!frontend/public/assets/cvs/cv11_*
 
 # Parse caches keyed by CV hash. `profiles_raw/` embeds the full CV text and
 # `profiles/` carries employers and dates, so new entries stay out of git;
