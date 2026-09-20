@@ -83,14 +83,26 @@ Consequence: employers buy filters, candidates get silence.
 
 </div>
 
-<div class="pt-10 text-center text-xl">
-Every screening product on the market solves the first problem<br>
-<span class="opacity-60">and treats the second as someone else's.</span>
+<div class="mt-8 p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
+
+**The problem, in EU AI Act terms.** AI that screens or ranks job applicants is a
+**high-risk system** (Reg. 2024/1689, Annex III). Whoever deploys one must keep a human
+in charge of the decision, log every decision so it can be audited, and explain each
+one to the person affected.
+
+<div class="pt-1 text-sm opacity-70">
+A black-box filter delivers none of the three — and every rejection it issues is a decision it cannot account for.
+</div>
+
 </div>
 
 <!--
 This slide sets up the differentiator. Don't rush it — the judges need to feel
 that the second column is a real, unserved problem.
+
+The box is the legal framing of the same two problems: Annex III 4(a) puts
+recruitment/selection AI in the high-risk class. Human oversight (Art. 14),
+record-keeping (Art. 12), explanation of individual decisions (Art. 86).
 -->
 
 ---
@@ -120,97 +132,139 @@ actual threshold recourse. That gap is our project.
 
 # What we built
 
-<div class="grid grid-cols-2 gap-8 pt-4">
+<div class="relative -mt-2" style="height: 440px">
 
-<div>
+<!-- Screenshot, built up piece by piece: top bar, then the three panels.
+     Each piece is the same image clipped to one region, so nothing has to be cropped.
+     The seriph content area is ~870px wide: 500px screenshot + 16px gap + 354px notes. -->
+<div class="absolute" style="left: 0; top: 0; width: 500px; aspect-ratio: 1280 / 798">
+  <img v-click="1" src="/console.jpg" class="console-piece" style="clip-path: inset(0 0 91.5% 0)" />
+  <img v-click="2" src="/console.jpg" class="console-piece" style="clip-path: inset(8.5% 71% 1.5% 0.8%)" />
+  <img v-click="3" src="/console.jpg" class="console-piece" style="clip-path: inset(8.5% 30.2% 1.5% 29%)" />
+  <img v-click="4" src="/console.jpg" class="console-piece" style="clip-path: inset(8.5% 0.8% 1.5% 69.8%)" />
+</div>
 
-**For HR** — a screening console
-- Upload CVs, get a ranked shortlist
-- Author the job as a **100-point budget**
-- See which parts of the CV drove the score
-- Approve or override every decision
+<!-- One note per piece, appearing with it -->
+<div class="absolute text-xs leading-snug" style="left: 516px; top: 0; width: 354px">
+
+<div v-click="1" class="console-note">
+<b>Top bar</b> — the job being hired for, and the screening mode:
+<b>A</b> a fixed pass mark, or <b>B</b> the top N of the pool. Settings open the job editor and the audit log.
+</div>
+
+<div v-click="2" class="console-note">
+<b>Uploaded CVs</b> — drop in CVs, get a ranked shortlist. Each candidate carries a score out of
+<b>100</b>; the job is authored as a 100-point budget, so the score reads as a percentage.
+</div>
+
+<div v-click="3" class="console-note">
+<b>Why this match?</b> — hard requirements ticked off, matched requirements, and the gaps with their
+point values. Shows which parts of the CV drove the score. Approve or override every decision.
+</div>
+
+<div v-click="4" class="console-note">
+<b>Candidate email</b> — up to <b>3 independent routes</b> back to a pass, each with a cost and a
+realistic timeline, pre-drafted from the solver's output. The manager edits and sends. Never sent automatically.
+</div>
 
 </div>
 
-<div>
+<!-- The pipeline, laid out horizontally under the screenshot -->
+<div v-click="5" class="absolute left-0 right-0" style="top: 324px">
 
-**For the candidate** — an answer
-- Up to **3 independent routes** back to a pass
-- Each with a cost and a realistic timeline
-- Drafted as an email the manager sends
-- Never sent automatically
+<div class="flex items-stretch gap-2 text-xs">
 
+<div class="pipeline-step">
+<div class="pipeline-num">1 · Parse</div>
+LLM reads the CV, emits a structured profile. Cached by content hash.
+</div>
+<div class="pipeline-arrow">→</div>
+<div class="pipeline-step">
+<div class="pipeline-num">2 · Score</div>
+Deterministic. Knockouts first, then the 100-point budget.
+</div>
+<div class="pipeline-arrow">→</div>
+<div class="pipeline-step">
+<div class="pipeline-num">3 · Recourse</div>
+CP-SAT solver finds the cheapest changes that flip the outcome.
+</div>
+<div class="pipeline-arrow">→</div>
+<div class="pipeline-step">
+<div class="pipeline-num">4 · Explain</div>
+Code-owned templates; the LLM may rephrase, never invent.
+</div>
+<div class="pipeline-arrow">→</div>
+<div class="pipeline-step">
+<div class="pipeline-num">5 · Log</div>
+Hash-chained, append-only audit record per decision.
 </div>
 
 </div>
 
-<div class="pt-8">
-
-Open source · self-hostable · runs the whole demo with **no LLM key** if you want it to
+<div class="pt-1.5 text-xs opacity-60 text-center">
+The LLM appears <b>twice</b> (steps 1 and 4); everything between is deterministic and replayable.
+Open source · self-hostable · runs the whole demo with <b>no LLM key</b>.
+</div>
 
 </div>
+
+</div>
+
+<style>
+.console-piece {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.console-piece.slidev-vclick-hidden {
+  transform: translateY(10px);
+}
+.console-note {
+  padding: 0.45rem 0.6rem;
+  margin-bottom: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid rgba(156, 163, 175, 0.4);
+  background: rgba(156, 163, 175, 0.06);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.console-note.slidev-vclick-hidden {
+  transform: translateX(10px);
+}
+.pipeline-step {
+  flex: 1 1 0;
+  padding: 0.4rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid rgba(156, 163, 175, 0.4);
+  background: rgba(156, 163, 175, 0.06);
+  line-height: 1.25;
+}
+.pipeline-num {
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.pipeline-arrow {
+  align-self: center;
+  opacity: 0.5;
+}
+</style>
 
 <!--
+Build the console one piece at a time, left to right — the same order as the decision.
+Top bar (mode), CVs (rank), Why this match (score), Candidate email (recourse).
+
+Then the pipeline. The key architectural claim, and the one judges will probe: we did
+NOT ask a model "should we hire this person". Scoring and recourse are arithmetic and
+integer programming. The model only reads unstructured text and writes prose.
+
 Emphasise: the LLM is optional at demo time. Deterministic templates cover the whole
 flow; the model only polishes prose. That matters for sovereignty and for judges
 who ask "what if the API is down / the data can't leave the EU".
--->
 
----
-layout: two-cols
-layoutClass: gap-8
----
-
-# The pipeline
-
-<v-clicks>
-
-**1 · Parse** — LLM reads the CV, emits a structured profile. Cached by content hash.
-
-**2 · Score** — deterministic. Knockouts, then a 100-point budget.
-
-**3 · Recourse** — CP-SAT solver finds the cheapest changes that flip the outcome.
-
-**4 · Explain** — code-owned templates; LLM may rephrase, never invent.
-
-**5 · Log** — hash-chained, append-only audit record per decision.
-
-</v-clicks>
-
-::right::
-
-<div class="pt-16 text-sm font-mono leading-relaxed opacity-80">
-
-```
-CV (pdf/text)
-     │  LLM #1
-     ▼
-  Profile  ─────► Score ──► pass ──► shortlist
-  (JSON)            │
-                    │ fail
-                    ▼
-              CP-SAT solver
-                    │
-                    ▼
-              3 routes back
-                    │  LLM #2 (optional)
-                    ▼
-              Candidate email
-                    │
-                    ▼
-              Manager approves
-```
-
-</div>
-
-<div class="absolute bottom-6 right-8 text-xs opacity-60">
-The LLM appears <b>twice</b>. Everything between is deterministic and replayable.
-</div>
-
-<!--
-The key architectural claim, and the one judges will probe: we did NOT ask a model
-"should we hire this person". Scoring and recourse are arithmetic and integer
-programming. The model only reads unstructured text and writes prose.
+The screenshot is the synthetic candidate Priya Sharma (61/100, not advanced) —
+no real CV in the deck.
 -->
 
 ---
@@ -259,51 +313,6 @@ education.highest_level >= bsc
 Real config from backend/recourse_screen/jobs/backend_engineer.yaml.
 If asked why the numbers are 32/16/11/10/9/6/5/4/4/3: points must divide the
 solver's step count exactly, so the editor snaps them server-side.
--->
-
----
-
-# 4.1 · Score math
-
-<div class="pt-2">
-
-Each criterion has a **cap** — how many solver steps count as full marks — so one step is worth
-`points // cap`, always an integer.
-
-</div>
-
-```python
-score = Σ  min(steps(feature), cap) × (points // cap)
-```
-
-<div class="grid grid-cols-2 gap-8 pt-6">
-
-<div>
-
-**Mode A — fixed threshold**
-Pass at **≥ 80 / 100**.
-Absolute, stable, explainable.
-
-</div>
-
-<div>
-
-**Mode B — top N of pool**
-Pass if you are in the **top 3**.
-The bar is the 3rd-best score — it *moves*.
-
-</div>
-
-</div>
-
-<div class="pt-6 text-sm opacity-70">
-Both modes ship. We show both on purpose — see slide "the uncomfortable finding".
-</div>
-
-<!--
-Mode B bar is computed as the N-th best score among the other candidates (+1,
-ties resolved pessimistically). No bootstrap, no capacity modelling — deliberately
-simple, and we say so.
 -->
 
 ---
@@ -359,6 +368,167 @@ short routes win.
 The two dependency rules are real, from the manifest. The first stops us saying
 "learn Kubernetes" to someone with no Docker. The second stops "ship 5 microservices
 next month" advice to someone with no backend time to ship them in.
+-->
+
+---
+
+# Law compliance
+
+<div class="text-sm pt-2">
+
+Hiring AI is **high-risk under Annex III** of the EU AI Act. We designed to the strict reading.
+
+</div>
+
+<div class="grid grid-cols-2 gap-6 pt-4 text-sm">
+
+<div>
+
+**EU AI Act (2024/1689)**
+Art. 86 — right to an explanation of an individual decision.
+→ every decision carries its contributions, its routes and its config version.
+
+Art. 12 — record-keeping: the system must **log** its decisions.
+→ an append-only, **hash-chained** audit log. Each record stores the profile hash, job version,
+scorer and solver versions, model id and the routes shown; `make audit` verifies the chain.
+<span class="opacity-60">High-risk duties deferred to 2 Dec 2027 (Digital Omnibus 2026/1744).</span>
+
+**GDPR Art. 22**
+No solely-automated decision with significant effect.
+→ **the manager decides.** The system shortlists and drafts; a human sends.
+
+</div>
+
+<div>
+
+**GDPR Art. 13–15** — "meaningful information about the logic involved."
+→ the logic *is* the published point budget.
+
+**Data minimisation**
+→ protected attributes are never extracted into the profile; the model scores a
+feature vector, not a person.
+
+**NIS2 / sovereignty**
+→ self-hostable, two containers, no third-party ATS.
+
+</div>
+
+</div>
+
+<div class="pt-4 text-xs opacity-60">
+TODO (team): decide how hard we claim compliance vs "designed toward". Framing it as
+<b>developmental feedback</b>, not "the legal reason for rejection", is the safer posture.
+</div>
+
+<!--
+Dates checked against research/algorithmic_recourse_and_counterfactual_explanations_in_hiring.md,
+accurate as of Sept 2026. Do NOT say "we are compliant" on stage — say "we built to
+the obligations that land in Dec 2027".
+
+Logging: record_n.hash = sha256(record_{n-1}.hash + decision_id + timestamp + payload).
+Edit or delete one line and every hash after it breaks — `make audit` finds the first bad
+index. "Show us how this candidate was screened, 14 months ago" has an answer. Re-screens
+after a candidate updates their CV link back to the parent decision.
+-->
+
+---
+layout: statement
+---
+
+# Demo
+
+<div class="text-left max-w-xl mx-auto pt-6 text-base">
+
+1. Open the pool — 10 candidates, ranked
+2. Open **Aisha** — 75/100, rejected
+3. Read the three routes
+4. Flip **A → B** — watch the advice get more expensive
+5. Open the email draft, polish it, *don't* send
+6. Open the job editor — move Kubernetes from 11 pts to 0, re-screen
+
+</div>
+
+<div class="pt-8 text-sm opacity-60">
+recourse.ilia.fi
+</div>
+
+<!--
+Step 6 is the strongest moment: it makes visible that the employer's config,
+not the model, is what rejected her. Rehearse the timing — the re-screen is instant
+because explain=false.
+-->
+
+---
+layout: center
+class: text-center
+---
+
+# HR AI Advisor
+
+Screening that can explain itself — to the manager **and** to the candidate
+
+<div class="pt-8 text-sm opacity-70">
+Gleb Tretiakov · Vitalii Virronen · Ilya Zalesskii
+</div>
+
+<div class="pt-4 text-sm opacity-60">
+recourse.ilia.fi · open source · AaltoAI Hackathon 2026
+</div>
+
+---
+layout: section
+---
+
+# Appendix
+
+<div class="text-base opacity-70">
+Score math · Honesty rules · Keeping the model on a leash
+</div>
+
+---
+
+# Score math
+
+<div class="pt-2">
+
+Each criterion has a **cap** — how many solver steps count as full marks — so one step is worth
+`points // cap`, always an integer.
+
+</div>
+
+```python
+score = Σ  min(steps(feature), cap) × (points // cap)
+```
+
+<div class="grid grid-cols-2 gap-8 pt-6">
+
+<div>
+
+**Mode A — fixed threshold**
+Pass at **≥ 80 / 100**.
+Absolute, stable, explainable.
+
+</div>
+
+<div>
+
+**Mode B — top N of pool**
+Pass if you are in the **top 3**.
+The bar is the 3rd-best score — it *moves*.
+
+</div>
+
+</div>
+
+<div class="pt-6 text-sm opacity-70">
+Both modes ship. Recourse is honest under a threshold; under ranking it is a moving target, and the
+UI defaults to mode B so that is visible rather than hidden.
+</div>
+
+<!--
+Mode B bar is computed as the N-th best score among the other candidates (+1,
+ties resolved pessimistically). No bootstrap, no capacity modelling — deliberately
+simple, and we say so.
 -->
 
 ---
@@ -456,306 +626,3 @@ Every screening in this demo ran with <code>explain=false</code> — the determi
 Practical consequence: the demo cannot be broken by a rate limit, a bad key, or a
 model refusing. Judges love a demo that survives the venue wifi.
 -->
-
----
-layout: statement
----
-
-# The uncomfortable finding
-
-<div class="text-left max-w-3xl mx-auto pt-4">
-
-Same candidate. Same CV. Same job.
-
-</div>
-
-<div class="grid grid-cols-2 gap-8 pt-6 text-left max-w-3xl mx-auto">
-
-<div class="p-4 rounded bg-green-500 bg-opacity-10">
-
-**Threshold mode** — bar 80, scored 75
-
-One step:
-- *one more microservices project*
-
-<div class="pt-2 text-sm opacity-70">cost 6</div>
-
-</div>
-
-<div class="p-4 rounded bg-red-500 bg-opacity-10">
-
-**Ranking mode** — bar 91, scored 75, ranked 5/10
-
-Two steps, and the bar moves if others improve:
-- *one more microservices project*
-- *plus hands-on Kubernetes — ~4 months*
-
-<div class="pt-2 text-sm opacity-70">cost 15</div>
-
-</div>
-
-</div>
-
-<div class="pt-6 text-sm opacity-80 max-w-3xl mx-auto text-left">
-Recourse is honest under a threshold. Under ranking it is a <b>moving target</b> — and we show that
-rather than hide it.
-</div>
-
-<!--
-This is the research contribution and the intellectually honest moment of the pitch.
-Real numbers, candidate cv4. Mode B is the default in the UI precisely so the weakness
-is visible, not buried.
--->
-
----
-
-# 3 · Law compliance
-
-<div class="text-sm pt-2">
-
-Hiring AI is **high-risk under Annex III** of the EU AI Act. We designed to the strict reading.
-
-</div>
-
-<div class="grid grid-cols-2 gap-6 pt-4 text-sm">
-
-<div>
-
-**EU AI Act (2024/1689)**
-Art. 86 — right to an explanation of an individual decision.
-→ every decision carries its contributions, its routes and its config version.
-<span class="opacity-60">High-risk duties deferred to 2 Dec 2027 (Digital Omnibus 2026/1744).</span>
-
-**GDPR Art. 22**
-No solely-automated decision with significant effect.
-→ **the manager decides.** The system shortlists and drafts; a human sends.
-
-</div>
-
-<div>
-
-**GDPR Art. 13–15** — "meaningful information about the logic involved."
-→ the logic *is* the published point budget.
-
-**Data minimisation**
-→ protected attributes are never extracted into the profile; the model scores a
-feature vector, not a person.
-
-**NIS2 / sovereignty**
-→ self-hostable, two containers, no third-party ATS.
-
-</div>
-
-</div>
-
-<div class="pt-4 text-xs opacity-60">
-TODO (team): decide how hard we claim compliance vs "designed toward". Framing it as
-<b>developmental feedback</b>, not "the legal reason for rejection", is the safer posture.
-</div>
-
-<!--
-Dates checked against research/algorithmic_recourse_and_counterfactual_explanations_in_hiring.md,
-accurate as of Sept 2026. Do NOT say "we are compliant" on stage — say "we built to
-the obligations that land in Dec 2027".
--->
-
----
-
-# Every decision is replayable
-
-<div class="pt-4">
-
-An append-only, **hash-chained** log. Each record links to the previous one:
-
-</div>
-
-```
-record_n.hash = sha256( record_{n-1}.hash + decision_id + timestamp + payload )
-```
-
-<div class="grid grid-cols-3 gap-6 pt-8 text-sm">
-
-<div>
-
-**What's stored**
-profile hash, job version, scorer version, solver version, model id, the routes shown
-
-</div>
-
-<div>
-
-**What it proves**
-edit or delete one line and every hash after it breaks — `make audit` finds the first bad index
-
-</div>
-
-<div>
-
-**Why it matters**
-"show us how this candidate was screened, 14 months ago" has an answer
-
-</div>
-
-</div>
-
-<!--
-Also: re-screens after a candidate updates their CV link back to the parent decision,
-so the chain shows the whole conversation, not just the last verdict.
--->
-
----
-
-# 5 · The console
-
-<div class="pt-2 text-sm opacity-80">
-Three panels, left to right — the same order as the decision.
-</div>
-
-<div class="grid grid-cols-3 gap-4 pt-6 text-sm">
-
-<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
-
-**Uploaded CVs**
-Ranked, best first. Score chip per candidate. Click to open the original PDF or the parsed profile.
-
-</div>
-
-<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
-
-**Why this match?**
-Hard requirements ticked off, matched requirements, gaps identified with point values. Switch to candidate view.
-
-</div>
-
-<div class="p-4 rounded border border-gray-400 border-opacity-40 bg-gray-400 bg-opacity-5">
-
-**Candidate email**
-Pre-drafted from the routes. Edit, *Polish with Claude*, then **Send** or **Keep further** — the manager's call.
-
-</div>
-
-</div>
-
-<div class="pt-8 p-4 rounded border border-dashed border-gray-500 text-center text-sm opacity-60">
-TODO: drop a fresh screenshot in <code>deck/public/console.png</code> and uncomment the image below.<br>
-The screenshot in tmp.pdf is stale (old 103-point scale) and shows a real CV — don't ship it.
-</div>
-
-<!--
-<img src="/console.png" class="rounded shadow mt-4" />
--->
-
-<!--
-If the live demo works on stage, skip this slide entirely and just drive the UI.
-Keep it as the fallback.
--->
-
----
-layout: statement
----
-
-# Demo
-
-<div class="text-left max-w-xl mx-auto pt-6 text-base">
-
-1. Open the pool — 10 candidates, ranked
-2. Open **Aisha** — 75/100, rejected
-3. Read the three routes
-4. Flip **A → B** — watch the advice get more expensive
-5. Open the email draft, polish it, *don't* send
-6. Open the job editor — move Kubernetes from 11 pts to 0, re-screen
-
-</div>
-
-<div class="pt-8 text-sm opacity-60">
-recourse.ilia.fi
-</div>
-
-<!--
-Step 6 is the strongest moment: it makes visible that the employer's config,
-not the model, is what rejected her. Rehearse the timing — the re-screen is instant
-because explain=false.
--->
-
----
-
-# What's real, what's demo
-
-<div class="grid grid-cols-2 gap-8 pt-4 text-sm">
-
-<div>
-
-### Real
-- LLM CV parsing with a content-hash cache
-- Deterministic scorer, 100-point budget
-- CP-SAT recourse with causal constraints
-- Template + checker explanation layer
-- Hash-chained audit log
-- HR job editor with server-side budget snapping
-- 17 test modules, synthetic eval harness
-
-</div>
-
-<div>
-
-### Demo-scale, and we'll say so
-- 10 candidates in the pool, one job family
-- Ranking mode is deliberately simplified — the bar is just the N-th best score
-- Costs and durations are hand-authored in the manifest, not learned
-- No bias audit across groups yet
-- No ATS integration
-
-</div>
-
-</div>
-
-<!--
-Judges reward the right-hand column. Say it before they ask.
--->
-
----
-
-# Next
-
-<div class="grid grid-cols-2 gap-8 pt-6">
-
-<div>
-
-**Near term**
-- Recourse-cost fairness audit across groups
-- More job families than backend engineering
-- Candidate-side re-screen loop ("I added this — recheck me")
-
-</div>
-
-<div>
-
-**The open question**
-- Does telling people how to pass teach them to **improve** — or to **game**?
-- Causal features and dependency constraints are our first answer.
-- It needs real data to settle.
-
-</div>
-
-</div>
-
-<!--
-Ending on an honest open question beats ending on a roadmap. Invite the challenge.
--->
-
----
-layout: center
-class: text-center
----
-
-# HR AI Advisor
-
-Screening that can explain itself — to the manager **and** to the candidate
-
-<div class="pt-8 text-sm opacity-70">
-Gleb Tretiakov · Vitalii Virronen · Ilya Zalesskii
-</div>
-
-<div class="pt-4 text-sm opacity-60">
-recourse.ilia.fi · open source · AaltoAI Hackathon 2026
-</div>
