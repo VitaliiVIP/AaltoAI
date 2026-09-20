@@ -155,7 +155,8 @@ export default function ExplainPanel({
 
         {d && d.mode === "B" && d.rank != null && (
           <p className="rank-strip">
-            Rank <strong>{d.rank}</strong> of {d.pool_size} · top {d.slots_n} advance
+            Rank <strong>{d.rank}</strong> of {d.pool_size} · top {d.slots_n} advance · bar to
+            beat <strong>{d.threshold}</strong>
           </p>
         )}
 
