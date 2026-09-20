@@ -154,11 +154,16 @@ export function gapPills(r: ScreenResult, job: JobSummary | null): GapPill[] {
 /**
  * `explanation.text` is addressed to the candidate, which is the wrong voice
  * for the recruiter column, so this line is generated from the decision instead.
+ *
+ * Lists every matched requirement, not just the strongest. Weaknesses are
+ * listed the same way for everyone outside the top slots — but a candidate
+ * who already ranks within the top N advancing (mode B) is winning on the
+ * merits shown, so their gaps are not worth dwelling on here.
  */
 export function recruiterSummary(r: ScreenResult, job: JobSummary | null): string {
   const d = r.decision;
-  const best = matchedPills(r, job)[0];
-  const worst = gapPills(r, job)[0];
+  const matched = matchedPills(r, job);
+  const gaps = gapPills(r, job);
   const head = d.passed ? "Advances" : "Not advanced";
   const bar = d.mode === "A" ? "a threshold of" : "a bar of";
   const parts = [`${head} at ${d.score}/${d.max_score} against ${bar} ${d.threshold}.`];
@@ -166,8 +171,14 @@ export function recruiterSummary(r: ScreenResult, job: JobSummary | null): strin
     const failed = d.knockouts.filter((k) => !k.passed).map((k) => k.rule);
     parts.push(`Fails a hard requirement: ${failed.join("; ")}.`);
   }
-  if (best) parts.push(`Strongest: ${best.phrase} (${best.points} pts).`);
-  if (worst) parts.push(`Largest shortfall: ${worst.phrase} (−${worst.points} pts).`);
+  if (matched.length) {
+    parts.push(`Strong on: ${matched.map((m) => m.phrase).join(", ")}.`);
+  }
+  const inTopSlots =
+    d.mode === "B" && d.rank != null && d.slots_n != null && d.rank <= d.slots_n;
+  if (!inTopSlots && gaps.length) {
+    parts.push(`Weak on: ${gaps.map((g) => g.phrase).join(", ")}.`);
+  }
   if (d.mode === "B" && d.rank != null && d.pool_size != null) {
     parts.push(`Ranked ${d.rank} of ${d.pool_size}; top ${d.slots_n} advance.`);
   }
