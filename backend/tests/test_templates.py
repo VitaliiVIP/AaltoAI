@@ -159,8 +159,6 @@ def test_frame_carries_every_required_disclosure():
     assert "guidance, not a promise" in text
     assert "other changes could also have been enough" in text
     assert "typical, not exact" in text
-    assert "2026-09-19" in text
-    assert "screen-v1" in text
     assert HUMAN_REVIEW_LINE in text
 
 

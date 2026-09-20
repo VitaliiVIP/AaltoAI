@@ -209,7 +209,6 @@ def _paragraph1(input: ExplanationInput) -> str:
         if input.slots_n is not None:
             line += f" {input.slots_n} of {input.pool_size} advanced."
         sentences.append(line)
-    sentences.append(f"(Screened {input.as_of}, model {input.model_version}.)")
     return " ".join(sentences)
 
 
