@@ -1591,6 +1591,12 @@ h1, h2, h3, p { margin: 0; }
 /* Two buttons in the header: only the first one takes the free space. */
 .open-cv-btn.secondary + .open-cv-btn { margin-left: 0; }
 
+.open-cv-btn.danger {
+  background: var(--red);
+  margin-left: 0.5rem;
+}
+.open-cv-btn.danger:hover { background: #8f2f2b; }
+
 .parse-modal {
   max-width: 1180px;
   display: flex;

@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ApiError,
+  deleteCandidate,
   getAudit,
   getCandidates,
   getJobs,
@@ -261,6 +262,24 @@ export function useScreening() {
     [refreshPool],
   );
 
+  // Permanent, server-side removal (unlike the CV-list "Delete", which only
+  // hides a sent CV locally). Throws ApiError(403) for the fixed demo pool —
+  // callers decide how to surface that.
+  const deleteCv = useCallback(
+    async (candidateId: string) => {
+      await deleteCandidate(candidateId);
+      setResults((prev) => {
+        const next = { ...prev };
+        for (const k of Object.keys(next)) {
+          if (k === candidateId || k.startsWith(`${candidateId}|`)) delete next[k];
+        }
+        return next;
+      });
+      await refreshPool();
+    },
+    [refreshPool],
+  );
+
   // ---- derived -----------------------------------------------------------
 
   const key = selectedId ? cacheKey(selectedId) : "";
@@ -289,5 +308,6 @@ export function useScreening() {
     applyJob,
     polishExplanation,
     uploadCv,
+    deleteCv,
   };
 }

@@ -1,6 +1,7 @@
 """FastAPI surface for the separate frontend, plus a throwaway demo page at /."""
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, UploadFile
@@ -29,6 +30,11 @@ from ..schemas import (
 )
 
 STATIC = Path(__file__).parent / "static"
+
+# The fixed demo pool (see the allowlist in .gitignore, which is the source of
+# truth for which candidate ids ship committed to the repo). These can't be
+# deleted through the API -- only a CV uploaded at runtime can be.
+PRESET_CANDIDATE_ID_RE = re.compile(r"^cv(?:[1-9]|10|11)_")
 
 app = FastAPI(title="Recourse pre-screener", version="0.1.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
@@ -173,6 +179,30 @@ def candidate_cv(candidate_id: str, job: str = "backend_engineer") -> dict:
         "unmatched_skills": profile.unmatched_skills,
         "provenance": profile.provenance.model_dump(mode="json"),
     }
+
+
+@app.delete("/candidates/{candidate_id}")
+def delete_candidate(candidate_id: str) -> dict:
+    """Remove a CV uploaded at runtime: its cached text, parsed profile and raw
+    extraction, plus the original file if one was stored. The fixed demo pool
+    (see PRESET_CANDIDATE_ID_RE) is refused -- those ship committed to the repo
+    and deleting them would just have `make dev` recreate them empty."""
+    profiles = list_cached_profiles()
+    if candidate_id not in profiles:
+        raise HTTPException(404, f"unknown candidate_id {candidate_id!r}")
+    if PRESET_CANDIDATE_ID_RE.match(candidate_id):
+        raise HTTPException(403, "This is a built-in demo candidate and cannot be deleted.")
+
+    profile_path = profiles[candidate_id]
+    sha = profile_path.stem
+    for p in (
+        config.CV_TEXT_DIR / f"{candidate_id}.txt",
+        profile_path,
+        config.DATA_DIR / "profiles_raw" / f"{sha}.json",
+        config.DATA_DIR / "uploads" / f"{candidate_id}.pdf",
+    ):
+        p.unlink(missing_ok=True)
+    return {"ok": True, "candidate_id": candidate_id}
 
 
 @app.get("/jobs/{job_id}/spec")

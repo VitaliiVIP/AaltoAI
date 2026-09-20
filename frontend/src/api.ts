@@ -87,6 +87,12 @@ export function getCvParse(
   return req<CvParse>(`/candidates/${encodeURIComponent(candidateId)}/cv?${q}`, { signal });
 }
 
+/** Permanently removes a CV uploaded at runtime. The backend refuses (403) for
+ * any candidate in the fixed demo pool. */
+export function deleteCandidate(candidateId: string, signal?: AbortSignal): Promise<void> {
+  return req<void>(`/candidates/${encodeURIComponent(candidateId)}`, { method: "DELETE", signal });
+}
+
 export function postScreen(body: ScreenRequest, signal?: AbortSignal): Promise<ScreenResult> {
   return postJson<ScreenResult>("/screen", body, signal);
 }

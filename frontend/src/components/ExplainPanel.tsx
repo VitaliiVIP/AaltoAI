@@ -27,6 +27,7 @@ interface ExplainPanelProps {
   maxScore: number;
   phase: Phase;
   error: string | null;
+  onDeleteCv: (id: string) => void;
 }
 
 function RouteBody({ route }: { route: RouteView }) {
@@ -60,6 +61,7 @@ export default function ExplainPanel({
   maxScore,
   phase,
   error,
+  onDeleteCv,
 }: ExplainPanelProps) {
   const [cvOpen, setCvOpen] = useState(false);
   const [parseOpen, setParseOpen] = useState(false);
@@ -128,6 +130,9 @@ export default function ExplainPanel({
         </button>
         <button className="open-cv-btn" onClick={() => setCvOpen(true)}>
           Open CV
+        </button>
+        <button className="open-cv-btn danger" onClick={() => onDeleteCv(candidateId)}>
+          Delete CV
         </button>
       </div>
 
