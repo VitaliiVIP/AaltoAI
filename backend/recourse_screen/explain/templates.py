@@ -181,118 +181,90 @@ def route_label(deltas: list[DeltaView]) -> str:
 # --------------------------------------------------------------------------- #
 # Framing
 # --------------------------------------------------------------------------- #
+#
+# Two paragraphs, in the voice of an actual letter rather than a report:
+# the outcome, then what stood out. Everything a route/blocker/no-feasible-path
+# block used to spell out in its own section (route ranks, the full five-line
+# disclosure) now rides along as a clause instead of a block -- the in-app
+# "Why this match?" panel is where a recruiter gets the full route-by-route
+# breakdown; the email only ever needed the single cheapest path and the two
+# disclaimers that actually carry legal weight (guidance-not-a-promise, the
+# right to a human review).
 
 HUMAN_REVIEW_LINE = "reply to this message to request a human review"
 
 
-def _intro(input: ExplanationInput) -> list[str]:
+def _paragraph1(input: ExplanationInput) -> str:
     if input.outcome == "advanced":
-        head = "Your application moved forward to the next stage of this role."
+        head = "Good news — your application moved forward to the next stage of this role."
     else:
-        head = "Your application did not move forward at this stage."
-    lines = [
+        head = "Unfortunately, your application did not move forward at this stage."
+    sentences = [
         head,
         "An automated screen compared your profile against the requirements this "
-        "employer configured for this role. No person read your CV at this step.",
+        "employer configured for this role; no person read your CV at this step.",
     ]
     if input.mode == "B" and input.rank is not None and input.pool_size is not None:
         line = f"You placed {input.rank} of {input.pool_size} in this pool."
         if input.slots_n is not None:
             line += f" {input.slots_n} of {input.pool_size} advanced."
-        lines.append(line)
-    return lines
+        sentences.append(line)
+    sentences.append(f"(Screened {input.as_of}, model {input.model_version}.)")
+    return " ".join(sentences)
 
 
-def _route_block(input: ExplanationInput, route_id: str, index: int,
-                 by_id: dict[str, str]) -> list[str]:
-    deltas = input.deltas_for_route(route_id)
-    label = route_label(deltas)
-    lines = [f"Route {index} ({label}):"]
-    for d in deltas:
-        text = by_id.get(d.delta_id) or fallback_sentence(d)
-        lines.append(f"- {text}")
-    rank = input.route_ranks.get(route_id)
-    if input.mode == "B" and rank is not None:
-        lines.append(f"  This route would have placed you around rank {rank} in this pool.")
-    return lines
+def _weaknesses(input: ExplanationInput, by_id: dict[str, str]) -> str | None:
+    """The single cheapest sufficient route's sentences, as flowing prose.
+    `None` when there is nothing to report (an already-advanced candidate, or
+    a not-advanced one with no route and no blocker -- shouldn't happen, but
+    `frame` still needs a sane fallback)."""
+    route_ids = input.route_ids()
+    if not route_ids:
+        return None
+    deltas = input.deltas_for_route(route_ids[0])
+    return " ".join(by_id.get(d.delta_id) or fallback_sentence(d) for d in deltas)
 
 
-def _no_feasible_path_block(input: ExplanationInput) -> list[str]:
-    has_partial = bool(input.deltas)
-    lines = [
-        "Within the time window this screen looks ahead over, we did not find any "
-        "combination of changes that would have changed the outcome for this role.",
-    ]
-    if has_partial:
-        lines.append(
-            "The steps above are the furthest progress we could map. They are real "
-            "progress, but on their own they would not have changed this decision."
+def _paragraph2(input: ExplanationInput, sentences: list[Sentence]) -> str:
+    by_id = {s.delta_id: s.sentence for s in sentences}
+    closing = f"You can ask for a person to review this decision — {HUMAN_REVIEW_LINE}."
+
+    if input.immutable_blockers:
+        fixed = " ".join(b.disclosure for b in input.immutable_blockers)
+        return (
+            f"One requirement for this role is fixed and no action on your part can "
+            f"change it: {fixed} This is guidance, not a promise. {closing}"
         )
-    lines.append(
-        f"That is a limit of what an automated screen can work out, not a final word "
-        f"on you: {HUMAN_REVIEW_LINE}, and a person will look at this in full."
-    )
-    return lines
 
+    weak = _weaknesses(input, by_id)
 
-def _blocker_block(input: ExplanationInput) -> list[str]:
-    lines = ["One requirement for this role is fixed and no action on your part can change it:"]
-    for b in input.immutable_blockers:
-        lines.append(f"- {b.disclosure}")
-    return lines
-
-
-def _disclosures(input: ExplanationInput) -> list[str]:
-    parts = [
-        "This is guidance, not a promise.",
-    ]
-    if input.deltas and not input.no_feasible_path:
-        parts.append(
-            "Each route above is one sufficient path, not the only one; other "
-            "combinations of changes would also have been enough, and making these "
-            "changes does not guarantee any outcome."
+    if input.no_feasible_path:
+        lead = (
+            "Within the time window this screen looks ahead over, we did not find any "
+            "combination of changes that would have changed this outcome."
         )
-    parts.append(
-        "Any times given are what these steps typically take, not what they will take for you."
-    )
-    parts.append(
-        f"This reflects the screen as it ran on {input.as_of} under model version "
-        f"{input.model_version}."
-    )
-    parts.append(
-        "Role requirements and the group of people applying both change over time, so "
-        "the same profile can be read differently later."
-    )
-    parts.append(
-        f"You can have a person review this decision: {HUMAN_REVIEW_LINE}."
-    )
-    return [" ".join(parts)]
+        if weak:
+            return (
+                f"{lead} The furthest progress we could map: {weak} On their own these "
+                f"would not have changed this decision. That is a limit of what an "
+                f"automated screen can work out, not a final word on you. {closing}"
+            )
+        return (
+            f"{lead} That is a limit of what an automated screen can work out, not a "
+            f"final word on you. {closing}"
+        )
+
+    if weak:
+        return (
+            f"Here is what stood out against this role's requirements. {weak} This is "
+            f"guidance, not a promise — other changes could also have been enough, and "
+            f"the timelines given are typical, not exact. {closing}"
+        )
+
+    return closing
 
 
 def frame(input: ExplanationInput, sentences: list[Sentence]) -> str:
-    """Assemble the final candidate-facing text around the per-delta sentences."""
-    by_id = {s.delta_id: s.sentence for s in sentences}
-    blocks: list[str] = ["\n".join(_intro(input))]
-
-    route_ids = input.route_ids()
-    if route_ids and not input.no_feasible_path:
-        if len(route_ids) == 1:
-            blocks.append("Here is what would have been enough:")
-        else:
-            blocks.append(
-                "Here are separate routes, each of which on its own would have been enough:"
-            )
-    elif route_ids and input.no_feasible_path:
-        blocks.append("Here is the progress we could map for you:")
-
-    for i, rid in enumerate(route_ids, start=1):
-        blocks.append("\n".join(_route_block(input, rid, i, by_id)))
-
-    if input.no_feasible_path:
-        blocks.append("\n".join(_no_feasible_path_block(input)))
-
-    if input.immutable_blockers:
-        blocks.append("\n".join(_blocker_block(input)))
-
-    blocks.extend(_disclosures(input))
-    return "\n\n".join(blocks)
+    """Two paragraphs: the outcome, then what stood out (or the fixed reason,
+    when one applies)."""
+    return f"{_paragraph1(input)}\n\n{_paragraph2(input, sentences)}"

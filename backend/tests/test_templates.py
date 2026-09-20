@@ -157,20 +157,30 @@ def test_frame_carries_every_required_disclosure():
     text = frame(input, full_fallback(input))
     assert "automated screen" in text
     assert "guidance, not a promise" in text
-    assert "one sufficient path, not the only one" in text
-    assert "not what they will take for you" in text
+    assert "other changes could also have been enough" in text
+    assert "typical, not exact" in text
     assert "2026-09-19" in text
     assert "screen-v1" in text
-    assert "change over time" in text
     assert HUMAN_REVIEW_LINE in text
 
 
-def test_frame_groups_sentences_into_labelled_routes():
+def test_frame_is_exactly_two_paragraphs():
     input = make_input(ALL_DELTAS)
     text = frame(input, full_fallback(input))
-    assert "Route 1 (build):" in text
-    assert "Route 2 (build):" in text
-    assert "Route 3 (certify):" in text
+    assert len(text.split("\n\n")) == 2
+
+
+def test_frame_uses_only_the_cheapest_route():
+    # ALL_DELTAS spans routes r1 (ABSENT_BOOL, STATED_MONTHS), r2 (STATED_PROJECTS,
+    # DENIED_BOOL) and r3 (LEVEL_DEGREE, LEVEL_INT). The email is one route, not
+    # a menu of alternatives, so only r1's content should show up.
+    input = make_input(ALL_DELTAS)
+    text = frame(input, full_fallback(input))
+    assert fallback_sentence(ABSENT_BOOL) in text
+    assert fallback_sentence(STATED_MONTHS) in text
+    assert fallback_sentence(STATED_PROJECTS) not in text
+    assert fallback_sentence(LEVEL_DEGREE) not in text
+    assert "Route 1" not in text
 
 
 def test_frame_never_claims_an_interview_and_gives_no_score():
@@ -189,7 +199,6 @@ def test_mode_b_reports_rank_and_the_aggregate_line():
     text = frame(input, full_fallback(input))
     assert "You placed 7 of 24 in this pool." in text
     assert "3 of 24 advanced." in text
-    assert "would have placed you around rank 2 in this pool" in text
 
 
 def test_mode_a_says_nothing_about_a_pool():
