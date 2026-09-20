@@ -122,8 +122,13 @@ export default function ExplainPanel({
         <button className="open-cv-btn" onClick={() => setCvOpen(true)}>
           Open CV
         </button>
-        <button className="open-cv-btn danger" onClick={() => onDeleteCv(candidateId)}>
-          Delete CV
+        <button
+          className="open-cv-btn danger"
+          onClick={() => onDeleteCv(candidateId)}
+          aria-label="Delete CV"
+          title="Delete CV"
+        >
+          ×
         </button>
       </div>
 
