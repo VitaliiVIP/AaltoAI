@@ -116,7 +116,7 @@ layout: statement
 ### Tell the rejected candidate<br>**exactly what would have changed the answer.**
 
 <div class="pt-8 text-lg opacity-70">
-"One more shipped microservice project would have been enough."
+"One more shipped machine-learning project would have been enough."
 </div>
 
 <div class="pt-6 text-sm opacity-50">
@@ -299,21 +299,22 @@ education.highest_level >= bsc
 
 | Criterion | Pts |
 |---|---|
-| Backend experience | 32 |
+| Data science experience | 30 |
 | Python | 16 |
-| Kubernetes | 11 |
-| Microservices projects | 10 |
-| Cloud platform | 9 |
-| Education level | 6 |
-| CI/CD · Docker · IaC · SQL | 5·4·4·3 |
+| ML framework | 12 |
+| ML projects | 10 |
+| SQL · Education level | 8·8 |
+| Applied statistics | 6 |
+| Cloud platform | 4 |
+| Data pipeline · Visualisation | 3·3 |
 
 </div>
 
 </div>
 
 <!--
-Real config from backend/recourse_screen/jobs/backend_engineer.yaml.
-If asked why the numbers are 32/16/11/10/9/6/5/4/4/3: points must divide the
+Real config from backend/recourse_screen/jobs/data_scientist.yaml.
+If asked why the numbers are 30/16/12/10/8/8/6/4/3/3: points must divide the
 solver's step count exactly, so the editor snaps them server-side.
 -->
 
@@ -351,8 +352,8 @@ Each step has a cost and a typical duration, from the job-family manifest — no
 **Causal constraints**
 
 <div class="font-mono text-xs py-2 leading-relaxed">
-k8s ≤ docker<br>
-Δmicro ≤ 2 + Δbackend_mo
+pipeline ≤ sql<br>
+Δml_proj ≤ 2 + Δdata_mo
 </div>
 
 You cannot be advised to fake a dependency.
@@ -368,8 +369,8 @@ short routes win.
 
 <!--
 The two dependency rules are real, from the manifest. The first stops us saying
-"learn Kubernetes" to someone with no Docker. The second stops "ship 5 microservices
-next month" advice to someone with no backend time to ship them in.
+"own a data pipeline" to someone with no SQL. The second stops "ship 5 machine-learning
+projects next month" advice to someone with no data-science time to ship them in.
 -->
 
 ---
@@ -439,22 +440,12 @@ layout: statement
 
 # Demo
 
-<div class="text-left max-w-xl mx-auto pt-6 text-base">
-
-1. Open the pool — 10 candidates, ranked
-2. Open **Aisha** — 75/100, rejected
-3. Read the three routes
-4. Open the email draft, polish it, *don't* send
-5. Open the job editor — move Kubernetes from 11 pts to 0, re-screen
-
-</div>
-
 <div class="pt-8 text-sm opacity-60">
 recourse.ilia.fi
 </div>
 
 <!--
-Step 5 is the strongest moment: it makes visible that the employer's config,
+The job editor is the strongest moment: it makes visible that the employer's config,
 not the model, is what rejected her. Rehearse the timing — the re-screen is instant
 because explain=false.
 -->
@@ -538,7 +529,7 @@ The system must never claim the candidate lacks something it merely <b>didn't se
 
 **→ instruction**
 
-<div class="pt-2 italic opacity-80">"Add about 6 more months of professional software engineering experience."</div>
+<div class="pt-2 italic opacity-80">"Add about 6 more months of professional data science, analytics or machine-learning experience."</div>
 
 </div>
 
@@ -548,7 +539,7 @@ The system must never claim the candidate lacks something it merely <b>didn't se
 
 **→ instruction that concedes**
 
-<div class="pt-2 italic opacity-80">"Your CV said you do not have hands-on Kubernetes experience, so gaining it is one way to close this gap."</div>
+<div class="pt-2 italic opacity-80">"Your CV said you do not have hands-on experience with a machine-learning framework, so gaining it is one way to close this gap."</div>
 
 </div>
 
