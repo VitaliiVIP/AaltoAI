@@ -10,6 +10,9 @@ BACKEND_DIR = Path(__file__).resolve().parent.parent
 PACKAGE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BACKEND_DIR / "data"
 CV_TEXT_DIR = DATA_DIR / "cv_text"
+# Uploaded PDFs and their first-page thumbnails, served back by the API. The
+# demo pool's files live in the frontend image instead (public/assets/cvs).
+UPLOADS_DIR = DATA_DIR / "uploads"
 PROFILE_CACHE_DIR = DATA_DIR / "profiles"
 SYNTH_DIR = DATA_DIR / "synth"
 AUDIT_LOG_PATH = DATA_DIR / "audit.jsonl"

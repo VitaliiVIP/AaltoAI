@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { JobSummary, PoolRow, ScreenResult } from "../apiTypes";
 import { tierOf } from "../types";
-import { assetsFor, deriveName } from "../candidateMeta";
+import { deriveName } from "../candidateMeta";
 import { auditUrl } from "../api";
 import {
   creditedWithoutEvidence,
@@ -17,6 +17,7 @@ import {
 } from "../present";
 import type { RouteView } from "../present";
 import type { Phase } from "../useScreening";
+import CvModal from "./CvModal";
 import ParsedCvModal from "./ParsedCvModal";
 import ScoreChip from "./ScoreChip";
 
@@ -77,15 +78,6 @@ export default function ExplainPanel({
     setActiveRoute(0);
   }, [candidateId]);
 
-  useEffect(() => {
-    if (!cvOpen) return;
-    function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape") setCvOpen(false);
-    }
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [cvOpen]);
-
   if (!candidateId) {
     return (
       <section className="col col-explain" aria-label="Match explanation">
@@ -100,7 +92,6 @@ export default function ExplainPanel({
   }
 
   const name = deriveName(candidateId);
-  const { thumbUrl } = assetsFor(candidateId);
   const busy = phase === "loading" || phase === "explaining";
 
   // The previous result stays on screen while a new one loads, so scrubbing the
@@ -328,18 +319,11 @@ export default function ExplainPanel({
       </div>
 
       {cvOpen && (
-        <div className="cv-modal-overlay" onClick={() => setCvOpen(false)}>
-          <div className="cv-modal" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="icon-btn cv-modal-close"
-              aria-label="Close CV"
-              onClick={() => setCvOpen(false)}
-            >
-              ✕
-            </button>
-            <img src={thumbUrl} alt={`${name} full CV`} />
-          </div>
-        </div>
+        <CvModal
+          candidateId={candidateId}
+          hasPdf={row?.has_pdf ?? false}
+          onClose={() => setCvOpen(false)}
+        />
       )}
 
       <ParsedCvModal

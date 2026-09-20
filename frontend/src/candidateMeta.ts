@@ -7,6 +7,8 @@
  * the CV filename purely so a human can tell the cards apart.
  */
 
+import { cvPdfUrl, cvThumbUrl } from "./api";
+
 const NAME_OVERRIDES: Record<string, string> = {
   cv10_tomas_hidalgo: "Tomás Hidalgo",
   cv7_daniel_kwan: "Daniel Tuovio",
@@ -60,7 +62,15 @@ export interface CandidateAssets {
   thumbUrl: string;
 }
 
-export function assetsFor(candidateId: string): CandidateAssets {
+/**
+ * Where a candidate's PDF and first-page PNG live. The demo pool ships inside
+ * the frontend build under /assets/cvs; anything uploaded through the app is
+ * held by the API and served from there (`PoolRow.has_pdf` says which).
+ */
+export function assetsFor(candidateId: string, hasPdf = false): CandidateAssets {
+  if (hasPdf) {
+    return { pdfUrl: cvPdfUrl(candidateId), thumbUrl: cvThumbUrl(candidateId) };
+  }
   const stem = encodeURIComponent(candidateId);
   return {
     pdfUrl: `/assets/cvs/${stem}.pdf`,

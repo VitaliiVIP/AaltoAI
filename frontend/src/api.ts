@@ -155,3 +155,11 @@ export function postSendEmail(
 
 export const auditUrl = (decisionId: string) =>
   `${BASE}/audit/${encodeURIComponent(decisionId)}`;
+
+
+/** The uploaded PDF, served by the API. Only valid when the pool row says `has_pdf`. */
+export const cvPdfUrl = (candidateId: string) =>
+  `${BASE}/candidates/${encodeURIComponent(candidateId)}/file.pdf`;
+
+export const cvThumbUrl = (candidateId: string) =>
+  `${BASE}/candidates/${encodeURIComponent(candidateId)}/thumbnail.png`;

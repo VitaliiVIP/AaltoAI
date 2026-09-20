@@ -331,7 +331,7 @@ export default function CvList({
           {sortedByScore.map((c) => {
             const status = emailStatus[c.candidate_id];
             const name = deriveName(c.candidate_id);
-            const { thumbUrl } = assetsFor(c.candidate_id);
+            const { thumbUrl } = assetsFor(c.candidate_id, c.has_pdf);
             const rank = ranks.get(c.candidate_id) ?? null;
             const tier = tierOf({
               knockouts_passed: c.knockouts_passed,
