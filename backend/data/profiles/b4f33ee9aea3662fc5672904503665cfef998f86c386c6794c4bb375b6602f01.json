@@ -1,41 +1,72 @@
 {
  "schema_version": "1.0",
- "job_family": "software_engineering",
+ "job_family": "data_science",
  "as_of": "2026-09-19",
  "provenance": {
-  "cv_sha256": "472a229902276a34f6067fdb3776819476cbf64ac5224528a39605b93cee9e17",
-  "source_file": "cv6_priya_sharma.txt",
+  "cv_sha256": "b4f33ee9aea3662fc5672904503665cfef998f86c386c6794c4bb375b6602f01",
+  "source_file": "cv4_aisha_rahman.txt",
   "extractor_model": "claude-opus-5",
-  "prompt_version": "extract-v1",
-  "taxonomy_version": "swe-core-0.1",
-  "extracted_at": "2026-09-19T14:19:52+00:00"
+  "prompt_version": "extract-v2",
+  "taxonomy_version": "core-0.2",
+  "extracted_at": "2026-09-20T08:19:16+00:00"
  },
  "experience": {
   "roles": [
    {
-    "title_raw": "Software Developer",
-    "title_canonical": "backend_engineer",
-    "employer": "AppWorks Oy",
+    "title_raw": "Data Scientist",
+    "title_canonical": "data_scientist",
+    "employer": "FinServ Digital",
     "start": "2022-07",
     "end": "2026-07",
     "date_precision": "year",
     "months": 48,
-    "is_backend_role": true,
+    "is_backend_role": false,
+    "is_data_role": true,
     "skills_mentioned": [
      "python",
-     "flask",
-     "rest_api"
+     "scikit_learn",
+     "aws",
+     "statistics"
     ],
     "primary_skills": [
      "python",
-     "flask",
-     "rest_api"
+     "scikit_learn",
+     "aws",
+     "statistics"
     ],
     "evidence": [
      {
-      "quote": "Software Developer, AppWorks Oy (2022-2026)",
-      "start": 115,
-      "end": 158,
+      "quote": "Data Scientist, FinServ Digital (2022-2026)",
+      "start": 106,
+      "end": 149,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   {
+    "title_raw": "Junior Software Developer",
+    "title_canonical": "other_software",
+    "employer": "WebCraft",
+    "start": "2020-07",
+    "end": "2022-07",
+    "date_precision": "year",
+    "months": 24,
+    "is_backend_role": false,
+    "is_data_role": false,
+    "skills_mentioned": [
+     "python",
+     "sql"
+    ],
+    "primary_skills": [
+     "python",
+     "sql"
+    ],
+    "evidence": [
+     {
+      "quote": "Junior Software Developer, WebCraft (2020-2022)",
+      "start": 304,
+      "end": 351,
       "section": "experience",
       "verified": true
      }
@@ -43,18 +74,24 @@
    }
   ],
   "total_months": {
-   "value": 48,
+   "value": 72,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "software_months": {
-   "value": 48,
+   "value": 72,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "data_months": {
    "value": 48,
    "derivation": "computed",
    "confidence": "medium",
@@ -67,7 +104,7 @@
    "evidence": []
   },
   "num_roles": {
-   "value": 1,
+   "value": 2,
    "derivation": "computed",
    "confidence": "high",
    "evidence": []
@@ -76,103 +113,21 @@
  "skills": {
   "aws": {
    "held": {
-    "value": false,
-    "derivation": "denied",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "No production cloud/orchestration experience",
-      "start": 221,
-      "end": 265,
-      "section": "denial",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
-  },
-  "docker": {
-   "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "basic Docker",
-      "start": 359,
-      "end": 371,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
-  },
-  "flask": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Software Developer, AppWorks Oy (2022-2026)",
-      "start": 115,
-      "end": 158,
+      "quote": "Data Scientist, FinServ Digital (2022-2026)",
+      "start": 106,
+      "end": 149,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Flask, MySQL, Git, basic Docker",
-      "start": 332,
-      "end": 371,
+      "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing",
+      "start": 464,
+      "end": 514,
       "section": "skills",
       "verified": true
      }
@@ -197,135 +152,12 @@
     "evidence": []
    },
    "project_count": {
-    "value": 1,
+    "value": 0,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "dated": true
-  },
-  "git": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Python, Flask, MySQL, Git, basic Docker",
-      "start": 332,
-      "end": 371,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
-  },
-  "kubernetes": {
-   "held": {
-    "value": false,
-    "derivation": "denied",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "No production cloud/orchestration experience",
-      "start": 221,
-      "end": 265,
-      "section": "denial",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
-  },
-  "mysql": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Python, Flask, MySQL, Git, basic Docker",
-      "start": 332,
-      "end": 371,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
   },
   "python": {
    "held": {
@@ -334,16 +166,71 @@
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Software Developer, AppWorks Oy (2022-2026)",
-      "start": 115,
-      "end": 158,
+      "quote": "Data Scientist, FinServ Digital (2022-2026)",
+      "start": 106,
+      "end": 149,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Flask, MySQL, Git, basic Docker",
-      "start": 332,
-      "end": 371,
+      "quote": "Junior Software Developer, WebCraft (2020-2022)",
+      "start": 304,
+      "end": 351,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing",
+      "start": 464,
+      "end": 514,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "scikit_learn": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Data Scientist, FinServ Digital (2022-2026)",
+      "start": 106,
+      "end": 149,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing",
+      "start": 464,
+      "end": 514,
       "section": "skills",
       "verified": true
      }
@@ -375,17 +262,72 @@
    },
    "dated": true
   },
-  "rest_api": {
+  "sql": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Software Developer, AppWorks Oy (2022-2026)",
-      "start": 115,
-      "end": 158,
+      "quote": "Junior Software Developer, WebCraft (2020-2022)",
+      "start": 304,
+      "end": 351,
       "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing",
+      "start": 464,
+      "end": 514,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2022,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "statistics": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Data Scientist, FinServ Digital (2022-2026)",
+      "start": 106,
+      "end": 149,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing",
+      "start": 464,
+      "end": 514,
+      "section": "skills",
       "verified": true
      }
     ]
@@ -409,7 +351,7 @@
     "evidence": []
    },
    "project_count": {
-    "value": 1,
+    "value": 0,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -419,28 +361,24 @@
  },
  "projects": [
   {
-   "title": "internal booking API",
+   "title": "Internal risk-reporting dashboard",
    "topics": [
-    "backend"
+    "data"
    ],
-   "skills": [
-    "flask",
-    "mysql",
-    "rest_api"
-   ],
-   "deployed": null,
+   "skills": [],
+   "deployed": true,
    "evidence": [
     {
-     "quote": "Built a small internal booking API (Flask + MySQL)",
-     "start": 384,
-     "end": 434,
+     "quote": "- Internal risk-reporting dashboard used by the finance team",
+     "start": 525,
+     "end": 585,
      "section": "projects",
      "verified": true
     }
    ]
   },
   {
-   "title": "weather-data dashboard",
+   "title": "Automated the monthly regulatory data extract",
    "topics": [
     "data"
    ],
@@ -448,9 +386,9 @@
    "deployed": null,
    "evidence": [
     {
-     "quote": "Personal project: weather-data dashboard",
-     "start": 437,
-     "end": 477,
+     "quote": "- Automated the monthly regulatory data extract",
+     "start": 586,
+     "end": 633,
      "section": "projects",
      "verified": true
     }
@@ -458,8 +396,7 @@
   }
  ],
  "project_counts_by_topic": {
-  "backend": 1,
-  "data": 1
+  "data": 2
  },
  "education": {
   "highest_level": {
@@ -468,9 +405,9 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "B.Sc. Computer Science, Haaga-Helia UAS",
-     "start": 277,
-     "end": 316,
+     "quote": "B.Sc. Computer Science, Metropolia UAS",
+     "start": 410,
+     "end": 448,
      "section": "education",
      "verified": true
     }
@@ -482,9 +419,9 @@
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "B.Sc. Computer Science, Haaga-Helia UAS",
-     "start": 277,
-     "end": 316,
+     "quote": "B.Sc. Computer Science, Metropolia UAS",
+     "start": 410,
+     "end": 448,
      "section": "education",
      "verified": true
     }
@@ -496,9 +433,9 @@
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "B.Sc. Computer Science, Haaga-Helia UAS",
-     "start": 277,
-     "end": 316,
+     "quote": "B.Sc. Computer Science, Metropolia UAS",
+     "start": 410,
+     "end": 448,
      "section": "education",
      "verified": true
     }
@@ -527,8 +464,8 @@
    "evidence": [
     {
      "quote": "Helsinki, Finland",
-     "start": 85,
-     "end": 102,
+     "start": 74,
+     "end": 91,
      "section": "eligibility",
      "verified": true
     }
@@ -541,25 +478,28 @@
    "evidence": []
   }
  },
- "contact_email": "priya.sharma@example.com",
+ "contact_email": "aisha.rahman@example.com",
  "derived": {
-  "cloud_platform_held": {
-   "value": false,
-   "derivation": "denied",
-   "confidence": "medium",
-   "evidence": []
-  },
-  "ci_cd_held": {
-   "value": null,
-   "derivation": "absent",
-   "confidence": "low",
-   "evidence": []
-  },
-  "iac_held": {
-   "value": null,
-   "derivation": "absent",
-   "confidence": "low",
-   "evidence": []
+  "ml_framework_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Data Scientist, FinServ Digital (2022-2026)",
+     "start": 106,
+     "end": 149,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing",
+     "start": 464,
+     "end": 514,
+     "section": "skills",
+     "verified": true
+    }
+   ]
   },
   "sql_held": {
    "value": true,
@@ -567,18 +507,62 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "Python, Flask, MySQL, Git, basic Docker",
-     "start": 332,
-     "end": 371,
+     "quote": "Junior Software Developer, WebCraft (2020-2022)",
+     "start": 304,
+     "end": 351,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing",
+     "start": 464,
+     "end": 514,
      "section": "skills",
      "verified": true
     }
    ]
+  },
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Data Scientist, FinServ Digital (2022-2026)",
+     "start": 106,
+     "end": 149,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing",
+     "start": 464,
+     "end": 514,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "data_pipeline_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "visualisation_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "mlops_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
   }
  },
- "unmatched_skills": [
-  "VMs"
- ],
+ "unmatched_skills": [],
  "never_extract": [
   "name",
   "date_of_birth",

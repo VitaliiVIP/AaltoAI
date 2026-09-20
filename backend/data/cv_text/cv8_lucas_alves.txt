@@ -1,11 +1,13 @@
 Lucas Alves
-Backend Software Engineer
+Frontend Developer
 lucas.alves@example.com | +358 41 444 5566 | Helsinki, Finland
+
+
 
 Experience
 Frontend Developer, ShopEasy (2022-2026) - 3 years
-- Mostly React/TypeScript, minimal backend exposure
-- No Python, Kubernetes, or cloud experience
+- Mostly React and TypeScript, minimal data work
+- No Python, no statistics and no machine learning experience
 
 Education
 B.Sc. Media Engineering, Metropolia UAS (2022)
@@ -14,6 +16,6 @@ Skills
 JavaScript, React, TypeScript, basic Node.js
 
 Projects
-- Built e-commerce storefront in React
-- No backend/infrastructure projects listed
+- E-commerce storefront in React
+- No data or modelling projects listed
 

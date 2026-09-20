@@ -7,7 +7,7 @@ Everything the model is not allowed to compute happens here, in this order:
    because role dates feed every downstream number including a knockout
 3. taxonomy canonicalisation of `unmatched_skills`
 4. per-skill months as a UNION of role intervals, recency, proficiency, project counts
-5. experience aggregates (total / software / backend months, seniority, num_roles)
+5. experience aggregates (total / software / backend / data months, seniority, num_roles)
 6. project counts by topic
 7. evidence verification for every remaining quote, with the confidence and
    knockout-drop policy from the design brief
@@ -158,6 +158,7 @@ def normalise_roles(raw_roles: Iterable[Any], *, as_of: str) -> list[Role]:
                 date_precision=precision,  # type: ignore[arg-type]
                 months=months,
                 is_backend_role=bool(raw.is_backend_role),
+                is_data_role=bool(getattr(raw, "is_data_role", False)),
                 skills_mentioned=list(dict.fromkeys(_sid(s) for s in raw.skills_mentioned)),
                 primary_skills=list(dict.fromkeys(_sid(s) for s in raw.primary_skills)),
                 evidence=[Evidence(quote=raw.quote, section="experience")],
@@ -299,7 +300,8 @@ def _iter_evidence(profile: Profile) -> Iterator[tuple[str, Envelope | None, lis
     """(path, owning envelope or None, evidence list) for every quote in the profile."""
     for i, role in enumerate(profile.experience.roles):
         yield f"experience.roles[{i}]", None, role.evidence
-    for field in ("total_months", "software_months", "backend_months", "seniority", "num_roles"):
+    for field in ("total_months", "software_months", "backend_months", "data_months",
+                  "seniority", "num_roles"):
         env = getattr(profile.experience, field)
         yield f"experience.{field}", env, env.evidence
     for skill_id, entry in profile.skills.items():
@@ -577,6 +579,7 @@ def build_profile(
 
     software_roles = professional_roles(roles)
     backend_roles = [r for r in roles if r.is_backend_role]
+    data_roles = [r for r in roles if r.is_data_role]
 
     # 4. per-skill envelopes
     all_ids = (set(role_skills) | set(block) | set(denied)
@@ -625,6 +628,7 @@ def build_profile(
         total_months=_months_env(roles),
         software_months=_months_env(software_roles),
         backend_months=_months_env(backend_roles),
+        data_months=_months_env(data_roles),
         num_roles=_env(len(roles), "computed", "high"),
     )
     seniority = infer_seniority(roles, experience.software_months.value)

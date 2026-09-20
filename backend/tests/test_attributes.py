@@ -58,7 +58,7 @@ def test_computed_attributes_are_marked_as_computed(parse):
 
 
 def test_scored_flag_matches_the_job(parse):
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     decided = set(job.score) | {ko.path for ko in job.parsed_knockouts}
     flagged = {a["path"] for a in parse["attributes"] if a["scored"]}
     # Skills collapse to their `.held` row, so a scored `skills.x.months` is
@@ -79,7 +79,7 @@ def test_attributes_do_not_need_a_job_to_be_listed():
     profile = candidate_profile(CANDIDATE)
     rows = attributes_for(profile)
     assert rows and not any(r["scored"] for r in rows)
-    assert len(rows) == len(attributes_for(profile, manifest_for_job(load_job("backend_engineer"))))
+    assert len(rows) == len(attributes_for(profile, manifest_for_job(load_job("data_scientist"))))
 
 
 def test_unknown_candidate_is_a_404(client):

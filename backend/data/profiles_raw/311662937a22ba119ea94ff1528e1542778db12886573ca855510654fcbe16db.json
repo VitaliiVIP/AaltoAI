@@ -31,7 +31,8 @@
      "python",
      "microservices"
     ],
-    "quote": "Backend Tech Lead — Polaris Payments"
+    "quote": "Backend Tech Lead — Polaris Payments",
+    "is_data_role": false
    },
    {
     "title_raw": "Backend Software Engineer",
@@ -53,7 +54,8 @@
      "rest_api",
      "sql"
     ],
-    "quote": "Backend Software Engineer — Ruska Systems"
+    "quote": "Backend Software Engineer — Ruska Systems",
+    "is_data_role": false
    },
    {
     "title_raw": "Freelance Backend Developer",
@@ -68,7 +70,8 @@
     "primary_skills": [
      "python"
     ],
-    "quote": "Freelance Backend Developer — Self-employed (toiminimi)"
+    "quote": "Freelance Backend Developer — Self-employed (toiminimi)",
+    "is_data_role": false
    },
    {
     "title_raw": "Graduate Software Engineer",
@@ -89,7 +92,8 @@
     "primary_skills": [
      "rest_api"
     ],
-    "quote": "Graduate Software Engineer — Ruska Systems"
+    "quote": "Graduate Software Engineer — Ruska Systems",
+    "is_data_role": false
    }
   ],
   "skills_block": [

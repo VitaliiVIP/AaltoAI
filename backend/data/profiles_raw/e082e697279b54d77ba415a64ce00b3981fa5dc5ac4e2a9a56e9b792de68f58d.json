@@ -32,7 +32,8 @@
      "aws",
      "terraform"
     ],
-    "quote": "Polaris Payments — Aug 2024 – Present"
+    "quote": "Polaris Payments — Aug 2024 – Present",
+    "is_data_role": false
    },
    {
     "title_raw": "DevOps Engineer",
@@ -57,7 +58,8 @@
      "git",
      "docker"
     ],
-    "quote": "Tampere Tech Group — Apr 2023 – Aug 2024"
+    "quote": "Tampere Tech Group — Apr 2023 – Aug 2024",
+    "is_data_role": false
    },
    {
     "title_raw": "Cloud Support Engineer",
@@ -79,7 +81,8 @@
      "git",
      "kubernetes"
     ],
-    "quote": "Aurora Analytics Oy — Jan 2022 – Apr 2023"
+    "quote": "Aurora Analytics Oy — Jan 2022 – Apr 2023",
+    "is_data_role": false
    }
   ],
   "skills_block": [

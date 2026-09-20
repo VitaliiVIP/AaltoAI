@@ -17,7 +17,8 @@
     "is_backend_role": false,
     "skills_mentioned": [],
     "primary_skills": [],
-    "quote": "QA Engineer, Ruska Systems — Feb 2025 – Present"
+    "quote": "QA Engineer, Ruska Systems — Feb 2025 – Present",
+    "is_data_role": false
    },
    {
     "title_raw": "QA Analyst",
@@ -28,7 +29,8 @@
     "is_backend_role": false,
     "skills_mentioned": [],
     "primary_skills": [],
-    "quote": "QA Analyst, Vireo Solutions — Feb 2024 – Feb 2025"
+    "quote": "QA Analyst, Vireo Solutions — Feb 2024 – Feb 2025",
+    "is_data_role": false
    },
    {
     "title_raw": "QA Engineer",
@@ -39,7 +41,8 @@
     "is_backend_role": false,
     "skills_mentioned": [],
     "primary_skills": [],
-    "quote": "QA Engineer, Tampere Tech Group — Sep 2021 – Feb 2024"
+    "quote": "QA Engineer, Tampere Tech Group — Sep 2021 – Feb 2024",
+    "is_data_role": false
    },
    {
     "title_raw": "QA Trainee",
@@ -50,7 +53,8 @@
     "is_backend_role": false,
     "skills_mentioned": [],
     "primary_skills": [],
-    "quote": "QA Trainee, Nordcom Oy — Feb 2020 – Sep 2021"
+    "quote": "QA Trainee, Nordcom Oy — Feb 2020 – Sep 2021",
+    "is_data_role": false
    }
   ],
   "skills_block": [

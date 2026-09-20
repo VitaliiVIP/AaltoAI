@@ -28,7 +28,8 @@
      "ci_cd",
      "testing"
     ],
-    "quote": "Senior DevOps Engineer — Arctic Cloud Oy"
+    "quote": "Senior DevOps Engineer — Arctic Cloud Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "Platform Engineer",
@@ -49,7 +50,8 @@
      "argo_cd",
      "bash"
     ],
-    "quote": "Platform Engineer — Helsinki Data Works"
+    "quote": "Platform Engineer — Helsinki Data Works",
+    "is_data_role": false
    },
    {
     "title_raw": "Platform Engineer",
@@ -72,7 +74,8 @@
      "java",
      "ci_cd"
     ],
-    "quote": "Platform Engineer — Polaris Payments"
+    "quote": "Platform Engineer — Polaris Payments",
+    "is_data_role": false
    },
    {
     "title_raw": "IT Operations Trainee",
@@ -92,7 +95,8 @@
      "nginx",
      "azure"
     ],
-    "quote": "IT Operations Trainee — Vantaa Systems"
+    "quote": "IT Operations Trainee — Vantaa Systems",
+    "is_data_role": false
    }
   ],
   "skills_block": [

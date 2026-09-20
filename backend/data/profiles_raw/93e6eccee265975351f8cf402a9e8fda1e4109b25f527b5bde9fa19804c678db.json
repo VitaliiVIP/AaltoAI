@@ -1,0 +1,167 @@
+{
+ "cv_sha256": "93e6eccee265975351f8cf402a9e8fda1e4109b25f527b5bde9fa19804c678db",
+ "source_file": "cv1_elina_korhonen.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v2",
+ "taxonomy_version": "core-0.2",
+ "extracted_at": "2026-09-20T08:18:44+00:00",
+ "cv_text": "Elina Korhonen\nSenior Data Scientist\nelina.korhonen@example.com | +358 40 123 4567 | Helsinki, Finland\n\n\n\nExperience\nSenior Data Scientist, Nordcom Oy (2020-2026) - 6 years\n- Built and deployed churn and pricing models in Python with scikit-learn and PyTorch\n- Owned the forecasting stack end to end on GCP, orchestrated with Airflow over BigQuery\nData Scientist, Vantaa Systems (2018-2020)\n- Statistical modelling and experiment design for the recommendation team, in Python and SQL\n\nEducation\nM.Sc. Computer Science, Aalto University (2018)\n\nSkills\nPython, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling\n\nProjects\n- Open-source churn-prediction library (450 GitHub stars)\n- Demand forecasting model that cut stockouts by 30%\n- Internal experimentation platform used by 12 teams\n\f",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Senior Data Scientist",
+    "title_canonical": "data_scientist",
+    "employer": "Nordcom Oy",
+    "start_raw": "2020",
+    "end_raw": "2026",
+    "is_backend_role": false,
+    "is_data_role": true,
+    "skills_mentioned": [
+     "python",
+     "scikit_learn",
+     "pytorch",
+     "time_series",
+     "gcp",
+     "airflow",
+     "bigquery",
+     "machine_learning"
+    ],
+    "primary_skills": [
+     "python",
+     "scikit_learn",
+     "pytorch",
+     "time_series",
+     "gcp",
+     "airflow",
+     "bigquery",
+     "machine_learning"
+    ],
+    "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)"
+   },
+   {
+    "title_raw": "Data Scientist",
+    "title_canonical": "data_scientist",
+    "employer": "Vantaa Systems",
+    "start_raw": "2018",
+    "end_raw": "2020",
+    "is_backend_role": false,
+    "is_data_role": true,
+    "skills_mentioned": [
+     "statistics",
+     "ab_testing",
+     "python",
+     "sql"
+    ],
+    "primary_skills": [
+     "statistics",
+     "ab_testing",
+     "python",
+     "sql"
+    ],
+    "quote": "Data Scientist, Vantaa Systems (2018-2020)"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling"
+   },
+   {
+    "skill": "scikit_learn",
+    "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling"
+   },
+   {
+    "skill": "pytorch",
+    "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling"
+   },
+   {
+    "skill": "bigquery",
+    "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling"
+   },
+   {
+    "skill": "gcp",
+    "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling"
+   },
+   {
+    "skill": "airflow",
+    "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling"
+   },
+   {
+    "skill": "statistics",
+    "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Open-source churn-prediction library",
+    "topics": [
+     "machine_learning"
+    ],
+    "skills": [],
+    "deployed": "unclear",
+    "quote": "- Open-source churn-prediction library (450 GitHub stars)"
+   },
+   {
+    "title": "Demand forecasting model",
+    "topics": [
+     "machine_learning",
+     "data"
+    ],
+    "skills": [
+     "time_series"
+    ],
+    "deployed": "unclear",
+    "quote": "- Demand forecasting model that cut stockouts by 30%"
+   },
+   {
+    "title": "Internal experimentation platform",
+    "topics": [
+     "data"
+    ],
+    "skills": [
+     "ab_testing"
+    ],
+    "deployed": "yes",
+    "quote": "- Internal experimentation platform used by 12 teams"
+   }
+  ],
+  "education": {
+   "highest_level": "msc",
+   "field": "computer science",
+   "in_progress": "no",
+   "quote": "M.Sc. Computer Science, Aalto University"
+  },
+  "certifications": [],
+  "languages": [],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Helsinki, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

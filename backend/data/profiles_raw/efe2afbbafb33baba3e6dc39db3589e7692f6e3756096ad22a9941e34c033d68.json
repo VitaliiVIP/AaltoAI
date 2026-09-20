@@ -1,0 +1,119 @@
+{
+ "cv_sha256": "efe2afbbafb33baba3e6dc39db3589e7692f6e3756096ad22a9941e34c033d68",
+ "source_file": "cv7_daniel_kwan.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v2",
+ "taxonomy_version": "core-0.2",
+ "extracted_at": "2026-09-20T08:19:41+00:00",
+ "cv_text": "Daniel Tuovio\nJunior Data Scientist\ndaniel.tuovio@example.com | +358 46 222 9988 | Espoo, Finland\n\n\n\nExperience\nJunior Data Scientist, Nova Retail (2023-2026) - 2.5 years\n- Demand-forecast models in Python with scikit-learn, run from a laptop\n- No cloud platform or production deployment experience\n\nEducation\nB.Sc. Computer Science, LUT University (2023)\n\nSkills\nPython, scikit-learn, pandas, SQLite\n\nProjects\n- Demand-forecast prototype for one store chain\n- Text-classification experiment with scikit-learn\n\f",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Junior Data Scientist",
+    "title_canonical": "data_scientist",
+    "employer": "Nova Retail",
+    "start_raw": "2023",
+    "end_raw": "2026",
+    "is_backend_role": false,
+    "is_data_role": true,
+    "skills_mentioned": [
+     "python",
+     "scikit_learn",
+     "time_series"
+    ],
+    "primary_skills": [
+     "python",
+     "scikit_learn",
+     "time_series"
+    ],
+    "quote": "Junior Data Scientist, Nova Retail (2023-2026)"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, scikit-learn, pandas, SQLite"
+   },
+   {
+    "skill": "scikit_learn",
+    "quote": "Python, scikit-learn, pandas, SQLite"
+   },
+   {
+    "skill": "pandas",
+    "quote": "Python, scikit-learn, pandas, SQLite"
+   },
+   {
+    "skill": "sqlite",
+    "quote": "Python, scikit-learn, pandas, SQLite"
+   }
+  ],
+  "denied_skills": [
+   {
+    "skill": "mlops",
+    "quote": "No cloud platform or production deployment experience"
+   },
+   {
+    "skill": "aws",
+    "quote": "No cloud platform or production deployment experience"
+   }
+  ],
+  "projects": [
+   {
+    "title": "Demand-forecast prototype",
+    "topics": [
+     "machine_learning"
+    ],
+    "skills": [
+     "time_series"
+    ],
+    "deployed": "unclear",
+    "quote": "Demand-forecast prototype for one store chain"
+   },
+   {
+    "title": "Text-classification experiment",
+    "topics": [
+     "machine_learning"
+    ],
+    "skills": [
+     "scikit_learn",
+     "nlp"
+    ],
+    "deployed": "unclear",
+    "quote": "Text-classification experiment with scikit-learn"
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "computer science",
+   "in_progress": "no",
+   "quote": "B.Sc. Computer Science, LUT University"
+  },
+  "certifications": [],
+  "languages": [],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Espoo, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

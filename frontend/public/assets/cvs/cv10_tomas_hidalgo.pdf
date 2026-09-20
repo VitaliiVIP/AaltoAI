@@ -1,53 +1,74 @@
-%PDF-1.4
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /MediaBox [0 0 612 792] /Contents 4 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Length 1037 >>
-stream
-BT /F2 20 Tf 50 740 Td (Tomas Hidalgo) Tj ET
-BT /F1 12 Tf 50 714 Td (Backend Software Engineer) Tj ET
-BT /F1 9 Tf 50 694 Td (tomas.hidalgo@example.com | +358 45 999 3311 | Helsinki, Finland) Tj ET
-BT /F2 12 Tf 50 668 Td (Experience) Tj ET
-BT /F1 10 Tf 50 650 Td (Data Entry / Support Specialist, RetailPlus \(2023-2026\) - 2 years) Tj ET
-BT /F1 10 Tf 50 635 Td (- No software engineering role held to date) Tj ET
-BT /F1 10 Tf 50 620 Td (- Self-taught Python basics outside of work) Tj ET
-BT /F1 4 Tf 50 605 Td () Tj ET
-BT /F2 12 Tf 50 595 Td (Education) Tj ET
-BT /F1 10 Tf 50 577 Td (High School Diploma; online Python course \(2025\)) Tj ET
-BT /F1 4 Tf 50 562 Td () Tj ET
-BT /F2 12 Tf 50 552 Td (Skills) Tj ET
-BT /F1 10 Tf 50 534 Td (Basic Python, Excel, SQL fundamentals) Tj ET
-BT /F1 4 Tf 50 519 Td () Tj ET
-BT /F2 12 Tf 50 509 Td (Projects) Tj ET
-BT /F1 10 Tf 50 491 Td (- Personal to-do list app in Python \(tutorial-based\)) Tj ET
-BT /F1 10 Tf 50 476 Td (- No professional or deployed projects) Tj ET
-BT /F1 4 Tf 50 461 Td () Tj ET
-endstream
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Author () /CreationDate (D:20260920111749+03'00') /Creator (anonymous) /Keywords () /ModDate (D:20260920111749+03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (cv10_tomas_hidalgo) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 617
+>>
+stream
+Gat=g;/_pX'SYHA/'_Y2"UZSQU:j6#;rs^AZGC$W4>=U2@jBa,M6n?hA(%>k;QYq?r,<,&3VV<%N6"/e5H>fD=5r?c7SHW:LhGZTjWbQ&Q*1i4?ROOmH@/+k"SqQC%bIQ2;1g0uWS"-UasWE\r_XXunanZ^c;JQObZ!r/V-$9h&%FpQGFd.t7E6lQ"ZQ.>487AUbg0e*&ShVm@69qTcLuA3#o6QVLHkR&UcE$9k4:Tr,`Z/Eab8VnbGTUC;G^N2eKnkWH7_g20>,q]9QMO2Fs`A#9Ke'A(Q($?JP`6=`@U+[-$k4:22Oj:\0G3R&:i]SW&>HjBCdji!'_/YXVtd[=-<p?K-+%f[\,I9C@!b,$sEslQAHM\%<#P#FI's;fn,&-YdE;p(9<()Q,ITUG\*OoCO#6R)a#XarUb3;1`E8jpD(*=WCqUcM.\C8VF=@i8dX;E::O$q"sjG>m)=+DH>V:oRWL^g]\R9!`JQ5`if[09H0PES6[VC*;_7VW'2oT0+49_dVE6+V4lu^q?CK/%IAPI-X6`7ZPM>-E=%jRJA6&lA_Q_pj>mDuhdTg/6hC@o95B,r(lI/!_,"Td:bO,#6Ao<P4<Y$!b42TNT0]$(,~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000251 00000 n 
-0000001340 00000 n 
-0000001410 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000854 00000 n 
+0000000913 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<5eeb8e8de7ef56a4a8a0826d30d10164><5eeb8e8de7ef56a4a8a0826d30d10164>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-1485
+1620
 %%EOF

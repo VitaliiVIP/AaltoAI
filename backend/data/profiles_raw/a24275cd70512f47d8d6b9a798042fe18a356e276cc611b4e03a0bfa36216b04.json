@@ -43,7 +43,8 @@
      "git",
      "microservices"
     ],
-    "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)"
+    "quote": "Senior Backend Engineer, Nordcom Oy (Feb 2024 – Present)",
+    "is_data_role": false
    },
    {
     "title_raw": "Senior Software Engineer",
@@ -80,7 +81,8 @@
      "linux",
      "ci_cd"
     ],
-    "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)"
+    "quote": "Senior Software Engineer, Ruska Systems (Dec 2021 – Feb 2024)",
+    "is_data_role": false
    },
    {
     "title_raw": "Backend Developer",
@@ -115,7 +117,8 @@
      "linux",
      "git"
     ],
-    "quote": "Backend Developer, Kaiku Digital (Jul 2020 – Aug 2021)"
+    "quote": "Backend Developer, Kaiku Digital (Jul 2020 – Aug 2021)",
+    "is_data_role": false
    },
    {
     "title_raw": "Backend Developer Trainee",
@@ -152,7 +155,8 @@
      "ci_cd",
      "linux"
     ],
-    "quote": "Backend Developer Trainee, Vireo Solutions (Jun 2018 – Apr 2020)"
+    "quote": "Backend Developer Trainee, Vireo Solutions (Jun 2018 – Apr 2020)",
+    "is_data_role": false
    },
    {
     "title_raw": "Junior Backend Developer",
@@ -183,7 +187,8 @@
      "ci_cd",
      "git"
     ],
-    "quote": "Junior Backend Developer, Ruska Systems (Nov 2014 – Jun 2018)"
+    "quote": "Junior Backend Developer, Ruska Systems (Nov 2014 – Jun 2018)",
+    "is_data_role": false
    }
   ],
   "skills_block": [

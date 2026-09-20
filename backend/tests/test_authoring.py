@@ -22,7 +22,7 @@ FIXTURES = Path(__file__).parent / "fixtures"
 # --------------------------------------------------------------------------- #
 
 def test_the_shipped_job_is_a_hundred_point_budget():
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     manifest = manifest_for_job(job)
     assert sum(job.points_of(p, manifest) for p in job.score) == BUDGET_TOTAL
     # The whole reason for the budget: a score is a percentage of the job.
@@ -30,16 +30,16 @@ def test_the_shipped_job_is_a_hundred_point_budget():
 
 
 def test_points_become_per_step_weights():
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     manifest = manifest_for_job(job)
-    term = job.score["experience.backend_months"]
-    # 32 points spread over 8 six-month steps is 4 points per step.
-    assert term.points == 32 and job.cap_of("experience.backend_months", manifest) == 8
-    assert term.weight == 4
+    term = job.score["experience.data_months"]
+    # 30 points spread over 10 six-month steps is 3 points per step.
+    assert term.points == 30 and job.cap_of("experience.data_months", manifest) == 10
+    assert term.weight == 3
 
 
 def test_binding_is_idempotent():
-    job = load_job("backend_engineer").model_copy(deep=True)
+    job = load_job("data_scientist").model_copy(deep=True)
     manifest = manifest_for_job(job)
     before = {p: t.weight for p, t in job.score.items()}
     job.bind(manifest).bind(manifest)
@@ -125,7 +125,7 @@ def test_normalise_explains_itself_when_nothing_can_absorb_the_remainder():
 # --------------------------------------------------------------------------- #
 
 def test_catalogue_offers_every_usable_feature_and_names_the_refused_ones():
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     manifest = manifest_for_job(job)
     cat = catalogue_for(manifest, job)
 
@@ -140,7 +140,7 @@ def test_catalogue_offers_every_usable_feature_and_names_the_refused_ones():
 def test_catalogue_knockout_templates_parse_as_rules():
     from recourse_screen.schemas import Knockout
 
-    manifest = load_manifest("software_engineering.json")
+    manifest = load_manifest("data_science.json")
     for feature in catalogue_for(manifest)["features"]:
         template = feature["knockout_template"]
         if template is None:
@@ -149,7 +149,7 @@ def test_catalogue_knockout_templates_parse_as_rules():
 
 
 def test_a_degree_knockout_defaults_to_the_middle_of_the_ladder_not_the_top():
-    manifest = load_manifest("software_engineering.json")
+    manifest = load_manifest("data_science.json")
     spec = manifest.features["education.highest_level"]
     assert default_knockout("education.highest_level", spec) == "education.highest_level >= bsc"
 
@@ -159,7 +159,7 @@ def test_a_degree_knockout_defaults_to_the_middle_of_the_ladder_not_the_top():
 # --------------------------------------------------------------------------- #
 
 def test_a_job_survives_a_spec_round_trip():
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     manifest = manifest_for_job(job)
     spec = store.spec_from_job(job, manifest)
     rebuilt, allocation = store.build(spec, manifest)
@@ -176,7 +176,7 @@ def test_saving_writes_yaml_that_loads_back_identically(tmp_path, monkeypatch):
     from recourse_screen import config, loaders
 
     monkeypatch.setattr(config, "JOBS_DIR", tmp_path)
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     spec = store.spec_from_job(job, manifest_for_job(job))
     spec.job_id = "round_trip"
     spec.title = "Round trip"
@@ -194,7 +194,7 @@ def test_saving_writes_yaml_that_loads_back_identically(tmp_path, monkeypatch):
 
 
 def test_preflight_reports_a_threshold_nobody_can_reach():
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     spec = store.spec_from_job(job, manifest_for_job(job))
     spec.threshold = 140
     report = store.preflight(spec)
@@ -203,7 +203,7 @@ def test_preflight_reports_a_threshold_nobody_can_reach():
 
 
 def test_preflight_refuses_to_score_a_protected_attribute():
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     spec = store.spec_from_job(job, manifest_for_job(job))
     spec.score["education.graduation_year"] = store.ScoreLine(points=5)
     report = store.preflight(spec)
@@ -218,7 +218,7 @@ def test_preflight_refuses_to_score_a_protected_attribute():
 def test_the_manifest_owns_the_causal_constraints():
     from recourse_screen.schemas import effective_dependencies
 
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     manifest = manifest_for_job(job)
     assert job.dependencies == []  # moved out of the employer's file
     assert len(manifest.dependencies) == 2
@@ -226,25 +226,33 @@ def test_the_manifest_owns_the_causal_constraints():
 
 
 def test_manifest_dependencies_still_constrain_the_solver():
-    """Kubernetes cannot be credited without Docker, wherever the rule is written."""
+    """A data pipeline cannot be credited without SQL, wherever the rule is written."""
     from recourse_screen import pipeline
     from recourse_screen.recourse.ranking_mode import run_ranking_mode
 
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     manifest = manifest_for_job(job)
     pool = pipeline.load_pool()
     by_id = dict(pool)
-    cid = "cv4_aisha_rahman"
-    outcome = run_ranking_mode(by_id[cid], job, manifest, pool, cid)
-    for route in outcome.routes:
+
+    def outcome_routes(profile, job, manifest, pool, cid):
+        return run_ranking_mode(profile, job, manifest, pool, cid).routes
+
+    # Daniel lists SQLite and nothing else SQL-shaped, so the rule has to bite:
+    # every route that credits him a data pipeline must credit SQL too.
+    cid = "cv7_daniel_kwan"
+    assert by_id[cid].resolve("derived.sql_held").value is not True
+    bound = 0
+    for route in outcome_routes(by_id[cid], job, manifest, pool, cid):
         moved = {d.field for d in route.deltas}
-        if "skills.kubernetes.held" in moved:
-            profile_has_docker = by_id[cid].resolve("skills.docker.held").value
-            assert profile_has_docker or "skills.docker.held" in moved
+        if "derived.data_pipeline_held" in moved:
+            bound += 1
+            assert "derived.sql_held" in moved
+    assert bound, "expected at least one route to touch the data pipeline"
 
 
 def test_every_dependency_glosses_itself():
-    manifest = load_manifest("software_engineering.json")
+    manifest = load_manifest("data_science.json")
     for dep in manifest.parsed_dependencies:
         gloss = dep.gloss(manifest)
         assert gloss.endswith(".") and len(gloss.split()) > 4
@@ -255,7 +263,7 @@ def test_every_dependency_glosses_itself():
 def test_an_ordinal_knockout_compares_on_the_ladder_not_alphabetically():
     from recourse_screen.schemas import Knockout
 
-    manifest = load_manifest("software_engineering.json")
+    manifest = load_manifest("data_science.json")
     spec = manifest.features["education.highest_level"]
     rule = Knockout.parse("education.highest_level >= bsc")
     assert rule.holds("msc", spec) and rule.holds("phd", spec)

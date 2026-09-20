@@ -1,54 +1,74 @@
-%PDF-1.4
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /MediaBox [0 0 612 792] /Contents 4 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Length 1146 >>
-stream
-BT /F2 20 Tf 50 740 Td (Aisha Rahman) Tj ET
-BT /F1 12 Tf 50 714 Td (Backend Software Engineer) Tj ET
-BT /F1 9 Tf 50 694 Td (aisha.rahman@example.com | +358 45 111 2233 | Helsinki, Finland) Tj ET
-BT /F2 12 Tf 50 668 Td (Experience) Tj ET
-BT /F1 10 Tf 50 650 Td (Backend Developer, FinServ Digital \(2022-2026\) - 3.5 years) Tj ET
-BT /F1 10 Tf 50 635 Td (- Built Python services deployed on AWS ECS \(not Kubernetes\)) Tj ET
-BT /F1 10 Tf 50 620 Td (- Worked on CI/CD pipelines with GitHub Actions) Tj ET
-BT /F1 10 Tf 50 605 Td (Junior Developer, WebCraft \(2020-2022\)) Tj ET
-BT /F1 4 Tf 50 590 Td () Tj ET
-BT /F2 12 Tf 50 580 Td (Education) Tj ET
-BT /F1 10 Tf 50 562 Td (B.Sc. Computer Science, Metropolia UAS \(2020\)) Tj ET
-BT /F1 4 Tf 50 547 Td () Tj ET
-BT /F2 12 Tf 50 537 Td (Skills) Tj ET
-BT /F1 10 Tf 50 519 Td (Python, AWS ECS, Docker, PostgreSQL, GitHub Actions) Tj ET
-BT /F1 4 Tf 50 504 Td () Tj ET
-BT /F2 12 Tf 50 494 Td (Projects) Tj ET
-BT /F1 10 Tf 50 476 Td (- Built internal reporting API used by finance team) Tj ET
-BT /F1 10 Tf 50 461 Td (- Automated deployment scripts for two internal tools) Tj ET
-BT /F1 4 Tf 50 446 Td () Tj ET
-endstream
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Author () /CreationDate (D:20260920111749+03'00') /Creator (anonymous) /Keywords () /ModDate (D:20260920111749+03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (cv4_aisha_rahman) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 732
+>>
+stream
+Gat=hcYo:,*6%CF/)IPe#QlI$oX=CY\uCn%Of=[R*;Ckj!?9^h/^jXn)3[d#PGoHeo"i><p\aq37c^/nO*M2)0Ce!^7a/)A,G'TF/8oO94S&(Pbg3Wfja=^.U^ZjD?]F*"0I=b`?IiAQ@/5?7]0?i3T6b_pV?\9Bo@-,[\`LnQ6.-*MpG$<P&r#qpP]WSfhFa`[Q&kR]l_^C1=#GHdrA9pPQ6;2tGHg>]:#/WWK\VFbf0WMC(9_<&_.[0?ZFST#H>Z88ml;Bo+:8bm@K25#3SKP0S'"8di_jTGjV@3E=iAt2%I*ft-C?i37pMMqRd&K:fE<"Z$=P;cQn<&Q\4@_f^36qa&l6B10Y,iI2_$1$!u06aWhTW5H#]11d@SB?m@17U[Nm(+//]u!#&C'_BN;FM7:(#F+VWd*$Yr>.D>_!"!q4asCu):R8Nkm0k&W&,@qKImT=?4QdN_c7?"\[L>$YgU[R9U_T00_M)5EJp54L"78P=8q<iNis<fa'8Y5d6.$J0nF2g^=+Z]-DlL,QX8\/";UfD)5nB^-Ju@?u\Y:j(5Ja$VG"$LibN<fO*^a,`Zt94gDQ2n^Q9_p9R^MQ.TDi$:lV@)t!GeP_`Dd+:'=\_"+dpW@*#PZA<ZgJMj`e(5&m)a)Nt..)q"E)WnRf*,@<^91K!CVCRI]A/s"?B:2=S["aPU:%#`erb;qXe[PL%[o:m`N@RZD]S&pC7`3<rSm#W:(Es!~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000251 00000 n 
-0000001449 00000 n 
-0000001519 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000852 00000 n 
+0000000911 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<c5f7675cca979c25d177934b84d3c1bc><c5f7675cca979c25d177934b84d3c1bc>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-1594
+1733
 %%EOF

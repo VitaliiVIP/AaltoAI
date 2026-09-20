@@ -1,53 +1,74 @@
-%PDF-1.4
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /MediaBox [0 0 612 792] /Contents 4 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Length 1036 >>
-stream
-BT /F2 20 Tf 50 740 Td (Priya Sharma) Tj ET
-BT /F1 12 Tf 50 714 Td (Backend Software Engineer) Tj ET
-BT /F1 9 Tf 50 694 Td (priya.sharma@example.com | +358 41 333 4455 | Helsinki, Finland) Tj ET
-BT /F2 12 Tf 50 668 Td (Experience) Tj ET
-BT /F1 10 Tf 50 650 Td (Software Developer, AppWorks Oy \(2022-2026\) - 3 years) Tj ET
-BT /F1 10 Tf 50 635 Td (- Python and Flask APIs, deployed manually on VMs) Tj ET
-BT /F1 10 Tf 50 620 Td (- No production cloud/orchestration experience) Tj ET
-BT /F1 4 Tf 50 605 Td () Tj ET
-BT /F2 12 Tf 50 595 Td (Education) Tj ET
-BT /F1 10 Tf 50 577 Td (B.Sc. Computer Science, Haaga-Helia UAS \(2022\)) Tj ET
-BT /F1 4 Tf 50 562 Td () Tj ET
-BT /F2 12 Tf 50 552 Td (Skills) Tj ET
-BT /F1 10 Tf 50 534 Td (Python, Flask, MySQL, Git, basic Docker) Tj ET
-BT /F1 4 Tf 50 519 Td () Tj ET
-BT /F2 12 Tf 50 509 Td (Projects) Tj ET
-BT /F1 10 Tf 50 491 Td (- Built a small internal booking API \(Flask + MySQL\)) Tj ET
-BT /F1 10 Tf 50 476 Td (- Personal project: weather-data dashboard) Tj ET
-BT /F1 4 Tf 50 461 Td () Tj ET
-endstream
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Author () /CreationDate (D:20260920111749+03'00') /Creator (anonymous) /Keywords () /ModDate (D:20260920111749+03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (cv6_priya_sharma) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 611
+>>
+stream
+Gat=g?Z2Df'ZJu,.F)G0&I.Anl(42YWB..e1VpGb]XZl82[3L+<J&^25NACd>-iu,,S4&H43.*N)^;LfkjE!a>S[$U*?laW*YHD@N8bVrilopZLoZa3YTAg\PTUqECN.#9]VihdWZ*udnVlJF)oTT<#>b9i.-)RF*TS.s'T897^,,4$Q];[Qfl9KmB;iY&h`2ogfT%j^0Y`h]?L]aB1;k?1-pen$M(RO;dIDCt4^@SZd'idPQ5jbcTe=HWmW,4mk,^/fOlH[qiZR<3%1'jq%IgSulAsGa%ei-;k9M0\DK"ccL,gIMN9Y;4<dM;pe/ZY;aTUt(OoN"HAkHgUgF!M9DJH8!;p,q^WOXc)*i2=`fII-#Xo3'nF;Bnb5:%4N0d/(RQE7Hp?:r,;TG-#4F.XF@RKWL9/;aq=.2M;e%#c]$07A55NI!<Q,;3?0*c<BSU2rCSSDs8e+*1T2:,a-Y(FS*Z+f==fABB;l>Ya.;Tng8:4^>;dN>a+=&cCTuHV"j2HS(jmBdO^V0#k9eA8>r-j2^H^3+d&u9[-t#WFEH>\Un7sR3G#>.'p3%BpWJ"VSVn;C`0W)HL>CFU0[^?WNO%kEOl\AE:t*K5"no~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000251 00000 n 
-0000001339 00000 n 
-0000001409 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000852 00000 n 
+0000000911 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<cb035f584d75ea0deba377931b4b233f><cb035f584d75ea0deba377931b4b233f>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-1484
+1612
 %%EOF

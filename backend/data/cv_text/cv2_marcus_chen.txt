@@ -1,21 +1,23 @@
 Marcus Chen
-Backend Software Engineer
+Data Scientist
 marcus.chen@example.com | +358 40 222 3344 | Espoo, Finland
 
+
+
 Experience
-Software Engineer, CloudNorth Ltd (2021-2026) - 5 years
-- Designed microservices in Python and Kubernetes for payments platform
-- On-call owner for production cloud infrastructure (Azure)
-Junior Developer, StartHub (2019-2021)
-- Built internal tools with Django and PostgreSQL
+Data Scientist, CloudNorth Ltd (2021-2026) - 5 years
+- Fraud-detection models in Python with scikit-learn, retrained weekly on Azure
+- Hypothesis testing and experiment design for the payments team
+Data Analyst, StartHub (2019-2021)
+- SQL reporting over a PostgreSQL warehouse, with Spark for the heavy aggregations
 
 Education
 B.Sc. Software Engineering, University of Helsinki (2019)
 
 Skills
-Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis
+Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing
 
 Projects
-- Rebuilt payments microservice, reduced latency by 40%
-- Implemented blue-green deployment pipeline on Kubernetes
+- Rebuilt the fraud-detection model, cut false positives by 40%
+- Ran the pricing experiment programme for two product lines
 

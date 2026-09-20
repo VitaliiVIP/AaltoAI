@@ -33,7 +33,8 @@
      "rest_api",
      "sql"
     ],
-    "quote": "Backend Software Engineer — Koski Engineering"
+    "quote": "Backend Software Engineer — Koski Engineering",
+    "is_data_role": false
    },
    {
     "title_raw": "Independent Software Consultant",
@@ -50,7 +51,8 @@
     "primary_skills": [
      "python"
     ],
-    "quote": "Independent Software Consultant — Freelance"
+    "quote": "Independent Software Consultant — Freelance",
+    "is_data_role": false
    },
    {
     "title_raw": "Customer Support Agent",
@@ -67,7 +69,8 @@
     "primary_skills": [
      "excel"
     ],
-    "quote": "Customer Support Agent — Turku Catering Oy"
+    "quote": "Customer Support Agent — Turku Catering Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "Warehouse Associate",
@@ -83,7 +86,8 @@
     "primary_skills": [
      "agile"
     ],
-    "quote": "Warehouse Associate — Pohjola Hotels"
+    "quote": "Warehouse Associate — Pohjola Hotels",
+    "is_data_role": false
    }
   ],
   "skills_block": [

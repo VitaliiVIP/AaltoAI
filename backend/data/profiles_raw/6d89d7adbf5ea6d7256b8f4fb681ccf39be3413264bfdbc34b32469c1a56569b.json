@@ -1,11 +1,11 @@
 {
- "cv_sha256": "6ff26fd397c9e4ed61d3b8e263f5b36d19fb7b03c5fb5cf96da288131d4606a0",
+ "cv_sha256": "6d89d7adbf5ea6d7256b8f4fb681ccf39be3413264bfdbc34b32469c1a56569b",
  "source_file": "cv9_nora_salminen.txt",
  "extractor_model": "claude-opus-5",
- "prompt_version": "extract-v1",
- "taxonomy_version": "swe-core-0.1",
- "extracted_at": "2026-09-19T14:20:13+00:00",
- "cv_text": "Nora Salminen\nBackend Software Engineer\nnora.salminen@example.com | +358 40 888 1122 | Oulu, Finland\n\nExperience\nQA Engineer, TestLabs Oy (2021-2026) - 4 years\n- Wrote Python test automation scripts, not production services\n- No experience deploying or owning backend systems\n\nEducation\nB.Sc. Information Technology, Oulu UAS (2021)\n\nSkills\nPython (testing/automation), Selenium, basic SQL\n\nProjects\n- Built automated regression test suite (pytest)\n- No cloud, Kubernetes, or backend-service projects\n\f",
+ "prompt_version": "extract-v2",
+ "taxonomy_version": "core-0.2",
+ "extracted_at": "2026-09-20T08:19:55+00:00",
+ "cv_text": "Nora Salminen\nQA Engineer\nnora.salminen@example.com | +358 40 888 1122 | Oulu, Finland\n\n\n\nExperience\nQA Engineer, TestLabs Oy (2021-2026) - 4 years\n- Wrote Python test automation scripts, not analysis or modelling work\n- No experience building, evaluating or deploying models\n\nEducation\nB.Sc. Information Technology, Oulu UAS (2021)\n\nSkills\nPython (testing/automation), Selenium, basic SQL\n\nProjects\n- Automated regression test suite (pytest)\n- No machine-learning or data-science projects\n\f",
  "output": {
   "roles": [
    {
@@ -15,6 +15,7 @@
     "start_raw": "2021",
     "end_raw": "2026",
     "is_backend_role": false,
+    "is_data_role": false,
     "skills_mentioned": [
      "python",
      "testing"
@@ -46,12 +47,12 @@
   ],
   "denied_skills": [
    {
-    "skill": "aws",
-    "quote": "No cloud, Kubernetes, or backend-service projects"
+    "skill": "machine_learning",
+    "quote": "No experience building, evaluating or deploying models"
    },
    {
-    "skill": "kubernetes",
-    "quote": "No cloud, Kubernetes, or backend-service projects"
+    "skill": "mlops",
+    "quote": "No experience building, evaluating or deploying models"
    }
   ],
   "projects": [
@@ -65,7 +66,7 @@
      "testing"
     ],
     "deployed": "unclear",
-    "quote": "Built automated regression test suite (pytest)"
+    "quote": "Automated regression test suite (pytest)"
    }
   ],
   "education": {

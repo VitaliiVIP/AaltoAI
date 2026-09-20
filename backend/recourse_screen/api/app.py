@@ -90,7 +90,7 @@ def jobs() -> list[dict]:
 
 
 @app.get("/candidates")
-def candidates(job: str = "backend_engineer", mode: str = "B", N: int | None = None) -> list[dict]:
+def candidates(job: str = "data_scientist", mode: str = "B", N: int | None = None) -> list[dict]:
     """Score and rank the whole pool. No LLM calls, no audit writes.
 
     Carries enough per-candidate detail (experience, the two largest shortfalls)
@@ -150,7 +150,7 @@ def candidates(job: str = "backend_engineer", mode: str = "B", N: int | None = N
 
 
 @app.get("/candidates/{candidate_id}/cv")
-def candidate_cv(candidate_id: str, job: str = "backend_engineer") -> dict:
+def candidate_cv(candidate_id: str, job: str = "data_scientist") -> dict:
     """The CV text and every attribute read out of it, tied together by offsets.
 
     No LLM call: this is the stored parse replayed, not a second reading. The
@@ -251,7 +251,7 @@ def job_spec(job_id: str) -> dict:
 
 
 @app.get("/catalogue")
-def catalogue(job: str | None = None, manifest: str = "software_engineering.json") -> dict:
+def catalogue(job: str | None = None, manifest: str = "data_science.json") -> dict:
     """What a job can be built out of: every usable feature, and what is refused.
 
     This is the source for the hard-requirement checklist and the point budget
@@ -294,7 +294,7 @@ def jobs_draft(body: dict) -> dict:
     try:
         return draft_from_ad(
             ad,
-            manifest_name=str(body.get("manifest") or "software_engineering.json"),
+            manifest_name=str(body.get("manifest") or "data_science.json"),
             job_id=body.get("job_id") or None,
             threshold=int(body.get("threshold") or 80),
             slots_n=int(body.get("slots_n") or 3),

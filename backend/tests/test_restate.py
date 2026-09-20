@@ -24,12 +24,12 @@ def toy_profile(drop: tuple[str, ...] = ()) -> Profile:
 
 @pytest.fixture
 def manifest():
-    return load_manifest(config.MANIFEST_DIR / "software_engineering.json")
+    return load_manifest(config.MANIFEST_DIR / "data_science.json")
 
 
 @pytest.fixture
 def job():
-    return load_job("backend_engineer")
+    return load_job("data_scientist")
 
 
 # --------------------------------------------------------------------------- #
@@ -60,7 +60,7 @@ def test_cooccurrence_hints_come_before_plain_absent_ones(manifest, job):
 
 def test_unmentioned_scored_paths_are_offered_as_hints(manifest, job):
     hints = {h.field: h for h in restatement_hints(toy_profile(), manifest, job)}
-    assert hints["skills.kubernetes.held"].because_of == NOT_MENTIONED
+    assert hints["skills.statistics.held"].because_of == NOT_MENTIONED
     assert hints["derived.cloud_platform_held"].because_of == NOT_MENTIONED
     # Stated or computed fields are not offered: the screen already has them.
     assert "skills.docker.held" not in hints
@@ -76,11 +76,11 @@ def test_hints_never_offer_immutable_or_protected_paths(manifest, job):
 
 def test_a_denied_field_is_never_offered_for_restatement(manifest, job):
     profile = toy_profile()
-    profile.skills["kubernetes"] = profile.skills["docker"].model_copy(deep=True)
-    profile.skills["kubernetes"].held.value = False
-    profile.skills["kubernetes"].held.derivation = "denied"
+    profile.skills["statistics"] = profile.skills["docker"].model_copy(deep=True)
+    profile.skills["statistics"].held.value = False
+    profile.skills["statistics"].held.derivation = "denied"
     hints = restatement_hints(profile, manifest, job)
-    assert all(h.field != "skills.kubernetes.held" for h in hints)
+    assert all(h.field != "skills.statistics.held" for h in hints)
 
 
 # --------------------------------------------------------------------------- #
@@ -112,8 +112,8 @@ def test_confirmation_does_not_mutate_the_original_profile(manifest):
 
 def test_confirming_a_derived_boolean_directly_survives_recomputation(manifest):
     updated = apply_confirmations(
-        toy_profile(), [Confirmation(path="derived.ci_cd_held", value=True)], manifest)
-    env = updated.resolve("derived.ci_cd_held")
+        toy_profile(), [Confirmation(path="derived.data_pipeline_held", value=True)], manifest)
+    env = updated.resolve("derived.data_pipeline_held")
     assert env.value is True
     assert env.derivation == "restated"
 

@@ -1,15 +1,21 @@
 Daniel Tuovio
-Backend Software Engineer
+Junior Data Scientist
 daniel.tuovio@example.com | +358 46 222 9988 | Espoo, Finland
+
+
+
 Experience
-Junior Backend Developer, Nova Retail (2023-2026) - 2.5 years
-- Node.js and Python scripts for internal automation
-- No Kubernetes or cloud-infra ownership experience
+Junior Data Scientist, Nova Retail (2023-2026) - 2.5 years
+- Demand-forecast models in Python with scikit-learn, run from a laptop
+- No cloud platform or production deployment experience
+
 Education
 B.Sc. Computer Science, LUT University (2023)
+
 Skills
-Python, Node.js, MongoDB, basic AWS (S3, Lambda)
+Python, scikit-learn, pandas, SQLite
+
 Projects
-- Built an internal Slack automation bot
-- Small AWS Lambda function for report generation
+- Demand-forecast prototype for one store chain
+- Text-classification experiment with scikit-learn
 

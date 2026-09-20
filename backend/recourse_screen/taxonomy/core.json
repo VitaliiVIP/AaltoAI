@@ -1,7 +1,7 @@
 {
- "version": "swe-core-0.1",
- "job_family": "software_engineering",
- "note": "Hand-curated demo taxonomy. Never delete an id; deprecate with a redirect.",
+ "version": "core-0.2",
+ "job_family": "software_and_data",
+ "note": "Hand-curated demo taxonomy: software engineering plus data science / analytics. Never delete an id; deprecate with a redirect.",
  "concepts": [
   {
    "id": "python",
@@ -674,7 +674,9 @@
    "category": "concept",
    "aliases": [
     "ml",
-    "deep learning"
+    "predictive modelling",
+    "predictive modeling",
+    "machine learning models"
    ],
    "esco_uri": null
   },
@@ -735,6 +737,289 @@
    "category": "concept",
    "aliases": [
     "oop"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "r_lang",
+   "label": "R",
+   "category": "language",
+   "aliases": [
+    "r",
+    "rstats",
+    "r language"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "pandas",
+   "label": "pandas",
+   "category": "data_science",
+   "aliases": [
+    "dataframes",
+    "pandas/numpy"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "numpy",
+   "label": "NumPy",
+   "category": "data_science",
+   "aliases": [
+    "numpy/scipy"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "scipy",
+   "label": "SciPy",
+   "category": "data_science",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "scikit_learn",
+   "label": "scikit-learn",
+   "category": "data_science",
+   "aliases": [
+    "sklearn",
+    "scikit learn"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "pytorch",
+   "label": "PyTorch",
+   "category": "data_science",
+   "aliases": [
+    "torch",
+    "pytorch lightning"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "tensorflow",
+   "label": "TensorFlow",
+   "category": "data_science",
+   "aliases": [
+    "tf"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "keras",
+   "label": "Keras",
+   "category": "data_science",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "xgboost",
+   "label": "XGBoost",
+   "category": "data_science",
+   "aliases": [
+    "lightgbm",
+    "gradient boosting"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "statistics",
+   "label": "Statistics and statistical modelling",
+   "category": "data_science",
+   "aliases": [
+    "statistical modelling",
+    "statistical modeling",
+    "statistical analysis",
+    "hypothesis testing",
+    "applied statistics",
+    "statistical methods"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "ab_testing",
+   "label": "A/B testing and experimentation",
+   "category": "data_science",
+   "aliases": [
+    "a/b testing",
+    "ab testing",
+    "experimentation",
+    "experiment design",
+    "randomised experiments",
+    "randomized experiments"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "deep_learning",
+   "label": "Deep learning",
+   "category": "data_science",
+   "aliases": [
+    "deep learning",
+    "neural networks"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "nlp",
+   "label": "Natural language processing",
+   "category": "data_science",
+   "aliases": [
+    "natural language processing",
+    "text mining",
+    "text classification"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "computer_vision",
+   "label": "Computer vision",
+   "category": "data_science",
+   "aliases": [
+    "opencv",
+    "image recognition"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "llm",
+   "label": "Large language models",
+   "category": "data_science",
+   "aliases": [
+    "llms",
+    "transformers",
+    "generative ai",
+    "rag",
+    "prompt engineering"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "time_series",
+   "label": "Time-series forecasting",
+   "category": "data_science",
+   "aliases": [
+    "forecasting",
+    "time series",
+    "time-series analysis"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "mlops",
+   "label": "MLOps and model deployment",
+   "category": "data_science",
+   "aliases": [
+    "model deployment",
+    "model serving",
+    "ml pipelines"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "mlflow",
+   "label": "MLflow",
+   "category": "data_science",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "sagemaker",
+   "label": "AWS SageMaker",
+   "category": "data_science",
+   "aliases": [
+    "amazon sagemaker",
+    "sagemaker"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "databricks",
+   "label": "Databricks",
+   "category": "data_science",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "snowflake",
+   "label": "Snowflake",
+   "category": "data_science",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "bigquery",
+   "label": "Google BigQuery",
+   "category": "data_science",
+   "aliases": [
+    "big query"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "spark",
+   "label": "Apache Spark",
+   "category": "data_science",
+   "aliases": [
+    "pyspark",
+    "spark sql"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "airflow",
+   "label": "Apache Airflow",
+   "category": "data_science",
+   "aliases": [
+    "airflow dags"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "dbt",
+   "label": "dbt",
+   "category": "data_science",
+   "aliases": [
+    "data build tool"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "jupyter",
+   "label": "Jupyter notebooks",
+   "category": "data_science",
+   "aliases": [
+    "jupyter notebook",
+    "notebooks"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "matplotlib",
+   "label": "Matplotlib / Seaborn",
+   "category": "data_science",
+   "aliases": [
+    "seaborn",
+    "plotly",
+    "matplotlib"
+   ],
+   "esco_uri": null
+  },
+  {
+   "id": "tableau",
+   "label": "Tableau",
+   "category": "data_science",
+   "aliases": [],
+   "esco_uri": null
+  },
+  {
+   "id": "power_bi",
+   "label": "Power BI",
+   "category": "data_science",
+   "aliases": [
+    "powerbi",
+    "microsoft power bi"
    ],
    "esco_uri": null
   }

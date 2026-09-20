@@ -52,8 +52,9 @@ DatePrecision = Literal["month", "year", "unknown"]
 
 # Canonical role families. `non_software` roles never count toward software_months.
 RoleFamily = Literal[
+    "data_scientist", "data_analyst", "ml_engineer", "data_engineer",
     "backend_engineer", "frontend_engineer", "fullstack_engineer", "devops_engineer",
-    "data_engineer", "ml_engineer", "mobile_engineer", "qa_engineer", "embedded_engineer",
+    "mobile_engineer", "qa_engineer", "embedded_engineer",
     "other_software", "non_software",
 ]
 
@@ -81,6 +82,9 @@ class Role(BaseModel):
     date_precision: DatePrecision = "unknown"
     months: int | None = None  # computed
     is_backend_role: bool = False
+    # Data science / analytics / ML as the main work of the role, which is the
+    # narrower question `experience.data_months` is built from.
+    is_data_role: bool = False
     skills_mentioned: list[str] = Field(default_factory=list)  # taxonomy ids
     primary_skills: list[str] = Field(default_factory=list)  # in title or first two bullets
     evidence: list[Evidence] = Field(default_factory=list)
@@ -91,6 +95,7 @@ class Experience(BaseModel):
     total_months: Envelope = Field(default_factory=Envelope)
     software_months: Envelope = Field(default_factory=Envelope)
     backend_months: Envelope = Field(default_factory=Envelope)
+    data_months: Envelope = Field(default_factory=Envelope)
     seniority: Envelope = Field(default_factory=Envelope)  # junior|mid|senior|lead
     num_roles: Envelope = Field(default_factory=Envelope)
 
@@ -150,7 +155,7 @@ class Provenance(BaseModel):
 
 class Profile(BaseModel):
     schema_version: str = "1.0"
-    job_family: str = "software_engineering"
+    job_family: str = "data_science"
     as_of: str
     provenance: Provenance
     experience: Experience = Field(default_factory=Experience)
@@ -664,7 +669,7 @@ class Confirmation(BaseModel):
 
 class RestateRequest(BaseModel):
     candidate_id: str
-    job_id: str = "backend_engineer"
+    job_id: str = "data_scientist"
     # Mode B is the default: "we interview five" is how hiring actually works, and
     # it is the harder case for recourse, so it should not be the one you opt into.
     mode: Literal["A", "B"] = "B"
@@ -675,7 +680,7 @@ class RestateRequest(BaseModel):
 class ScreenRequest(BaseModel):
     candidate_id: str | None = None
     cv_text: str | None = None
-    job_id: str = "backend_engineer"
+    job_id: str = "data_scientist"
     mode: Literal["A", "B"] = "B"
     N: int | None = None
     explain: bool = True

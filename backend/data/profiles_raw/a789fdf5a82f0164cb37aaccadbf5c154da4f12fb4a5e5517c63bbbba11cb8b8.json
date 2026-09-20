@@ -1,0 +1,120 @@
+{
+ "cv_sha256": "a789fdf5a82f0164cb37aaccadbf5c154da4f12fb4a5e5517c63bbbba11cb8b8",
+ "source_file": "cv6_priya_sharma.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v2",
+ "taxonomy_version": "core-0.2",
+ "extracted_at": "2026-09-20T08:19:33+00:00",
+ "cv_text": "Priya Sharma\nData Analyst\npriya.sharma@example.com | +358 41 333 4455 | Helsinki, Finland\n\n\n\nExperience\nData Analyst, AppWorks Oy (2022-2026) - 3 years\n- Excel and SQL reporting, with Python scripts for data cleaning\n- No modelling or production data work\n\nEducation\nB.Sc. Computer Science, Haaga-Helia UAS (2022)\n\nSkills\nPython, SQL, MySQL, Excel, Matplotlib\n\nProjects\n- Monthly KPI report for the leadership team\n- Personal project: weather-data dashboard in Python\n\f",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Data Analyst",
+    "title_canonical": "data_analyst",
+    "employer": "AppWorks Oy",
+    "start_raw": "2022",
+    "end_raw": "2026",
+    "is_backend_role": false,
+    "is_data_role": false,
+    "skills_mentioned": [
+     "excel",
+     "sql",
+     "python"
+    ],
+    "primary_skills": [
+     "excel",
+     "sql",
+     "python"
+    ],
+    "quote": "Data Analyst, AppWorks Oy (2022-2026)"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, SQL, MySQL, Excel, Matplotlib"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python, SQL, MySQL, Excel, Matplotlib"
+   },
+   {
+    "skill": "mysql",
+    "quote": "Python, SQL, MySQL, Excel, Matplotlib"
+   },
+   {
+    "skill": "excel",
+    "quote": "Python, SQL, MySQL, Excel, Matplotlib"
+   },
+   {
+    "skill": "matplotlib",
+    "quote": "Python, SQL, MySQL, Excel, Matplotlib"
+   }
+  ],
+  "denied_skills": [
+   {
+    "skill": "machine_learning",
+    "quote": "No modelling or production data work"
+   },
+   {
+    "skill": "data_engineering",
+    "quote": "No modelling or production data work"
+   }
+  ],
+  "projects": [
+   {
+    "title": "Monthly KPI report for the leadership team",
+    "topics": [
+     "data"
+    ],
+    "skills": [],
+    "deployed": "unclear",
+    "quote": "- Monthly KPI report for the leadership team"
+   },
+   {
+    "title": "weather-data dashboard in Python",
+    "topics": [
+     "data"
+    ],
+    "skills": [
+     "python"
+    ],
+    "deployed": "unclear",
+    "quote": "- Personal project: weather-data dashboard in Python"
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "computer science",
+   "in_progress": "unclear",
+   "quote": "B.Sc. Computer Science, Haaga-Helia UAS"
+  },
+  "certifications": [],
+  "languages": [],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Helsinki, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

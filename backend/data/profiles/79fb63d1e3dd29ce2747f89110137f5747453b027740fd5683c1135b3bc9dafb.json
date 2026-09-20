@@ -1,70 +1,70 @@
 {
  "schema_version": "1.0",
- "job_family": "software_engineering",
+ "job_family": "data_science",
  "as_of": "2026-09-19",
  "provenance": {
-  "cv_sha256": "e0616ac0629dcbd51fa2b2dd54b8a5a55d0727ea64bc4bf2fed32c5dd96f68fa",
-  "source_file": "cv2_marcus_chen.txt",
+  "cv_sha256": "79fb63d1e3dd29ce2747f89110137f5747453b027740fd5683c1135b3bc9dafb",
+  "source_file": "cv5_johan_virtanen.txt",
   "extractor_model": "claude-opus-5",
-  "prompt_version": "extract-v1",
-  "taxonomy_version": "swe-core-0.1",
-  "extracted_at": "2026-09-19T14:19:23+00:00"
+  "prompt_version": "extract-v2",
+  "taxonomy_version": "core-0.2",
+  "extracted_at": "2026-09-20T08:19:26+00:00"
  },
  "experience": {
   "roles": [
    {
-    "title_raw": "Software Engineer",
-    "title_canonical": "backend_engineer",
-    "employer": "CloudNorth Ltd",
-    "start": "2021-07",
+    "title_raw": "Data Analyst",
+    "title_canonical": "data_analyst",
+    "employer": "Turku Web Oy",
+    "start": "2022-07",
     "end": "2026-07",
     "date_precision": "year",
-    "months": 60,
-    "is_backend_role": true,
+    "months": 48,
+    "is_backend_role": false,
+    "is_data_role": true,
     "skills_mentioned": [
-     "microservices",
+     "sql",
      "python",
-     "kubernetes",
-     "azure"
+     "power_bi",
+     "statistics"
     ],
     "primary_skills": [
-     "microservices",
+     "sql",
      "python",
-     "kubernetes",
-     "azure"
+     "power_bi",
+     "statistics"
     ],
     "evidence": [
      {
-      "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
-      "start": 110,
-      "end": 155,
+      "quote": "Data Analyst, Turku Web Oy (2022-2026)",
+      "start": 105,
+      "end": 143,
       "section": "experience",
       "verified": true
      }
     ]
    },
    {
-    "title_raw": "Junior Developer",
-    "title_canonical": "backend_engineer",
-    "employer": "StartHub",
-    "start": "2019-07",
-    "end": "2021-07",
+    "title_raw": "Software Developer",
+    "title_canonical": "other_software",
+    "employer": "Turku Web Oy",
+    "start": "2021-07",
+    "end": "2022-07",
     "date_precision": "year",
-    "months": 24,
-    "is_backend_role": true,
+    "months": 12,
+    "is_backend_role": false,
+    "is_data_role": false,
     "skills_mentioned": [
-     "django",
-     "postgresql"
+     "java"
     ],
     "primary_skills": [
-     "django",
-     "postgresql"
+     "java"
     ],
     "evidence": [
      {
-      "quote": "Junior Developer, StartHub (2019-2021)",
-      "start": 298,
-      "end": 336,
+      "quote": "Software Developer, Turku Web Oy (2021-2022)",
+      "start": 295,
+      "end": 339,
       "section": "experience",
       "verified": true
      }
@@ -72,25 +72,31 @@
    }
   ],
   "total_months": {
-   "value": 84,
+   "value": 60,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "software_months": {
-   "value": 84,
+   "value": 60,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "backend_months": {
-   "value": 84,
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "data_months": {
+   "value": 48,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "seniority": {
-   "value": "senior",
+   "value": "mid",
    "derivation": "inferred",
    "confidence": "medium",
    "evidence": []
@@ -103,42 +109,35 @@
   }
  },
  "skills": {
-  "azure": {
+  "java": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
-      "start": 110,
-      "end": 155,
+      "quote": "Software Developer, Turku Web Oy (2021-2022)",
+      "start": 295,
+      "end": 339,
       "section": "experience",
-      "verified": true
-     },
-     {
-      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
-      "start": 464,
-      "end": 523,
-      "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 60,
+    "value": 12,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "last_used_year": {
-    "value": 2026,
+    "value": 2022,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "proficiency": {
-    "value": 3,
+    "value": 2,
     "derivation": "inferred",
     "confidence": "medium",
     "evidence": []
@@ -151,17 +150,17 @@
    },
    "dated": true
   },
-  "ci_cd": {
+  "machine_learning": {
    "held": {
-    "value": true,
-    "derivation": "stated",
+    "value": false,
+    "derivation": "denied",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
-      "start": 464,
-      "end": 523,
-      "section": "skills",
+      "quote": "no production models",
+      "start": 274,
+      "end": 294,
+      "section": "denial",
       "verified": true
      }
     ]
@@ -179,70 +178,29 @@
     "evidence": []
    },
    "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
+    "value": null,
+    "derivation": "absent",
     "confidence": "low",
     "evidence": []
    },
    "project_count": {
-    "value": 1,
+    "value": 0,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "dated": false
   },
-  "django": {
+  "mysql": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Junior Developer, StartHub (2019-2021)",
-      "start": 298,
-      "end": 336,
-      "section": "experience",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 24,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2021,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "docker": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
-      "start": 464,
-      "end": 523,
+      "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis",
+      "start": 437,
+      "end": 490,
       "section": "skills",
       "verified": true
      }
@@ -274,125 +232,36 @@
    },
    "dated": false
   },
-  "kubernetes": {
+  "power_bi": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
-      "start": 110,
-      "end": 155,
+      "quote": "Data Analyst, Turku Web Oy (2022-2026)",
+      "start": 105,
+      "end": 143,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
-      "start": 464,
-      "end": 523,
+      "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis",
+      "start": 437,
+      "end": 490,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 60,
+    "value": 48,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "last_used_year": {
     "value": 2026,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "microservices": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
-      "start": 110,
-      "end": 155,
-      "section": "experience",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 60,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2026,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "postgresql": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Junior Developer, StartHub (2019-2021)",
-      "start": 298,
-      "end": 336,
-      "section": "experience",
-      "verified": true
-     },
-     {
-      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
-      "start": 464,
-      "end": 523,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 24,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2021,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -418,23 +287,23 @@
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
-      "start": 110,
-      "end": 155,
+      "quote": "Data Analyst, Turku Web Oy (2022-2026)",
+      "start": 105,
+      "end": 143,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
-      "start": 464,
-      "end": 523,
+      "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis",
+      "start": 437,
+      "end": 490,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 60,
+    "value": 48,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -459,16 +328,16 @@
    },
    "dated": true
   },
-  "redis": {
+  "r_lang": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
-      "start": 464,
-      "end": 523,
+      "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis",
+      "start": 437,
+      "end": 490,
       "section": "skills",
       "verified": true
      }
@@ -499,44 +368,134 @@
     "evidence": []
    },
    "dated": false
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Data Analyst, Turku Web Oy (2022-2026)",
+      "start": 105,
+      "end": 143,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis",
+      "start": 437,
+      "end": 490,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 48,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "statistics": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Data Analyst, Turku Web Oy (2022-2026)",
+      "start": 105,
+      "end": 143,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis",
+      "start": 437,
+      "end": 490,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 48,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
   }
  },
  "projects": [
   {
-   "title": "Rebuilt payments microservice",
+   "title": "Weekly sales reporting pack",
    "topics": [
-    "backend",
-    "microservices"
+    "data"
    ],
-   "skills": [
-    "microservices"
-   ],
+   "skills": [],
    "deployed": null,
    "evidence": [
     {
-     "quote": "- Rebuilt payments microservice, reduced latency by 40%",
-     "start": 534,
-     "end": 589,
+     "quote": "- Built the weekly sales reporting pack",
+     "start": 501,
+     "end": 540,
      "section": "projects",
      "verified": true
     }
    ]
   },
   {
-   "title": "Blue-green deployment pipeline",
+   "title": "Automated campaign result summaries",
    "topics": [
-    "devops"
+    "data"
    ],
-   "skills": [
-    "kubernetes",
-    "ci_cd"
-   ],
+   "skills": [],
    "deployed": null,
    "evidence": [
     {
-     "quote": "- Implemented blue-green deployment pipeline on Kubernetes",
-     "start": 590,
-     "end": 648,
+     "quote": "- Automated the campaign result summaries",
+     "start": 541,
+     "end": 582,
      "section": "projects",
      "verified": true
     }
@@ -544,9 +503,7 @@
   }
  ],
  "project_counts_by_topic": {
-  "backend": 1,
-  "devops": 1,
-  "microservices": 1
+  "data": 2
  },
  "education": {
   "highest_level": {
@@ -555,23 +512,23 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "B.Sc. Software Engineering, University of Helsinki",
-     "start": 398,
-     "end": 448,
+     "quote": "B.Sc. Information Technology, Turku UAS",
+     "start": 382,
+     "end": 421,
      "section": "education",
      "verified": true
     }
    ]
   },
   "field": {
-   "value": "software engineering",
+   "value": "information technology",
    "derivation": "stated",
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "B.Sc. Software Engineering, University of Helsinki",
-     "start": 398,
-     "end": 448,
+     "quote": "B.Sc. Information Technology, Turku UAS",
+     "start": 382,
+     "end": 421,
      "section": "education",
      "verified": true
     }
@@ -583,9 +540,9 @@
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "B.Sc. Software Engineering, University of Helsinki",
-     "start": 398,
-     "end": 448,
+     "quote": "B.Sc. Information Technology, Turku UAS",
+     "start": 382,
+     "end": 421,
      "section": "education",
      "verified": true
     }
@@ -613,9 +570,9 @@
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "Espoo, Finland",
-     "start": 83,
-     "end": 97,
+     "quote": "Turku, Finland",
+     "start": 76,
+     "end": 90,
      "section": "eligibility",
      "verified": true
     }
@@ -628,44 +585,9 @@
    "evidence": []
   }
  },
- "contact_email": "marcus.chen@example.com",
+ "contact_email": "johan.virtanen@example.com",
  "derived": {
-  "cloud_platform_held": {
-   "value": true,
-   "derivation": "stated",
-   "confidence": "high",
-   "evidence": [
-    {
-     "quote": "Software Engineer, CloudNorth Ltd (2021-2026)",
-     "start": 110,
-     "end": 155,
-     "section": "experience",
-     "verified": true
-    },
-    {
-     "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
-     "start": 464,
-     "end": 523,
-     "section": "skills",
-     "verified": true
-    }
-   ]
-  },
-  "ci_cd_held": {
-   "value": true,
-   "derivation": "stated",
-   "confidence": "high",
-   "evidence": [
-    {
-     "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
-     "start": 464,
-     "end": 523,
-     "section": "skills",
-     "verified": true
-    }
-   ]
-  },
-  "iac_held": {
+  "ml_framework_held": {
    "value": null,
    "derivation": "absent",
    "confidence": "low",
@@ -677,25 +599,62 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "Junior Developer, StartHub (2019-2021)",
-     "start": 298,
-     "end": 336,
+     "quote": "Data Analyst, Turku Web Oy (2022-2026)",
+     "start": 105,
+     "end": 143,
      "section": "experience",
      "verified": true
     },
     {
-     "quote": "Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis",
-     "start": 464,
-     "end": 523,
+     "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis",
+     "start": 437,
+     "end": 490,
      "section": "skills",
      "verified": true
     }
    ]
+  },
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "data_pipeline_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "visualisation_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Data Analyst, Turku Web Oy (2022-2026)",
+     "start": 105,
+     "end": 143,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis",
+     "start": 437,
+     "end": 490,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "mlops_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
   }
  },
- "unmatched_skills": [
-  "blue-green deployment"
- ],
+ "unmatched_skills": [],
  "never_extract": [
   "name",
   "date_of_birth",

@@ -1,82 +1,74 @@
-%PDF-1.4
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Length 1282 >>
-stream
-BT
-/F2 16 Tf
-1 0 0 1 54 720 Tm
-(Micro Soft) Tj
-/F2 12 Tf
-1 0 0 1 54 696 Tm
-(Backend Software Engineer) Tj
-/F1 10 Tf
-1 0 0 1 54 678 Tm
-(micro.soft@example.com | +358 40 555 0100 | Helsinki, Finland) Tj
-/F2 13 Tf
-1 0 0 1 54 663 Tm
-(Experience) Tj
-/F1 10 Tf
-1 0 0 1 54 644 Tm
-(Senior Backend Engineer, Redmond Cloud Oy \(2020-2026\) - 6 years) Tj
-1 0 0 1 54 629 Tm
-(- Built and operated Python/Go microservices on Kubernetes) Tj
-1 0 0 1 54 614 Tm
-(- Led migration of a monolith to an event-driven architecture on AWS) Tj
-1 0 0 1 54 599 Tm
-(Backend Developer, Windowpane Systems \(2018-2020\)) Tj
-1 0 0 1 54 584 Tm
-(- Developed REST APIs and CI/CD pipelines with GitHub Actions and Docker) Tj
-/F2 13 Tf
-1 0 0 1 54 569 Tm
-(Education) Tj
-/F1 10 Tf
-1 0 0 1 54 550 Tm
-(M.Sc. Computer Science, Aalto University \(2018\)) Tj
-/F2 13 Tf
-1 0 0 1 54 535 Tm
-(Skills) Tj
-/F1 10 Tf
-1 0 0 1 54 516 Tm
-(Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform) Tj
-/F2 13 Tf
-1 0 0 1 54 501 Tm
-(Projects) Tj
-/F1 10 Tf
-1 0 0 1 54 482 Tm
-(- Built internal developer tooling platform used by 10 teams) Tj
-1 0 0 1 54 467 Tm
-(- Led cloud-cost optimisation initiative, cut AWS spend by 25%) Tj
-1 0 0 1 54 452 Tm
-(- Automated infrastructure provisioning with Terraform across three environments) Tj
-ET
-endstream
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Author () /CreationDate (D:20260920111749+03'00') /Creator (anonymous) /Keywords () /ModDate (D:20260920111749+03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (cv11_micro_soft) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 822
+>>
+stream
+Gat=i6#W5X&;BTK'm$@=[$UnLR,".-M-;?*gH_#s/t6E+)_\g:=iWhNO70=2ekI,a6'a';,j)f9GV]gQTMOdcGn'7'LQ<5pKG!8kKQDVQq'DQo#Hf+6jQ]UJ>7\ai8H`c->RcHiJf>/e0's83pQ3/idt1aF]@O6Zlts!u'A"Eq-+&4VbVI8L5\3BrVq[&D(AR.nB$&E$meuo4q>#])XDT<[>hAHJ+-,@qjoND?$pb^5<;MKX'l#$W\.D7f<BM(Wp<qVoNDc[#rn*kek8a4m#lN=4M-f3RL9G[fi#7MWWrgSB?5N+EKA49lLk6Lm-+?AuK*45GVOaBMS.*bVE6X2k=optiK1)e1<A5r1Jm&u/$&!mPSZSip&[nFk\Mh+kTLJI&"]50i-A.7/nVXHq9Q?8NURTK5IWiPq*9?54)`l>Vc9d)a==P^*RB;Qu0_,;]=Zo3#N6cS?2aS7*dkHK;FfiWoFnik]`uj(X9p(=B@pWh8c"KijmKI2#J-O)Qd[O,I;:mRTQ!Ur`5u/P+CR?F=mWG$,;bF`KF+BH&(]msD\U3.2"q$BG;rD<DLGN3pCJ3M)78@_rRC!l].7"WT_KI0?Qgk"?2I6e^-X-m+VZa_@rk?4af\8tP(Frp,P!VRum,t5>Qb<'2ZFqi+H>6e^h`b$s+&!Q#O5*L!.p-Uha0!2%N;MsHd=*bW;NuT7\.j<JZ^&r(AHd8uK^$)TMY!$F<'754B"Sau3[g4Zou`8-ODl==@Z+QJ,S?_)R\FEMSkb\q^=Z3W9i9%IOY:q08;]LH9F%ZG9g:5)ItP1P#D.sSm;]V1#m\3GZhWeh~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000251 00000 n 
-0000001585 00000 n 
-0000001655 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000851 00000 n 
+0000000910 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<84749a01218904d9116fa05b66b68730><84749a01218904d9116fa05b66b68730>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-1730
+1822
 %%EOF

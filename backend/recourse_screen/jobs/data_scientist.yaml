@@ -5,23 +5,23 @@
 # threshold is a share of the job rather than a magic number. `cap` is how many
 # solver steps count as full marks. Causal constraints are not here -- they are
 # facts about the world and live in the manifest.
-job_id: backend_engineer
-title: Backend Software Engineer
-family: software_engineering
-manifest: software_engineering.json
-version: backend-engineer-v2
+job_id: data_scientist
+title: Data Scientist
+family: data_science
+manifest: data_science.json
+version: data-scientist-v1
 knockouts: [skills.python.held == true, experience.software_months >= 12, education.highest_level >= bsc]
 score:
-  experience.backend_months: {points: 32, cap: 8}
+  experience.data_months: {points: 30, cap: 10}
   skills.python.months: {points: 16, cap: 8}
-  skills.kubernetes.held: {points: 11}
-  project_counts_by_topic.microservices: {points: 10, cap: 2}
-  derived.cloud_platform_held: {points: 9}
-  derived.ci_cd_held: {points: 5}
-  education.highest_level: {points: 6, cap: 3}
-  skills.docker.held: {points: 4}
-  derived.iac_held: {points: 4}
-  derived.sql_held: {points: 3}
+  derived.ml_framework_held: {points: 12}
+  project_counts_by_topic.machine_learning: {points: 10, cap: 2}
+  derived.sql_held: {points: 8}
+  education.highest_level: {points: 8, cap: 4}
+  skills.statistics.held: {points: 6}
+  derived.cloud_platform_held: {points: 4}
+  derived.data_pipeline_held: {points: 3}
+  derived.visualisation_held: {points: 3}
 mode:
   A: {threshold: 80, margin_eps: 0, weight_shrink_rho: 0}
   B: {slots_N: 3, margin_eps: 0, weight_shrink_rho: 0}

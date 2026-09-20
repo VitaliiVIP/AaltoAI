@@ -30,7 +30,8 @@
      "python",
      "fastapi"
     ],
-    "quote": "Software Engineer (Backend)\nNokka Oy, Apr 2026 – Present"
+    "quote": "Software Engineer (Backend)\nNokka Oy, Apr 2026 – Present",
+    "is_data_role": false
    },
    {
     "title_raw": "Junior Backend Developer",
@@ -52,7 +53,8 @@
      "postgresql",
      "sql"
     ],
-    "quote": "Junior Backend Developer\nRuska Systems, Sep 2025 – Apr 2026"
+    "quote": "Junior Backend Developer\nRuska Systems, Sep 2025 – Apr 2026",
+    "is_data_role": false
    }
   ],
   "skills_block": [

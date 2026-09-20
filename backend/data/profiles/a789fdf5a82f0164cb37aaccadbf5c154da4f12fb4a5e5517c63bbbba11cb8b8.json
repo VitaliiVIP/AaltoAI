@@ -1,43 +1,42 @@
 {
  "schema_version": "1.0",
- "job_family": "software_engineering",
+ "job_family": "data_science",
  "as_of": "2026-09-19",
  "provenance": {
-  "cv_sha256": "7b3e154bcf4191c59eac32069480f26706d6eeff671894f4b7cf4071263ce200",
-  "source_file": "cv5_johan_virtanen.txt",
+  "cv_sha256": "a789fdf5a82f0164cb37aaccadbf5c154da4f12fb4a5e5517c63bbbba11cb8b8",
+  "source_file": "cv6_priya_sharma.txt",
   "extractor_model": "claude-opus-5",
-  "prompt_version": "extract-v1",
-  "taxonomy_version": "swe-core-0.1",
-  "extracted_at": "2026-09-19T14:19:41+00:00"
+  "prompt_version": "extract-v2",
+  "taxonomy_version": "core-0.2",
+  "extracted_at": "2026-09-20T08:19:33+00:00"
  },
  "experience": {
   "roles": [
    {
-    "title_raw": "Software Engineer",
-    "title_canonical": "backend_engineer",
-    "employer": "Turku Web Oy",
-    "start": "2021-07",
+    "title_raw": "Data Analyst",
+    "title_canonical": "data_analyst",
+    "employer": "AppWorks Oy",
+    "start": "2022-07",
     "end": "2026-07",
     "date_precision": "year",
-    "months": 60,
-    "is_backend_role": true,
+    "months": 48,
+    "is_backend_role": false,
+    "is_data_role": false,
     "skills_mentioned": [
-     "java",
-     "python",
-     "docker_swarm",
-     "kubernetes"
+     "excel",
+     "sql",
+     "python"
     ],
     "primary_skills": [
-     "java",
-     "python",
-     "docker_swarm",
-     "kubernetes"
+     "excel",
+     "sql",
+     "python"
     ],
     "evidence": [
      {
-      "quote": "Software Engineer, Turku Web Oy (2021-2026)",
-      "start": 116,
-      "end": 159,
+      "quote": "Data Analyst, AppWorks Oy (2022-2026)",
+      "start": 104,
+      "end": 141,
       "section": "experience",
       "verified": true
      }
@@ -45,19 +44,25 @@
    }
   ],
   "total_months": {
-   "value": 60,
+   "value": 48,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "software_months": {
-   "value": 60,
+   "value": 48,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "backend_months": {
-   "value": 60,
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "data_months": {
+   "value": 0,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
@@ -76,17 +81,17 @@
   }
  },
  "skills": {
-  "docker": {
+  "data_engineering": {
    "held": {
-    "value": true,
-    "derivation": "stated",
+    "value": false,
+    "derivation": "denied",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Java, Python, Docker, MySQL, Jenkins",
-      "start": 365,
-      "end": 401,
-      "section": "skills",
+      "quote": "No modelling or production data work",
+      "start": 219,
+      "end": 255,
+      "section": "denial",
       "verified": true
      }
     ]
@@ -104,8 +109,8 @@
     "evidence": []
    },
    "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
+    "value": null,
+    "derivation": "absent",
     "confidence": "low",
     "evidence": []
    },
@@ -117,71 +122,30 @@
    },
    "dated": false
   },
-  "docker_swarm": {
+  "excel": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Software Engineer, Turku Web Oy (2021-2026)",
-      "start": 116,
-      "end": 159,
-      "section": "experience",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 60,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2026,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "java": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Software Engineer, Turku Web Oy (2021-2026)",
-      "start": 116,
-      "end": 159,
+      "quote": "Data Analyst, AppWorks Oy (2022-2026)",
+      "start": 104,
+      "end": 141,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Java, Python, Docker, MySQL, Jenkins",
-      "start": 365,
-      "end": 401,
+      "quote": "Python, SQL, MySQL, Excel, Matplotlib",
+      "start": 322,
+      "end": 359,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 60,
+    "value": 48,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -199,23 +163,64 @@
     "evidence": []
    },
    "project_count": {
-    "value": 1,
+    "value": 0,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "dated": true
   },
-  "jenkins": {
+  "machine_learning": {
+   "held": {
+    "value": false,
+    "derivation": "denied",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "No modelling or production data work",
+      "start": 219,
+      "end": 255,
+      "section": "denial",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "matplotlib": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Java, Python, Docker, MySQL, Jenkins",
-      "start": 365,
-      "end": 401,
+      "quote": "Python, SQL, MySQL, Excel, Matplotlib",
+      "start": 322,
+      "end": 359,
       "section": "skills",
       "verified": true
      }
@@ -241,88 +246,6 @@
    },
    "project_count": {
     "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
-  },
-  "kubernetes": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Software Engineer, Turku Web Oy (2021-2026)",
-      "start": 116,
-      "end": 159,
-      "section": "experience",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 60,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2026,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "microservices": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "- Proof-of-concept Kubernetes deployment for one microservice",
-      "start": 461,
-      "end": 522,
-      "section": "projects",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -336,9 +259,9 @@
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Java, Python, Docker, MySQL, Jenkins",
-      "start": 365,
-      "end": 401,
+      "quote": "Python, SQL, MySQL, Excel, Matplotlib",
+      "start": 322,
+      "end": 359,
       "section": "skills",
       "verified": true
      }
@@ -377,23 +300,71 @@
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Software Engineer, Turku Web Oy (2021-2026)",
-      "start": 116,
-      "end": 159,
+      "quote": "Data Analyst, AppWorks Oy (2022-2026)",
+      "start": 104,
+      "end": 141,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Java, Python, Docker, MySQL, Jenkins",
-      "start": 365,
-      "end": 401,
+      "quote": "Python, SQL, MySQL, Excel, Matplotlib",
+      "start": 322,
+      "end": 359,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 60,
+    "value": 48,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Data Analyst, AppWorks Oy (2022-2026)",
+      "start": 104,
+      "end": 141,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, SQL, MySQL, Excel, Matplotlib",
+      "start": 322,
+      "end": 359,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 48,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -417,86 +388,40 @@
     "evidence": []
    },
    "dated": true
-  },
-  "spring": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "- Built internal ticketing system in Java/Spring",
-      "start": 412,
-      "end": 460,
-      "section": "projects",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
   }
  },
  "projects": [
   {
-   "title": "Internal ticketing system",
+   "title": "Monthly KPI report for the leadership team",
    "topics": [
-    "backend"
+    "data"
    ],
-   "skills": [
-    "java",
-    "spring"
-   ],
+   "skills": [],
    "deployed": null,
    "evidence": [
     {
-     "quote": "- Built internal ticketing system in Java/Spring",
-     "start": 412,
-     "end": 460,
+     "quote": "- Monthly KPI report for the leadership team",
+     "start": 370,
+     "end": 414,
      "section": "projects",
      "verified": true
     }
    ]
   },
   {
-   "title": "Proof-of-concept Kubernetes deployment",
+   "title": "weather-data dashboard in Python",
    "topics": [
-    "devops",
-    "microservices"
+    "data"
    ],
    "skills": [
-    "kubernetes",
-    "microservices"
+    "python"
    ],
    "deployed": null,
    "evidence": [
     {
-     "quote": "- Proof-of-concept Kubernetes deployment for one microservice",
-     "start": 461,
-     "end": 522,
+     "quote": "- Personal project: weather-data dashboard in Python",
+     "start": 415,
+     "end": 467,
      "section": "projects",
      "verified": true
     }
@@ -504,9 +429,7 @@
   }
  ],
  "project_counts_by_topic": {
-  "backend": 1,
-  "devops": 1,
-  "microservices": 1
+  "data": 2
  },
  "education": {
   "highest_level": {
@@ -515,41 +438,33 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "B.Sc. Information Technology, Turku UAS",
-     "start": 310,
-     "end": 349,
+     "quote": "B.Sc. Computer Science, Haaga-Helia UAS",
+     "start": 267,
+     "end": 306,
      "section": "education",
      "verified": true
     }
    ]
   },
   "field": {
-   "value": "information technology",
+   "value": "computer science",
    "derivation": "stated",
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "B.Sc. Information Technology, Turku UAS",
-     "start": 310,
-     "end": 349,
+     "quote": "B.Sc. Computer Science, Haaga-Helia UAS",
+     "start": 267,
+     "end": 306,
      "section": "education",
      "verified": true
     }
    ]
   },
   "in_progress": {
-   "value": false,
-   "derivation": "stated",
-   "confidence": "medium",
-   "evidence": [
-    {
-     "quote": "B.Sc. Information Technology, Turku UAS",
-     "start": 310,
-     "end": 349,
-     "section": "education",
-     "verified": true
-    }
-   ]
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
   }
  },
  "certifications": [],
@@ -573,9 +488,9 @@
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "Turku, Finland",
-     "start": 89,
-     "end": 103,
+     "quote": "Helsinki, Finland",
+     "start": 72,
+     "end": 89,
      "section": "eligibility",
      "verified": true
     }
@@ -588,29 +503,9 @@
    "evidence": []
   }
  },
- "contact_email": "johan.virtanen@example.com",
+ "contact_email": "priya.sharma@example.com",
  "derived": {
-  "cloud_platform_held": {
-   "value": null,
-   "derivation": "absent",
-   "confidence": "low",
-   "evidence": []
-  },
-  "ci_cd_held": {
-   "value": true,
-   "derivation": "stated",
-   "confidence": "high",
-   "evidence": [
-    {
-     "quote": "Java, Python, Docker, MySQL, Jenkins",
-     "start": 365,
-     "end": 401,
-     "section": "skills",
-     "verified": true
-    }
-   ]
-  },
-  "iac_held": {
+  "ml_framework_held": {
    "value": null,
    "derivation": "absent",
    "confidence": "low",
@@ -622,13 +517,52 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "Java, Python, Docker, MySQL, Jenkins",
-     "start": 365,
-     "end": 401,
+     "quote": "Data Analyst, AppWorks Oy (2022-2026)",
+     "start": 104,
+     "end": 141,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, SQL, MySQL, Excel, Matplotlib",
+     "start": 322,
+     "end": 359,
      "section": "skills",
      "verified": true
     }
    ]
+  },
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "data_pipeline_held": {
+   "value": false,
+   "derivation": "denied",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "visualisation_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Python, SQL, MySQL, Excel, Matplotlib",
+     "start": 322,
+     "end": 359,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "mlops_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
   }
  },
  "unmatched_skills": [],

@@ -241,14 +241,14 @@ def sponsorship_profile() -> Profile:
 
 
 def sponsorship_job():
-    job = load_job("backend_engineer").model_copy(deep=True)
+    job = load_job("data_scientist").model_copy(deep=True)
     job.knockouts = [*job.knockouts, "eligibility.requires_sponsorship == false"]
     return job
 
 
 def test_solver_refuses_to_trade_around_an_immutable_knockout():
     job = sponsorship_job()
-    manifest = load_manifest("software_engineering.json")
+    manifest = load_manifest("data_science.json")
     fv = build_feature_vector(sponsorship_profile(), job, manifest)
     result = solve_recourse(fv, job, manifest, tau=60)
     assert isinstance(result, NoFeasiblePath)
@@ -257,7 +257,7 @@ def test_solver_refuses_to_trade_around_an_immutable_knockout():
 
 def test_threshold_mode_reports_the_blocker_instead_of_a_false_counterfactual():
     job = sponsorship_job()
-    manifest = load_manifest("software_engineering.json")
+    manifest = load_manifest("data_science.json")
     outcome = run_threshold_mode(sponsorship_profile(), job, manifest)
     assert outcome.decision.passed is False
     assert outcome.routes == []

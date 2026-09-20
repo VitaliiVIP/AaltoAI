@@ -32,7 +32,8 @@
      "flask",
      "redis"
     ],
-    "quote": "Server-side Developer — Nokka Oy"
+    "quote": "Server-side Developer — Nokka Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "Software Engineer (Backend)",
@@ -59,7 +60,8 @@
      "sql",
      "postgresql"
     ],
-    "quote": "Software Engineer (Backend) — Lumi Labs"
+    "quote": "Software Engineer (Backend) — Lumi Labs",
+    "is_data_role": false
    },
    {
     "title_raw": "Backend Developer",
@@ -85,7 +87,8 @@
      "postgresql",
      "sql"
     ],
-    "quote": "Backend Developer — Kaiku Digital"
+    "quote": "Backend Developer — Kaiku Digital",
+    "is_data_role": false
    },
    {
     "title_raw": "Junior Backend Developer",
@@ -112,7 +115,8 @@
      "postgresql",
      "python"
     ],
-    "quote": "Junior Backend Developer — Vantaa Systems"
+    "quote": "Junior Backend Developer — Vantaa Systems",
+    "is_data_role": false
    }
   ],
   "skills_block": [

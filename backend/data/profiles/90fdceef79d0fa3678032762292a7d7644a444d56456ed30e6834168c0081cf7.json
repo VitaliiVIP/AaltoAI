@@ -1,66 +1,78 @@
 {
  "schema_version": "1.0",
- "job_family": "software_engineering",
+ "job_family": "data_science",
  "as_of": "2026-09-19",
  "provenance": {
-  "cv_sha256": "17448130b0f1b1a9a87e221225d9cb644a7623264c0a01c31611082f0d15c3a4",
-  "source_file": "cv4_aisha_rahman.txt",
+  "cv_sha256": "90fdceef79d0fa3678032762292a7d7644a444d56456ed30e6834168c0081cf7",
+  "source_file": "cv2_marcus_chen.txt",
   "extractor_model": "claude-opus-5",
-  "prompt_version": "extract-v1",
-  "taxonomy_version": "swe-core-0.1",
-  "extracted_at": "2026-09-19T14:17:40+00:00"
+  "prompt_version": "extract-v2",
+  "taxonomy_version": "core-0.2",
+  "extracted_at": "2026-09-20T08:18:58+00:00"
  },
  "experience": {
   "roles": [
    {
-    "title_raw": "Backend Developer",
-    "title_canonical": "backend_engineer",
-    "employer": "FinServ Digital",
-    "start": "2022-07",
+    "title_raw": "Data Scientist",
+    "title_canonical": "data_scientist",
+    "employer": "CloudNorth Ltd",
+    "start": "2021-07",
     "end": "2026-07",
     "date_precision": "year",
-    "months": 48,
-    "is_backend_role": true,
+    "months": 60,
+    "is_backend_role": false,
+    "is_data_role": true,
     "skills_mentioned": [
      "python",
-     "aws",
-     "aws_ecs",
-     "ci_cd",
-     "github_actions"
+     "scikit_learn",
+     "azure",
+     "statistics",
+     "ab_testing",
+     "machine_learning"
     ],
     "primary_skills": [
      "python",
-     "aws",
-     "aws_ecs",
-     "ci_cd",
-     "github_actions"
+     "scikit_learn",
+     "azure",
+     "statistics",
+     "ab_testing",
+     "machine_learning"
     ],
     "evidence": [
      {
-      "quote": "Backend Developer, FinServ Digital (2022-2026)",
-      "start": 115,
-      "end": 161,
+      "quote": "Data Scientist, CloudNorth Ltd (2021-2026)",
+      "start": 101,
+      "end": 143,
       "section": "experience",
       "verified": true
      }
     ]
    },
    {
-    "title_raw": "Junior Developer",
-    "title_canonical": "other_software",
-    "employer": "WebCraft",
-    "start": "2020-07",
-    "end": "2022-07",
+    "title_raw": "Data Analyst",
+    "title_canonical": "data_analyst",
+    "employer": "StartHub",
+    "start": "2019-07",
+    "end": "2021-07",
     "date_precision": "year",
     "months": 24,
     "is_backend_role": false,
-    "skills_mentioned": [],
-    "primary_skills": [],
+    "is_data_role": true,
+    "skills_mentioned": [
+     "sql",
+     "postgresql",
+     "spark"
+    ],
+    "primary_skills": [
+     "sql",
+     "postgresql",
+     "spark"
+    ],
     "evidence": [
      {
-      "quote": "Junior Developer, WebCraft (2020-2022)",
-      "start": 283,
-      "end": 321,
+      "quote": "Data Analyst, StartHub (2019-2021)",
+      "start": 299,
+      "end": 333,
       "section": "experience",
       "verified": true
      }
@@ -68,25 +80,31 @@
    }
   ],
   "total_months": {
-   "value": 72,
+   "value": 84,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "software_months": {
-   "value": 72,
+   "value": 84,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "backend_months": {
-   "value": 48,
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "data_months": {
+   "value": 84,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "seniority": {
-   "value": "mid",
+   "value": "senior",
    "derivation": "inferred",
    "confidence": "medium",
    "evidence": []
@@ -99,30 +117,23 @@
   }
  },
  "skills": {
-  "aws": {
+  "ab_testing": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Backend Developer, FinServ Digital (2022-2026)",
-      "start": 115,
-      "end": 161,
+      "quote": "Data Scientist, CloudNorth Ltd (2021-2026)",
+      "start": 101,
+      "end": 143,
       "section": "experience",
-      "verified": true
-     },
-     {
-      "quote": "Python, AWS ECS, Docker, PostgreSQL, GitHub Actions",
-      "start": 387,
-      "end": 438,
-      "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 48,
+    "value": 60,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -140,167 +151,37 @@
     "evidence": []
    },
    "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "aws_ecs": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Backend Developer, FinServ Digital (2022-2026)",
-      "start": 115,
-      "end": 161,
-      "section": "experience",
-      "verified": true
-     },
-     {
-      "quote": "Python, AWS ECS, Docker, PostgreSQL, GitHub Actions",
-      "start": 387,
-      "end": 438,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 48,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2026,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "ci_cd": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Backend Developer, FinServ Digital (2022-2026)",
-      "start": 115,
-      "end": 161,
-      "section": "experience",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 48,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2026,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "docker": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Python, AWS ECS, Docker, PostgreSQL, GitHub Actions",
-      "start": 387,
-      "end": 438,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
     "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
-   "dated": false
+   "dated": true
   },
-  "github_actions": {
+  "azure": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Backend Developer, FinServ Digital (2022-2026)",
-      "start": 115,
-      "end": 161,
+      "quote": "Data Scientist, CloudNorth Ltd (2021-2026)",
+      "start": 101,
+      "end": 143,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, AWS ECS, Docker, PostgreSQL, GitHub Actions",
-      "start": 387,
-      "end": 438,
+      "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+      "start": 494,
+      "end": 565,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 48,
+    "value": 60,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -325,37 +206,37 @@
    },
    "dated": true
   },
-  "kubernetes": {
+  "machine_learning": {
    "held": {
-    "value": false,
-    "derivation": "denied",
+    "value": true,
+    "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "(not Kubernetes)",
-      "start": 218,
-      "end": 234,
-      "section": "denial",
+      "quote": "Data Scientist, CloudNorth Ltd (2021-2026)",
+      "start": 101,
+      "end": 143,
+      "section": "experience",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 60,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "proficiency": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
     "evidence": []
    },
    "project_count": {
@@ -364,7 +245,7 @@
     "confidence": "medium",
     "evidence": []
    },
-   "dated": false
+   "dated": true
   },
   "postgresql": {
    "held": {
@@ -373,30 +254,37 @@
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Python, AWS ECS, Docker, PostgreSQL, GitHub Actions",
-      "start": 387,
-      "end": 438,
+      "quote": "Data Analyst, StartHub (2019-2021)",
+      "start": 299,
+      "end": 333,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+      "start": 494,
+      "end": 565,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 2021,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "proficiency": {
-    "value": 1,
+    "value": 3,
     "derivation": "inferred",
-    "confidence": "low",
+    "confidence": "medium",
     "evidence": []
    },
    "project_count": {
@@ -405,7 +293,7 @@
     "confidence": "medium",
     "evidence": []
    },
-   "dated": false
+   "dated": true
   },
   "python": {
    "held": {
@@ -414,23 +302,215 @@
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Backend Developer, FinServ Digital (2022-2026)",
-      "start": 115,
-      "end": 161,
+      "quote": "Data Scientist, CloudNorth Ltd (2021-2026)",
+      "start": 101,
+      "end": 143,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, AWS ECS, Docker, PostgreSQL, GitHub Actions",
-      "start": 387,
-      "end": 438,
+      "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+      "start": 494,
+      "end": 565,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 48,
+    "value": 60,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "scikit_learn": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Data Scientist, CloudNorth Ltd (2021-2026)",
+      "start": 101,
+      "end": 143,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+      "start": 494,
+      "end": 565,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 60,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "spark": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Data Analyst, StartHub (2019-2021)",
+      "start": 299,
+      "end": 333,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+      "start": 494,
+      "end": 565,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2021,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Data Analyst, StartHub (2019-2021)",
+      "start": 299,
+      "end": 333,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+      "start": 494,
+      "end": 565,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2021,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "statistics": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Data Scientist, CloudNorth Ltd (2021-2026)",
+      "start": 101,
+      "end": 143,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+      "start": 494,
+      "end": 565,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 60,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -458,34 +538,36 @@
  },
  "projects": [
   {
-   "title": "Internal reporting API",
+   "title": "Rebuilt the fraud-detection model",
    "topics": [
-    "backend"
+    "machine_learning"
    ],
    "skills": [],
-   "deployed": true,
+   "deployed": null,
    "evidence": [
     {
-     "quote": "Built internal reporting API used by finance team",
-     "start": 451,
-     "end": 500,
+     "quote": "- Rebuilt the fraud-detection model, cut false positives by 40%",
+     "start": 576,
+     "end": 639,
      "section": "projects",
      "verified": true
     }
    ]
   },
   {
-   "title": "Automated deployment scripts",
+   "title": "Pricing experiment programme",
    "topics": [
-    "devops"
+    "data"
    ],
-   "skills": [],
+   "skills": [
+    "ab_testing"
+   ],
    "deployed": null,
    "evidence": [
     {
-     "quote": "Automated deployment scripts for two internal tools",
-     "start": 503,
-     "end": 554,
+     "quote": "- Ran the pricing experiment programme for two product lines",
+     "start": 640,
+     "end": 700,
      "section": "projects",
      "verified": true
     }
@@ -493,8 +575,8 @@
   }
  ],
  "project_counts_by_topic": {
-  "backend": 1,
-  "devops": 1
+  "data": 1,
+  "machine_learning": 1
  },
  "education": {
   "highest_level": {
@@ -503,23 +585,23 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "B.Sc. Computer Science, Metropolia UAS",
-     "start": 333,
-     "end": 371,
+     "quote": "B.Sc. Software Engineering, University of Helsinki",
+     "start": 428,
+     "end": 478,
      "section": "education",
      "verified": true
     }
    ]
   },
   "field": {
-   "value": "computer science",
+   "value": "software engineering",
    "derivation": "stated",
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "B.Sc. Computer Science, Metropolia UAS",
-     "start": 333,
-     "end": 371,
+     "quote": "B.Sc. Software Engineering, University of Helsinki",
+     "start": 428,
+     "end": 478,
      "section": "education",
      "verified": true
     }
@@ -531,9 +613,9 @@
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "B.Sc. Computer Science, Metropolia UAS",
-     "start": 333,
-     "end": 371,
+     "quote": "B.Sc. Software Engineering, University of Helsinki",
+     "start": 428,
+     "end": 478,
      "section": "education",
      "verified": true
     }
@@ -561,9 +643,9 @@
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "Helsinki, Finland",
-     "start": 85,
-     "end": 102,
+     "quote": "Espoo, Finland",
+     "start": 72,
+     "end": 86,
      "section": "eligibility",
      "verified": true
     }
@@ -576,48 +658,28 @@
    "evidence": []
   }
  },
- "contact_email": "aisha.rahman@example.com",
+ "contact_email": "marcus.chen@example.com",
  "derived": {
-  "cloud_platform_held": {
+  "ml_framework_held": {
    "value": true,
    "derivation": "stated",
    "confidence": "high",
    "evidence": [
     {
-     "quote": "Backend Developer, FinServ Digital (2022-2026)",
-     "start": 115,
-     "end": 161,
+     "quote": "Data Scientist, CloudNorth Ltd (2021-2026)",
+     "start": 101,
+     "end": 143,
      "section": "experience",
      "verified": true
     },
     {
-     "quote": "Python, AWS ECS, Docker, PostgreSQL, GitHub Actions",
-     "start": 387,
-     "end": 438,
+     "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+     "start": 494,
+     "end": 565,
      "section": "skills",
      "verified": true
     }
    ]
-  },
-  "ci_cd_held": {
-   "value": true,
-   "derivation": "stated",
-   "confidence": "high",
-   "evidence": [
-    {
-     "quote": "Backend Developer, FinServ Digital (2022-2026)",
-     "start": 115,
-     "end": 161,
-     "section": "experience",
-     "verified": true
-    }
-   ]
-  },
-  "iac_held": {
-   "value": null,
-   "derivation": "absent",
-   "confidence": "low",
-   "evidence": []
   },
   "sql_held": {
    "value": true,
@@ -625,13 +687,74 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "Python, AWS ECS, Docker, PostgreSQL, GitHub Actions",
-     "start": 387,
-     "end": 438,
+     "quote": "Data Analyst, StartHub (2019-2021)",
+     "start": 299,
+     "end": 333,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+     "start": 494,
+     "end": 565,
      "section": "skills",
      "verified": true
     }
    ]
+  },
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Data Scientist, CloudNorth Ltd (2021-2026)",
+     "start": 101,
+     "end": 143,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+     "start": 494,
+     "end": 565,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "data_pipeline_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Data Analyst, StartHub (2019-2021)",
+     "start": 299,
+     "end": 333,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing",
+     "start": 494,
+     "end": 565,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "visualisation_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "mlops_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
   }
  },
  "unmatched_skills": [],

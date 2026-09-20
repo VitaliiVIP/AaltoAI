@@ -1,39 +1,40 @@
 {
  "schema_version": "1.0",
- "job_family": "software_engineering",
+ "job_family": "data_science",
  "as_of": "2026-09-19",
  "provenance": {
-  "cv_sha256": "b6556113d53460ec14082dce78a7e031413a9bc119ab60e0bc446921d9468e65",
-  "source_file": "cv7_daniel_kwan.txt",
+  "cv_sha256": "5c75c58b4280283e5ad63912b302948ca04c84202ea8e614ab476668fdfda580",
+  "source_file": "cv8_lucas_alves.txt",
   "extractor_model": "claude-opus-5",
-  "prompt_version": "extract-v1",
-  "taxonomy_version": "swe-core-0.1",
-  "extracted_at": "2026-09-20T07:53:09+00:00"
+  "prompt_version": "extract-v2",
+  "taxonomy_version": "core-0.2",
+  "extracted_at": "2026-09-20T08:19:48+00:00"
  },
  "experience": {
   "roles": [
    {
-    "title_raw": "Junior Backend Developer",
-    "title_canonical": "backend_engineer",
-    "employer": "Nova Retail",
-    "start": "2023-07",
+    "title_raw": "Frontend Developer",
+    "title_canonical": "frontend_engineer",
+    "employer": "ShopEasy",
+    "start": "2022-07",
     "end": "2026-07",
     "date_precision": "year",
-    "months": 36,
-    "is_backend_role": true,
+    "months": 48,
+    "is_backend_role": false,
+    "is_data_role": false,
     "skills_mentioned": [
-     "nodejs",
-     "python"
+     "react",
+     "typescript"
     ],
     "primary_skills": [
-     "nodejs",
-     "python"
+     "react",
+     "typescript"
     ],
     "evidence": [
      {
-      "quote": "Junior Backend Developer, Nova Retail (2023-2026)",
-      "start": 113,
-      "end": 162,
+      "quote": "Frontend Developer, ShopEasy (2022-2026)",
+      "start": 108,
+      "end": 148,
       "section": "experience",
       "verified": true
      }
@@ -41,19 +42,25 @@
    }
   ],
   "total_months": {
-   "value": 36,
+   "value": 48,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "software_months": {
-   "value": 36,
+   "value": 48,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "backend_months": {
-   "value": 36,
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "data_months": {
+   "value": 0,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
@@ -72,16 +79,16 @@
   }
  },
  "skills": {
-  "aws": {
+  "javascript": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "basic AWS (S3, Lambda)",
-      "start": 369,
-      "end": 391,
+      "quote": "JavaScript, React, TypeScript, basic Node.js",
+      "start": 336,
+      "end": 380,
       "section": "skills",
       "verified": true
      }
@@ -106,64 +113,23 @@
     "evidence": []
    },
    "project_count": {
-    "value": 1,
+    "value": 0,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "dated": false
   },
-  "aws_lambda": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "basic AWS (S3, Lambda)",
-      "start": 369,
-      "end": 391,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
-  },
-  "kubernetes": {
+  "machine_learning": {
    "held": {
     "value": false,
     "derivation": "denied",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "No Kubernetes or cloud-infra ownership experience",
-      "start": 230,
-      "end": 279,
+      "quote": "No Python, no statistics and no machine learning experience",
+      "start": 210,
+      "end": 269,
       "section": "denial",
       "verified": true
      }
@@ -195,16 +161,16 @@
    },
    "dated": false
   },
-  "mongodb": {
+  "nodejs": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Python, Node.js, MongoDB, basic AWS (S3, Lambda)",
-      "start": 343,
-      "end": 391,
+      "quote": "basic Node.js",
+      "start": 367,
+      "end": 380,
       "section": "skills",
       "verified": true
      }
@@ -236,30 +202,71 @@
    },
    "dated": false
   },
-  "nodejs": {
+  "python": {
+   "held": {
+    "value": false,
+    "derivation": "denied",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "No Python, no statistics and no machine learning experience",
+      "start": 210,
+      "end": 269,
+      "section": "denial",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "react": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Junior Backend Developer, Nova Retail (2023-2026)",
-      "start": 113,
-      "end": 162,
+      "quote": "Frontend Developer, ShopEasy (2022-2026)",
+      "start": 108,
+      "end": 148,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Node.js, MongoDB, basic AWS (S3, Lambda)",
-      "start": 343,
-      "end": 391,
+      "quote": "JavaScript, React, TypeScript, basic Node.js",
+      "start": 336,
+      "end": 380,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 36,
+    "value": 48,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -277,37 +284,78 @@
     "evidence": []
    },
    "project_count": {
-    "value": 0,
+    "value": 1,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "dated": true
   },
-  "python": {
+  "statistics": {
+   "held": {
+    "value": false,
+    "derivation": "denied",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "No Python, no statistics and no machine learning experience",
+      "start": 210,
+      "end": 269,
+      "section": "denial",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "typescript": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Junior Backend Developer, Nova Retail (2023-2026)",
-      "start": 113,
-      "end": 162,
+      "quote": "Frontend Developer, ShopEasy (2022-2026)",
+      "start": 108,
+      "end": 148,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Node.js, MongoDB, basic AWS (S3, Lambda)",
-      "start": 343,
-      "end": 391,
+      "quote": "JavaScript, React, TypeScript, basic Node.js",
+      "start": 336,
+      "end": 380,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 36,
+    "value": 48,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -335,37 +383,19 @@
  },
  "projects": [
   {
-   "title": "Internal Slack automation bot",
+   "title": "E-commerce storefront in React",
    "topics": [
-    "other"
-   ],
-   "skills": [],
-   "deployed": null,
-   "evidence": [
-    {
-     "quote": "- Built an internal Slack automation bot",
-     "start": 401,
-     "end": 441,
-     "section": "projects",
-     "verified": true
-    }
-   ]
-  },
-  {
-   "title": "AWS Lambda report generation function",
-   "topics": [
-    "backend"
+    "frontend"
    ],
    "skills": [
-    "aws_lambda",
-    "aws"
+    "react"
    ],
    "deployed": null,
    "evidence": [
     {
-     "quote": "- Small AWS Lambda function for report generation",
-     "start": 442,
-     "end": 491,
+     "quote": "E-commerce storefront in React",
+     "start": 393,
+     "end": 423,
      "section": "projects",
      "verified": true
     }
@@ -373,8 +403,7 @@
   }
  ],
  "project_counts_by_topic": {
-  "backend": 1,
-  "other": 1
+  "frontend": 1
  },
  "education": {
   "highest_level": {
@@ -383,23 +412,23 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "B.Sc. Computer Science, LUT University",
-     "start": 290,
-     "end": 328,
+     "quote": "B.Sc. Media Engineering, Metropolia UAS",
+     "start": 281,
+     "end": 320,
      "section": "education",
      "verified": true
     }
    ]
   },
   "field": {
-   "value": "computer science",
+   "value": "media engineering",
    "derivation": "stated",
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "B.Sc. Computer Science, LUT University",
-     "start": 290,
-     "end": 328,
+     "quote": "B.Sc. Media Engineering, Metropolia UAS",
+     "start": 281,
+     "end": 320,
      "section": "education",
      "verified": true
     }
@@ -411,9 +440,9 @@
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "B.Sc. Computer Science, LUT University",
-     "start": 290,
-     "end": 328,
+     "quote": "B.Sc. Media Engineering, Metropolia UAS",
+     "start": 281,
+     "end": 320,
      "section": "education",
      "verified": true
     }
@@ -441,9 +470,9 @@
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "Espoo, Finland",
-     "start": 87,
-     "end": 101,
+     "quote": "Helsinki, Finland",
+     "start": 76,
+     "end": 93,
      "section": "eligibility",
      "verified": true
     }
@@ -456,29 +485,9 @@
    "evidence": []
   }
  },
- "contact_email": "daniel.tuovio@example.com",
+ "contact_email": "lucas.alves@example.com",
  "derived": {
-  "cloud_platform_held": {
-   "value": true,
-   "derivation": "stated",
-   "confidence": "high",
-   "evidence": [
-    {
-     "quote": "basic AWS (S3, Lambda)",
-     "start": 369,
-     "end": 391,
-     "section": "skills",
-     "verified": true
-    }
-   ]
-  },
-  "ci_cd_held": {
-   "value": null,
-   "derivation": "absent",
-   "confidence": "low",
-   "evidence": []
-  },
-  "iac_held": {
+  "ml_framework_held": {
    "value": null,
    "derivation": "absent",
    "confidence": "low",
@@ -489,11 +498,33 @@
    "derivation": "absent",
    "confidence": "low",
    "evidence": []
+  },
+  "cloud_platform_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "data_pipeline_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "visualisation_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "mlops_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
   }
  },
- "unmatched_skills": [
-  "Slack"
- ],
+ "unmatched_skills": [],
  "never_extract": [
   "name",
   "date_of_birth",

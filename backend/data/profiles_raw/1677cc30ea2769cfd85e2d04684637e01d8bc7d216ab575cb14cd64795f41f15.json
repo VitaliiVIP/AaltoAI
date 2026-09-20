@@ -39,7 +39,8 @@
      "javascript",
      "machine_learning"
     ],
-    "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present"
+    "quote": "Software Engineer (Backend), Nordcom Oy — Sep 2024 – Present",
+    "is_data_role": false
    },
    {
     "title_raw": "API Developer",
@@ -64,7 +65,8 @@
      "sql",
      "postgresql"
     ],
-    "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024"
+    "quote": "API Developer, Nordcom Oy — Jun 2019 – Jul 2024",
+    "is_data_role": false
    },
    {
     "title_raw": "Warehouse Associate",
@@ -82,7 +84,8 @@
      "excel",
      "sql"
     ],
-    "quote": "Warehouse Associate, Kanta Kirjasto — Aug 2018 – Jun 2019"
+    "quote": "Warehouse Associate, Kanta Kirjasto — Aug 2018 – Jun 2019",
+    "is_data_role": false
    }
   ],
   "skills_block": [

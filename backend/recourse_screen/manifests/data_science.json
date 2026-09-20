@@ -1,9 +1,9 @@
 {
- "job_family": "software_engineering",
- "version": "swe-manifest-v2",
+ "job_family": "data_science",
+ "version": "ds-manifest-v1",
  "horizon_months": 18,
  "features": {
-  "experience.backend_months": {
+  "experience.data_months": {
    "type": "int",
    "step": {
     "unit": "months",
@@ -16,7 +16,7 @@
    "max_delta": 3,
    "typical_time_months": 6,
    "is_causal": true,
-   "candidate_phrase": "professional backend engineering experience"
+   "candidate_phrase": "professional data science, analytics or machine-learning experience"
   },
   "experience.software_months": {
    "type": "int",
@@ -79,7 +79,37 @@
    "is_causal": true,
    "candidate_phrase": "professional Python experience"
   },
-  "skills.kubernetes.held": {
+  "skills.statistics.held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 6,
+   "max_delta": 1,
+   "typical_time_months": 3,
+   "is_causal": true,
+   "candidate_phrase": "applied statistics (hypothesis testing, regression, uncertainty)"
+  },
+  "skills.ab_testing.held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 5,
+   "max_delta": 1,
+   "typical_time_months": 2,
+   "is_causal": true,
+   "candidate_phrase": "A/B testing and experiment design experience"
+  },
+  "skills.machine_learning.held": {
    "type": "bool",
    "step": {
     "unit": "boolean",
@@ -92,7 +122,22 @@
    "max_delta": 1,
    "typical_time_months": 4,
    "is_causal": true,
-   "candidate_phrase": "hands-on Kubernetes experience (deploying and operating a service)"
+   "candidate_phrase": "machine-learning modelling experience"
+  },
+  "skills.deep_learning.held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 9,
+   "max_delta": 1,
+   "typical_time_months": 4,
+   "is_causal": true,
+   "candidate_phrase": "deep-learning experience"
   },
   "skills.docker.held": {
    "type": "bool",
@@ -109,7 +154,7 @@
    "is_causal": true,
    "candidate_phrase": "working knowledge of Docker"
   },
-  "skills.terraform.held": {
+  "skills.spark.held": {
    "type": "bool",
    "step": {
     "unit": "boolean",
@@ -118,11 +163,41 @@
    "domain_max": 1,
    "actionability": "actionable",
    "direction": "increase_only",
-   "cost_per_step": 5,
+   "cost_per_step": 6,
    "max_delta": 1,
-   "typical_time_months": 2,
+   "typical_time_months": 3,
    "is_causal": true,
-   "candidate_phrase": "working knowledge of Terraform"
+   "candidate_phrase": "working knowledge of Apache Spark"
+  },
+  "derived.ml_framework_held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 9,
+   "max_delta": 1,
+   "typical_time_months": 4,
+   "is_causal": true,
+   "candidate_phrase": "hands-on experience with a machine-learning framework (scikit-learn, PyTorch, TensorFlow or similar)"
+  },
+  "derived.sql_held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 3,
+   "max_delta": 1,
+   "typical_time_months": 1,
+   "is_causal": true,
+   "candidate_phrase": "working knowledge of SQL and a query engine"
   },
   "derived.cloud_platform_held": {
    "type": "bool",
@@ -139,22 +214,7 @@
    "is_causal": true,
    "candidate_phrase": "hands-on experience with a cloud platform (AWS, Azure or GCP)"
   },
-  "derived.ci_cd_held": {
-   "type": "bool",
-   "step": {
-    "unit": "boolean",
-    "size": 1
-   },
-   "domain_max": 1,
-   "actionability": "actionable",
-   "direction": "increase_only",
-   "cost_per_step": 4,
-   "max_delta": 1,
-   "typical_time_months": 1,
-   "is_causal": true,
-   "candidate_phrase": "ownership of a CI/CD pipeline"
-  },
-  "derived.iac_held": {
+  "derived.data_pipeline_held": {
    "type": "bool",
    "step": {
     "unit": "boolean",
@@ -167,9 +227,9 @@
    "max_delta": 1,
    "typical_time_months": 2,
    "is_causal": true,
-   "candidate_phrase": "infrastructure-as-code experience (Terraform, Pulumi, Ansible or similar)"
+   "candidate_phrase": "data-pipeline experience (Spark, Airflow, dbt or similar)"
   },
-  "derived.sql_held": {
+  "derived.visualisation_held": {
    "type": "bool",
    "step": {
     "unit": "boolean",
@@ -182,9 +242,24 @@
    "max_delta": 1,
    "typical_time_months": 1,
    "is_causal": true,
-   "candidate_phrase": "working knowledge of SQL databases"
+   "candidate_phrase": "experience presenting results visually (Tableau, Power BI or Matplotlib)"
   },
-  "project_counts_by_topic.microservices": {
+  "derived.mlops_held": {
+   "type": "bool",
+   "step": {
+    "unit": "boolean",
+    "size": 1
+   },
+   "domain_max": 1,
+   "actionability": "actionable",
+   "direction": "increase_only",
+   "cost_per_step": 9,
+   "max_delta": 1,
+   "typical_time_months": 4,
+   "is_causal": true,
+   "candidate_phrase": "experience putting a model into production"
+  },
+  "project_counts_by_topic.machine_learning": {
    "type": "int",
    "step": {
     "unit": "projects",
@@ -197,9 +272,9 @@
    "max_delta": 3,
    "typical_time_months": 2,
    "is_causal": true,
-   "candidate_phrase": "shipped microservices projects"
+   "candidate_phrase": "shipped machine-learning projects"
   },
-  "project_counts_by_topic.backend": {
+  "project_counts_by_topic.data": {
    "type": "int",
    "step": {
     "unit": "projects",
@@ -212,7 +287,7 @@
    "max_delta": 3,
    "typical_time_months": 2,
    "is_causal": true,
-   "candidate_phrase": "backend projects you can describe and link"
+   "candidate_phrase": "shipped data projects"
   },
   "education.highest_level": {
    "type": "ordinal",
@@ -287,50 +362,167 @@
   }
  },
  "derived": {
-  "cloud_platform_held": {
+  "ml_framework_held": {
    "any_of": [
-    "skills.aws.held",
-    "skills.azure.held",
-    "skills.gcp.held",
-    "skills.aws_ecs.held",
-    "skills.aws_lambda.held"
+    "skills.scikit_learn.held",
+    "skills.pytorch.held",
+    "skills.tensorflow.held",
+    "skills.keras.held",
+    "skills.xgboost.held"
    ],
-   "phrase": "hands-on experience with a cloud platform"
-  },
-  "ci_cd_held": {
-   "any_of": [
-    "skills.ci_cd.held",
-    "skills.github_actions.held",
-    "skills.gitlab_ci.held",
-    "skills.jenkins.held",
-    "skills.argo_cd.held"
-   ],
-   "phrase": "CI/CD pipeline ownership"
-  },
-  "iac_held": {
-   "any_of": [
-    "skills.terraform.held",
-    "skills.pulumi.held",
-    "skills.ansible.held",
-    "skills.cloudformation.held"
-   ],
-   "phrase": "infrastructure-as-code experience"
+   "phrase": "hands-on experience with a machine-learning framework"
   },
   "sql_held": {
    "any_of": [
     "skills.sql.held",
     "skills.postgresql.held",
     "skills.mysql.held",
-    "skills.sqlite.held",
-    "skills.supabase.held"
+    "skills.bigquery.held",
+    "skills.snowflake.held"
    ],
-   "phrase": "SQL database experience"
+   "phrase": "SQL and query-engine experience"
+  },
+  "cloud_platform_held": {
+   "any_of": [
+    "skills.aws.held",
+    "skills.azure.held",
+    "skills.gcp.held",
+    "skills.sagemaker.held",
+    "skills.databricks.held"
+   ],
+   "phrase": "hands-on experience with a cloud platform"
+  },
+  "data_pipeline_held": {
+   "any_of": [
+    "skills.spark.held",
+    "skills.airflow.held",
+    "skills.dbt.held",
+    "skills.kafka.held",
+    "skills.data_engineering.held"
+   ],
+   "phrase": "data-pipeline ownership"
+  },
+  "visualisation_held": {
+   "any_of": [
+    "skills.tableau.held",
+    "skills.power_bi.held",
+    "skills.matplotlib.held"
+   ],
+   "phrase": "communicating results visually"
+  },
+  "mlops_held": {
+   "any_of": [
+    "skills.mlops.held",
+    "skills.mlflow.held",
+    "skills.sagemaker.held"
+   ],
+   "phrase": "model deployment experience"
   }
  },
  "cooccurrence": {
+  "pytorch": [
+   "python",
+   "deep_learning"
+  ],
+  "tensorflow": [
+   "python",
+   "deep_learning"
+  ],
+  "keras": [
+   "tensorflow",
+   "python"
+  ],
+  "scikit_learn": [
+   "python",
+   "pandas"
+  ],
+  "xgboost": [
+   "python",
+   "machine_learning"
+  ],
+  "pandas": [
+   "python",
+   "numpy"
+  ],
+  "numpy": [
+   "python"
+  ],
+  "deep_learning": [
+   "machine_learning"
+  ],
+  "nlp": [
+   "machine_learning",
+   "python"
+  ],
+  "computer_vision": [
+   "machine_learning",
+   "python"
+  ],
+  "llm": [
+   "nlp",
+   "python"
+  ],
+  "time_series": [
+   "statistics",
+   "python"
+  ],
+  "ab_testing": [
+   "statistics"
+  ],
+  "spark": [
+   "sql",
+   "data_engineering"
+  ],
+  "airflow": [
+   "python",
+   "data_engineering"
+  ],
+  "dbt": [
+   "sql"
+  ],
+  "snowflake": [
+   "sql"
+  ],
+  "bigquery": [
+   "sql",
+   "gcp"
+  ],
+  "databricks": [
+   "spark"
+  ],
+  "sagemaker": [
+   "aws",
+   "mlops"
+  ],
+  "mlflow": [
+   "mlops",
+   "machine_learning"
+  ],
+  "tableau": [
+   "sql"
+  ],
+  "power_bi": [
+   "sql",
+   "excel"
+  ],
+  "jupyter": [
+   "python"
+  ],
+  "matplotlib": [
+   "python"
+  ],
+  "postgresql": [
+   "sql"
+  ],
+  "mysql": [
+   "sql"
+  ],
   "kubernetes": [
-   "docker",
-   "ci_cd"
+   "docker"
+  ],
+  "github_actions": [
+   "ci_cd",
+   "git"
   ],
   "django": [
    "sql",
@@ -342,49 +534,10 @@
   ],
   "fastapi": [
    "python"
-  ],
-  "terraform": [
-   "aws"
-  ],
-  "postgresql": [
-   "sql"
-  ],
-  "mysql": [
-   "sql"
-  ],
-  "helm": [
-   "kubernetes",
-   "docker"
-  ],
-  "github_actions": [
-   "ci_cd",
-   "git"
-  ],
-  "gitlab_ci": [
-   "ci_cd",
-   "git"
-  ],
-  "jenkins": [
-   "ci_cd"
-  ],
-  "aws_ecs": [
-   "docker",
-   "aws"
-  ],
-  "microservices": [
-   "docker",
-   "rest_api"
-  ],
-  "react": [
-   "javascript",
-   "html_css"
-  ],
-  "nodejs": [
-   "javascript"
   ]
  },
  "dependencies": [
-  "x'[skills.kubernetes.held] <= x'[skills.docker.held]",
-  "delta[project_counts_by_topic.microservices] <= 2 + 1*delta[experience.backend_months]"
+  "x'[derived.data_pipeline_held] <= x'[derived.sql_held]",
+  "delta[project_counts_by_topic.machine_learning] <= 2 + 1*delta[experience.data_months]"
  ]
 }

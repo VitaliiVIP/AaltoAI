@@ -1,39 +1,42 @@
 {
  "schema_version": "1.0",
- "job_family": "software_engineering",
+ "job_family": "data_science",
  "as_of": "2026-09-19",
  "provenance": {
-  "cv_sha256": "fbf02c282ebb3126a228c61a370c061d1d714761102b50f84ca300b8d7efe7e7",
-  "source_file": "cv8_lucas_alves.txt",
+  "cv_sha256": "efe2afbbafb33baba3e6dc39db3589e7692f6e3756096ad22a9941e34c033d68",
+  "source_file": "cv7_daniel_kwan.txt",
   "extractor_model": "claude-opus-5",
-  "prompt_version": "extract-v1",
-  "taxonomy_version": "swe-core-0.1",
-  "extracted_at": "2026-09-19T14:20:06+00:00"
+  "prompt_version": "extract-v2",
+  "taxonomy_version": "core-0.2",
+  "extracted_at": "2026-09-20T08:19:41+00:00"
  },
  "experience": {
   "roles": [
    {
-    "title_raw": "Frontend Developer",
-    "title_canonical": "frontend_engineer",
-    "employer": "ShopEasy",
-    "start": "2022-07",
+    "title_raw": "Junior Data Scientist",
+    "title_canonical": "data_scientist",
+    "employer": "Nova Retail",
+    "start": "2023-07",
     "end": "2026-07",
     "date_precision": "year",
-    "months": 48,
+    "months": 36,
     "is_backend_role": false,
+    "is_data_role": true,
     "skills_mentioned": [
-     "react",
-     "typescript"
+     "python",
+     "scikit_learn",
+     "time_series"
     ],
     "primary_skills": [
-     "react",
-     "typescript"
+     "python",
+     "scikit_learn",
+     "time_series"
     ],
     "evidence": [
      {
-      "quote": "Frontend Developer, ShopEasy (2022-2026)",
-      "start": 113,
-      "end": 153,
+      "quote": "Junior Data Scientist, Nova Retail (2023-2026)",
+      "start": 112,
+      "end": 158,
       "section": "experience",
       "verified": true
      }
@@ -41,19 +44,25 @@
    }
   ],
   "total_months": {
-   "value": 48,
+   "value": 36,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "software_months": {
-   "value": 48,
+   "value": 36,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
   },
   "backend_months": {
    "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "data_months": {
+   "value": 36,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
@@ -79,9 +88,9 @@
     "confidence": "high",
     "evidence": [
      {
-      "quote": "No Python, Kubernetes, or cloud experience",
-      "start": 218,
-      "end": 260,
+      "quote": "No cloud platform or production deployment experience",
+      "start": 245,
+      "end": 298,
       "section": "denial",
       "verified": true
      }
@@ -113,17 +122,58 @@
    },
    "dated": false
   },
-  "javascript": {
+  "mlops": {
+   "held": {
+    "value": false,
+    "derivation": "denied",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "No cloud platform or production deployment experience",
+      "start": 245,
+      "end": 298,
+      "section": "denial",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "nlp": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "JavaScript, React, TypeScript, basic Node.js",
-      "start": 327,
-      "end": 371,
-      "section": "skills",
+      "quote": "Text-classification experiment with scikit-learn",
+      "start": 461,
+      "end": 509,
+      "section": "projects",
       "verified": true
      }
     ]
@@ -147,64 +197,23 @@
     "evidence": []
    },
    "project_count": {
-    "value": 0,
+    "value": 1,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "dated": false
   },
-  "kubernetes": {
-   "held": {
-    "value": false,
-    "derivation": "denied",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "No Python, Kubernetes, or cloud experience",
-      "start": 218,
-      "end": 260,
-      "section": "denial",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
-  },
-  "nodejs": {
+  "pandas": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "basic Node.js",
-      "start": 358,
-      "end": 371,
+      "quote": "Python, scikit-learn, pandas, SQLite",
+      "start": 364,
+      "end": 400,
       "section": "skills",
       "verified": true
      }
@@ -238,35 +247,42 @@
   },
   "python": {
    "held": {
-    "value": false,
-    "derivation": "denied",
+    "value": true,
+    "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "No Python, Kubernetes, or cloud experience",
-      "start": 218,
-      "end": 260,
-      "section": "denial",
+      "quote": "Junior Data Scientist, Nova Retail (2023-2026)",
+      "start": 112,
+      "end": 158,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, pandas, SQLite",
+      "start": 364,
+      "end": 400,
+      "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 36,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "proficiency": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
     "evidence": []
    },
    "project_count": {
@@ -275,32 +291,32 @@
     "confidence": "medium",
     "evidence": []
    },
-   "dated": false
+   "dated": true
   },
-  "react": {
+  "scikit_learn": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Frontend Developer, ShopEasy (2022-2026)",
-      "start": 113,
-      "end": 153,
+      "quote": "Junior Data Scientist, Nova Retail (2023-2026)",
+      "start": 112,
+      "end": 158,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "JavaScript, React, TypeScript, basic Node.js",
-      "start": 327,
-      "end": 371,
+      "quote": "Python, scikit-learn, pandas, SQLite",
+      "start": 364,
+      "end": 400,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 48,
+    "value": 36,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -325,30 +341,64 @@
    },
    "dated": true
   },
-  "typescript": {
+  "sqlite": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Frontend Developer, ShopEasy (2022-2026)",
-      "start": 113,
-      "end": 153,
-      "section": "experience",
-      "verified": true
-     },
-     {
-      "quote": "JavaScript, React, TypeScript, basic Node.js",
-      "start": 327,
-      "end": 371,
+      "quote": "Python, scikit-learn, pandas, SQLite",
+      "start": 364,
+      "end": 400,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": 48,
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "time_series": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Junior Data Scientist, Nova Retail (2023-2026)",
+      "start": 112,
+      "end": 158,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 36,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -366,7 +416,7 @@
     "evidence": []
    },
    "project_count": {
-    "value": 0,
+    "value": 1,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -376,19 +426,39 @@
  },
  "projects": [
   {
-   "title": "E-commerce storefront",
+   "title": "Demand-forecast prototype",
    "topics": [
-    "frontend"
+    "machine_learning"
    ],
    "skills": [
-    "react"
+    "time_series"
    ],
    "deployed": null,
    "evidence": [
     {
-     "quote": "Built e-commerce storefront in React",
-     "start": 384,
-     "end": 420,
+     "quote": "Demand-forecast prototype for one store chain",
+     "start": 413,
+     "end": 458,
+     "section": "projects",
+     "verified": true
+    }
+   ]
+  },
+  {
+   "title": "Text-classification experiment",
+   "topics": [
+    "machine_learning"
+   ],
+   "skills": [
+    "scikit_learn",
+    "nlp"
+   ],
+   "deployed": null,
+   "evidence": [
+    {
+     "quote": "Text-classification experiment with scikit-learn",
+     "start": 461,
+     "end": 509,
      "section": "projects",
      "verified": true
     }
@@ -396,7 +466,7 @@
   }
  ],
  "project_counts_by_topic": {
-  "frontend": 1
+  "machine_learning": 2
  },
  "education": {
   "highest_level": {
@@ -405,33 +475,41 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "B.Sc. Media Engineering, Metropolia UAS",
-     "start": 272,
-     "end": 311,
+     "quote": "B.Sc. Computer Science, LUT University",
+     "start": 310,
+     "end": 348,
      "section": "education",
      "verified": true
     }
    ]
   },
   "field": {
-   "value": "media engineering",
+   "value": "computer science",
    "derivation": "stated",
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "B.Sc. Media Engineering, Metropolia UAS",
-     "start": 272,
-     "end": 311,
+     "quote": "B.Sc. Computer Science, LUT University",
+     "start": 310,
+     "end": 348,
      "section": "education",
      "verified": true
     }
    ]
   },
   "in_progress": {
-   "value": null,
-   "derivation": "absent",
-   "confidence": "low",
-   "evidence": []
+   "value": false,
+   "derivation": "stated",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "quote": "B.Sc. Computer Science, LUT University",
+     "start": 310,
+     "end": 348,
+     "section": "education",
+     "verified": true
+    }
+   ]
   }
  },
  "certifications": [],
@@ -455,9 +533,9 @@
    "confidence": "medium",
    "evidence": [
     {
-     "quote": "Helsinki, Finland",
+     "quote": "Espoo, Finland",
      "start": 83,
-     "end": 100,
+     "end": 97,
      "section": "eligibility",
      "verified": true
     }
@@ -470,30 +548,57 @@
    "evidence": []
   }
  },
- "contact_email": "lucas.alves@example.com",
+ "contact_email": "daniel.tuovio@example.com",
  "derived": {
+  "ml_framework_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Junior Data Scientist, Nova Retail (2023-2026)",
+     "start": 112,
+     "end": 158,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, scikit-learn, pandas, SQLite",
+     "start": 364,
+     "end": 400,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "sql_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
   "cloud_platform_held": {
    "value": false,
    "derivation": "denied",
    "confidence": "medium",
    "evidence": []
   },
-  "ci_cd_held": {
+  "data_pipeline_held": {
    "value": null,
    "derivation": "absent",
    "confidence": "low",
    "evidence": []
   },
-  "iac_held": {
+  "visualisation_held": {
    "value": null,
    "derivation": "absent",
    "confidence": "low",
    "evidence": []
   },
-  "sql_held": {
-   "value": null,
-   "derivation": "absent",
-   "confidence": "low",
+  "mlops_held": {
+   "value": false,
+   "derivation": "denied",
+   "confidence": "medium",
    "evidence": []
   }
  },

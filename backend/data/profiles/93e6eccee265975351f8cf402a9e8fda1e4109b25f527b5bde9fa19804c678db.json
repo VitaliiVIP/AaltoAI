@@ -1,78 +1,84 @@
 {
  "schema_version": "1.0",
- "job_family": "software_engineering",
+ "job_family": "data_science",
  "as_of": "2026-09-19",
  "provenance": {
-  "cv_sha256": "f747da97194632a079e93f25737b25dfea74547c470dfe0748696ebb2d45afd8",
+  "cv_sha256": "93e6eccee265975351f8cf402a9e8fda1e4109b25f527b5bde9fa19804c678db",
   "source_file": "cv1_elina_korhonen.txt",
   "extractor_model": "claude-opus-5",
-  "prompt_version": "extract-v1",
-  "taxonomy_version": "swe-core-0.1",
-  "extracted_at": "2026-09-19T14:19:13+00:00"
+  "prompt_version": "extract-v2",
+  "taxonomy_version": "core-0.2",
+  "extracted_at": "2026-09-20T08:18:44+00:00"
  },
  "experience": {
   "roles": [
    {
-    "title_raw": "Senior Backend Engineer",
-    "title_canonical": "backend_engineer",
+    "title_raw": "Senior Data Scientist",
+    "title_canonical": "data_scientist",
     "employer": "Nordcom Oy",
     "start": "2020-07",
     "end": "2026-07",
     "date_precision": "year",
     "months": 72,
-    "is_backend_role": true,
+    "is_backend_role": false,
+    "is_data_role": true,
     "skills_mentioned": [
      "python",
-     "go",
-     "microservices",
-     "kubernetes",
-     "event_driven",
-     "aws"
+     "scikit_learn",
+     "pytorch",
+     "time_series",
+     "gcp",
+     "airflow",
+     "bigquery",
+     "machine_learning"
     ],
     "primary_skills": [
      "python",
-     "go",
-     "microservices",
-     "kubernetes",
-     "event_driven",
-     "aws"
+     "scikit_learn",
+     "pytorch",
+     "time_series",
+     "gcp",
+     "airflow",
+     "bigquery",
+     "machine_learning"
     ],
     "evidence": [
      {
-      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
-      "start": 119,
-      "end": 166,
+      "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+      "start": 117,
+      "end": 162,
       "section": "experience",
       "verified": true
      }
     ]
    },
    {
-    "title_raw": "Backend Developer",
-    "title_canonical": "backend_engineer",
+    "title_raw": "Data Scientist",
+    "title_canonical": "data_scientist",
     "employer": "Vantaa Systems",
     "start": "2018-07",
     "end": "2020-07",
     "date_precision": "year",
     "months": 24,
-    "is_backend_role": true,
+    "is_backend_role": false,
+    "is_data_role": true,
     "skills_mentioned": [
-     "rest_api",
-     "ci_cd",
-     "gitlab_ci",
-     "docker"
+     "statistics",
+     "ab_testing",
+     "python",
+     "sql"
     ],
     "primary_skills": [
-     "rest_api",
-     "ci_cd",
-     "gitlab_ci",
-     "docker"
+     "statistics",
+     "ab_testing",
+     "python",
+     "sql"
     ],
     "evidence": [
      {
-      "quote": "Backend Developer, Vantaa Systems (2018-2020)",
-      "start": 300,
-      "end": 345,
+      "quote": "Data Scientist, Vantaa Systems (2018-2020)",
+      "start": 348,
+      "end": 390,
       "section": "experience",
       "verified": true
      }
@@ -92,6 +98,12 @@
    "evidence": []
   },
   "backend_months": {
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "data_months": {
    "value": 96,
    "derivation": "computed",
    "confidence": "medium",
@@ -111,72 +123,17 @@
   }
  },
  "skills": {
-  "aws": {
+  "ab_testing": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
-      "start": 119,
-      "end": 166,
+      "quote": "Data Scientist, Vantaa Systems (2018-2020)",
+      "start": 348,
+      "end": 390,
       "section": "experience",
-      "verified": true
-     },
-     {
-      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-      "start": 475,
-      "end": 540,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 72,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2026,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "ci_cd": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Backend Developer, Vantaa Systems (2018-2020)",
-      "start": 300,
-      "end": 345,
-      "section": "experience",
-      "verified": true
-     },
-     {
-      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-      "start": 475,
-      "end": 540,
-      "section": "skills",
       "verified": true
      }
     ]
@@ -207,159 +164,36 @@
    },
    "dated": true
   },
-  "docker": {
+  "airflow": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Backend Developer, Vantaa Systems (2018-2020)",
-      "start": 300,
-      "end": 345,
+      "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+      "start": 117,
+      "end": 162,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-      "start": 475,
-      "end": 540,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 24,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2020,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "event_driven": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
-      "start": 119,
-      "end": 166,
-      "section": "experience",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 72,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2026,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "git": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "- Open-source Kubernetes operator for auto-scaling (450 GitHub stars)",
+      "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
       "start": 551,
-      "end": 620,
-      "section": "projects",
+      "end": 632,
+      "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
-  },
-  "gitlab_ci": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Backend Developer, Vantaa Systems (2018-2020)",
-      "start": 300,
-      "end": 345,
-      "section": "experience",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 24,
+    "value": 72,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "last_used_year": {
-    "value": 2020,
+    "value": 2026,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
@@ -378,23 +212,23 @@
    },
    "dated": true
   },
-  "go": {
+  "bigquery": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
-      "start": 119,
-      "end": 166,
+      "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+      "start": 117,
+      "end": 162,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-      "start": 475,
-      "end": 540,
+      "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+      "start": 551,
+      "end": 632,
       "section": "skills",
       "verified": true
      }
@@ -426,23 +260,23 @@
    },
    "dated": true
   },
-  "kubernetes": {
+  "gcp": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
-      "start": 119,
-      "end": 166,
+      "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+      "start": 117,
+      "end": 162,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-      "start": 475,
-      "end": 540,
+      "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+      "start": 551,
+      "end": 632,
       "section": "skills",
       "verified": true
      }
@@ -467,23 +301,23 @@
     "evidence": []
    },
    "project_count": {
-    "value": 1,
+    "value": 0,
     "derivation": "computed",
     "confidence": "medium",
     "evidence": []
    },
    "dated": true
   },
-  "microservices": {
+  "machine_learning": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
-      "start": 119,
-      "end": 166,
+      "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+      "start": 117,
+      "end": 162,
       "section": "experience",
       "verified": true
      }
@@ -514,47 +348,6 @@
     "evidence": []
    },
    "dated": true
-  },
-  "postgresql": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-      "start": 475,
-      "end": 540,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
   },
   "python": {
    "held": {
@@ -563,16 +356,71 @@
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
-      "start": 119,
-      "end": 166,
+      "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+      "start": 117,
+      "end": 162,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-      "start": 475,
-      "end": 540,
+      "quote": "Data Scientist, Vantaa Systems (2018-2020)",
+      "start": 348,
+      "end": 390,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+      "start": 551,
+      "end": 632,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 96,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "pytorch": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+      "start": 117,
+      "end": 162,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+      "start": 551,
+      "end": 632,
       "section": "skills",
       "verified": true
      }
@@ -604,17 +452,72 @@
    },
    "dated": true
   },
-  "rest_api": {
+  "scikit_learn": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Backend Developer, Vantaa Systems (2018-2020)",
-      "start": 300,
-      "end": 345,
+      "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+      "start": 117,
+      "end": 162,
       "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+      "start": 551,
+      "end": 632,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "sql": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Data Scientist, Vantaa Systems (2018-2020)",
+      "start": 348,
+      "end": 390,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+      "start": 551,
+      "end": 632,
+      "section": "skills",
       "verified": true
      }
     ]
@@ -645,37 +548,44 @@
    },
    "dated": true
   },
-  "terraform": {
+  "statistics": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-      "start": 475,
-      "end": 540,
+      "quote": "Data Scientist, Vantaa Systems (2018-2020)",
+      "start": 348,
+      "end": 390,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+      "start": 551,
+      "end": 632,
       "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 24,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 2020,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "proficiency": {
-    "value": 1,
+    "value": 3,
     "derivation": "inferred",
-    "confidence": "low",
+    "confidence": "medium",
     "evidence": []
    },
    "project_count": {
@@ -684,64 +594,102 @@
     "confidence": "medium",
     "evidence": []
    },
-   "dated": false
+   "dated": true
+  },
+  "time_series": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+      "start": 117,
+      "end": 162,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 72,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 1,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
   }
  },
  "projects": [
   {
-   "title": "Open-source Kubernetes operator for auto-scaling",
+   "title": "Open-source churn-prediction library",
    "topics": [
-    "infrastructure",
-    "devops"
+    "machine_learning"
    ],
-   "skills": [
-    "kubernetes",
-    "git"
-   ],
+   "skills": [],
    "deployed": null,
    "evidence": [
     {
-     "quote": "- Open-source Kubernetes operator for auto-scaling (450 GitHub stars)",
-     "start": 551,
-     "end": 620,
+     "quote": "- Open-source churn-prediction library (450 GitHub stars)",
+     "start": 643,
+     "end": 700,
      "section": "projects",
      "verified": true
     }
    ]
   },
   {
-   "title": "Cloud-cost optimisation project",
+   "title": "Demand forecasting model",
    "topics": [
-    "infrastructure"
+    "machine_learning",
+    "data"
    ],
    "skills": [
-    "aws"
+    "time_series"
    ],
    "deployed": null,
    "evidence": [
     {
-     "quote": "- Led cloud-cost optimisation project, cut AWS spend by 30%",
-     "start": 621,
-     "end": 680,
+     "quote": "- Demand forecasting model that cut stockouts by 30%",
+     "start": 701,
+     "end": 753,
      "section": "projects",
      "verified": true
     }
    ]
   },
   {
-   "title": "Internal CI/CD platform",
+   "title": "Internal experimentation platform",
    "topics": [
-    "devops"
+    "data"
    ],
    "skills": [
-    "ci_cd"
+    "ab_testing"
    ],
    "deployed": true,
    "evidence": [
     {
-     "quote": "- Built internal CI/CD platform used by 12 teams",
-     "start": 681,
-     "end": 729,
+     "quote": "- Internal experimentation platform used by 12 teams",
+     "start": 754,
+     "end": 806,
      "section": "projects",
      "verified": true
     }
@@ -749,8 +697,8 @@
   }
  ],
  "project_counts_by_topic": {
-  "devops": 2,
-  "infrastructure": 2
+  "data": 2,
+  "machine_learning": 2
  },
  "education": {
   "highest_level": {
@@ -760,8 +708,8 @@
    "evidence": [
     {
      "quote": "M.Sc. Computer Science, Aalto University",
-     "start": 419,
-     "end": 459,
+     "start": 495,
+     "end": 535,
      "section": "education",
      "verified": true
     }
@@ -774,8 +722,8 @@
    "evidence": [
     {
      "quote": "M.Sc. Computer Science, Aalto University",
-     "start": 419,
-     "end": 459,
+     "start": 495,
+     "end": 535,
      "section": "education",
      "verified": true
     }
@@ -788,8 +736,8 @@
    "evidence": [
     {
      "quote": "M.Sc. Computer Science, Aalto University",
-     "start": 419,
-     "end": 459,
+     "start": 495,
+     "end": 535,
      "section": "education",
      "verified": true
     }
@@ -818,8 +766,8 @@
    "evidence": [
     {
      "quote": "Helsinki, Finland",
-     "start": 89,
-     "end": 106,
+     "start": 85,
+     "end": 102,
      "section": "eligibility",
      "verified": true
     }
@@ -834,57 +782,22 @@
  },
  "contact_email": "elina.korhonen@example.com",
  "derived": {
-  "cloud_platform_held": {
+  "ml_framework_held": {
    "value": true,
    "derivation": "stated",
    "confidence": "high",
    "evidence": [
     {
-     "quote": "Senior Backend Engineer, Nordcom Oy (2020-2026)",
-     "start": 119,
-     "end": 166,
+     "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+     "start": 117,
+     "end": 162,
      "section": "experience",
      "verified": true
     },
     {
-     "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-     "start": 475,
-     "end": 540,
-     "section": "skills",
-     "verified": true
-    }
-   ]
-  },
-  "ci_cd_held": {
-   "value": true,
-   "derivation": "stated",
-   "confidence": "high",
-   "evidence": [
-    {
-     "quote": "Backend Developer, Vantaa Systems (2018-2020)",
-     "start": 300,
-     "end": 345,
-     "section": "experience",
-     "verified": true
-    },
-    {
-     "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-     "start": 475,
-     "end": 540,
-     "section": "skills",
-     "verified": true
-    }
-   ]
-  },
-  "iac_held": {
-   "value": true,
-   "derivation": "stated",
-   "confidence": "high",
-   "evidence": [
-    {
-     "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-     "start": 475,
-     "end": 540,
+     "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+     "start": 551,
+     "end": 632,
      "section": "skills",
      "verified": true
     }
@@ -896,13 +809,74 @@
    "confidence": "high",
    "evidence": [
     {
-     "quote": "Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform",
-     "start": 475,
-     "end": 540,
+     "quote": "Data Scientist, Vantaa Systems (2018-2020)",
+     "start": 348,
+     "end": 390,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+     "start": 551,
+     "end": 632,
      "section": "skills",
      "verified": true
     }
    ]
+  },
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+     "start": 117,
+     "end": 162,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+     "start": 551,
+     "end": 632,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "data_pipeline_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Data Scientist, Nordcom Oy (2020-2026)",
+     "start": 117,
+     "end": 162,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, scikit-learn, PyTorch, SQL, BigQuery, GCP, Airflow, statistical modelling",
+     "start": 551,
+     "end": 632,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "visualisation_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
+  },
+  "mlops_held": {
+   "value": null,
+   "derivation": "absent",
+   "confidence": "low",
+   "evidence": []
   }
  },
  "unmatched_skills": [],

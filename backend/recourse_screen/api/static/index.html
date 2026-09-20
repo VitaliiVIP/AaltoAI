@@ -144,10 +144,10 @@ async function doRestate() {
 }
 function renderProfile(p) {
   const ev = e => e.evidence?.length ? ` <span class="q">“${esc(e.evidence[0].quote)}”</span>${e.evidence[0].verified===false?' ⚠ unverified':''}` : '';
-  const roles = p.experience.roles.map(r => `<li>${esc(r.title_raw)} @ ${esc(r.employer||'?')} ${r.start||'?'}→${r.end||'?'} (${r.months} mo, ${r.date_precision}) ${r.is_backend_role?'· backend':''}<br>skills: ${r.skills_mentioned.join(', ')}${ev(r)}</li>`).join('');
+  const roles = p.experience.roles.map(r => `<li>${esc(r.title_raw)} @ ${esc(r.employer||'?')} ${r.start||'?'}→${r.end||'?'} (${r.months} mo, ${r.date_precision}) ${r.is_backend_role?'· backend':''}${r.is_data_role?'· data':''}<br>skills: ${r.skills_mentioned.join(', ')}${ev(r)}</li>`).join('');
   const skills = Object.entries(p.skills).map(([k,s]) => `<tr><td>${k}</td><td>${s.held.value===null?'—':s.held.value} <span class="ev">${s.held.derivation}</span></td><td>${s.months.value??'—'}</td><td>${s.proficiency.value??'—'}</td></tr>`).join('');
   $('#profile').innerHTML = `<div>as of ${p.as_of} · ${esc(p.provenance.extractor_model)} · ${esc(p.provenance.prompt_version)} · cv ${p.provenance.cv_sha256.slice(0,10)}</div>
-    <div>experience: total ${p.experience.total_months.value} mo · software ${p.experience.software_months.value} mo · backend ${p.experience.backend_months.value} mo · ${p.experience.seniority.value}</div>
+    <div>experience: total ${p.experience.total_months.value} mo · software ${p.experience.software_months.value} mo · data ${p.experience.data_months.value} mo · ${p.experience.seniority.value}</div>
     <div>education: ${p.education.highest_level.value} (${p.education.highest_level.derivation})${ev(p.education.highest_level)}</div>
     <div>derived: ${Object.entries(p.derived).map(([k,v])=>`${k}=${v.value===null?'absent':v.value}`).join(' · ')}</div>
     <details><summary>roles (${p.experience.roles.length})</summary><ul>${roles}</ul></details>

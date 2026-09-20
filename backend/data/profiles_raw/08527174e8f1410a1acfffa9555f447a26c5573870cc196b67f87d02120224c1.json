@@ -37,7 +37,8 @@
      "nodejs",
      "git"
     ],
-    "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present"
+    "quote": "Frontend Engineer, Kaiku Digital — Jul 2023 – Present",
+    "is_data_role": false
    },
    {
     "title_raw": "Junior Frontend Developer",
@@ -68,7 +69,8 @@
      "javascript",
      "git"
     ],
-    "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023"
+    "quote": "Junior Frontend Developer, Koski Engineering — Oct 2020 – Jul 2023",
+    "is_data_role": false
    }
   ],
   "skills_block": [

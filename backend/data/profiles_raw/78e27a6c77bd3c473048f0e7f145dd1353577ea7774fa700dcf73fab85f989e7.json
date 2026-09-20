@@ -23,7 +23,8 @@
     "primary_skills": [
      "javascript"
     ],
-    "quote": "Independent Software Consultant"
+    "quote": "Independent Software Consultant",
+    "is_data_role": false
    },
    {
     "title_raw": "Web Developer",
@@ -45,7 +46,8 @@
     "primary_skills": [
      "html_css"
     ],
-    "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026"
+    "quote": "Web Developer\nSisu Software Oy\nMay 2024 – Apr 2026",
+    "is_data_role": false
    },
    {
     "title_raw": "Web Developer",
@@ -68,7 +70,8 @@
      "react",
      "nextjs"
     ],
-    "quote": "Web Developer\nNordcom Oy\nOct 2023 – Apr 2024"
+    "quote": "Web Developer\nNordcom Oy\nOct 2023 – Apr 2024",
+    "is_data_role": false
    },
    {
     "title_raw": "Junior Frontend Developer",
@@ -91,7 +94,8 @@
      "rest_api",
      "graphql"
     ],
-    "quote": "Junior Frontend Developer"
+    "quote": "Junior Frontend Developer",
+    "is_data_role": false
    }
   ],
   "skills_block": [

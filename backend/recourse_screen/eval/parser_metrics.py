@@ -16,7 +16,7 @@ from typing import Any, Iterable
 
 from ..schemas import Envelope, Evidence, Profile
 
-_EXPERIENCE_FIELDS = ("total_months", "software_months", "backend_months")
+_EXPERIENCE_FIELDS = ("total_months", "software_months", "backend_months", "data_months")
 
 
 def _held_skills(profile: Profile) -> set[str]:
@@ -42,7 +42,8 @@ def _iter_evidence(profile: Profile) -> Iterable[Evidence]:
         yield from env.evidence
 
     for holder in (profile.experience.total_months, profile.experience.software_months,
-                   profile.experience.backend_months, profile.experience.seniority,
+                   profile.experience.backend_months, profile.experience.data_months,
+                   profile.experience.seniority,
                    profile.experience.num_roles, profile.education.highest_level,
                    profile.education.field, profile.education.in_progress,
                    profile.eligibility.work_authorization_region,

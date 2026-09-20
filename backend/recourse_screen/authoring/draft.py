@@ -214,7 +214,7 @@ def _user_message(ad_text: str) -> str:
 def draft_from_ad(
     ad_text: str,
     *,
-    manifest_name: str = "software_engineering.json",
+    manifest_name: str = "data_science.json",
     job_id: str | None = None,
     threshold: int = 80,
     slots_n: int = 3,

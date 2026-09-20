@@ -157,7 +157,7 @@ from recourse_screen import pipeline; \
 from recourse_screen.loaders import load_job, manifest_for_job; \
 from recourse_screen.recourse.ranking_mode import score_pool; \
 from recourse_screen.score.scorer import max_score; \
-j = load_job('backend_engineer'); m = manifest_for_job(j); \
+j = load_job('data_scientist'); m = manifest_for_job(j); \
 rows = sorted(score_pool(pipeline.load_pool(), j, m), key=lambda t: (not t[2], -t[1])); \
 print(f'threshold {j.mode.A.threshold} of {max_score(j, m)}, top {j.mode.B.slots_N} in mode B'); \
 [print(f'{i:3}. {s:4}  {\"ko-fail\" if not ko else \"\":8} {cid}') for i, (cid, s, ko) in enumerate(rows, 1)]"

@@ -53,6 +53,7 @@ export interface Role {
   date_precision: "month" | "year" | "unknown";
   months: number | null;
   is_backend_role: boolean;
+  is_data_role: boolean;
   skills_mentioned: string[];
   primary_skills: string[];
   evidence: Evidence[];
@@ -63,6 +64,7 @@ export interface Experience {
   total_months: Envelope;
   software_months: Envelope;
   backend_months: Envelope;
+  data_months: Envelope;
   seniority: Envelope;
   num_roles: Envelope;
 }

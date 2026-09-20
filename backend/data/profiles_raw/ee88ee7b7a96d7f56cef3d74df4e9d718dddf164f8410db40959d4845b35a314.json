@@ -30,7 +30,8 @@
      "git",
      "testing"
     ],
-    "quote": "QA Analyst, Vireo Solutions"
+    "quote": "QA Analyst, Vireo Solutions",
+    "is_data_role": false
    },
    {
     "title_raw": "QA Analyst",
@@ -51,7 +52,8 @@
      "python",
      "javascript"
     ],
-    "quote": "QA Analyst working across manual and automated software testing"
+    "quote": "QA Analyst working across manual and automated software testing",
+    "is_data_role": false
    }
   ],
   "skills_block": [

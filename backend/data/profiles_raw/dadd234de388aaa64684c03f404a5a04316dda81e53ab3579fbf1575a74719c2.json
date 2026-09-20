@@ -1,11 +1,11 @@
 {
- "cv_sha256": "b2f5d90b20e58e0ced6f01dbd982febbe6794e2be5b1906bc3b0316657af1c6d",
+ "cv_sha256": "dadd234de388aaa64684c03f404a5a04316dda81e53ab3579fbf1575a74719c2",
  "source_file": "cv10_tomas_hidalgo.txt",
  "extractor_model": "claude-opus-5",
- "prompt_version": "extract-v1",
- "taxonomy_version": "swe-core-0.1",
- "extracted_at": "2026-09-19T14:19:02+00:00",
- "cv_text": "Tomas Hidalgo\nBackend Software Engineer\ntomas.hidalgo@example.com | +358 45 999 3311 | Helsinki, Finland\n\nExperience\nData Entry / Support Specialist, RetailPlus (2023-2026) - 2 years\n- No software engineering role held to date\n- Self-taught Python basics outside of work\n\nEducation\nHigh School Diploma; online Python course (2025)\n\nSkills\nBasic Python, Excel, SQL fundamentals\n\nProjects\n- Personal to-do list app in Python (tutorial-based)\n- No professional or deployed projects\n\f",
+ "prompt_version": "extract-v2",
+ "taxonomy_version": "core-0.2",
+ "extracted_at": "2026-09-20T08:18:32+00:00",
+ "cv_text": "Tomas Hidalgo\nData Entry / Support Specialist\ntomas.hidalgo@example.com | +358 45 999 3311 | Helsinki, Finland\n\n\n\nExperience\nData Entry / Support Specialist, RetailPlus (2023-2026) - 2 years\n- No professional data science or software role held to date\n- Self-taught Python basics outside of work\n\nEducation\nHigh School Diploma; online Python course (2025)\n\nSkills\nBasic Python, Excel, SQL fundamentals\n\nProjects\n- Personal to-do list app in Python (tutorial-based)\n- No professional or deployed projects\n\f",
  "output": {
   "roles": [
    {
@@ -15,12 +15,11 @@
     "start_raw": "2023",
     "end_raw": "2026",
     "is_backend_role": false,
+    "is_data_role": false,
     "skills_mentioned": [
      "python"
     ],
-    "primary_skills": [
-     "python"
-    ],
+    "primary_skills": [],
     "quote": "Data Entry / Support Specialist, RetailPlus (2023-2026)"
    }
   ],
@@ -49,13 +48,13 @@
      "python"
     ],
     "deployed": "no",
-    "quote": "Personal to-do list app in Python (tutorial-based)"
+    "quote": "- Personal to-do list app in Python (tutorial-based)\n- No professional or deployed projects"
    }
   ],
   "education": {
    "highest_level": "secondary",
    "field": "",
-   "in_progress": "no",
+   "in_progress": "unclear",
    "quote": "High School Diploma; online Python course"
   },
   "certifications": [],

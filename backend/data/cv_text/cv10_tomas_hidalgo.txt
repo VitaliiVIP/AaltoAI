@@ -1,10 +1,12 @@
 Tomas Hidalgo
-Backend Software Engineer
+Data Entry / Support Specialist
 tomas.hidalgo@example.com | +358 45 999 3311 | Helsinki, Finland
+
+
 
 Experience
 Data Entry / Support Specialist, RetailPlus (2023-2026) - 2 years
-- No software engineering role held to date
+- No professional data science or software role held to date
 - Self-taught Python basics outside of work
 
 Education

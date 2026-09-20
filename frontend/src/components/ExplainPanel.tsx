@@ -334,7 +334,7 @@ export default function ExplainPanel({
       <ParsedCvModal
         open={parseOpen}
         candidateId={candidateId}
-        jobId={job?.job_id ?? "backend_engineer"}
+        jobId={job?.job_id ?? "data_scientist"}
         onClose={() => setParseOpen(false)}
       />
     </section>

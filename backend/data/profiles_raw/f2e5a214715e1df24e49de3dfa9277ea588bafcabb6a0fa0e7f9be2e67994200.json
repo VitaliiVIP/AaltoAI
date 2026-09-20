@@ -31,7 +31,8 @@
      "postgresql",
      "django"
     ],
-    "quote": "Backend Software Engineer — Nokka Oy"
+    "quote": "Backend Software Engineer — Nokka Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "Freelance Developer (contract)",
@@ -49,7 +50,8 @@
      "python",
      "sql"
     ],
-    "quote": "Freelance Developer (contract) — Freelance"
+    "quote": "Freelance Developer (contract) — Freelance",
+    "is_data_role": false
    },
    {
     "title_raw": "Shop Assistant",
@@ -66,7 +68,8 @@
      "excel",
      "agile"
     ],
-    "quote": "Shop Assistant — Vihrea Puutarha Oy"
+    "quote": "Shop Assistant — Vihrea Puutarha Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "Warehouse Associate",
@@ -84,7 +87,8 @@
      "excel",
      "agile"
     ],
-    "quote": "Warehouse Associate — Kanta Kirjasto"
+    "quote": "Warehouse Associate — Kanta Kirjasto",
+    "is_data_role": false
    }
   ],
   "skills_block": [

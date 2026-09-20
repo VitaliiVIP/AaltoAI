@@ -1,53 +1,74 @@
-%PDF-1.4
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /MediaBox [0 0 612 792] /Contents 4 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Length 1061 >>
-stream
-BT /F2 20 Tf 50 740 Td (Nora Salminen) Tj ET
-BT /F1 12 Tf 50 714 Td (Backend Software Engineer) Tj ET
-BT /F1 9 Tf 50 694 Td (nora.salminen@example.com | +358 40 888 1122 | Oulu, Finland) Tj ET
-BT /F2 12 Tf 50 668 Td (Experience) Tj ET
-BT /F1 10 Tf 50 650 Td (QA Engineer, TestLabs Oy \(2021-2026\) - 4 years) Tj ET
-BT /F1 10 Tf 50 635 Td (- Wrote Python test automation scripts, not production services) Tj ET
-BT /F1 10 Tf 50 620 Td (- No experience deploying or owning backend systems) Tj ET
-BT /F1 4 Tf 50 605 Td () Tj ET
-BT /F2 12 Tf 50 595 Td (Education) Tj ET
-BT /F1 10 Tf 50 577 Td (B.Sc. Information Technology, Oulu UAS \(2021\)) Tj ET
-BT /F1 4 Tf 50 562 Td () Tj ET
-BT /F2 12 Tf 50 552 Td (Skills) Tj ET
-BT /F1 10 Tf 50 534 Td (Python \(testing/automation\), Selenium, basic SQL) Tj ET
-BT /F1 4 Tf 50 519 Td () Tj ET
-BT /F2 12 Tf 50 509 Td (Projects) Tj ET
-BT /F1 10 Tf 50 491 Td (- Built automated regression test suite \(pytest\)) Tj ET
-BT /F1 10 Tf 50 476 Td (- No cloud, Kubernetes, or backend-service projects) Tj ET
-BT /F1 4 Tf 50 461 Td () Tj ET
-endstream
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Author () /CreationDate (D:20260920111749+03'00') /Creator (anonymous) /Keywords () /ModDate (D:20260920111749+03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (cv9_nora_salminen) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 617
+>>
+stream
+Gat=g?YeCM'ZJu,.F)G/3Nf3sY5>XA;AbXA`?'BrMdi`D>$3VD^"(I?5=Kbqct'3e#(\E%GL!bnMBHp]nRku,(HG5D#m`tK#I4UOaKMhj:OJ^bqDq@-f#`_=.+6q$2($r/0P!l.6?+kOIZOEM$cUNVSfW[/6-<?!GfoCd/%'@&DY=t2*YF+j@72jnPVWs+dE"9GaQc7cYgbP%n9#eM=@>^/'SNu,:UoY"(Z81>a].q>P90)5>>^i8dFDaENSpht#GO^slll".i<acO5![D1Hc=PO2a*$)N@:4*,:TLW@=b"+@ul^DcA*aknB:$]j%&!E[6j2t^q*RuX;1/@9-]nV##O%('pH<G(>>G4'phgs%K:&4E/]@4N!?FBpe05CmY%Y]2ZWm&AERbg%4>9J7d>GHn^;cPs#Zo"NeRj??0T6I@sU?5N/KA?6[VsZg5M$6H+?pYl:iAq9u>4f2NFi*Ibnis]VXs\aSi%Z0H-jo#E3.E-G.+*k+063[[79?\E$8(Fau?UU-s0OokCUL]GRH'^?9'SPhZ#e\-pKr*j8uH`c,_4o2=:;\2>ib9u"=.p[f[cPeO;*c-!/8@5I-hOF#b<f!:\qLIH%QoAJ[_8J#":~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000251 00000 n 
-0000001364 00000 n 
-0000001434 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000853 00000 n 
+0000000912 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<e769c30b42694814f5c7d3eceb2f699a><e769c30b42694814f5c7d3eceb2f699a>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-1509
+1619
 %%EOF

@@ -1,76 +1,74 @@
-%PDF-1.4
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Length 935 >>
-stream
-BT
-/F2 16 Tf
-1 0 0 1 54 720 Tm
-(Daniel Tuovio) Tj
-/F2 12 Tf
-1 0 0 1 54 696 Tm
-(Backend Software Engineer) Tj
-/F1 10 Tf
-1 0 0 1 54 678 Tm
-(daniel.tuovio@example.com | +358 46 222 9988 | Espoo, Finland) Tj
-/F2 13 Tf
-1 0 0 1 54 663 Tm
-(Experience) Tj
-/F1 10 Tf
-1 0 0 1 54 644 Tm
-(Junior Backend Developer, Nova Retail \(2023-2026\) - 2.5 years) Tj
-1 0 0 1 54 629 Tm
-(- Node.js and Python scripts for internal automation) Tj
-1 0 0 1 54 614 Tm
-(- No Kubernetes or cloud-infra ownership experience) Tj
-/F2 13 Tf
-1 0 0 1 54 599 Tm
-(Education) Tj
-/F1 10 Tf
-1 0 0 1 54 580 Tm
-(B.Sc. Computer Science, LUT University \(2023\)) Tj
-/F2 13 Tf
-1 0 0 1 54 565 Tm
-(Skills) Tj
-/F1 10 Tf
-1 0 0 1 54 546 Tm
-(Python, Node.js, MongoDB, basic AWS \(S3, Lambda\)) Tj
-/F2 13 Tf
-1 0 0 1 54 531 Tm
-(Projects) Tj
-/F1 10 Tf
-1 0 0 1 54 512 Tm
-(- Built an internal Slack automation bot) Tj
-1 0 0 1 54 497 Tm
-(- Small AWS Lambda function for report generation) Tj
-ET
-endstream
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Author () /CreationDate (D:20260920111749+03'00') /Creator (anonymous) /Keywords () /ModDate (D:20260920111749+03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (cv7_daniel_kwan) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 599
+>>
+stream
+Gat=g_/Ges(rbtB/)IPaJ:S#kgnl^g@>_(%Tsn8Xj!\f)D./VSdf0$P##.saBIZ@>iC!P"o6VPs;ZC:dA1_b-j3'fEN1f#NRjW:,CTQfj0IIuO:<N0R2BkbFlLhb)[nE_(Q`,7Z&:0*-)>0nW'Mm$W]h$;(Pe3q(Pjc9u]#0[lM@C5(3FU`jg*4>\Uq-sb#?VWj,q`<rb)`neOs`r4pk-n<;.3f-gCYtP<TQ_$CUB,k+I&\%Gq2K>#'@"?Wh?pa)W#c&N*f+!9o8oof5es<lT%@Xe-Ck<gef6"]d5,L@t0`t).F/<5&o<0$*rZ%81_cD\,Psg:3W4*ld4pO9+.H_j5fo;iO<cQ==.@-Mkub=&\;:WfD/Mt,W/>d.1W@oFRZ6FV!]0=8Y,V'_?XL1h=SntDkQ&Yl;R!n!P]QGJ(lH2FD/j-kppt8k<'96qddSWI+,4^*Ue`s(ltnMWpun'JTk/)dob7Gp2R;#n;D-iKToF#/ZKupL'j\7obh*r[1P;]f>;quaeG.5n4l2hjsKoIn#iaan(h]%1)t`GXZ3ERn%eWr9W>*9A5oT)dD\dWCW0$W.kpBi=KQd_IO9f=^B`q/LB~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000251 00000 n 
-0000001237 00000 n 
-0000001307 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000851 00000 n 
+0000000910 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<6e6ef5b1dd5fde03e6b858603fcbd808><6e6ef5b1dd5fde03e6b858603fcbd808>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-1382
+1599
 %%EOF

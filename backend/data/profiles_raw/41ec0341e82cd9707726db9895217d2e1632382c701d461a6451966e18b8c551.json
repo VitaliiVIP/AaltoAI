@@ -22,7 +22,8 @@
     "primary_skills": [
      "sql"
     ],
-    "quote": "Administrative Coordinator\nMetsa Logistics Oy\nApr 2024 – Present"
+    "quote": "Administrative Coordinator\nMetsa Logistics Oy\nApr 2024 – Present",
+    "is_data_role": false
    },
    {
     "title_raw": "Customer Success Specialist",
@@ -37,7 +38,8 @@
     "primary_skills": [
      "excel"
     ],
-    "quote": "Customer Success Specialist\nMetsa Logistics Oy\nJan 2023 – Mar 2024"
+    "quote": "Customer Success Specialist\nMetsa Logistics Oy\nJan 2023 – Mar 2024",
+    "is_data_role": false
    },
    {
     "title_raw": "Warehouse Associate",
@@ -52,7 +54,8 @@
     "primary_skills": [
      "sql"
     ],
-    "quote": "Warehouse Associate\nVihrea Puutarha Oy\nNov 2019 – Dec 2022"
+    "quote": "Warehouse Associate\nVihrea Puutarha Oy\nNov 2019 – Dec 2022",
+    "is_data_role": false
    }
   ],
   "skills_block": [

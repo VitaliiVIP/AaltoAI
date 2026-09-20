@@ -22,18 +22,18 @@ from recourse_screen.extract.postprocess import pii_warnings, verification_stats
 from recourse_screen.loaders import load_manifest  # noqa: E402
 from recourse_screen.schemas import Profile  # noqa: E402
 
-# (taxonomy id, one-letter flag) for the infrastructure skills the backend job weighs.
+# (taxonomy id, one-letter flag) for the skills the data science job weighs.
 FLAG_SKILLS = [
-    ("kubernetes", "K"), ("docker", "D"), ("aws", "A"),
-    ("azure", "Z"), ("gcp", "G"), ("ci_cd", "C"),
+    ("scikit_learn", "S"), ("pytorch", "P"), ("tensorflow", "T"),
+    ("statistics", "X"), ("sql", "Q"), ("spark", "K"),
 ]
 FLAG_DERIVED = [
-    ("cloud_platform_held", "c"), ("ci_cd_held", "i"),
-    ("iac_held", "a"), ("sql_held", "s"),
+    ("ml_framework_held", "m"), ("cloud_platform_held", "c"),
+    ("data_pipeline_held", "p"), ("sql_held", "s"), ("visualisation_held", "v"),
 ]
 
-HEADER = (f"{'candidate':<24} {'tot':>4} {'sw':>4} {'be':>4} {'py':>4} "
-          f"{'KDAZGC':<7} {'cias':<5} {'education':<12} {'evidence':>9}  unmatched")
+HEADER = (f"{'candidate':<24} {'tot':>4} {'sw':>4} {'data':>5} {'py':>4} "
+          f"{'SPTXQK':<7} {'mcpsv':<6} {'education':<12} {'evidence':>9}  unmatched")
 
 
 def _flag(entry_held) -> bool | None:
@@ -88,9 +88,9 @@ def summary_line(candidate_id: str, profile: Profile, stats: dict) -> str:
     return (f"{candidate_id:<24} "
             f"{_months(profile.experience.total_months):>4} "
             f"{_months(profile.experience.software_months):>4} "
-            f"{_months(profile.experience.backend_months):>4} "
+            f"{_months(profile.experience.data_months):>5} "
             f"{py_months:>4} "
-            f"{skill_flags(profile):<7} {derived_flags(profile):<5} "
+            f"{skill_flags(profile):<7} {derived_flags(profile):<6} "
             f"{education:<12} {evidence:>9}  {unmatched}")
 
 
@@ -115,7 +115,7 @@ def main() -> int:
         print(f"no CVs matched under {config.CV_TEXT_DIR}", file=sys.stderr)
         return 1
 
-    manifest = load_manifest("software_engineering.json")
+    manifest = load_manifest("data_science.json")
     print(f"as_of {config.AS_OF} | model {config.MODEL_ID} | "
           f"{len(paths)} CV(s) | cache {'off' if args.force else 'on'}\n")
     print(HEADER)
@@ -148,8 +148,8 @@ def main() -> int:
     print()
     print(f"evidence verified: {verified_quotes}/{total_quotes} ({rate:.1%}) "
           f"across {len(paths) - len(errors)} profile(s)")
-    print("flags: KDAZGC = kubernetes docker aws azure gcp ci_cd; "
-          "cias = derived cloud ci_cd iac sql")
+    print("flags: SPTXQK = scikit-learn pytorch tensorflow statistics sql spark; "
+          "mcpsv = derived ml-framework cloud pipeline sql visualisation")
     print("       letter = held, '!' = denied by the CV, '.' = absent (unverified, not zero)")
     print("months are calendar months; '*' on education = in progress")
     print(f"profiles written to {config.PROFILE_CACHE_DIR}")

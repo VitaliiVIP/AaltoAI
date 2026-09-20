@@ -1,0 +1,129 @@
+{
+ "cv_sha256": "b4f33ee9aea3662fc5672904503665cfef998f86c386c6794c4bb375b6602f01",
+ "source_file": "cv4_aisha_rahman.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v2",
+ "taxonomy_version": "core-0.2",
+ "extracted_at": "2026-09-20T08:19:16+00:00",
+ "cv_text": "Aisha Rahman\nData Scientist\naisha.rahman@example.com | +358 45 111 2233 | Helsinki, Finland\n\n\n\nExperience\nData Scientist, FinServ Digital (2022-2026) - 3.5 years\n- Credit-risk models in Python with scikit-learn, deployed on AWS\n- Hypothesis testing for product changes, written up for the risk committee\nJunior Software Developer, WebCraft (2020-2022)\n- Internal tools in Python over a SQL database\n\nEducation\nB.Sc. Computer Science, Metropolia UAS (2020)\n\nSkills\nPython, scikit-learn, SQL, AWS, hypothesis testing\n\nProjects\n- Internal risk-reporting dashboard used by the finance team\n- Automated the monthly regulatory data extract\n\f",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Data Scientist",
+    "title_canonical": "data_scientist",
+    "employer": "FinServ Digital",
+    "start_raw": "2022",
+    "end_raw": "2026",
+    "is_backend_role": false,
+    "is_data_role": true,
+    "skills_mentioned": [
+     "python",
+     "scikit_learn",
+     "aws",
+     "statistics"
+    ],
+    "primary_skills": [
+     "python",
+     "scikit_learn",
+     "aws",
+     "statistics"
+    ],
+    "quote": "Data Scientist, FinServ Digital (2022-2026)"
+   },
+   {
+    "title_raw": "Junior Software Developer",
+    "title_canonical": "other_software",
+    "employer": "WebCraft",
+    "start_raw": "2020",
+    "end_raw": "2022",
+    "is_backend_role": false,
+    "is_data_role": false,
+    "skills_mentioned": [
+     "python",
+     "sql"
+    ],
+    "primary_skills": [
+     "python",
+     "sql"
+    ],
+    "quote": "Junior Software Developer, WebCraft (2020-2022)"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing"
+   },
+   {
+    "skill": "scikit_learn",
+    "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing"
+   },
+   {
+    "skill": "aws",
+    "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing"
+   },
+   {
+    "skill": "statistics",
+    "quote": "Python, scikit-learn, SQL, AWS, hypothesis testing"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Internal risk-reporting dashboard",
+    "topics": [
+     "data"
+    ],
+    "skills": [],
+    "deployed": "yes",
+    "quote": "- Internal risk-reporting dashboard used by the finance team"
+   },
+   {
+    "title": "Automated the monthly regulatory data extract",
+    "topics": [
+     "data"
+    ],
+    "skills": [],
+    "deployed": "unclear",
+    "quote": "- Automated the monthly regulatory data extract"
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "computer science",
+   "in_progress": "no",
+   "quote": "B.Sc. Computer Science, Metropolia UAS"
+  },
+  "certifications": [],
+  "languages": [],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Helsinki, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

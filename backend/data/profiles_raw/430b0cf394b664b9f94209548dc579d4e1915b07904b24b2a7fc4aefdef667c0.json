@@ -34,7 +34,8 @@
      "java",
      "rest_api"
     ],
-    "quote": "Backend Tech Lead — Ruska Systems"
+    "quote": "Backend Tech Lead — Ruska Systems",
+    "is_data_role": false
    },
    {
     "title_raw": "Backend Tech Lead",
@@ -63,7 +64,8 @@
      "kubernetes",
      "aws"
     ],
-    "quote": "Backend Tech Lead — Sisu Software Oy"
+    "quote": "Backend Tech Lead — Sisu Software Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "Software Engineer (Backend)",
@@ -90,7 +92,8 @@
      "helm",
      "kubernetes"
     ],
-    "quote": "Software Engineer (Backend) — Nokka Oy"
+    "quote": "Software Engineer (Backend) — Nokka Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "Junior Backend Developer",
@@ -115,7 +118,8 @@
      "grpc",
      "python"
     ],
-    "quote": "Junior Backend Developer — Koski Engineering"
+    "quote": "Junior Backend Developer — Koski Engineering",
+    "is_data_role": false
    },
    {
     "title_raw": "Freelance Backend Developer",
@@ -132,7 +136,8 @@
      "python",
      "git"
     ],
-    "quote": "Freelance Backend Developer — Independent contractor"
+    "quote": "Freelance Backend Developer — Independent contractor",
+    "is_data_role": false
    },
    {
     "title_raw": "Backend Developer Trainee",
@@ -158,7 +163,8 @@
      "rest_api",
      "python"
     ],
-    "quote": "Backend Developer Trainee — Sisu Software Oy"
+    "quote": "Backend Developer Trainee — Sisu Software Oy",
+    "is_data_role": false
    }
   ],
   "skills_block": [

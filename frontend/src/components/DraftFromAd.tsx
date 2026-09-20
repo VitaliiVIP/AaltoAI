@@ -45,7 +45,7 @@ export default function DraftFromAd({ draft, busy, onDraft }: DraftFromAdProps) 
             id="ad-text"
             rows={10}
             value={text}
-            placeholder="Senior Backend Engineer — we are looking for…"
+            placeholder="Senior Data Scientist — we are looking for…"
             onChange={(e) => setText(e.target.value)}
           />
           <div className="draft-actions">

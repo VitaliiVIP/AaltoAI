@@ -43,7 +43,7 @@ def screen_profile(
     profile: Profile,
     *,
     candidate_id: str,
-    job_id: str = "backend_engineer",
+    job_id: str = "data_scientist",
     mode: str = "B",
     N: int | None = None,
     explain: bool = True,

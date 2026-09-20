@@ -101,7 +101,7 @@ def run_eval(n: int = 30, seed: int = 0, force_render: bool = False,
     # ---- recourse --------------------------------------------------------- #
     from ..loaders import load_job, manifest_for_job
 
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     manifest = manifest_for_job(job)
     recourse: dict[str, Any] = {}
     for label, pool in (("extracted", extracted), ("truth", truths)):

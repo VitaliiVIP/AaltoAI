@@ -33,7 +33,8 @@
      "postgresql",
      "mysql"
     ],
-    "quote": "Backend Software Engineer — Nokka Oy"
+    "quote": "Backend Software Engineer — Nokka Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "Junior Software Engineer",
@@ -55,7 +56,8 @@
      "fastapi",
      "rest_api"
     ],
-    "quote": "Junior Software Engineer — Kaiku Digital"
+    "quote": "Junior Software Engineer — Kaiku Digital",
+    "is_data_role": false
    },
    {
     "title_raw": "Software Developer Intern",
@@ -82,7 +84,8 @@
      "python",
      "rest_api"
     ],
-    "quote": "Software Developer Intern — Arctic Cloud Oy"
+    "quote": "Software Developer Intern — Arctic Cloud Oy",
+    "is_data_role": false
    }
   ],
   "skills_block": [

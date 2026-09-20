@@ -1,56 +1,74 @@
-%PDF-1.4
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /MediaBox [0 0 612 792] /Contents 4 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Length 1383 >>
-stream
-BT /F2 20 Tf 50 740 Td (Elina Korhonen) Tj ET
-BT /F1 12 Tf 50 714 Td (Backend Software Engineer) Tj ET
-BT /F1 9 Tf 50 694 Td (elina.korhonen@example.com | +358 40 123 4567 | Helsinki, Finland) Tj ET
-BT /F2 12 Tf 50 668 Td (Experience) Tj ET
-BT /F1 10 Tf 50 650 Td (Senior Backend Engineer, Nordcom Oy \(2020-2026\) - 6 years) Tj ET
-BT /F1 10 Tf 50 635 Td (- Built and operated Python/Go microservices on Kubernetes) Tj ET
-BT /F1 10 Tf 50 620 Td (- Led migration of monolith to event-driven architecture on AWS) Tj ET
-BT /F1 10 Tf 50 605 Td (Backend Developer, Vantaa Systems \(2018-2020\)) Tj ET
-BT /F1 10 Tf 50 590 Td (- Developed REST APIs, CI/CD pipelines with GitLab and Docker) Tj ET
-BT /F1 4 Tf 50 575 Td () Tj ET
-BT /F2 12 Tf 50 565 Td (Education) Tj ET
-BT /F1 10 Tf 50 547 Td (M.Sc. Computer Science, Aalto University \(2018\)) Tj ET
-BT /F1 4 Tf 50 532 Td () Tj ET
-BT /F2 12 Tf 50 522 Td (Skills) Tj ET
-BT /F1 10 Tf 50 504 Td (Python, Go, Kubernetes, AWS, Docker, PostgreSQL, CI/CD, Terraform) Tj ET
-BT /F1 4 Tf 50 489 Td () Tj ET
-BT /F2 12 Tf 50 479 Td (Projects) Tj ET
-BT /F1 10 Tf 50 461 Td (- Open-source Kubernetes operator for auto-scaling \(450 GitHub stars\)) Tj ET
-BT /F1 10 Tf 50 446 Td (- Led cloud-cost optimisation project, cut AWS spend by 30%) Tj ET
-BT /F1 10 Tf 50 431 Td (- Built internal CI/CD platform used by 12 teams) Tj ET
-BT /F1 4 Tf 50 416 Td () Tj ET
-endstream
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Author () /CreationDate (D:20260920111749+03'00') /Creator (anonymous) /Keywords () /ModDate (D:20260920111749+03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (cv1_elina_korhonen) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 825
+>>
+stream
+Gat=h?VfE1'ZJu(.IPA)f[;<jRl%d;s%Ho)e8.pn(roHOa,XtK&8<58f1sIL.%5rAV35&THg^?oRhQM5UuBF1J:eIuSYV>[-uU9"`A8pgiOF7Oc3]SO:@c[$FHFQM'`MDJ43(5I$=C2DC;n^UPkS"'G`kAgBop[#I&kK(aFh]g/"mCl;+G'2"BS?#pJPi]La@&G>qGH`\G$]@##Cle,HVp,A#=&:%3MKN!AhASVD-3a3?F`2Bn]`I#Yp&9<)q6PPHC'-/!H^*n^qf5mMXnK,)NWK6=+/aVQ[=^i4Cn4DrIFClQ).MA:fm?H5@oi6cZ12,AQ@f4gGA6ZpHghk+Udoe/b`C/R,!e;.B_Bl4.Q7+Y+*2/j"i1iBat"==.(c9dG&Ks*iXdg9BZU5=IX.\Tgqa_(@\&C;Upsc5X!JZ5%>[iH4i]&#Y2L&bp\-3^XqE$Ej)V\X!!loIk+?5hoYQgiR$W%B4Y;O.TB3MC4s;]XD5qC#N]f>jm\%PH?oR39i""7V**8qT_6**o^1p"!!I=GKR5uN0'.(nV7IT+qhq1*GpbW?X@!.^H'n+8bu[n/IT^2)G?qnj'00(0c]JiBcTqoOCUJ*I4B6&5ErrD=lHrCj@b=/FdpYQGLBqHU`?]M=dB5BSm(b^YbQ?@,>U(@8lX='Db+*n'Dc`qDf:?RH7)2>F65qLPK_XZe8R:M\i#H@4$@9dY6551OlFAWj/LA1"AXY4CN"S6`f>rHCl]!)O*L&%\%02'#Nh:4@'.<rR]U\t/DP>$:#:p[2d\N>7:E216N=YCr@Tpi3]']$C[or*Pn:XdO%lM@mLO`DlOa~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000251 00000 n 
-0000001686 00000 n 
-0000001756 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000854 00000 n 
+0000000913 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<960431e1969dd758cfbb13b690822519><960431e1969dd758cfbb13b690822519>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-1831
+1828
 %%EOF

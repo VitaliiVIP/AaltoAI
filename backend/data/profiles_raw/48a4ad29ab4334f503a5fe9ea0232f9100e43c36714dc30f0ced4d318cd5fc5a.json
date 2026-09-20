@@ -34,7 +34,8 @@
      "postgresql",
      "sql"
     ],
-    "quote": "Software Engineer (Backend) — Arctic Cloud Oy"
+    "quote": "Software Engineer (Backend) — Arctic Cloud Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "API Developer",
@@ -61,7 +62,8 @@
      "python",
      "docker"
     ],
-    "quote": "API Developer — Ruska Systems"
+    "quote": "API Developer — Ruska Systems",
+    "is_data_role": false
    },
    {
     "title_raw": "Software Developer Intern",
@@ -86,7 +88,8 @@
      "rest_api",
      "postgresql"
     ],
-    "quote": "Software Developer Intern — Kaiku Digital"
+    "quote": "Software Developer Intern — Kaiku Digital",
+    "is_data_role": false
    }
   ],
   "skills_block": [

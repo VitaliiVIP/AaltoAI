@@ -1,0 +1,156 @@
+{
+ "cv_sha256": "68643c0a555a09d3e7d16cfe0c152388675e7d9055495a603cbbcc2b32863b07",
+ "source_file": "cv3_emma_laakso.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v2",
+ "taxonomy_version": "core-0.2",
+ "extracted_at": "2026-09-20T08:19:08+00:00",
+ "cv_text": "Emma Laakso\nSenior Data Scientist\nemma.laakso@example.com | +358 44 555 6677 | Tampere, Finland\n\n\n\nExperience\nSenior Data Scientist, Pilvi Solutions (2019-2026) - 7 years\n- Deep-learning demand models in Python with PyTorch, trained and served on GCP\n- Owned the feature pipeline in dbt and Airflow, and the Tableau reporting on top of it\nData Scientist, DataForge (2017-2019)\n- Built route-optimisation models in Python for the logistics team\n\nEducation\nM.Sc. Computer Science, Tampere University (2017)\n\nSkills\nPython, PyTorch, SQL, dbt, Airflow, GCP, Tableau\n\nProjects\n- Migrated the legacy scoring model to a deep-learning pipeline on GCP\n- Real-time anomaly detection model handling 2M events per day\n- Mentored 4 junior data scientists on model evaluation\n\f",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Senior Data Scientist",
+    "title_canonical": "data_scientist",
+    "employer": "Pilvi Solutions",
+    "start_raw": "2019",
+    "end_raw": "2026",
+    "is_backend_role": false,
+    "is_data_role": true,
+    "skills_mentioned": [
+     "deep_learning",
+     "python",
+     "pytorch",
+     "gcp",
+     "dbt",
+     "airflow",
+     "tableau",
+     "data_engineering"
+    ],
+    "primary_skills": [
+     "deep_learning",
+     "python",
+     "pytorch",
+     "gcp",
+     "dbt",
+     "airflow",
+     "tableau",
+     "data_engineering"
+    ],
+    "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)"
+   },
+   {
+    "title_raw": "Data Scientist",
+    "title_canonical": "data_scientist",
+    "employer": "DataForge",
+    "start_raw": "2017",
+    "end_raw": "2019",
+    "is_backend_role": false,
+    "is_data_role": true,
+    "skills_mentioned": [
+     "python"
+    ],
+    "primary_skills": [
+     "python"
+    ],
+    "quote": "Data Scientist, DataForge (2017-2019)"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau"
+   },
+   {
+    "skill": "pytorch",
+    "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau"
+   },
+   {
+    "skill": "dbt",
+    "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau"
+   },
+   {
+    "skill": "airflow",
+    "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau"
+   },
+   {
+    "skill": "gcp",
+    "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau"
+   },
+   {
+    "skill": "tableau",
+    "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Migrated the legacy scoring model to a deep-learning pipeline",
+    "topics": [
+     "machine_learning",
+     "data"
+    ],
+    "skills": [
+     "deep_learning",
+     "gcp"
+    ],
+    "deployed": "unclear",
+    "quote": "- Migrated the legacy scoring model to a deep-learning pipeline on GCP"
+   },
+   {
+    "title": "Real-time anomaly detection model",
+    "topics": [
+     "machine_learning"
+    ],
+    "skills": [],
+    "deployed": "unclear",
+    "quote": "- Real-time anomaly detection model handling 2M events per day"
+   },
+   {
+    "title": "Mentored junior data scientists on model evaluation",
+    "topics": [
+     "other"
+    ],
+    "skills": [],
+    "deployed": "unclear",
+    "quote": "- Mentored 4 junior data scientists on model evaluation"
+   }
+  ],
+  "education": {
+   "highest_level": "msc",
+   "field": "computer science",
+   "in_progress": "no",
+   "quote": "M.Sc. Computer Science, Tampere University"
+  },
+  "certifications": [],
+  "languages": [],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Tampere, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

@@ -17,7 +17,7 @@ PROFILE_CACHE_DIR = DATA_DIR / "profiles"
 SYNTH_DIR = DATA_DIR / "synth"
 AUDIT_LOG_PATH = DATA_DIR / "audit.jsonl"
 
-TAXONOMY_PATH = PACKAGE_DIR / "taxonomy" / "swe_core.json"
+TAXONOMY_PATH = PACKAGE_DIR / "taxonomy" / "core.json"
 MANIFEST_DIR = PACKAGE_DIR / "manifests"
 # Jobs the HR editor writes go under DATA_DIR, which is the only tree mounted as a
 # volume in the container — anything written into the package would be lost on the
@@ -32,8 +32,8 @@ AS_OF = "2026-09-19"  # all date math is relative to this, never the wall clock
 
 # Version stamps written into profiles and audit records.
 SCHEMA_VERSION = "1.0"
-TAXONOMY_VERSION = "swe-core-0.1"
-EXTRACT_PROMPT_VERSION = "extract-v1"
+TAXONOMY_VERSION = "core-0.2"
+EXTRACT_PROMPT_VERSION = "extract-v2"
 EXPLAIN_PROMPT_VERSION = "explain-v1"
 SCORER_VERSION = "scorer-v1"
 SOLVER_VERSION = "cpsat-v1"

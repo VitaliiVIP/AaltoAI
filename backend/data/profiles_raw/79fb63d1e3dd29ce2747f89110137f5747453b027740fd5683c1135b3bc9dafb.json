@@ -1,0 +1,136 @@
+{
+ "cv_sha256": "79fb63d1e3dd29ce2747f89110137f5747453b027740fd5683c1135b3bc9dafb",
+ "source_file": "cv5_johan_virtanen.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v2",
+ "taxonomy_version": "core-0.2",
+ "extracted_at": "2026-09-20T08:19:26+00:00",
+ "cv_text": "Johan Virtanen\nData Analyst\njohan.virtanen@example.com | +358 40 777 8899 | Turku, Finland\n\n\n\nExperience\nData Analyst, Turku Web Oy (2022-2026) - 4 years\n- SQL and Python reporting over the sales warehouse, dashboards in Power BI\n- Statistical analysis of campaign results; no production models\nSoftware Developer, Turku Web Oy (2021-2022)\n- Internal web tooling in Java\n\nEducation\nB.Sc. Information Technology, Turku UAS (2021)\n\nSkills\nPython, R, SQL, MySQL, Power BI, statistical analysis\n\nProjects\n- Built the weekly sales reporting pack\n- Automated the campaign result summaries\n\f",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Data Analyst",
+    "title_canonical": "data_analyst",
+    "employer": "Turku Web Oy",
+    "start_raw": "2022",
+    "end_raw": "2026",
+    "is_backend_role": false,
+    "is_data_role": true,
+    "skills_mentioned": [
+     "sql",
+     "python",
+     "power_bi",
+     "statistics"
+    ],
+    "primary_skills": [
+     "sql",
+     "python",
+     "power_bi",
+     "statistics"
+    ],
+    "quote": "Data Analyst, Turku Web Oy (2022-2026)"
+   },
+   {
+    "title_raw": "Software Developer",
+    "title_canonical": "other_software",
+    "employer": "Turku Web Oy",
+    "start_raw": "2021",
+    "end_raw": "2022",
+    "is_backend_role": false,
+    "is_data_role": false,
+    "skills_mentioned": [
+     "java"
+    ],
+    "primary_skills": [
+     "java"
+    ],
+    "quote": "Software Developer, Turku Web Oy (2021-2022)"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis"
+   },
+   {
+    "skill": "r_lang",
+    "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis"
+   },
+   {
+    "skill": "mysql",
+    "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis"
+   },
+   {
+    "skill": "power_bi",
+    "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis"
+   },
+   {
+    "skill": "statistics",
+    "quote": "Python, R, SQL, MySQL, Power BI, statistical analysis"
+   }
+  ],
+  "denied_skills": [
+   {
+    "skill": "machine_learning",
+    "quote": "no production models"
+   }
+  ],
+  "projects": [
+   {
+    "title": "Weekly sales reporting pack",
+    "topics": [
+     "data"
+    ],
+    "skills": [],
+    "deployed": "unclear",
+    "quote": "- Built the weekly sales reporting pack"
+   },
+   {
+    "title": "Automated campaign result summaries",
+    "topics": [
+     "data"
+    ],
+    "skills": [],
+    "deployed": "unclear",
+    "quote": "- Automated the campaign result summaries"
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "information technology",
+   "in_progress": "no",
+   "quote": "B.Sc. Information Technology, Turku UAS"
+  },
+  "certifications": [],
+  "languages": [],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Turku, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

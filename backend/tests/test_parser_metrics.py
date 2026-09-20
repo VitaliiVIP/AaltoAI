@@ -38,7 +38,7 @@ def _skill(months: int | None, *, held: bool = True, evidence: list[Evidence] | 
 def _profile(skills: dict[str, SkillEntry], *, roles: int = 2, total: int = 60,
              software: int = 60, backend: int = 36, level: str = "msc",
              seniority: str = "mid") -> Profile:
-    rs = [Role(title_raw=f"Engineer {i}", title_canonical="backend_engineer",
+    rs = [Role(title_raw=f"Engineer {i}", title_canonical="data_scientist",
                start="2020-01", end="2021-01", months=12, is_backend_role=True)
           for i in range(roles)]
     return Profile(

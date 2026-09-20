@@ -29,7 +29,7 @@ function fullMarks(feature: CatalogueFeature | undefined, cap: number | null): s
  * The point budget: one row per criterion, one hundred points to spend.
  *
  * Spending a fixed budget rather than setting free-floating weights is the whole
- * idea. It forces the trade-off to be explicit — more for Kubernetes means less
+ * idea. It forces the trade-off to be explicit — more for the ML framework means less
  * for something else — and it makes the resulting score a percentage of the job
  * rather than a number whose meaning depends on the scale it was drawn from.
  *

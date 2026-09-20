@@ -25,6 +25,11 @@ uv run uvicorn recourse_screen.api.app:app --reload   # http://localhost:8000/  
 uv run python scripts/run_eval.py --n 30          # synthetic corpus + parser/recourse metrics -> data/synth/eval_report.md
 ```
 
+The synthetic evaluation corpus committed under `data/synth/` predates the switch to the Data
+Scientist job: its archetypes are software engineers, so the *parser* metrics still measure what
+they claim to, while the *recourse* metrics read low because few of those candidates fit a data
+science role. Regenerating it means new archetypes in `synth/sampler.py` and a paid re-render.
+
 Add a CV: drop a PDF into `../frontend/public/assets/cvs/` and run
 `pdftotext -layout file.pdf data/cv_text/file.txt`, then re-run the extraction script (only new files
 call the API; profiles are cached by content hash).

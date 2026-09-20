@@ -1,66 +1,78 @@
 {
  "schema_version": "1.0",
- "job_family": "software_engineering",
+ "job_family": "data_science",
  "as_of": "2026-09-19",
  "provenance": {
-  "cv_sha256": "41a9deffbafc735710db180883023aa7537c74e3bd56adcb614e3b787fad1729",
+  "cv_sha256": "68643c0a555a09d3e7d16cfe0c152388675e7d9055495a603cbbcc2b32863b07",
   "source_file": "cv3_emma_laakso.txt",
   "extractor_model": "claude-opus-5",
-  "prompt_version": "extract-v1",
-  "taxonomy_version": "swe-core-0.1",
-  "extracted_at": "2026-09-19T14:19:34+00:00"
+  "prompt_version": "extract-v2",
+  "taxonomy_version": "core-0.2",
+  "extracted_at": "2026-09-20T08:19:08+00:00"
  },
  "experience": {
   "roles": [
    {
-    "title_raw": "Backend Engineer",
-    "title_canonical": "backend_engineer",
+    "title_raw": "Senior Data Scientist",
+    "title_canonical": "data_scientist",
     "employer": "Pilvi Solutions",
     "start": "2019-07",
     "end": "2026-07",
     "date_precision": "year",
     "months": 84,
-    "is_backend_role": true,
+    "is_backend_role": false,
+    "is_data_role": true,
     "skills_mentioned": [
+     "deep_learning",
      "python",
-     "kubernetes",
+     "pytorch",
      "gcp",
-     "ci_cd",
-     "terraform"
+     "dbt",
+     "airflow",
+     "tableau",
+     "data_engineering"
     ],
     "primary_skills": [
+     "deep_learning",
      "python",
-     "kubernetes",
+     "pytorch",
      "gcp",
-     "ci_cd",
-     "terraform"
+     "dbt",
+     "airflow",
+     "tableau",
+     "data_engineering"
     ],
     "evidence": [
      {
-      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
-      "start": 112,
-      "end": 157,
+      "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+      "start": 110,
+      "end": 160,
       "section": "experience",
       "verified": true
      }
     ]
    },
    {
-    "title_raw": "Software Developer",
-    "title_canonical": "other_software",
+    "title_raw": "Data Scientist",
+    "title_canonical": "data_scientist",
     "employer": "DataForge",
     "start": "2017-07",
     "end": "2019-07",
     "date_precision": "year",
     "months": 24,
     "is_backend_role": false,
-    "skills_mentioned": [],
-    "primary_skills": [],
+    "is_data_role": true,
+    "skills_mentioned": [
+     "python"
+    ],
+    "primary_skills": [
+     "python"
+    ],
     "evidence": [
      {
-      "quote": "Software Developer, DataForge (2017-2019)",
-      "start": 282,
-      "end": 323,
+      "quote": "Data Scientist, DataForge (2017-2019)",
+      "start": 339,
+      "end": 376,
       "section": "experience",
       "verified": true
      }
@@ -80,7 +92,13 @@
    "evidence": []
   },
   "backend_months": {
-   "value": 84,
+   "value": 0,
+   "derivation": "computed",
+   "confidence": "medium",
+   "evidence": []
+  },
+  "data_months": {
+   "value": 108,
    "derivation": "computed",
    "confidence": "medium",
    "evidence": []
@@ -99,23 +117,23 @@
   }
  },
  "skills": {
-  "ci_cd": {
+  "airflow": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
-      "start": 112,
-      "end": 157,
+      "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+      "start": 110,
+      "end": 160,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
-      "start": 393,
-      "end": 449,
+      "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+      "start": 513,
+      "end": 561,
       "section": "skills",
       "verified": true
      }
@@ -147,37 +165,37 @@
    },
    "dated": true
   },
-  "docker": {
+  "data_engineering": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
-      "start": 393,
-      "end": 449,
-      "section": "skills",
+      "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+      "start": 110,
+      "end": 160,
+      "section": "experience",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 84,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "proficiency": {
-    "value": 1,
+    "value": 3,
     "derivation": "inferred",
-    "confidence": "low",
+    "confidence": "medium",
     "evidence": []
    },
    "project_count": {
@@ -186,39 +204,87 @@
     "confidence": "medium",
     "evidence": []
    },
-   "dated": false
+   "dated": true
   },
-  "event_driven": {
+  "dbt": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "- Built real-time event pipeline with Kafka, handling 2M events/day",
-      "start": 516,
-      "end": 583,
-      "section": "projects",
+      "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+      "start": 110,
+      "end": 160,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+      "start": 513,
+      "end": 561,
+      "section": "skills",
       "verified": true
      }
     ]
    },
    "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 84,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
     "evidence": []
    },
    "proficiency": {
-    "value": 1,
+    "value": 3,
     "derivation": "inferred",
-    "confidence": "low",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "deep_learning": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+      "start": 110,
+      "end": 160,
+      "section": "experience",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 84,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
     "evidence": []
    },
    "project_count": {
@@ -227,7 +293,7 @@
     "confidence": "medium",
     "evidence": []
    },
-   "dated": false
+   "dated": true
   },
   "gcp": {
    "held": {
@@ -236,105 +302,16 @@
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
-      "start": 112,
-      "end": 157,
+      "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+      "start": 110,
+      "end": 160,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
-      "start": 393,
-      "end": 449,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": 84,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": 2026,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 3,
-    "derivation": "inferred",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 0,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": true
-  },
-  "kafka": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
-      "start": 393,
-      "end": 449,
-      "section": "skills",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
-  },
-  "kubernetes": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
-      "start": 112,
-      "end": 157,
-      "section": "experience",
-      "verified": true
-     },
-     {
-      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
-      "start": 393,
-      "end": 449,
+      "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+      "start": 513,
+      "end": 561,
       "section": "skills",
       "verified": true
      }
@@ -365,47 +342,6 @@
     "evidence": []
    },
    "dated": true
-  },
-  "microservices": {
-   "held": {
-    "value": true,
-    "derivation": "stated",
-    "confidence": "high",
-    "evidence": [
-     {
-      "quote": "- Migrated legacy system to microservices on Kubernetes",
-      "start": 460,
-      "end": 515,
-      "section": "projects",
-      "verified": true
-     }
-    ]
-   },
-   "months": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "last_used_year": {
-    "value": null,
-    "derivation": "absent",
-    "confidence": "low",
-    "evidence": []
-   },
-   "proficiency": {
-    "value": 1,
-    "derivation": "inferred",
-    "confidence": "low",
-    "evidence": []
-   },
-   "project_count": {
-    "value": 1,
-    "derivation": "computed",
-    "confidence": "medium",
-    "evidence": []
-   },
-   "dated": false
   },
   "python": {
    "held": {
@@ -414,16 +350,71 @@
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
-      "start": 112,
-      "end": 157,
+      "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+      "start": 110,
+      "end": 160,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
-      "start": 393,
-      "end": 449,
+      "quote": "Data Scientist, DataForge (2017-2019)",
+      "start": 339,
+      "end": 376,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+      "start": 513,
+      "end": 561,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": 108,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": 2026,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 3,
+    "derivation": "inferred",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": true
+  },
+  "pytorch": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+      "start": 110,
+      "end": 160,
+      "section": "experience",
+      "verified": true
+     },
+     {
+      "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+      "start": 513,
+      "end": 561,
       "section": "skills",
       "verified": true
      }
@@ -455,23 +446,64 @@
    },
    "dated": true
   },
-  "terraform": {
+  "sql": {
    "held": {
     "value": true,
     "derivation": "stated",
     "confidence": "high",
     "evidence": [
      {
-      "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
-      "start": 112,
-      "end": 157,
+      "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+      "start": 513,
+      "end": 561,
+      "section": "skills",
+      "verified": true
+     }
+    ]
+   },
+   "months": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "last_used_year": {
+    "value": null,
+    "derivation": "absent",
+    "confidence": "low",
+    "evidence": []
+   },
+   "proficiency": {
+    "value": 1,
+    "derivation": "inferred",
+    "confidence": "low",
+    "evidence": []
+   },
+   "project_count": {
+    "value": 0,
+    "derivation": "computed",
+    "confidence": "medium",
+    "evidence": []
+   },
+   "dated": false
+  },
+  "tableau": {
+   "held": {
+    "value": true,
+    "derivation": "stated",
+    "confidence": "high",
+    "evidence": [
+     {
+      "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+      "start": 110,
+      "end": 160,
       "section": "experience",
       "verified": true
      },
      {
-      "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
-      "start": 393,
-      "end": 449,
+      "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+      "start": 513,
+      "end": 561,
       "section": "skills",
       "verified": true
      }
@@ -506,50 +538,45 @@
  },
  "projects": [
   {
-   "title": "Migrated legacy system to microservices",
+   "title": "Migrated the legacy scoring model to a deep-learning pipeline",
    "topics": [
-    "backend",
-    "microservices",
-    "infrastructure"
+    "machine_learning",
+    "data"
    ],
    "skills": [
-    "microservices",
-    "kubernetes"
+    "deep_learning",
+    "gcp"
    ],
    "deployed": null,
    "evidence": [
     {
-     "quote": "- Migrated legacy system to microservices on Kubernetes",
-     "start": 460,
-     "end": 515,
+     "quote": "- Migrated the legacy scoring model to a deep-learning pipeline on GCP",
+     "start": 572,
+     "end": 642,
      "section": "projects",
      "verified": true
     }
    ]
   },
   {
-   "title": "Real-time event pipeline",
+   "title": "Real-time anomaly detection model",
    "topics": [
-    "data",
-    "backend"
+    "machine_learning"
    ],
-   "skills": [
-    "kafka",
-    "event_driven"
-   ],
+   "skills": [],
    "deployed": null,
    "evidence": [
     {
-     "quote": "- Built real-time event pipeline with Kafka, handling 2M events/day",
-     "start": 516,
-     "end": 583,
+     "quote": "- Real-time anomaly detection model handling 2M events per day",
+     "start": 643,
+     "end": 705,
      "section": "projects",
      "verified": true
     }
    ]
   },
   {
-   "title": "Mentored junior engineers on cloud-native practices",
+   "title": "Mentored junior data scientists on model evaluation",
    "topics": [
     "other"
    ],
@@ -557,9 +584,9 @@
    "deployed": null,
    "evidence": [
     {
-     "quote": "- Mentored 4 junior engineers on cloud-native practices",
-     "start": 584,
-     "end": 639,
+     "quote": "- Mentored 4 junior data scientists on model evaluation",
+     "start": 706,
+     "end": 761,
      "section": "projects",
      "verified": true
     }
@@ -567,10 +594,8 @@
   }
  ],
  "project_counts_by_topic": {
-  "backend": 2,
   "data": 1,
-  "infrastructure": 1,
-  "microservices": 1,
+  "machine_learning": 2,
   "other": 1
  },
  "education": {
@@ -581,8 +606,8 @@
    "evidence": [
     {
      "quote": "M.Sc. Computer Science, Tampere University",
-     "start": 335,
-     "end": 377,
+     "start": 455,
+     "end": 497,
      "section": "education",
      "verified": true
     }
@@ -595,8 +620,8 @@
    "evidence": [
     {
      "quote": "M.Sc. Computer Science, Tampere University",
-     "start": 335,
-     "end": 377,
+     "start": 455,
+     "end": 497,
      "section": "education",
      "verified": true
     }
@@ -609,8 +634,8 @@
    "evidence": [
     {
      "quote": "M.Sc. Computer Science, Tampere University",
-     "start": 335,
-     "end": 377,
+     "start": 455,
+     "end": 497,
      "section": "education",
      "verified": true
     }
@@ -639,8 +664,8 @@
    "evidence": [
     {
      "quote": "Tampere, Finland",
-     "start": 83,
-     "end": 99,
+     "start": 79,
+     "end": 95,
      "section": "eligibility",
      "verified": true
     }
@@ -655,70 +680,105 @@
  },
  "contact_email": "emma.laakso@example.com",
  "derived": {
-  "cloud_platform_held": {
+  "ml_framework_held": {
    "value": true,
    "derivation": "stated",
    "confidence": "high",
    "evidence": [
     {
-     "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
-     "start": 112,
-     "end": 157,
+     "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+     "start": 110,
+     "end": 160,
      "section": "experience",
      "verified": true
     },
     {
-     "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
-     "start": 393,
-     "end": 449,
-     "section": "skills",
-     "verified": true
-    }
-   ]
-  },
-  "ci_cd_held": {
-   "value": true,
-   "derivation": "stated",
-   "confidence": "high",
-   "evidence": [
-    {
-     "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
-     "start": 112,
-     "end": 157,
-     "section": "experience",
-     "verified": true
-    },
-    {
-     "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
-     "start": 393,
-     "end": 449,
-     "section": "skills",
-     "verified": true
-    }
-   ]
-  },
-  "iac_held": {
-   "value": true,
-   "derivation": "stated",
-   "confidence": "high",
-   "evidence": [
-    {
-     "quote": "Backend Engineer, Pilvi Solutions (2019-2026)",
-     "start": 112,
-     "end": 157,
-     "section": "experience",
-     "verified": true
-    },
-    {
-     "quote": "Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka",
-     "start": 393,
-     "end": 449,
+     "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+     "start": 513,
+     "end": 561,
      "section": "skills",
      "verified": true
     }
    ]
   },
   "sql_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+     "start": 513,
+     "end": 561,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "cloud_platform_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+     "start": 110,
+     "end": 160,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+     "start": 513,
+     "end": 561,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "data_pipeline_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+     "start": 110,
+     "end": 160,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+     "start": 513,
+     "end": 561,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "visualisation_held": {
+   "value": true,
+   "derivation": "stated",
+   "confidence": "high",
+   "evidence": [
+    {
+     "quote": "Senior Data Scientist, Pilvi Solutions (2019-2026)",
+     "start": 110,
+     "end": 160,
+     "section": "experience",
+     "verified": true
+    },
+    {
+     "quote": "Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau",
+     "start": 513,
+     "end": 561,
+     "section": "skills",
+     "verified": true
+    }
+   ]
+  },
+  "mlops_held": {
    "value": null,
    "derivation": "absent",
    "confidence": "low",

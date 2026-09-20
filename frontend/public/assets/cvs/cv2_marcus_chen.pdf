@@ -1,55 +1,74 @@
-%PDF-1.4
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /MediaBox [0 0 612 792] /Contents 4 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Length 1271 >>
-stream
-BT /F2 20 Tf 50 740 Td (Marcus Chen) Tj ET
-BT /F1 12 Tf 50 714 Td (Backend Software Engineer) Tj ET
-BT /F1 9 Tf 50 694 Td (marcus.chen@example.com | +358 40 222 3344 | Espoo, Finland) Tj ET
-BT /F2 12 Tf 50 668 Td (Experience) Tj ET
-BT /F1 10 Tf 50 650 Td (Software Engineer, CloudNorth Ltd \(2021-2026\) - 5 years) Tj ET
-BT /F1 10 Tf 50 635 Td (- Designed microservices in Python and Kubernetes for payments platform) Tj ET
-BT /F1 10 Tf 50 620 Td (- On-call owner for production cloud infrastructure \(Azure\)) Tj ET
-BT /F1 10 Tf 50 605 Td (Junior Developer, StartHub \(2019-2021\)) Tj ET
-BT /F1 10 Tf 50 590 Td (- Built internal tools with Django and PostgreSQL) Tj ET
-BT /F1 4 Tf 50 575 Td () Tj ET
-BT /F2 12 Tf 50 565 Td (Education) Tj ET
-BT /F1 10 Tf 50 547 Td (B.Sc. Software Engineering, University of Helsinki \(2019\)) Tj ET
-BT /F1 4 Tf 50 532 Td () Tj ET
-BT /F2 12 Tf 50 522 Td (Skills) Tj ET
-BT /F1 10 Tf 50 504 Td (Python, Kubernetes, Azure, Docker, PostgreSQL, CI/CD, Redis) Tj ET
-BT /F1 4 Tf 50 489 Td () Tj ET
-BT /F2 12 Tf 50 479 Td (Projects) Tj ET
-BT /F1 10 Tf 50 461 Td (- Rebuilt payments microservice, reduced latency by 40%) Tj ET
-BT /F1 10 Tf 50 446 Td (- Implemented blue-green deployment pipeline on Kubernetes) Tj ET
-BT /F1 4 Tf 50 431 Td () Tj ET
-endstream
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Author () /CreationDate (D:20260920111749+03'00') /Creator (anonymous) /Keywords () /ModDate (D:20260920111749+03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (cv2_marcus_chen) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 761
+>>
+stream
+Gat=(_/>`-'YNTZk#*XB0a/!(^,8J&jcEMWEGrC(@#[+"?*q5^U$B\mYrIj\]8DK-34rO/hTVHZLk))D^%3/P>iP?tLbQ\dKeW41/8qdqT"'*"aOR&-^E2ecdKm2Y],IU)R*JogX#65V=?^3inJ-\\V[bfYe"[cCZd`E2AX4L_"d`7,HO)EO."OTENfjl#[HkcWWKT"5RFP$NrERnJK29s,L,^;I&Z4#:VUE=<8pRo^Z=:+a9,SamAY1cI3R5Tb__q+Xo-<5s5B.gn^Z:1/&c!KN.b,<lQ*tJ`g&h#H;%SEpHDU@KQln]8R5Q8qe+qqO"P9*M`MDFXk>j!f=r"\*&/'2X>uP/^Lu%-$,OD3M3pAqOX-o'^^m=RdeUal/r,20El00bSF`Pqgb-&8e#*p2YA-j.[\21Q?92NuD.BubhF:euJqJq(VeRPQ,^!L%U<cu+=R:Y+/Zk(ILE8J2IhOfdY:L98s5AnTLL?@-H;GUPMiD(7pC>PS"RHA;8)X\&PB+<=Z=.*jLSiX*=/siZ3dD<WU%;?^a6V*+nG7\9F"B1(ql"@Pf9W`-g2AWTo,g_3Tl/@sC,gHZgO]^RsJgBDHm$p0pn_LpCoAS;aD+%B`aa'$p%UdA`pEmrA]sfp*D[<U,q!VX>&BOkf&B+ad<faUqUEg!*],:M-&$;e3$cVD`g3UhEM\W9$/Vg&Tcnl.P3r7lb(r73<UDIMhLQ0b,mj#KSPDrV>Ap)@R]P^_VTpSt^P`'t+3;Eqge[e!~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000251 00000 n 
-0000001574 00000 n 
-0000001644 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000851 00000 n 
+0000000910 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<b2d1529178e8bcfc908ec5e2f002cfd2><b2d1529178e8bcfc908ec5e2f002cfd2>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-1719
+1761
 %%EOF

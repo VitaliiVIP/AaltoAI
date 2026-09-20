@@ -36,6 +36,7 @@ _EXPERIENCE_FIELDS = {
     "total_months": "total professional experience",
     "software_months": "professional software experience",
     "backend_months": "professional backend experience",
+    "data_months": "professional data science experience",
     "seniority": "seniority",
     "num_roles": "number of roles",
 }

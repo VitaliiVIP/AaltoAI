@@ -1,55 +1,74 @@
-%PDF-1.4
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /MediaBox [0 0 612 792] /Contents 4 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Length 1260 >>
-stream
-BT /F2 20 Tf 50 740 Td (Emma Laakso) Tj ET
-BT /F1 12 Tf 50 714 Td (Backend Software Engineer) Tj ET
-BT /F1 9 Tf 50 694 Td (emma.laakso@example.com | +358 44 555 6677 | Tampere, Finland) Tj ET
-BT /F2 12 Tf 50 668 Td (Experience) Tj ET
-BT /F1 10 Tf 50 650 Td (Backend Engineer, Pilvi Solutions \(2019-2026\) - 7 years) Tj ET
-BT /F1 10 Tf 50 635 Td (- Owned Python/Kubernetes services for logistics platform) Tj ET
-BT /F1 10 Tf 50 620 Td (- Introduced GCP-based CI/CD and infrastructure-as-code) Tj ET
-BT /F1 10 Tf 50 605 Td (Software Developer, DataForge \(2017-2019\)) Tj ET
-BT /F1 4 Tf 50 590 Td () Tj ET
-BT /F2 12 Tf 50 580 Td (Education) Tj ET
-BT /F1 10 Tf 50 562 Td (M.Sc. Computer Science, Tampere University \(2017\)) Tj ET
-BT /F1 4 Tf 50 547 Td () Tj ET
-BT /F2 12 Tf 50 537 Td (Skills) Tj ET
-BT /F1 10 Tf 50 519 Td (Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka) Tj ET
-BT /F1 4 Tf 50 504 Td () Tj ET
-BT /F2 12 Tf 50 494 Td (Projects) Tj ET
-BT /F1 10 Tf 50 476 Td (- Migrated legacy system to microservices on Kubernetes) Tj ET
-BT /F1 10 Tf 50 461 Td (- Built real-time event pipeline with Kafka, handling 2M events/day) Tj ET
-BT /F1 10 Tf 50 446 Td (- Mentored 4 junior engineers on cloud-native practices) Tj ET
-BT /F1 4 Tf 50 431 Td () Tj ET
-endstream
+<<
+/Contents 8 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Author () /CreationDate (D:20260920111749+03'00') /Creator (anonymous) /Keywords () /ModDate (D:20260920111749+03'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (cv3_emma_laakso) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 786
+>>
+stream
+Gat=(9i'M/'YO#fh@WrG[24<<\!F4(5c'Hej0I;jahlbImB-PRqW%HrD$#;3KG>rA2pTX[Gr&2<VGH3dWs7LXKPqY5,RhgA,\`K0GmWZqJNme_r&Mr-SgPaNc=#f6f>-?jdr;hXr8+@s..<i,ZGRgO@um0Lq-K"hQ@"Po[R+[fj-ITW'%gArls$j-#E,A1I^"2"6P:))0BbJ]ntqTf<N:V"nF\c16(1-+AWZ(D5t<7"NZ&#0&?Y#1rL/u<[HAhdRgh8<&e6@oE/tBHP^*i6Se"E`^(16L$b6kR:pRPs[0CLY=e*]'(:3r$#XTqIMd2_X`;+fM/;,gt/sHLfMKT.\2Im"KW^^\fZuE^dCXp:SY\Ug&Q*/[==Ns9m27Q-cl4%%I1I"[=V^RrZUQSsp%b%QmQH3pH&N\=5,UOn7^9sR$LX8\n*WgiO*\R7?amVN*VmLS6O;=lX:eM@H_Xt+-0i,!^iU/@`?K&,D,';#<3L[gH4jAB&$Y_o-hI<EE.iMj+g\';1/1DZY>cCc"7T9RCo&eE+bum0I[dGZl1duk@lnPZ;72<Y<C-%N]#HK>SeCZAJgPQGT,OBSqm&aD4lHP4FD6p_g;GKfplb!<:C^cn&]_Hmm\5WXXOeMs`:O2fL;O.e\>2<Uu-Y\Qu0c*o#V7@W4+E>B$/XT.E(N1B)8iUdilc\kel8#o/l(!_7rZIONjUnJ)Wo7tk>aEC`AJ<Wo5j;t8(#Xg=@Xtls2;_.P/p<ElP0u14$?s15/(UkYk,F+?Fp`3+AcFg0E:=t@6eMG~>endstream
 endobj
 xref
-0 7
+0 9
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000251 00000 n 
-0000001563 00000 n 
-0000001633 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000524 00000 n 
+0000000592 00000 n 
+0000000851 00000 n 
+0000000910 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<42a16ac4fd08ca6a3281764be6246200><42a16ac4fd08ca6a3281764be6246200>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-1708
+1786
 %%EOF

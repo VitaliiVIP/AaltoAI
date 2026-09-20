@@ -109,10 +109,10 @@ def test_a_failed_knockout_overrides_a_passing_score():
 
 def test_protected_feature_never_reaches_the_scorer():
     profile = load_profile(FIXTURES / "toy_profile.json")
-    manifest = load_manifest("software_engineering.json")
+    manifest = load_manifest("data_science.json")
     job = JobTemplate(
         job_id="age_proxy", title="age proxy", family="software_engineering",
-        manifest="software_engineering.json",
+        manifest="data_science.json",
         score={"education.graduation_year": ScoreTerm(weight=1)},
         mode={"A": {"threshold": 1}, "B": {}},
     )

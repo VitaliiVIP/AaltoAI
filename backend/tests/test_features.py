@@ -64,7 +64,7 @@ def test_bool_and_ordinal_roundtrip():
 
 
 def test_job_feature_paths_include_knockout_and_dependency_only_features():
-    job = load_job("backend_engineer")
+    job = load_job("data_scientist")
     manifest = manifest_for_job(job)
     paths = job_feature_paths(job, manifest)
     assert "skills.python.held" in paths  # knockout only
@@ -92,10 +92,10 @@ def test_denied_never_earns_a_prior():
 
 def test_protected_feature_is_refused():
     profile = load_profile(FIXTURES / "toy_profile.json")
-    manifest = load_manifest("software_engineering.json")
+    manifest = load_manifest("data_science.json")
     job = JobTemplate(
         job_id="bad", title="bad", family="software_engineering",
-        manifest="software_engineering.json",
+        manifest="data_science.json",
         score={"education.graduation_year": ScoreTerm(weight=1)},
         mode={"A": {"threshold": 1}, "B": {}},
     )

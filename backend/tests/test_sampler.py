@@ -11,7 +11,7 @@ from recourse_screen.loaders import load_manifest, load_taxonomy
 from recourse_screen.synth.sampler import sample_corpus, sample_truth
 
 TAX = load_taxonomy()
-MAN = load_manifest("software_engineering.json")
+MAN = load_manifest("data_science.json")
 
 
 def _one(seed: int, idx: int = 0):

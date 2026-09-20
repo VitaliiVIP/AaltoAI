@@ -43,7 +43,8 @@
      "linux",
      "git"
     ],
-    "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present"
+    "quote": "Software Engineer (Backend), Nokka Oy — Nov 2024 – Present",
+    "is_data_role": false
    },
    {
     "title_raw": "Server-side Developer",
@@ -75,7 +76,8 @@
      "sql",
      "postgresql"
     ],
-    "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024"
+    "quote": "Server-side Developer, Koski Engineering — Mar 2024 – Nov 2024",
+    "is_data_role": false
    },
    {
     "title_raw": "Software Developer Intern",
@@ -102,7 +104,8 @@
      "express",
      "git"
     ],
-    "quote": "Software Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024"
+    "quote": "Software Developer Intern, Arctic Cloud Oy — May 2022 – Mar 2024",
+    "is_data_role": false
    }
   ],
   "skills_block": [

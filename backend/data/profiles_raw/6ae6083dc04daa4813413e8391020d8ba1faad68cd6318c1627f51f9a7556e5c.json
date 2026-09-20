@@ -34,7 +34,8 @@
      "kubernetes",
      "aws"
     ],
-    "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026"
+    "quote": "Senior Software Engineer\nKoski Engineering — 2023-2026",
+    "is_data_role": false
    },
    {
     "title_raw": "Backend Developer",
@@ -61,7 +62,8 @@
      "postgresql",
      "aws"
     ],
-    "quote": "Backend Developer\nKoski Engineering — 2019-2023"
+    "quote": "Backend Developer\nKoski Engineering — 2019-2023",
+    "is_data_role": false
    },
    {
     "title_raw": "Backend Developer",
@@ -85,7 +87,8 @@
      "docker",
      "aws"
     ],
-    "quote": "Backend Developer\nLumi Labs — 2016-2019"
+    "quote": "Backend Developer\nLumi Labs — 2016-2019",
+    "is_data_role": false
    },
    {
     "title_raw": "Backend Developer Trainee",
@@ -112,7 +115,8 @@
      "python",
      "distributed_systems"
     ],
-    "quote": "Backend Developer Trainee\nAurora Analytics Oy — 2014-2016"
+    "quote": "Backend Developer Trainee\nAurora Analytics Oy — 2014-2016",
+    "is_data_role": false
    }
   ],
   "skills_block": [

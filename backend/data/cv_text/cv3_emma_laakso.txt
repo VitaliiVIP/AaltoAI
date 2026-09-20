@@ -1,21 +1,24 @@
 Emma Laakso
-Backend Software Engineer
+Senior Data Scientist
 emma.laakso@example.com | +358 44 555 6677 | Tampere, Finland
 
+
+
 Experience
-Backend Engineer, Pilvi Solutions (2019-2026) - 7 years
-- Owned Python/Kubernetes services for logistics platform
-- Introduced GCP-based CI/CD and infrastructure-as-code
-Software Developer, DataForge (2017-2019)
+Senior Data Scientist, Pilvi Solutions (2019-2026) - 7 years
+- Deep-learning demand models in Python with PyTorch, trained and served on GCP
+- Owned the feature pipeline in dbt and Airflow, and the Tableau reporting on top of it
+Data Scientist, DataForge (2017-2019)
+- Built route-optimisation models in Python for the logistics team
 
 Education
 M.Sc. Computer Science, Tampere University (2017)
 
 Skills
-Python, Kubernetes, GCP, Docker, Terraform, CI/CD, Kafka
+Python, PyTorch, SQL, dbt, Airflow, GCP, Tableau
 
 Projects
-- Migrated legacy system to microservices on Kubernetes
-- Built real-time event pipeline with Kafka, handling 2M events/day
-- Mentored 4 junior engineers on cloud-native practices
+- Migrated the legacy scoring model to a deep-learning pipeline on GCP
+- Real-time anomaly detection model handling 2M events per day
+- Mentored 4 junior data scientists on model evaluation
 

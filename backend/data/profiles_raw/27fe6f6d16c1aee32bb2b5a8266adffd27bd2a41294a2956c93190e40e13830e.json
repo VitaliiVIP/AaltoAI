@@ -28,7 +28,8 @@
      "git",
      "ci_cd"
     ],
-    "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present"
+    "quote": "Senior DevOps Engineer\nTampere Tech Group | Jan 2023 – Present",
+    "is_data_role": false
    },
    {
     "title_raw": "Junior DevOps Engineer",
@@ -51,7 +52,8 @@
      "git",
      "ci_cd"
     ],
-    "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023"
+    "quote": "Junior DevOps Engineer\nVantaa Systems | May 2022 – Jan 2023",
+    "is_data_role": false
    }
   ],
   "skills_block": [

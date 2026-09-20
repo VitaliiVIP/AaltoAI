@@ -1,0 +1,145 @@
+{
+ "cv_sha256": "90fdceef79d0fa3678032762292a7d7644a444d56456ed30e6834168c0081cf7",
+ "source_file": "cv2_marcus_chen.txt",
+ "extractor_model": "claude-opus-5",
+ "prompt_version": "extract-v2",
+ "taxonomy_version": "core-0.2",
+ "extracted_at": "2026-09-20T08:18:58+00:00",
+ "cv_text": "Marcus Chen\nData Scientist\nmarcus.chen@example.com | +358 40 222 3344 | Espoo, Finland\n\n\n\nExperience\nData Scientist, CloudNorth Ltd (2021-2026) - 5 years\n- Fraud-detection models in Python with scikit-learn, retrained weekly on Azure\n- Hypothesis testing and experiment design for the payments team\nData Analyst, StartHub (2019-2021)\n- SQL reporting over a PostgreSQL warehouse, with Spark for the heavy aggregations\n\nEducation\nB.Sc. Software Engineering, University of Helsinki (2019)\n\nSkills\nPython, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing\n\nProjects\n- Rebuilt the fraud-detection model, cut false positives by 40%\n- Ran the pricing experiment programme for two product lines\n\f",
+ "output": {
+  "roles": [
+   {
+    "title_raw": "Data Scientist",
+    "title_canonical": "data_scientist",
+    "employer": "CloudNorth Ltd",
+    "start_raw": "2021",
+    "end_raw": "2026",
+    "is_backend_role": false,
+    "is_data_role": true,
+    "skills_mentioned": [
+     "python",
+     "scikit_learn",
+     "azure",
+     "statistics",
+     "ab_testing",
+     "machine_learning"
+    ],
+    "primary_skills": [
+     "python",
+     "scikit_learn",
+     "azure",
+     "statistics",
+     "ab_testing",
+     "machine_learning"
+    ],
+    "quote": "Data Scientist, CloudNorth Ltd (2021-2026)"
+   },
+   {
+    "title_raw": "Data Analyst",
+    "title_canonical": "data_analyst",
+    "employer": "StartHub",
+    "start_raw": "2019",
+    "end_raw": "2021",
+    "is_backend_role": false,
+    "is_data_role": true,
+    "skills_mentioned": [
+     "sql",
+     "postgresql",
+     "spark"
+    ],
+    "primary_skills": [
+     "sql",
+     "postgresql",
+     "spark"
+    ],
+    "quote": "Data Analyst, StartHub (2019-2021)"
+   }
+  ],
+  "skills_block": [
+   {
+    "skill": "python",
+    "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing"
+   },
+   {
+    "skill": "scikit_learn",
+    "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing"
+   },
+   {
+    "skill": "sql",
+    "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing"
+   },
+   {
+    "skill": "postgresql",
+    "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing"
+   },
+   {
+    "skill": "azure",
+    "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing"
+   },
+   {
+    "skill": "spark",
+    "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing"
+   },
+   {
+    "skill": "statistics",
+    "quote": "Python, scikit-learn, SQL, PostgreSQL, Azure, Spark, hypothesis testing"
+   }
+  ],
+  "denied_skills": [],
+  "projects": [
+   {
+    "title": "Rebuilt the fraud-detection model",
+    "topics": [
+     "machine_learning"
+    ],
+    "skills": [],
+    "deployed": "unclear",
+    "quote": "- Rebuilt the fraud-detection model, cut false positives by 40%"
+   },
+   {
+    "title": "Pricing experiment programme",
+    "topics": [
+     "data"
+    ],
+    "skills": [
+     "ab_testing"
+    ],
+    "deployed": "unclear",
+    "quote": "- Ran the pricing experiment programme for two product lines"
+   }
+  ],
+  "education": {
+   "highest_level": "bsc",
+   "field": "software engineering",
+   "in_progress": "no",
+   "quote": "B.Sc. Software Engineering, University of Helsinki"
+  },
+  "certifications": [],
+  "languages": [],
+  "eligibility": {
+   "work_authorization_region": "",
+   "requires_sponsorship": "unclear",
+   "location_country": "FI",
+   "relocation_willing": "unclear",
+   "quote": "Espoo, Finland"
+  },
+  "unmatched_skills": [],
+  "never_extract_ack": [
+   "name",
+   "date_of_birth",
+   "age",
+   "gender",
+   "photo",
+   "nationality",
+   "marital_status",
+   "street_address",
+   "postal_code",
+   "health",
+   "religion",
+   "union_membership",
+   "criminal_record",
+   "graduation_year",
+   "employment_gaps"
+  ]
+ }
+}

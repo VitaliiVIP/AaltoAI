@@ -250,7 +250,7 @@ def render_corpus(n: int, seed: int, out_dir: Path | str = config.SYNTH_DIR,
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     taxonomy = load_taxonomy()
-    manifest = load_manifest("software_engineering.json")
+    manifest = load_manifest("data_science.json")
     corpus = sample_corpus(n, seed, taxonomy=taxonomy, manifest=manifest)
 
     # truth is cheap and deterministic: always rewrite it.

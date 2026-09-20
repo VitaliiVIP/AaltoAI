@@ -4,7 +4,7 @@ The ordering is the whole trick (research/notes/cv_parsing_and_llm_brief.md 4.2)
 we sample the truth here, with no LLM, and only afterwards ask Claude to render CV
 prose from it. Labels produced by a model would make extraction accuracy
 meaningless; labels produced by this module are exact by construction, because the
-derived fields (per-skill months, total/software/backend months) are computed with
+derived fields (per-skill months, total/software/backend/data months) are computed with
 the *same* interval-union code (`recourse_screen.dates.union_months`) the extractor
 postprocess is graded against.
 
@@ -437,10 +437,12 @@ def sample_truth(
                                                       replace=False)] if skills else []
 
         is_backend = fam == "backend_engineer" or (fam == "fullstack_engineer" and fullstack_is_backend)
+        is_data = fam in ("data_scientist", "data_analyst", "ml_engineer")
         roles.append(Role(
             title_raw=title, title_canonical=fam, employer=employer, start=start, end=end,
             date_precision="year" if year_only else "month",
             months=interval_months(start, end), is_backend_role=is_backend,
+            is_data_role=is_data,
             skills_mentioned=skills, primary_skills=primary,
         ))
 
@@ -467,6 +469,7 @@ def sample_truth(
                     date_precision="year" if year_only else "month",
                     months=interval_months(index_to_ym(o_s), index_to_ym(o_e)),
                     is_backend_role=(fam == "backend_engineer"),
+                    is_data_role=(fam in ("data_scientist", "data_analyst", "ml_engineer")),
                     skills_mentioned=f_skills, primary_skills=f_skills[:1],
                 ))
         else:
@@ -539,11 +542,13 @@ def sample_truth(
     all_iv = [(r.start, r.end) for r in roles]
     sw_iv = [(r.start, r.end) for r in roles if r.title_canonical != "non_software"]
     be_iv = [(r.start, r.end) for r in roles if r.is_backend_role]
+    da_iv = [(r.start, r.end) for r in roles if r.is_data_role]
     experience = Experience(
         roles=roles,
         total_months=Envelope(value=union_months(all_iv), derivation="computed", confidence="medium"),
         software_months=Envelope(value=union_months(sw_iv), derivation="computed", confidence="medium"),
         backend_months=Envelope(value=union_months(be_iv), derivation="computed", confidence="medium"),
+        data_months=Envelope(value=union_months(da_iv), derivation="computed", confidence="medium"),
         seniority=Envelope(value=spec.seniority, derivation="inferred", confidence="medium"),
         num_roles=Envelope(value=len(roles), derivation="computed", confidence="high"),
     )
@@ -634,7 +639,7 @@ def sample_corpus(n: int, seed: int, *, taxonomy=None, manifest=None,
     from ..loaders import load_manifest, load_taxonomy
 
     taxonomy = taxonomy or load_taxonomy()
-    manifest = manifest or load_manifest("software_engineering.json")
+    manifest = manifest or load_manifest("data_science.json")
     as_of = as_of or config.AS_OF
     seq = np.random.SeedSequence(seed)
     out = []

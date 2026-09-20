@@ -26,5 +26,10 @@ frontend/public/assets/cvs/*
 # `profiles/` carries employers and dates, so new entries stay out of git;
 # the synthetic ones already committed are unaffected (git ignores .gitignore
 # for tracked paths).
+#
+# The demo pool's caches ARE tracked, so a fresh clone has a scored pool without
+# an API key. The filenames are content hashes, so they cannot be re-included by
+# pattern: regenerating a demo CV means `git add -f` on its two new cache files
+# and `git rm` on the old pair. Do that ONLY for a CV you generated yourself.
 backend/data/profiles/
 backend/data/profiles_raw/

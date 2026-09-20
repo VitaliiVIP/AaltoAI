@@ -17,12 +17,12 @@ from recourse_screen.explain.whitelist import BlockerView, DeltaView, Explanatio
 def dv(**kw) -> DeltaView:
     base = dict(
         delta_id="d1",
-        field="skills.kubernetes.held",
+        field="derived.ml_framework_held",
         from_=None,
         to=True,
         unit="boolean",
         derivation_of_current="absent",
-        candidate_phrase="hands-on Kubernetes experience",
+        candidate_phrase="hands-on experience with a machine-learning framework",
         typical_time_months=4,
         actionability="actionable",
         route_id="r1",
@@ -33,13 +33,13 @@ def dv(**kw) -> DeltaView:
 
 ABSENT_BOOL = dv()
 STATED_MONTHS = dv(
-    delta_id="d2", field="experience.backend_months", from_=18, to=24, unit="months",
-    derivation_of_current="computed", candidate_phrase="professional backend engineering experience",
+    delta_id="d2", field="experience.data_months", from_=18, to=24, unit="months",
+    derivation_of_current="computed", candidate_phrase="professional data science experience",
     typical_time_months=6, route_id="r1",
 )
 STATED_PROJECTS = dv(
-    delta_id="d3", field="project_counts_by_topic.microservices", from_=1, to=2, unit="projects",
-    derivation_of_current="stated", candidate_phrase="shipped microservices projects",
+    delta_id="d3", field="project_counts_by_topic.machine_learning", from_=1, to=2, unit="projects",
+    derivation_of_current="stated", candidate_phrase="shipped machine-learning projects",
     typical_time_months=2, route_id="r2",
 )
 DENIED_BOOL = dv(
@@ -98,13 +98,13 @@ def test_absent_delta_without_a_time_figure_quotes_no_number():
 def test_stated_months_delta_uses_the_raw_magnitude():
     s = fallback_sentence(STATED_MONTHS)
     assert "6 more months" in s
-    assert "professional backend engineering experience" in s
+    assert "professional data science experience" in s
 
 
 def test_projects_delta_asks_for_one_more():
     s = fallback_sentence(STATED_PROJECTS)
     assert "one more" in s
-    assert "shipped microservices projects" in s
+    assert "shipped machine-learning projects" in s
 
 
 def test_denied_delta_acknowledges_the_cv_said_no():

@@ -17,7 +17,8 @@
     "is_backend_role": false,
     "skills_mentioned": [],
     "primary_skills": [],
-    "quote": "Customer Success Specialist, Baltic Health Services — May 2025 – Jul 2026"
+    "quote": "Customer Success Specialist, Baltic Health Services — May 2025 – Jul 2026",
+    "is_data_role": false
    },
    {
     "title_raw": "Laboratory Technician",
@@ -28,7 +29,8 @@
     "is_backend_role": false,
     "skills_mentioned": [],
     "primary_skills": [],
-    "quote": "Laboratory Technician, Suomi Retail Group — Dec 2021 – May 2025"
+    "quote": "Laboratory Technician, Suomi Retail Group — Dec 2021 – May 2025",
+    "is_data_role": false
    },
    {
     "title_raw": "Customer Success Specialist",
@@ -39,7 +41,8 @@
     "is_backend_role": false,
     "skills_mentioned": [],
     "primary_skills": [],
-    "quote": "Customer Success Specialist, Metsa Logistics Oy — Jan 2020 – Dec 2021"
+    "quote": "Customer Success Specialist, Metsa Logistics Oy — Jan 2020 – Dec 2021",
+    "is_data_role": false
    },
    {
     "title_raw": "Laboratory Technician",
@@ -50,7 +53,8 @@
     "is_backend_role": false,
     "skills_mentioned": [],
     "primary_skills": [],
-    "quote": "Laboratory Technician, Vihrea Puutarha Oy — Aug 2015 – Dec 2019"
+    "quote": "Laboratory Technician, Vihrea Puutarha Oy — Aug 2015 – Dec 2019",
+    "is_data_role": false
    }
   ],
   "skills_block": [

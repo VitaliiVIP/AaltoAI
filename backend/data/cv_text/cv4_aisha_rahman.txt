@@ -1,20 +1,23 @@
 Aisha Rahman
-Backend Software Engineer
+Data Scientist
 aisha.rahman@example.com | +358 45 111 2233 | Helsinki, Finland
 
+
+
 Experience
-Backend Developer, FinServ Digital (2022-2026) - 3.5 years
-- Built Python services deployed on AWS ECS (not Kubernetes)
-- Worked on CI/CD pipelines with GitHub Actions
-Junior Developer, WebCraft (2020-2022)
+Data Scientist, FinServ Digital (2022-2026) - 3.5 years
+- Credit-risk models in Python with scikit-learn, deployed on AWS
+- Hypothesis testing for product changes, written up for the risk committee
+Junior Software Developer, WebCraft (2020-2022)
+- Internal tools in Python over a SQL database
 
 Education
 B.Sc. Computer Science, Metropolia UAS (2020)
 
 Skills
-Python, AWS ECS, Docker, PostgreSQL, GitHub Actions
+Python, scikit-learn, SQL, AWS, hypothesis testing
 
 Projects
-- Built internal reporting API used by finance team
-- Automated deployment scripts for two internal tools
+- Internal risk-reporting dashboard used by the finance team
+- Automated the monthly regulatory data extract
 

@@ -30,7 +30,7 @@ from .postprocess import build_profile, pii_warnings, verification_stats
 log = logging.getLogger(__name__)
 
 RAW_CACHE_DIR: Path = config.DATA_DIR / "profiles_raw"
-DEFAULT_MANIFEST = "software_engineering.json"
+DEFAULT_MANIFEST = "data_science.json"
 MAX_TOKENS = 16000
 EFFORT = "medium"
 

@@ -39,7 +39,7 @@ def taxonomy():
 
 @pytest.fixture(scope="module")
 def manifest():
-    return load_manifest("software_engineering.json")
+    return load_manifest("data_science.json")
 
 
 @pytest.fixture(scope="module")
@@ -53,22 +53,23 @@ def make_provenance() -> Provenance:
         source_file="test_cv.txt",
         extractor_model="claude-opus-5",
         prompt_version="extract-test",
-        taxonomy_version="swe-core-0.1",
+        taxonomy_version="core-0.2",
         extracted_at="2026-09-19T00:00:00+00:00",
     )
 
 
 def role_dict(**overrides):
     base = {
-        "title_raw": "Backend Developer",
-        "title_canonical": "backend_engineer",
+        "title_raw": "Data Scientist",
+        "title_canonical": "data_scientist",
         "employer": "FinServ Digital",
         "start_raw": "2022",
         "end_raw": "2026",
-        "is_backend_role": True,
+        "is_backend_role": False,
+        "is_data_role": True,
         "skills_mentioned": ["python"],
         "primary_skills": ["python"],
-        "quote": "Backend Developer, FinServ Digital (2022-2026)",
+        "quote": "Data Scientist, FinServ Digital (2022-2026)",
     }
     base.update(overrides)
     return base
@@ -182,11 +183,11 @@ def test_disjoint_intervals_add_up():
 # --------------------------------------------------------------------------- #
 
 CV = """Experience
-Backend Developer, FinServ Digital (2022-2026)
-- Built Python services deployed on AWS ECS (not Kubernetes)
+Data Scientist, FinServ Digital (2022-2026)
+- Built Python models deployed on AWS SageMaker (not Kubernetes)
 
 Skills
-Python, AWS ECS, Docker
+Python, AWS SageMaker, scikit-learn
 """
 
 
@@ -228,7 +229,7 @@ def test_failing_quote_on_a_knockout_field_drops_the_value(output_model, manifes
 
 def test_unverifiable_role_loses_its_dates(output_model):
     raw = extraction(output_model, roles=[
-        role_dict(quote="Backend Developer, FinServ Digital (2022-2026)"),
+        role_dict(quote="Data Scientist, FinServ Digital (2022-2026)"),
         role_dict(quote="Chief Architect, Fictional Oy (2010-2026)", employer="Fictional Oy"),
     ])
     roles = verify_role_evidence(normalise_roles(raw.roles, as_of=AS_OF), QuoteIndex(CV))
@@ -240,7 +241,7 @@ def test_unverifiable_role_loses_its_dates(output_model):
 
 def test_verification_stats_counts_every_quote(output_model, manifest, taxonomy):
     raw = extraction(output_model, roles=[role_dict()], skills_block=[
-        {"skill": "docker", "quote": "Docker"},
+        {"skill": "scikit_learn", "quote": "scikit-learn"},
         {"skill": "rust", "quote": "Rust (10 years)"},
     ])
     profile = build_profile(raw, CV, as_of=AS_OF, manifest=manifest,
@@ -287,16 +288,16 @@ def test_scrub_raises_on_a_nested_forbidden_key(output_model, manifest, taxonomy
 
 def test_derived_cloud_and_sql_from_component_skills(output_model, manifest, taxonomy):
     raw = extraction(output_model, roles=[
-        role_dict(skills_mentioned=["python", "aws_ecs", "postgresql", "github_actions"],
+        role_dict(skills_mentioned=["python", "sagemaker", "postgresql", "scikit_learn"],
                   primary_skills=["python"]),
     ])
     profile = build_profile(raw, CV, as_of=AS_OF, manifest=manifest,
                             taxonomy=taxonomy, provenance=make_provenance())
     assert profile.derived["cloud_platform_held"].value is True
     assert profile.derived["sql_held"].value is True
-    assert profile.derived["ci_cd_held"].value is True
-    assert profile.derived["iac_held"].value is None
-    assert profile.derived["iac_held"].derivation == "absent"
+    assert profile.derived["ml_framework_held"].value is True
+    assert profile.derived["visualisation_held"].value is None
+    assert profile.derived["visualisation_held"].derivation == "absent"
 
 
 def test_denied_skill_makes_derived_false_not_absent(output_model, manifest, taxonomy):
@@ -320,15 +321,16 @@ def test_build_profile_aggregates_and_scopes(output_model, manifest, taxonomy):
         output_model,
         roles=[
             role_dict(start_raw="2022", end_raw="2026",
-                      skills_mentioned=["python", "aws_ecs"], primary_skills=["python"]),
+                      skills_mentioned=["python", "sagemaker"], primary_skills=["python"]),
             role_dict(title_raw="Data Entry Specialist", title_canonical="non_software",
                       employer="RetailPlus", start_raw="2020", end_raw="2022",
-                      is_backend_role=False, skills_mentioned=[], primary_skills=[],
-                      quote="Backend Developer, FinServ Digital (2022-2026)"),
+                      is_backend_role=False, is_data_role=False,
+                      skills_mentioned=[], primary_skills=[],
+                      quote="Data Scientist, FinServ Digital (2022-2026)"),
         ],
-        skills_block=[{"skill": "docker", "quote": "Docker"}],
-        projects=[{"title": "reporting API", "topics": ["backend"], "skills": ["python"],
-                   "deployed": "yes", "quote": "Built Python services"}],
+        skills_block=[{"skill": "scikit_learn", "quote": "scikit-learn"}],
+        projects=[{"title": "risk model", "topics": ["machine_learning"], "skills": ["python"],
+                   "deployed": "yes", "quote": "Built Python models"}],
         unmatched_skills=["Golang", "Woodforce"],
     )
     profile = build_profile(raw, CV, as_of=AS_OF, manifest=manifest,
@@ -336,15 +338,16 @@ def test_build_profile_aggregates_and_scopes(output_model, manifest, taxonomy):
 
     assert profile.experience.total_months.value == 72
     assert profile.experience.software_months.value == 48
-    assert profile.experience.backend_months.value == 48
+    assert profile.experience.backend_months.value == 0
+    assert profile.experience.data_months.value == 48
     assert profile.experience.num_roles.value == 2
     assert profile.experience.software_months.confidence == "medium"  # year precision
 
     # a skills-block-only skill is held but not dated
-    assert profile.skills["docker"].held.value is True
-    assert profile.skills["docker"].dated is False
-    assert profile.skills["docker"].months.value is None
-    assert profile.skills["docker"].months.derivation == "absent"
+    assert profile.skills["scikit_learn"].held.value is True
+    assert profile.skills["scikit_learn"].dated is False
+    assert profile.skills["scikit_learn"].months.value is None
+    assert profile.skills["scikit_learn"].months.derivation == "absent"
 
     # a role skill is dated and gets a union month count
     assert profile.skills["python"].dated is True
@@ -357,7 +360,7 @@ def test_build_profile_aggregates_and_scopes(output_model, manifest, taxonomy):
     assert "go" in profile.skills
     assert profile.unmatched_skills == ["Woodforce"]
 
-    assert profile.project_counts_by_topic == {"backend": 1}
+    assert profile.project_counts_by_topic == {"machine_learning": 1}
     assert profile.resolve("project_counts_by_topic.microservices").value == 0
 
 
@@ -366,29 +369,29 @@ def test_proficiency_ladder(output_model, manifest, taxonomy):
         output_model,
         roles=[role_dict(start_raw="2025-01", end_raw="2025-07",
                          skills_mentioned=["python", "redis"], primary_skills=["python"])],
-        skills_block=[{"skill": "docker", "quote": "Docker"}],
+        skills_block=[{"skill": "scikit_learn", "quote": "scikit-learn"}],
     )
     profile = build_profile(raw, CV, as_of=AS_OF, manifest=manifest,
                             taxonomy=taxonomy, provenance=make_provenance())
     assert profile.skills["python"].proficiency.value == 2   # primary, short role
     assert profile.skills["redis"].proficiency.value == 1    # mentioned only
-    assert profile.skills["docker"].proficiency.value == 1
-    assert profile.skills["docker"].proficiency.confidence == "low"
+    assert profile.skills["scikit_learn"].proficiency.value == 1
+    assert profile.skills["scikit_learn"].proficiency.confidence == "low"
 
 
 def test_seniority_from_titles_then_duration():
     from recourse_screen.schemas import Role
 
-    senior = [Role(title_raw="Senior Backend Engineer", title_canonical="backend_engineer")]
+    senior = [Role(title_raw="Senior Data Scientist", title_canonical="data_scientist")]
     assert infer_seniority(senior, 72) == "senior"
 
-    lead = [Role(title_raw="Tech Lead", title_canonical="backend_engineer")]
+    lead = [Role(title_raw="Head of Data Science", title_canonical="data_scientist")]
     assert infer_seniority(lead, 24) == "lead"
 
-    junior = [Role(title_raw="Junior Backend Developer", title_canonical="backend_engineer")]
+    junior = [Role(title_raw="Junior Data Scientist", title_canonical="data_scientist")]
     assert infer_seniority(junior, 30) == "junior"
 
-    plain = [Role(title_raw="Software Engineer", title_canonical="backend_engineer")]
+    plain = [Role(title_raw="Data Scientist", title_canonical="data_scientist")]
     assert infer_seniority(plain, 48) == "mid"
 
     none_software = [Role(title_raw="Data Entry", title_canonical="non_software")]
@@ -419,15 +422,15 @@ def test_tristates_become_booleans(output_model, manifest, taxonomy):
             {"title": "a", "topics": ["backend"], "skills": [], "deployed": "yes",
              "quote": "Built Python services"},
             {"title": "b", "topics": ["tutorial"], "skills": [], "deployed": "no",
-             "quote": "Backend Developer"},
+             "quote": "Data Scientist"},
             {"title": "c", "topics": ["other"], "skills": [], "deployed": "unclear",
              "quote": "Skills"},
         ],
         education={"highest_level": "bsc", "field": "computer science",
-                   "in_progress": "no", "quote": "Backend Developer"},
+                   "in_progress": "no", "quote": "Data Scientist"},
         eligibility={"work_authorization_region": "EU", "requires_sponsorship": "no",
                      "location_country": "FI", "relocation_willing": "unclear",
-                     "quote": "Backend Developer"},
+                     "quote": "Data Scientist"},
     )
     profile = build_profile(raw, CV, as_of=AS_OF, manifest=manifest,
                             taxonomy=taxonomy, provenance=make_provenance())
@@ -447,6 +450,7 @@ def test_non_software_role_grants_held_but_no_professional_months(output_model, 
         roles=[role_dict(title_raw="Data Entry / Support Specialist",
                          title_canonical="non_software", employer="RetailPlus",
                          start_raw="2023", end_raw="2026", is_backend_role=False,
+                         is_data_role=False,
                          skills_mentioned=["python"], primary_skills=["python"])],
         skills_block=[{"skill": "python", "quote": "Python"}],
     )
@@ -465,7 +469,7 @@ def test_non_software_role_grants_held_but_no_professional_months(output_model, 
 # contact email (UI only, never scored)
 # --------------------------------------------------------------------------- #
 
-CV_WITH_EMAIL = """Backend Software Engineer
+CV_WITH_EMAIL = """Data Scientist
 elina.korhonen@example.com | +358 40 123 4567 | Helsinki, Finland
 
 """ + CV

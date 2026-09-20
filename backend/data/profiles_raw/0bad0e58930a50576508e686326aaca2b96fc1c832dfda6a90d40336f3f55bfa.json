@@ -36,7 +36,8 @@
      "postgresql",
      "sql"
     ],
-    "quote": "Principal Backend Engineer, Helsinki Data Works"
+    "quote": "Principal Backend Engineer, Helsinki Data Works",
+    "is_data_role": false
    },
    {
     "title_raw": "Software Engineer (Backend)",
@@ -65,7 +66,8 @@
      "postgresql",
      "redis"
     ],
-    "quote": "Software Engineer (Backend), Nokka Oy"
+    "quote": "Software Engineer (Backend), Nokka Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "API Developer",
@@ -92,7 +94,8 @@
      "docker",
      "kubernetes"
     ],
-    "quote": "API Developer, Vantaa Systems"
+    "quote": "API Developer, Vantaa Systems",
+    "is_data_role": false
    },
    {
     "title_raw": "Junior Software Engineer",
@@ -122,7 +125,8 @@
      "postgresql",
      "sql"
     ],
-    "quote": "Junior Software Engineer, Helsinki Data Works"
+    "quote": "Junior Software Engineer, Helsinki Data Works",
+    "is_data_role": false
    }
   ],
   "skills_block": [

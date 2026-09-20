@@ -33,7 +33,8 @@
      "ci_cd",
      "testing"
     ],
-    "quote": "Site Reliability Engineer, Nokka Oy"
+    "quote": "Site Reliability Engineer, Nokka Oy",
+    "is_data_role": false
    },
    {
     "title_raw": "IT Operations Trainee",
@@ -55,7 +56,8 @@
      "aws",
      "terraform"
     ],
-    "quote": "IT Operations Trainee, Vireo Solutions"
+    "quote": "IT Operations Trainee, Vireo Solutions",
+    "is_data_role": false
    }
   ],
   "skills_block": [

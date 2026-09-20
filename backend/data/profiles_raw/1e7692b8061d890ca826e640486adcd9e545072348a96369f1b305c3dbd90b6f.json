@@ -29,7 +29,8 @@
      "playwright",
      "testing"
     ],
-    "quote": "Frontend Engineer — Polaris Payments"
+    "quote": "Frontend Engineer — Polaris Payments",
+    "is_data_role": false
    },
    {
     "title_raw": "Frontend Engineer",
@@ -49,7 +50,8 @@
      "typescript",
      "react"
     ],
-    "quote": "Frontend Engineer — Koski Engineering"
+    "quote": "Frontend Engineer — Koski Engineering",
+    "is_data_role": false
    },
    {
     "title_raw": "Junior UI Developer",
@@ -70,7 +72,8 @@
      "javascript",
      "git"
     ],
-    "quote": "Junior UI Developer — Vireo Solutions"
+    "quote": "Junior UI Developer — Vireo Solutions",
+    "is_data_role": false
    }
   ],
   "skills_block": [
