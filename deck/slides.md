@@ -1,10 +1,10 @@
 ---
 theme: seriph
 background: https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2400
-title: HR AI Advisor — algorithmic recourse for CV screening
+title: Recourse — an automated HR advisor
 info: |
-  ## HR AI Advisor
-  AaltoAI Hackathon 2026 — Gleb Tretiakov, Vitalii Virronen, Ilya Zalesskii
+  ## Recourse — an automated HR advisor
+  AaltoAI Hackathon 2026 — Gleb Tretiakov, Vitalii Virronen, Ilia Zalesskii
 
   An open-source CV pre-screener that tells rejected candidates exactly what
   would have to change, and keeps the human in the loop.
@@ -16,12 +16,14 @@ mdc: true
 duration: 10min
 ---
 
-# HR AI Advisor
+# Recourse
 
-Automated CV screening that **explains itself — to both sides**
+<div class="text-2xl pt-1">An automated HR advisor</div>
+
+<div class="pt-3 text-lg opacity-85">CV screening that <b>explains itself — to both sides</b></div>
 
 <div class="pt-8 text-sm opacity-70">
-Gleb Tretiakov · Vitalii Virronen · Ilya Zalesskii<br>
+Gleb Tretiakov · Vitalii Virronen · Ilia Zalesskii<br>
 AaltoAI Hackathon 2026 — AI sovereignty, security & EU data law
 </div>
 
@@ -148,8 +150,8 @@ actual threshold recourse. That gap is our project.
 <div class="absolute text-xs leading-snug" style="left: 516px; top: 0; width: 354px">
 
 <div v-click="1" class="console-note">
-<b>Top bar</b> — the job being hired for, and the screening mode:
-<b>A</b> a fixed pass mark, or <b>B</b> the top N of the pool. Settings open the job editor and the audit log.
+<b>Top bar</b> — the job being hired for, and the bar to clear: the <b>top N of the pool</b> advance
+(N = 3 here). Settings open the job editor and the audit log.
 </div>
 
 <div v-click="2" class="console-note">
@@ -273,7 +275,7 @@ no real CV in the deck.
 
 <div class="text-sm opacity-80 -mt-2">
 HR authors it. The system enforces it. The column sums to <b>100</b>, so a score reads as a
-percentage and the pass mark is a share of the job — not a magic number.
+percentage and every candidate in the pool is measured on the same scale.
 </div>
 
 <div class="grid grid-cols-2 gap-8 pt-4 text-xs">
@@ -442,9 +444,8 @@ layout: statement
 1. Open the pool — 10 candidates, ranked
 2. Open **Aisha** — 75/100, rejected
 3. Read the three routes
-4. Flip **A → B** — watch the advice get more expensive
-5. Open the email draft, polish it, *don't* send
-6. Open the job editor — move Kubernetes from 11 pts to 0, re-screen
+4. Open the email draft, polish it, *don't* send
+5. Open the job editor — move Kubernetes from 11 pts to 0, re-screen
 
 </div>
 
@@ -453,7 +454,7 @@ recourse.ilia.fi
 </div>
 
 <!--
-Step 6 is the strongest moment: it makes visible that the employer's config,
+Step 5 is the strongest moment: it makes visible that the employer's config,
 not the model, is what rejected her. Rehearse the timing — the re-screen is instant
 because explain=false.
 -->
@@ -463,12 +464,14 @@ layout: center
 class: text-center
 ---
 
-# HR AI Advisor
+# Recourse
 
-Screening that can explain itself — to the manager **and** to the candidate
+<div class="text-2xl pt-1">An automated HR advisor</div>
+
+<div class="pt-3 text-lg opacity-85">Screening that can explain itself — to the manager <b>and</b> to the candidate</div>
 
 <div class="pt-8 text-sm opacity-70">
-Gleb Tretiakov · Vitalii Virronen · Ilya Zalesskii
+Gleb Tretiakov · Vitalii Virronen · Ilia Zalesskii
 </div>
 
 <div class="pt-4 text-sm opacity-60">
@@ -500,33 +503,21 @@ Each criterion has a **cap** — how many solver steps count as full marks — s
 score = Σ  min(steps(feature), cap) × (points // cap)
 ```
 
-<div class="grid grid-cols-2 gap-8 pt-6">
+<div class="pt-6">
 
-<div>
-
-**Mode A — fixed threshold**
-Pass at **≥ 80 / 100**.
-Absolute, stable, explainable.
-
-</div>
-
-<div>
-
-**Mode B — top N of pool**
-Pass if you are in the **top 3**.
-The bar is the 3rd-best score — it *moves*.
-
-</div>
+**The bar — top N of the pool**
+A candidate advances if they are in the **top 3**. The bar to beat is the 3rd-best score in the pool,
+so recourse is computed against the actual competition, not a fixed number.
 
 </div>
 
 <div class="pt-6 text-sm opacity-70">
-Both modes ship. Recourse is honest under a threshold; under ranking it is a moving target, and the
-UI defaults to mode B so that is visible rather than hidden.
+Every route the solver returns is enough to clear that bar on its own, given the rest of the pool
+as it stands today.
 </div>
 
 <!--
-Mode B bar is computed as the N-th best score among the other candidates (+1,
+The bar is computed as the N-th best score among the other candidates (+1,
 ties resolved pessimistically). No bootstrap, no capacity modelling — deliberately
 simple, and we say so.
 -->
