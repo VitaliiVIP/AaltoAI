@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { PoolRow } from "../apiTypes";
 import type { EmailStatus } from "../types";
 import { assetsFor, deriveName } from "../candidateMeta";
+import CvModal from "./CvModal";
 
 interface AcceptedDrawerProps {
   open: boolean;
@@ -75,7 +76,7 @@ export default function AcceptedDrawer({
           <div className="accepted-grid">
             {shown.map(({ row, status }) => {
               const name = deriveName(row.candidate_id);
-              const { thumbUrl } = assetsFor(row.candidate_id);
+              const { thumbUrl } = assetsFor(row.candidate_id, row.has_pdf);
               const accepted = status === "sent";
               return (
                 <div className="accepted-card" key={row.candidate_id}>
@@ -105,18 +106,11 @@ export default function AcceptedDrawer({
       </aside>
 
       {viewing && (
-        <div className="cv-modal-overlay" onClick={() => setViewing(null)}>
-          <div className="cv-modal" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="icon-btn cv-modal-close"
-              aria-label="Close CV"
-              onClick={() => setViewing(null)}
-            >
-              ✕
-            </button>
-            <img src={assetsFor(viewing).thumbUrl} alt={`${deriveName(viewing)} full CV`} />
-          </div>
-        </div>
+        <CvModal
+          candidateId={viewing}
+          hasPdf={pool.find((r) => r.candidate_id === viewing)?.has_pdf ?? false}
+          onClose={() => setViewing(null)}
+        />
       )}
     </>
   );

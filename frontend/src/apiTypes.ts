@@ -382,6 +382,8 @@ export interface JobDraft {
 export interface PoolRow {
   candidate_id: string;
   file: string | null;
+  /** The API holds this candidate's PDF (an upload) — demo CVs are static assets instead. */
+  has_pdf: boolean;
   score: number;
   knockouts_passed: boolean;
   rank: number | null;

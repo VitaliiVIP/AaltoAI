@@ -497,6 +497,14 @@ h1, h2, h3, p { margin: 0; }
   display: block;
 }
 
+.cv-modal-empty {
+  margin: 0;
+  padding: 4rem 2.5rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
 .cv-modal-close {
   position: absolute;
   top: 0.75rem;

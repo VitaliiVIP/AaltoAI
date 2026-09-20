@@ -131,6 +131,9 @@ def candidates(job: str = "backend_engineer", mode: str = "B", N: int | None = N
         rows.append({
             "candidate_id": cid,
             "file": prof.provenance.source_file,
+            # True when the API holds the PDF (an upload); the demo pool's files
+            # ship with the frontend instead, so the UI picks the URL by this.
+            "has_pdf": _upload_path(cid, ".pdf") is not None,
             "score": score,
             "knockouts_passed": ko,
             "rank": rank,
@@ -191,10 +194,51 @@ def delete_candidate(candidate_id: str) -> dict:
         config.CV_TEXT_DIR / f"{candidate_id}.txt",
         profile_path,
         config.DATA_DIR / "profiles_raw" / f"{sha}.json",
-        config.DATA_DIR / "uploads" / f"{candidate_id}.pdf",
+        config.UPLOADS_DIR / f"{candidate_id}.pdf",
+        config.UPLOADS_DIR / f"{candidate_id}.png",
     ):
         p.unlink(missing_ok=True)
     return {"ok": True, "candidate_id": candidate_id}
+
+
+def _upload_path(candidate_id: str, suffix: str) -> Path | None:
+    """`UPLOADS_DIR/<candidate_id><suffix>` if that file exists, else None.
+
+    The id is a filename stem straight off the URL, so anything that is not a
+    plain single-segment name is refused rather than resolved.
+    """
+    if not candidate_id or candidate_id.startswith(".") or Path(candidate_id).name != candidate_id:
+        return None
+    path = config.UPLOADS_DIR / f"{candidate_id}{suffix}"
+    return path if path.is_file() else None
+
+
+@app.get("/candidates/{candidate_id}/file.pdf")
+def candidate_pdf(candidate_id: str) -> FileResponse:
+    """The uploaded PDF itself. Demo CVs are not here: they are static files
+    in the frontend build, and the pool row's `has_pdf` says which is which."""
+    path = _upload_path(candidate_id, ".pdf")
+    if path is None:
+        raise HTTPException(404, f"no PDF on file for {candidate_id!r}")
+    return FileResponse(path, media_type="application/pdf", filename=path.name)
+
+
+@app.get("/candidates/{candidate_id}/thumbnail.png")
+def candidate_thumbnail(candidate_id: str) -> FileResponse:
+    """First page of the uploaded PDF as a PNG, for the card. Rendered lazily
+    when missing, so uploads that predate thumbnails get one on first view."""
+    from ..extract.pdf import PdfExtractionError, pdf_to_png
+
+    png = _upload_path(candidate_id, ".png")
+    if png is None:
+        pdf = _upload_path(candidate_id, ".pdf")
+        if pdf is None:
+            raise HTTPException(404, f"no PDF on file for {candidate_id!r}")
+        try:
+            png = pdf_to_png(pdf, pdf.with_suffix(".png"))
+        except PdfExtractionError as e:
+            raise HTTPException(404, f"could not render a thumbnail: {e}") from e
+    return FileResponse(png, media_type="image/png")
 
 
 @app.get("/jobs/{job_id}/spec")
@@ -276,23 +320,34 @@ def screen(req: ScreenRequest) -> ScreenResult:
 @app.post("/extract")
 async def extract(file: UploadFile | None = None, cv_text: str | None = None) -> dict:
     from ..extract.extractor import extract_profile
-    from ..extract.pdf import PdfExtractionError, pdf_to_text, sha256_text
+    from ..extract.pdf import PdfExtractionError, pdf_to_png, pdf_to_text, sha256_text
 
     if file is not None:
         raw = await file.read()
-        name = file.filename or "upload"
+        # Basename only: the client picks this string, and it becomes both the
+        # candidate_id and the file stem under data/.
+        name = Path(file.filename or "upload").name
+        stem = Path(name).stem
+        if not stem or stem.startswith("."):
+            raise HTTPException(400, "the upload needs a filename")
         if name.lower().endswith(".pdf"):
-            tmp = config.DATA_DIR / "uploads" / name
-            tmp.parent.mkdir(parents=True, exist_ok=True)
-            tmp.write_bytes(raw)
+            # Kept at <candidate_id>.pdf, which is where /candidates/{id}/file.pdf
+            # and the thumbnail route look for it.
+            pdf = config.UPLOADS_DIR / f"{stem}.pdf"
+            pdf.parent.mkdir(parents=True, exist_ok=True)
+            pdf.write_bytes(raw)
             try:
-                text = pdf_to_text(tmp)
+                text = pdf_to_text(pdf)
             except PdfExtractionError as e:
-                # The upload's temp path means nothing to whoever sees the toast.
-                raise HTTPException(400, str(e).replace(str(tmp), name)) from e
+                # The upload's stored path means nothing to whoever sees the toast.
+                raise HTTPException(400, str(e).replace(str(pdf), name)) from e
+            try:
+                pdf_to_png(pdf, pdf.with_suffix(".png"))
+            except PdfExtractionError:
+                pass  # the card falls back to initials; the parse still goes ahead
         else:
             text = raw.decode("utf-8", errors="replace")
-        source = Path(name).stem + ".txt"
+        source = f"{stem}.txt"
         # The profile cache is keyed by the sha of the CV *text*, and re-extracting
         # rewrites that entry's source_file -- so uploading a CV already in the pool
         # would rename the sitting candidate out from under the list. Refuse instead.
