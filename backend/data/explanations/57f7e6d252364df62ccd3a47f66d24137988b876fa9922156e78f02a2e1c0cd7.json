@@ -1,0 +1,42 @@
+{
+ "key": "57f7e6d252364df62ccd3a47f66d24137988b876fa9922156e78f02a2e1c0cd7",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:30:16+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "skills.python.held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "denied",
+    "candidate_phrase": "working knowledge of Python",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 10,
+  "pool_size": 10,
+  "slots_n": 10,
+  "route_ranks": {
+   "r1": 9
+  },
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "Your CV describes working knowledge of Python; building that into full working competence, which typically takes around three months of practice, would let you list Python as a skill you hold."
+  }
+ ]
+}

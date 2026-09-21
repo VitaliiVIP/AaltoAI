@@ -8,11 +8,6 @@ interface EmailPanelProps {
   result: ScreenResult | null;
   jobTitle: string;
   status?: EmailStatus;
-  polishing: boolean;
-  sending: boolean;
-  sendError: string | null;
-  mailboxUrl: string | null;
-  onPolish: () => void;
   onSend: (id: string) => void;
   onSendEmail: (id: string, to: string, subject: string, body: string, declined: boolean) => void;
   onDecline: (id: string) => void;
@@ -22,11 +17,6 @@ export default function EmailPanel({
   result,
   jobTitle,
   status,
-  polishing,
-  sending,
-  sendError,
-  mailboxUrl,
-  onPolish,
   onSend,
   onSendEmail,
   onDecline,
@@ -58,7 +48,7 @@ export default function EmailPanel({
   const to = emailFor(candidateId, result.profile.contact_email);
   const synthetic = isSyntheticEmail(candidateId, result.profile.contact_email);
   const passed = result.decision.passed;
-  const disabled = Boolean(status) || sending;
+  const disabled = Boolean(status);
   const explanation = result.explanation;
 
   // Accepted directly (never went through the decline draft) — no email was
@@ -136,29 +126,27 @@ export default function EmailPanel({
         </div>
         <div className="email-subject">{draft.subject}</div>
 
+        {/* Model-written sentences come from the backend's cache of the shipped
+            decisions; anything the cache has not seen (an edited job, a
+            restated CV) is the checked template text instead. */}
         {!passed && explanation && (
           <div className="provenance-row">
             <span className={"prov-badge " + (explanation.fallback_used ? "template" : "llm")}>
-              {explanation.fallback_used ? "template fallback" : "LLM sentences"}
+              {explanation.fallback_used ? "template sentences" : "Claude sentences (cached)"}
             </span>
             <span className={"prov-badge " + (explanation.checks_passed ? "ok" : "bad")}>
               {explanation.checks_passed ? "checks passed" : "checks FAILED"}
             </span>
             <span className="prov-version">{explanation.model_version}</span>
-            {explanation.fallback_used && (
-              <button className="link-btn" onClick={onPolish} disabled={polishing || disabled}>
-                {polishing ? "Polishing…" : "Polish with Claude"}
-              </button>
-            )}
           </div>
         )}
         {!passed && explanation && explanation.check_failures.length > 0 && (
           <p className="block-note">Check failures: {explanation.check_failures.join(", ")}</p>
         )}
 
-        {/* key forces a remount when the underlying decision changes, so a
-            polished explanation actually replaces the text in this
-            uncontrolled textarea instead of silently keeping the old draft. */}
+        {/* key forces a remount when the underlying decision changes, so a new
+            explanation actually replaces the text in this uncontrolled textarea
+            instead of silently keeping the old draft. */}
         <textarea
           key={`${candidateId}|${result.decision_id}|${passed && declining ? "decline" : "main"}`}
           ref={textareaRef}
@@ -169,39 +157,16 @@ export default function EmailPanel({
 
         <div className="email-actions">
           <button className="btn btn-primary" disabled={disabled} onClick={handleSend}>
-            {sending ? "Sending…" : "Send"}
+            Send
           </button>
           <button className="btn btn-secondary" disabled={disabled} onClick={handleSecondary}>
             {secondaryLabel}
           </button>
         </div>
 
-        {sendError && <p className="email-declined-note send-error">✗ {sendError}</p>}
-        {status === "sent" && (
-          <p className="email-sent-note">
-            ✓ Email sent to {name}
-            {mailboxUrl && (
-              <>
-                {" — "}
-                <a href={mailboxUrl} target="_blank" rel="noreferrer" className="link-btn">
-                  open test inbox
-                </a>
-              </>
-            )}
-          </p>
-        )}
+        {status === "sent" && <p className="email-sent-note">✓ Email sent to {name}</p>}
         {status === "rejected" && (
-          <p className="email-declined-note">
-            ✓ Rejection sent to {name}
-            {mailboxUrl && (
-              <>
-                {" — "}
-                <a href={mailboxUrl} target="_blank" rel="noreferrer" className="link-btn">
-                  open test inbox
-                </a>
-              </>
-            )}
-          </p>
+          <p className="email-declined-note">✓ Rejection sent to {name}</p>
         )}
         {status === "declined" && (
           <p className="email-declined-note">Kept for further review — no email sent</p>

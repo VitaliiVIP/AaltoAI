@@ -3,7 +3,6 @@ import type { AuditSummary, JobSummary, Mode, ScreenResult } from "../apiTypes";
 import { fmtValue, maxScoreOf } from "../present";
 import { useJobEditor } from "../useJobEditor";
 import BudgetEditor from "./BudgetEditor";
-import DraftFromAd from "./DraftFromAd";
 import KnockoutChecklist from "./KnockoutChecklist";
 
 interface SettingsDrawerProps {
@@ -15,7 +14,7 @@ interface SettingsDrawerProps {
   slotsN: number;
   poolSize: number;
   onClose: () => void;
-  onJobSaved: (job: JobSummary) => void;
+  onJobSaved: () => void;
 }
 
 /**
@@ -92,15 +91,6 @@ export default function SettingsDrawer({
               {editor.spec && editor.catalogue && (
                 <>
                   <section className="drawer-section">
-                    <h3>Start from the advert</h3>
-                    <DraftFromAd
-                      draft={editor.draft}
-                      busy={editor.phase === "drafting"}
-                      onDraft={(text) => void editor.draftFromAd(text)}
-                    />
-                  </section>
-
-                  <section className="drawer-section">
                     <h3>Hard requirements</h3>
                     <KnockoutChecklist
                       features={editor.catalogue.features}
@@ -120,7 +110,6 @@ export default function SettingsDrawer({
                       allocated={editor.allocated}
                       budgetTotal={job.budget_total}
                       preflight={editor.preflight}
-                      quotes={editor.draft?.quotes ?? {}}
                       onPoints={editor.setPoints}
                       onCap={editor.setCap}
                       onAdd={editor.addCriterion}

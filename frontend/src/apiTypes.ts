@@ -235,11 +235,11 @@ export interface ScreenResult {
 }
 
 export interface ScreenRequest {
-  candidate_id?: string;
-  cv_text?: string;
+  candidate_id: string;
   job_id: string;
   mode: Mode;
   N: number | null;
+  /** Cached model sentences where the backend has them, templates otherwise. Never a model call. */
   explain: boolean;
 }
 
@@ -369,17 +369,6 @@ export interface Preflight {
   max_score: number;
 }
 
-export interface JobDraft {
-  spec: JobSpec;
-  /** path -> the phrase in the ad that justified the criterion. */
-  quotes: Record<string, string>;
-  /** Requirements in the ad that need an attribute the system refuses to use. */
-  refused: { path: string; quote: string; reason: string }[];
-  /** Legitimate requirements with no feature to carry them. */
-  unmapped: string[];
-  adjusted: Record<string, Adjustment>;
-}
-
 /** One entry of `GET /candidates`. Scored without any LLM call or audit write. */
 export interface PoolRow {
   candidate_id: string;
@@ -439,13 +428,3 @@ export interface AuditSummary {
   first_bad_index: number | null;
 }
 
-export interface SendEmailRequest {
-  to: string;
-  subject: string;
-  body: string;
-}
-
-export interface SendEmailResult {
-  ok: boolean;
-  web: string;
-}

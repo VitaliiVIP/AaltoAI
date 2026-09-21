@@ -24,7 +24,7 @@ CV_TEXT  := $(BACKEND)/data/cv_text
 .DEFAULT_GOAL := help
 .PHONY: help setup setup-backend setup-frontend dev backend frontend \
         check-ports check-backend-port check-frontend-port \
-        test typecheck build preview check extract add-cv eval pool audit clean
+        test typecheck build preview check extract cache-explanations add-cv eval pool audit clean
 
 help: ## Show this help
 	@echo "AaltoAI — hiring pre-screener with algorithmic recourse"
@@ -55,9 +55,9 @@ $(FRONTEND)/node_modules: $(FRONTEND)/package-lock.json
 
 $(BACKEND)/.env:
 	@cp $(BACKEND)/.env.example $@
-	@echo "Created $@ — put your ANTHROPIC_API_KEY in it."
-	@echo "(Only 'Polish with Claude' and CV upload need it; everything else"
-	@echo " runs on the deterministic templates.)"
+	@echo "Created $@."
+	@echo "(ANTHROPIC_API_KEY is only needed by the cache-filling scripts:"
+	@echo " make extract / add-cv / cache-explanations / eval. The app itself never calls the model.)"
 
 # ------------------------------------------------------------------ run ----
 
@@ -99,7 +99,7 @@ check-frontend-port:
 	@$(call check_port,$(FRONTEND_PORT),Vite dev server)
 
 dev: $(FRONTEND)/node_modules check-ports ## Run backend and frontend together (Ctrl-C stops both)
-	@echo "backend  http://127.0.0.1:$(BACKEND_PORT)/   (API + throwaway demo page)"
+	@echo "backend  http://127.0.0.1:$(BACKEND_PORT)/docs (API)"
 	@echo "frontend http://127.0.0.1:$(FRONTEND_PORT)/  <- the app"
 	@echo
 	@trap 'kill 0 2>/dev/null; sleep 0.3; kill -9 0 2>/dev/null' INT TERM EXIT; \
@@ -134,6 +134,13 @@ check: test typecheck build ## Everything CI would run
 extract: ## LLM-extract any new CVs in backend/data/cv_text (cached by content hash)
 	cd $(BACKEND) && $(UV) run python scripts/extract_demo_cvs.py
 
+# The API serves model-written sentences from this cache and never calls the
+# model itself. Keyed by the exact prompt, so re-run after changing the job, the
+# pool or the explain prompt. The pool filter keeps a CV dropped in locally
+# from shifting every shipped candidate's mode-B rank.
+cache-explanations: ## LLM-write the explanation sentences for every demo decision (cached by prompt hash)
+	cd $(BACKEND) && $(UV) run python scripts/cache_explanations.py --pool '^cv[0-9]+_'
+
 # Normalises the filename, because candidate_id is the file stem and the UI
 # reconstructs the display name from it.
 add-cv: ## Add a CV to the pool: make add-cv PDF=path/to/cv.pdf
@@ -146,7 +153,8 @@ add-cv: ## Add a CV to the pool: make add-cv PDF=path/to/cv.pdf
 	pdftoppm -png -r 100 -f 1 -l 1 "$(CVS)/$$stem.pdf" "$(CVS)/$$stem"; \
 	mv -f "$(CVS)/$$stem-1.png" "$(CVS)/$$stem.png" 2>/dev/null || true
 	@$(MAKE) --no-print-directory extract
-	@echo "Added. Note this grows the mode-B pool and shifts every rank."
+	@echo "Added. This grows the mode-B pool and shifts every rank, so the"
+	@echo "explanation cache needs refilling: make cache-explanations"
 
 eval: ## Synthetic corpus + parser/recourse metrics (costs LLM calls)
 	cd $(BACKEND) && $(UV) run python scripts/run_eval.py --n 30

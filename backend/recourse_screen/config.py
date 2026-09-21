@@ -14,6 +14,9 @@ CV_TEXT_DIR = DATA_DIR / "cv_text"
 # demo pool's files live in the frontend image instead (public/assets/cvs).
 UPLOADS_DIR = DATA_DIR / "uploads"
 PROFILE_CACHE_DIR = DATA_DIR / "profiles"
+# Verbalised explanations, keyed by prompt hash. Read by the API, written only by
+# scripts/cache_explanations.py -- the public demo never calls the model itself.
+EXPLANATION_CACHE_DIR = DATA_DIR / "explanations"
 SYNTH_DIR = DATA_DIR / "synth"
 AUDIT_LOG_PATH = DATA_DIR / "audit.jsonl"
 

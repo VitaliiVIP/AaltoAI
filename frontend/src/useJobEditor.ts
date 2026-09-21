@@ -4,23 +4,14 @@ import {
   getCatalogue,
   getJobSpec,
   isAbortError,
-  postJobDraft,
-  postJobSave,
   postPreflight,
 } from "./api";
-import type {
-  Catalogue,
-  CatalogueFeature,
-  JobDraft,
-  JobSpec,
-  JobSummary,
-  Preflight,
-} from "./apiTypes";
+import type { Catalogue, CatalogueFeature, JobSpec, JobSummary, Preflight } from "./apiTypes";
 
 /** Preflight runs on every keystroke in the budget; this keeps it to one request. */
 const PREFLIGHT_DEBOUNCE_MS = 250;
 
-export type EditorPhase = "idle" | "loading" | "drafting" | "saving" | "error";
+export type EditorPhase = "idle" | "loading" | "saving" | "error";
 
 function messageOf(e: unknown): string {
   if (e instanceof ApiError) return `${e.status}: ${e.message}`;
@@ -36,11 +27,10 @@ function messageOf(e: unknown): string {
  * implementation here would be a second set of rounding bugs, and the two would
  * disagree exactly when it mattered.
  */
-export function useJobEditor(job: JobSummary | null, onSaved: (j: JobSummary) => void) {
+export function useJobEditor(job: JobSummary | null, onSaved: () => void) {
   const [spec, setSpec] = useState<JobSpec | null>(null);
   const [catalogue, setCatalogue] = useState<Catalogue | null>(null);
   const [preflight, setPreflight] = useState<Preflight | null>(null);
-  const [draft, setDraft] = useState<JobDraft | null>(null);
   const [phase, setPhase] = useState<EditorPhase>("idle");
   const [error, setError] = useState<string | null>(null);
   const [dirty, setDirty] = useState(false);
@@ -59,7 +49,6 @@ export function useJobEditor(job: JobSummary | null, onSaved: (j: JobSummary) =>
         setSpec(s);
         setCatalogue(c);
         setDirty(false);
-        setDraft(null);
         setPhase("idle");
       })
       .catch((e: unknown) => {
@@ -175,51 +164,38 @@ export function useJobEditor(job: JobSummary | null, onSaved: (j: JobSummary) =>
 
   // ---- actions ------------------------------------------------------------
 
-  const draftFromAd = useCallback(
-    async (adText: string) => {
-      setPhase("drafting");
-      setError(null);
-      try {
-        const result = await postJobDraft({ ad_text: adText });
-        setDraft(result);
-        // Keep the job's own id: drafting rewrites the policy, not which job
-        // the pool is being screened against.
-        setSpec((cur) => ({
-          ...result.spec,
-          job_id: cur?.job_id ?? result.spec.job_id,
-        }));
-        setDirty(true);
-        setPhase("idle");
-      } catch (e: unknown) {
-        setPhase("error");
-        setError(messageOf(e));
-      }
-    },
-    [],
-  );
-
-  const save = useCallback(async () => {
+  // Saving is turned off for the public demo: the site is unauthenticated and
+  // the job is shared by every visitor, so `POST /jobs` no longer exists. The
+  // button still "saves" — the draft is kept in this session and snapped to
+  // what the server said the budget would become, exactly as a real save would
+  // have shown it — but nothing is written and the pool is not re-screened.
+  const save = useCallback(() => {
     if (!spec) return;
-    setPhase("saving");
     setError(null);
-    try {
-      const saved = await postJobSave(spec);
-      setDirty(false);
-      setPhase("idle");
-      onSaved(saved);
-      // The server normalises the budget on the way in; re-read so the editor
-      // shows what was actually written rather than what was typed.
-      setSpec(await getJobSpec(saved.job_id));
-    } catch (e: unknown) {
-      setPhase("error");
-      setError(messageOf(e));
+    if (preflight?.ok) {
+      setSpec((cur) =>
+        cur
+          ? {
+              ...cur,
+              threshold: preflight.threshold,
+              score: Object.fromEntries(
+                Object.entries(cur.score).map(([path, line]) => [
+                  path,
+                  { ...line, points: preflight.allocation[path] ?? line.points },
+                ]),
+              ),
+            }
+          : cur,
+      );
     }
-  }, [spec, onSaved]);
+    setDirty(false);
+    setPhase("idle");
+    onSaved();
+  }, [spec, preflight, onSaved]);
 
   const revert = useCallback(async () => {
     if (!jobId) return;
     setSpec(await getJobSpec(jobId));
-    setDraft(null);
     setDirty(false);
     setError(null);
   }, [jobId]);
@@ -246,7 +222,6 @@ export function useJobEditor(job: JobSummary | null, onSaved: (j: JobSummary) =>
     spec,
     catalogue,
     preflight,
-    draft,
     phase,
     error,
     dirty,
@@ -261,7 +236,6 @@ export function useJobEditor(job: JobSummary | null, onSaved: (j: JobSummary) =>
     replaceKnockout,
     setThreshold,
     setSlotsN,
-    draftFromAd,
     save,
     revert,
   };

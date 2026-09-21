@@ -89,7 +89,7 @@ export default function ExplainPanel({
   }
 
   const name = deriveName(candidateId);
-  const busy = phase === "loading" || phase === "explaining";
+  const busy = phase === "loading";
 
   // The previous result stays on screen while a new one loads, so scrubbing the
   // score scale never blanks the column.

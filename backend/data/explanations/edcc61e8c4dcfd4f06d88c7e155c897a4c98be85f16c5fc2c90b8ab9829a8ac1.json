@@ -1,0 +1,42 @@
+{
+ "key": "edcc61e8c4dcfd4f06d88c7e155c897a4c98be85f16c5fc2c90b8ab9829a8ac1",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:30:19+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "skills.statistics.held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "applied statistics (hypothesis testing, regression, uncertainty)",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 2,
+  "pool_size": 10,
+  "slots_n": 1,
+  "route_ranks": {
+   "r1": 1
+  },
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "If you have worked with applied statistics, such as hypothesis testing, regression, or uncertainty, add that to your CV so it's clear."
+  }
+ ]
+}

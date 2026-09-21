@@ -1,0 +1,122 @@
+{
+ "key": "e5acd2c3fd018e086fe1ddd55814c0ee221d2626d2971bd33a3be58adfdd32c9",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:32:49+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "derived.cloud_platform_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "denied",
+    "candidate_phrase": "hands-on experience with a cloud platform (AWS, Azure or GCP)",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d2",
+    "field": "derived.data_pipeline_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "data-pipeline experience (Spark, Airflow, dbt or similar)",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d3",
+    "field": "derived.sql_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "working knowledge of SQL and a query engine",
+    "typical_time_months": 1,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d4",
+    "field": "derived.visualisation_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "experience presenting results visually (Tableau, Power BI or Matplotlib)",
+    "typical_time_months": 1,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d5",
+    "field": "experience.data_months",
+    "from": 36,
+    "to": 54,
+    "unit": "months",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "professional data science, analytics or machine-learning experience",
+    "typical_time_months": 6,
+    "actionability": "conditionally_actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d6",
+    "field": "skills.statistics.held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "applied statistics (hypothesis testing, regression, uncertainty)",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 6,
+  "pool_size": 10,
+  "slots_n": 3,
+  "route_ranks": {
+   "r1": 3
+  },
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "Your CV says you haven't used a cloud platform yet, so building hands-on experience with AWS, Azure or GCP would be a useful next step, typically around three months."
+  },
+  {
+   "delta_id": "r1-d2",
+   "sentence": "If you have worked with data pipelines such as Spark, Airflow or dbt, say so clearly on your CV."
+  },
+  {
+   "delta_id": "r1-d3",
+   "sentence": "If you have working knowledge of SQL and a query engine, add that to your CV."
+  },
+  {
+   "delta_id": "r1-d4",
+   "sentence": "If you have presented results visually using Tableau, Power BI or Matplotlib, mention it on your CV."
+  },
+  {
+   "delta_id": "r1-d5",
+   "sentence": "You show three years of professional data science, analytics or machine-learning experience; adding another 18 months would bring you to four and a half years."
+  },
+  {
+   "delta_id": "r1-d6",
+   "sentence": "If you have applied statistics such as hypothesis testing, regression or uncertainty in your work, spell that out on your CV."
+  }
+ ]
+}

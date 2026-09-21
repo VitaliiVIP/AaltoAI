@@ -1,0 +1,200 @@
+{
+ "key": "3fbd20320bf5be022f44e720a1b55b29f4c796d35b237f06f2fa0165d17ec5ad",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:29:29+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "partial-d1",
+    "field": "derived.cloud_platform_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "hands-on experience with a cloud platform (AWS, Azure or GCP)",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "partial"
+   },
+   {
+    "delta_id": "partial-d2",
+    "field": "derived.data_pipeline_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "data-pipeline experience (Spark, Airflow, dbt or similar)",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "partial"
+   },
+   {
+    "delta_id": "partial-d3",
+    "field": "derived.ml_framework_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "hands-on experience with a machine-learning framework (scikit-learn, PyTorch, TensorFlow or similar)",
+    "typical_time_months": 4,
+    "actionability": "actionable",
+    "route_id": "partial"
+   },
+   {
+    "delta_id": "partial-d4",
+    "field": "derived.sql_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "working knowledge of SQL and a query engine",
+    "typical_time_months": 1,
+    "actionability": "actionable",
+    "route_id": "partial"
+   },
+   {
+    "delta_id": "partial-d5",
+    "field": "derived.visualisation_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "experience presenting results visually (Tableau, Power BI or Matplotlib)",
+    "typical_time_months": 1,
+    "actionability": "actionable",
+    "route_id": "partial"
+   },
+   {
+    "delta_id": "partial-d6",
+    "field": "education.highest_level",
+    "from": "bsc",
+    "to": "msc",
+    "unit": "level",
+    "derivation_of_current": "stated",
+    "candidate_phrase": "completed degree level",
+    "typical_time_months": 24,
+    "actionability": "conditionally_actionable",
+    "route_id": "partial"
+   },
+   {
+    "delta_id": "partial-d7",
+    "field": "experience.data_months",
+    "from": 0,
+    "to": 18,
+    "unit": "months",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "professional data science, analytics or machine-learning experience",
+    "typical_time_months": 6,
+    "actionability": "conditionally_actionable",
+    "route_id": "partial"
+   },
+   {
+    "delta_id": "partial-d8",
+    "field": "project_counts_by_topic.machine_learning",
+    "from": 0,
+    "to": 2,
+    "unit": "projects",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "shipped machine-learning projects",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "partial"
+   },
+   {
+    "delta_id": "partial-d9",
+    "field": "skills.python.held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "denied",
+    "candidate_phrase": "working knowledge of Python",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "partial"
+   },
+   {
+    "delta_id": "partial-d10",
+    "field": "skills.python.months",
+    "from": 0,
+    "to": 18,
+    "unit": "months",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "professional Python experience",
+    "typical_time_months": 6,
+    "actionability": "conditionally_actionable",
+    "route_id": "partial"
+   },
+   {
+    "delta_id": "partial-d11",
+    "field": "skills.statistics.held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "denied",
+    "candidate_phrase": "applied statistics (hypothesis testing, regression, uncertainty)",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "partial"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": false,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 10,
+  "pool_size": 10,
+  "slots_n": 3,
+  "route_ranks": {},
+  "no_feasible_path": true,
+  "partial_route_id": "partial"
+ },
+ "sentences": [
+  {
+   "delta_id": "partial-d1",
+   "sentence": "If you have hands-on experience with a cloud platform such as AWS, Azure or GCP, say so directly on your CV."
+  },
+  {
+   "delta_id": "partial-d2",
+   "sentence": "If you have worked on data pipelines with tools like Spark, Airflow or dbt, add that to your CV."
+  },
+  {
+   "delta_id": "partial-d3",
+   "sentence": "If you have used a machine-learning framework such as scikit-learn, PyTorch or TensorFlow, name it on your CV."
+  },
+  {
+   "delta_id": "partial-d4",
+   "sentence": "If you have working knowledge of SQL and a query engine, make that visible on your CV."
+  },
+  {
+   "delta_id": "partial-d5",
+   "sentence": "If you have presented results visually using Tableau, Power BI or Matplotlib, mention it on your CV."
+  },
+  {
+   "delta_id": "partial-d6",
+   "sentence": "Your CV shows a completed bachelor's degree; a master's degree is the next level up, typically around two years of study."
+  },
+  {
+   "delta_id": "partial-d7",
+   "sentence": "Building 18 months of professional data science, analytics or machine-learning work would close the gap from your current zero months."
+  },
+  {
+   "delta_id": "partial-d8",
+   "sentence": "Shipping two machine-learning projects, up from none, would give you concrete work to describe."
+  },
+  {
+   "delta_id": "partial-d9",
+   "sentence": "Your CV says you do not know Python; taking it to a working level is one concrete step."
+  },
+  {
+   "delta_id": "partial-d10",
+   "sentence": "If you have professional Python experience, list the months; 18 months is the level described here."
+  },
+  {
+   "delta_id": "partial-d11",
+   "sentence": "Your CV says you do not have applied statistics; learning hypothesis testing, regression and uncertainty is one concrete step."
+  }
+ ]
+}

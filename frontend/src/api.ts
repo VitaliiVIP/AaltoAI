@@ -2,16 +2,12 @@ import type {
   AuditSummary,
   Catalogue,
   CvParse,
-  JobDraft,
   JobSpec,
   JobSummary,
   PoolRow,
   Preflight,
-  Profile,
   ScreenRequest,
   ScreenResult,
-  SendEmailRequest,
-  SendEmailResult,
 } from "./apiTypes";
 
 // Vite proxies /api -> http://127.0.0.1:8000 (see vite.config.ts), so the
@@ -87,27 +83,10 @@ export function getCvParse(
   return req<CvParse>(`/candidates/${encodeURIComponent(candidateId)}/cv?${q}`, { signal });
 }
 
-/** Permanently removes any candidate from the pool, demo set included. */
-export function deleteCandidate(candidateId: string, signal?: AbortSignal): Promise<void> {
-  return req<void>(`/candidates/${encodeURIComponent(candidateId)}`, { method: "DELETE", signal });
-}
-
+/** Never a model call: with `explain: true` the API serves model-written
+ * sentences from its cache when it has them and the templates otherwise. */
 export function postScreen(body: ScreenRequest, signal?: AbortSignal): Promise<ScreenResult> {
   return postJson<ScreenResult>("/screen", body, signal);
-}
-
-export function postExtract(
-  file: File,
-  signal?: AbortSignal,
-): Promise<{ candidate_id: string; profile: Profile }> {
-  const form = new FormData();
-  form.append("file", file);
-  // No explicit content-type: the browser has to set the multipart boundary.
-  return req<{ candidate_id: string; profile: Profile }>("/extract", {
-    method: "POST",
-    body: form,
-    signal,
-  });
 }
 
 // ---- authoring -----------------------------------------------------------
@@ -127,30 +106,8 @@ export function postPreflight(spec: JobSpec, signal?: AbortSignal): Promise<Pref
   return postJson<Preflight>("/jobs/preflight", spec, signal);
 }
 
-export function postJobSave(spec: JobSpec, signal?: AbortSignal): Promise<JobSummary> {
-  return postJson<JobSummary>("/jobs", spec, signal);
-}
-
-/** The one authoring call that spends an LLM call. Returns a proposal, not a job. */
-export function postJobDraft(
-  body: { ad_text: string; threshold?: number; slots_n?: number },
-  signal?: AbortSignal,
-): Promise<JobDraft> {
-  return postJson<JobDraft>("/jobs/draft", body, signal);
-}
-
 export function getAudit(signal?: AbortSignal): Promise<AuditSummary> {
   return req<AuditSummary>("/audit", { signal });
-}
-
-/** Real SMTP send — see backend/recourse_screen/emailer.py. Defaults to a
- * disposable Ethereal Email sandbox, so nothing reaches a real inbox unless
- * the backend's SMTP_* env vars are pointed at a real provider. */
-export function postSendEmail(
-  body: SendEmailRequest,
-  signal?: AbortSignal,
-): Promise<SendEmailResult> {
-  return postJson<SendEmailResult>("/send-email", body, signal);
 }
 
 export const auditUrl = (decisionId: string) =>

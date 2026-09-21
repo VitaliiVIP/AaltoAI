@@ -1,0 +1,90 @@
+{
+ "key": "9baac333b492cfbc593d33e47835112eeaf44a9e73ed87092bf602b71448c458",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:32:09+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "derived.data_pipeline_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "denied",
+    "candidate_phrase": "data-pipeline experience (Spark, Airflow, dbt or similar)",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d2",
+    "field": "derived.ml_framework_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "hands-on experience with a machine-learning framework (scikit-learn, PyTorch, TensorFlow or similar)",
+    "typical_time_months": 4,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d3",
+    "field": "project_counts_by_topic.machine_learning",
+    "from": 0,
+    "to": 2,
+    "unit": "projects",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "shipped machine-learning projects",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d4",
+    "field": "skills.statistics.held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "applied statistics (hypothesis testing, regression, uncertainty)",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 7,
+  "pool_size": 10,
+  "slots_n": 5,
+  "route_ranks": {
+   "r1": 5
+  },
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "Building data-pipeline experience with tools like Spark, Airflow or dbt would be a useful next step, and takes around two months to get going."
+  },
+  {
+   "delta_id": "r1-d2",
+   "sentence": "If you have worked hands-on with a machine-learning framework such as scikit-learn, PyTorch or TensorFlow, say so clearly on your CV."
+  },
+  {
+   "delta_id": "r1-d3",
+   "sentence": "Shipping two machine-learning projects and listing them would strengthen your application; that typically takes about two months."
+  },
+  {
+   "delta_id": "r1-d4",
+   "sentence": "If you have applied statistics experience, such as hypothesis testing, regression or working with uncertainty, make that visible on your CV."
+  }
+ ]
+}

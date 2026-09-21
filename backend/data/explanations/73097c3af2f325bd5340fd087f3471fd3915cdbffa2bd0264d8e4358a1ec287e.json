@@ -1,0 +1,42 @@
+{
+ "key": "73097c3af2f325bd5340fd087f3471fd3915cdbffa2bd0264d8e4358a1ec287e",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:32:57+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "derived.sql_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "working knowledge of SQL and a query engine",
+    "typical_time_months": 1,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 6,
+  "pool_size": 10,
+  "slots_n": 5,
+  "route_ranks": {
+   "r1": 5
+  },
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "Your CV doesn't mention SQL, so if you have working knowledge of SQL and a query engine, add it clearly; building that up typically takes about a month."
+  }
+ ]
+}

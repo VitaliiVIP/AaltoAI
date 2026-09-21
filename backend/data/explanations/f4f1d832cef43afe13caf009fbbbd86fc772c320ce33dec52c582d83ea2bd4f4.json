@@ -1,0 +1,58 @@
+{
+ "key": "f4f1d832cef43afe13caf009fbbbd86fc772c320ce33dec52c582d83ea2bd4f4",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:31:25+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "derived.visualisation_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "experience presenting results visually (Tableau, Power BI or Matplotlib)",
+    "typical_time_months": 1,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d2",
+    "field": "project_counts_by_topic.machine_learning",
+    "from": 1,
+    "to": 2,
+    "unit": "projects",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "shipped machine-learning projects",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 3,
+  "pool_size": 10,
+  "slots_n": 1,
+  "route_ranks": {
+   "r1": 1
+  },
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "If you have presented results visually using tools like Tableau, Power BI or Matplotlib, add that to your CV, since it isn't mentioned right now."
+  },
+  {
+   "delta_id": "r1-d2",
+   "sentence": "Your CV shows one shipped machine-learning project, so completing and describing one more would bring you to two."
+  }
+ ]
+}

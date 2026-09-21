@@ -1166,11 +1166,6 @@ h1, h2, h3, p { margin: 0; }
 }
 .unstated-flag { color: var(--yellow); }
 
-.col-cvs.drop-active {
-  outline: 2px dashed var(--brand-700);
-  outline-offset: -4px;
-}
-
 /* ---------------- Explain panel extras ---------------- */
 
 .name-note,
@@ -1492,14 +1487,6 @@ h1, h2, h3, p { margin: 0; }
 .criterion-phrase { display: block; line-height: 1.35; }
 .cell-note.adjusted { color: var(--yellow); font-weight: 600; white-space: nowrap; }
 
-.quote-note {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  font-style: italic;
-  line-height: 1.4;
-  margin-top: 0.15rem;
-}
-
 .add-criterion { display: flex; gap: 0.5rem; align-items: center; margin-top: 0.5rem; }
 
 .problem-list {
@@ -1511,33 +1498,6 @@ h1, h2, h3, p { margin: 0; }
   font-size: 0.74rem;
 }
 .problem-list li + li { margin-top: 0.3rem; }
-
-/* ---- draft from a job ad ------------------------------------------------ */
-
-.draft-panel textarea {
-  width: 100%;
-  font: inherit;
-  font-size: 0.74rem;
-  line-height: 1.5;
-  padding: 0.55rem 0.65rem;
-  border: var(--border-width) solid var(--border);
-  border-radius: var(--radius-small);
-  background: var(--card-bg);
-  color: var(--text);
-  resize: vertical;
-}
-.draft-actions { display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem; }
-
-.draft-block {
-  margin-top: 0.75rem;
-  padding: 0.6rem 0.75rem;
-  border-radius: var(--radius-small);
-  background: var(--mono-125);
-}
-.draft-block h4 { margin: 0; font-size: 0.78rem; font-weight: 700; }
-.draft-block.refused { background: var(--red-bg); }
-.draft-block.refused h4 { color: var(--red); }
-.draft-block .rule-list { font-size: 0.74rem; }
 
 /* ---- where the bar sits ------------------------------------------------- */
 

@@ -1,19 +1,29 @@
-"""FastAPI surface for the separate frontend, plus a throwaway demo page at /."""
+"""FastAPI surface for the separate frontend.
+
+Nothing here spends a model call. Profiles are the cached extractions under
+data/profiles, and explanations come from the data/explanations cache or the
+templates. The endpoints that used to call Claude live (CV upload, drafting a
+job from an ad, live "polish") are gone; the code behind them is still in
+extract/, authoring/draft.py and explain/verbaliser.py, reachable only from the
+scripts under scripts/.
+
+Nothing here mutates shared state either, beyond the audit log. The site is
+public and unauthenticated, so sending email, deleting a candidate and saving
+a job are not exposed: the UI plays those out locally. The code is still in
+emailer.py and authoring/store.py.
+"""
 from __future__ import annotations
 
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException, UploadFile
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
-from fastapi.staticfiles import StaticFiles
 
 from .. import config, pipeline
 from ..audit.log import get_record, read_records, verify_chain
 from ..authoring import catalogue_for, store
-from ..emailer import EmailError, send_email
 from ..loaders import (
-    list_cached_profiles,
     list_jobs,
     load_cv_text,
     load_job,
@@ -24,20 +34,10 @@ from ..schemas import (
     RestateRequest,
     ScreenRequest,
     ScreenResult,
-    SendEmailRequest,
-    SendEmailResult,
 )
-
-STATIC = Path(__file__).parent / "static"
 
 app = FastAPI(title="Recourse pre-screener", version="0.1.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
-app.mount("/static", StaticFiles(directory=STATIC), name="static")
-
-
-@app.get("/")
-def index() -> FileResponse:
-    return FileResponse(STATIC / "index.html")
 
 
 def _job_summary(jid: str) -> dict:
@@ -178,29 +178,6 @@ def candidate_cv(candidate_id: str, job: str = "data_scientist") -> dict:
     }
 
 
-@app.delete("/candidates/{candidate_id}")
-def delete_candidate(candidate_id: str) -> dict:
-    """Remove any candidate from the pool: cached text, parsed profile, raw
-    extraction, and the original file if one was stored. Applies to the
-    built-in demo set too -- those files are git-tracked, so deleting one
-    here only removes it from the working tree; `git checkout` restores it."""
-    profiles = list_cached_profiles()
-    if candidate_id not in profiles:
-        raise HTTPException(404, f"unknown candidate_id {candidate_id!r}")
-
-    profile_path = profiles[candidate_id]
-    sha = profile_path.stem
-    for p in (
-        config.CV_TEXT_DIR / f"{candidate_id}.txt",
-        profile_path,
-        config.DATA_DIR / "profiles_raw" / f"{sha}.json",
-        config.UPLOADS_DIR / f"{candidate_id}.pdf",
-        config.UPLOADS_DIR / f"{candidate_id}.png",
-    ):
-        p.unlink(missing_ok=True)
-    return {"ok": True, "candidate_id": candidate_id}
-
-
 def _upload_path(candidate_id: str, suffix: str) -> Path | None:
     """`UPLOADS_DIR/<candidate_id><suffix>` if that file exists, else None.
 
@@ -271,99 +248,15 @@ def jobs_preflight(spec: store.JobSpec) -> dict:
     return store.preflight(spec)
 
 
-@app.post("/jobs")
-def jobs_save(spec: store.JobSpec) -> dict:
-    """Validate and write a job template. Returns the saved job as /jobs renders it."""
-    try:
-        store.save(spec)
-    except (KeyError, ValueError) as e:
-        raise HTTPException(400, str(e)) from e
-    return _job_summary(spec.job_id)
-
-
-@app.post("/jobs/draft")
-def jobs_draft(body: dict) -> dict:
-    """Draft a job configuration from a pasted job ad. One LLM call, nothing saved.
-
-    The response carries the refusals and unmapped requirements alongside the
-    spec: a draft that silently dropped half the ad would look like agreement.
-    """
-    from ..authoring.draft import DraftError, draft_from_ad
-
-    ad = str(body.get("ad_text") or "")
-    try:
-        return draft_from_ad(
-            ad,
-            manifest_name=str(body.get("manifest") or "data_science.json"),
-            job_id=body.get("job_id") or None,
-            threshold=int(body.get("threshold") or 80),
-            slots_n=int(body.get("slots_n") or 3),
-        )
-    except DraftError as e:
-        raise HTTPException(502, str(e)) from e
-
-
 @app.post("/screen")
 def screen(req: ScreenRequest) -> ScreenResult:
+    """Screen a pooled candidate. `explain` picks cached model sentences over the
+    templates when the cache has them; it never triggers a model call."""
     try:
-        if req.candidate_id:
-            return pipeline.screen_candidate(req.candidate_id, job_id=req.job_id, mode=req.mode,
-                                             N=req.N, explain=req.explain)
-        if req.cv_text:
-            return pipeline.screen_cv_text(req.cv_text, job_id=req.job_id, mode=req.mode,
-                                           N=req.N, explain=req.explain)
+        return pipeline.screen_candidate(req.candidate_id, job_id=req.job_id, mode=req.mode,
+                                         N=req.N, explain=req.explain)
     except KeyError as e:
         raise HTTPException(404, str(e)) from e
-    raise HTTPException(400, "candidate_id or cv_text required")
-
-
-@app.post("/extract")
-async def extract(file: UploadFile | None = None, cv_text: str | None = None) -> dict:
-    from ..extract.extractor import extract_profile
-    from ..extract.pdf import PdfExtractionError, pdf_to_png, pdf_to_text, sha256_text
-
-    if file is not None:
-        raw = await file.read()
-        # Basename only: the client picks this string, and it becomes both the
-        # candidate_id and the file stem under data/.
-        name = Path(file.filename or "upload").name
-        stem = Path(name).stem
-        if not stem or stem.startswith("."):
-            raise HTTPException(400, "the upload needs a filename")
-        if name.lower().endswith(".pdf"):
-            # Kept at <candidate_id>.pdf, which is where /candidates/{id}/file.pdf
-            # and the thumbnail route look for it.
-            pdf = config.UPLOADS_DIR / f"{stem}.pdf"
-            pdf.parent.mkdir(parents=True, exist_ok=True)
-            pdf.write_bytes(raw)
-            try:
-                text = pdf_to_text(pdf)
-            except PdfExtractionError as e:
-                # The upload's stored path means nothing to whoever sees the toast.
-                raise HTTPException(400, str(e).replace(str(pdf), name)) from e
-            try:
-                pdf_to_png(pdf, pdf.with_suffix(".png"))
-            except PdfExtractionError:
-                pass  # the card falls back to initials; the parse still goes ahead
-        else:
-            text = raw.decode("utf-8", errors="replace")
-        source = f"{stem}.txt"
-        # The profile cache is keyed by the sha of the CV *text*, and re-extracting
-        # rewrites that entry's source_file -- so uploading a CV already in the pool
-        # would rename the sitting candidate out from under the list. Refuse instead.
-        sha = sha256_text(text)
-        for cid, cached in list_cached_profiles().items():
-            if cached.stem == sha:
-                raise HTTPException(409, f"This CV is already in the pool as {cid}.")
-        # keep the text so the candidate shows up in the pool list next time
-        (config.CV_TEXT_DIR / source).write_text(text)
-    elif cv_text:
-        text, source = cv_text, None
-    else:
-        raise HTTPException(400, "file or cv_text required")
-    profile = extract_profile(text, source_file=source)
-    return {"candidate_id": Path(source).stem if source else profile.provenance.cv_sha256[:12],
-            "profile": profile.model_dump(mode="json")}
 
 
 @app.post("/restate")
@@ -372,18 +265,6 @@ def restate(req: RestateRequest, parent_decision_id: str | None = None, explain:
         return pipeline.restate(req, explain=explain, parent_decision_id=parent_decision_id)
     except (KeyError, ValueError) as e:
         raise HTTPException(400, str(e)) from e
-
-
-@app.post("/send-email")
-def send_email_route(req: SendEmailRequest) -> SendEmailResult:
-    """Real SMTP send — see recourse_screen/emailer.py. Defaults to a disposable
-    Ethereal Email sandbox, so nothing here ever reaches a real inbox unless
-    SMTP_* in backend/.env is pointed at a real provider."""
-    try:
-        result = send_email(req.to, req.subject, req.body)
-    except EmailError as e:
-        raise HTTPException(502, str(e)) from e
-    return SendEmailResult(**result)
 
 
 @app.get("/audit")

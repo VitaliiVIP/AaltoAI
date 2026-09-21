@@ -1,10 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import type {
-  ChangeEvent,
-  DragEvent as ReactDragEvent,
-  PointerEvent as ReactPointerEvent,
-  KeyboardEvent as ReactKeyboardEvent,
-} from "react";
+import type { PointerEvent as ReactPointerEvent, KeyboardEvent as ReactKeyboardEvent } from "react";
 import type { Mode, PoolRow } from "../apiTypes";
 import type { EmailStatus } from "../types";
 import { tierOf } from "../types";
@@ -22,10 +17,8 @@ interface CvListProps {
   aggregateLine: string | null;
   phase: Phase;
   error: string | null;
-  uploading: boolean;
   onSelect: (id: string) => void;
   onRetry: () => void;
-  onUpload: (file: File) => void;
   onDelete: (id: string) => void;
 }
 
@@ -49,10 +42,8 @@ export default function CvList({
   aggregateLine,
   phase,
   error,
-  uploading,
   onSelect,
   onRetry,
-  onUpload,
   onDelete,
 }: CvListProps) {
   const [viewMode, setViewMode] = useState<"active" | "sent">("active");
@@ -88,10 +79,8 @@ export default function CvList({
 
   const [dragging, setDragging] = useState(false);
   const [dragScore, setDragScore] = useState<number | null>(null);
-  const [dropActive, setDropActive] = useState(false);
   const [brokenThumbs, setBrokenThumbs] = useState<Record<string, boolean>>({});
   const trackRef = useRef<HTMLDivElement>(null);
-  const fileRef = useRef<HTMLInputElement>(null);
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   // Refs mirror the latest state so the native (non-passive) wheel listener,
@@ -216,37 +205,13 @@ export default function CvList({
     };
   }, [onSelect]);
 
-  function takeFile(file: File | null | undefined) {
-    if (file) onUpload(file);
-  }
-
-  function handleDrop(e: ReactDragEvent<HTMLElement>) {
-    e.preventDefault();
-    setDropActive(false);
-    takeFile(e.dataTransfer.files?.[0]);
-  }
-
-  function handleFileInput(e: ChangeEvent<HTMLInputElement>) {
-    takeFile(e.target.files?.[0]);
-    e.target.value = "";
-  }
-
   const displayScore = dragScore ?? selected?.score ?? 0;
   const markerTop = maxScore > 0 ? 100 * (1 - displayScore / maxScore) : 100;
 
   return (
-    <section
-      className={"col col-cvs" + (dropActive ? " drop-active" : "")}
-      aria-label="Uploaded CVs"
-      onDragOver={(e) => {
-        e.preventDefault();
-        setDropActive(true);
-      }}
-      onDragLeave={() => setDropActive(false)}
-      onDrop={handleDrop}
-    >
+    <section className="col col-cvs" aria-label="Applicant CVs">
       <div className="col-header">
-        <h2>Uploaded CVs</h2>
+        <h2>Applicant CVs</h2>
         <span className="count-badge">{filteredPool.length}</span>
 
         <div className="view-toggle" role="tablist" aria-label="Show active or answered CVs">
@@ -271,22 +236,6 @@ export default function CvList({
             ✕
           </button>
         </div>
-
-        <button
-          className="open-cv-btn"
-          onClick={() => fileRef.current?.click()}
-          disabled={uploading}
-          title="Runs LLM extraction (~10–20 s) and adds the CV to the pool permanently, which shifts every mode-B rank."
-        >
-          {uploading ? "Reading CV…" : "Add CV"}
-        </button>
-        <input
-          ref={fileRef}
-          type="file"
-          accept="application/pdf,.pdf,.txt"
-          hidden
-          onChange={handleFileInput}
-        />
       </div>
 
       {mode === "B" && aggregateLine && <p className="aggregate-line">{aggregateLine}</p>}

@@ -1,0 +1,42 @@
+{
+ "key": "2d928cb5831d4ecad1b099dfd7f4e3d148e36285b3ce80c510e19bb6fb921ace",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:30:13+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "skills.python.held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "denied",
+    "candidate_phrase": "working knowledge of Python",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 10,
+  "pool_size": 10,
+  "slots_n": 9,
+  "route_ranks": {
+   "r1": 9
+  },
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "Your CV describes a working knowledge of Python, so building that up to full working proficiency, which often takes around three months of practice, would be a concrete next step."
+  }
+ ]
+}

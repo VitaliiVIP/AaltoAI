@@ -8,8 +8,6 @@ interface BudgetEditorProps {
   allocated: number;
   budgetTotal: number;
   preflight: Preflight | null;
-  /** The phrase in the job ad that justified each criterion, when drafted. */
-  quotes: Record<string, string>;
   onPoints: (path: string, points: number) => void;
   onCap: (path: string, cap: number) => void;
   onAdd: (feature: CatalogueFeature) => void;
@@ -45,7 +43,6 @@ export default function BudgetEditor({
   allocated,
   budgetTotal,
   preflight,
-  quotes,
   onPoints,
   onCap,
   onAdd,
@@ -94,7 +91,6 @@ export default function BudgetEditor({
                   {/* The phrase, not the path: a recruiter is picking a criterion,
                       not addressing a feature. The path stays in the Review tab. */}
                   <span className="criterion-phrase">{feature?.phrase ?? path}</span>
-                  {quotes[path] && <div className="quote-note">“{quotes[path]}”</div>}
                   {line.absent_prior > 0 && (
                     <span className="cell-note">absent prior {line.absent_prior}</span>
                   )}

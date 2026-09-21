@@ -1,18 +1,16 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ApiError,
-  deleteCandidate,
   getAudit,
   getCandidates,
   getJobs,
   isAbortError,
-  postExtract,
   postScreen,
 } from "./api";
 import type { AuditSummary, JobSummary, Mode, PoolRow, ScreenResult } from "./apiTypes";
 import { maxScoreOf } from "./present";
 
-export type Phase = "idle" | "loading" | "explaining" | "error";
+export type Phase = "idle" | "loading" | "error";
 
 /** Debounce before screening: the score scrubber fires a selection per wheel notch. */
 const SCREEN_DEBOUNCE_MS = 300;
@@ -42,14 +40,10 @@ export function useScreening() {
 
   const [results, setResults] = useState<Record<string, ScreenResult>>({});
 
-  /** Bumped when the job config is re-saved; forces a rescore of the whole pool. */
-  const [configVersion, setConfigVersion] = useState(0);
-
   const [poolPhase, setPoolPhase] = useState<Phase>("loading");
   const [poolError, setPoolError] = useState<string | null>(null);
   const [screenPhase, setScreenPhase] = useState<Phase>("idle");
   const [screenError, setScreenError] = useState<string | null>(null);
-  const [uploading, setUploading] = useState(false);
 
   // Refs mirror state for the async paths, which must never read a stale closure.
   const resultsRef = useRef(results);
@@ -109,9 +103,7 @@ export function useScreening() {
       setPoolPhase("error");
       setPoolError(messageOf(e));
     }
-    // configVersion is in the dependency list on purpose: saving a job keeps its
-    // id, so nothing else here would change and the stale pool would survive.
-  }, [jobId, mode, effectiveN, configVersion]);
+  }, [jobId, mode, effectiveN]);
 
   useEffect(() => {
     void refreshPool();
@@ -129,20 +121,22 @@ export function useScreening() {
 
   // ---- screening ---------------------------------------------------------
 
+  // `explain: true` asks for the model-written sentences the backend has cached
+  // for this decision; a miss comes back as templated prose. Neither is a model
+  // call, so there is nothing to opt into and one request per key is enough.
   const screenOnce = useCallback(
-    (candidateId: string, explain: boolean): Promise<ScreenResult> => {
+    (candidateId: string): Promise<ScreenResult> => {
       const key = cacheKey(candidateId);
-      const slot = explain ? `${key}|llm` : key;
       const cached = resultsRef.current[key];
-      if (!explain && cached) return Promise.resolve(cached);
+      if (cached) return Promise.resolve(cached);
 
-      const joined = inflight.current.get(slot);
+      const joined = inflight.current.get(key);
       if (joined) return joined;
 
       const ac = new AbortController();
-      controllers.current.set(slot, ac);
+      controllers.current.set(key, ac);
       const p = postScreen(
-        { candidate_id: candidateId, job_id: jobId, mode, N: effectiveN, explain },
+        { candidate_id: candidateId, job_id: jobId, mode, N: effectiveN, explain: true },
         ac.signal,
       )
         .then((res) => {
@@ -150,10 +144,10 @@ export function useScreening() {
           return res;
         })
         .finally(() => {
-          inflight.current.delete(slot);
-          controllers.current.delete(slot);
+          inflight.current.delete(key);
+          controllers.current.delete(key);
         });
-      inflight.current.set(slot, p);
+      inflight.current.set(key, p);
       return p;
     },
     [cacheKey, jobId, mode, effectiveN],
@@ -161,7 +155,7 @@ export function useScreening() {
 
   // Screen the selection, debounced. A cache hit renders synchronously — the
   // timer is only armed on a miss, so revisiting a scrubbed-past candidate is
-  // instant. `explain: false` returns complete templated prose with no LLM call.
+  // instant.
   useEffect(() => {
     if (!selectedId || !jobId) return;
     if (resultsRef.current[cacheKey(selectedId)]) {
@@ -173,7 +167,7 @@ export function useScreening() {
       userBusy.current = true;
       setScreenPhase("loading");
       setScreenError(null);
-      screenOnce(selectedId, false)
+      screenOnce(selectedId)
         .then(() => {
           if (selectedRef.current === selectedId) setScreenPhase("idle");
         })
@@ -190,8 +184,8 @@ export function useScreening() {
     return () => window.clearTimeout(timer);
   }, [selectedId, jobId, cacheKey, screenOnce]);
 
-  // Warm the rest of the pool while the user reads. With `explain: false` this
-  // costs no LLM calls, and afterwards scrubbing the score scale is instant.
+  // Warm the rest of the pool while the user reads, so that scrubbing the
+  // score scale afterwards is instant.
   useEffect(() => {
     if (!jobId || pool.length === 0) return;
     let cancelled = false;
@@ -203,7 +197,7 @@ export function useScreening() {
       }
       const next = pool.find((r) => !resultsRef.current[cacheKey(r.candidate_id)]);
       if (!next) return;
-      screenOnce(next.candidate_id, false)
+      screenOnce(next.candidate_id)
         .catch(() => undefined)
         .finally(() => {
           if (!cancelled) schedule(step);
@@ -216,68 +210,6 @@ export function useScreening() {
   }, [jobId, pool, cacheKey, screenOnce]);
 
   // ---- actions -----------------------------------------------------------
-
-  /** The only path that spends an LLM call: re-run with the verbaliser on. */
-  const polishExplanation = useCallback(async () => {
-    if (!selectedId) return;
-    setScreenPhase("explaining");
-    setScreenError(null);
-    userBusy.current = true;
-    try {
-      await screenOnce(selectedId, true);
-      setScreenPhase("idle");
-    } catch (e: unknown) {
-      if (!isAbortError(e)) {
-        setScreenPhase("error");
-        setScreenError(messageOf(e));
-      }
-    } finally {
-      userBusy.current = false;
-    }
-  }, [selectedId, screenOnce]);
-
-  /** Adopt a re-saved job: the whole pool has to be rescored against it. */
-  const applyJob = useCallback((next: JobSummary) => {
-    setJob(next);
-    setResults({});
-    setConfigVersion((v) => v + 1);
-    for (const ac of controllers.current.values()) ac.abort();
-    controllers.current.clear();
-    inflight.current.clear();
-    setSlotsN((n) => (n == null ? next.mode.B.slots_N : n));
-  }, []);
-
-  const uploadCv = useCallback(
-    async (file: File) => {
-      setUploading(true);
-      try {
-        const { candidate_id } = await postExtract(file);
-        await refreshPool();
-        setSelectedId(candidate_id);
-        return candidate_id;
-      } finally {
-        setUploading(false);
-      }
-    },
-    [refreshPool],
-  );
-
-  // Permanent, server-side removal (unlike the CV-list "Delete", which only
-  // hides a sent CV locally). Applies to every candidate, demo pool included.
-  const deleteCv = useCallback(
-    async (candidateId: string) => {
-      await deleteCandidate(candidateId);
-      setResults((prev) => {
-        const next = { ...prev };
-        for (const k of Object.keys(next)) {
-          if (k === candidateId || k.startsWith(`${candidateId}|`)) delete next[k];
-        }
-        return next;
-      });
-      await refreshPool();
-    },
-    [refreshPool],
-  );
 
   // ---- derived -----------------------------------------------------------
 
@@ -302,11 +234,6 @@ export function useScreening() {
     poolError,
     screenPhase,
     screenError,
-    uploading,
     refreshPool,
-    applyJob,
-    polishExplanation,
-    uploadCv,
-    deleteCv,
   };
 }

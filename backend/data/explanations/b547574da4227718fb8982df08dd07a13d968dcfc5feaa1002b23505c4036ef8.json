@@ -1,0 +1,90 @@
+{
+ "key": "b547574da4227718fb8982df08dd07a13d968dcfc5feaa1002b23505c4036ef8",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:32:19+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "derived.data_pipeline_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "data-pipeline experience (Spark, Airflow, dbt or similar)",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d2",
+    "field": "derived.visualisation_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "experience presenting results visually (Tableau, Power BI or Matplotlib)",
+    "typical_time_months": 1,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d3",
+    "field": "experience.data_months",
+    "from": 48,
+    "to": 60,
+    "unit": "months",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "professional data science, analytics or machine-learning experience",
+    "typical_time_months": 6,
+    "actionability": "conditionally_actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d4",
+    "field": "project_counts_by_topic.machine_learning",
+    "from": 0,
+    "to": 2,
+    "unit": "projects",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "shipped machine-learning projects",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 4,
+  "pool_size": 10,
+  "slots_n": 1,
+  "route_ranks": {
+   "r1": 1
+  },
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "If you have worked with data pipelines using tools like Spark, Airflow or dbt, add that to your CV so it is clear."
+  },
+  {
+   "delta_id": "r1-d2",
+   "sentence": "If you have presented results visually with Tableau, Power BI or Matplotlib, say so on your CV."
+  },
+  {
+   "delta_id": "r1-d3",
+   "sentence": "Your CV shows four years of professional data science, analytics or machine-learning work; another twelve months would bring you to five years."
+  },
+  {
+   "delta_id": "r1-d4",
+   "sentence": "Add two shipped machine-learning projects to your CV, since none are listed there at the moment."
+  }
+ ]
+}

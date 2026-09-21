@@ -1,0 +1,40 @@
+{
+ "key": "988aaab4aadfea14d4dedefaf48c746f5fed12131b05020211840c9b116f60b0",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:32:15+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "project_counts_by_topic.machine_learning",
+    "from": 0,
+    "to": 1,
+    "unit": "projects",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "shipped machine-learning projects",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "A",
+  "rank": null,
+  "pool_size": null,
+  "slots_n": null,
+  "route_ranks": {},
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "Your CV shows no shipped machine-learning projects, so completing and listing one would be a concrete next step, typically taking around two months."
+  }
+ ]
+}

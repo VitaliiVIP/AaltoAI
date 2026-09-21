@@ -1,0 +1,138 @@
+{
+ "key": "ae9a8bf82ac95e0282f8f181d3c788e17ad5d201f9d22020d2792472dec4897e",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:30:49+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "derived.cloud_platform_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "hands-on experience with a cloud platform (AWS, Azure or GCP)",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d2",
+    "field": "derived.data_pipeline_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "data-pipeline experience (Spark, Airflow, dbt or similar)",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d3",
+    "field": "derived.ml_framework_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "hands-on experience with a machine-learning framework (scikit-learn, PyTorch, TensorFlow or similar)",
+    "typical_time_months": 4,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d4",
+    "field": "derived.visualisation_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "experience presenting results visually (Tableau, Power BI or Matplotlib)",
+    "typical_time_months": 1,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d5",
+    "field": "experience.data_months",
+    "from": 0,
+    "to": 18,
+    "unit": "months",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "professional data science, analytics or machine-learning experience",
+    "typical_time_months": 6,
+    "actionability": "conditionally_actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d6",
+    "field": "project_counts_by_topic.machine_learning",
+    "from": 0,
+    "to": 2,
+    "unit": "projects",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "shipped machine-learning projects",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d7",
+    "field": "skills.statistics.held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "applied statistics (hypothesis testing, regression, uncertainty)",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 8,
+  "pool_size": 10,
+  "slots_n": 4,
+  "route_ranks": {
+   "r1": 4
+  },
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "If you have worked hands-on with a cloud platform like AWS, Azure or GCP, name it directly on your CV."
+  },
+  {
+   "delta_id": "r1-d2",
+   "sentence": "If you have built data pipelines with tools such as Spark, Airflow or dbt, say so on your CV."
+  },
+  {
+   "delta_id": "r1-d3",
+   "sentence": "If you have used a machine-learning framework like scikit-learn, PyTorch or TensorFlow, mention it on your CV."
+  },
+  {
+   "delta_id": "r1-d4",
+   "sentence": "If you have presented results visually using Tableau, Power BI or Matplotlib, add that to your CV."
+  },
+  {
+   "delta_id": "r1-d5",
+   "sentence": "Building up to 18 months of professional data science, analytics or machine-learning work is the step here."
+  },
+  {
+   "delta_id": "r1-d6",
+   "sentence": "Ship two machine-learning projects and describe them on your CV."
+  },
+  {
+   "delta_id": "r1-d7",
+   "sentence": "If you have applied statistics such as hypothesis testing, regression or uncertainty, spell that out on your CV."
+  }
+ ]
+}

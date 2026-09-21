@@ -678,11 +678,12 @@ class RestateRequest(BaseModel):
 
 
 class ScreenRequest(BaseModel):
-    candidate_id: str | None = None
-    cv_text: str | None = None
+    candidate_id: str
     job_id: str = "data_scientist"
     mode: Literal["A", "B"] = "B"
     N: int | None = None
+    # Model-written sentences where the cache has them, templates otherwise.
+    # Never a live call: see explain/generate.py.
     explain: bool = True
 
 

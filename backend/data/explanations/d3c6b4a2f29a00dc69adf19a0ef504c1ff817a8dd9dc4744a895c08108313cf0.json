@@ -1,0 +1,186 @@
+{
+ "key": "d3c6b4a2f29a00dc69adf19a0ef504c1ff817a8dd9dc4744a895c08108313cf0",
+ "explain_prompt_version": "explain-v1",
+ "model_version": "explain-v1/claude-opus-5",
+ "generated_at": "2026-09-21T20:29:59+00:00",
+ "input": {
+  "outcome": "not_advanced",
+  "deltas": [
+   {
+    "delta_id": "r1-d1",
+    "field": "derived.cloud_platform_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "hands-on experience with a cloud platform (AWS, Azure or GCP)",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d2",
+    "field": "derived.data_pipeline_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "data-pipeline experience (Spark, Airflow, dbt or similar)",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d3",
+    "field": "derived.ml_framework_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "hands-on experience with a machine-learning framework (scikit-learn, PyTorch, TensorFlow or similar)",
+    "typical_time_months": 4,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d4",
+    "field": "derived.sql_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "working knowledge of SQL and a query engine",
+    "typical_time_months": 1,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d5",
+    "field": "derived.visualisation_held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "experience presenting results visually (Tableau, Power BI or Matplotlib)",
+    "typical_time_months": 1,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d6",
+    "field": "experience.data_months",
+    "from": 0,
+    "to": 6,
+    "unit": "months",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "professional data science, analytics or machine-learning experience",
+    "typical_time_months": 6,
+    "actionability": "conditionally_actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d7",
+    "field": "project_counts_by_topic.machine_learning",
+    "from": 0,
+    "to": 2,
+    "unit": "projects",
+    "derivation_of_current": "computed",
+    "candidate_phrase": "shipped machine-learning projects",
+    "typical_time_months": 2,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d8",
+    "field": "skills.python.held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "denied",
+    "candidate_phrase": "working knowledge of Python",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d9",
+    "field": "skills.python.months",
+    "from": 0,
+    "to": 12,
+    "unit": "months",
+    "derivation_of_current": "absent",
+    "candidate_phrase": "professional Python experience",
+    "typical_time_months": 6,
+    "actionability": "conditionally_actionable",
+    "route_id": "r1"
+   },
+   {
+    "delta_id": "r1-d10",
+    "field": "skills.statistics.held",
+    "from": false,
+    "to": true,
+    "unit": "boolean",
+    "derivation_of_current": "denied",
+    "candidate_phrase": "applied statistics (hypothesis testing, regression, uncertainty)",
+    "typical_time_months": 3,
+    "actionability": "actionable",
+    "route_id": "r1"
+   }
+  ],
+  "immutable_blockers": [],
+  "flip_test_passed": true,
+  "as_of": "2026-09-19",
+  "model_version": "data-scientist-v1/scorer-v1",
+  "mode": "B",
+  "rank": 10,
+  "pool_size": 10,
+  "slots_n": 6,
+  "route_ranks": {
+   "r1": 6
+  },
+  "no_feasible_path": false,
+  "partial_route_id": null
+ },
+ "sentences": [
+  {
+   "delta_id": "r1-d1",
+   "sentence": "If you have worked hands-on with a cloud platform such as AWS, Azure or GCP, say so directly on your CV."
+  },
+  {
+   "delta_id": "r1-d2",
+   "sentence": "If you have built data pipelines with tools like Spark, Airflow or dbt, name those tools on your CV."
+  },
+  {
+   "delta_id": "r1-d3",
+   "sentence": "If you have used a machine-learning framework such as scikit-learn, PyTorch or TensorFlow, list it on your CV."
+  },
+  {
+   "delta_id": "r1-d4",
+   "sentence": "If you have working knowledge of SQL and a query engine, make that explicit on your CV."
+  },
+  {
+   "delta_id": "r1-d5",
+   "sentence": "If you have presented results visually using Tableau, Power BI or Matplotlib, mention that on your CV."
+  },
+  {
+   "delta_id": "r1-d6",
+   "sentence": "Aim to add six months of professional data science, analytics or machine-learning work."
+  },
+  {
+   "delta_id": "r1-d7",
+   "sentence": "Ship two machine-learning projects and describe them on your CV."
+  },
+  {
+   "delta_id": "r1-d8",
+   "sentence": "Build working knowledge of Python, which typically takes around three months of steady practice."
+  },
+  {
+   "delta_id": "r1-d9",
+   "sentence": "Aim to build up twelve months of professional Python experience and show it on your CV."
+  },
+  {
+   "delta_id": "r1-d10",
+   "sentence": "Build applied statistics skills covering hypothesis testing, regression and uncertainty, typically around three months of study."
+  }
+ ]
+}

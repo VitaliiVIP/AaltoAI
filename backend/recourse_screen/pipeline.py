@@ -2,11 +2,15 @@
 
 The LLM appears only in extract (LLM #1) and explain (LLM #2). Everything in
 between is deterministic and replayable.
+
+Neither model is reachable from here by default. Profiles come from the
+extraction cache under data/profiles (written by scripts/extract_demo_cvs.py),
+and explanations come from data/explanations unless `allow_live_llm=True`,
+which only scripts/cache_explanations.py passes.
 """
 from __future__ import annotations
 
 import hashlib
-from pathlib import Path
 
 from . import config
 from .audit.log import append_record, make_payload
@@ -47,6 +51,7 @@ def screen_profile(
     mode: str = "B",
     N: int | None = None,
     explain: bool = True,
+    allow_live_llm: bool = False,
     pool: list[tuple[str, Profile]] | None = None,
     write_audit: bool = True,
     parent_decision_id: str | None = None,
@@ -77,6 +82,7 @@ def screen_profile(
             as_of=profile.as_of,
             model_version=f"{job.version}/{config.SCORER_VERSION}",
             use_llm=explain,
+            allow_live=allow_live_llm,
         )
 
     hints = restatement_hints(profile, manifest, job)
@@ -120,14 +126,6 @@ def screen_profile(
 
 def screen_candidate(candidate_id: str, **kw) -> ScreenResult:
     return screen_profile(candidate_profile(candidate_id), candidate_id=candidate_id, **kw)
-
-
-def screen_cv_text(cv_text: str, *, source_file: str | None = None, **kw) -> ScreenResult:
-    from .extract.extractor import extract_profile
-
-    profile = extract_profile(cv_text, source_file=source_file)
-    cid = Path(source_file).stem if source_file else profile.provenance.cv_sha256[:12]
-    return screen_profile(profile, candidate_id=cid, **kw)
 
 
 def restate(req: RestateRequest, *, explain: bool = True,
